@@ -47,7 +47,7 @@ function proxy(req, res, app, targetPath) {
     port: app.port,
     method: req.method,
     path: targetPath,
-    headers: { ...req.headers, host: `127.0.0.1:${app.port}` },
+    headers: {\n      ...req.headers,\n      host: req.headers.host || `127.0.0.1:${app.port}`,\n      'x-forwarded-host': req.headers.host || `127.0.0.1:${app.port}`,\n      'x-forwarded-proto': req.headers['x-forwarded-proto'] || (req.socket.encrypted ? 'https' : 'http'),\n    },
   }, (upstreamRes) => {
     res.writeHead(upstreamRes.statusCode || 502, upstreamRes.headers);
     upstreamRes.pipe(res);
