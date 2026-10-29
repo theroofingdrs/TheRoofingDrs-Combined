@@ -709,7 +709,7 @@ app.get('/robots.txt', (req: Request, res: Response) => {
 Allow: /
 Disallow: /admin
 Disallow: /api/
-Sitemap: ${protocol}://${host}/sitemap.xml
+Sitemap: ${protocol}://${host}/commercial/sitemap.xml
 `);
 });
 
