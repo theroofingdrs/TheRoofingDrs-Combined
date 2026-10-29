@@ -111,8 +111,9 @@ app.post('/api/save-logo', async (req: Request, res: Response) => {
 app.use((req: Request, res: Response, next) => {
   const isStaffRoute =
     req.path === '/api/admin/stats' ||
+    req.path === '/api/calculator' && req.method === 'GET' ||
     req.path === '/api/leads' && req.method !== 'POST' ||
-    /^\\/api\\/leads\\/[^/]+/.test(req.path) ||
+    /^\/api\/leads\/[^/]+/.test(req.path) ||
     req.path === '/api/save-logo' && req.method !== 'POST';
   if (!isStaffRoute) return next();
   return requireOwnerAuth(req, res, next);
