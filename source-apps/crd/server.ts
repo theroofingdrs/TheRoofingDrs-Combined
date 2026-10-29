@@ -186,17 +186,17 @@ app.get('/api/leads', async (req: Request, res: Response) => {
   filtered.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
   const enriched = filtered.map((lead) => {
-    const org = db.organizations.find((o) => o.organizationId === lead.organizationId);
-    const cnt = db.contacts.find((c) => c.contactId === lead.contactId);
-    const prp = db.properties.find((p) => p.propertyId === lead.propertyId);
+    const org = lead.organizationRecord || db.organizations.find((o) => o.organizationId === lead.organizationId);
+    const cnt = lead.contactRecord || db.contacts.find((c) => c.contactId === lead.contactId);
+    const prp = lead.propertyRecord || db.properties.find((p) => p.propertyId === lead.propertyId);
     return {
       ...lead,
       fullName: cnt ? `${cnt.firstName} ${cnt.lastName}`.trim() : 'Commercial Client',
-      phone: cnt?.phone || '',
-      email: cnt?.email || '',
-      companyName: org?.companyName || '',
-      propertyAddress: prp?.address ? `${prp.address}, ${prp.city} ${prp.state}` : '',
-      squareFootage: prp?.approximateRoofArea || null,
+      phone: cnt?.phone || lead.phone || '',
+      email: cnt?.email || lead.email || '',
+      companyName: org?.companyName || lead.companyName || '',
+      propertyAddress: prp?.address ? `${prp.address}, ${prp.city} ${prp.state}` : (lead.propertyAddress || ''),
+      squareFootage: prp?.approximateRoofArea || lead.approximateRoofArea || null,
     };
   });
 
