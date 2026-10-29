@@ -3,6 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { selectRows, upsertRows } from './server/supabaseRest';
+import { uploadPublicLogo } from './server/supabaseStorage';
 
 const PORT = Number(process.env.PORT) || 3000;
 const app = express();
@@ -84,45 +85,23 @@ app.get('/api/health', (req: Request, res: Response) => {
   });
 });
 
-// Logo asset upload handler
-app.post('/api/save-logo', (req: Request, res: Response) => {
+// Logo branding asset is stored durably in Supabase Storage, not the Cloud Run filesystem.
+app.post('/api/save-logo', async (req: Request, res: Response) => {
   try {
-    const { dataBase64, filename } = req.body;
-    if (!dataBase64) {
-      return res.status(400).json({ error: 'Missing dataBase64' });
-    }
+    const { dataBase64 } = req.body;
     if (typeof dataBase64 !== 'string' || dataBase64.length > 3_000_000) {
       return res.status(400).json({ error: 'Logo image must be a valid PNG under 2 MB.' });
     }
-
     const cleanBase64 = dataBase64.replace(/^data:image\/png;base64,/i, '');
     if (!/^[A-Za-z0-9+/]*={0,2}$/.test(cleanBase64)) {
       return res.status(400).json({ error: 'Invalid base64 image data.' });
     }
     const buffer = Buffer.from(cleanBase64, 'base64');
-    const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
-    if (buffer.length < 8 || buffer.length > 2 * 1024 * 1024 || !buffer.subarray(0, 8).equals(pngSignature)) {
-      return res.status(400).json({ error: 'Logo image must be a valid PNG under 2 MB.' });
-    }
-
-    // Ignore client supplied filenames so they cannot traverse server paths.
-    const name = 'crd-logo-full.png';
-    const targetDir = path.join(process.cwd(), 'public', 'assets');
-    if (!fs.existsSync(targetDir)) {
-      fs.mkdirSync(targetDir, { recursive: true });
-    }
-    fs.writeFileSync(path.join(targetDir, name), buffer);
-
-    // Also mirror to dist/assets if dist exists for production builds.
-    const distAssets = path.join(process.cwd(), 'dist', 'assets');
-    if (fs.existsSync(distAssets)) {
-      fs.writeFileSync(path.join(distAssets, name), buffer);
-    }
-
-    return res.json({ success: true, filename: name, path: `/assets/${name}` });
+    const stored = await uploadPublicLogo(buffer);
+    return res.json({ success: true, filename: 'crd-logo-full.png', path: stored.publicUrl, storagePath: stored.path });
   } catch (err: any) {
-    console.error('Error saving logo asset:', err);
-    return res.status(500).json({ error: err.message });
+    console.error('Error saving logo asset to Supabase Storage:', err);
+    return res.status(503).json({ error: 'Logo storage is temporarily unavailable.' });
   }
 });
 
