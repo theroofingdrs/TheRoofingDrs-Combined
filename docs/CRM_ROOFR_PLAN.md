@@ -1,10 +1,12 @@
-# Roof Doctors CRM and Roofr Integration Plan
+# Roof Doctors CRM and Instant Estimate Plan
 
 ## Product direction
 
 Build a shared CRM and operational backend for The Roof Doctors residential division and Commercial Roof Doctors commercial division. The companies retain separate branding, websites, offerings, lead sources, pipelines, and permission rules. They must not be collapsed into one undifferentiated workflow. Shared people, organizations, properties, documents, and service history can be linked where authorized.
 
 The CRM is a first class part of the combined Roof Doctors platform, not a disconnected spreadsheet or a demo screen.
+
+Roofr integration is explicitly on hold. Do not add Roofr API calls, credentials, measurement requests, or other Roofr dependencies as part of the current work. The website estimate tool should work from information the property owner enters.
 
 ## Core lifecycle
 
@@ -33,21 +35,31 @@ The Roof Doctors residential workflow and Commercial Roof Doctors commercial wor
 
 Use division aware permissions, branding, forms, documents, pipelines, dashboards, and reports. Shared records must have explicit relationships and access controls.
 
-## Roofr satellite measurement and estimate integration
+## Immediate website estimate experience
 
-Roofr is the first measurement provider integration. The public website should allow a visitor to request a roof estimate using a property address, then show an estimate only when the required measurement and pricing inputs have actually been returned and configured. If Roofr measurements or pricing are unavailable, explain that an inspection or follow up is required instead of inventing a measurement or price.
+The property owner enters the property and roof details into a short website form. Inputs should include:
 
-Required flow:
+* Property address and contact information.
+* Approximate roof size in square feet or roofing squares.
+* Roof complexity, using simple choices such as simple, moderate, or complex.
+* Roof pitch if known, with an option for unknown.
+* Desired roofing material, using the material choices actually offered by the relevant division.
+* Optional notes and a preferred way to be contacted.
 
-Property → Project → Measurement Request → Roofr → Measurement Result → Normalized Roof Model → Estimate or Proposal → CRM record.
+When the required inputs are provided, show a preliminary price range immediately on the page. The estimate must be calculated from company approved, configurable pricing rules and the user's inputs, not a hard coded invented price. The rules should account for material, size, complexity, pitch when known, and any configured minimums or location adjustments. Keep residential and commercial pricing separate. If a required pricing rule is not configured or the inputs are insufficient, do not invent a range; show a clear request for follow up instead.
 
-Associate the Roofr request and result with the customer, property, roof, project, and estimate. Store provider provenance, request status, timestamps, returned report identifiers, import time, measurement version, and any source report link supplied by the provider.
+Explain plainly that the result is an initial budgetary range based on customer supplied information, not an inspection, guaranteed quote, or formal proposal. The range can change after measurements, site inspection, decking or substrate review, code requirements, tear off details, access conditions, and final scope are verified.
 
-Normalize only fields actually returned by Roofr, such as roof area, pitches, planes, edges, and waste, when present. Preserve the original provider response or report reference securely where permitted. Support measurement request states, errors, retries, and version history.
+Immediately after displaying the range, offer clear next actions:
+* Request an appointment using a short form that carries the entered property and roof details into the lead record.
+* Call now using the appropriate division phone number.
+* Text now using a correctly configured SMS link and appropriate division number. Do not show a text action unless that number is confirmed capable of receiving messages.
 
-Use a provider adapter so future measurement providers can be added without hard coding Roofr assumptions throughout the CRM. Keep API credentials on the server. Never expose provider secrets in browser code. Do not fabricate endpoints, API capabilities, measurements, report links, pricing, or connected status. Verify Roofr API access and account entitlements before implementing live calls.
+Create a CRM lead and estimate request from a submitted contact or appointment request, preserve the inputs and calculated range, record the division and lead source, and provide a confirmation to the customer. Protect personal information and validate all submitted fields. Include a server side rate limit and spam protection appropriate to the current stack.
 
-The estimate engine must use company approved pricing rules, configurable materials, labor, waste, pitch or complexity factors, division, location, and other explicitly configured inputs. Clearly distinguish an automated budgetary estimate from a reviewed formal proposal. Do not present a binding price until the business rules and required review process are configured.
+## Future Roofr integration
+
+Roofr satellite measurement integration is deferred until separately approved. Do not make the current estimate form dependent on Roofr availability. If Roofr is pursued later, verify account access and official API capabilities first, then design a provider adapter that associates real returned measurements and report provenance with the customer, property, roof, project, and estimate. Never fabricate measurements, endpoints, report links, pricing, or integration status.
 
 ## Data and deployment requirements
 
@@ -56,7 +68,7 @@ The estimate engine must use company approved pricing rules, configurable materi
 * Use authenticated server side APIs, role checks, input validation, audit trails, backups, and migration rollback procedures.
 * Keep secrets out of source control and logs.
 * Test both divisions independently and test authorized cross division links.
-* Test lead capture, estimates, Roofr failures, admin access, mobile screens, deep links, notifications, and data persistence across restarts.
+* Test lead capture, estimate calculations, missing or invalid inputs, appointment requests, call and text actions, admin access, mobile screens, deep links, notifications, and data persistence across restarts.
 * Do not change live DNS or deploy production writes until staging validation and a rollback plan are complete.
 
 ## Implementation order
@@ -65,10 +77,10 @@ The estimate engine must use company approved pricing rules, configurable materi
 2. Choose and implement durable shared data infrastructure with explicit division boundaries, migrations, and backups.
 3. Build the CRM data model and server side APIs around the lifecycle above, mapping existing data rather than discarding it.
 4. Build authenticated CRM screens, role permissions, pipeline views, property and roof history, tasks, and reporting.
-5. Verify Roofr API credentials, official API capabilities, account permissions, and report retrieval behavior. Implement the provider adapter only against verified documentation.
-6. Connect website estimate requests to measurement requests and CRM records. Add approved pricing rules and clearly label estimate confidence and review status.
+5. Inspect the existing website forms and implement the instant estimate experience using configurable, approved pricing rules and the property owner's inputs. Keep Roofr out of scope.
+6. Connect appointment and contact submissions to CRM lead records, preserving the estimate inputs, range, division, and lead source.
 7. Run end to end staging tests before production deployment.
 
 ## Non negotiable safeguards
 
-Do not replace existing data stores with an unverified quick workaround. Do not merge the two division workflows into one generic pipeline. Do not expose customer data or Roofr credentials. Do not show fabricated real time measurements or estimates. Do not deploy or change DNS without explicit approval.
+Do not replace existing data stores with an unverified quick workaround. Do not merge the two division workflows into one generic pipeline. Do not expose customer data or secrets. Do not show fabricated estimates or imply that a preliminary range is a guaranteed quote. Do not deploy or change DNS without explicit approval.
