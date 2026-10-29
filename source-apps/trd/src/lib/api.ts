@@ -43,22 +43,12 @@ import type {
 const BASE_URL = '/residential/api/v1';
 
 async function request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  // Pass current role/user context in development
-  const savedUser = localStorage.getItem('roof_docs_active_user');
+  const token = localStorage.getItem('roof_docs_access_token');
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     ...(options.headers as Record<string, string>),
   };
-
-  if (savedUser) {
-    try {
-      const u = JSON.parse(savedUser);
-      headers['x-user-id'] = u.id;
-      headers['x-user-role'] = u.role;
-    } catch {
-      // ignore
-    }
-  }
+  if (token) headers.Authorization = `Bearer ${token}`;
 
   const res = await fetch(`${BASE_URL}${endpoint}`, {
     ...options,
