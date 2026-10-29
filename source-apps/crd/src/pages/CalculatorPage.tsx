@@ -224,10 +224,12 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
 
               <div>
                 <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
-                  Facility Address / City (Ark-La-Tex Region)
+                  Property Address *
                 </label>
                 <input
                   type="text"
+                  required
+                  autoComplete="street-address"
                   placeholder="e.g. 1500 Industrial Pkwy, Texarkana, TX"
                   value={inputs.address}
                   onChange={(e) => setInputs({ ...inputs, address: e.target.value })}
@@ -258,7 +260,17 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
                 </div>
               </div>
               <div className="pt-4 flex justify-end">
-                <button type="button" onClick={() => setStep(2)} className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-6 py-2.5 rounded flex items-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20">
+                <button type="button" onClick={() => {
+                  if (!inputs.contactName.trim() || !inputs.address.trim() || !inputs.phone.trim() || !inputs.email.trim()) {
+                    window.alert('Please enter your full name, property address, phone number, and email before continuing.');
+                    return;
+                  }
+                  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputs.email.trim())) {
+                    window.alert('Please enter a valid email address.');
+                    return;
+                  }
+                  setStep(2);
+                }} className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-6 py-2.5 rounded flex items-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20">
                   <span>Continue to Roof Parameters</span><ArrowRight className="w-4 h-4" />
                 </button>
               </div>
