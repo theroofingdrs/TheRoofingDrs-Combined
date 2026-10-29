@@ -217,10 +217,10 @@ app.get('/api/leads/:id', async (req: Request, res: Response) => {
     return res.status(404).json({ error: 'Lead not found' });
   }
 
-  const organization = db.organizations.find((o) => o.organizationId === lead.organizationId) || null;
-  const contact = db.contacts.find((c) => c.contactId === lead.contactId) || null;
-  const property = db.properties.find((p) => p.propertyId === lead.propertyId) || null;
-  const timeline = db.timelineEvents.filter((t) => t.leadId === lead.leadId);
+  const organization = lead.organizationRecord || db.organizations.find((o) => o.organizationId === lead.organizationId) || null;
+  const contact = lead.contactRecord || db.contacts.find((c) => c.contactId === lead.contactId) || null;
+  const property = lead.propertyRecord || db.properties.find((p) => p.propertyId === lead.propertyId) || null;
+  const timeline = Array.isArray(lead.timeline) ? lead.timeline : db.timelineEvents.filter((t) => t.leadId === lead.leadId);
 
   res.json({
     lead,
@@ -248,16 +248,19 @@ app.patch('/api/leads/:id', async (req: Request, res: Response) => {
   const { status, priority, assignedTo, notes, newNote } = req.body;
 
   const previousStatus = currentLead.status;
+  if (!Array.isArray(currentLead.timeline)) currentLead.timeline = [];
   if (status && status !== previousStatus) {
     currentLead.status = status;
-    db.timelineEvents.push({
+    const event = {
       id: generateId('evt'),
       leadId: currentLead.leadId,
       title: 'Status Updated',
       description: `Status transitioned from "${previousStatus}" to "${status}"`,
       timestamp: new Date().toISOString(),
       author: 'Operations Staff',
-    });
+    };
+    currentLead.timeline.push(event);
+    db.timelineEvents.push(event);
   }
 
   if (priority) currentLead.priority = priority;
@@ -265,14 +268,17 @@ app.patch('/api/leads/:id', async (req: Request, res: Response) => {
   if (notes !== undefined) currentLead.notes = notes;
 
   if (newNote && typeof newNote === 'string') {
-    db.timelineEvents.push({
+    const event = {
       id: generateId('evt'),
       leadId: currentLead.leadId,
       title: 'Internal Note Added',
       description: newNote,
       timestamp: new Date().toISOString(),
       author: 'Operations Staff',
-    });
+    };
+    if (!Array.isArray(currentLead.timeline)) currentLead.timeline = [];
+    currentLead.timeline.push(event);
+    db.timelineEvents.push(event);
   }
 
   currentLead.updatedAt = new Date().toISOString();
@@ -470,27 +476,38 @@ app.post('/api/leads', async (req: Request, res: Response) => {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
-    // Canonical lead record shared by residential and commercial intake.
-    // Fail the request rather than claiming success if durable storage is unavailable.
-    await upsertRows('trd_records', [{
-      id: leadId,
-      record_type: 'lead',
-      payload: { ...newLead, division: 'commercial' },
-      created_at: newLead.createdAt,
-      updated_at: newLead.updatedAt,
-    }], 'id');
-
-    db.leads.push(newLead);
-
-    // Initial timeline entry
-    db.timelineEvents.push({
+    // Keep the related commercial records with the canonical shared lead so
+    // the detail view does not depend on ephemeral Cloud Run filesystem data.
+    const initialTimeline = {
       id: generateId('evt'),
       leadId,
       title: 'Lead Ingested',
       description: `New ${newLead.leadType} lead received via ${newLead.source}. Priority: ${newLead.priority}.`,
       timestamp: new Date().toISOString(),
       author: 'CRD Ingestion Engine',
-    });
+    };
+    const durableLead = {
+      ...newLead,
+      division: 'commercial',
+      organizationRecord: newOrg,
+      contactRecord: newContact,
+      propertyRecord: newProperty,
+      timeline: [initialTimeline],
+    };
+
+    // Fail the request rather than claiming success if durable storage is unavailable.
+    await upsertRows('trd_records', [{
+      id: leadId,
+      record_type: 'lead',
+      payload: durableLead,
+      created_at: newLead.createdAt,
+      updated_at: newLead.updatedAt,
+    }], 'id');
+
+    db.leads.push(newLead);
+
+    // Mirror the initial timeline entry locally for existing in-process views.
+    db.timelineEvents.push(initialTimeline);
 
     saveDB(db);
 
