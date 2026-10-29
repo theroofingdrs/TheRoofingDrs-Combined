@@ -550,7 +550,7 @@ app.post('/api/calculator', (req: Request, res: Response) => {
       createdAt: new Date().toISOString(),
     };
 
-    db.calculatorSubmissions.push(calcSubmission);
+    if (!submitLead) db.calculatorSubmissions.push(calcSubmission);
 
     // If user provided contact info, also create an associated Lead
     let leadId = null;
