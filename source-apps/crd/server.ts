@@ -687,7 +687,7 @@ app.get('/sitemap.xml', (req: Request, res: Response) => {
 ${routes
   .map(
     (r) => `  <url>
-    <loc>${baseUrl}${r}</loc>
+    <loc>${baseUrl}/commercial${r === '' ? '/' : r}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>${r === '' || r.includes('storm') || r.includes('emergency') ? 'daily' : 'weekly'}</changefreq>
     <priority>${r === '' ? '1.0' : r.includes('calculator') || r.includes('inspection') ? '0.9' : '0.8'}</priority>
@@ -707,8 +707,8 @@ app.get('/robots.txt', (req: Request, res: Response) => {
   res.type('text/plain');
   res.send(`User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api/
+Disallow: /commercial/admin
+Disallow: /commercial/api/
 Sitemap: ${protocol}://${host}/commercial/sitemap.xml
 `);
 });
