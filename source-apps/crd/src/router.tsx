@@ -6,7 +6,7 @@ interface RouterContextType {
 }
 
 const COMMERCIAL_BASE = '/commercial';
-const stripCommercialBase = (path: string) => (path.replace(/^\\/commercial(?=\\/|$)/, '') || '/');
+const stripCommercialBase = (path: string) => (path.replace(/^\/commercial(?=\/|$)/, '') || '/');
 const withCommercialBase = (path: string) => `${COMMERCIAL_BASE}${path === '/' ? '/' : path.startsWith('/') ? path : `/${path}`}`;
 
 const RouterContext = createContext<RouterContextType>({
