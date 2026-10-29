@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - integration/path-routing
+      - feature/supabase-persistence
   pull_request:
     branches:
       - main
