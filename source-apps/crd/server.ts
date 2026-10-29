@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { selectRows, upsertRows } from './server/supabaseRest';
-import { uploadPublicLogo } from './server/supabaseStorage';
+import { uploadPublicLogo, uploadPrivateLeadFile } from './server/supabaseStorage';
 
 const PORT = Number(process.env.PORT) || 3000;
 const app = express();
@@ -273,33 +273,72 @@ app.patch('/api/leads/:id', async (req: Request, res: Response) => {
   res.json({ success: true, lead: currentLead });
 });
 
-// POST /api/leads/:id/photos - Attach photos to a lead
-app.post('/api/leads/:id/photos', (req: Request, res: Response) => {
-  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
-  if (leadIndex === -1) {
-    return res.status(404).json({ error: 'Lead not found' });
-  }
-
+// POST /api/leads/:id/photos - Store lead files privately in Supabase Storage.
+app.post('/api/leads/:id/photos', async (req: Request, res: Response) => {
   const { photos } = req.body;
-  if (!Array.isArray(photos)) {
-    return res.status(400).json({ error: 'Photos must be an array of photo objects or base64 strings' });
+  if (!Array.isArray(photos) || photos.length < 1 || photos.length > 10) {
+    return res.status(400).json({ error: 'Submit between 1 and 10 files per upload.' });
   }
 
-  const currentLead = db.leads[leadIndex];
-  currentLead.photos = [...(currentLead.photos || []), ...photos];
-  currentLead.updatedAt = new Date().toISOString();
+  let rows: any[];
+  try {
+    rows = await selectRows<any>('trd_records', `select=id,payload&record_type=eq.lead&id=eq.${encodeURIComponent(req.params.id)}&limit=1`);
+  } catch (error) {
+    console.error('Shared lead lookup failed before photo upload:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
+  const currentLead = rows[0]?.payload;
+  if (!currentLead || !(currentLead.leadId || currentLead.division === 'commercial' || currentLead.division === 'COMMERCIAL')) {
+    return res.status(404).json({ error: 'Commercial lead not found.' });
+  }
 
-  db.timelineEvents.push({
-    id: generateId('evt'),
-    leadId: currentLead.leadId,
-    title: 'Photos Attached',
-    description: `${photos.length} new photo(s) uploaded and attached to lead.`,
-    timestamp: new Date().toISOString(),
-    author: 'Field / Customer Upload',
-  });
+  try {
+    const uploaded = [];
+    for (const photo of photos) {
+      const raw = typeof photo === 'string' ? photo : photo?.dataBase64;
+      if (typeof raw !== 'string' || raw.length > 22_000_000) {
+        return res.status(400).json({ error: 'Each file must be a supported image or PDF under 15 MB.' });
+      }
+      const match = raw.match(/^data:(image\/(?:jpeg|png|webp)|application\/pdf);base64,/i);
+      const contentType = (typeof photo === 'object' && photo?.mimeType) || match?.[1]?.toLowerCase();
+      const clean = raw.replace(/^data:[^;]+;base64,/i, '');
+      if (!contentType || !/^[A-Za-z0-9+/]*={0,2}$/.test(clean)) {
+        return res.status(400).json({ error: 'Each file must include a valid supported MIME type and base64 data.' });
+      }
+      const bytes = Buffer.from(clean, 'base64');
+      if (bytes.length > 15 * 1024 * 1024 || bytes.length === 0) {
+        return res.status(400).json({ error: 'Each file must be nonempty and under 15 MB.' });
+      }
+      if (contentType === 'image/png' && !bytes.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))) {
+        return res.status(400).json({ error: 'Invalid PNG file.' });
+      }
+      if (contentType === 'image/jpeg' && !(bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[bytes.length - 2] === 0xff && bytes[bytes.length - 1] === 0xd9)) {
+        return res.status(400).json({ error: 'Invalid JPEG file.' });
+      }
+      if (contentType === 'image/webp' && (bytes.toString('ascii', 0, 4) !== 'RIFF' || bytes.toString('ascii', 8, 12) !== 'WEBP')) {
+        return res.status(400).json({ error: 'Invalid WebP file.' });
+      }
+      if (contentType === 'application/pdf' && bytes.toString('ascii', 0, 5) !== '%PDF-') {
+        return res.status(400).json({ error: 'Invalid PDF file.' });
+      }
+      const name = typeof photo === 'object' && typeof photo?.name === 'string' ? photo.name : `upload.${contentType === 'image/jpeg' ? 'jpg' : contentType === 'image/png' ? 'png' : contentType === 'image/webp' ? 'webp' : 'pdf'}`;
+      uploaded.push(await uploadPrivateLeadFile(req.params.id, name, contentType, bytes));
+    }
 
-  saveDB(db);
-  res.json({ success: true, count: currentLead.photos.length });
+    const prior = Array.isArray(currentLead.photos) ? currentLead.photos : [];
+    currentLead.photos = [...prior, ...uploaded];
+    currentLead.updatedAt = new Date().toISOString();
+    await upsertRows('trd_records', [{
+      id: rows[0].id,
+      record_type: 'lead',
+      payload: currentLead,
+      updated_at: currentLead.updatedAt,
+    }], 'id');
+    return res.json({ success: true, count: currentLead.photos.length, uploaded: uploaded.length });
+  } catch (error) {
+    console.error('Private lead file upload failed:', error);
+    return res.status(503).json({ error: 'File storage is temporarily unavailable. Please retry.' });
+  }
 });
 
 // POST /api/leads - Generic Commercial Lead Submission
