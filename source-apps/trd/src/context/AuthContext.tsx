@@ -190,10 +190,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       .catch(() => { localStorage.removeItem('roof_docs_access_token'); localStorage.removeItem('roof_docs_active_user'); });
   }, []);
 
-  const signInAsRole = (role: UserRole) => {
-    const user = PRESET_USERS[role];
-    setCurrentUser(user);
-    localStorage.setItem('roof_docs_active_user', JSON.stringify(user));
+  // Demo role switching is intentionally disabled. Staff must authenticate with Supabase.
+  const signInAsRole = (_role: UserRole) => {
+    setCurrentUser(null);
+    localStorage.removeItem('roof_docs_active_user');
+    localStorage.removeItem('roof_docs_access_token');
   };
 
   const loginStaff = async (email: string, password?: string) => {
@@ -257,6 +258,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const signOut = () => {
     setCurrentUser(null);
     localStorage.removeItem('roof_docs_active_user');
+    localStorage.removeItem('roof_docs_access_token');
   };
 
   const hasRole = (allowedRoles: UserRole[]): boolean => {
