@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: combined-site-ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
