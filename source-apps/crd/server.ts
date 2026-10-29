@@ -94,7 +94,7 @@ app.post('/api/save-logo', (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Logo image must be a valid PNG under 2 MB.' });
     }
 
-    const cleanBase64 = dataBase64.replace(/^data:image\\/png;base64,/i, '');
+    const cleanBase64 = dataBase64.replace(/^data:image\/png;base64,/i, '');
     if (!/^[A-Za-z0-9+/]*={0,2}$/.test(cleanBase64)) {
       return res.status(400).json({ error: 'Invalid base64 image data.' });
     }
