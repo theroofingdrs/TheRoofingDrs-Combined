@@ -476,7 +476,20 @@ app.post('/api/calculator', (req: Request, res: Response) => {
       phone,
       email,
       address,
+      reasonForWork = 'Not sure',
+      dateOfLoss,
+      insurer,
+      policyNumber,
+      claimNumber,
+      adjusterName,
+      adjusterPhone,
+      notes,
+      submitLead = false,
     } = req.body;
+
+    if (submitLead && (!contactName?.trim() || !address?.trim() || !phone?.trim() || !email?.trim())) {
+      return res.status(400).json({ error: 'Full name, property address, phone number, and email are required.' });
+    }
 
     const sqft = Number(squareFootage) || 10000;
     
@@ -520,6 +533,14 @@ app.post('/api/calculator', (req: Request, res: Response) => {
         companyName: companyName || '',
         phone: phone || '',
         email: email || '',
+        reasonForWork,
+        dateOfLoss: dateOfLoss || '',
+        insurer: insurer || '',
+        policyNumber: policyNumber || '',
+        claimNumber: claimNumber || '',
+        adjusterName: adjusterName || '',
+        adjusterPhone: adjusterPhone || '',
+        notes: notes || '',
       },
       results: {
         estimatedLow,
@@ -533,7 +554,7 @@ app.post('/api/calculator', (req: Request, res: Response) => {
 
     // If user provided contact info, also create an associated Lead
     let leadId = null;
-    if (phone || email) {
+    if (submitLead) {
       leadId = generateId('lead');
       const orgId = generateId('org');
       const contactId = generateId('cnt');
@@ -591,8 +612,18 @@ app.post('/api/calculator', (req: Request, res: Response) => {
         source: 'Commercial Roof Cost Calculator',
         status: 'New',
         assignedTo: 'Dispatch / Estimating',
-        message: `Calculator estimate generated: ${sqft.toLocaleString()} sq ft ${roofSystem || 'TPO'} for ${desiredWork}. Range: $${estimatedLow.toLocaleString()} - $${estimatedHigh.toLocaleString()}`,
-        notes: `User completed 5-step calculator. Address: ${address || 'Not provided'}`,
+        message: `Calculator estimate generated: ${sqft.toLocaleString()} sq ft ${roofSystem || 'TPO'} for ${desiredWork}. Range: ${estimatedLow.toLocaleString()} - ${estimatedHigh.toLocaleString()}`,
+        notes: [`User completed commercial calculator. Address: ${address}`, notes].filter(Boolean).join(' | '),
+        stormMetadata: {
+          reasonForWork,
+          stormDate: dateOfLoss || '',
+          stormDamageType: reasonForWork,
+          carrier: insurer || '',
+          policyNumber: policyNumber || '',
+          claimNumber: claimNumber || '',
+          adjusterName: adjusterName || '',
+          adjusterPhone: adjusterPhone || '',
+        },
         photos: [],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
