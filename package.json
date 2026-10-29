@@ -1,0 +1,9 @@
+{
+  "name": "the-roofing-doctors-combined",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix source-apps/trd install && npm --prefix source-apps/trd run build && npm --prefix source-apps/crd install && npm --prefix source-apps/crd run build",
+    "start": "node server.mjs"
+  }
+}
