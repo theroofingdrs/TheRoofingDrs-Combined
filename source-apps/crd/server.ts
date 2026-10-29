@@ -3,7 +3,6 @@ import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { selectRows, upsertRows } from './server/supabaseRest';
-import { upsertRows } from './server/supabaseRest';
 
 const PORT = Number(process.env.PORT) || 3000;
 const app = express();
@@ -127,9 +126,18 @@ app.post('/api/save-logo', (req: Request, res: Response) => {
   }
 });
 
-// Admin stats
-app.get('/api/admin/stats', (req: Request, res: Response) => {
-  const leads = db.leads || [];
+// Admin stats use the shared lead store so counts survive Cloud Run restarts.
+app.get('/api/admin/stats', async (req: Request, res: Response) => {
+  let leads: any[];
+  try {
+    const rows = await selectRows<any>('trd_records', 'select=id,payload&record_type=eq.lead&order=created_at.desc');
+    leads = rows.map((row) => row.payload).filter((lead) =>
+      lead.division === 'commercial' || lead.division === 'COMMERCIAL' || Boolean(lead.leadId)
+    );
+  } catch (error) {
+    console.error('Shared commercial lead stats failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
   const stats = {
     total: leads.length,
     emergency: leads.filter((l) => l.priority === 'Emergency' || l.leadType === 'Emergency').length,
