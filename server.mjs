@@ -90,7 +90,7 @@ const server = http.createServer((req, res) => {
   }
 
   const assetApp = findAsset(pathname, req.headers.referer || '');
-  if (assetApp) return proxy(req, res, assetApp, pathname + url.search);
+  if (assetApp) return proxy(req, res, assetApp, url.pathname + url.search);
 
   res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' });
   res.end('Page not found.');
