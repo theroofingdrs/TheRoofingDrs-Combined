@@ -4,6 +4,7 @@ import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { selectRows, upsertRows } from './server/supabaseRest';
 import { uploadPublicLogo, uploadPrivateLeadFile } from './server/supabaseStorage';
+import { requireOwnerAuth } from './server/requireOwnerAuth';
 
 const PORT = Number(process.env.PORT) || 3000;
 const app = express();
@@ -103,6 +104,18 @@ app.post('/api/save-logo', async (req: Request, res: Response) => {
     console.error('Error saving logo asset to Supabase Storage:', err);
     return res.status(503).json({ error: 'Logo storage is temporarily unavailable.' });
   }
+});
+
+// Protect commercial CRM data and mutations. Public lead, emergency, calculator,
+// health, and branding submissions remain available without a staff session.
+app.use((req: Request, res: Response, next) => {
+  const isStaffRoute =
+    req.path === '/api/admin/stats' ||
+    req.path === '/api/leads' && req.method !== 'POST' ||
+    /^\\/api\\/leads\\/[^/]+/.test(req.path) ||
+    req.path === '/api/save-logo' && req.method !== 'POST';
+  if (!isStaffRoute) return next();
+  return requireOwnerAuth(req, res, next);
 });
 
 // Admin stats use the shared lead store so counts survive Cloud Run restarts.
