@@ -16,6 +16,10 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
   ogType = 'website',
 }) => {
   useEffect(() => {
+    const prefixedCanonicalPath = canonicalPath.startsWith('/residential')
+      ? canonicalPath
+      : `/residential${canonicalPath === '/' ? '/' : canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
+
     // 1. Update Document Title
     const fullTitle = title.includes('The Roof Doctors')
       ? title
@@ -44,7 +48,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       ogUrl.setAttribute('property', 'og:url');
       document.head.appendChild(ogUrl);
     }
-    ogUrl.setAttribute('content', window.location.origin + canonicalPath);
+    ogUrl.setAttribute('content', window.location.origin + prefixedCanonicalPath);
 
     let ogTypeMeta = document.querySelector('meta[property="og:type"]');
     if (!ogTypeMeta) {
