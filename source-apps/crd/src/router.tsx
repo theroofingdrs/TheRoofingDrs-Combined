@@ -5,6 +5,10 @@ interface RouterContextType {
   navigate: (path: string) => void;
 }
 
+const COMMERCIAL_BASE = '/commercial';
+const stripCommercialBase = (path: string) => (path.replace(/^\\/commercial(?=\\/|$)/, '') || '/');
+const withCommercialBase = (path: string) => `${COMMERCIAL_BASE}${path === '/' ? '/' : path.startsWith('/') ? path : `/${path}`}`;
+
 const RouterContext = createContext<RouterContextType>({
   currentPath: '/',
   navigate: () => {},
@@ -14,12 +18,12 @@ export const useRouter = () => useContext(RouterContext);
 
 export const RouterProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    return window.location.pathname || '/';
+    return stripCommercialBase(window.location.pathname || '/');
   });
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname || '/');
+      setCurrentPath(stripCommercialBase(window.location.pathname || '/'));
       window.scrollTo(0, 0);
     };
 
@@ -32,8 +36,8 @@ export const RouterProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    window.history.pushState({}, '', path);
-    setCurrentPath(path);
+    window.history.pushState({}, '', withCommercialBase(path));
+    setCurrentPath(stripCommercialBase(path));
     window.scrollTo(0, 0);
   };
 
@@ -67,7 +71,7 @@ export const Link: React.FC<LinkProps> = ({ to, className, children, onClick, id
   return (
     <a
       id={id}
-      href={to}
+      href={to.startsWith('http') || to.startsWith('tel:') || to.startsWith('mailto:') || to.startsWith('#') ? to : withCommercialBase(to)}
       onClick={handleClick}
       className={`${className || ''} ${isActive ? 'active-link' : ''}`}
       {...rest}
