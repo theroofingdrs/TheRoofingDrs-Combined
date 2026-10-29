@@ -126,3 +126,17 @@ set public = false,
 
 -- No storage.objects policies are created here. Upload and download are server-only
 -- until a deliberate authenticated user access model is implemented.
+
+-- Public branding assets only. Customer uploads remain in the private bucket above.
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values (
+  'roof-doctors-public',
+  'roof-doctors-public',
+  true,
+  2097152,
+  array['image/png']
+)
+on conflict (id) do update
+set public = true,
+    file_size_limit = excluded.file_size_limit,
+    allowed_mime_types = excluded.allowed_mime_types;
