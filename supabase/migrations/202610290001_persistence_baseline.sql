@@ -105,8 +105,8 @@ alter table public.crd_leads enable row level security;
 alter table public.crd_calculator_submissions enable row level security;
 alter table public.crd_timeline_events enable row level security;
 
-revoke all on all tables in schema app_private from public, anon, authenticated;
-grant select, insert, update, delete on all tables in schema app_private to service_role;
+revoke all on public.trd_records, public.crd_organizations, public.crd_contacts, public.crd_properties, public.crd_roofs, public.crd_leads, public.crd_calculator_submissions, public.crd_timeline_events from public, anon, authenticated;
+grant select, insert, update, delete on public.trd_records, public.crd_organizations, public.crd_contacts, public.crd_properties, public.crd_roofs, public.crd_leads, public.crd_calculator_submissions, public.crd_timeline_events to service_role;
 
 
 -- Uploaded customer and inspection photos must be stored in object storage,
