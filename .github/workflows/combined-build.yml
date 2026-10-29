@@ -19,4 +19,4 @@ jobs:
         with:
           node-version: 22
       - name: Build both websites
-        run: npm run build
+        run: npm test
