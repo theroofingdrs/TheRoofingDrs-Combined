@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
+import { upsertRows } from './server/supabaseRest';
 
 const PORT = Number(process.env.PORT) || 3000;
 const app = express();
@@ -282,7 +283,7 @@ app.post('/api/leads/:id/photos', (req: Request, res: Response) => {
 });
 
 // POST /api/leads - Generic Commercial Lead Submission
-app.post('/api/leads', (req: Request, res: Response) => {
+app.post('/api/leads', async (req: Request, res: Response) => {
   try {
     const {
       companyName,
@@ -394,6 +395,7 @@ app.post('/api/leads', (req: Request, res: Response) => {
     // Create Lead Record
     const newLead = {
       leadId,
+      division: 'commercial',
       organizationId: orgId,
       contactId,
       propertyId,
@@ -433,6 +435,16 @@ app.post('/api/leads', (req: Request, res: Response) => {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
+    // Canonical lead record shared by residential and commercial intake.
+    // Fail the request rather than claiming success if durable storage is unavailable.
+    await upsertRows('trd_records', [{
+      id: leadId,
+      record_type: 'lead',
+      payload: { ...newLead, division: 'commercial' },
+      created_at: newLead.createdAt,
+      updated_at: newLead.updatedAt,
+    }], 'id');
+
     db.leads.push(newLead);
 
     // Initial timeline entry
