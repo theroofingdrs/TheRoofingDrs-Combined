@@ -22,6 +22,11 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
   serviceType,
 }) => {
   useEffect(() => {
+    const normalizedCanonicalPath = canonicalPath || '/';
+    const prefixedCanonicalPath = normalizedCanonicalPath.startsWith('/commercial')
+      ? normalizedCanonicalPath
+      : `/commercial${normalizedCanonicalPath === '/' ? '/' : normalizedCanonicalPath.startsWith('/') ? normalizedCanonicalPath : `/${normalizedCanonicalPath}`}`;
+
     // Document Title
     document.title = title.includes('Commercial Roof Doctors')
       ? title
@@ -43,7 +48,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
     if (ogDesc) ogDesc.setAttribute('content', description);
 
     // Canonical
-    const fullUrl = `https://commercialroofdoctors.com${canonicalPath}`;
+    const fullUrl = `${window.location.origin}${prefixedCanonicalPath}`;
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {
       canonical = document.createElement('link');
