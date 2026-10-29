@@ -6,6 +6,7 @@ import { PublicWebsiteView } from './views/PublicWebsiteView.tsx';
 import { CrmAdminView } from './views/CrmAdminView.tsx';
 import { FieldOperationsView } from './views/FieldOperationsView.tsx';
 import { HomeownerPortalView } from './views/HomeownerPortalView.tsx';
+import { EstimateRequestView } from './views/EstimateRequestView.tsx';
 
 const RESIDENTIAL_BASE = '/residential';
 const stripResidentialBase = (path: string) => (path.replace(/^\/residential(?=\/|$)/, '') || '/');
@@ -32,6 +33,7 @@ function AppContent() {
   }, []);
 
   const isInternalStaffRoute = currentPath.startsWith('/app') || currentPath.startsWith('/field');
+  const isEstimateRequestRoute = currentPath.startsWith('/estimate-request');
   const showStaffRoleBar = isInternalStaffRoute && currentUser && currentUser.role !== 'HOMEOWNER';
 
   return (
@@ -43,7 +45,9 @@ function AppContent() {
 
       {/* Dynamic Route View */}
       <div className="flex-1">
-        {currentPath.startsWith('/app') ? (
+        {isEstimateRequestRoute ? (
+          <EstimateRequestView onNavigate={navigate} />
+        ) : currentPath.startsWith('/app') ? (
           <ProtectedRoute
             allowedRoles={[
               'OWNER',
