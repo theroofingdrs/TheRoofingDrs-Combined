@@ -4,6 +4,7 @@
  */
 
 import express, { Request, Response } from 'express';
+import { requireOwnerAuth } from '../../middleware/requireOwnerAuth.ts';
 import { getDatabase, persistDatabase, generateId } from '../../db/database.ts';
 import { saveSharedLead, getSharedLeads, getSharedLead } from '../../db/supabaseLeads.ts';
 import { calculateLeadScore } from '../../services/scoring.ts';
@@ -62,8 +63,9 @@ apiV1Router.use(express.json());
 
 // Helper to extract caller context for audit logging
 function getCallerContext(req: Request) {
-  const userId = (req.headers['x-user-id'] as string) || 'anonymous';
-  const userRole = (req.headers['x-user-role'] as string) || 'PUBLIC';
+  const verified = (req as Request & { verifiedStaff?: { id: string; email: string } }).verifiedStaff;
+  const userId = verified?.id || 'anonymous';
+  const userRole = verified ? 'OWNER' : 'PUBLIC';
   const ipAddress = req.ip || req.socket.remoteAddress || 'unknown';
   const userAgent = req.headers['user-agent'] || 'unknown';
   return { userId, userRole, ipAddress, userAgent };
@@ -156,6 +158,13 @@ apiV1Router.get('/settings', (req, res) => {
 apiV1Router.get('/business-rules', (req, res) => {
   const db = getDatabase();
   res.json(db.businessRules);
+});
+
+// All remaining CRM and administration endpoints require a verified owner session.
+// Public inquiry submission remains available without staff authentication.
+apiV1Router.use((req, res, next) => {
+  if (req.method === 'POST' && req.path === '/leads') return next();
+  return requireOwnerAuth(req, res, next);
 });
 
 apiV1Router.get('/users', (req, res) => {
