@@ -128,7 +128,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="name@theroofdoctors.com"
+                  placeholder="TheRoofingDrs@gmail.com"
                   className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500"
                 />
               </div>
