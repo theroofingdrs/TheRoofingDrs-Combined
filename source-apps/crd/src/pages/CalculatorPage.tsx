@@ -23,6 +23,14 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
     companyName: '',
     phone: '',
     email: '',
+    reasonForWork: 'Not sure',
+    dateOfLoss: '',
+    insurer: '',
+    policyNumber: '',
+    claimNumber: '',
+    adjusterName: '',
+    adjusterPhone: '',
+    notes: '',
   });
 
   const [calculationResult, setCalculationResult] = useState<{
@@ -92,11 +100,13 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
     e.preventDefault();
     setIsCalculating(true);
     try {
-      await fetch('/api/calculator', {
+      const response = await fetch('/api/calculator', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(inputs),
+        body: JSON.stringify({ ...inputs, submitLead: true }),
       });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error(result.error || 'Unable to submit request');
       setSubmitted(true);
       setStep(5);
     } catch (e) {
@@ -225,14 +235,31 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
                 />
               </div>
 
+              <div className="border-t border-slate-800 pt-4 space-y-3">
+                <h3 className="text-sm font-heading font-bold uppercase text-white">Your Contact Information</h3>
+                <p className="text-xs text-slate-400">Enter your contact information before viewing a planning range. We use it to save your request and follow up about the property.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs text-slate-400 mb-1">Full Name *</label>
+                    <input required autoComplete="name" type="text" value={inputs.contactName} onChange={(e) => setInputs({ ...inputs, contactName: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-slate-400 mb-1">Company / Facility Name</label>
+                    <input autoComplete="organization" type="text" value={inputs.companyName} onChange={(e) => setInputs({ ...inputs, companyName: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-slate-400 mb-1">Phone Number *</label>
+                    <input required autoComplete="tel" type="tel" value={inputs.phone} onChange={(e) => setInputs({ ...inputs, phone: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-slate-400 mb-1">Email Address *</label>
+                    <input required autoComplete="email" type="email" value={inputs.email} onChange={(e) => setInputs({ ...inputs, email: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" />
+                  </div>
+                </div>
+              </div>
               <div className="pt-4 flex justify-end">
-                <button
-                  type="button"
-                  onClick={() => setStep(2)}
-                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-6 py-2.5 rounded flex items-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20"
-                >
-                  <span>Continue to Roof Parameters</span>
-                  <ArrowRight className="w-4 h-4" />
+                <button type="button" onClick={() => setStep(2)} className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-6 py-2.5 rounded flex items-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20">
+                  <span>Continue to Roof Parameters</span><ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -402,24 +429,27 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
                 </select>
               </div>
 
+              <div className="border-t border-slate-800 pt-4 space-y-3">
+                <h3 className="text-sm font-heading font-bold uppercase text-white">Damage and Insurance Details <span className="text-slate-500 font-normal normal-case">(optional)</span></h3>
+                <div>
+                  <label className="block text-xs text-slate-400 mb-1">Reason for Repair or Replacement</label>
+                  <select value={inputs.reasonForWork} onChange={(e) => setInputs({ ...inputs, reasonForWork: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500">
+                    <option>Not sure</option><option>Storm or hail damage</option><option>Wind damage</option><option>Water leak</option><option>Other damage</option><option>Age or normal wear</option><option>Planned upgrade</option>
+                  </select>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div><label className="block text-xs text-slate-400 mb-1">Date of Loss, if known</label><input type="date" value={inputs.dateOfLoss} onChange={(e) => setInputs({ ...inputs, dateOfLoss: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" /></div>
+                  <div><label className="block text-xs text-slate-400 mb-1">Insurance Company</label><input type="text" value={inputs.insurer} onChange={(e) => setInputs({ ...inputs, insurer: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" /></div>
+                  <div><label className="block text-xs text-slate-400 mb-1">Policy Number</label><input type="text" value={inputs.policyNumber} onChange={(e) => setInputs({ ...inputs, policyNumber: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" /></div>
+                  <div><label className="block text-xs text-slate-400 mb-1">Claim Number</label><input type="text" value={inputs.claimNumber} onChange={(e) => setInputs({ ...inputs, claimNumber: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" /></div>
+                  <div><label className="block text-xs text-slate-400 mb-1">Adjuster Name</label><input type="text" value={inputs.adjusterName} onChange={(e) => setInputs({ ...inputs, adjusterName: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" /></div>
+                  <div><label className="block text-xs text-slate-400 mb-1">Adjuster Phone Number</label><input type="tel" value={inputs.adjusterPhone} onChange={(e) => setInputs({ ...inputs, adjusterPhone: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" /></div>
+                </div>
+                <div><label className="block text-xs text-slate-400 mb-1">Additional Notes</label><textarea rows={3} value={inputs.notes} onChange={(e) => setInputs({ ...inputs, notes: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:border-amber-500" /></div>
+              </div>
               <div className="pt-4 flex justify-between">
-                <button
-                  type="button"
-                  onClick={() => setStep(2)}
-                  className="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white flex items-center gap-1 uppercase"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  Back
-                </button>
-                <button
-                  type="button"
-                  disabled={isCalculating}
-                  onClick={runCalculation}
-                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-6 py-2.5 rounded flex items-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20 disabled:opacity-50"
-                >
-                  <span>{isCalculating ? 'Computing Range...' : 'Compute Planning Range'}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                <button type="button" onClick={() => setStep(2)} className="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white flex items-center gap-1 uppercase"><ArrowLeft className="w-4 h-4" />Back</button>
+                <button type="button" disabled={isCalculating} onClick={runCalculation} className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-6 py-2.5 rounded flex items-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20 disabled:opacity-50"><span>{isCalculating ? 'Computing Range...' : 'Compute Planning Range'}</span><ArrowRight className="w-4 h-4" /></button>
               </div>
             </div>
           )}
@@ -461,80 +491,13 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
                 </div>
               </div>
 
-              {/* Step 5 Form inputs to connect with an inspector */}
+              {/* Appointment request and direct contact */}
               <form onSubmit={handleFinalSubmit} className="space-y-4 pt-2">
-                <div className="text-sm font-heading font-bold uppercase text-white border-b border-slate-800 pb-1">
-                  Confirm Inspection to Lock Exact Project Scope
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs text-slate-400 mb-1">Your Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Contact Name"
-                      value={inputs.contactName}
-                      onChange={(e) => setInputs({ ...inputs, contactName: e.target.value })}
-                      className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:border-amber-500"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs text-slate-400 mb-1">Company / Facility Name</label>
-                    <input
-                      type="text"
-                      placeholder="Company Name"
-                      value={inputs.companyName}
-                      onChange={(e) => setInputs({ ...inputs, companyName: e.target.value })}
-                      className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:border-amber-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs text-slate-400 mb-1">Phone Number *</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="(903) 555-0199"
-                      value={inputs.phone}
-                      onChange={(e) => setInputs({ ...inputs, phone: e.target.value })}
-                      className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:border-amber-500"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs text-slate-400 mb-1">Email Address *</label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="manager@company.com"
-                      value={inputs.email}
-                      onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
-                      className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:border-amber-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="pt-4 flex justify-between items-center">
-                  <button
-                    type="button"
-                    onClick={() => setStep(3)}
-                    className="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white flex items-center gap-1 uppercase"
-                  >
-                    <ArrowLeft className="w-4 h-4" />
-                    Modify Scope
-                  </button>
-                  <button
-                    type="submit"
-                    disabled={isCalculating}
-                    className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-6 py-2.5 rounded flex items-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20"
-                  >
-                    <span>Request Professional Diagnostic Assessment</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                <div className="text-sm font-heading font-bold uppercase text-white border-b border-slate-800 pb-1">Request a Professional Assessment</div>
+                <p className="text-sm text-slate-300">Your contact information and optional damage or insurance details were entered before the planning range. Submit to save this request to the commercial lead queue.</p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button type="button" onClick={() => { window.location.href = 'tel:9032315940'; }} className="flex-1 border border-slate-600 hover:border-amber-500 text-white font-heading font-bold text-sm uppercase tracking-wider px-5 py-3 rounded">Call (903) 231-5940</button>
+                  <button type="submit" disabled={isCalculating} className="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading font-black text-sm uppercase tracking-wider px-5 py-3 rounded disabled:opacity-50">{isCalculating ? 'Submitting...' : 'Request Appointment'}</button>
                 </div>
               </form>
             </div>
