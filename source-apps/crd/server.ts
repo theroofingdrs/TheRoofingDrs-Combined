@@ -138,7 +138,7 @@ app.get('/api/admin/stats', async (req: Request, res: Response) => {
     insurance: leads.filter((l) => l.leadType === 'Insurance Claim').length,
     inspection: leads.filter((l) => l.leadType === 'Inspection').length,
     ppp: leads.filter((l) => l.leadType === 'PPP/Maintenance' || l.leadType === 'Property Management').length,
-    calculator: db.calculatorSubmissions?.length || 0,
+    calculator: (await selectRows<any>('crd_calculator_submissions', 'select=submission_id')).length,
     byStatus: {
       New: leads.filter((l) => l.status === 'New').length,
       Contacted: leads.filter((l) => l.status === 'Contacted').length,
@@ -569,7 +569,7 @@ app.post('/api/emergency', (req: Request, res: Response) => {
 });
 
 // POST /api/calculator - Cost Calculator submission and calculation
-app.post('/api/calculator', (req: Request, res: Response) => {
+app.post('/api/calculator', async (req: Request, res: Response) => {
   try {
     const {
       squareFootage,
@@ -680,7 +680,9 @@ app.post('/api/calculator', (req: Request, res: Response) => {
       createdAt: new Date().toISOString(),
     };
 
-    if (!submitLead) db.calculatorSubmissions.push(calcSubmission);
+    if (!submitLead) {
+      await upsertRows('crd_calculator_submissions', [{ submission_id: calcId, payload: calcSubmission, created_at: calcSubmission.createdAt }], 'submission_id');
+    }
 
     // If user provided contact info, also create an associated Lead
     let leadId = null;
@@ -758,10 +760,11 @@ app.post('/api/calculator', (req: Request, res: Response) => {
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };
+      await upsertRows('trd_records', [{ id: leadId, record_type: 'lead', payload: { ...lead, division: 'commercial', organizationRecord: db.organizations.find((o) => o.organizationId === orgId), contactRecord: db.contacts.find((c) => c.contactId === contactId), propertyRecord: db.properties.find((p) => p.propertyId === propertyId) }, updated_at: lead.updatedAt }], 'id');
       db.leads.push(lead);
     }
 
-    saveDB(db);
+    if (submitLead) saveDB(db);
 
     res.json({
       success: true,
@@ -781,10 +784,14 @@ app.post('/api/calculator', (req: Request, res: Response) => {
 });
 
 // GET /api/calculator - Retrieve calculator submissions
-app.get('/api/calculator', (req: Request, res: Response) => {
-  const list = [...(db.calculatorSubmissions || [])];
-  list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-  res.json(list);
+app.get('/api/calculator', async (req: Request, res: Response) => {
+  try {
+    const rows = await selectRows<any>('crd_calculator_submissions', 'select=submission_id,payload&order=created_at.desc');
+    res.json(rows.map((row) => row.payload));
+  } catch (error) {
+    console.error('Shared calculator submission list failed:', error);
+    res.status(503).json({ error: 'Calculator submission storage is temporarily unavailable.' });
+  }
 });
 
 // Dynamic XML Sitemap
