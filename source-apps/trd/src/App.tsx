@@ -7,21 +7,25 @@ import { CrmAdminView } from './views/CrmAdminView.tsx';
 import { FieldOperationsView } from './views/FieldOperationsView.tsx';
 import { HomeownerPortalView } from './views/HomeownerPortalView.tsx';
 
+const RESIDENTIAL_BASE = '/residential';
+const stripResidentialBase = (path: string) => (path.replace(/^\\/residential(?=\\/|$)/, '') || '/');
+const withResidentialBase = (path: string) => `${RESIDENTIAL_BASE}${path === '/' ? '/' : path.startsWith('/') ? path : `/${path}`}`;
+
 function AppContent() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    return window.location.pathname || '/';
+    return stripResidentialBase(window.location.pathname || '/');
   });
   const { currentUser } = useAuth();
 
   const navigate = (path: string) => {
-    window.history.pushState({}, '', path);
-    setCurrentPath(path);
+    window.history.pushState({}, '', withResidentialBase(path));
+    setCurrentPath(stripResidentialBase(path));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname || '/');
+      setCurrentPath(stripResidentialBase(window.location.pathname || '/'));
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
