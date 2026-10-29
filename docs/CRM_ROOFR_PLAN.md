@@ -37,14 +37,24 @@ Use division aware permissions, branding, forms, documents, pipelines, dashboard
 
 ## Immediate website estimate experience
 
-The property owner enters the property and roof details into a short website form. Inputs should include:
+The property owner must provide their personal and property contact information before receiving the instant estimate. Make these fields required: full name, property address, phone number, and email address. Validate the fields and explain why the information is requested. Do not require insurance or loss information to receive a non insurance estimate.
 
-* Property address and contact information.
+The form should then collect the roof details needed for the preliminary range:
+
 * Approximate roof size in square feet or roofing squares.
 * Roof complexity, using simple choices such as simple, moderate, or complex.
 * Roof pitch if known, with an option for unknown.
 * Desired roofing material, using the material choices actually offered by the relevant division.
-* Optional notes and a preferred way to be contacted.
+
+Include an optional insurance and damage section with dropdowns and fields:
+
+* Reason for replacement or repair: storm or hail damage, wind damage, water leak, other damage, age or normal wear, planned upgrade, or not sure.
+* Date of loss, optional, when a specific loss date is known.
+* Insurance company, optional.
+* Claim number, optional.
+* Additional notes, optional.
+
+Keep date of loss, insurer, and claim number optional. Do not assume a claim exists or block estimates when those fields are blank. Show insurance related fields as relevant to the selected reason, without hiding the general contact and roof details. Include a preferred contact method if supported.
 
 When the required inputs are provided, show a preliminary price range immediately on the page. The estimate must be calculated from company approved, configurable pricing rules and the user's inputs, not a hard coded invented price. The rules should account for material, size, complexity, pitch when known, and any configured minimums or location adjustments. Keep residential and commercial pricing separate. If a required pricing rule is not configured or the inputs are insufficient, do not invent a range; show a clear request for follow up instead.
 
@@ -55,7 +65,7 @@ Immediately after displaying the range, offer clear next actions:
 * Call now using the appropriate division phone number.
 * Text now using a correctly configured SMS link and appropriate division number. Do not show a text action unless that number is confirmed capable of receiving messages.
 
-Create a CRM lead and estimate request from a submitted contact or appointment request, preserve the inputs and calculated range, record the division and lead source, and provide a confirmation to the customer. Protect personal information and validate all submitted fields. Include a server side rate limit and spam protection appropriate to the current stack.
+Create a CRM lead and estimate request from a submitted contact or appointment request, preserve the required name, property address, phone, and email, all roof inputs, selected reason for work, optional date of loss, insurer, claim number, notes, calculated range, division, and lead source, and provide a confirmation to the customer. Restrict access to personal and insurance claim details according to role permissions. Protect personal information and validate all submitted fields. Include a server side rate limit and spam protection appropriate to the current stack.
 
 ## Future Roofr integration
 
