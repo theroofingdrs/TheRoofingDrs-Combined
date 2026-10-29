@@ -158,7 +158,7 @@ interface AuthContextType {
   isAuthenticated: boolean;
   signInAsRole: (role: UserRole) => void;
   signOut: () => void;
-  loginStaff: (email: string, password?: string) => { success: boolean; error?: string };
+  loginStaff: (email: string, password?: string) => Promise<{ success: boolean; error?: string }>;
   loginHomeowner: (identifier: string) => { success: boolean; error?: string };
   hasRole: (allowedRoles: UserRole[]) => boolean;
   hasPermission: (permission: Permission) => boolean;
@@ -168,17 +168,27 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   // Default to null (anonymous visitor) for authentic public site visitor experience
-  const [currentUser, setCurrentUser] = useState<User | null>(() => {
-    const saved = localStorage.getItem('roof_docs_active_user');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch {
-        // fallback
-      }
-    }
-    return null;
-  });
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const supabaseUrl = (import.meta as any).env?.VITE_SUPABASE_URL || '';
+  const supabaseAnonKey = (import.meta as any).env?.VITE_SUPABASE_PUBLISHABLE_KEY || '';
+
+  useEffect(() => {
+    const token = localStorage.getItem('roof_docs_access_token');
+    if (!token || !supabaseUrl || !supabaseAnonKey) return;
+    fetch(`${supabaseUrl}/auth/v1/user`, { headers: { apikey: supabaseAnonKey, Authorization: `Bearer ${token}` } })
+      .then(async (response) => response.ok ? response.json() : null)
+      .then((authUser) => {
+        if (authUser?.email?.toLowerCase() === 'theroofingdrs@gmail.com') {
+          const owner = { ...PRESET_USERS.OWNER, id: authUser.id, email: authUser.email };
+          setCurrentUser(owner);
+          localStorage.setItem('roof_docs_active_user', JSON.stringify(owner));
+        } else {
+          localStorage.removeItem('roof_docs_access_token');
+          localStorage.removeItem('roof_docs_active_user');
+        }
+      })
+      .catch(() => { localStorage.removeItem('roof_docs_access_token'); localStorage.removeItem('roof_docs_active_user'); });
+  }, []);
 
   const signInAsRole = (role: UserRole) => {
     const user = PRESET_USERS[role];
@@ -186,38 +196,33 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     localStorage.setItem('roof_docs_active_user', JSON.stringify(user));
   };
 
-  const loginStaff = (email: string, password?: string) => {
+  const loginStaff = async (email: string, password?: string) => {
     const cleanEmail = email.trim().toLowerCase();
-    if (!cleanEmail) {
-      return { success: false, error: 'Please enter your company email address.' };
+    if (cleanEmail !== 'theroofingdrs@gmail.com') {
+      return { success: false, error: 'This account is not authorized for staff administration.' };
     }
-    if (!password || password.length < 4) {
-      return { success: false, error: 'Please enter your authorized staff password.' };
+    if (!password) return { success: false, error: 'Enter your password.' };
+    if (!supabaseUrl || !supabaseAnonKey) {
+      return { success: false, error: 'Authentication is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY.' };
     }
-
-    // Find staff user by email in PRESET_USERS
-    const matchedUser = Object.values(PRESET_USERS).find(
-      (u) => u.email.toLowerCase() === cleanEmail && u.role !== 'HOMEOWNER'
-    );
-
-    if (matchedUser) {
-      setCurrentUser(matchedUser);
-      localStorage.setItem('roof_docs_active_user', JSON.stringify(matchedUser));
-      return { success: true };
-    }
-
-    // Allow primary owner email theroofingdrs@gmail.com
-    if (cleanEmail === 'theroofingdrs@gmail.com') {
-      const owner = PRESET_USERS.OWNER;
-      setCurrentUser(owner);
+    try {
+      const response = await fetch(`${supabaseUrl}/auth/v1/token?grant_type=password`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', apikey: supabaseAnonKey },
+        body: JSON.stringify({ email: cleanEmail, password }),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.access_token || result.user?.email?.toLowerCase() !== cleanEmail) {
+        return { success: false, error: result.error_description || result.msg || 'Email or password is incorrect.' };
+      }
+      const owner = { ...PRESET_USERS.OWNER, id: result.user.id, email: result.user.email };
+      localStorage.setItem('roof_docs_access_token', result.access_token);
       localStorage.setItem('roof_docs_active_user', JSON.stringify(owner));
+      setCurrentUser(owner);
       return { success: true };
+    } catch {
+      return { success: false, error: 'Unable to reach the authentication service. Please try again.' };
     }
-
-    return {
-      success: false,
-      error: 'Unrecognized staff credentials. Internal operations access is restricted to authorized personnel.',
-    };
   };
 
   const loginHomeowner = (identifier: string) => {
