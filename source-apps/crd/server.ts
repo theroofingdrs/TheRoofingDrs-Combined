@@ -90,21 +90,32 @@ app.post('/api/save-logo', (req: Request, res: Response) => {
     if (!dataBase64) {
       return res.status(400).json({ error: 'Missing dataBase64' });
     }
-    const cleanBase64 = dataBase64.replace(/^data:image\/\w+;base64,/, '');
+    if (typeof dataBase64 !== 'string' || dataBase64.length > 3_000_000) {
+      return res.status(400).json({ error: 'Logo image must be a valid PNG under 2 MB.' });
+    }
+
+    const cleanBase64 = dataBase64.replace(/^data:image\\/png;base64,/i, '');
+    if (!/^[A-Za-z0-9+/]*={0,2}$/.test(cleanBase64)) {
+      return res.status(400).json({ error: 'Invalid base64 image data.' });
+    }
     const buffer = Buffer.from(cleanBase64, 'base64');
+    const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+    if (buffer.length < 8 || buffer.length > 2 * 1024 * 1024 || !buffer.subarray(0, 8).equals(pngSignature)) {
+      return res.status(400).json({ error: 'Logo image must be a valid PNG under 2 MB.' });
+    }
+
+    // Ignore client supplied filenames so they cannot traverse server paths.
+    const name = 'crd-logo-full.png';
     const targetDir = path.join(process.cwd(), 'public', 'assets');
     if (!fs.existsSync(targetDir)) {
       fs.mkdirSync(targetDir, { recursive: true });
     }
-    const name = filename || 'CRD logo 1296x367.png';
     fs.writeFileSync(path.join(targetDir, name), buffer);
-    fs.writeFileSync(path.join(targetDir, 'crd-logo-full.png'), buffer);
-    
-    // Also mirror to dist/assets if dist exists for production builds
+
+    // Also mirror to dist/assets if dist exists for production builds.
     const distAssets = path.join(process.cwd(), 'dist', 'assets');
     if (fs.existsSync(distAssets)) {
       fs.writeFileSync(path.join(distAssets, name), buffer);
-      fs.writeFileSync(path.join(distAssets, 'crd-logo-full.png'), buffer);
     }
 
     return res.json({ success: true, filename: name, path: `/assets/${name}` });
