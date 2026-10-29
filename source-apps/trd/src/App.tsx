@@ -8,7 +8,7 @@ import { FieldOperationsView } from './views/FieldOperationsView.tsx';
 import { HomeownerPortalView } from './views/HomeownerPortalView.tsx';
 
 const RESIDENTIAL_BASE = '/residential';
-const stripResidentialBase = (path: string) => (path.replace(/^\\/residential(?=\\/|$)/, '') || '/');
+const stripResidentialBase = (path: string) => (path.replace(/^\/residential(?=\/|$)/, '') || '/');
 const withResidentialBase = (path: string) => `${RESIDENTIAL_BASE}${path === '/' ? '/' : path.startsWith('/') ? path : `/${path}`}`;
 
 function AppContent() {
