@@ -1,0 +1,14 @@
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.env
+.env.*
+!**/.env.example
+.DS_Store
+*.log
+# Local databases and original website archives
+source-apps/trd/data/roof_doctors_db.json
+source-apps/crd/data/crd-database.json
+the-roof-doctors.zip
+commercial-roof-doctors (2).zip

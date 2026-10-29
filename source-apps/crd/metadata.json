@@ -1,0 +1,6 @@
+{
+  "name": "Commercial Roof Doctors",
+  "description": "Commercial roofing, restoration, storm response and roof asset management for the Ark-La-Tex and surrounding region. (903) 231-5940.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

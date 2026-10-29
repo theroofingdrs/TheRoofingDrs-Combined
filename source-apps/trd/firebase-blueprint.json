@@ -1,0 +1,208 @@
+{
+  "entities": {
+    "Customer": {
+      "title": "Customer",
+      "description": "Residential roofing customer record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "firstName": { "type": "string", "maxLength": 64 },
+        "lastName": { "type": "string", "maxLength": 64 },
+        "email": { "type": "string", "maxLength": 128 },
+        "phone": { "type": "string", "maxLength": 32 },
+        "status": { "type": "string", "enum": ["ACTIVE", "INACTIVE", "ARCHIVED"] },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "firstName", "lastName", "phone", "status", "createdAt", "updatedAt"]
+    },
+    "Property": {
+      "title": "Property",
+      "description": "Physical residential property location",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "customerId": { "type": "string", "maxLength": 64 },
+        "address": { "type": "string", "maxLength": 200 },
+        "city": { "type": "string", "maxLength": 64 },
+        "state": { "type": "string", "maxLength": 16 },
+        "zip": { "type": "string", "maxLength": 16 },
+        "marketId": { "type": "string", "maxLength": 64 },
+        "verificationStatus": { "type": "string", "enum": ["UNVERIFIED", "VERIFIED", "NEEDS_FIELD_CHECK"] },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "address", "city", "state", "zip", "verificationStatus", "createdAt", "updatedAt"]
+    },
+    "Roof": {
+      "title": "Roof",
+      "description": "Roof specification for a property",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "propertyId": { "type": "string", "maxLength": 64 },
+        "roofingSystem": { "type": "string", "maxLength": 64 },
+        "material": { "type": "string", "maxLength": 64 },
+        "sourceStatus": { "type": "string", "enum": ["VERIFIED", "CUSTOMER_PROVIDED", "ESTIMATED", "THIRD_PARTY"] },
+        "roofRecordId": { "type": "string", "maxLength": 64 },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "propertyId", "roofingSystem", "material", "sourceStatus", "roofRecordId", "createdAt", "updatedAt"]
+    },
+    "RoofRecord": {
+      "title": "RoofRecord",
+      "description": "Permanent long-lived historical record of a roof",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "roofId": { "type": "string", "maxLength": 64 },
+        "propertyId": { "type": "string", "maxLength": 64 },
+        "warrantyStatus": { "type": "string", "enum": ["ACTIVE_MANUFACTURER", "ACTIVE_WORKMANSHIP", "EXPIRED", "UNKNOWN"] },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "roofId", "propertyId", "warrantyStatus", "createdAt", "updatedAt"]
+    },
+    "Lead": {
+      "title": "Lead",
+      "description": "Incoming inspection or service inquiry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "name": { "type": "string", "maxLength": 128 },
+        "phone": { "type": "string", "maxLength": 32 },
+        "email": { "type": "string", "maxLength": 128 },
+        "address": { "type": "string", "maxLength": 200 },
+        "city": { "type": "string", "maxLength": 64 },
+        "state": { "type": "string", "maxLength": 16 },
+        "zip": { "type": "string", "maxLength": 16 },
+        "leadType": { "type": "string" },
+        "serviceRequested": { "type": "string", "maxLength": 100 },
+        "status": { "type": "string" },
+        "score": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "name", "phone", "status", "score", "createdAt", "updatedAt"]
+    },
+    "Project": {
+      "title": "Project",
+      "description": "Roofing replacement, repair, or restoration project",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "customerId": { "type": "string", "maxLength": 64 },
+        "propertyId": { "type": "string", "maxLength": 64 },
+        "title": { "type": "string", "maxLength": 128 },
+        "status": { "type": "string" },
+        "projectType": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "customerId", "propertyId", "title", "status", "projectType", "createdAt", "updatedAt"]
+    },
+    "Inspection": {
+      "title": "Inspection",
+      "description": "Roof field diagnostic inspection record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "propertyId": { "type": "string", "maxLength": 64 },
+        "scheduledDate": { "type": "string" },
+        "status": { "type": "string" },
+        "inspectionType": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "propertyId", "scheduledDate", "status", "inspectionType", "createdAt", "updatedAt"]
+    },
+    "Measurement": {
+      "title": "Measurement",
+      "description": "Roof measurement report from ROOFR or other provider",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "propertyId": { "type": "string", "maxLength": 64 },
+        "provider": { "type": "string", "enum": ["ROOFR", "HOVER", "EAGLEVIEW", "MANUAL"] },
+        "measurementType": { "type": "string" },
+        "status": { "type": "string" },
+        "version": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "propertyId", "provider", "measurementType", "status", "version", "createdAt", "updatedAt"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Scheduled inspection or consultation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "propertyId": { "type": "string", "maxLength": 64 },
+        "title": { "type": "string", "maxLength": 128 },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "propertyId", "title", "startTime", "endTime", "status", "createdAt", "updatedAt"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Protected system audit trail",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_-]+$" },
+        "action": { "type": "string", "maxLength": 64 },
+        "entityType": { "type": "string", "maxLength": 64 },
+        "entityId": { "type": "string", "maxLength": 64 },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "action", "entityType", "entityId", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/customers/{customerId}": {
+      "schema": "Customer",
+      "description": "Stores customer profiles and contact preferences"
+    },
+    "/properties/{propertyId}": {
+      "schema": "Property",
+      "description": "Stores physical property records"
+    },
+    "/roofs/{roofId}": {
+      "schema": "Roof",
+      "description": "Stores roof structural and component details"
+    },
+    "/roofRecords/{recordId}": {
+      "schema": "RoofRecord",
+      "description": "Stores permanent chronological life-of-roof history"
+    },
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Stores inbound inquiries and diagnostic inspection requests"
+    },
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "Stores residential roofing jobs and projects"
+    },
+    "/inspections/{inspectionId}": {
+      "schema": "Inspection",
+      "description": "Stores field diagnostic inspections"
+    },
+    "/measurements/{measurementId}": {
+      "schema": "Measurement",
+      "description": "Stores aerial roof measurements and ROOFR orders"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": "Appointment",
+      "description": "Stores scheduled calendar appointments"
+    },
+    "/auditLogs/{auditId}": {
+      "schema": "AuditLog",
+      "description": "Immutable system audit trail"
+    }
+  }
+}

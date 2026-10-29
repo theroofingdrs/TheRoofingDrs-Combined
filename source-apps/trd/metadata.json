@@ -1,0 +1,6 @@
+{
+  "name": "The Roof Doctors",
+  "description": "The Roof Doctors — Residential Roofing & Storm Damage Specialists. Free 21-point forensic roof inspections, hail repairs, emergency tarping, and insurance claim support in Texarkana & Northeast Texas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

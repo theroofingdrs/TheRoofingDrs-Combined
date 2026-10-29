@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240">
+  <defs>
+    <style>
+      .logo-stroke { stroke: #000000; stroke-linecap: square; stroke-linejoin: miter; fill: none; }
+      .logo-fill { fill: #000000; }
+      .logo-text { font-family: 'Impact', 'Liberation Sans Narrow', 'Arial Black', sans-serif; font-weight: 900; fill: #000000; font-stretch: condensed; }
+    </style>
+  </defs>
+
+  <!-- House Roof and Banner Outer Enclosure -->
+  <!-- Chimney on left gable -->
+  <polygon points="72,125 72,68 86,68 86,105" class="logo-fill" />
+  <rect x="70" y="65" width="18" height="4" class="logo-fill" />
+
+  <!-- Outer House Silhouette & Banner Border -->
+  <path d="
+    M 15,142 
+    L 55,142 
+    L 170,40
+    M 215,40
+    L 245,67
+    M 285,102
+    L 325,138
+    L 985,138 
+    L 985,226 
+    L 75,226 
+    L 50,142 
+    L 15,142 
+    Z" 
+    class="logo-stroke" stroke-width="12" stroke-linejoin="miter" />
+
+  <!-- Claw Hammer on Ridge -->
+  <g id="hammer">
+    <!-- Claw -->
+    <path d="M 175,45 C 160,20 135,10 105,10 C 125,25 140,45 148,65 L 175,45 Z" class="logo-fill" />
+    <!-- Hammer Head Body & Face -->
+    <polygon points="148,65 175,45 200,68 180,88" class="logo-fill" />
+    <!-- Striking Face / Neck -->
+    <polygon points="185,38 168,22 155,34 172,50" class="logo-fill" />
+    <!-- Hammer Handle (Angled) -->
+    <!-- Handle upper segment -->
+    <polygon points="190,78 205,63 218,76 203,91" class="logo-fill" />
+    <!-- Handle lower body with negative space gap -->
+    <polygon points="212,100 227,85 272,130 257,145" class="logo-fill" />
+  </g>
+
+  <!-- Kneeling Roofer Silhouette on Right Slope -->
+  <g id="roofer">
+    <!-- Cap & Head -->
+    <ellipse cx="330" cy="46" rx="14" ry="14" class="logo-fill" />
+    <!-- Cap Bill pointing left -->
+    <polygon points="325,43 285,55 320,53" class="logo-fill" />
+    <!-- Extended Arm holding tool/working -->
+    <path d="M 322,58 Q 305,60 286,64 L 286,72 Q 310,69 324,70 Z" class="logo-fill" />
+    <!-- Hand / wrist -->
+    <circle cx="288" cy="67" r="5" class="logo-fill" />
+    <!-- Torso and Back (Leaning forward) -->
+    <path d="M 320,60 C 340,65 355,85 365,110 L 340,125 C 330,105 320,90 310,80 Z" class="logo-fill" />
+    <!-- Bent Leg / Thigh (Kneeling) -->
+    <path d="M 355,105 C 365,115 372,135 370,145 L 345,145 C 345,135 340,120 335,115 Z" class="logo-fill" />
+    <!-- Front Leg / Knee up -->
+    <path d="M 325,85 C 320,100 315,115 310,135 L 330,135 C 335,120 340,105 345,95 Z" class="logo-fill" />
+  </g>
+
+  <!-- Lettering: THE ROOF DOC -->
+  <text x="105" y="206" class="logo-text" font-size="78" letter-spacing="4">THE ROOF DOC</text>
+
+  <!-- The Medical Caduceus in place of 'T' in DOCTORS -->
+  <g id="caduceus" transform="translate(738, 142)">
+    <!-- Central Staff -->
+    <line x1="0" y1="12" x2="0" y2="70" stroke="#000000" stroke-width="4.5" stroke-linecap="round" />
+    <circle cx="0" cy="11" r="5" class="logo-fill" />
+    <!-- Bottom staff tip -->
+    <polygon points="-2,68 2,68 0,74" class="logo-fill" />
+
+    <!-- Wings at the Top -->
+    <!-- Left Wing -->
+    <path d="M -3,17 C -15,12 -35,14 -48,24 C -38,27 -26,27 -18,29 C -28,32 -38,36 -42,42 C -30,41 -18,37 -3,28 Z" class="logo-fill" />
+    <!-- Right Wing -->
+    <path d="M 3,17 C 15,12 35,14 48,24 C 38,27 26,27 18,29 C 28,32 38,36 42,42 C 30,41 18,37 3,28 Z" class="logo-fill" />
+
+    <!-- Symmetrical Entwined Serpents (Figure-8 coils) -->
+    <!-- Snake Heads facing inward -->
+    <path d="M -12,24 C -10,22 -6,21 -3,22 C -5,25 -8,27 -12,26 Z" class="logo-fill" />
+    <path d="M 12,24 C 10,22 6,21 3,22 C 5,25 8,27 12,26 Z" class="logo-fill" />
+
+    <!-- Upper Loop -->
+    <path d="M -3,23 C -20,28 -20,38 -2,42 C 16,46 16,56 -2,60 C -12,62 -12,67 0,70" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+    <path d="M 3,23 C 20,28 20,38 2,42 C -16,46 -16,56 2,60 C 12,62 12,67 0,70" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Lettering: ORS -->
+  <text x="796" y="206" class="logo-text" font-size="78" letter-spacing="4">ORS</text>
+</svg>

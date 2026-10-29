@@ -1,0 +1,749 @@
+import express, { Request, Response } from 'express';
+import path from 'path';
+import fs from 'fs';
+import { createServer as createViteServer } from 'vite';
+
+const PORT = 3000;
+const app = express();
+
+app.use(express.json({ limit: '25mb' }));
+app.use(express.urlencoded({ extended: true, limit: '25mb' }));
+
+// Database Persistence Layer
+const DATA_DIR = path.join(process.cwd(), 'data');
+const DB_FILE = path.join(DATA_DIR, 'crd-database.json');
+
+interface CRDDatabase {
+  organizations: any[];
+  contacts: any[];
+  properties: any[];
+  roofs: any[];
+  leads: any[];
+  calculatorSubmissions: any[];
+  timelineEvents: any[];
+}
+
+function initDB(): CRDDatabase {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+
+  if (fs.existsSync(DB_FILE)) {
+    try {
+      const data = fs.readFileSync(DB_FILE, 'utf-8');
+      return JSON.parse(data);
+    } catch (e) {
+      console.error('Error reading database file, resetting:', e);
+    }
+  }
+
+  const defaultDb: CRDDatabase = {
+    organizations: [],
+    contacts: [],
+    properties: [],
+    roofs: [],
+    leads: [],
+    calculatorSubmissions: [],
+    timelineEvents: [],
+  };
+
+  saveDB(defaultDb);
+  return defaultDb;
+}
+
+function saveDB(data: CRDDatabase) {
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+  } catch (e) {
+    console.error('Error saving database file:', e);
+  }
+}
+
+let db = initDB();
+
+// Helper to generate IDs
+function generateId(prefix: string): string {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+}
+
+// ---------------- API ROUTES ----------------
+
+// Health check
+app.get('/api/health', (req: Request, res: Response) => {
+  res.json({
+    status: 'ok',
+    service: 'Commercial Roof Doctors Lead & Operations Engine',
+    timestamp: new Date().toISOString(),
+    primaryPhone: '(903) 231-5940',
+    primaryTerritory: 'Ark-La-Tex & 75-mile radius',
+  });
+});
+
+// Logo asset upload handler
+app.post('/api/save-logo', (req: Request, res: Response) => {
+  try {
+    const { dataBase64, filename } = req.body;
+    if (!dataBase64) {
+      return res.status(400).json({ error: 'Missing dataBase64' });
+    }
+    const cleanBase64 = dataBase64.replace(/^data:image\/\w+;base64,/, '');
+    const buffer = Buffer.from(cleanBase64, 'base64');
+    const targetDir = path.join(process.cwd(), 'public', 'assets');
+    if (!fs.existsSync(targetDir)) {
+      fs.mkdirSync(targetDir, { recursive: true });
+    }
+    const name = filename || 'CRD logo 1296x367.png';
+    fs.writeFileSync(path.join(targetDir, name), buffer);
+    fs.writeFileSync(path.join(targetDir, 'crd-logo-full.png'), buffer);
+    
+    // Also mirror to dist/assets if dist exists for production builds
+    const distAssets = path.join(process.cwd(), 'dist', 'assets');
+    if (fs.existsSync(distAssets)) {
+      fs.writeFileSync(path.join(distAssets, name), buffer);
+      fs.writeFileSync(path.join(distAssets, 'crd-logo-full.png'), buffer);
+    }
+
+    return res.json({ success: true, filename: name, path: `/assets/${name}` });
+  } catch (err: any) {
+    console.error('Error saving logo asset:', err);
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+// Admin stats
+app.get('/api/admin/stats', (req: Request, res: Response) => {
+  const leads = db.leads || [];
+  const stats = {
+    total: leads.length,
+    emergency: leads.filter((l) => l.priority === 'Emergency' || l.leadType === 'Emergency').length,
+    storm: leads.filter((l) => l.leadType === 'Storm Damage' || l.leadType === 'Hail Damage' || l.leadType === 'Wind Damage').length,
+    insurance: leads.filter((l) => l.leadType === 'Insurance Claim').length,
+    inspection: leads.filter((l) => l.leadType === 'Inspection').length,
+    ppp: leads.filter((l) => l.leadType === 'PPP/Maintenance' || l.leadType === 'Property Management').length,
+    calculator: db.calculatorSubmissions?.length || 0,
+    byStatus: {
+      New: leads.filter((l) => l.status === 'New').length,
+      Contacted: leads.filter((l) => l.status === 'Contacted').length,
+      'Inspection Scheduled': leads.filter((l) => l.status === 'Inspection Scheduled').length,
+      Inspected: leads.filter((l) => l.status === 'Inspected').length,
+      'Scope Developed': leads.filter((l) => l.status === 'Scope Developed').length,
+      'Proposal Sent': leads.filter((l) => l.status === 'Proposal Sent').length,
+      Won: leads.filter((l) => l.status === 'Won').length,
+      Lost: leads.filter((l) => l.status === 'Lost').length,
+    },
+  };
+  res.json(stats);
+});
+
+// GET /api/leads - Query leads with filtering
+app.get('/api/leads', (req: Request, res: Response) => {
+  const { status, priority, leadType } = req.query;
+  let filtered = [...db.leads];
+
+  if (status && typeof status === 'string') {
+    filtered = filtered.filter((l) => l.status === status);
+  }
+  if (priority && typeof priority === 'string') {
+    filtered = filtered.filter((l) => l.priority === priority);
+  }
+  if (leadType && typeof leadType === 'string') {
+    filtered = filtered.filter((l) => l.leadType === leadType);
+  }
+
+  // Sort descending by creation date
+  filtered.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+  const enriched = filtered.map((lead) => {
+    const org = db.organizations.find((o) => o.organizationId === lead.organizationId);
+    const cnt = db.contacts.find((c) => c.contactId === lead.contactId);
+    const prp = db.properties.find((p) => p.propertyId === lead.propertyId);
+    return {
+      ...lead,
+      fullName: cnt ? `${cnt.firstName} ${cnt.lastName}`.trim() : 'Commercial Client',
+      phone: cnt?.phone || '',
+      email: cnt?.email || '',
+      companyName: org?.companyName || '',
+      propertyAddress: prp?.address ? `${prp.address}, ${prp.city} ${prp.state}` : '',
+      squareFootage: prp?.approximateRoofArea || null,
+    };
+  });
+
+  res.json({ leads: enriched, count: enriched.length });
+});
+
+// GET /api/leads/:id - Single lead detail with relations
+app.get('/api/leads/:id', (req: Request, res: Response) => {
+  const lead = db.leads.find((l) => l.leadId === req.params.id);
+  if (!lead) {
+    return res.status(404).json({ error: 'Lead not found' });
+  }
+
+  const organization = db.organizations.find((o) => o.organizationId === lead.organizationId) || null;
+  const contact = db.contacts.find((c) => c.contactId === lead.contactId) || null;
+  const property = db.properties.find((p) => p.propertyId === lead.propertyId) || null;
+  const timeline = db.timelineEvents.filter((t) => t.leadId === lead.leadId);
+
+  res.json({
+    lead,
+    organization,
+    contact,
+    property,
+    timeline,
+  });
+});
+
+// PATCH /api/leads/:id - Update lead status, priority, or internal notes
+app.patch('/api/leads/:id', (req: Request, res: Response) => {
+  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
+  if (leadIndex === -1) {
+    return res.status(404).json({ error: 'Lead not found' });
+  }
+
+  const currentLead = db.leads[leadIndex];
+  const { status, priority, assignedTo, notes, newNote } = req.body;
+
+  const previousStatus = currentLead.status;
+  if (status && status !== previousStatus) {
+    currentLead.status = status;
+    db.timelineEvents.push({
+      id: generateId('evt'),
+      leadId: currentLead.leadId,
+      title: 'Status Updated',
+      description: `Status transitioned from "${previousStatus}" to "${status}"`,
+      timestamp: new Date().toISOString(),
+      author: 'Operations Staff',
+    });
+  }
+
+  if (priority) currentLead.priority = priority;
+  if (assignedTo !== undefined) currentLead.assignedTo = assignedTo;
+  if (notes !== undefined) currentLead.notes = notes;
+
+  if (newNote && typeof newNote === 'string') {
+    db.timelineEvents.push({
+      id: generateId('evt'),
+      leadId: currentLead.leadId,
+      title: 'Internal Note Added',
+      description: newNote,
+      timestamp: new Date().toISOString(),
+      author: 'Operations Staff',
+    });
+  }
+
+  currentLead.updatedAt = new Date().toISOString();
+  db.leads[leadIndex] = currentLead;
+  saveDB(db);
+
+  res.json({ success: true, lead: currentLead });
+});
+
+// POST /api/leads/:id/photos - Attach photos to a lead
+app.post('/api/leads/:id/photos', (req: Request, res: Response) => {
+  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
+  if (leadIndex === -1) {
+    return res.status(404).json({ error: 'Lead not found' });
+  }
+
+  const { photos } = req.body;
+  if (!Array.isArray(photos)) {
+    return res.status(400).json({ error: 'Photos must be an array of photo objects or base64 strings' });
+  }
+
+  const currentLead = db.leads[leadIndex];
+  currentLead.photos = [...(currentLead.photos || []), ...photos];
+  currentLead.updatedAt = new Date().toISOString();
+
+  db.timelineEvents.push({
+    id: generateId('evt'),
+    leadId: currentLead.leadId,
+    title: 'Photos Attached',
+    description: `${photos.length} new photo(s) uploaded and attached to lead.`,
+    timestamp: new Date().toISOString(),
+    author: 'Field / Customer Upload',
+  });
+
+  saveDB(db);
+  res.json({ success: true, count: currentLead.photos.length });
+});
+
+// POST /api/leads - Generic Commercial Lead Submission
+app.post('/api/leads', (req: Request, res: Response) => {
+  try {
+    const {
+      companyName,
+      firstName,
+      lastName,
+      name,
+      email,
+      phone,
+      role,
+      propertyName,
+      address,
+      propertyAddress,
+      city,
+      state,
+      zip,
+      propertyType,
+      approximateRoofArea,
+      roofSystem,
+      leadType = 'Inspection',
+      priority = 'Normal',
+      source = 'Website Lead Form',
+      utmSource,
+      utmMedium,
+      utmCampaign,
+      utmTerm,
+      utmContent,
+      landingPage,
+      referrer,
+      message,
+      notes,
+      photos = [],
+      // Storm-specific fields
+      stormDate,
+      stormDamageType,
+      existingClaim,
+      claimNumber,
+      carrier,
+      adjusterAssigned,
+      adjusterInspectionScheduled,
+      needCrdPresent,
+      // Emergency fields
+      emergencyType,
+      waterEnteringBuilding,
+      buildingOccupied,
+    } = req.body;
+
+    // Split name if single field provided
+    let fName = firstName || '';
+    let lName = lastName || '';
+    if (!fName && name) {
+      const parts = name.trim().split(' ');
+      fName = parts[0] || '';
+      lName = parts.slice(1).join(' ') || '';
+    }
+
+    // Validation
+    if (!phone && !email) {
+      return res.status(400).json({ error: 'A phone number or email address is required.' });
+    }
+
+    const orgId = generateId('org');
+    const contactId = generateId('cnt');
+    const propertyId = generateId('prp');
+    const leadId = generateId('lead');
+
+    // Create Organization Record
+    const newOrg = {
+      organizationId: orgId,
+      companyName: companyName || propertyName || `${fName} ${lName} Enterprise`.trim() || 'Commercial Property',
+      propertyManager: role === 'Property Manager' || role === 'HOA Manager',
+      industry: propertyType || 'Commercial',
+      notes: notes || '',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    db.organizations.push(newOrg);
+
+    // Create Contact Record
+    const newContact = {
+      contactId,
+      organizationId: orgId,
+      firstName: fName,
+      lastName: lName,
+      email: email || '',
+      phone: phone || '',
+      role: role || 'Property Owner / Representative',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    db.contacts.push(newContact);
+
+    // Create Property Record
+    const newProperty = {
+      propertyId,
+      organizationId: orgId,
+      propertyName: propertyName || companyName || 'Commercial Facility',
+      address: address || propertyAddress || '',
+      city: city || 'Texarkana Region',
+      state: state || 'TX',
+      zip: zip || '',
+      propertyType: propertyType || 'Commercial',
+      approximateRoofArea: approximateRoofArea || '',
+      roofSystem: roofSystem || 'Unknown',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    db.properties.push(newProperty);
+
+    // Create Lead Record
+    const newLead = {
+      leadId,
+      organizationId: orgId,
+      contactId,
+      propertyId,
+      leadType: leadType || 'Inspection',
+      propertyType: propertyType || 'Commercial',
+      roofSystem: roofSystem || 'Unknown',
+      priority: priority || (leadType === 'Emergency' ? 'Emergency' : 'Normal'),
+      source: source || 'Website',
+      utmSource: utmSource || '',
+      utmMedium: utmMedium || '',
+      utmCampaign: utmCampaign || '',
+      utmTerm: utmTerm || '',
+      utmContent: utmContent || '',
+      landingPage: landingPage || '/',
+      referrer: referrer || '',
+      status: 'New',
+      assignedTo: 'Dispatch / Estimating',
+      message: message || '',
+      notes: notes || '',
+      photos: Array.isArray(photos) ? photos : [],
+      // Extra operational attributes preserved for future CRM
+      stormMetadata: {
+        stormDate,
+        stormDamageType,
+        existingClaim,
+        claimNumber,
+        carrier,
+        adjusterAssigned,
+        adjusterInspectionScheduled,
+        needCrdPresent,
+      },
+      emergencyMetadata: {
+        emergencyType,
+        waterEnteringBuilding,
+        buildingOccupied,
+      },
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    db.leads.push(newLead);
+
+    // Initial timeline entry
+    db.timelineEvents.push({
+      id: generateId('evt'),
+      leadId,
+      title: 'Lead Ingested',
+      description: `New ${newLead.leadType} lead received via ${newLead.source}. Priority: ${newLead.priority}.`,
+      timestamp: new Date().toISOString(),
+      author: 'CRD Ingestion Engine',
+    });
+
+    saveDB(db);
+
+    console.log(`[CRD API] Ingested Lead ${leadId} (${newLead.leadType}, Priority: ${newLead.priority}) for ${fName} ${lName}`);
+
+    res.status(201).json({
+      success: true,
+      leadId,
+      organizationId: orgId,
+      contactId,
+      propertyId,
+      message: 'Commercial roof request submitted successfully. A CRD commercial specialist will review the details.',
+    });
+  } catch (error: any) {
+    console.error('Lead submission error:', error);
+    res.status(500).json({ error: 'Failed to record commercial lead. Please call CRD at (903) 231-5940.' });
+  }
+});
+
+// POST /api/emergency - Dedicated Emergency Flow
+app.post('/api/emergency', (req: Request, res: Response) => {
+  req.body.leadType = 'Emergency';
+  req.body.priority = 'Emergency';
+  req.body.source = 'Emergency Form';
+  // Forward to leads handler internally
+  return (app as any)._router.handle({ ...req, url: '/api/leads', method: 'POST' }, res);
+});
+
+// POST /api/calculator - Cost Calculator submission and calculation
+app.post('/api/calculator', (req: Request, res: Response) => {
+  try {
+    const {
+      squareFootage,
+      roofSystem,
+      propertyType,
+      condition,
+      desiredWork,
+      accessComplexity = 'Standard',
+      contactName,
+      companyName,
+      phone,
+      email,
+      address,
+    } = req.body;
+
+    const sqft = Number(squareFootage) || 10000;
+    
+    // Baseline ranges per square foot (strictly educational estimates based on typical commercial low-slope systems)
+    let minRate = 4.5;
+    let maxRate = 8.5;
+
+    if (desiredWork === 'Replacement') {
+      minRate = 8.0;
+      maxRate = 16.0;
+      if (roofSystem === 'Metal') { minRate += 3.0; maxRate += 6.0; }
+      if (roofSystem === 'PVC') { minRate += 1.5; maxRate += 3.0; }
+    } else if (desiredWork === 'Restoration/Coating') {
+      minRate = 3.5;
+      maxRate = 7.5;
+    } else if (desiredWork === 'Repair') {
+      minRate = 1.5;
+      maxRate = 3.5;
+    }
+
+    if (accessComplexity === 'Complex / High-Rise') {
+      minRate *= 1.25;
+      maxRate *= 1.35;
+    }
+
+    const estimatedLow = Math.round(sqft * minRate);
+    const estimatedHigh = Math.round(sqft * maxRate);
+
+    const calcId = generateId('calc');
+    const calcSubmission = {
+      id: calcId,
+      inputs: {
+        squareFootage: sqft,
+        roofSystem: roofSystem || 'TPO',
+        propertyType: propertyType || 'Commercial',
+        condition: condition || 'Aging / Suspect',
+        desiredWork: desiredWork || 'Replacement',
+        accessComplexity,
+        address: address || '',
+        contactName: contactName || '',
+        companyName: companyName || '',
+        phone: phone || '',
+        email: email || '',
+      },
+      results: {
+        estimatedLow,
+        estimatedHigh,
+        disclaimer: 'Planning estimate only. This calculator does not provide a binding quote, proposal, or guarantee of project cost. Actual project pricing depends on professional inspection, measurements, roof condition, system requirements, accessibility, code requirements, scope of work, and other project-specific factors.',
+      },
+      createdAt: new Date().toISOString(),
+    };
+
+    db.calculatorSubmissions.push(calcSubmission);
+
+    // If user provided contact info, also create an associated Lead
+    let leadId = null;
+    if (phone || email) {
+      leadId = generateId('lead');
+      const orgId = generateId('org');
+      const contactId = generateId('cnt');
+      const propertyId = generateId('prp');
+
+      const parts = (contactName || '').trim().split(' ');
+      const firstName = parts[0] || 'Commercial';
+      const lastName = parts.slice(1).join(' ') || 'Prospect';
+
+      db.organizations.push({
+        organizationId: orgId,
+        companyName: companyName || `${firstName} ${lastName} Commercial`,
+        propertyManager: false,
+        industry: propertyType || 'Commercial',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      });
+
+      db.contacts.push({
+        contactId,
+        organizationId: orgId,
+        firstName,
+        lastName,
+        email: email || '',
+        phone: phone || '',
+        role: 'Decision Maker',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      });
+
+      db.properties.push({
+        propertyId,
+        organizationId: orgId,
+        propertyName: companyName || `${address || 'Commercial Facility'}`,
+        address: address || 'Ark-La-Tex',
+        city: 'Texarkana',
+        state: 'TX',
+        zip: '75501',
+        propertyType: propertyType || 'Commercial',
+        approximateRoofArea: sqft,
+        roofSystem: roofSystem || 'TPO',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      });
+
+      const lead = {
+        leadId,
+        organizationId: orgId,
+        contactId,
+        propertyId,
+        leadType: 'Cost Calculator',
+        propertyType: propertyType || 'Commercial',
+        roofSystem: roofSystem || 'TPO',
+        priority: 'Normal',
+        source: 'Commercial Roof Cost Calculator',
+        status: 'New',
+        assignedTo: 'Dispatch / Estimating',
+        message: `Calculator estimate generated: ${sqft.toLocaleString()} sq ft ${roofSystem || 'TPO'} for ${desiredWork}. Range: $${estimatedLow.toLocaleString()} - $${estimatedHigh.toLocaleString()}`,
+        notes: `User completed 5-step calculator. Address: ${address || 'Not provided'}`,
+        photos: [],
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      db.leads.push(lead);
+    }
+
+    saveDB(db);
+
+    res.json({
+      success: true,
+      calculationId: calcId,
+      leadId,
+      estimatedLow,
+      estimatedHigh,
+      unitLow: Math.round(minRate * 100) / 100,
+      unitHigh: Math.round(maxRate * 100) / 100,
+      squareFootage: sqft,
+      disclaimer: calcSubmission.results.disclaimer,
+    });
+  } catch (err) {
+    console.error('Calculator calculation error:', err);
+    res.status(500).json({ error: 'Failed to calculate estimate range.' });
+  }
+});
+
+// GET /api/calculator - Retrieve calculator submissions
+app.get('/api/calculator', (req: Request, res: Response) => {
+  const list = [...(db.calculatorSubmissions || [])];
+  list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  res.json(list);
+});
+
+// Dynamic XML Sitemap
+app.get('/sitemap.xml', (req: Request, res: Response) => {
+  const host = req.get('host') || 'commercialroofdoctors.com';
+  const protocol = req.protocol || 'https';
+  const baseUrl = `${protocol}://${host}`;
+
+  const routes = [
+    '',
+    '/commercial-roofing',
+    '/commercial-roof-repair',
+    '/commercial-roof-replacement',
+    '/commercial-roof-inspection',
+    '/commercial-roof-maintenance',
+    '/new-commercial-construction',
+    '/commercial-roof-coatings',
+    '/commercial-roof-restoration',
+    '/silicone-roof-coatings',
+    '/acrylic-roof-coatings',
+    '/polyurethane-roof-coatings',
+    '/coat-vs-replace',
+    '/storm-damage',
+    '/hail-damage',
+    '/wind-damage',
+    '/emergency-roofing',
+    '/insurance-claims',
+    '/commercial-storm-inspections',
+    '/adjuster-meetings',
+    '/large-loss-roofing',
+    '/tpo-roofing',
+    '/epdm-roofing',
+    '/pvc-roofing',
+    '/modified-bitumen',
+    '/built-up-roofing',
+    '/metal-roofing',
+    '/crd-ppp',
+    '/property-management',
+    '/roof-asset-management',
+    '/multi-property-roofing',
+    '/multifamily-roofing',
+    '/hoa-roofing',
+    '/industries/churches',
+    '/industries/schools',
+    '/industries/healthcare',
+    '/industries/industrial',
+    '/industries/retail',
+    '/industries/apartments',
+    '/commercial-roof-cost-calculator',
+    '/about',
+    '/about/credentials',
+    '/service-areas',
+    '/service-areas/texas',
+    '/service-areas/arkansas',
+    '/service-areas/louisiana',
+    '/service-areas/oklahoma',
+    '/contact',
+  ];
+
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes
+  .map(
+    (r) => `  <url>
+    <loc>${baseUrl}${r}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>${r === '' || r.includes('storm') || r.includes('emergency') ? 'daily' : 'weekly'}</changefreq>
+    <priority>${r === '' ? '1.0' : r.includes('calculator') || r.includes('inspection') ? '0.9' : '0.8'}</priority>
+  </url>`
+  )
+  .join('\n')}
+</urlset>`;
+
+  res.header('Content-Type', 'application/xml');
+  res.send(sitemapXml);
+});
+
+// Robots.txt
+app.get('/robots.txt', (req: Request, res: Response) => {
+  const host = req.get('host') || 'commercialroofdoctors.com';
+  const protocol = req.protocol || 'https';
+  res.type('text/plain');
+  res.send(`User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Sitemap: ${protocol}://${host}/sitemap.xml
+`);
+});
+
+// ---------------- VITE & FRONTEND MOUNTING ----------------
+
+// Serve static assets from public directory
+app.use(express.static(path.join(process.cwd(), 'public'), {
+  maxAge: 0,
+  etag: true,
+}));
+
+async function start() {
+  if (process.env.NODE_ENV !== 'production') {
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: 'spa',
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distPath = path.join(process.cwd(), 'dist');
+    app.use(express.static(distPath, {
+      maxAge: '1y',
+      immutable: true,
+      index: false,
+    }));
+    app.get('*', (req: Request, res: Response) => {
+      res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  }
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`[Commercial Roof Doctors] Server running on http://0.0.0.0:${PORT}`);
+  });
+}
+
+start();

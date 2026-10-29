@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+    background: #f4f3ef;
+    color: #181818;
+  }
+
+  body {
+    margin: 0;
+    background: #f4f3ef;
+    color: #181818;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #181818;
+    color: #f4f3ef;
+  }
+}
+
+/*
+  CRD TYPOGRAPHY
+  ----------------
+  Plus Jakarta Sans = body, navigation, UI
+  Barlow Condensed = major display headlines
+  JetBrains Mono = technical metadata only
+*/
+
+.font-heading {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+.font-mono-crd {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+}
+
+/*
+  CRD DESIGN TOKENS
+  ----------------
+  Warm architectural foundation
+  Charcoal commercial-industrial contrast
+  Accent used selectively
+*/
+
+:root {
+  --crd-ink: #181818;
+  --crd-charcoal: #222222;
+  --crd-dark: #151515;
+  --crd-gray: #666666;
+  --crd-light-gray: #e6e4df;
+  --crd-warm-white: #f4f3ef;
+  --crd-white: #ffffff;
+
+  /* Keep the CRD accent, but use it sparingly. */
+  --crd-accent: #d99a19;
+  --crd-accent-dark: #b77e0f;
+
+  /* Storm-response accent */
+  --crd-storm: #b83232;
+}
+
+/*
+  GLOBAL ELEMENTS
+*/
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*
+  Images should feel photographic and premium,
+  not like UI thumbnails.
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  CUSTOM SCROLLBAR
+  Neutral rather than blue/tech-oriented.
+*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e6e4df;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a8882;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #55534f;
+}
+
+/*
+  OPTIONAL UTILITY CLASSES
+  These give Gemini a consistent visual language.
+*/
+
+.crd-section-light {
+  background: var(--crd-warm-white);
+  color: var(--crd-ink);
+}
+
+.crd-section-dark {
+  background: var(--crd-dark);
+  color: var(--crd-white);
+}
+
+.crd-section-charcoal {
+  background: var(--crd-charcoal);
+  color: var(--crd-white);
+}
+
+.crd-rule {
+  height: 1px;
+  width: 100%;
+  background: var(--crd-light-gray);
+}
+
+.crd-rule-dark {
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/*
+  PREMIUM BUTTON LANGUAGE
+*/
+
+.crd-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  background: var(--crd-ink);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.crd-button-primary:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+.crd-button-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  background: var(--crd-accent);
+  color: #111111;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.crd-button-accent:hover {
+  background: var(--crd-accent-dark);
+  transform: translateY(-1px);
+}
+
+/*
+  DO NOT make every section look like a dashboard card.
+  Cards should be reserved for genuinely grouped information.
+*/
+
+.crd-card {
+  background: #ffffff;
+  border: 1px solid var(--crd-light-gray);
+  border-radius: 0;
+}
+
+.crd-card-dark {
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+}
+
+/*
+  TECHNICAL LABEL
+  Use only for small metadata such as:
+  ROOF SYSTEM
+  PROJECT TYPE
+  LOCATION
+  etc.
+*/
+
+.crd-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #77736b;
+}
+
+.crd-label-dark {
+  color: #aaa69e;
+}
+
+/*
+  REDUCE "GLOWING APP" EFFECTS.
+  CRD should feel physical, architectural and established.
+*/
+
+.crd-no-glow {
+  box-shadow: none;
+}
+
+/*
+  Subtle image treatment for large commercial
+  photography sections.
+*/
+
+.crd-image-overlay {
+  position: relative;
+}
+
+.crd-image-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.68) 0%,
+    rgba(0, 0, 0, 0.30) 55%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  pointer-events: none;
+}
+

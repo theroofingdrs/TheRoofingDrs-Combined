@@ -1,0 +1,121 @@
+export const BUSINESS_INFO = {
+  name: 'Commercial Roof Doctors',
+  shortName: 'CRD',
+  phone: '(903) 231-5940',
+  phoneRaw: '9032315940',
+  email: 'TheRoofingDrs@gmail.com',
+  address: {
+    street: '614 Robison Rd',
+    city: 'Texarkana',
+    state: 'TX',
+    zip: '75501',
+    display: '614 Robison Rd, Texarkana, TX 75501',
+  },
+  model: 'Service-Area Business',
+  disclaimerServiceArea:
+    'Commercial Roof Doctors is a field-operated commercial roofing and disaster-response contractor. Our physical facility supports regional operations and equipment deployment; we serve commercial clients directly at their facility locations.',
+  primaryTerritory: 'Ark-La-Tex and surrounding region',
+  primaryRadius: 'Approximately 75 miles from Texarkana (larger commercial projects considered beyond)',
+  statesCovered: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'],
+  taglines: {
+    primary: 'PRECISION. PROTECTION. PERFORMANCE.',
+    storm: 'WHEN THE STORM HITS, CRD RESPONDS.',
+    stormSub: "Storm damage doesn't wait. Neither should your inspection.",
+    positioning: 'Commercial Roofing. Diagnosed. Documented. Done Right.',
+    asset: 'Your Roof Is an Asset. Manage It Like One.',
+    propertyManagement: 'One Roofing Partner. Every Property. One Roof at a Time.',
+  },
+  authorityPoints: [
+    { label: '22+ YEARS', detail: 'Roofing & Construction Experience' },
+    { label: 'COMMERCIAL & LARGE-LOSS', detail: 'Complex Loss & Severe Storm Response' },
+    { label: 'STORM, HAIL & WIND', detail: 'Rapid Diagnostic & Damage Documentation' },
+    { label: 'INSURANCE & ADJUSTERS', detail: 'Xactimate Scope & Adjuster Coordination' },
+    { label: 'TECHNICAL MASTERY', detail: 'TPO, EPDM, PVC, Mod-Bit, BUR & Metal' },
+  ],
+  verifiedTechnologies: [
+    { name: 'HAAG Certified Education', desc: 'Objective scientific damage assessment standards' },
+    { name: 'CertainTeed ShingleMaster', desc: 'Steep-slope commercial & designer specification' },
+    { name: 'Xactimate Estimating', desc: 'Industry-standard insurance estimating software' },
+    { name: 'EagleView Technologies', desc: 'High-precision aerial roof geometry & pitch analytics' },
+    { name: 'CompanyCam', desc: 'Real-time timestamped, GPS-verified jobsite photo documentation' },
+    { name: 'HOVER 3D Modeling', desc: 'Dimensional envelope measurement & structural simulation' },
+    { name: 'AccuLynx CRM', desc: 'Enterprise project tracking & crew coordination' },
+  ],
+  insuranceDisclaimer:
+    'Commercial Roof Doctors provides forensic roof inspections, detailed storm damage mapping, and technical consultation during adjuster inspections. We do not act as public adjusters and do not guarantee claim coverage or settlement amounts. Final insurance decisions remain with your insurer.',
+  calculatorDisclaimer:
+    'Planning estimate only. This calculator does not provide a binding quote, proposal, or guarantee of project cost. Actual project pricing depends on professional inspection, measurements, roof condition, system requirements, accessibility, code requirements, scope of work, and other project-specific factors.',
+  hours: 'Monday – Saturday: 7:00 AM – 7:00 PM | Emergency Response: 24/7/365',
+  disclaimers: {
+    insurance:
+      'Commercial Roof Doctors is an independent commercial roofing and restoration contractor. We assist property owners with damage documentation, scope verification, and technical roofing evaluation. We do not act as public insurance adjusters or provide legal advice.',
+    calculator:
+      'Planning estimate only. This calculator does not provide a binding quote, proposal, or guarantee of project cost. Actual project pricing depends on professional inspection, measurements, roof condition, system requirements, accessibility, code requirements, scope of work, and other project-specific factors.',
+  },
+};
+
+export const NAVIGATION_LINKS = {
+  services: [
+    { name: 'Commercial Roofing', href: '/commercial-roofing', desc: 'Complete commercial roofing solutions' },
+    { name: 'Commercial Roof Repair', href: '/commercial-roof-repair', desc: 'Targeted surgical leak repairs and flashing fixes' },
+    { name: 'Commercial Roof Replacement', href: '/commercial-roof-replacement', desc: 'Engineered re-roofing and tear-offs' },
+    { name: 'Commercial Roof Inspection', href: '/commercial-roof-inspection', desc: 'Forensic diagnostics and moisture mapping' },
+    { name: 'Commercial Roof Maintenance', href: '/commercial-roof-maintenance', desc: 'Preventative programs to stop water ingress' },
+    { name: 'New Commercial Construction', href: '/new-commercial-construction', desc: 'Architectural specification and new installs' },
+  ],
+  restoration: [
+    { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', desc: 'Seamless fluid-applied membrane systems' },
+    { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration', desc: 'Renew existing membranes without tear-off' },
+    { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings', desc: 'Ponding water resistance & UV reflection' },
+    { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings', desc: 'High-tensile cost-effective solar coatings' },
+    { name: 'Polyurethane Coatings', href: '/polyurethane-roof-coatings', desc: 'High-impact puncture & foot-traffic resistance' },
+    { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace', desc: 'Evaluation framework for commercial decision makers' },
+  ],
+  storm: [
+    { name: 'Storm Damage Hub', href: '/storm-damage', desc: 'Ark-La-Tex storm response and damage mitigation' },
+    { name: 'Hail Damage', href: '/hail-damage', desc: 'Fractured membranes, bruised insulation & spatter' },
+    { name: 'Wind Damage', href: '/wind-damage', desc: 'Edge metal blow-off, uplift & membrane detachment' },
+    { name: 'Emergency Roofing', href: '/emergency-roofing', desc: 'Active water intrusion containment & dry-in' },
+    { name: 'Insurance Claims', href: '/insurance-claims', desc: 'Comprehensive damage documentation & claim support' },
+    { name: 'Commercial Storm Inspections', href: '/commercial-storm-inspections', desc: 'Rapid post-storm forensic evaluations' },
+    { name: 'Adjuster Meetings', href: '/adjuster-meetings', desc: 'On-roof technical collaboration with insurance adjusters' },
+    { name: 'Large-Loss Roofing', href: '/large-loss-roofing', desc: 'Major commercial & industrial disaster recovery' },
+  ],
+  systems: [
+    { name: 'TPO Roofing', href: '/tpo-roofing', desc: 'Thermoplastic polyolefin single-ply membrane' },
+    { name: 'EPDM Roofing', href: '/epdm-roofing', desc: 'Durable vulcanized synthetic rubber membrane' },
+    { name: 'PVC Roofing', href: '/pvc-roofing', desc: 'Chemical, fire & grease resistant single-ply' },
+    { name: 'Modified Bitumen', href: '/modified-bitumen', desc: 'Multi-ply asphaltic redundant roof systems' },
+    { name: 'Built-Up Roofing (BUR)', href: '/built-up-roofing', desc: 'Heavy-duty gravel & asphalt redundant roofs' },
+    { name: 'Commercial Metal Roofing', href: '/metal-roofing', desc: 'Standing seam & R-panel architectural metal' },
+  ],
+  propertyProtection: [
+    { name: 'CRD PPP™ Program', href: '/crd-ppp', desc: 'Property Protection Program tiered coverage' },
+    { name: 'Property Management', href: '/property-management', desc: 'Single-source partner for managers & portfolios' },
+    { name: 'Roof Asset Management', href: '/roof-asset-management', desc: 'Lifecycle budgeting and multi-year forecasting' },
+    { name: 'Multi-Property Roofing', href: '/multi-property-roofing', desc: 'Consolidated commercial real estate management' },
+    { name: 'Multifamily Roofing', href: '/multifamily-roofing', desc: 'Apartment complexes and resident safety' },
+    { name: 'HOA Community Roofing', href: '/hoa-roofing', desc: 'Condos, townhomes, and board compliance' },
+  ],
+  industries: [
+    { name: 'Churches & Houses of Worship', href: '/industries/churches', desc: 'Sanctuary protection, steep-slope & flat transitions' },
+    { name: 'Schools & Educational Facilities', href: '/industries/schools', desc: 'Classroom dry-in, scheduled break installations' },
+    { name: 'Healthcare & Medical Centers', href: '/industries/healthcare', desc: 'Zero-tolerance for water ingress & infection control' },
+    { name: 'Industrial & Warehouses', href: '/industries/industrial', desc: 'Large-footprint distribution centers & manufacturing' },
+    { name: 'Retail & Shopping Centers', href: '/industries/retail', desc: 'Tenant protection, customer safety & minimal disruption' },
+    { name: 'Apartments & Multifamily', href: '/industries/apartments', desc: 'Multi-building complexes and continuous tenant comfort' },
+  ],
+  serviceAreas: [
+    { name: 'Regional Territory Hub', href: '/service-areas', desc: '75-mile Texarkana Ark-La-Tex radius' },
+    { name: 'Texas Commercial Service Area', href: '/service-areas/texas', desc: 'Texarkana TX, Bowie County, NE Texas' },
+    { name: 'Arkansas Commercial Service Area', href: '/service-areas/arkansas', desc: 'Texarkana AR, Miller County, SW Arkansas' },
+    { name: 'Louisiana Commercial Service Area', href: '/service-areas/louisiana', desc: 'Shreveport, Bossier, NW Louisiana' },
+    { name: 'Oklahoma Commercial Service Area', href: '/service-areas/oklahoma', desc: 'McCurtain County, SE Oklahoma' },
+  ],
+  company: [
+    { name: 'About CRD', href: '/about', desc: 'Our commercial philosophy & field credentials' },
+    { name: 'Credentials & Technologies', href: '/about/credentials', desc: 'HAAG, Xactimate, EagleView & Certifications' },
+    { name: 'Cost Calculator', href: '/commercial-roof-cost-calculator', desc: 'Interactive commercial planning tool' },
+    { name: 'Contact CRD', href: '/contact', desc: 'Direct operations dispatch & inquiry form' },
+  ],
+};
