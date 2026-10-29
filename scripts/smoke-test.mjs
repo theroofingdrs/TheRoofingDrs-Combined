@@ -45,7 +45,7 @@ try {
   await check('/commercial/sitemap.xml', (body) => body.includes('/commercial/commercial-roofing'), 'commercial sitemap paths');
   await check('/residential/the_roof_doctors_logo_white.png', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential logo asset');
   await check('/commercial/assets/crd-logo-full-light.png', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial logo asset');
-  await check('/residential/assets/images/grand-manor-roof.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential roofing photo');
+  await check('/residential/assets/images/grand_manor_roof.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential roofing photo');
   await check('/commercial/assets/images/commercial-warehouse-roof.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial roofing photo');
   console.log('Combined site smoke tests passed.');
 } catch (error) {
