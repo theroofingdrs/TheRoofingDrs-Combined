@@ -5,6 +5,7 @@
 
 import express, { Request, Response } from 'express';
 import { getDatabase, persistDatabase, generateId } from '../../db/database.ts';
+import { saveSharedLead, getSharedLeads, getSharedLead } from '../../db/supabaseLeads.ts';
 import { calculateLeadScore } from '../../services/scoring.ts';
 import { logAuditAction, getAuditLogs } from '../../services/audit.ts';
 import { emitSystemEvent } from '../../services/events.ts';
@@ -169,9 +170,9 @@ apiV1Router.get('/users', (req, res) => {
 // -------------------------------------------------------------
 // 3. LEADS (Inbound Diagnostic Inquiries & Management)
 // -------------------------------------------------------------
-apiV1Router.get('/leads', (req, res) => {
-  const db = getDatabase();
-  res.json(db.leads);
+apiV1Router.get('/leads', async (req, res) => {
+  try { res.json(await getSharedLeads()); }
+  catch (error) { console.error('Shared lead list failed:', error); res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
 });
 
 apiV1Router.post('/leads', async (req, res) => {
@@ -222,6 +223,8 @@ apiV1Router.post('/leads', async (req, res) => {
     updatedAt: now,
   };
 
+  try { await saveSharedLead(newLead); }
+  catch (error) { console.error('Shared lead save failed:', error); return res.status(503).json({ error: 'We could not save your inquiry right now. Please try again.' }); }
   db.leads.unshift(newLead);
 
   // Record initial activity
@@ -258,19 +261,21 @@ apiV1Router.post('/leads', async (req, res) => {
   res.status(201).json(newLead);
 });
 
-apiV1Router.get('/leads/:id', (req, res) => {
-  const db = getDatabase();
-  const lead = db.leads.find((l) => l.id === req.params.id);
-  if (!lead) return res.status(404).json({ error: 'Lead not found' });
-  res.json(lead);
+apiV1Router.get('/leads/:id', async (req, res) => {
+  try {
+    const lead = await getSharedLead(req.params.id);
+    if (!lead) return res.status(404).json({ error: 'Lead not found' });
+    res.json(lead);
+  } catch (error) { console.error('Shared lead lookup failed:', error); res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
 });
 
-apiV1Router.patch('/leads/:id', (req, res) => {
+apiV1Router.patch('/leads/:id', async (req, res) => {
   const db = getDatabase();
+  let existing: Lead | null;
+  try { existing = await getSharedLead(req.params.id); }
+  catch (error) { console.error('Shared lead lookup failed:', error); return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
+  if (!existing) return res.status(404).json({ error: 'Lead not found' });
   const index = db.leads.findIndex((l) => l.id === req.params.id);
-  if (index === -1) return res.status(404).json({ error: 'Lead not found' });
-
-  const existing = db.leads[index];
   const previousState = { ...existing };
   const updated: Lead = {
     ...existing,
@@ -278,7 +283,10 @@ apiV1Router.patch('/leads/:id', (req, res) => {
     updatedAt: new Date().toISOString(),
   };
 
-  db.leads[index] = updated;
+  try { await saveSharedLead(updated); }
+  catch (error) { console.error('Shared lead update failed:', error); return res.status(503).json({ error: 'Lead update could not be saved.' }); }
+  if (index >= 0) db.leads[index] = updated;
+  else db.leads.unshift(updated);
 
   const ctx = getCallerContext(req);
 
