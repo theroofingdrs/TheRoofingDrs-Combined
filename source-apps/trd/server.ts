@@ -7,7 +7,8 @@ import { apiV1Router } from './server/api/v1/router.ts';
 dotenv.config();
 
 async function startServer() {
-  const app = express();\n  app.set('trust proxy', true);
+  const app = express();
+  app.set('trust proxy', true);
   const PORT = Number(process.env.PORT) || 3000;
 
   // Mount API routes FIRST
