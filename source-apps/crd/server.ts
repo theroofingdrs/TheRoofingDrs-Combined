@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
+import { selectRows, upsertRows } from './server/supabaseRest';
 import { upsertRows } from './server/supabaseRest';
 
 const PORT = Number(process.env.PORT) || 3000;
@@ -152,9 +153,16 @@ app.get('/api/admin/stats', (req: Request, res: Response) => {
 });
 
 // GET /api/leads - Query leads with filtering
-app.get('/api/leads', (req: Request, res: Response) => {
+app.get('/api/leads', async (req: Request, res: Response) => {
   const { status, priority, leadType } = req.query;
-  let filtered = [...db.leads];
+  let filtered: any[];
+  try {
+    const rows = await selectRows<any>('trd_records', 'select=id,payload&record_type=eq.lead&order=created_at.desc');
+    filtered = rows.map((row) => row.payload).filter((lead) => lead.division === 'commercial' || lead.division === 'COMMERCIAL' || lead.leadId);
+  } catch (error) {
+    console.error('Shared commercial lead list failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
 
   if (status && typeof status === 'string') {
     filtered = filtered.filter((l) => l.status === status);
@@ -188,9 +196,16 @@ app.get('/api/leads', (req: Request, res: Response) => {
 });
 
 // GET /api/leads/:id - Single lead detail with relations
-app.get('/api/leads/:id', (req: Request, res: Response) => {
-  const lead = db.leads.find((l) => l.leadId === req.params.id);
-  if (!lead) {
+app.get('/api/leads/:id', async (req: Request, res: Response) => {
+  let lead: any;
+  try {
+    const rows = await selectRows<any>('trd_records', `select=id,payload&record_type=eq.lead&id=eq.${encodeURIComponent(req.params.id)}&limit=1`);
+    lead = rows[0]?.payload;
+  } catch (error) {
+    console.error('Shared commercial lead lookup failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
+  if (!lead || !(lead.leadId || lead.division === 'commercial' || lead.division === 'COMMERCIAL')) {
     return res.status(404).json({ error: 'Lead not found' });
   }
 
@@ -209,13 +224,19 @@ app.get('/api/leads/:id', (req: Request, res: Response) => {
 });
 
 // PATCH /api/leads/:id - Update lead status, priority, or internal notes
-app.patch('/api/leads/:id', (req: Request, res: Response) => {
-  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
-  if (leadIndex === -1) {
+app.patch('/api/leads/:id', async (req: Request, res: Response) => {
+  let currentLead: any;
+  try {
+    const rows = await selectRows<any>('trd_records', `select=id,payload&record_type=eq.lead&id=eq.${encodeURIComponent(req.params.id)}&limit=1`);
+    currentLead = rows[0]?.payload;
+  } catch (error) {
+    console.error('Shared commercial lead lookup failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
+  if (!currentLead || !(currentLead.leadId || currentLead.division === 'commercial' || currentLead.division === 'COMMERCIAL')) {
     return res.status(404).json({ error: 'Lead not found' });
   }
-
-  const currentLead = db.leads[leadIndex];
+  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
   const { status, priority, assignedTo, notes, newNote } = req.body;
 
   const previousStatus = currentLead.status;
@@ -247,7 +268,13 @@ app.patch('/api/leads/:id', (req: Request, res: Response) => {
   }
 
   currentLead.updatedAt = new Date().toISOString();
-  db.leads[leadIndex] = currentLead;
+  if (leadIndex >= 0) db.leads[leadIndex] = currentLead;
+  try {
+    await upsertRows('trd_records', [{ id: currentLead.leadId, record_type: 'lead', payload: currentLead, updated_at: currentLead.updatedAt }], 'id');
+  } catch (error) {
+    console.error('Shared commercial lead update failed:', error);
+    return res.status(503).json({ error: 'Lead update could not be saved.' });
+  }
   saveDB(db);
 
   res.json({ success: true, lead: currentLead });
