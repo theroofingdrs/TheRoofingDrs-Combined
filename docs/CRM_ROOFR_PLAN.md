@@ -51,7 +51,10 @@ Include an optional insurance and damage section with dropdowns and fields:
 * Reason for replacement or repair: storm or hail damage, wind damage, water leak, other damage, age or normal wear, planned upgrade, or not sure.
 * Date of loss, optional, when a specific loss date is known.
 * Insurance company, optional.
+* Policy number, optional.
 * Claim number, optional.
+* Adjuster name, optional.
+* Adjuster phone number, optional.
 * Additional notes, optional.
 
 Keep date of loss, insurer, and claim number optional. Do not assume a claim exists or block estimates when those fields are blank. Show insurance related fields as relevant to the selected reason, without hiding the general contact and roof details. Include a preferred contact method if supported.
@@ -65,7 +68,7 @@ Immediately after displaying the range, offer clear next actions:
 * Call now using the appropriate division phone number.
 * Text now using a correctly configured SMS link and appropriate division number. Do not show a text action unless that number is confirmed capable of receiving messages.
 
-Create a CRM lead and estimate request from a submitted contact or appointment request, preserve the required name, property address, phone, and email, all roof inputs, selected reason for work, optional date of loss, insurer, claim number, notes, calculated range, division, and lead source, and provide a confirmation to the customer. Restrict access to personal and insurance claim details according to role permissions. Protect personal information and validate all submitted fields. Include a server side rate limit and spam protection appropriate to the current stack.
+Create a CRM lead and estimate request from a submitted contact or appointment request, preserve the required name, property address, phone, and email, all roof inputs, selected reason for work, optional date of loss, insurer, policy number, claim number, adjuster name, adjuster phone number, notes, calculated range, division, and lead source, and provide a confirmation to the customer. Restrict access to personal and insurance claim details according to role permissions. Protect personal information and validate all submitted fields. Include a server side rate limit and spam protection appropriate to the current stack.
 
 ## Future Roofr integration
 
