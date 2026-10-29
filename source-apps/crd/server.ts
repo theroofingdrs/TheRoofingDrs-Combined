@@ -493,26 +493,49 @@ app.post('/api/calculator', (req: Request, res: Response) => {
 
     const sqft = Number(squareFootage) || 10000;
     
-    // Baseline ranges per square foot (strictly educational estimates based on typical commercial low-slope systems)
-    let minRate = 4.5;
-    let maxRate = 8.5;
+    // Preliminary commercial pricing. Existing defaults are preserved and can be
+    // overridden through Cloud Run environment variables after owner approval.
+    const pricing = {
+      repairMin: Number(process.env.CRD_REPAIR_MIN_RATE ?? 1.5),
+      repairMax: Number(process.env.CRD_REPAIR_MAX_RATE ?? 3.5),
+      restorationMin: Number(process.env.CRD_RESTORATION_MIN_RATE ?? 3.5),
+      restorationMax: Number(process.env.CRD_RESTORATION_MAX_RATE ?? 7.5),
+      replacementMin: Number(process.env.CRD_REPLACEMENT_MIN_RATE ?? 8.0),
+      replacementMax: Number(process.env.CRD_REPLACEMENT_MAX_RATE ?? 16.0),
+      metalReplacementMinAdd: Number(process.env.CRD_METAL_REPLACEMENT_MIN_ADD ?? 3.0),
+      metalReplacementMaxAdd: Number(process.env.CRD_METAL_REPLACEMENT_MAX_ADD ?? 6.0),
+      pvcReplacementMinAdd: Number(process.env.CRD_PVC_REPLACEMENT_MIN_ADD ?? 1.5),
+      pvcReplacementMaxAdd: Number(process.env.CRD_PVC_REPLACEMENT_MAX_ADD ?? 3.0),
+      complexAccessMinMultiplier: Number(process.env.CRD_COMPLEX_ACCESS_MIN_MULTIPLIER ?? 1.25),
+      complexAccessMaxMultiplier: Number(process.env.CRD_COMPLEX_ACCESS_MAX_MULTIPLIER ?? 1.35),
+    };
+    let minRate: number;
+    let maxRate: number;
 
     if (desiredWork === 'Replacement') {
-      minRate = 8.0;
-      maxRate = 16.0;
-      if (roofSystem === 'Metal') { minRate += 3.0; maxRate += 6.0; }
-      if (roofSystem === 'PVC') { minRate += 1.5; maxRate += 3.0; }
+      minRate = pricing.replacementMin;
+      maxRate = pricing.replacementMax;
+      if (roofSystem === 'Metal') {
+        minRate += pricing.metalReplacementMinAdd;
+        maxRate += pricing.metalReplacementMaxAdd;
+      }
+      if (roofSystem === 'PVC') {
+        minRate += pricing.pvcReplacementMinAdd;
+        maxRate += pricing.pvcReplacementMaxAdd;
+      }
     } else if (desiredWork === 'Restoration/Coating') {
-      minRate = 3.5;
-      maxRate = 7.5;
+      minRate = pricing.restorationMin;
+      maxRate = pricing.restorationMax;
     } else if (desiredWork === 'Repair') {
-      minRate = 1.5;
-      maxRate = 3.5;
+      minRate = pricing.repairMin;
+      maxRate = pricing.repairMax;
+    } else {
+      return res.status(400).json({ error: 'Choose a supported commercial work type before calculating a preliminary estimate.' });
     }
 
     if (accessComplexity === 'Complex / High-Rise') {
-      minRate *= 1.25;
-      maxRate *= 1.35;
+      minRate *= pricing.complexAccessMinMultiplier;
+      maxRate *= pricing.complexAccessMaxMultiplier;
     }
 
     const estimatedLow = Math.round(sqft * minRate);
