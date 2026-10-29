@@ -9,7 +9,7 @@ on:
       - main
 
 concurrency:
-  group: combined-site-ci-${{ github.ref }}
+  group: combined-site-ci
   cancel-in-progress: true
 
 jobs:
