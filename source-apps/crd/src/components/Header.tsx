@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           <Link to="/" id="brand-logo-link" className="flex items-center group py-1" aria-label="Commercial Roof Doctors Home">
             <CrdLogo
               variant="full"
-              theme="light"
+              theme="dark"
               className="h-10 sm:h-12 lg:h-[60px] w-auto max-h-[65px] max-w-[210px] sm:max-w-[240px] lg:max-w-[260px] object-contain"
             />
           </Link>
