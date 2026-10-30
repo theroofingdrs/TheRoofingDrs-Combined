@@ -131,6 +131,8 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
             })}
           </nav>
 
+                    <a href="/commercial/" className="hidden lg:inline-flex items-center px-3 py-2 rounded-lg border border-slate-300 text-xs xl:text-sm font-bold text-slate-700 hover:border-red-500 hover:text-red-600 transition-colors whitespace-nowrap">Commercial Roofing</a>
+
           {/* Right Action CTA & Mobile Toggle */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button
@@ -191,6 +193,8 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
                 );
               })}
             </div>
+
+                        <a href="/commercial/" onClick={() => setMobileMenuOpen(false)} className="block mt-3 px-3 py-3 rounded-lg border border-slate-200 text-sm font-bold text-slate-800 hover:bg-slate-50">Looking for commercial roofing? Visit Commercial Roof Doctors</a>
 
             {/* Mobile Actions in Menu */}
             <div className="pt-4 pb-2 space-y-2.5">
