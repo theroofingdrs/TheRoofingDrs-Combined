@@ -58,7 +58,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
         <div className="max-w-4xl mx-auto text-center space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono-crd uppercase tracking-wider">
             <MapPin className="w-3.5 h-3.5" />
-            <span>Regional Commercial Roofing Territory</span>
+            <span>Regional Commercial Roof Coatings & Restoration</span>
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight uppercase text-white leading-tight">
             {data.heroHeadline}
@@ -91,7 +91,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
           <span className="font-bold text-amber-400 uppercase font-mono-crd block">
             Service-Area Business Model Disclosure:
           </span>
-          Commercial Roof Doctors provides direct on-site commercial roofing, restoration, and storm mitigation across {data.regionName}. Our Texarkana headquarters at 614 Robison Rd coordinates field logistics and dispatch—not a retail storefront.
+          Commercial Roof Doctors evaluates commercial metal and low-slope roofs in {data.regionName} for coating restoration, corrosion repairs, seam and fastener work, and replacement when restoration is not appropriate. Project availability is confirmed based on location, roof type and scope.
         </div>
       </section>
 
@@ -189,10 +189,10 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
       {/* Conversion Banner */}
       <section className="pt-16 max-w-4xl mx-auto px-4 text-center space-y-6">
         <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase text-white">
-          Commercial Roofing in {data.regionName}
+          Commercial Roof Coatings & Restoration in {data.regionName}
         </h2>
         <p className="text-sm text-slate-300 max-w-xl mx-auto">
-          Contact Commercial Roof Doctors for rapid field assessment, storm damage forensics, or multi-property capital budgeting.
+          Request a commercial roof evaluation to discuss coating eligibility, metal roof restoration, repairs or replacement planning for your property.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button
