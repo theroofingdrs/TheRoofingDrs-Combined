@@ -181,7 +181,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 Regional Commercial Coverage
               </div>
               <p className="text-xs text-[#666666] mt-1 leading-relaxed">
-                Field-deployed within ~75 miles of Texarkana across TX, AR, LA, and OK, with extended travel for large projects.
+                Regional commercial coverage extending up to 250 miles from Texarkana across TX, AR, LA, and OK.
               </p>
             </div>
           </div>
