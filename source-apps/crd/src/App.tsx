@@ -33,6 +33,7 @@ import {
   ROOF_SYSTEMS_CONTENT,
   INDUSTRIES_CONTENT,
   SERVICE_AREAS_CONTENT,
+  CITY_SERVICE_AREAS_CONTENT,
 } from './siteSystemsContent';
 import { LeadType } from './types';
 
@@ -178,10 +179,24 @@ const MainAppContent: React.FC = () => {
     }
 
     // 5. Service Areas
-    if (SERVICE_AREAS_CONTENT[normalizedPath] || SERVICE_AREAS_CONTENT[rawPath] || SERVICE_AREAS_CONTENT[currentPath]) {
+    if (
+      CITY_SERVICE_AREAS_CONTENT[normalizedPath] ||
+      SERVICE_AREAS_CONTENT[normalizedPath] ||
+      CITY_SERVICE_AREAS_CONTENT[rawPath] ||
+      SERVICE_AREAS_CONTENT[rawPath] ||
+      CITY_SERVICE_AREAS_CONTENT[currentPath] ||
+      SERVICE_AREAS_CONTENT[currentPath]
+    ) {
       return (
         <ServiceAreaTemplate
-          data={SERVICE_AREAS_CONTENT[normalizedPath] || SERVICE_AREAS_CONTENT[rawPath] || SERVICE_AREAS_CONTENT[currentPath]}
+          data={
+            CITY_SERVICE_AREAS_CONTENT[normalizedPath] ||
+            SERVICE_AREAS_CONTENT[normalizedPath] ||
+            CITY_SERVICE_AREAS_CONTENT[rawPath] ||
+            SERVICE_AREAS_CONTENT[rawPath] ||
+            CITY_SERVICE_AREAS_CONTENT[currentPath] ||
+            SERVICE_AREAS_CONTENT[currentPath]
+          }
           onOpenInspection={handleOpenInspection}
           onOpenEmergency={handleOpenEmergency}
         />
