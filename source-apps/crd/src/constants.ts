@@ -88,7 +88,7 @@ export const NAVIGATION_LINKS = {
     { name: 'PVC Roofing', href: '/pvc-roofing', desc: 'Chemical, fire & grease resistant single-ply' },
     { name: 'Modified Bitumen', href: '/modified-bitumen', desc: 'Multi-ply asphaltic redundant roof systems' },
     { name: 'Built-Up Roofing (BUR)', href: '/built-up-roofing', desc: 'Heavy-duty gravel & asphalt redundant roofs' },
-    { name: 'Commercial Metal Roofing', href: '/metal-roofing', desc: 'Standing seam & R-panel architectural metal' },
+    { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', desc: 'Standing seam & R-panel architectural metal' },
   ],
   propertyProtection: [
     { name: 'CRD PPP™ Program', href: '/crd-ppp', desc: 'Property Protection Program tiered coverage' },
