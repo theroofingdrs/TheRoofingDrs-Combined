@@ -335,6 +335,38 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
     relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
   },
 
+
+  '/spray-foam-roofing': {
+    title: 'Commercial Spray Foam Roofing (SPF) Restoration | CRD',
+    metaDescription: 'Commercial spray polyurethane foam roof inspection, repair and recoating. Learn how moisture, damaged foam, UV exposure and protective coating condition determine restoration suitability.',
+    canonicalPath: '/spray-foam-roofing',
+    systemName: 'Spray Polyurethane Foam Roofing',
+    systemType: 'SPF',
+    heroHeadline: 'SPF Roofing. Protect the Foam. Find the Damage.',
+    heroSubtitle: 'Spray polyurethane foam roofs rely on a continuous foam layer and protective coating. Restoration starts by locating moisture and damaged foam, not simply applying another coat.',
+    whatItIs: 'Spray polyurethane foam (SPF) roofing is formed by applying liquid components that expand and cure into a continuous insulating foam layer. The foam is protected from ultraviolet exposure and weather by a compatible elastomeric coating, often renewed as part of a maintenance or restoration program.',
+    whereItIsUsed: ['Commercial and industrial low-slope buildings', 'Facilities with complex roof geometry and rooftop penetrations', 'Buildings seeking combined insulation and waterproofing performance'],
+    advantages: ['Seamless foam application can conform around complex roof details', 'The foam layer can provide insulation as part of the roof assembly', 'Protective coatings can be renewed when the foam and underlying assembly remain sound'],
+    considerations: ['Exposed or deteriorated foam must be evaluated and repaired before recoating', 'Moisture intrusion can damage foam and may not be visible from the surface', 'Coating type, thickness and recoat compatibility depend on the existing system'],
+    commonProblems: [
+      { title: 'UV-Damaged Exposed Foam', desc: 'Loss or erosion of the protective coating exposes foam to sunlight and weather.' },
+      { title: 'Moisture-Damaged Foam', desc: 'Water entry can saturate or deteriorate foam and may require removal to sound material.' },
+      { title: 'Coating Erosion or Delamination', desc: 'Weathering, inadequate thickness or adhesion problems can reduce protection.' },
+    ],
+    inspectionProtocols: ['Map coating erosion, exposed foam and suspected moisture areas', 'Probe and assess damaged foam to determine whether it remains sound', 'Inspect drains, penetrations, flashings and transitions', 'Check coating adhesion and compatibility with proposed recoat material', 'Document repairs and specified coating thickness'],
+    repairApproach: 'Damaged or wet foam should be cut back to sound material and repaired with compatible SPF. The repaired area must be prepared and protected with the specified coating system. Coating over wet or deteriorated foam is not a proper repair.',
+    restorationPotential: 'An SPF roof may be a strong recoating candidate when the foam is dry, firmly bonded and structurally sound. Restoration generally includes localized foam repairs, detail work, preparation and application of a compatible protective coating at the specified thickness.',
+    replacementTriggers: ['Widespread wet or deteriorated foam', 'Extensive loss of adhesion or failure of the roof assembly', 'Deck or structural conditions that make restoration unsuitable'],
+    maintenanceGuidelines: ['Inspect coating condition at least annually', 'Repair exposed foam promptly using compatible materials', 'Keep drains clear and monitor ponding areas', 'Record coating thickness and maintenance history'],
+    stormConsiderations: 'Hail and wind-driven debris can puncture or fracture the protective coating and foam. After severe weather, inspect impact areas and penetrations and repair exposed foam before prolonged UV exposure.',
+    costFactors: ['Area and depth of foam requiring removal and replacement', 'Existing coating condition and preparation needs', 'Specified coating chemistry and dry-film thickness', 'Moisture investigation, access and rooftop equipment'],
+    faqs: [
+      { question: 'Can an SPF roof simply be recoated?', answer: 'Only when the existing foam is dry, sound and adequately bonded. Wet or deteriorated foam must be removed and repaired before a new protective coating is applied.' },
+      { question: 'How often should an SPF roof be inspected?', answer: 'At least annually and after significant storms. Inspection frequency and coating renewal depend on the system manufacturer, exposure and observed condition.' },
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
+  },
+
 };
 
 export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
