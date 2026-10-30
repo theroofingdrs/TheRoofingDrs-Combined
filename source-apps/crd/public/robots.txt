@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /commercial/admin/
+Disallow: /commercial/staff/
+Disallow: /commercial/leads
+Disallow: /commercial/portal
+Disallow: /residential/app/
+Disallow: /residential/field/
+Disallow: /residential/portal/
+
+Sitemap: https://theroofingdrs.com/sitemap.xml
