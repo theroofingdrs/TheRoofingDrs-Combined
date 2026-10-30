@@ -543,6 +543,87 @@ app.post('/api/leads', async (req: Request, res: Response) => {
 
     saveDB(db);
 
+    // Send notifications only after the commercial lead is durably saved.
+    // Email failures are logged but never discard or reject the saved lead.
+    const resendKey = process.env.RESEND_API_KEY?.trim();
+    const fromAddress = process.env.RESEND_FROM_EMAIL || 'Commercial Roof Doctors <notifications@theroofingdrs.com>';
+    const recipient = 'TheRoofingDrs@gmail.com';
+    const fullName = `${fName} ${lName}`.trim() || name || 'Commercial inquiry';
+    const propertyLocation = address || propertyAddress || 'Not provided';
+    const details = [
+      'COMMERCIAL ROOF DOCTORS | NEW COMMERCIAL LEAD',
+      '',
+      `Name: ${fullName}`,
+      `Company / Property Entity: ${newOrg.companyName}`,
+      `Phone: ${phone || 'Not provided'}`,
+      `Email: ${email || 'Not provided'}`,
+      `Property: ${propertyLocation}`,
+      `City: ${city || 'Texarkana Region'}`,
+      `Property Type: ${propertyType || 'Commercial'}`,
+      `Inquiry: ${leadType || 'Inspection'}`,
+      `Priority: ${priority || 'Normal'}`,
+      `Emergency: ${Boolean(emergencyType || leadType === 'Emergency')}`,
+      `Details: ${message || notes || 'None provided'}`,
+      `Lead ID: ${leadId}`,
+      `Source: ${source || 'Website Lead Form'}`,
+      '',
+      'Dispatch: 903-231-5940',
+    ].join('\\n');
+
+    if (!resendKey) {
+      console.error('[CRD Email] RESEND_API_KEY is not configured. Lead saved; notification not sent.');
+    } else {
+      const sendResendEmail = async (to: string, subject: string, textBody: string) => {
+        const response = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ from: fromAddress, to: [to], subject, text: textBody }),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(`Resend returned ${response.status}: ${JSON.stringify(result)}`);
+        return result;
+      };
+
+      try {
+        const result = await sendResendEmail(
+          recipient,
+          `COMMERCIAL ROOF LEAD — ${fullName} — ${city || 'Texarkana Region'}`,
+          details,
+        );
+        console.log(`[CRD Email] Internal lead notification queued (Resend ID: ${result.id || 'accepted'}).`);
+      } catch (emailError) {
+        console.error('[CRD Email] Internal lead notification failed; lead remains saved:', emailError);
+      }
+
+      if (typeof email === 'string' && email.includes('@')) {
+        try {
+          const confirmation = [
+            `Hello ${fullName},`,
+            '',
+            'Thank you for contacting Commercial Roof Doctors. We have received your commercial roofing inquiry and our team will review the details.',
+            '',
+            `Inquiry: ${leadType || 'Inspection'}`,
+            `Property: ${propertyLocation}`,
+            `Company / Property Entity: ${newOrg.companyName}`,
+            '',
+            'A member of our commercial team will follow up using the contact information you provided.',
+            'For an urgent active leak, call 903-231-5940.',
+            '',
+            'Commercial Roof Doctors',
+            '903-231-5940 | TheRoofingDrs@gmail.com',
+          ].join('\\n');
+          const result = await sendResendEmail(
+            email.trim(),
+            'Your Commercial Roofing Inquiry Has Been Received — Commercial Roof Doctors',
+            confirmation,
+          );
+          console.log(`[CRD Email] Customer confirmation queued (Resend ID: ${result.id || 'accepted'}).`);
+        } catch (emailError) {
+          console.error('[CRD Email] Customer confirmation failed; lead remains saved:', emailError);
+        }
+      }
+    }
+
     console.log(`[CRD API] Ingested Lead ${leadId} (${newLead.leadType}, Priority: ${newLead.priority}) for ${fName} ${lName}`);
 
     res.status(201).json({
