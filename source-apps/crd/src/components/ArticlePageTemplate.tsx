@@ -18,6 +18,7 @@ export interface ArticlePageData {
   }[];
   faqs: { question: string; answer: string }[];
   relatedLinks: { name: string; href: string }[];
+  sourceLinks?: { name: string; href: string }[];
 }
 
 interface ArticlePageTemplateProps {
@@ -79,6 +80,23 @@ export const ArticlePageTemplate: React.FC<ArticlePageTemplateProps> = ({
             )}
           </section>
         ))}
+
+        {data.sourceLinks && data.sourceLinks.length > 0 && (
+          <section className="border-t border-slate-800 pt-8 space-y-3">
+            <h2 className="text-lg font-heading font-black uppercase text-white">
+              Reference Sources
+            </h2>
+            <ul className="space-y-2 text-sm">
+              {data.sourceLinks.map((source) => (
+                <li key={source.href}>
+                  <a href={source.href} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline underline-offset-4">
+                    {source.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {data.faqs.length > 0 && (
           <section className="border-t border-slate-800 pt-10 space-y-6">
