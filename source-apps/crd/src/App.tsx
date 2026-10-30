@@ -19,6 +19,7 @@ import { EmergencyRoofingPage } from './pages/EmergencyRoofingPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { LeadsAdminPage } from './pages/LeadsAdminPage';
+import { StaffAuthGate } from './components/StaffAuthGate';
 
 // Reusable Templates
 import { ServicePageTemplate } from './components/ServicePageTemplate';
@@ -140,7 +141,7 @@ const MainAppContent: React.FC = () => {
       normalizedPath === '/portal' ||
       normalizedPath === '/leads'
     ) {
-      return <LeadsAdminPage />;
+      return <StaffAuthGate><LeadsAdminPage /></StaffAuthGate>;
     }
 
     // 2. Commercial Services
