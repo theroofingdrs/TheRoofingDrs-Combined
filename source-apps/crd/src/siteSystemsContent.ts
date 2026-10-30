@@ -6932,6 +6932,9 @@ export const COATING_ARTICLES_CONTENT = {
       { question: 'Does the EPA say roofing is a major source of construction waste?', answer: 'EPA tracks construction and demolition debris across many material categories. Its 600-million-ton estimate for 2018 is for all covered C&D activity, not a roofing-only total.' },
       { question: 'Is coating always more sustainable than replacement?', answer: 'No. A roof that is structurally unsound or moisture damaged may require replacement. The best option is the one that safely addresses the building condition and avoids premature repeat work.' },
     ],
+    sourceLinks: [
+      { name: 'U.S. EPA: Construction and Demolition Debris Data', href: 'https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/construction-and-demolition-debris-material' },
+    ],
     relatedLinks: [
       { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
@@ -7003,6 +7006,10 @@ export const COATING_ARTICLES_CONTENT = {
       { question: 'Does every roof coating qualify as a cool roof?', answer: 'No. Reflective performance varies by formulation, color and product. Review measured solar reflectance and thermal emittance for the exact product.' },
       { question: 'Will a reflective roof reduce heating costs too?', answer: 'Not necessarily. A reflective roof can reduce solar heat gain in summer, but in some climates it may also reduce useful winter heat gain. Annual building performance should be considered.' },
     ],
+    sourceLinks: [
+      { name: 'ENERGY STAR: Cool Roofs', href: 'https://www.energystar.gov/products/cool-roofs' },
+      { name: 'Cool Roof Rating Council: Rated Products', href: 'https://coolroofs.org/directory' },
+    ],
     relatedLinks: [
       { name: 'Protect Your HVAC Investment', href: '/resources/roof-coatings-and-hvac-performance' },
       { name: 'Tax Incentives and Energy Efficiency', href: '/resources/commercial-roof-energy-tax-incentives' },
@@ -7072,6 +7079,9 @@ export const COATING_ARTICLES_CONTENT = {
       { question: 'Will roof coating make my HVAC units last longer?', answer: 'It may reduce some cooling demand in suitable buildings, but CRD cannot promise a specific increase in HVAC service life. Equipment life depends on maintenance, installation, controls, loading and operating conditions.' },
       { question: 'Can a reflective roof lower the temperature inside my building?', answer: 'It may reduce heat transfer through the roof, but indoor temperature also depends on insulation, air leakage, windows, internal heat loads and HVAC operation.' },
       { question: 'Does this help refrigerated warehouses?', answer: 'Potentially, by reducing some roof-related heat gain. Refrigeration performance depends on many other factors and should be evaluated by a qualified energy or refrigeration professional.' },
+    ],
+    sourceLinks: [
+      { name: 'ENERGY STAR: Cool Roofs', href: 'https://www.energystar.gov/products/cool-roofs' },
     ],
     relatedLinks: [
       { name: 'Reflective Roof Coating Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
@@ -7152,6 +7162,12 @@ export const COATING_ARTICLES_CONTENT = {
       { question: 'Can a commercial roof coating qualify for Section 179D in 2026?', answer: 'Potentially only where the property and project satisfy the applicable requirements and the construction-start deadline of June 30, 2026. A coating alone does not establish eligibility. Consult a qualified tax professional.' },
       { question: 'Are utility rebates available in Texas, Arkansas, Oklahoma or Louisiana?', answer: 'Programs vary by utility territory and change over time. The property owner should confirm current availability, eligible products and pre-approval requirements directly with the serving utility.' },
       { question: 'Can CRD tell me whether my project qualifies for a tax deduction?', answer: 'CRD can provide the roofing scope and product documentation needed for review, but tax eligibility must be determined by the owner\'s CPA or tax attorney.' },
+    ],
+    sourceLinks: [
+      { name: 'IRS: Energy Efficient Commercial Buildings Deduction', href: 'https://www.irs.gov/credits-deductions/energy-efficient-commercial-buildings-deduction' },
+      { name: 'IRS: Instructions for Form 7205', href: 'https://www.irs.gov/instructions/i7205' },
+      { name: 'ENERGY STAR: Tax Deductions for Commercial Buildings', href: 'https://www.energystar.gov/about/federal_tax_credits/tax_credits_commercial_buildings' },
+      { name: 'Cool Roof Rating Council: Rated Products', href: 'https://coolroofs.org/directory' },
     ],
     relatedLinks: [
       { name: 'Reflective Roof Coating Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
