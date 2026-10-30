@@ -291,6 +291,42 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                     <div className="text-xs text-[#888888] mt-0.5">Fluid-applied silicone & acrylic elastomeric</div>
                   </Link>
                   <Link
+                    to="/resources/environmental-benefits-of-roof-restoration"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Environmental Benefits
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Less tear-off waste and material disposal</div>
+                  </Link>
+                  <Link
+                    to="/resources/reflective-roof-coating-energy-savings"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Energy Savings & Cool Roofs
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Reflectivity, cooling demand and utility use</div>
+                  </Link>
+                  <Link
+                    to="/resources/roof-coatings-and-hvac-performance"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      HVAC Performance
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">How roof heat gain affects building cooling</div>
+                  </Link>
+                  <Link
+                    to="/resources/commercial-roof-energy-tax-incentives"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Tax Incentives & Energy Ratings
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Current eligibility and product ratings</div>
+                  </Link>
+                  <Link
                     to="/service-areas"
                     className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
                   >
