@@ -96,7 +96,7 @@ export const StaffAuthGate: React.FC<{ children: React.ReactNode }> = ({ childre
     return (
       <div className="min-h-screen bg-[#090d16] text-slate-100 flex items-center justify-center p-4">
         <form onSubmit={signIn} className="w-full max-w-md bg-[#0e1422] border border-slate-800 rounded-xl p-7 space-y-5 shadow-2xl">
-          <div className="flex justify-center"><CrdLogo variant="full" theme="light" className="h-12 w-auto" /></div>
+          <div className="flex justify-center"><CrdLogo variant="full" theme="dark" className="h-12 w-auto" /></div>
           <div className="text-center space-y-2">
             <div className="inline-flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider"><Lock className="w-4 h-4" /> Staff Authentication Required</div>
             <h1 className="text-2xl font-black uppercase text-white">Commercial Staff Portal</h1>
