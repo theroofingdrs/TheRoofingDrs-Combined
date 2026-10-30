@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             <Link to="/" className="inline-block" aria-label="Commercial Roof Doctors Home">
               <CrdLogo
                 variant="full"
-                theme="dark"
+                theme="light"
                 className="h-10 sm:h-12 w-auto max-h-[50px] max-w-[220px] object-contain"
               />
             </Link>
