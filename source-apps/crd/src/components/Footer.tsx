@@ -114,6 +114,26 @@ export const Footer: React.FC = () => {
                   Commercial Roof Coating Resources
                 </Link>
               </li>
+              <li>
+                <Link to="/resources/environmental-benefits-of-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Environmental Benefits of Restoration
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/reflective-roof-coating-energy-savings" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Reflective Roof Energy Savings
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/roof-coatings-and-hvac-performance" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Roof Coatings & HVAC Performance
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/commercial-roof-energy-tax-incentives" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Tax Incentives & Energy Ratings
+                </Link>
+              </li>
             </ul>
           </div>
 
