@@ -25,7 +25,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
     <div className="min-h-screen bg-[#090d16] text-slate-100 font-sans-crd pb-24">
       <SeoMeta
         title="Coat vs. Replace: Commercial Roof Decision Guide | CRD"
-        description="Replace it, restore it, or protect it? Technical decision criteria for commercial roof coatings vs total replacement. Learn moisture limits, tax expensing, and CapEx savings."
+        description="Compare commercial roof restoration and replacement using roof condition, moisture, attachment, drainage, code and project cost factors."
         canonicalPath="/coat-vs-replace"
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -92,8 +92,8 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block text-sm">Capital Cost: 40%–60% Less Than Replacement</strong>
-                  <span className="text-slate-400">Eliminates labor-intensive tear-off, dumpster fees, and new structural insulation expense.</span>
+                  <strong className="text-white block text-sm">Potentially Lower Initial Project Cost</strong>
+                  <span className="text-slate-400">A qualifying restoration may avoid some tear-off, disposal and replacement material costs. Actual savings depend on roof condition, repairs, preparation, system selection and project scope.</span>
                 </div>
               </div>
 
@@ -108,8 +108,8 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block text-sm">Favorable Tax Treatment (IRS Section 179)</strong>
-                  <span className="text-slate-400">Frequently categorized as building maintenance rather than a capital improvement, allowing 100% deduction in year one.</span>
+                  <strong className="text-white block text-sm">Tax Treatment Requires Project-Specific Review</strong>
+                  <span className="text-slate-400">Tax treatment depends on the facts, applicable tax rules and how the work is classified. CRD does not provide tax advice. Consult your tax professional before relying on a deduction or incentive.</span>
                 </div>
               </div>
 
@@ -117,12 +117,12 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block text-sm">Seamless Monolithic Barrier</strong>
-                  <span className="text-slate-400">Silicone chemistries eliminate the thousands of linear feet of seams where traditional single-ply membranes fail.</span>
+                  <span className="text-slate-400">A fluid-applied system can create a continuous surface, but existing seams, penetrations, flashings and transitions still require inspection and reinforcement where specified.</span>
                 </div>
               </div>
 
               <div className="p-3 rounded bg-emerald-950/40 border border-emerald-900/60 text-emerald-200">
-                <strong>Best Candidate:</strong> Mechanically sound single-ply or metal roofs with less than 20% trapped moisture and solid substrate attachment.
+                <strong>Potential Candidate:</strong> A dry, stable, adequately attached roof with repairable details and a coating system approved for the exact substrate.
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
                 <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block text-sm">Higher Capital Outlay & Depreciation Schedule</strong>
-                  <span className="text-slate-400">Substantially higher initial expenditure; depreciated over 39 years on commercial tax returns.</span>
+                  <span className="text-slate-400">Replacement may involve higher initial costs, but accounting and tax treatment depend on the project and applicable rules. Obtain project-specific tax advice.</span>
                 </div>
               </div>
 
@@ -173,7 +173,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               </div>
 
               <div className="p-3 rounded bg-amber-950/40 border border-amber-900/60 text-amber-200">
-                <strong>Mandatory When:</strong> Saturated insulation exceeds 25%, decking is corroded, or local building code prohibits a third roof layer.
+                <strong>May Be Necessary When:</strong> Widespread wet insulation, structural deterioration, failed attachment, extensive membrane failure or code requirements make restoration unsuitable.
               </div>
             </div>
           </div>
@@ -200,15 +200,15 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">01. Substrate Moisture</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Infrared & Core Sampling</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                If thermal imaging or core samples reveal that trapped moisture exceeds 20%–25% of the total insulation volume, coating will trap moisture and cause deck rot. Wet areas must be cut out first.
+                There is no universal moisture percentage that determines coating suitability. Interpret infrared scans with verification such as core cuts or other diagnostics. Wet or deteriorated materials must be addressed before restoration, using project-specific criteria.
               </p>
             </div>
 
             <div className="bg-[#0e1422] border border-slate-800 p-6 rounded-xl space-y-3">
               <div className="font-mono-crd text-amber-500 font-black text-xl">02. Pull-Adhesion Testing</div>
-              <h3 className="font-heading font-bold text-base uppercase text-white">ASTM C794 Field Test</h3>
+              <h3 className="font-heading font-bold text-base uppercase text-white">Manufacturer-Specified Field Test</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                We apply test patches of primer and coating to the weathered membrane and perform mechanical pull tests. If the coating cannot achieve minimum pound-force adhesion, coating is ruled out.
+                Prepare representative test areas and perform the adhesion test method and acceptance criteria required by the coating manufacturer. Results must be evaluated with the substrate condition and complete assembly.
               </p>
             </div>
 
@@ -216,7 +216,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">03. Fastener Attachment</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Wind Uplift Resistance</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                A coating provides waterproofing—it does not provide mechanical holding power. If the underlying insulation boards or base membrane have pulled loose from the deck, re-fastening is required.
+                A coating provides waterproofing—it does not provide mechanical holding power. If insulation boards, membrane or metal panels have failed attachment, the assembly needs an engineered repair or replacement plan before any coating is considered.
               </p>
             </div>
 
@@ -224,7 +224,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">04. Building Code Limits</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Maximum Roof Layers</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Most international building codes prohibit more than two roof systems. Because coatings are classified as maintenance maintenance membranes rather than a new roof system, they do not trigger mandatory tear-offs.
+                Roof-covering layer limits and coating classifications depend on the adopted code, existing assembly, product evaluation and local authority. Do not assume a coating is exempt from code requirements. Confirm the project with the building official and applicable manufacturer documentation.
               </p>
             </div>
           </div>
