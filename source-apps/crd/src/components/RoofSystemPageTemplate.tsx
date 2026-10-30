@@ -59,6 +59,7 @@ export const RoofSystemPageTemplate: React.FC<RoofSystemPageTemplateProps> = ({
         description={data.metaDescription}
         canonicalPath={data.canonicalPath}
         serviceType={data.systemName}
+        faqItems={data.faqs}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Roof Systems', url: '/tpo-roofing' },
