@@ -640,12 +640,12 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/texas': {
-    title: 'Commercial Roofing in Northeast Texas | Texarkana, Longview, Marshall',
-    metaDescription: 'Commercial roofing, flat roof leak repair, storm damage restoration, and asset management in Northeast Texas: Texarkana, Longview, Marshall, Mount Pleasant.',
+    title: 'Commercial Roofing Across Texas | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing, flat roof leak repair, storm damage restoration, and asset management for commercial properties across Texas. Featured markets include Texarkana, Longview, Marshall, Mount Pleasant, and Paris.',
     canonicalPath: '/service-areas/texas',
-    regionName: 'Northeast Texas Territory',
-    heroHeadline: 'Commercial Roofing in Northeast Texas.',
-    heroSubtitle: 'Providing specialized commercial roof diagnostics, emergency storm response, and fluid restoration coatings across Bowie, Cass, Harrison, Gregg, and Titus counties.',
+    regionName: 'Texas',
+    heroHeadline: 'Commercial Roofing Across Texas.',
+    heroSubtitle: 'Providing commercial roof diagnostics, emergency storm response, and restoration services statewide. Featured markets include Northeast Texas communities, with project travel and availability confirmed by scope.',
     weatherAndStormFactors: 'Northeast Texas experiences extreme thermal fluctuations, reaching 100°F+ rooftop temperatures in summer and dropping below freezing in winter, causing severe membrane expansion stress. Severe convective storms frequently deliver damaging hail and high straight-line winds.',
     countiesAndCitiesServed: [
       'Texarkana (Bowie County)',
@@ -670,12 +670,12 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/arkansas': {
-    title: 'Commercial Roofing in Southwest Arkansas | Texarkana, Hope, Magnolia',
-    metaDescription: 'Commercial roofing services in Southwest Arkansas: Texarkana AR, Hope, Magnolia, Camden, and El Dorado. Inspections, leak repair, and restoration.',
+    title: 'Commercial Roofing Across Arkansas | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing services across Arkansas. Featured markets include Texarkana, Hope, Magnolia, Camden, and El Dorado. Inspections, leak repair, and restoration.',
     canonicalPath: '/service-areas/arkansas',
-    regionName: 'Southwest Arkansas Territory',
-    heroHeadline: 'Commercial Roofing in Southwest Arkansas.',
-    heroSubtitle: 'Serving commercial property managers, school districts, and industrial facilities throughout Miller, Hempstead, Columbia, Ouachita, and Union counties.',
+    regionName: 'Arkansas',
+    heroHeadline: 'Commercial Roofing Across Arkansas.',
+    heroSubtitle: 'Serving commercial property managers, school districts, and industrial facilities statewide, with featured markets in southern Arkansas.',
     weatherAndStormFactors: 'Heavy rainfall and severe southern thunderstorm systems bring sudden high-volume water accumulation. Commercial roofs require meticulously maintained internal drains, clear scuppers, and positive tapered drainage.',
     countiesAndCitiesServed: [
       'Texarkana (Miller County)',
@@ -700,12 +700,12 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/louisiana': {
-    title: 'Commercial Roofing in Northwest Louisiana | Shreveport & Bossier City',
-    metaDescription: 'Commercial roofing contractors serving Northwest Louisiana: Shreveport, Bossier City, and Minden. Flat roof repairs, restoration coatings, and inspections.',
+    title: 'Commercial Roofing Across Louisiana | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing contractors serving Louisiana. Featured markets include Shreveport, Bossier City, and Minden. Flat roof repairs, restoration coatings, and inspections.',
     canonicalPath: '/service-areas/louisiana',
-    regionName: 'Northwest Louisiana Territory',
-    heroHeadline: 'Commercial Roofing in Northwest Louisiana.',
-    heroSubtitle: 'Commercial roof engineering, leak mitigation, and capital asset management across Caddo, Bossier, and Webster parishes.',
+    regionName: 'Louisiana',
+    heroHeadline: 'Commercial Roofing Across Louisiana.',
+    heroSubtitle: 'Commercial roof engineering, leak mitigation, and capital asset management for commercial properties statewide, with featured markets in Northwest Louisiana.',
     weatherAndStormFactors: 'Subtropical humidity and frequent high-intensity precipitation patterns place severe hydrostatic pressure on commercial roof penetrations, curb flashings, and internal building drains.',
     countiesAndCitiesServed: [
       'Shreveport (Caddo Parish)',
@@ -727,12 +727,12 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/oklahoma': {
-    title: 'Commercial Roofing in Southeast Oklahoma | Idabel & Broken Bow',
-    metaDescription: 'Commercial roofing in Southeast Oklahoma: Idabel, Broken Bow, and McCurtain County. Low-slope flat roofs, metal roof restoration, and storm repairs.',
+    title: 'Commercial Roofing Across Oklahoma | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing in Oklahoma. Featured markets include Idabel, Broken Bow, and communities across the state. Low-slope flat roofs, metal roof restoration, and storm repairs.',
     canonicalPath: '/service-areas/oklahoma',
-    regionName: 'Southeast Oklahoma Territory',
-    heroHeadline: 'Commercial Roofing in Southeast Oklahoma.',
-    heroSubtitle: 'Commercial roof inspections, emergency storm triage, and long-term asset management for facilities in McCurtain County and surrounding areas.',
+    regionName: 'Oklahoma',
+    heroHeadline: 'Commercial Roofing Across Oklahoma.',
+    heroSubtitle: 'Commercial roof inspections, emergency storm triage, and long-term asset management for facilities statewide, with featured markets in Southeast Oklahoma.',
     weatherAndStormFactors: 'Located in the transition corridor of severe Great Plains wind and hail weather, commercial roofs in Southeast Oklahoma endure severe uplift pressures, hail impacts, and heavy seasonal precipitation.',
     countiesAndCitiesServed: [
       'Idabel (McCurtain County)',
