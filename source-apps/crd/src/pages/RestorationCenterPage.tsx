@@ -31,7 +31,7 @@ export const RestorationCenterPage: React.FC<RestorationCenterPageProps> = ({ on
   <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd">
     <SeoMeta
       title="Commercial Roof Restoration & Coatings | Metal, EPDM, TPO & More"
-      description="Explore commercial roof restoration and coating options for metal, EPDM, TPO, PVC, modified bitumen, BUR and spray foam roofs. Commercial Roof Doctors serves the Ark-La-Tex region."
+      description="Explore commercial roof restoration and coating options for metal, EPDM, TPO, PVC, modified bitumen, BUR and spray foam roofs. Commercial Roof Doctors serves commercial properties across Texas, Arkansas, Louisiana, and Oklahoma."
       canonicalPath="/commercial-roof-restoration"
       serviceType="Commercial roof restoration and fluid-applied roof coating evaluation"
       breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Commercial Roof Restoration & Coatings', url: '/commercial-roof-restoration' }]}
@@ -42,7 +42,7 @@ export const RestorationCenterPage: React.FC<RestorationCenterPageProps> = ({ on
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/25" />
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
         <div className="max-w-3xl space-y-6">
-          <div className="text-xs font-mono-crd uppercase tracking-[0.2em] text-[#e0a52b]">Commercial Roof Doctors · Ark-La-Tex</div>
+          <div className="text-xs font-mono-crd uppercase tracking-[0.2em] text-[#e0a52b]">Commercial Roof Doctors · TX · AR · LA · OK</div>
           <h1 className="text-4xl sm:text-6xl font-heading font-black leading-tight">Restore the Roof.<br/><span className="text-[#e0a52b]">Protect the Asset.</span></h1>
           <p className="text-lg sm:text-xl text-white/85 leading-relaxed">A complete guide to commercial roof restoration and fluid-applied coating systems. Explore options for metal, EPDM, TPO, PVC, modified bitumen, built-up and spray foam roofs before committing to replacement.</p>
           <div className="flex flex-wrap gap-3 pt-2">
