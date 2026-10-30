@@ -109,6 +109,11 @@ export const Footer: React.FC = () => {
                   Coat vs. Replace Guide
                 </Link>
               </li>
+              <li>
+                <Link to="/resources" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Roof Coating Resources
+                </Link>
+              </li>
             </ul>
           </div>
 
