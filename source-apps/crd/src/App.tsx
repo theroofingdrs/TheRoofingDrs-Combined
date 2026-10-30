@@ -13,6 +13,7 @@ import { CalculatorPage } from './pages/CalculatorPage';
 import { CrdPppPage } from './pages/CrdPppPage';
 import { PropertyManagementPage } from './pages/PropertyManagementPage';
 import { CoatVsReplacePage } from './pages/CoatVsReplacePage';
+import { RestorationCenterPage } from './pages/RestorationCenterPage';
 import { StormDamagePage } from './pages/StormDamagePage';
 import { InsuranceClaimsPage } from './pages/InsuranceClaimsPage';
 import { EmergencyRoofingPage } from './pages/EmergencyRoofingPage';
@@ -88,6 +89,10 @@ const MainAppContent: React.FC = () => {
           onOpenEmergency={handleOpenEmergency}
         />
       );
+    }
+
+    if (normalizedPath === '/commercial-roof-restoration') {
+      return <RestorationCenterPage onOpenInspection={handleOpenInspection} />;
     }
 
     if (normalizedPath === '/coat-vs-replace') {
