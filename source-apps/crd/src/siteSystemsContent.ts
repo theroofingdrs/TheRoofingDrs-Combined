@@ -891,3 +891,245 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
   },
 };
+
+
+export const COATING_ARTICLES_CONTENT = {
+  '/resources': {
+    title: 'Commercial Roof Coating Resources | CRD',
+    metaDescription: 'Practical commercial roof coating and metal roof restoration guides for property owners, facility managers and commercial real estate teams.',
+    canonicalPath: '/resources',
+    eyebrow: 'Commercial Roof Coating Resources',
+    headline: 'Commercial Roof Coating Guides for Property Owners.',
+    intro: 'Choosing a roof coating is a building-asset decision, not simply a product purchase. These guides explain how to evaluate an existing roof, compare coating chemistries and identify the conditions that make restoration appropriate.',
+    sections: [
+      {
+        heading: 'Start With the Existing Roof Condition',
+        paragraphs: [
+          'A coating system can only perform as intended when the existing roof assembly is suitable for restoration. Moisture, substrate condition, corrosion, drainage, seams and previous coatings all affect the recommendation.',
+          'Commercial Roof Doctors evaluates the roof before recommending a coating, localized repair or replacement. The goal is to match the scope to the physical condition of the building roof.',
+        ],
+      },
+      {
+        heading: 'Understand the Coating Chemistry',
+        paragraphs: [
+          'Silicone, acrylic and polyurethane products have different performance characteristics and installation requirements. No chemistry is best for every roof. Product selection must account for the existing substrate, drainage, exposure, foot traffic and manufacturer specifications.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Can every commercial roof be coated?', answer: 'No. Widespread trapped moisture, structural deterioration, perforated metal panels or an incompatible substrate can make restoration inappropriate. An inspection is needed before a coating is specified.' },
+      { question: 'Does a roof coating eliminate the need for maintenance?', answer: 'No. Commercial roofs still need drainage maintenance, periodic inspections and compatible repairs after restoration.' },
+    ],
+    relatedLinks: [
+      { name: 'Metal Roof Restoration Guide', href: '/resources/metal-roof-restoration-guide' },
+      { name: 'Silicone vs. Acrylic Coatings', href: '/resources/silicone-vs-acrylic-roof-coatings' },
+      { name: 'Roof Coating Inspection Checklist', href: '/resources/commercial-roof-coating-inspection-checklist' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
+    ],
+  },
+
+  '/resources/metal-roof-restoration-guide': {
+    title: 'Metal Roof Restoration Guide for Commercial Buildings | CRD',
+    metaDescription: 'Learn how commercial metal roof restoration addresses rust, failed fasteners, open seams and flashing details, and when a coating is not the right solution.',
+    canonicalPath: '/resources/metal-roof-restoration-guide',
+    eyebrow: 'Commercial Metal Roof Restoration Guide',
+    headline: 'How to Restore an Aging Commercial Metal Roof.',
+    intro: 'A rusting or leaking commercial metal roof does not automatically need full replacement. But coating over the visible surface without correcting the underlying problems can waste money. A sound restoration plan begins with the panels, fasteners, seams and supporting assembly.',
+    sections: [
+      {
+        heading: '1. Determine Whether the Metal Is Still Serviceable',
+        paragraphs: [
+          'The first question is whether corrosion is limited to the surface or has caused significant metal loss. Surface oxidation may be manageable with proper preparation and a compatible primer. Perforated panels, severe section loss or compromised attachment details require repair or replacement rather than a coating alone.',
+          'The inspection should also consider the supporting deck, insulation, panel movement, roof drainage and the history of previous repairs or coatings.',
+        ],
+      },
+      {
+        heading: '2. Correct Fastener and Washer Problems',
+        paragraphs: [
+          'Exposed-fastener metal roofs can develop leaks when screws back out, washers deteriorate or holes become enlarged. Those defects need to be evaluated and corrected with compatible fasteners and repair details before the field coating is applied.',
+          'Simply covering a failed screw head does not restore the original attachment or correct a damaged penetration.',
+        ],
+      },
+      {
+        heading: '3. Prepare Rusted Areas and Existing Coatings',
+        paragraphs: [
+          'Loose corrosion, dirt, chalking and failed coatings can prevent reliable adhesion. Surface preparation must follow the selected manufacturer’s instructions. Where specified, a compatible rust-inhibitive primer may be part of the system.',
+          'The roof should not be coated over contamination or active corrosion that has not been properly prepared. The selected primer and coating must be compatible with the prepared metal and any existing finish.',
+        ],
+      },
+      {
+        heading: '4. Repair Seams, Laps and Flashing Details',
+        paragraphs: [
+          'Horizontal panel laps, ridge caps, rake edges, curbs, penetrations and transitions are common water-entry points. These details often require individual sealant work or reinforcement before the main coating is applied.',
+          'The repair method depends on the roof profile, panel movement, existing materials and the coating system specifications.',
+        ],
+      },
+      {
+        heading: '5. Select the Coating System for the Actual Roof',
+        paragraphs: [
+          'Silicone, acrylic and polyurethane systems are not interchangeable. Drainage, ponding, UV exposure, service traffic, substrate compatibility and application conditions all matter. The contractor should identify the exact product system and follow its published preparation, coverage and dry-film-thickness requirements.',
+          'A complete proposal should identify the preparation work, fastener and seam repairs, coating products, application requirements, quality checks and any manufacturer warranty terms that actually apply to the project.',
+        ],
+      },
+      {
+        heading: 'When Replacement Is the Better Decision',
+        paragraphs: [
+          'Restoration is not appropriate for every metal roof. Widespread perforation, severe corrosion, structural deck damage or compromised panel attachment may require replacement. A coating should never be presented as a structural repair or as a way to conceal an unsound roof assembly.',
+        ],
+        bullets: [
+          'Panels have widespread holes or significant section loss.',
+          'The deck or supporting assembly has structural deterioration.',
+          'Moisture or insulation problems cannot be corrected within a restoration scope.',
+          'The existing surface cannot achieve reliable adhesion with an approved system.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Can you coat a commercial metal roof that has rust?', answer: 'Sometimes. The depth and spread of corrosion matter. Loose rust must be prepared, compromised fasteners and seams corrected, and perforated or structurally unsound panels repaired or replaced before coating is considered.' },
+      { question: 'Will a roof coating stop leaks around screws?', answer: 'Not by itself. Failed fasteners, washers and enlarged holes must be evaluated and repaired with compatible components and details before the coating system is applied.' },
+      { question: 'How do I know whether restoration is better than replacement?', answer: 'A documented inspection should evaluate panel condition, corrosion, fasteners, seams, moisture, deck condition, drainage and coating compatibility. The recommendation should be based on those findings, not on a predetermined product.' },
+    ],
+    relatedLinks: [
+      { name: 'Commercial Metal Roof Restoration', href: '/metal-roof-restoration' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Silicone vs. Acrylic Coatings', href: '/resources/silicone-vs-acrylic-roof-coatings' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+    ],
+  },
+
+  '/resources/silicone-vs-acrylic-roof-coatings': {
+    title: 'Silicone vs. Acrylic Commercial Roof Coatings | CRD',
+    metaDescription: 'Compare silicone and acrylic commercial roof coatings, including ponding water, drainage, application conditions, substrate compatibility and maintenance.',
+    canonicalPath: '/resources/silicone-vs-acrylic-roof-coatings',
+    eyebrow: 'Commercial Roof Coating Comparison',
+    headline: 'Silicone vs. Acrylic: Which Roof Coating Fits the Building?',
+    intro: 'Silicone and acrylic are common commercial roof coating chemistries, but they are designed for different conditions. The right choice depends on the existing roof, drainage, moisture, exposure, preparation and the manufacturer’s requirements.',
+    sections: [
+      {
+        heading: 'Silicone Coatings and Ponding Water',
+        paragraphs: [
+          'Many silicone formulations are designed to tolerate prolonged water exposure better than many acrylic systems. That can make silicone worth evaluating on some low-slope roofs where ponding is a concern. The exact product must still be approved for the roof conditions, and drainage defects should be corrected where practical.',
+          'Silicone is not a universal solution. Surface preparation, primer selection, existing coating compatibility, application thickness and maintenance remain important. Cured silicone surfaces also generally require compatible materials for future repairs and recoating.',
+        ],
+      },
+      {
+        heading: 'Acrylic Coatings and Positive Drainage',
+        paragraphs: [
+          'Acrylic coatings are commonly considered for roofs with positive drainage. Many acrylic products are not intended for prolonged ponding water, so roof slope, drains, scuppers and recurring water accumulation should be evaluated before selection.',
+          'Application and curing conditions matter. Rain, dew, temperature and humidity must meet the product instructions so the coating can form the intended film.',
+        ],
+      },
+      {
+        heading: 'Do Not Choose by Chemistry Alone',
+        paragraphs: [
+          'The existing roof substrate, previous coatings, surface condition, foot traffic, rooftop equipment and local exposure all affect system selection. Some projects may require primers, reinforcement materials or a multi-layer system. Other roofs may not be suitable for coating at all.',
+          'Reflectivity, warranty terms and expected performance should be tied to the actual manufacturer product data and project specification. Avoid relying on generic percentages or a fixed service-life promise that is not supported by the selected system.',
+        ],
+        bullets: [
+          'Confirm the existing roof material and previous coating history.',
+          'Evaluate moisture, drainage and surface adhesion.',
+          'Identify seams, fasteners, flashings and penetrations that need repair.',
+          'Verify primer, coating compatibility, application rate and dry-film thickness.',
+          'Review the actual warranty terms and maintenance requirements.',
+        ],
+      },
+      {
+        heading: 'Where Polyurethane May Fit',
+        paragraphs: [
+          'Polyurethane products may be used in selected systems where abrasion or mechanical wear is a design concern. Different formulations serve different roles, and some systems use an aliphatic top coat for improved UV weathering characteristics. Polyurethane should be specified as part of a complete system rather than treated as a universal substitute for silicone or acrylic.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Is silicone always better than acrylic?', answer: 'No. Silicone is often considered where prolonged water exposure is a concern, while acrylic is generally better suited to positive drainage. The selected product and actual roof conditions determine the appropriate system.' },
+      { question: 'Can acrylic coatings be used on a flat commercial roof?', answer: 'Some acrylic systems can be used on low-slope roofs, but many are not designed for prolonged ponding water. Drainage and product approval must be checked first.' },
+      { question: 'Can silicone or acrylic be applied over TPO or EPDM?', answer: 'Some products may be approved for specific membrane substrates when the required cleaning, primer and adhesion testing are completed. Compatibility should never be assumed.' },
+    ],
+    relatedLinks: [
+      { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings' },
+      { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings' },
+      { name: 'Polyurethane Roof Coatings', href: '/polyurethane-roof-coatings' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+    ],
+  },
+
+  '/resources/commercial-roof-coating-inspection-checklist': {
+    title: 'Commercial Roof Coating Inspection Checklist | CRD',
+    metaDescription: 'Use this commercial roof coating inspection checklist to review moisture, substrate condition, rust, seams, drainage, adhesion, coating specifications and warranty terms.',
+    canonicalPath: '/resources/commercial-roof-coating-inspection-checklist',
+    eyebrow: 'Commercial Roof Coating Inspection Checklist',
+    headline: 'What Should Be Inspected Before a Commercial Roof Is Coated?',
+    intro: 'Before approving a commercial roof coating proposal, property owners and facility managers should understand what is being evaluated and what preparation is included. A coating is only as reliable as the roof assembly beneath it and the work completed before application.',
+    sections: [
+      {
+        heading: '1. Existing Roof Assembly and Moisture',
+        paragraphs: [
+          'The inspection should identify the existing roof material, approximate age where known, previous repairs or coatings, and the condition of the underlying assembly. Moisture in insulation and concealed deterioration can make a roof unsuitable for restoration.',
+        ],
+        bullets: [
+          'Document the roof system and previous coating history.',
+          'Evaluate moisture and insulation condition using appropriate methods.',
+          'Inspect the deck and supporting assembly for visible deterioration.',
+        ],
+      },
+      {
+        heading: '2. Surface Condition and Adhesion',
+        paragraphs: [
+          'The roof surface must be suitable for the proposed coating. Dirt, oils, chalking, oxidation, loose rust and failed existing coatings can interfere with adhesion. The contractor should explain the preparation method and any required adhesion testing.',
+        ],
+        bullets: [
+          'Identify rust, corrosion, chalking and loose material.',
+          'Specify cleaning and surface preparation methods.',
+          'Confirm primer and coating compatibility with the existing substrate.',
+        ],
+      },
+      {
+        heading: '3. Seams, Fasteners, Flashings and Penetrations',
+        paragraphs: [
+          'The field of the roof is only one part of the system. Metal laps, fasteners, washers, curbs, penetrations, edge details and flashing transitions may need individual repair or reinforcement before coating.',
+        ],
+        bullets: [
+          'Inspect metal panel seams, laps, fasteners and washers.',
+          'Review penetrations, curbs, HVAC supports and flashing transitions.',
+          'Identify damaged panels, membrane seams or details that require repair.',
+        ],
+      },
+      {
+        heading: '4. Drainage and Ponding',
+        paragraphs: [
+          'The proposal should address roof slope, drains, scuppers, gutters and recurring ponding. The coating chemistry must be approved for the actual water exposure. A coating should not be used to hide a drainage problem that remains unresolved.',
+        ],
+      },
+      {
+        heading: '5. Coating Specification and Quality Control',
+        paragraphs: [
+          'A complete proposal should identify the manufacturer and product system, preparation, primer, reinforcement, application rate and required dry-film thickness. It should also explain how installation quality will be checked and documented.',
+        ],
+        bullets: [
+          'Confirm product names and manufacturer data sheets.',
+          'Specify application coverage and dry-film thickness.',
+          'Identify inspection and quality-control checkpoints.',
+          'Review warranty eligibility, exclusions and maintenance requirements.',
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before Signing',
+        paragraphs: [
+          'Ask the contractor to explain why the roof qualifies for restoration, which conditions could make replacement necessary, and how each existing defect will be corrected. A good proposal should make the preparation and repair scope as clear as the coating product itself.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Should a moisture survey be performed before every roof coating?', answer: 'The appropriate moisture evaluation depends on the roof assembly and visible conditions. The contractor should explain how concealed moisture and insulation condition will be assessed before recommending restoration.' },
+      { question: 'Should the proposal identify the exact coating product?', answer: 'Yes. The proposal should identify the manufacturer and products, preparation, primer, reinforcement, application requirements and applicable warranty terms.' },
+      { question: 'Is a coating proposal complete if it only lists the number of gallons?', answer: 'No. It should also document the roof condition, preparation, repairs, compatibility, specified application rate or dry-film thickness, quality checks and warranty requirements.' },
+    ],
+    relatedLinks: [
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Inspections', href: '/commercial-roof-inspections' },
+    ],
+  },
+};
