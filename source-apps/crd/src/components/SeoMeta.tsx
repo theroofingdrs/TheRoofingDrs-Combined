@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { BUSINESS_INFO } from '../constants';
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 interface BreadcrumbItem {
   name: string;
   url: string;
@@ -12,6 +17,7 @@ interface SeoMetaProps {
   canonicalPath?: string;
   breadcrumbs?: BreadcrumbItem[];
   serviceType?: string;
+  faqItems?: FaqItem[];
 }
 
 export const SeoMeta: React.FC<SeoMetaProps> = ({
@@ -20,6 +26,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
   canonicalPath = '',
   breadcrumbs,
   serviceType,
+  faqItems,
 }) => {
   useEffect(() => {
     const normalizedCanonicalPath = canonicalPath || '/';
@@ -120,6 +127,27 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
       document.head.appendChild(scriptBreadcrumb);
     }
 
+    // Structured Data: FAQPage. Only include questions and answers rendered on this page.
+    if (faqItems && faqItems.length > 0) {
+      const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      };
+      const scriptFaq = document.createElement('script');
+      scriptFaq.type = 'application/ld+json';
+      scriptFaq.setAttribute('data-crd-seo', 'true');
+      scriptFaq.textContent = JSON.stringify(faqSchema);
+      document.head.appendChild(scriptFaq);
+    }
+
     // Structured Data: Service
     if (serviceType) {
       const serviceSchema = {
@@ -141,7 +169,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
       scriptService.textContent = JSON.stringify(serviceSchema);
       document.head.appendChild(scriptService);
     }
-  }, [title, description, canonicalPath, breadcrumbs, serviceType]);
+  }, [title, description, canonicalPath, breadcrumbs, serviceType, faqItems]);
 
   return null;
 };
