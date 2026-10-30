@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, ClipboardCheck, Layers, Leaf, Sun, ShieldCheck, Camera, FileText } from 'lucide-react';
+import { ArrowRight, Layers, Leaf, Sun } from 'lucide-react';
 import { SeoMeta } from '../components/SeoMeta';
 import { Link } from '../router';
 import { BUSINESS_INFO } from '../constants';
