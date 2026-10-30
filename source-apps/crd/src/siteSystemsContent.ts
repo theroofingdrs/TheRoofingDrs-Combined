@@ -4456,6 +4456,94 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/monroe'
         }
     ]
+},
+  '/service-areas/shreveport': {
+    title: 'Commercial Roof Coatings in Shreveport, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Shreveport, Louisiana. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/shreveport',
+    regionName: 'Shreveport, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Shreveport, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Shreveport for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Shreveport commercial roofs experience humid heat, heavy rainfall, hail and severe thunderstorms. Industrial and healthcare facilities need documented evaluations of roof drainage, metal corrosion, seams, fasteners and rooftop penetrations.',
+    countiesAndCitiesServed: [
+        'Shreveport, Caddo Parish',
+        'Caddo Parish commercial and industrial corridors',
+        'Nearby Northwest Louisiana commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Energy, industrial and manufacturing facilities',
+        'Warehousing and distribution properties',
+        'Retail, hospitality and office buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Bossier City',
+            href: '/service-areas/bossier-city'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Minden',
+            href: '/service-areas/minden'
+        }
+    ]
+},
+  '/service-areas/bossier-city': {
+    title: 'Commercial Roof Coatings in Bossier City, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Bossier City, Louisiana. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/bossier-city',
+    regionName: 'Bossier City, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Bossier City, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bossier City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Bossier City roofs face humid summers, heavy rainfall, hail and strong storm winds. Hospitality and commercial properties benefit from planned inspections of drainage, seams, penetrations, metal fasteners and coating condition.',
+    countiesAndCitiesServed: [
+        'Bossier City, Bossier Parish',
+        'Bossier Parish commercial and industrial corridors',
+        'Nearby Northwest Louisiana commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Hospitality, casino and entertainment properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Industrial and distribution properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Bossier City',
+            href: '/service-areas/bossier-city'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Minden',
+            href: '/service-areas/minden'
+        }
+    ]
 }
 };
 
