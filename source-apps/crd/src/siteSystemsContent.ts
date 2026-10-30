@@ -2239,7 +2239,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/pine-bluff'
         }
     ]
-},,
+},
   '/service-areas/greenville': {
     title: 'Commercial Roof Coatings in Greenville, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Greenville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
@@ -4997,8 +4997,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ]
 },
   '/service-areas/desoto': {
-    title: 'Commercial Roof Coatings in DeSoto, TX | CRD',    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/desoto',
+    title: 'Commercial Roof Coatings in DeSoto, TX | CRD',    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',    canonicalPath: '/service-areas/desoto',
     regionName: 'DeSoto, Texas',
     heroHeadline: 'Commercial Roof Coatings in DeSoto, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in DeSoto for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
