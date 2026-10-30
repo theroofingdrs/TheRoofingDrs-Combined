@@ -35,7 +35,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
   return (
     <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd selection:bg-[#181818] selection:text-[#f4f3ef]">
       <SeoMeta
-        title="Commercial Roofing Ark-La-Tex | Commercial Roof Doctors"
+        title="Commercial Roofing TX, AR, LA & OK | Commercial Roof Doctors"
         description="Commercial roofing, large-loss storm response, restoration coatings, and roof asset management across Texas, Arkansas, Louisiana, and Oklahoma. (903) 231-5940."
         canonicalPath="/"
       />
@@ -71,7 +71,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Territorial Marker */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-2 bg-[#111111]/85 backdrop-blur-sm border border-[#333333] text-[#d99a19] text-xs font-mono-crd tracking-wider uppercase">
               <span className="w-2 h-2 rounded-full bg-[#d99a19] shrink-0 animate-pulse" />
-              <span>Ark-La-Tex Commercial Specialist • Field Operations Hub</span>
+              <span>Texas • Arkansas • Louisiana • Oklahoma • Commercial Roofing</span>
             </div>
 
             {/* Hero Main Copy */}
@@ -175,13 +175,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Block 4 */}
             <div className="pt-4 sm:pt-0 sm:pl-6">
               <div className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#181818] tracking-tight leading-none uppercase">
-                Ark-La-Tex
+                Four-State Service Area
               </div>
               <div className="text-xs uppercase tracking-wider font-heading font-bold text-[#181818] mt-2">
                 Regional Commercial Coverage
               </div>
               <p className="text-xs text-[#666666] mt-1 leading-relaxed">
-                Field-deployed within ~75 miles of Texarkana across TX, AR, LA, and OK, with extended travel for large projects.
+                Commercial project coverage across Texas, Arkansas, Louisiana, and Oklahoma, coordinated from our Texarkana operations hub.
               </p>
             </div>
           </div>
