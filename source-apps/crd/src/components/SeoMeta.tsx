@@ -31,7 +31,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
   useEffect(() => {
     const toCommercialUrl = (path: string) => {
       const normalizedPath = path || '/';
-      const prefixedPath = normalizedPath.startsWith('/commercial')
+      const prefixedPath = (normalizedPath === '/commercial' || normalizedPath.startsWith('/commercial/'))
         ? normalizedPath
         : `/commercial${normalizedPath === '/' ? '/' : normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`}`;
       return `${window.location.origin}${prefixedPath}`;
