@@ -24,7 +24,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <div className={`inline-flex flex-col select-none ${className}`}>
       <img
-        src="/the_roof_doctors_logo_transparent.png"
+        src="/the_roof_doctors_logo.svg"
         alt="The Roof Doctors"
         className={`${logoSizes[size]} w-auto object-contain shrink-0 ${
           isLight ? 'brightness-0 invert' : ''
