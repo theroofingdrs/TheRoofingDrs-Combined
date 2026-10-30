@@ -63,7 +63,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="pt-2">
               <CRDLogo
                 variant="full"
-                theme="light"
+                theme="dark"
                 className="h-12 sm:h-14 lg:h-16 w-auto max-h-[64px] max-w-[260px] object-contain"
               />
             </div>
