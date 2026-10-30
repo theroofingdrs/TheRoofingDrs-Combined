@@ -600,11 +600,11 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
 export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas': {
     title: 'Commercial Roofing Service Areas | Ark-La-Tex Regional Footprint',
-    metaDescription: 'Commercial Roof Doctors operates across a 75-mile regional radius of Texarkana, serving commercial properties in Texas, Arkansas, Louisiana, and Oklahoma.',
+    metaDescription: 'Commercial Roof Doctors serves commercial properties statewide across Texas, Arkansas, Louisiana, and Oklahoma, coordinated from its Texarkana operations hub.',
     canonicalPath: '/service-areas',
-    regionName: 'Ark-La-Tex & Surrounding 75-Mile Region',
-    heroHeadline: 'Ark-La-Tex Commercial Roofing Territory.',
-    heroSubtitle: 'Centrally dispatched from Texarkana, Commercial Roof Doctors provides direct on-site commercial roofing, restoration, and storm disaster response across four states.',
+    regionName: 'Texas, Arkansas, Louisiana & Oklahoma',
+    heroHeadline: 'Commercial Roofing Across Four States.',
+    heroSubtitle: 'Coordinated from Texarkana, Commercial Roof Doctors provides commercial roofing, restoration, and storm response for properties across Texas, Arkansas, Louisiana, and Oklahoma. Project scope, scheduling, and travel are confirmed during consultation.',
     weatherAndStormFactors: 'The Ark-La-Tex region sits at the intersection of humid subtropical Gulf air and severe Great Plains frontal boundaries. This dynamic climate triggers intense supercell thunderstorms, 2-inch hail outbreaks, convective straight-line wind events exceeding 80 mph, and severe summer UV thermal cycling.',
     countiesAndCitiesServed: [
       'Texarkana, TX & AR',
@@ -631,10 +631,10 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Multifamily housing communities and distribution warehouses',
     ],
     serviceCapabilities: [
-      'Emergency roof leak dry-in and storm response within 2–4 hours',
+      'Emergency roof leak mitigation and storm response, subject to location, conditions, and crew availability',
       'Complete forensic commercial roof inspections with drone and infrared cameras',
       'Commercial fluid silicone and acrylic restoration coatings',
-      'Full tear-off and engineered replacement with 20-year NDL warranties',
+      'Full tear-off and engineered replacement with applicable manufacturer-backed warranty options',
       'Carrier-compliant Xactimate storm claim documentation and adjuster walk-throughs',
     ],
   },
