@@ -548,76 +548,156 @@ app.post('/api/leads', async (req: Request, res: Response) => {
     const resendKey = process.env.RESEND_API_KEY?.trim();
     const fromAddress = process.env.RESEND_FROM_EMAIL || 'Commercial Roof Doctors <notifications@theroofingdrs.com>';
     const recipient = 'TheRoofingDrs@gmail.com';
-    const fullName = `${fName} ${lName}`.trim() || name || 'Commercial inquiry';
-    const propertyLocation = address || propertyAddress || 'Not provided';
-    const details = [
-      'COMMERCIAL ROOF DOCTORS | NEW COMMERCIAL LEAD',
-      '',
-      `Name: ${fullName}`,
-      `Company / Property Entity: ${newOrg.companyName}`,
-      `Phone: ${phone || 'Not provided'}`,
-      `Email: ${email || 'Not provided'}`,
-      `Property: ${propertyLocation}`,
-      `City: ${city || 'Texarkana Region'}`,
-      `Property Type: ${propertyType || 'Commercial'}`,
-      `Inquiry: ${leadType || 'Inspection'}`,
-      `Priority: ${priority || 'Normal'}`,
-      `Emergency: ${Boolean(emergencyType || leadType === 'Emergency')}`,
-      `Details: ${message || notes || 'None provided'}`,
-      `Lead ID: ${leadId}`,
-      `Source: ${source || 'Website Lead Form'}`,
-      '',
+    const fullName = (fName + ' ' + lName).trim() || name || 'Commercial inquiry';
+    const propertyLocation = [address || propertyAddress, city, state, zip].filter(Boolean).join(', ') || 'Not provided';
+    const escapeEmailHtml = (value: unknown) => String(value ?? '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    const valueText = (value: unknown, fallback = 'Not provided') =>
+      value === undefined || value === null || value === '' ? fallback : String(value);
+    const row = (label: string, value: unknown) => value === undefined || value === null || value === ''
+      ? ''
+      : '<tr><td style="padding:9px 10px;border-bottom:1px solid #e8e8e8;color:#686868;width:38%;vertical-align:top;">' + escapeEmailHtml(label) + '</td><td style="padding:9px 10px;border-bottom:1px solid #e8e8e8;color:#222;font-weight:600;vertical-align:top;">' + escapeEmailHtml(value) + '</td></tr>';
+    const section = (title: string, rows: string) => rows
+      ? '<div style="margin:18px 0;border:1px solid #e5e5e5;border-radius:8px;overflow:hidden;"><div style="padding:11px 14px;background:#f4f4f2;color:#242424;font-size:12px;font-weight:800;letter-spacing:1px;">' + escapeEmailHtml(title) + '</div><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;font-size:13px;">' + rows + '</table></div>'
+      : '';
+    const logoPath = path.join(process.cwd(), 'dist', 'assets', 'crd-logo-full-light.png');
+    const logoExists = fs.existsSync(logoPath);
+    const logoAttachment = logoExists ? {
+      filename: 'commercial-roof-doctors-logo.png',
+      content: fs.readFileSync(logoPath).toString('base64'),
+      content_type: 'image/png',
+      content_id: 'crd-logo',
+    } : null;
+    if (!logoExists) console.warn('[CRD Email] Official CRD logo asset not found in dist/assets; using text brand header.');
+    const logoMarkup = logoAttachment
+      ? '<img src="cid:crd-logo" alt="Commercial Roof Doctors" width="245" style="display:block;width:245px;max-width:100%;height:auto;border:0;">'
+      : '<div style="font-size:22px;font-weight:800;color:#ffffff;">COMMERCIAL ROOF DOCTORS</div>';
+    const emailShell = (title: string, body: string) =>
+      '<!doctype html><html><body style="margin:0;padding:24px 12px;background:#f2f2ef;font-family:Arial,Helvetica,sans-serif;color:#252525;"><div style="max-width:640px;margin:0 auto;background:#fff;border:1px solid #deded9;border-radius:10px;overflow:hidden;"><div style="padding:22px 26px;background:#191919;border-bottom:4px solid #e87524;">' + logoMarkup + '<div style="margin-top:15px;color:#fff;font-size:19px;font-weight:700;">' + escapeEmailHtml(title) + '</div></div><div style="padding:24px 26px;">' + body + '</div><div style="padding:18px 26px;background:#f3f3f0;border-top:1px solid #e2e2de;text-align:center;color:#666;font-size:12px;line-height:1.7;"><strong style="color:#292929;">Commercial Roof Doctors</strong><br><a href="tel:9032315940" style="color:#c65d18;text-decoration:none;font-weight:700;">903-231-5940</a> | <a href="mailto:TheRoofingDrs@gmail.com" style="color:#c65d18;text-decoration:none;">TheRoofingDrs@gmail.com</a></div></div></body></html>';
+
+    const contactRows = [
+      row('Contact name', fullName), row('Company / property entity', newOrg.companyName),
+      row('Role', role), row('Phone', phone), row('Email', email),
+    ].join('');
+    const propertyRows = [
+      row('Property name', propertyName || newProperty.propertyName), row('Address', propertyLocation),
+      row('Property type', propertyType || newProperty.propertyType),
+      row('Approximate roof area', approximateRoofArea), row('Roof system', roofSystem || newProperty.roofSystem),
+    ].join('');
+    const projectRows = [
+      row('Inquiry type', leadType || 'Inspection'), row('Priority', priority || 'Normal'),
+      row('Project details', message || notes),
+    ].join('');
+    const stormRows = [
+      row('Storm date', stormDate), row('Damage type', stormDamageType), row('Existing claim', existingClaim),
+      row('Claim number', claimNumber), row('Insurance carrier', carrier), row('Adjuster assigned', adjusterAssigned),
+      row('Adjuster inspection scheduled', adjusterInspectionScheduled), row('CRD representation requested', needCrdPresent),
+    ].join('');
+    const emergencyRows = [
+      row('Emergency type', emergencyType), row('Water entering building', waterEnteringBuilding),
+      row('Building occupied', buildingOccupied),
+    ].join('');
+    const additionalRows = [
+      row('Lead source', source || 'Website Lead Form'), row('Lead ID', leadId),
+      row('Landing page', landingPage), row('Referrer', referrer),
+      row('UTM source', utmSource), row('UTM medium', utmMedium),
+      row('UTM campaign', utmCampaign), row('UTM term', utmTerm), row('UTM content', utmContent),
+    ].join('');
+    const internalBody =
+      '<p style="margin:0 0 8px;color:#555;font-size:14px;line-height:1.6;">A new commercial roofing inquiry has been received and saved.</p>' +
+      section('CONTACT INFORMATION', contactRows) +
+      section('PROPERTY INFORMATION', propertyRows) +
+      section('PROJECT INFORMATION', projectRows) +
+      section('STORM AND INSURANCE INFORMATION', stormRows) +
+      section('EMERGENCY INFORMATION', emergencyRows) +
+      section('ADDITIONAL DETAILS', additionalRows) +
+      '<div style="margin-top:20px;padding:14px 16px;background:#fff5ed;border-left:4px solid #e87524;border-radius:4px;font-size:13px;">Dispatch: <a href="tel:9032315940" style="color:#c65d18;font-weight:700;text-decoration:none;">903-231-5940</a></div>';
+    const internalHtml = emailShell('New Commercial Lead Received', internalBody);
+    const internalText = [
+      'COMMERCIAL ROOF DOCTORS | NEW COMMERCIAL LEAD', '',
+      'CONTACT INFORMATION', 'Name: ' + fullName, 'Company / Property Entity: ' + newOrg.companyName,
+      'Role: ' + valueText(role), 'Phone: ' + valueText(phone), 'Email: ' + valueText(email), '',
+      'PROPERTY INFORMATION', 'Property: ' + (propertyName || newProperty.propertyName),
+      'Address: ' + propertyLocation, 'Property Type: ' + (propertyType || newProperty.propertyType),
+      'Approximate Roof Area: ' + valueText(approximateRoofArea),
+      'Roof System: ' + (roofSystem || newProperty.roofSystem), '',
+      'PROJECT INFORMATION', 'Inquiry Type: ' + (leadType || 'Inspection'),
+      'Priority: ' + (priority || 'Normal'), 'Details: ' + valueText(message || notes), '',
+      'STORM AND INSURANCE INFORMATION', 'Storm Date: ' + valueText(stormDate),
+      'Damage Type: ' + valueText(stormDamageType), 'Existing Claim: ' + valueText(existingClaim),
+      'Claim Number: ' + valueText(claimNumber), 'Carrier: ' + valueText(carrier),
+      'Adjuster Assigned: ' + valueText(adjusterAssigned),
+      'Adjuster Inspection Scheduled: ' + valueText(adjusterInspectionScheduled),
+      'CRD Representation Requested: ' + valueText(needCrdPresent), '',
+      'EMERGENCY INFORMATION', 'Emergency Type: ' + valueText(emergencyType),
+      'Water Entering Building: ' + valueText(waterEnteringBuilding),
+      'Building Occupied: ' + valueText(buildingOccupied), '',
+      'Lead ID: ' + leadId, 'Source: ' + (source || 'Website Lead Form'), '',
       'Dispatch: 903-231-5940',
-    ].join('\\n');
+    ].join('\n');
 
     if (!resendKey) {
       console.error('[CRD Email] RESEND_API_KEY is not configured. Lead saved; notification not sent.');
     } else {
-      const sendResendEmail = async (to: string, subject: string, textBody: string) => {
+      const sendResendEmail = async (to: string, subject: string, htmlBody: string, textBody: string) => {
         const response = await fetch('https://api.resend.com/emails', {
           method: 'POST',
-          headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ from: fromAddress, to: [to], subject, text: textBody }),
+          headers: { Authorization: 'Bearer ' + resendKey, 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            from: fromAddress, to: [to], subject, html: htmlBody, text: textBody,
+            ...(logoAttachment ? { attachments: [logoAttachment] } : {}),
+          }),
         });
         const result = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(`Resend returned ${response.status}: ${JSON.stringify(result)}`);
+        if (!response.ok) throw new Error('Resend returned ' + response.status + ': ' + JSON.stringify(result));
         return result;
       };
 
       try {
         const result = await sendResendEmail(
           recipient,
-          `COMMERCIAL ROOF LEAD — ${fullName} — ${city || 'Texarkana Region'}`,
-          details,
+          'COMMERCIAL ROOF LEAD | ' + fullName + ' | ' + (city || 'Texarkana Region'),
+          internalHtml,
+          internalText,
         );
-        console.log(`[CRD Email] Internal lead notification queued (Resend ID: ${result.id || 'accepted'}).`);
+        console.log('[CRD Email] Internal HTML lead notification queued (Resend ID: ' + (result.id || 'accepted') + ').');
       } catch (emailError) {
         console.error('[CRD Email] Internal lead notification failed; lead remains saved:', emailError);
       }
 
       if (typeof email === 'string' && email.includes('@')) {
         try {
-          const confirmation = [
-            `Hello ${fullName},`,
-            '',
-            'Thank you for contacting Commercial Roof Doctors. We have received your commercial roofing inquiry and our team will review the details.',
-            '',
-            `Inquiry: ${leadType || 'Inspection'}`,
-            `Property: ${propertyLocation}`,
-            `Company / Property Entity: ${newOrg.companyName}`,
-            '',
-            'A member of our commercial team will follow up using the contact information you provided.',
-            'For an urgent active leak, call 903-231-5940.',
-            '',
-            'Commercial Roof Doctors',
-            '903-231-5940 | TheRoofingDrs@gmail.com',
-          ].join('\\n');
+          const customerBody =
+            '<p style="margin:0 0 14px;font-size:15px;line-height:1.65;">Hello <strong>' + escapeEmailHtml(fullName) + '</strong>,</p>' +
+            '<p style="margin:0 0 18px;color:#555;font-size:14px;line-height:1.7;">Thank you for contacting Commercial Roof Doctors. We have received your commercial roofing inquiry. Our team will review the information and follow up using the contact details you provided.</p>' +
+            section('YOUR INQUIRY SUMMARY', [
+              row('Company / property entity', newOrg.companyName), row('Property', propertyName || newProperty.propertyName),
+              row('Location', propertyLocation), row('Inquiry type', leadType || 'Inspection'),
+              row('Roof system', roofSystem || newProperty.roofSystem), row('Project details', message || notes),
+            ].join('')) +
+            '<div style="margin:20px 0;padding:16px;background:#f4f4f2;border-radius:7px;"><div style="font-size:14px;font-weight:700;margin-bottom:7px;">What happens next</div><div style="font-size:13px;line-height:1.7;color:#555;">A member of our commercial team will review your request and contact you to discuss the property, your roofing needs, and appropriate next steps. If additional information is needed, we will reach out directly.</div></div>' +
+            '<div style="margin-top:18px;padding:15px;background:#fff5ed;border:1px solid #f2d3bd;border-radius:7px;text-align:center;"><div style="font-size:13px;font-weight:700;color:#68401f;">For an urgent active leak or immediate commercial roofing concern</div><div style="margin-top:7px;font-size:19px;font-weight:800;"><a href="tel:9032315940" style="color:#c65d18;text-decoration:none;">903-231-5940</a></div></div>';
+          const customerHtml = emailShell('We Have Received Your Inquiry', customerBody);
+          const customerText = [
+            'Hello ' + fullName + ',', '',
+            'Thank you for contacting Commercial Roof Doctors. We have received your commercial roofing inquiry. Our team will review the information and follow up using the contact details you provided.',
+            '', 'YOUR INQUIRY SUMMARY', 'Company / Property Entity: ' + newOrg.companyName,
+            'Property: ' + (propertyName || newProperty.propertyName), 'Location: ' + propertyLocation,
+            'Inquiry Type: ' + (leadType || 'Inspection'), 'Roof System: ' + (roofSystem || newProperty.roofSystem),
+            'Project Details: ' + valueText(message || notes), '',
+            'WHAT HAPPENS NEXT',
+            'A member of our commercial team will review your request and contact you to discuss the property, your roofing needs, and appropriate next steps.',
+            '', 'For an urgent active leak or immediate commercial roofing concern, call 903-231-5940.',
+            '', 'Commercial Roof Doctors', '903-231-5940 | TheRoofingDrs@gmail.com',
+          ].join('\n');
           const result = await sendResendEmail(
             email.trim(),
-            'Your Commercial Roofing Inquiry Has Been Received — Commercial Roof Doctors',
-            confirmation,
+            'Your Commercial Roofing Inquiry Has Been Received | Commercial Roof Doctors',
+            customerHtml,
+            customerText,
           );
-          console.log(`[CRD Email] Customer confirmation queued (Resend ID: ${result.id || 'accepted'}).`);
+          console.log('[CRD Email] Customer HTML confirmation queued (Resend ID: ' + (result.id || 'accepted') + ').');
         } catch (emailError) {
           console.error('[CRD Email] Customer confirmation failed; lead remains saved:', emailError);
         }
