@@ -51,6 +51,7 @@ export type RoofSystemType =
   | 'PVC'
   | 'Modified Bitumen'
   | 'BUR'
+  | 'SPF'
   | 'Metal'
   | 'Roof Coating'
   | 'Architectural Shingle'
