@@ -660,7 +660,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'TPO single-ply installations with extended manufacturer warranties',
     ],
   },
-}
+};
 
 export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas/dallas': {
@@ -846,4 +846,3 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
   },
 };
-;
