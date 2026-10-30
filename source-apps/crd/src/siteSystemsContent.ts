@@ -893,7 +893,9 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       { name: 'Alexandria', href: '/service-areas/alexandria' },
       { name: 'Natchitoches', href: '/service-areas/natchitoches' },
       { name: 'Pineville', href: '/service-areas/pineville-la' },
-      { name: 'Minden', href: '/service-areas/minden' }
+      { name: 'Minden', href: '/service-areas/minden' },
+      { name: 'Shreveport', href: '/service-areas/shreveport' },
+      { name: 'Bossier City', href: '/service-areas/bossier-city' }
     ],
   },
 
