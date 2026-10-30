@@ -875,7 +875,25 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       { name: 'Allen', href: '/service-areas/allen' },
       { name: 'Rowlett', href: '/service-areas/rowlett' },
       { name: 'Mansfield', href: '/service-areas/mansfield' },
-      { name: 'Grapevine', href: '/service-areas/grapevine' }
+      { name: 'Grapevine', href: '/service-areas/grapevine' },
+      { name: 'Broken Arrow', href: '/service-areas/broken-arrow' },
+      { name: 'Muskogee', href: '/service-areas/muskogee' },
+      { name: 'Owasso', href: '/service-areas/owasso' },
+      { name: 'Bartlesville', href: '/service-areas/bartlesville' },
+      { name: 'Lawton', href: '/service-areas/lawton' },
+      { name: 'Edmond', href: '/service-areas/edmond' },
+      { name: 'Norman', href: '/service-areas/norman' },
+      { name: 'Moore', href: '/service-areas/moore' },
+      { name: 'Midwest City', href: '/service-areas/midwest-city' },
+      { name: 'Shawnee', href: '/service-areas/shawnee' },
+      { name: 'Yukon', href: '/service-areas/yukon' },
+      { name: 'Monroe', href: '/service-areas/monroe' },
+      { name: 'West Monroe', href: '/service-areas/west-monroe' },
+      { name: 'Ruston', href: '/service-areas/ruston' },
+      { name: 'Alexandria', href: '/service-areas/alexandria' },
+      { name: 'Natchitoches', href: '/service-areas/natchitoches' },
+      { name: 'Pineville', href: '/service-areas/pineville-la' },
+      { name: 'Minden', href: '/service-areas/minden' }
     ],
   },
 
@@ -1043,6 +1061,17 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Silicone and acrylic coating system assessments',
       'Documented inspections and portfolio roof condition reviews',
     ],
+    cityLinks: [
+      { name: 'Shreveport', href: '/service-areas/shreveport' },
+      { name: 'Bossier City', href: '/service-areas/bossier-city' },
+      { name: 'Monroe', href: '/service-areas/monroe' },
+      { name: 'West Monroe', href: '/service-areas/west-monroe' },
+      { name: 'Ruston', href: '/service-areas/ruston' },
+      { name: 'Alexandria', href: '/service-areas/alexandria' },
+      { name: 'Natchitoches', href: '/service-areas/natchitoches' },
+      { name: 'Pineville', href: '/service-areas/pineville-la' },
+      { name: 'Minden', href: '/service-areas/minden' }
+    ],
   },
 
   '/service-areas/oklahoma': {
@@ -1075,6 +1104,17 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     cityLinks: [
       { name: 'Tulsa', href: '/service-areas/tulsa' },
       { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+      { name: 'Broken Arrow', href: '/service-areas/broken-arrow' },
+      { name: 'Muskogee', href: '/service-areas/muskogee' },
+      { name: 'Owasso', href: '/service-areas/owasso' },
+      { name: 'Bartlesville', href: '/service-areas/bartlesville' },
+      { name: 'Lawton', href: '/service-areas/lawton' },
+      { name: 'Edmond', href: '/service-areas/edmond' },
+      { name: 'Norman', href: '/service-areas/norman' },
+      { name: 'Moore', href: '/service-areas/moore' },
+      { name: 'Midwest City', href: '/service-areas/midwest-city' },
+      { name: 'Shawnee', href: '/service-areas/shawnee' },
+      { name: 'Yukon', href: '/service-areas/yukon' }
     ],
   },
 };
