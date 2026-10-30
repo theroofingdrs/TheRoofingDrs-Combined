@@ -124,7 +124,6 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
     relatedServices: [
       { name: 'Commercial Roof Repair', href: '/commercial-roof-repair' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
-      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
     ],
   },
 
@@ -184,6 +183,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
     ],
     relatedServices: [
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
       { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
     ],
   },
