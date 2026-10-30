@@ -397,6 +397,91 @@ export const SERVICES_CONTENT: Record<string, ServicePageData> = {
     defaultLeadType: 'Coating/Restoration',
   },
 
+  '/metal-roof-restoration': {
+    title: 'Commercial Metal Roof Restoration & Coatings | CRD',
+    metaDescription: 'Commercial metal roof restoration for aging, rusting and leaking metal roofs. Fastener replacement, seam reinforcement, corrosion preparation and compatible coatings in Texarkana and markets within 250 miles.',
+    canonicalPath: '/metal-roof-restoration',
+    eyebrow: 'Commercial Metal Roof Restoration',
+    heroHeadline: 'Commercial Metal Roof Restoration & Coatings.',
+    heroSubtitle: 'Restore eligible commercial standing-seam and exposed-fastener metal roofs with documented inspections, fastener and seam repairs, corrosion preparation and compatible fluid-applied coatings.',
+    problemStatement: {
+      heading: 'Rust, Loose Fasteners and Failed Seams Do Not Always Require Replacement',
+      description: 'Commercial metal roofs are exposed to years of thermal movement, weather and rooftop traffic. Fastener washers can deteriorate, panel laps can open, and corrosion can develop around seams and cut edges. If the panels and supporting assembly remain serviceable, a properly prepared and specified restoration system may be an alternative to a full tear-off. The extent of corrosion and the condition of the metal must be evaluated first.',
+      points: [
+        'Surface rust and oxidation around panel laps, cut edges, gutters and flashings',
+        'Loose, backed-out or deteriorated exposed fasteners and washers',
+        'Leaks at horizontal seams, ridge caps, rake edges, curbs and penetrations',
+        'Aging or failed coatings that no longer protect the metal substrate',
+        'Recurring water intrusion caused by movement at panel transitions and details',
+      ],
+    },
+    whatCrdDoes: {
+      heading: 'Metal Roof Restoration From Inspection Through Coating',
+      description: 'CRD evaluates the metal panels, attachment points and details before specifying repairs and a coating system. Restoration is recommended only when the metal and supporting assembly are suitable for it.',
+      deliverables: [
+        'Documented inspection of panel condition, corrosion, fasteners, seams, edges and penetrations.',
+        'Replacement of failed exposed fasteners and washers where appropriate, with compatible components.',
+        'Preparation of corroded areas and application of compatible rust-inhibitive primers where specified.',
+        'Reinforcement and sealing of panel laps, seams, fasteners, curbs and flashing transitions.',
+        'Application of a compatible fluid-applied coating system at manufacturer-specified coverage and dry-film thickness.',
+        'Project documentation of preparation, repairs, coating application and applicable manufacturer warranty requirements.',
+      ],
+    },
+    whatCrdInspects: [
+      'Depth and spread of corrosion, including whether panels are perforated',
+      'Panel profile, movement, attachment and visible substrate condition',
+      'Fastener condition, washer deterioration and enlarged screw holes',
+      'Horizontal laps, ridge caps, rake edges, valleys and perimeter details',
+      'Penetrations, curbs, gutters and drainage paths',
+      'Existing paint or coating condition and compatibility with proposed primers and coatings',
+    ],
+    commonFailurePoints: [
+      { title: 'Coating Over Active Corrosion', desc: 'Loose rust and failed material can compromise adhesion. Corrosion must be assessed and prepared, and perforated or structurally compromised panels must be addressed rather than hidden under coating.' },
+      { title: 'Leaving Failed Fasteners in Place', desc: 'Loose screws and deteriorated washers can continue to admit water beneath a new surface coating unless the attachment details are corrected.' },
+      { title: 'Ignoring Panel Laps and Transitions', desc: 'Horizontal laps, ridge caps, curbs and penetrations require compatible sealing and reinforcement before the field coating is applied.' },
+      { title: 'Using an Incompatible Coating System', desc: 'Existing finishes, primers and prior coatings affect adhesion. The specified system must be compatible with the prepared metal surface and site conditions.' },
+      { title: 'Applying Coating to Perforated Panels', desc: 'A coating is not a structural repair. Panels with through-metal corrosion or significant section loss may require panel replacement or a broader re-roofing solution.' },
+    ],
+    whenRepairMakesSense: [
+      'The metal panels remain serviceable and the problem is limited to isolated fasteners, seams or flashing details.',
+      'Localized corrosion can be properly prepared and repaired without a full restoration scope.',
+    ],
+    whenRestorationMakesSense: [
+      'The metal panels and supporting assembly remain structurally serviceable.',
+      'Corrosion is limited to areas that can be prepared and treated under an approved system.',
+      'Fasteners, laps and penetrations can be repaired and reinforced before coating.',
+      'The prepared substrate is compatible with the selected primer and coating system.',
+    ],
+    whenReplacementAppropriate: [
+      'Widespread perforation, severe section loss or structural deterioration affects the metal panels.',
+      'Panel attachment or the supporting deck has significant damage that cannot be corrected through restoration.',
+      'The existing roof has extensive failures that prevent reliable preparation, repair or coating adhesion.',
+    ],
+    relevantRoofSystems: [
+      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings' },
+    ],
+    relevantIndustries: [
+      { name: 'Industrial Warehouses', href: '/industries/industrial' },
+      { name: 'Commercial Retail', href: '/industries/retail' },
+      { name: 'Churches & Religious Facilities', href: '/industries/churches' },
+    ],
+    faqs: [
+      { question: 'Can a rusted commercial metal roof be restored with coatings?', answer: 'Some rusting metal roofs can be restored if corrosion is limited and the panels remain structurally serviceable. Loose rust and failed coatings must be properly prepared, and perforated panels or significant section loss require repair or replacement rather than simply being coated.' },
+      { question: 'Do you replace screws and washers before coating a metal roof?', answer: 'Where required, failed or deteriorated exposed fasteners and washers are replaced with compatible components. The fastener pattern, panel condition and attachment details are evaluated as part of the restoration scope.' },
+      { question: 'What happens to the seams and panel laps?', answer: 'Panel laps, seams, ridge caps, curbs and penetrations are inspected and repaired or reinforced with compatible materials before the field coating is applied. The correct detail depends on the roof profile and condition.' },
+      { question: 'Can every commercial metal roof be coated?', answer: 'No. A roof with widespread perforation, severe corrosion, structural damage or an incompatible existing finish may not be a suitable candidate. CRD evaluates the panels and supporting assembly before recommending restoration.' },
+      { question: 'Is metal roof restoration less expensive than replacement?', answer: 'It can be when the existing panels and supporting assembly are suitable for restoration, because a qualified project may avoid some tear-off and disposal work. Actual cost depends on corrosion, preparation, fastener replacement, seam repairs, access and the specified coating system.' },
+    ],
+    relatedServices: [
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+    ],
+    defaultLeadType: 'Coating/Restoration',
+  },
+
   '/commercial-roof-inspections': {
     title: 'Commercial Roof Inspections | Forensic Condition Audits | CRD',
     metaDescription: 'Forensic commercial roof inspections across Texarkana and the Ark-La-Tex. Drone imaging, core sampling, infrared moisture scans, and written capital plans.',
