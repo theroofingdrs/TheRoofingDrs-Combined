@@ -313,6 +313,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             >
               About
             </Link>
+                      <a href="/residential/" className="ml-2 inline-flex items-center px-3 py-2 border border-[#555555] text-xs font-bold text-[#eeeeee] hover:border-[#d99a19] hover:text-[#d99a19] transition-colors whitespace-nowrap">Residential Roofing</a>
           </nav>
 
           {/* Action Hub / CTAs */}
@@ -403,6 +404,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             <FileText className="w-4 h-4" />
             Request Commercial Roof Inspection
           </button>
+
+                    <a href="/residential/" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border border-[#444444] text-sm font-bold text-white hover:border-[#d99a19] hover:text-[#d99a19]">Looking for residential roofing? Visit The ROOF Doctors</a>
 
           {/* Section: Commercial Services */}
           <div>
