@@ -6110,6 +6110,622 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         }
     ]
+},
+  '/service-areas/addison': {
+    title: 'Commercial Roof Coatings in Addison, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Addison, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/addison',
+    regionName: 'Addison, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Addison, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Addison for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Healthcare and professional facilities',
+    countiesAndCitiesServed: [
+        'Addison, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Dallas office, hospitality and commercial property market',
+        'Corporate offices and business parks',
+        'Hotels and hospitality properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/haltom-city': {
+    title: 'Commercial Roof Coatings in Haltom City, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Haltom City, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/haltom-city',
+    regionName: 'Haltom City, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Haltom City, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Haltom City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Healthcare and office buildings',
+    countiesAndCitiesServed: [
+        'Haltom City, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Mid Cities manufacturing, logistics and commercial property market',
+        'Manufacturing and industrial facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/white-settlement': {
+    title: 'Commercial Roof Coatings in White Settlement, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in White Settlement, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/white-settlement',
+    regionName: 'White Settlement, Texas',
+    heroHeadline: 'Commercial Roof Coatings in White Settlement, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in White Settlement for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Healthcare and service businesses',
+    countiesAndCitiesServed: [
+        'White Settlement, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West Fort Worth industrial, defense and commercial market',
+        'Defense and government support facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/benbrook': {
+    title: 'Commercial Roof Coatings in Benbrook, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Benbrook, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/benbrook',
+    regionName: 'Benbrook, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Benbrook, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Benbrook for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Light industrial buildings',
+    countiesAndCitiesServed: [
+        'Benbrook, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West Fort Worth office, healthcare and retail market',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Office and professional properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/watauga': {
+    title: 'Commercial Roof Coatings in Watauga, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Watauga, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/watauga',
+    regionName: 'Watauga, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Watauga, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Watauga for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Service commercial properties',
+    countiesAndCitiesServed: [
+        'Watauga, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Fort Worth retail, healthcare and commercial market',
+        'Retail and shopping centers',
+        'Healthcare and medical offices',
+        'Professional offices'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/saginaw': {
+    title: 'Commercial Roof Coatings in Saginaw, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Saginaw, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/saginaw',
+    regionName: 'Saginaw, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Saginaw, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Saginaw for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Healthcare and institutional buildings',
+    countiesAndCitiesServed: [
+        'Saginaw, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Fort Worth logistics, manufacturing and commercial market',
+        'Warehousing and logistics facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/forest-hill': {
+    title: 'Commercial Roof Coatings in Forest Hill, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Forest Hill, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/forest-hill',
+    regionName: 'Forest Hill, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Forest Hill, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Forest Hill for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Office and service buildings',
+    countiesAndCitiesServed: [
+        'Forest Hill, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'South Fort Worth industrial, retail and commercial property market',
+        'Industrial and warehouse properties',
+        'Retail and commercial centers',
+        'Healthcare and medical facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/crowley': {
+    title: 'Commercial Roof Coatings in Crowley, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Crowley, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/crowley',
+    regionName: 'Crowley, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Crowley, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Crowley for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Office and professional buildings',
+    countiesAndCitiesServed: [
+        'Crowley, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'South Fort Worth industrial, logistics and retail growth market',
+        'Industrial and distribution facilities',
+        'Retail and commercial centers',
+        'Healthcare and medical properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/cleburne': {
+    title: 'Commercial Roof Coatings in Cleburne, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Cleburne, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/cleburne',
+    regionName: 'Cleburne, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Cleburne, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Cleburne for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Warehouses and distribution properties',
+    countiesAndCitiesServed: [
+        'Cleburne, Johnson County',
+        'Johnson County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Southwest DFW manufacturing, healthcare and commercial market',
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical campuses',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/weatherford': {
+    title: 'Commercial Roof Coatings in Weatherford, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Weatherford, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/weatherford',
+    regionName: 'Weatherford, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Weatherford, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Weatherford for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Warehouses and distribution buildings',
+    countiesAndCitiesServed: [
+        'Weatherford, Parker County',
+        'Parker County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West DFW manufacturing, healthcare and commercial market',
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/mineral-wells': {
+    title: 'Commercial Roof Coatings in Mineral Wells, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Mineral Wells, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/mineral-wells',
+    regionName: 'Mineral Wells, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Mineral Wells, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mineral Wells for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Warehouses and service buildings',
+    countiesAndCitiesServed: [
+        'Mineral Wells, Palo Pinto County',
+        'Palo Pinto County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West North Texas industrial, healthcare and commercial market',
+        'Industrial and manufacturing facilities',
+        'Healthcare and institutional properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/stephenville': {
+    title: 'Commercial Roof Coatings in Stephenville, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Stephenville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/stephenville',
+    regionName: 'Stephenville, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Stephenville, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Stephenville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Retail and healthcare properties',
+    countiesAndCitiesServed: [
+        'Stephenville, Erath County',
+        'Erath County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Central Texas education, agriculture and manufacturing market',
+        'University and educational facilities',
+        'Agricultural processing and supply properties',
+        'Manufacturing and industrial buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/ennis': {
+    title: 'Commercial Roof Coatings in Ennis, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Ennis, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/ennis',
+    regionName: 'Ennis, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Ennis, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Ennis for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Healthcare and institutional buildings',
+    countiesAndCitiesServed: [
+        'Ennis, Ellis County',
+        'Ellis County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'South Dallas manufacturing, distribution and commercial market',
+        'Manufacturing and industrial facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
+},
+  '/service-areas/bonham': {
+    title: 'Commercial Roof Coatings in Bonham, TX | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Bonham, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/bonham',
+    regionName: 'Bonham, Texas',
+    heroHeadline: 'Commercial Roof Coatings in Bonham, Texas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bonham for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Agricultural supply and warehouse buildings',
+    countiesAndCitiesServed: [
+        'Bonham, Fannin County',
+        'Fannin County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Northeast Texas manufacturing, healthcare and commercial market',
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
+    ]
 }
 };
 
