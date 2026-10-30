@@ -2487,7 +2487,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Denison, Texas',
     heroHeadline: 'Commercial Roof Coatings in Denison, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Denison for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building\\'s operational needs.',
+    weatherAndStormFactors: 'Denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s operational needs.',
     countiesAndCitiesServed: [
         'Denison, Grayson County',
         'Grayson County commercial and industrial corridors',
@@ -4997,8 +4997,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ]
 },
   '/service-areas/desoto': {
-    title: 'Commercial Roof Coatings in DeSoto, TX | CRD',    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',    canonicalPath: '/service-areas/desoto',
-    regionName: 'DeSoto, Texas',
+    title: 'Commercial Roof Coatings in DeSoto, TX | CRD',    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
     heroHeadline: 'Commercial Roof Coatings in DeSoto, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in DeSoto for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'DeSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs.',
