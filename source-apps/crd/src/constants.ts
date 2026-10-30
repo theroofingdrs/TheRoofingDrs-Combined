@@ -65,6 +65,7 @@ export const NAVIGATION_LINKS = {
   ],
   restoration: [
     { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', desc: 'Seamless fluid-applied membrane systems' },
+    { name: 'Metal Roof Restoration', href: '/metal-roof-restoration', desc: 'Rust treatment, fastener repair and protective roof coatings' },
     { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration', desc: 'Renew existing membranes without tear-off' },
     { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings', desc: 'Ponding water resistance & UV reflection' },
     { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings', desc: 'High-tensile cost-effective solar coatings' },
