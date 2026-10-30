@@ -65,6 +65,24 @@ function proxy(req, res, app, targetPath) {
   req.pipe(upstream);
 }
 
+function serveRootFile(req, res, filename, contentType) {
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    res.writeHead(405, { allow: 'GET, HEAD' });
+    return res.end();
+  }
+  const filePath = path.join(ROOT, filename);
+  if (!fs.existsSync(filePath)) {
+    res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' });
+    return res.end('Not found.');
+  }
+  res.writeHead(200, {
+    'content-type': contentType,
+    'cache-control': 'public, max-age=3600',
+  });
+  if (req.method === 'HEAD') return res.end();
+  fs.createReadStream(filePath).pipe(res);
+}
+
 function serveLanding(req, res) {
   if (req.method !== 'GET' && req.method !== 'HEAD') {
     res.writeHead(405, { allow: 'GET, HEAD' });
@@ -78,6 +96,9 @@ function serveLanding(req, res) {
 const server = http.createServer((req, res) => {
   const url = new URL(req.url || '/', 'http://localhost');
   const pathname = decodeURIComponent(url.pathname);
+
+  if (pathname === '/robots.txt') return serveRootFile(req, res, 'robots.txt', 'text/plain; charset=utf-8');
+  if (pathname === '/sitemap.xml') return serveRootFile(req, res, 'sitemap.xml', 'application/xml; charset=utf-8');
 
   if (pathname === '/') return serveLanding(req, res);
 
