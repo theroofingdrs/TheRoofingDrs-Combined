@@ -14,8 +14,8 @@ export const BUSINESS_INFO = {
   model: 'Service-Area Business',
   disclaimerServiceArea:
     'Commercial Roof Doctors is a field-operated commercial roofing and disaster-response contractor. Our physical facility supports regional operations and equipment deployment; we serve commercial clients directly at their facility locations.',
-  primaryTerritory: 'Ark-La-Tex and surrounding region',
-  primaryRadius: 'Approximately 75 miles from Texarkana (larger commercial projects considered beyond)',
+  primaryTerritory: 'Texas, Arkansas, Louisiana, and Oklahoma',
+  primaryRadius: 'Statewide coverage across Texas, Arkansas, Louisiana, and Oklahoma; project availability and travel are confirmed during consultation.',
   statesCovered: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'],
   taglines: {
     primary: 'PRECISION. PROTECTION. PERFORMANCE.',
@@ -109,7 +109,7 @@ export const NAVIGATION_LINKS = {
     { name: 'Apartments & Multifamily', href: '/industries/apartments', desc: 'Multi-building complexes and continuous tenant comfort' },
   ],
   serviceAreas: [
-    { name: 'Regional Territory Hub', href: '/service-areas', desc: '75-mile Texarkana Ark-La-Tex radius' },
+    { name: 'Regional Territory Hub', href: '/service-areas', desc: 'Statewide commercial service coverage across TX, AR, LA, and OK' },
     { name: 'Texas Commercial Service Area', href: '/service-areas/texas', desc: 'Texarkana TX, Bowie County, NE Texas' },
     { name: 'Arkansas Commercial Service Area', href: '/service-areas/arkansas', desc: 'Texarkana AR, Miller County, SW Arkansas' },
     { name: 'Louisiana Commercial Service Area', href: '/service-areas/louisiana', desc: 'Shreveport, Bossier, NW Louisiana' },
