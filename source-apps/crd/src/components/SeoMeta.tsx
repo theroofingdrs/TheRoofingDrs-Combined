@@ -29,10 +29,14 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
   faqItems,
 }) => {
   useEffect(() => {
-    const normalizedCanonicalPath = canonicalPath || '/';
-    const prefixedCanonicalPath = normalizedCanonicalPath.startsWith('/commercial')
-      ? normalizedCanonicalPath
-      : `/commercial${normalizedCanonicalPath === '/' ? '/' : normalizedCanonicalPath.startsWith('/') ? normalizedCanonicalPath : `/${normalizedCanonicalPath}`}`;
+    const toCommercialUrl = (path: string) => {
+      const normalizedPath = path || '/';
+      const prefixedPath = normalizedPath.startsWith('/commercial')
+        ? normalizedPath
+        : `/commercial${normalizedPath === '/' ? '/' : normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`}`;
+      return `${window.location.origin}${prefixedPath}`;
+    };
+    const fullUrl = toCommercialUrl(canonicalPath);
 
     // Document Title
     document.title = title.includes('Commercial Roof Doctors')
@@ -55,7 +59,6 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
     if (ogDesc) ogDesc.setAttribute('content', description);
 
     // Canonical
-    const fullUrl = `${window.location.origin}${prefixedCanonicalPath}`;
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {
       canonical = document.createElement('link');
@@ -95,7 +98,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
             latitude: 33.4251,
             longitude: -94.0477,
           },
-          geoRadius: '120000', // ~75 miles in meters
+          geoRadius: '120000',
         },
       ],
       description: description,
@@ -116,7 +119,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
           '@type': 'ListItem',
           position: idx + 1,
           name: item.name,
-          item: `https://commercialroofdoctors.com${item.url}`,
+          item: toCommercialUrl(item.url),
         })),
       };
 
