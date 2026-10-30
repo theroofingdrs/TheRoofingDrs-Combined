@@ -80,8 +80,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/commercial-roof-inspection" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Forensic Roof Inspection
+                <Link to="/commercial-roof-inspections" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Roof Inspections
                 </Link>
               </li>
               <li>
@@ -96,7 +96,12 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/commercial-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Membrane Restoration
+                  Commercial Roof Restoration
+                </Link>
+              </li>
+              <li>
+                <Link to="/metal-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Metal Roof Restoration
                 </Link>
               </li>
               <li>
@@ -140,13 +145,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/adjuster-meetings" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Adjuster Meeting Coordination
+                <Link to="/insurance-claims" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Storm Claim Documentation
                 </Link>
               </li>
               <li>
-                <Link to="/large-loss-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Large-Loss Commercial Roofing
+                <Link to="/commercial-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Roof Restoration
                 </Link>
               </li>
             </ul>
@@ -169,12 +174,12 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/roof-asset-management" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Roof Asset Management
+                <Link to="/property-management" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Property Portfolio Management
                 </Link>
               </li>
               <li>
-                <Link to="/multifamily-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                <Link to="/industries/apartments" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
                   Multifamily & Apartments
                 </Link>
               </li>
@@ -184,8 +189,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/metal-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Commercial Metal Systems
+                <Link to="/commercial-metal-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Metal Roofing
                 </Link>
               </li>
               <li>
@@ -221,7 +226,7 @@ export const Footer: React.FC = () => {
               <Link to="/about" className="hover:text-[#cccccc] transition-colors">
                 Company
               </Link>
-              <Link to="/about/credentials" className="hover:text-[#cccccc] transition-colors">
+              <Link to="/about" className="hover:text-[#cccccc] transition-colors">
                 Credentials
               </Link>
               <Link to="/contact" className="hover:text-[#cccccc] transition-colors">
