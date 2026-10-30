@@ -20,7 +20,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
     ],
     advantages: [
       'Heat-welded seams are physically 3x to 4x stronger than adhesive or taped seams',
-      'High solar reflectance (CRRC-rated) lowers rooftop temperature by up to 50°F',
+      'High solar reflectance, when verified for the exact product, can reduce roof surface temperature and heat transfer',
       'Resistant to ozone, UV degradation, microbial algae, and bacterial growth',
       'No open flames or hot kettles required during commercial installation',
     ],
@@ -103,7 +103,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Inspecting flashings around oil, grease, or solvent exhaust hoods',
     ],
     repairApproach: 'EPDM repairs require cleaning with weathered membrane cleaners, applying specialized EPDM primers, and installing cured or uncured EPDM flashing tapes with mechanical roller pressure.',
-    restorationPotential: 'Aging black EPDM is an ideal candidate for fluid-applied high-solids silicone roof coatings. The silicone bonds exceptionally well to clean EPDM, lowering rooftop temperatures by up to 50°F.',
+    restorationPotential: 'Some aging EPDM roofs may be candidates for a compatible fluid-applied coating system after cleaning, adhesion testing and any required primer. A reflective white finish may reduce roof surface temperature; actual performance depends on the exact product, roof assembly and conditions.',
     replacementTriggers: [
       'Insulation saturation exceeds 25%.',
       'Extensive membrane shrinkage has bridged wall corners and torn anchor bars.',
@@ -119,7 +119,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Tapered insulation layout and cricket slope geometry',
     ],
     faqs: [
-      { question: 'Why does black EPDM get so hot?', answer: 'Black EPDM absorbs over 90% of solar radiation. However, applying a white fluid silicone coating can transform black EPDM into a cool, Energy Star-rated roof while extending its waterproof life.' },
+      { question: 'Why does black EPDM get so hot?', answer: 'Black EPDM can absorb substantial solar energy. A compatible reflective coating may reduce roof surface temperature, but the exact product's published solar reflectance and thermal emittance should be reviewed. Applying a coating does not automatically make a roof ENERGY STAR certified.' },
     ],
     relatedServices: [
       { name: 'Commercial Roof Repair', href: '/commercial-roof-repair' },
@@ -163,7 +163,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Surface rust and oxidation measurement along valleys and gutters',
     ],
     repairApproach: 'Loose screws are removed and replaced with oversized commercial gasket fasteners. Panel laps are reinforced with stitch screws and sealed with elastomeric mastics.',
-    restorationPotential: 'Metal roofs are the #1 candidate for fluid restoration. Rust-inhibiting primers followed by high-tensile fabric over seams and screws, topped with high-solids silicone, creates a monolithic seal that stops leaks permanently at half the cost of replacement.',
+    restorationPotential: 'Many serviceable metal roofs may be candidates for fluid-applied restoration after corrosion, fasteners, seams, flashing and attachment are evaluated and repaired. A properly specified system can provide a renewed weathering surface, but it does not guarantee permanent leak elimination or a fixed percentage savings compared with replacement.',
     replacementTriggers: [
       'Panel rust has perforated through the structural steel substrate.',
       'Hail has crushed standing seams beyond the ability to seal.',
