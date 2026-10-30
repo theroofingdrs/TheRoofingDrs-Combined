@@ -1155,7 +1155,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
     serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener assessments', 'Seam and flashing repair planning', 'Roof inspections and restoration recommendations'],
     cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
-  },\n  '/service-areas/jonesboro': {
+  },
+  '/service-areas/jonesboro': {
     title: 'Commercial Roof Coatings in Jonesboro, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Jonesboro, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/jonesboro',
@@ -1194,7 +1195,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/little-rock'
         }
     ]
-},\n  '/service-areas/rogers': {
+},
+  '/service-areas/rogers': {
     title: 'Commercial Roof Coatings in Rogers, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Rogers, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/rogers',
@@ -1237,7 +1239,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/fort-smith'
         }
     ]
-},\n  '/service-areas/conway': {
+},
+  '/service-areas/conway': {
     title: 'Commercial Roof Coatings in Conway, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Conway, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/conway',
@@ -1280,7 +1283,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/benton'
         }
     ]
-},\n  '/service-areas/north-little-rock': {
+},
+  '/service-areas/north-little-rock': {
     title: 'Commercial Roof Coatings in North Little Rock, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in North Little Rock, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/north-little-rock',
@@ -1323,7 +1327,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/maumelle'
         }
     ]
-},\n  '/service-areas/bentonville': {
+},
+  '/service-areas/bentonville': {
     title: 'Commercial Roof Coatings in Bentonville, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Bentonville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/bentonville',
@@ -1366,7 +1371,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/fayetteville'
         }
     ]
-},\n  '/service-areas/pine-bluff': {
+},
+  '/service-areas/pine-bluff': {
     title: 'Commercial Roof Coatings in Pine Bluff, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Pine Bluff, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/pine-bluff',
@@ -1409,7 +1415,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/el-dorado'
         }
     ]
-},\n  '/service-areas/benton': {
+},
+  '/service-areas/benton': {
     title: 'Commercial Roof Coatings in Benton, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Benton, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/benton',
@@ -1452,7 +1459,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/pine-bluff'
         }
     ]
-},\n  '/service-areas/hot-springs': {
+},
+  '/service-areas/hot-springs': {
     title: 'Commercial Roof Coatings in Hot Springs, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Hot Springs, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/hot-springs',
@@ -1495,7 +1503,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/arkadelphia'
         }
     ]
-},\n  '/service-areas/sherwood': {
+},
+  '/service-areas/sherwood': {
     title: 'Commercial Roof Coatings in Sherwood, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Sherwood, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/sherwood',
@@ -1538,7 +1547,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/conway'
         }
     ]
-},\n  '/service-areas/bella-vista': {
+},
+  '/service-areas/bella-vista': {
     title: 'Commercial Roof Coatings in Bella Vista, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Bella Vista, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/bella-vista',
@@ -1581,7 +1591,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/fayetteville'
         }
     ]
-},\n  '/service-areas/russellville': {
+},
+  '/service-areas/russellville': {
     title: 'Commercial Roof Coatings in Russellville, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Russellville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/russellville',
@@ -1620,7 +1631,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/little-rock'
         }
     ]
-},\n  '/service-areas/jacksonville': {
+},
+  '/service-areas/jacksonville': {
     title: 'Commercial Roof Coatings in Jacksonville, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Jacksonville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/jacksonville',
@@ -1659,7 +1671,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/little-rock'
         }
     ]
-},\n  '/service-areas/cabot': {
+},
+  '/service-areas/cabot': {
     title: 'Commercial Roof Coatings in Cabot, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Cabot, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/cabot',
@@ -1685,7 +1698,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: []
-},\n  '/service-areas/searcy': {
+},
+  '/service-areas/searcy': {
     title: 'Commercial Roof Coatings in Searcy, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Searcy, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/searcy',
@@ -1720,7 +1734,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/little-rock'
         }
     ]
-},\n  '/service-areas/west-memphis': {
+},
+  '/service-areas/west-memphis': {
     title: 'Commercial Roof Coatings in West Memphis, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in West Memphis, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/west-memphis',
@@ -1759,7 +1774,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/little-rock'
         }
     ]
-},\n  '/service-areas/bryant': {
+},
+  '/service-areas/bryant': {
     title: 'Commercial Roof Coatings in Bryant, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Bryant, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/bryant',
@@ -1798,7 +1814,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/hot-springs'
         }
     ]
-},\n  '/service-areas/van-buren': {
+},
+  '/service-areas/van-buren': {
     title: 'Commercial Roof Coatings in Van Buren, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Van Buren, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/van-buren',
@@ -1833,7 +1850,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/russellville'
         }
     ]
-},\n  '/service-areas/siloam-springs': {
+},
+  '/service-areas/siloam-springs': {
     title: 'Commercial Roof Coatings in Siloam Springs, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Siloam Springs, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/siloam-springs',
@@ -1876,7 +1894,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/fayetteville'
         }
     ]
-},\n  '/service-areas/maumelle': {
+},
+  '/service-areas/maumelle': {
     title: 'Commercial Roof Coatings in Maumelle, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Maumelle, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/maumelle',
@@ -1915,7 +1934,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/conway'
         }
     ]
-},\n  '/service-areas/marion': {
+},
+  '/service-areas/marion': {
     title: 'Commercial Roof Coatings in Marion, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Marion, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/marion',
@@ -1950,7 +1970,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/jonesboro'
         }
     ]
-},\n  '/service-areas/forrest-city': {
+},
+  '/service-areas/forrest-city': {
     title: 'Commercial Roof Coatings in Forrest City, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Forrest City, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/forrest-city',
@@ -1985,7 +2006,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/little-rock'
         }
     ]
-},\n  '/service-areas/malvern': {
+},
+  '/service-areas/malvern': {
     title: 'Commercial Roof Coatings in Malvern, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Malvern, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/malvern',
@@ -2024,7 +2046,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/little-rock'
         }
     ]
-},\n  '/service-areas/arkadelphia': {
+},
+  '/service-areas/arkadelphia': {
     title: 'Commercial Roof Coatings in Arkadelphia, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Arkadelphia, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/arkadelphia',
@@ -2063,7 +2086,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/el-dorado'
         }
     ]
-},\n  '/service-areas/camden': {
+},
+  '/service-areas/camden': {
     title: 'Commercial Roof Coatings in Camden, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Camden, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/camden',
