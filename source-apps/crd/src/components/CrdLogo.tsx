@@ -31,7 +31,7 @@ const BUNDLED_LOGOS = {
 
 export const CRDLogo: React.FC<CRDLogoProps> = ({
   variant = 'full',
-  theme = 'light',
+  theme = 'dark',
   className = '',
   alt = 'Commercial Roof Doctors',
   src,
@@ -55,7 +55,6 @@ export const CRDLogo: React.FC<CRDLogoProps> = ({
         width: 'auto',
         maxWidth: '100%',
         display: 'inline-block',
-        filter: 'brightness(0) invert(1)',
         ...style,
       }}
       loading="eager"
@@ -75,4 +74,3 @@ export const CrdShield: React.FC<{ className?: string; theme?: 'light' | 'dark' 
   className,
   theme = 'dark',
 }) => <CRDLogo variant="mark" theme={theme} className={className} />;
-
