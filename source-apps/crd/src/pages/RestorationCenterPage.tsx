@@ -10,7 +10,7 @@ interface RestorationCenterPageProps {
 }
 
 const systems = [
-  { title: 'Metal Roofing', detail: 'Standing seam and exposed-fastener panels, including roofs with surface rust or corrosion. Evaluation covers panel condition, fasteners, seams, flashings, rust treatment, primers and compatible coating systems.', image: '/assets/images/commercial-metal-roof.jpg', href: '/metal-roofing' },
+  { title: 'Metal Roofing', detail: 'Standing seam and exposed-fastener panels, including roofs with surface rust or corrosion. Evaluation covers panel condition, fasteners, seams, flashings, rust treatment, primers and compatible coating systems.', image: '/assets/images/commercial-metal-roof.jpg', href: '/commercial-metal-roofing' },
   { title: 'EPDM Rubber Roofing', detail: 'Existing rubber membranes may be candidates for restoration when the membrane, seams, attachment and insulation are sound and a compatible preparation and coating system is verified.', image: '/assets/images/commercial-portfolio-roofs.jpg', href: '/epdm-roofing' },
   { title: 'TPO Roofing', detail: 'Assessment focuses on heat-welded seams, membrane condition, attachment, repairs, surface preparation and coating compatibility established by the selected system manufacturer.', image: '/assets/images/commercial-logistics-tpo.jpg', href: '/tpo-roofing' },
   { title: 'PVC Roofing', detail: 'PVC restoration requires attention to membrane age, plasticizer migration, seams, contaminants, primers and documented compatibility with the proposed coating system.', image: '/assets/images/commercial-medical-silicone.jpg', href: '/pvc-roofing' },
