@@ -96,6 +96,14 @@ function serveLanding(req, res) {
 const server = http.createServer((req, res) => {
   const url = new URL(req.url || '/', 'http://localhost');
   const pathname = decodeURIComponent(url.pathname);
+  const requestHost = (req.headers.host || '').split(':')[0].toLowerCase();
+  if (requestHost === 'www.theroofingdrs.com') {
+    res.writeHead(301, {
+      location: `https://theroofingdrs.com${req.url || '/'}`,
+      'cache-control': 'public, max-age=3600',
+    });
+    return res.end();
+  }
 
   if (pathname === '/robots.txt') return serveRootFile(req, res, 'robots.txt', 'text/plain; charset=utf-8');
   if (pathname === '/sitemap.xml') return serveRootFile(req, res, 'sitemap.xml', 'application/xml; charset=utf-8');
