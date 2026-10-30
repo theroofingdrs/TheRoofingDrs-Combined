@@ -64,6 +64,7 @@ export const NAVIGATION_LINKS = {
     { name: 'New Commercial Construction', href: '/new-commercial-construction', desc: 'Architectural specification and new installs' },
   ],
   restoration: [
+    { name: 'Restoration & Coatings Center', href: '/commercial-roof-restoration', desc: 'Roof system guides, restoration process and benefits' },
     { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', desc: 'Seamless fluid-applied membrane systems' },
     { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration', desc: 'Renew existing membranes without tear-off' },
     { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings', desc: 'Ponding water resistance & UV reflection' },
