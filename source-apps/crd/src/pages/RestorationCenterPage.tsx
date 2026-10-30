@@ -16,7 +16,7 @@ const systems = [
   { title: 'PVC Roofing', detail: 'PVC restoration requires attention to membrane age, plasticizer migration, seams, contaminants, primers and documented compatibility with the proposed coating system.', image: '/assets/images/commercial-medical-silicone.jpg', href: '/pvc-roofing' },
   { title: 'Modified Bitumen', detail: 'Smooth and granulated cap sheets are evaluated for cracking, blisters, open laps, exposed asphalt, moisture and the need for compatible primers or reinforcement.', image: '/assets/images/commercial-fluid-membrane.jpg', href: '/modified-bitumen' },
   { title: 'Built-Up Roofing', detail: 'Gravel-surfaced and smooth BUR assemblies require careful evaluation of aggregate, asphalt condition, surface preparation, moisture and coating-system suitability.', image: '/assets/images/commercial-warehouse-roof.jpg', href: '/built-up-roofing' },
-  { title: 'Spray Polyurethane Foam', detail: 'SPF roofs are assessed for coating erosion, exposed or damaged foam, moisture intrusion and the condition of the protective coating before renewal.', image: '/assets/images/commercial-roof-restoration.jpg', href: '/commercial-roof-coatings' },
+  { title: 'Spray Polyurethane Foam', detail: 'SPF roofs are assessed for coating erosion, exposed or damaged foam, moisture intrusion and the condition of the protective coating before renewal.', image: '/assets/images/commercial-roof-restoration.jpg', href: '/spray-foam-roofing' },
 ];
 
 const stages = [
