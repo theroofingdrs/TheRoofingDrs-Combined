@@ -55,6 +55,7 @@ export const CRDLogo: React.FC<CRDLogoProps> = ({
         width: 'auto',
         maxWidth: '100%',
         display: 'inline-block',
+        filter: 'brightness(0) invert(1)',
         ...style,
       }}
       loading="eager"
