@@ -10,6 +10,25 @@ steps:
       - --tag
       - ${_IMAGE_URI}
       - .
+  - name: gcr.io/cloud-builders/docker
+    id: push-combined-image
+    args:
+      - push
+      - ${_IMAGE_URI}
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    id: deploy-combined-cloud-run
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - roof-doctors-combined
+      - --image
+      - ${_IMAGE_URI}
+      - --region
+      - us-east1
+      - --project
+      - trdcrd
+      - --quiet
 images:
   - ${_IMAGE_URI}
 substitutions:
