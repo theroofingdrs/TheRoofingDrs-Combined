@@ -86,21 +86,10 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
         postalCode: BUSINESS_INFO.address.zip,
         addressCountry: 'US',
       },
-      areaServed: [
-        {
-          '@type': 'AdministrativeArea',
-          name: 'Ark-La-Tex Region',
-        },
-        {
-          '@type': 'GeoCircle',
-          geoMidpoint: {
-            '@type': 'GeoCoordinates',
-            latitude: 33.4251,
-            longitude: -94.0477,
-          },
-          geoRadius: '120000',
-        },
-      ],
+      areaServed: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'].map((state) => ({
+        '@type': 'AdministrativeArea',
+        name: state,
+      })),
       description: description,
     };
 
@@ -162,7 +151,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
           name: BUSINESS_INFO.name,
           telephone: BUSINESS_INFO.phone,
         },
-        areaServed: 'Ark-La-Tex and surrounding 75-mile radius',
+        areaServed: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'],
         description: description,
       };
 
