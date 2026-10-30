@@ -1155,7 +1155,954 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
     serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener assessments', 'Seam and flashing repair planning', 'Roof inspections and restoration recommendations'],
     cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
-  },
+  },\n  '/service-areas/jonesboro': {
+    title: 'Commercial Roof Coatings in Jonesboro, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Jonesboro, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/jonesboro',
+    regionName: 'Jonesboro, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Jonesboro, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Jonesboro for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment, metal fasteners and flashing transitions.',
+    countiesAndCitiesServed: [
+        'Jonesboro, Craighead County',
+        'Craighead County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Regional distribution and logistics',
+        'Manufacturing and food processing',
+        'Retail and commercial properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Searcy',
+            href: '/service-areas/searcy'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
+    ]
+},\n  '/service-areas/rogers': {
+    title: 'Commercial Roof Coatings in Rogers, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Rogers, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/rogers',
+    regionName: 'Rogers, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Rogers, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Rogers for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and the condition of existing coating systems.',
+    countiesAndCitiesServed: [
+        'Rogers, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business campuses',
+        'Retail, hospitality and mixed use developments',
+        'Distribution and light industrial facilities',
+        'Healthcare and professional properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        }
+    ]
+},\n  '/service-areas/conway': {
+    title: 'Commercial Roof Coatings in Conway, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Conway, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/conway',
+    regionName: 'Conway, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Conway, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Conway for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations around rooftop equipment.',
+    countiesAndCitiesServed: [
+        'Conway, Faulkner County',
+        'Faulkner County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Healthcare and medical properties',
+        'Distribution and warehouse facilities',
+        'Retail and office properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        }
+    ]
+},\n  '/service-areas/north-little-rock': {
+    title: 'Commercial Roof Coatings in North Little Rock, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in North Little Rock, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/north-little-rock',
+    regionName: 'North Little Rock, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in North Little Rock, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in North Little Rock for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'North Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams, drains, penetrations and perimeter details.',
+    countiesAndCitiesServed: [
+        'North Little Rock, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing facilities',
+        'Warehousing and transportation properties',
+        'Retail and office centers',
+        'Public and institutional facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Maumelle',
+            href: '/service-areas/maumelle'
+        }
+    ]
+},\n  '/service-areas/bentonville': {
+    title: 'Commercial Roof Coatings in Bentonville, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Bentonville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/bentonville',
+    regionName: 'Bentonville, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Bentonville, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bentonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition of existing membrane or metal systems.',
+    countiesAndCitiesServed: [
+        'Bentonville, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate headquarters and office campuses',
+        'Retail and hospitality properties',
+        'Distribution and logistics facilities',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        }
+    ]
+},\n  '/service-areas/pine-bluff': {
+    title: 'Commercial Roof Coatings in Pine Bluff, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Pine Bluff, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/pine-bluff',
+    regionName: 'Pine Bluff, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Pine Bluff, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Pine Bluff for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies deserve close attention.',
+    countiesAndCitiesServed: [
+        'Pine Bluff, Jefferson County',
+        'Jefferson County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing facilities',
+        'Warehousing and distribution properties',
+        'Healthcare and institutional campuses',
+        'Retail and commercial buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        }
+    ]
+},\n  '/service-areas/benton': {
+    title: 'Commercial Roof Coatings in Benton, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Benton, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/benton',
+    regionName: 'Benton, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Benton, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Benton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around rooftop equipment.',
+    countiesAndCitiesServed: [
+        'Benton, Saline County',
+        'Saline County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing properties',
+        'Retail and commercial centers',
+        'Healthcare and professional buildings',
+        'Warehouses and distribution facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Bryant',
+            href: '/service-areas/bryant'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        }
+    ]
+},\n  '/service-areas/hot-springs': {
+    title: 'Commercial Roof Coatings in Hot Springs, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Hot Springs, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/hot-springs',
+    regionName: 'Hot Springs, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Hot Springs, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Hot Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks, drainage, flashing and coating condition.',
+    countiesAndCitiesServed: [
+        'Hot Springs, Garland County',
+        'Garland County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Hotels and hospitality properties',
+        'Healthcare and medical facilities',
+        'Retail and entertainment properties',
+        'Multifamily and office buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        }
+    ]
+},\n  '/service-areas/sherwood': {
+    title: 'Commercial Roof Coatings in Sherwood, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Sherwood, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/sherwood',
+    regionName: 'Sherwood, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Sherwood, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sherwood for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating systems.',
+    countiesAndCitiesServed: [
+        'Sherwood, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail centers and shopping properties',
+        'Healthcare and medical offices',
+        'Light industrial and warehouse buildings',
+        'Professional office properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Jacksonville',
+            href: '/service-areas/jacksonville'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        }
+    ]
+},\n  '/service-areas/bella-vista': {
+    title: 'Commercial Roof Coatings in Bella Vista, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Bella Vista, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/bella-vista',
+    regionName: 'Bella Vista, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Bella Vista, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bella Vista for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of managed property portfolios.',
+    countiesAndCitiesServed: [
+        'Bella Vista, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and service commercial properties',
+        'Professional offices',
+        'Healthcare and community facilities',
+        'Multifamily and association managed properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        }
+    ]
+},\n  '/service-areas/russellville': {
+    title: 'Commercial Roof Coatings in Russellville, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Russellville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/russellville',
+    regionName: 'Russellville, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Russellville, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Russellville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented before restoration is specified.',
+    countiesAndCitiesServed: [
+        'Russellville, Pope County',
+        'Pope County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Educational and institutional campuses',
+        'Warehousing and distribution facilities',
+        'Retail and healthcare properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
+    ]
+},\n  '/service-areas/jacksonville': {
+    title: 'Commercial Roof Coatings in Jacksonville, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Jacksonville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/jacksonville',
+    regionName: 'Jacksonville, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Jacksonville, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Jacksonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Jacksonville commercial roofs face central Arkansas heat, hail, high winds and heavy rain. Large facilities require careful inspection of roof edges, penetrations, drainage and rooftop equipment supports.',
+    countiesAndCitiesServed: [
+        'Jacksonville, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Aerospace and defense related facilities',
+        'Warehousing and logistics properties',
+        'Retail and service commercial buildings',
+        'Healthcare and institutional facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
+    ]
+},\n  '/service-areas/cabot': {
+    title: 'Commercial Roof Coatings in Cabot, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Cabot, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/cabot',
+    regionName: 'Cabot, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Cabot, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Cabot for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Cabot roofs experience humid summers, hail, wind and heavy rainfall. Commercial evaluations should review drainage, roof penetrations, exposed fasteners and coating compatibility before restoration work.',
+    countiesAndCitiesServed: [
+        'Cabot, Lonoke County',
+        'Lonoke County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and shopping centers',
+        'Healthcare and medical offices',
+        'Schools and educational facilities',
+        'Warehouses and service commercial buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: []
+},\n  '/service-areas/searcy': {
+    title: 'Commercial Roof Coatings in Searcy, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Searcy, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/searcy',
+    regionName: 'Searcy, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Searcy, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Searcy for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Searcy commercial roofs face hot summers, heavy rainfall, hail and seasonal severe weather. Inspection priorities include moisture conditions, roof seams, flashing transitions and drainage performance.',
+    countiesAndCitiesServed: [
+        'Searcy, White County',
+        'White County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Education and institutional properties',
+        'Manufacturing and industrial facilities',
+        'Retail and office buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
+    ]
+},\n  '/service-areas/west-memphis': {
+    title: 'Commercial Roof Coatings in West Memphis, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in West Memphis, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/west-memphis',
+    regionName: 'West Memphis, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in West Memphis, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in West Memphis for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'West Memphis roofs experience humid heat, heavy rain, wind and severe thunderstorms. Large logistics roofs should be evaluated for drainage, wind exposed edges, metal fasteners, seams and existing coating condition.',
+    countiesAndCitiesServed: [
+        'West Memphis, Crittenden County',
+        'Crittenden County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Transportation and logistics facilities',
+        'Warehouses and distribution centers',
+        'Industrial and manufacturing properties',
+        'Retail and commercial buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Marion',
+            href: '/service-areas/marion'
+        },
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
+    ]
+},\n  '/service-areas/bryant': {
+    title: 'Commercial Roof Coatings in Bryant, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Bryant, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/bryant',
+    regionName: 'Bryant, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Bryant, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bryant for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Bryant commercial roofs face heat, hail, heavy rainfall and strong storms. Property managers should document roof condition, ponding, penetrations and repair history before choosing a coating or replacement scope.',
+    countiesAndCitiesServed: [
+        'Bryant, Saline County',
+        'Saline County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Healthcare and medical properties',
+        'Professional offices',
+        'Light industrial and warehouse buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        }
+    ]
+},\n  '/service-areas/van-buren': {
+    title: 'Commercial Roof Coatings in Van Buren, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Van Buren, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/van-buren',
+    regionName: 'Van Buren, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Van Buren, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Van Buren for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Van Buren roofs experience hot summers, hail, high winds and heavy rainfall. Metal roof corrosion, fasteners, seams and perimeter details should be inspected alongside drainage and underlying moisture.',
+    countiesAndCitiesServed: [
+        'Van Buren, Crawford County',
+        'Crawford County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Transportation and distribution properties',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Russellville',
+            href: '/service-areas/russellville'
+        }
+    ]
+},\n  '/service-areas/siloam-springs': {
+    title: 'Commercial Roof Coatings in Siloam Springs, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Siloam Springs, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/siloam-springs',
+    regionName: 'Siloam Springs, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Siloam Springs, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Siloam Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Siloam Springs roofs face summer heat, hail, strong storms and heavy rainfall. Roof system selection should account for building use, rooftop exhaust, drainage, corrosion and product specific chemical compatibility.',
+    countiesAndCitiesServed: [
+        'Siloam Springs, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Food production and manufacturing facilities',
+        'Industrial and warehouse properties',
+        'Retail and service commercial buildings',
+        'Healthcare and institutional properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        }
+    ]
+},\n  '/service-areas/maumelle': {
+    title: 'Commercial Roof Coatings in Maumelle, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Maumelle, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/maumelle',
+    regionName: 'Maumelle, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Maumelle, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Maumelle for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Maumelle commercial roofs experience humid heat, hail, wind driven rain and severe storms. Large low slope roofs need documented review of drainage, seams, penetrations and the condition of previous repairs or coatings.',
+    countiesAndCitiesServed: [
+        'Maumelle, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Office and business parks',
+        'Distribution and warehouse properties',
+        'Retail and service commercial buildings',
+        'Healthcare and institutional facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        }
+    ]
+},\n  '/service-areas/marion': {
+    title: 'Commercial Roof Coatings in Marion, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Marion, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/marion',
+    regionName: 'Marion, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Marion, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Marion for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Marion roofs face humid summers, heavy rain, hail and strong winds. Commercial inspections should focus on large roof drainage systems, exposed metal details, penetrations and wind vulnerable perimeter conditions.',
+    countiesAndCitiesServed: [
+        'Marion, Crittenden County',
+        'Crittenden County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Distribution and logistics facilities',
+        'Industrial and manufacturing buildings',
+        'Retail and commercial centers',
+        'Healthcare and professional properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        }
+    ]
+},\n  '/service-areas/forrest-city': {
+    title: 'Commercial Roof Coatings in Forrest City, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Forrest City, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/forrest-city',
+    regionName: 'Forrest City, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Forrest City, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Forrest City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Forrest City roofs experience humid heat, heavy rainfall and severe thunderstorms. Inspections should evaluate corrosion, drainage, flashing details and moisture before recommending restoration.',
+    countiesAndCitiesServed: [
+        'Forrest City, St. Francis County',
+        'St. Francis County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Agricultural processing and supply facilities',
+        'Warehousing and distribution properties',
+        'Manufacturing and industrial buildings',
+        'Retail and institutional facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
+    ]
+},\n  '/service-areas/malvern': {
+    title: 'Commercial Roof Coatings in Malvern, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Malvern, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/malvern',
+    regionName: 'Malvern, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Malvern, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Malvern for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Malvern commercial roofs face hot summers, hail, wind and heavy rain. Restoration evaluations should include metal condition, seams, fasteners, moisture and drainage around rooftop equipment.',
+    countiesAndCitiesServed: [
+        'Malvern, Hot Spring County',
+        'Hot Spring County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Warehouses and distribution facilities',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
+    ]
+},\n  '/service-areas/arkadelphia': {
+    title: 'Commercial Roof Coatings in Arkadelphia, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Arkadelphia, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/arkadelphia',
+    regionName: 'Arkadelphia, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Arkadelphia, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Arkadelphia for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof materials for restoration.',
+    countiesAndCitiesServed: [
+        'Arkadelphia, Clark County',
+        'Clark County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        }
+    ]
+},\n  '/service-areas/camden': {
+    title: 'Commercial Roof Coatings in Camden, Arkansas | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Camden, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/camden',
+    regionName: 'Camden, Arkansas',
+    heroHeadline: 'Commercial Roof Coatings in Camden, Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Camden for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for metal roof restoration.',
+    countiesAndCitiesServed: [
+        'Camden, Ouachita County',
+        'Ouachita County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing facilities',
+        'Government and institutional properties',
+        'Healthcare and medical buildings',
+        'Retail and commercial properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Magnolia',
+            href: '/service-areas/magnolia'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        }
+    ]
+},
 };
 
 
