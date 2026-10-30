@@ -35,7 +35,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
   return (
     <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd selection:bg-[#181818] selection:text-[#f4f3ef]">
       <SeoMeta
-        title="Commercial Roof Coatings & Restoration | Texarkana & Region"
+        title="Commercial Roof Coatings | Texarkana"
         description="Commercial roof coatings and restoration for aging metal and low-slope roofs. Silicone, acrylic and polyurethane systems, inspections and repairs. Serving Texarkana and regional markets within 250 miles. Call (903) 231-5940."
         canonicalPath="/"
       />
