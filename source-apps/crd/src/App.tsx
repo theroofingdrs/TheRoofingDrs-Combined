@@ -26,6 +26,7 @@ import { ServicePageTemplate } from './components/ServicePageTemplate';
 import { RoofSystemPageTemplate } from './components/RoofSystemPageTemplate';
 import { IndustryPageTemplate } from './components/IndustryPageTemplate';
 import { ServiceAreaTemplate } from './components/ServiceAreaTemplate';
+import { ArticlePageTemplate } from './components/ArticlePageTemplate';
 
 // Content Dictionaries
 import { SERVICES_CONTENT } from './siteContent';
@@ -34,6 +35,7 @@ import {
   INDUSTRIES_CONTENT,
   SERVICE_AREAS_CONTENT,
   CITY_SERVICE_AREAS_CONTENT,
+  COATING_ARTICLES_CONTENT,
 } from './siteSystemsContent';
 import { LeadType } from './types';
 
@@ -59,6 +61,19 @@ const MainAppContent: React.FC = () => {
     // Clean and normalize currentPath: strip query/hash, strip trailing slash, normalize casing
     const rawPath = currentPath.split('?')[0].split('#')[0];
     const normalizedPath = (rawPath.replace(/\/+$/, '') || '/').toLowerCase();
+
+    const articleData =
+      COATING_ARTICLES_CONTENT[normalizedPath] ||
+      COATING_ARTICLES_CONTENT[rawPath] ||
+      COATING_ARTICLES_CONTENT[currentPath];
+    if (articleData) {
+      return (
+        <ArticlePageTemplate
+          data={articleData}
+          onOpenInspection={handleOpenInspection}
+        />
+      );
+    }
 
     // 1. Core Dedicated Pages
     if (normalizedPath === '/' || normalizedPath === '') {
