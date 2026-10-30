@@ -30,12 +30,12 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   if (!isAuthenticated || !currentUser) {
     const isPortal = experienceName === 'Homeowner Portal';
 
-    const handleStaffLogin = (e: React.FormEvent) => {
+    const handleStaffLogin = async (e: React.FormEvent) => {
       e.preventDefault();
       setErrorMessage('');
       setIsSubmitting(true);
 
-      const res = loginStaff(email, password);
+      const res = await loginStaff(email, password);
       setIsSubmitting(false);
       if (!res.success) {
         setErrorMessage(res.error || 'Authentication failed');
@@ -145,22 +145,6 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
                   placeholder="••••••••"
                   className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500"
                 />
-              </div>
-
-              <div className="flex items-center justify-between text-[11px] text-slate-400 bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
-                <div className="truncate">
-                  <span className="text-slate-500">Demo Admin:</span> <code className="text-slate-300 font-mono">theroofingdrs@gmail.com</code>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setEmail('theroofingdrs@gmail.com');
-                    setPassword('admin1234');
-                  }}
-                  className="text-red-400 hover:text-red-300 font-bold ml-2 shrink-0 cursor-pointer"
-                >
-                  Auto-Fill
-                </button>
               </div>
 
               <button
