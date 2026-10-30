@@ -724,7 +724,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                   </div>
                 </div>
                 <div className="text-xs font-mono-crd text-[#bbbbbb] shrink-0">
-                  Documented Ark-La-Tex Portfolios
+                  Documented Commercial Roof Portfolios
                 </div>
               </div>
             </div>
@@ -871,7 +871,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 Roof Systems Engineered for Commercial Performance.
               </h2>
               <p className="text-base text-[#555555] leading-relaxed">
-                We engineer, repair, restore, and replace all major low-slope and commercial steep-slope systems across the Ark-La-Tex.
+                We engineer, repair, restore, and replace all major low-slope and commercial steep-slope systems across Texas, Arkansas, Louisiana, and Oklahoma.
               </p>
             </div>
             <div className="text-xs font-mono-crd text-[#77736b] uppercase tracking-wider">
@@ -899,7 +899,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                     code: 'EPDM',
                     title: 'Ethylene Propylene Diene Monomer',
                     specs: '45 to 90-mil • Vulcanized Synthetic Rubber',
-                    desc: 'Decades of proven Ark-La-Tex thermal cycling tolerance, extreme UV resistance, hail elongation, and low life-cycle cost.',
+                    desc: 'Designed for demanding regional thermal cycling, extreme UV resistance, hail elongation, and low life-cycle cost.',
                     href: '/epdm-roofing',
                   },
                   {
@@ -1200,7 +1200,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               <div className="p-6 space-y-3">
                 <div className="flex items-center justify-between text-[11px] font-mono-crd text-[#666666]">
                   <span>SYSTEM: 60-MIL TPO HEAT-WELDED</span>
-                  <span>ARK-LA-TEX REGION</span>
+                  <span>FOUR-STATE SERVICE AREA</span>
                 </div>
                 <h3 className="font-heading font-bold text-2xl uppercase text-[#181818]">
                   Industrial Distribution Logistics Center
@@ -1325,19 +1325,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       </section>
 
       {/* -------------------------------------------------------------------------
-          15. SERVICE AREA: Restrained Ark-La-Tex Regional Reach
+          15. SERVICE AREA: Four-State Commercial Coverage
          ------------------------------------------------------------------------- */}
       <section className="bg-white border-b border-[#e6e4df] py-18 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-5">
             <div className="text-xs font-mono-crd text-[#666666] uppercase tracking-wider">
-              REGIONAL OPERATING TERRITORY
+              FOUR-STATE OPERATING TERRITORY
             </div>
             <h2 className="text-3xl sm:text-5xl font-heading font-black uppercase text-[#181818] tracking-tight leading-[0.95]">
-              Commercial Roofing Across the Ark-La-Tex.
+              Commercial Roofing Across Four States.
             </h2>
             <p className="text-sm text-[#444444] leading-relaxed">
-              CRD's primary operating territory is centered around Texarkana and surrounding markets within approximately 75 miles, with larger commercial, industrial, and disaster-response projects potentially justifying additional travel across Texas, Arkansas, Louisiana, and Oklahoma.
+              CRD serves commercial properties throughout Texas, Arkansas, Louisiana, and Oklahoma. Operations are coordinated from Texarkana, and project scheduling, travel, and availability are confirmed based on location, scope, and site requirements.
             </p>
 
             <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
@@ -1346,28 +1346,28 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Texas Operations</div>
-                <div className="text-[11px] text-[#666666]">Texarkana TX, Bowie County, NE Texas</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
               <Link
                 to="/service-areas/arkansas"
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Arkansas Operations</div>
-                <div className="text-[11px] text-[#666666]">Texarkana AR, Miller County, SW Arkansas</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
               <Link
                 to="/service-areas/louisiana"
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Louisiana Operations</div>
-                <div className="text-[11px] text-[#666666]">Shreveport, Bossier, NW Louisiana</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
               <Link
                 to="/service-areas/oklahoma"
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Oklahoma Operations</div>
-                <div className="text-[11px] text-[#666666]">McCurtain County, SE Oklahoma</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
             </div>
           </div>
