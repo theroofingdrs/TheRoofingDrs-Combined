@@ -42,27 +42,45 @@ function findAsset(pathname, referer = '') {
 }
 
 function proxy(req, res, app, targetPath) {
-  const upstream = http.request({
-    hostname: '127.0.0.1',
-    port: app.port,
-    method: req.method,
-    path: targetPath,
-    headers: {
-      ...req.headers,
-      host: req.headers.host || `127.0.0.1:${app.port}`,
-      'x-forwarded-host': req.headers.host || `127.0.0.1:${app.port}`,
-      'x-forwarded-proto': req.headers['x-forwarded-proto'] || (req.socket.encrypted ? 'https' : 'http'),
-    },
-  }, (upstreamRes) => {
-    res.writeHead(upstreamRes.statusCode || 502, upstreamRes.headers);
-    upstreamRes.pipe(res);
-  });
-  upstream.on('error', (error) => {
-    console.error(`[${app.name}] proxy error:`, error.message);
-    if (!res.headersSent) res.writeHead(502, { 'content-type': 'text/plain; charset=utf-8' });
-    res.end('The website service is starting or temporarily unavailable.');
-  });
-  req.pipe(upstream);
+  const canRetry = req.method === 'GET' || req.method === 'HEAD';
+  let attempts = 0;
+
+  const send = () => {
+    if (res.destroyed || res.writableEnded) return;
+    attempts += 1;
+
+    const upstream = http.request({
+      hostname: '127.0.0.1',
+      port: app.port,
+      method: req.method,
+      path: targetPath,
+      headers: {
+        ...req.headers,
+        host: req.headers.host || `127.0.0.1:${app.port}`,
+        'x-forwarded-host': req.headers.host || `127.0.0.1:${app.port}`,
+        'x-forwarded-proto': req.headers['x-forwarded-proto'] || (req.socket.encrypted ? 'https' : 'http'),
+      },
+    }, (upstreamRes) => {
+      res.writeHead(upstreamRes.statusCode || 502, upstreamRes.headers);
+      upstreamRes.pipe(res);
+    });
+
+    upstream.on('error', (error) => {
+      const retryable = ['ECONNREFUSED', 'ECONNRESET', 'EHOSTUNREACH'].includes(error.code);
+      if (canRetry && retryable && attempts < 13 && !res.destroyed) {
+        setTimeout(send, 250);
+        return;
+      }
+      console.error(`[${app.name}] proxy error after ${attempts} attempt(s):`, error.message);
+      if (!res.headersSent) res.writeHead(502, { 'content-type': 'text/plain; charset=utf-8' });
+      res.end('The website service is starting or temporarily unavailable.');
+    });
+
+    if (canRetry) upstream.end();
+    else req.pipe(upstream);
+  };
+
+  send();
 }
 
 function serveLanding(req, res) {
