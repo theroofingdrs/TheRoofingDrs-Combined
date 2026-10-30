@@ -6660,6 +6660,12 @@ export const COATING_ARTICLES_CONTENT = {
       { name: 'Roof Coating Inspection Checklist', href: '/resources/commercial-roof-coating-inspection-checklist' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
       { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
+    
+      { name: 'Coat vs. Replace: Financial Comparison', href: '/coat-vs-replace' },
+      { name: 'Environmental Benefits of Roof Restoration', href: '/resources/environmental-benefits-of-roof-restoration' },
+      { name: 'Reflective Roof Coatings & Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
+      { name: 'Roof Coatings & HVAC Performance', href: '/resources/roof-coatings-and-hvac-performance' },
+      { name: 'Tax Incentives & Cool Roof Ratings', href: '/resources/commercial-roof-energy-tax-incentives' },
     ],
   },
 
@@ -6864,6 +6870,294 @@ export const COATING_ARTICLES_CONTENT = {
       { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
       { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
       { name: 'Commercial Roof Inspections', href: '/commercial-roof-inspections' },
+    ],
+  },
+
+  '/resources/environmental-benefits-of-roof-restoration': {
+    title: 'Environmental Benefits of Commercial Roof Restoration | CRD',
+    metaDescription: 'Learn how commercial roof restoration can reduce tear-off waste, landfill disposal, new material demand and construction disruption when an existing roof is suitable for coating.',
+    canonicalPath: '/resources/environmental-benefits-of-roof-restoration',
+    eyebrow: 'Commercial Roof Restoration & Sustainability',
+    headline: 'Keep a Roof Out of the Dumpster. Restore When It Makes Sense.',
+    intro: 'A full roof replacement can generate a substantial volume of removed roofing materials. When the existing roof assembly is dry, stable and suitable for restoration, a properly designed coating system may extend its service life while avoiding much of the tear-off and disposal associated with replacement. The responsible first step is an honest roof assessment, not a promise that every roof can be saved.',
+    sections: [
+      {
+        heading: 'Less Tear-Off Can Mean Less Roofing Waste',
+        paragraphs: [
+          'A restoration project generally retains the existing roof assembly and adds a compatible fluid-applied system after required repairs and preparation. If the roof qualifies, this can avoid removing and disposing of large areas of existing membrane, insulation and related materials.',
+          'The U.S. Environmental Protection Agency estimated that 600 million tons of construction and demolition debris were generated in 2018. That figure covers many types of construction activity and materials, not roofing alone, but it illustrates the scale of the broader waste challenge.',
+        ],
+        bullets: [
+      'Avoid unnecessary removal of serviceable roofing materials.',
+      'Reduce the volume of tear-off debris that must be transported and managed.',
+      'Limit demand for some new roof assembly materials when replacement is not necessary.',
+    ],
+      },
+      {
+        heading: 'Less Disruption at an Operating Property',
+        paragraphs: [
+          'Avoiding a full tear-off can reduce dumpster staging, material hauling, crane activity and the time spent exposing the roof deck. The actual disruption depends on roof size, access, repairs, weather and the selected coating system. Restoration is not a no-disruption project, but it may be less intrusive than a complete replacement.',
+        ],
+        bullets: [
+      'Fewer tear-off and disposal operations where the existing roof can remain.',
+      'Potentially less staging and hauling around active businesses.',
+      'A project plan that can be coordinated around tenants, customers and building operations.',
+    ],
+      },
+      {
+        heading: 'Restoration Is Not Always the Greener or Safer Choice',
+        paragraphs: [
+          'A roof with saturated insulation, widespread corrosion, structural deterioration, failed attachment or extensive trapped moisture may need substantial removal or replacement. Coating over these conditions can conceal problems and shorten the life of the investment. Wet materials and damaged sections must be identified and addressed before any restoration system is installed.',
+        ],
+        bullets: [
+      'Inspect the roof assembly and investigate moisture.',
+      'Remove or replace unsound or saturated sections as required.',
+      'Confirm the proposed coating is compatible with the existing substrate and manufacturer requirements.',
+    ],
+      },
+      {
+        heading: 'Measure the Project, Do Not Guess',
+        paragraphs: [
+          'A credible environmental comparison should document the roof area, existing assembly, materials that would otherwise be removed, expected repair scope, coating quantities and disposal plan for any material that must be replaced. CRD can help owners compare the proposed restoration scope with a replacement scope so the decision is based on the actual building.',
+        ],
+        bullets: [
+      'Compare restoration and replacement scopes side by side.',
+      'Identify what material can remain and what must be removed.',
+      'Request a documented commercial roof evaluation.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'Does roof restoration eliminate all landfill waste?', answer: 'No. Restoration can reduce tear-off waste when the existing roof is suitable, but damaged insulation, wet materials, failed flashings and other unsound sections may still need removal.' },
+      { question: 'Does the EPA say roofing is a major source of construction waste?', answer: 'EPA tracks construction and demolition debris across many material categories. Its 600-million-ton estimate for 2018 is for all covered C&D activity, not a roofing-only total.' },
+      { question: 'Is coating always more sustainable than replacement?', answer: 'No. A roof that is structurally unsound or moisture damaged may require replacement. The best option is the one that safely addresses the building condition and avoids premature repeat work.' },
+    ],
+    relatedLinks: [
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration Guide', href: '/resources/metal-roof-restoration-guide' },
+      { name: 'Heating and Cooling Benefits', href: '/resources/reflective-roof-coating-energy-savings' },
+    ],
+  },
+
+  '/resources/reflective-roof-coating-energy-savings': {
+    title: 'Reflective Commercial Roof Coatings & Energy Savings | CRD',
+    metaDescription: 'Understand how reflective commercial roof coatings can reduce rooftop heat gain, support cooling efficiency and help building owners evaluate potential utility savings.',
+    canonicalPath: '/resources/reflective-roof-coating-energy-savings',
+    eyebrow: 'Cool Roofs & Building Energy Performance',
+    headline: 'A Cooler Roof Can Change the Building\'s Energy Equation.',
+    intro: 'A roof is exposed to hours of direct sunlight. A compatible reflective coating with appropriate solar reflectance and thermal emittance can keep the roof surface cooler and reduce heat transferred into the building. The energy impact varies with climate, insulation, HVAC efficiency, building use and the existing roof color and condition.',
+    sections: [
+      {
+        heading: 'How Reflective Roof Coatings Work',
+        paragraphs: [
+          'Solar reflectance describes how much incoming sunlight a surface reflects. Thermal emittance describes how effectively a surface releases absorbed heat. A cool roof product is designed to reflect more solar energy and emit heat more effectively than a conventional dark surface.',
+          'ENERGY STAR explains that cool roofs can reduce roof surface temperature and heat transfer into buildings. On a typical summer afternoon, a clean white roof reflecting 80% of sunlight can be about 50°F cooler than a gray roof reflecting 20%. This is a roof-surface comparison, not a guaranteed indoor temperature or utility-bill reduction.',
+        ],
+        bullets: [
+      'Review rated solar reflectance and thermal emittance for the exact product.',
+      'Confirm the rating applies to the coating color and system being proposed.',
+      'Consider aged performance as well as initial reflectance.',
+    ],
+      },
+      {
+        heading: 'Where Energy Benefits May Be Greatest',
+        paragraphs: [
+          'Reflective roofs tend to offer the greatest cooling benefit in hot, sunny climates, particularly on buildings with low roof insulation and substantial air-conditioning demand. That makes roof reflectivity worth evaluating for many commercial properties in Texas, Arkansas, Oklahoma and Louisiana.',
+          'A highly insulated building may see a smaller change in annual energy use than a building with limited insulation. Heating penalties in cooler seasons can also affect the annual result, so a whole-building assessment is more useful than a roof-only promise.',
+        ],
+        bullets: [
+      'Warehouses and distribution buildings with large roof areas.',
+      'Retail, office and light industrial buildings with significant cooling loads.',
+      'Facilities with dark roofs, limited insulation or high summer HVAC demand.',
+    ],
+      },
+      {
+        heading: 'What Determines Actual Utility Savings?',
+        paragraphs: [
+          'A coating alone does not determine energy performance. Existing insulation, air leakage, HVAC controls, equipment efficiency, operating schedules, internal heat loads, roof assembly and local weather all influence the result. A reflective roof may reduce peak cooling demand without producing the same percentage reduction in total building electricity use.',
+        ],
+        bullets: [
+      'Existing roof color and reflectance.',
+      'Insulation R-value and roof assembly.',
+      'HVAC system type, condition and operating schedule.',
+      'Building occupancy, internal heat gains and local weather.',
+    ],
+      },
+      {
+        heading: 'Use Product Data and Building Data',
+        paragraphs: [
+          'CRD recommends reviewing product technical data and independent ratings where available, then comparing utility use before and after the project while accounting for weather and changes in building operations. The Cool Roof Rating Council maintains a directory of products and radiative performance data. ENERGY STAR provides educational guidance on cool roofs and their potential benefits.',
+        ],
+        bullets: [
+      'Ask for the exact coating product and color proposed.',
+      'Review CRRC-rated solar reflectance and thermal emittance where listed.',
+      'Use utility bills or an energy model to estimate building-specific impact.',
+      'Do not treat a roof-surface temperature difference as a guaranteed bill reduction.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'How much can a reflective roof coating reduce my electric bill?', answer: 'There is no reliable universal percentage. Savings depend on insulation, HVAC efficiency, building use, climate, roof condition and the product\'s measured performance.' },
+      { question: 'Can a white roof be 50 degrees cooler?', answer: 'ENERGY STAR cites an example comparing a clean white roof reflecting 80% of sunlight with a gray roof reflecting 20% on a typical summer afternoon. That is a surface-temperature comparison, not a promise for every roof.' },
+      { question: 'Does every roof coating qualify as a cool roof?', answer: 'No. Reflective performance varies by formulation, color and product. Review measured solar reflectance and thermal emittance for the exact product.' },
+      { question: 'Will a reflective roof reduce heating costs too?', answer: 'Not necessarily. A reflective roof can reduce solar heat gain in summer, but in some climates it may also reduce useful winter heat gain. Annual building performance should be considered.' },
+    ],
+    relatedLinks: [
+      { name: 'Protect Your HVAC Investment', href: '/resources/roof-coatings-and-hvac-performance' },
+      { name: 'Tax Incentives and Energy Efficiency', href: '/resources/commercial-roof-energy-tax-incentives' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+    ],
+  },
+
+  '/resources/roof-coatings-and-hvac-performance': {
+    title: 'Commercial Roof Coatings, HVAC Performance & Building Comfort | CRD',
+    metaDescription: 'Learn how reflective commercial roof systems can reduce roof heat gain and cooling demand, and what building owners should evaluate before expecting HVAC savings.',
+    canonicalPath: '/resources/roof-coatings-and-hvac-performance',
+    eyebrow: 'Building Operations & HVAC Efficiency',
+    headline: 'Reduce Rooftop Heat Gain. Give Your Cooling System a Better Starting Point.',
+    intro: 'Commercial HVAC systems work to remove heat from occupied buildings. A roof that absorbs and transfers less solar heat may reduce part of the cooling load, especially during hot sunny weather. Reflective roof restoration can be one part of a broader building-efficiency strategy, but it is not a substitute for properly maintained and correctly sized HVAC equipment.',
+    sections: [
+      {
+        heading: 'The Roof and HVAC System Work Together',
+        paragraphs: [
+          'A low-slope roof receives intense solar exposure. When the roof surface becomes hot, heat can move through the roof assembly and contribute to the building\'s cooling load. A properly selected reflective roof surface can reduce roof temperature and the amount of solar heat transferred inward.',
+          'ENERGY STAR identifies reduced air-conditioning costs and reduced strain on the electrical grid during peak demand as potential cool-roof benefits. The actual effect on an individual HVAC system depends on the entire building.',
+        ],
+        bullets: [
+      'Lower roof surface temperatures under suitable conditions.',
+      'Potential reduction in peak cooling demand.',
+      'Improved indoor comfort in some buildings, depending on insulation and system design.',
+    ],
+      },
+      {
+        heading: 'Why This Matters for Equipment and Operating Costs',
+        paragraphs: [
+          'When the building gains less heat through the roof, cooling equipment may have less heat to remove during some operating periods. This can support lower cooling energy use and may reduce runtime or peak demand in suitable buildings. It does not establish a specific percentage of compressor life extension or guarantee fewer service calls.',
+          'Equipment condition, refrigerant charge, airflow, controls, maintenance and sizing remain major determinants of HVAC performance. Roof restoration should be considered alongside, not instead of, normal HVAC maintenance.',
+        ],
+        bullets: [
+      'Review cooling schedules and peak summer utility demand.',
+      'Maintain coils, filters, refrigerant charge and airflow.',
+      'Evaluate roof insulation and air leakage as well as reflectivity.',
+      'Compare HVAC runtime and energy use while adjusting for weather and occupancy.',
+    ],
+      },
+      {
+        heading: 'Refrigerated and Temperature-Sensitive Facilities',
+        paragraphs: [
+          'Warehouses, food distribution facilities and buildings with refrigerated spaces may have substantial cooling requirements. A reflective roof may reduce some solar heat gain through the roof, but it does not replace refrigeration-system design, insulation, vapor control, air sealing or dock-door management. Any expected benefit should be assessed by the facility\'s energy professional.',
+        ],
+        bullets: [
+      'Review roof and wall insulation.',
+      'Check vapor barriers, air leakage and loading-dock practices.',
+      'Separate refrigeration loads from general building cooling when analyzing utility data.',
+    ],
+      },
+      {
+        heading: 'Build a Defensible Savings Estimate',
+        paragraphs: [
+          'A credible estimate begins with baseline utility data, roof assembly information, operating hours, HVAC characteristics and the exact reflective product\'s performance ratings. Energy modeling or a qualified energy professional may be needed for a reliable forecast. Avoid converting a surface-temperature difference directly into a percentage of HVAC savings.',
+        ],
+        bullets: [
+      'Collect 12 to 24 months of utility data where available.',
+      'Document HVAC equipment and operating schedules.',
+      'Confirm product performance data and roof assembly details.',
+      'Compare post-project usage with weather and occupancy adjustments.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'Will roof coating make my HVAC units last longer?', answer: 'It may reduce some cooling demand in suitable buildings, but CRD cannot promise a specific increase in HVAC service life. Equipment life depends on maintenance, installation, controls, loading and operating conditions.' },
+      { question: 'Can a reflective roof lower the temperature inside my building?', answer: 'It may reduce heat transfer through the roof, but indoor temperature also depends on insulation, air leakage, windows, internal heat loads and HVAC operation.' },
+      { question: 'Does this help refrigerated warehouses?', answer: 'Potentially, by reducing some roof-related heat gain. Refrigeration performance depends on many other factors and should be evaluated by a qualified energy or refrigeration professional.' },
+    ],
+    relatedLinks: [
+      { name: 'Reflective Roof Coating Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Commercial Roof Cost Calculator', href: '/commercial-roof-cost-calculator' },
+      { name: 'Tax Incentives and Energy Efficiency', href: '/resources/commercial-roof-energy-tax-incentives' },
+    ],
+  },
+
+  '/resources/commercial-roof-energy-tax-incentives': {
+    title: 'Commercial Roof Coatings, Energy Ratings & Tax Incentives | CRD',
+    metaDescription: 'Understand ENERGY STAR cool roof guidance, CRRC product ratings, utility rebates and the limited remaining eligibility rules for the federal 179D commercial building deduction.',
+    canonicalPath: '/resources/commercial-roof-energy-tax-incentives',
+    eyebrow: 'Commercial Building Energy Incentives',
+    headline: 'Know the Ratings. Understand the Incentives. Verify Eligibility.',
+    intro: 'Reflective roof improvements may support a building\'s energy-efficiency goals, but a coating does not automatically qualify for a tax credit, tax deduction or ENERGY STAR certification. Incentives depend on the exact product, project scope, building, utility territory, construction timing and current law. CRD provides roofing information, not tax or legal advice.',
+    sections: [
+      {
+        heading: 'ENERGY STAR Is an Efficiency Resource, Not an Automatic Coating Tax Credit',
+        paragraphs: [
+          'ENERGY STAR explains how cool roofs use solar reflectance and thermal emittance to reduce roof surface temperatures and potentially reduce air-conditioning demand. Its cool-roof guidance should not be interpreted as a blanket federal tax credit for applying a roof coating.',
+          'Ask the manufacturer for product-specific technical data and any applicable certification or listing. Do not describe a coating as ENERGY STAR certified unless that exact product and claim are supported by current official documentation.',
+        ],
+        bullets: [
+      'Identify the exact product, formulation and color.',
+      'Review published solar reflectance and thermal emittance.',
+      'Check current ENERGY STAR and Cool Roof Rating Council resources before making a certification claim.',
+    ],
+      },
+      {
+        heading: 'Cool Roof Rating Council Product Ratings',
+        paragraphs: [
+          'The Cool Roof Rating Council maintains a product directory with radiative performance information, including solar reflectance and thermal emittance. These values can help owners and design professionals compare products. A rating is product performance information; it is not itself a tax credit or proof that a building will achieve a particular utility savings.',
+        ],
+        bullets: [
+      'Check the exact product listing and color.',
+      'Review initial and aged reflectance data when available.',
+      'Confirm the proposed system and substrate are approved by the manufacturer.',
+    ],
+      },
+      {
+        heading: 'Federal Section 179D: A Critical 2026 Deadline',
+        paragraphs: [
+          'The federal Energy Efficient Commercial Buildings Deduction under Internal Revenue Code Section 179D has a statutory termination rule. Under current IRS guidance, the deduction does not apply to property for which construction begins after June 30, 2026. Certain projects with construction beginning on or before that date may still qualify if all other requirements are met.',
+          'The deduction is not a general roof-coating rebate. Eligible property must meet technical energy-savings and building requirements, and the deduction generally involves qualifying building systems including the building envelope, HVAC, lighting or hot water. A roof coating by itself does not establish eligibility. Project timing, energy modeling or measurement, certification and tax rules matter.',
+        ],
+        bullets: [
+      'Do not assume a project starting after June 30, 2026 qualifies under Section 179D.',
+      'For qualifying earlier projects, retain contracts, construction-start documentation, product records and energy certifications.',
+      'Have a qualified tax professional determine eligibility and complete required filings.',
+    ],
+      },
+      {
+        heading: 'Utility Rebates and Local Incentives',
+        paragraphs: [
+          'Some utilities and state or local programs offer incentives for eligible energy-efficiency improvements. Availability changes by service territory, customer class, product, project size, pre-approval rules and funding. A commercial property owner should check with the serving electric utility before signing a contract or beginning work; some programs require pre-approval or an energy assessment.',
+        ],
+        bullets: [
+      'Identify the property\'s electric utility and rate class.',
+      'Ask whether cool-roof, building-envelope or whole-building efficiency incentives are currently funded.',
+      'Confirm product requirements, pre-approval, documentation and application deadlines in writing.',
+    ],
+      },
+      {
+        heading: 'Tax Treatment Depends on the Project',
+        paragraphs: [
+          'Whether a roof restoration expense is currently deductible, capitalized or depreciated depends on the facts and applicable tax rules. Do not assume every coating project is a repair expense or qualifies for immediate expensing. Owners should consult their CPA or tax attorney before making a tax decision.',
+        ],
+        bullets: [
+      'Separate roofing scope and invoices into documented work categories.',
+      'Retain inspection reports, proposals, product data and completion records.',
+      'Obtain project-specific advice from the owner\'s tax professional.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'Does an ENERGY STAR roof coating qualify for a federal tax credit?', answer: 'There is no blanket federal tax credit simply for applying an ENERGY STAR or reflective roof coating. Product claims and project eligibility must be checked against current official rules.' },
+      { question: 'Can a commercial roof coating qualify for Section 179D in 2026?', answer: 'Potentially only where the property and project satisfy the applicable requirements and the construction-start deadline of June 30, 2026. A coating alone does not establish eligibility. Consult a qualified tax professional.' },
+      { question: 'Are utility rebates available in Texas, Arkansas, Oklahoma or Louisiana?', answer: 'Programs vary by utility territory and change over time. The property owner should confirm current availability, eligible products and pre-approval requirements directly with the serving utility.' },
+      { question: 'Can CRD tell me whether my project qualifies for a tax deduction?', answer: 'CRD can provide the roofing scope and product documentation needed for review, but tax eligibility must be determined by the owner\'s CPA or tax attorney.' },
+    ],
+    relatedLinks: [
+      { name: 'Reflective Roof Coating Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
+      { name: 'Environmental Benefits of Roof Restoration', href: '/resources/environmental-benefits-of-roof-restoration' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
     ],
   },
 };
