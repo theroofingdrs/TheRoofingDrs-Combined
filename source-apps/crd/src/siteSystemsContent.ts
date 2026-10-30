@@ -3624,6 +3624,798 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/paris'
         }
     ]
+},
+  '/service-areas/broken-arrow': {
+    title: 'Commercial Roof Coatings in Broken Arrow, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Broken Arrow. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/broken-arrow',
+    regionName: 'Broken Arrow, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Broken Arrow.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Broken Arrow for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating compatibility.',
+    countiesAndCitiesServed: [
+        'Broken Arrow, Tulsa County',
+        'Tulsa County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Aerospace and energy service properties',
+        'Retail and mixed use developments',
+        'Healthcare and medical campuses'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/muskogee': {
+    title: 'Commercial Roof Coatings in Muskogee, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Muskogee. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/muskogee',
+    regionName: 'Muskogee, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Muskogee.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Muskogee for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs.',
+    countiesAndCitiesServed: [
+        'Muskogee, Muskogee County',
+        'Muskogee County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Warehousing and distribution',
+        'Retail and institutional buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/owasso': {
+    title: 'Commercial Roof Coatings in Owasso, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Owasso. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/owasso',
+    regionName: 'Owasso, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Owasso.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Owasso for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility.',
+    countiesAndCitiesServed: [
+        'Owasso, Tulsa County',
+        'Tulsa County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business parks',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Industrial and warehouse properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/bartlesville': {
+    title: 'Commercial Roof Coatings in Bartlesville, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Bartlesville. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/bartlesville',
+    regionName: 'Bartlesville, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Bartlesville.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bartlesville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage.',
+    countiesAndCitiesServed: [
+        'Bartlesville, Washington County',
+        'Washington County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Energy and industrial facilities',
+        'Manufacturing and fabrication properties',
+        'Healthcare and institutional buildings',
+        'Retail and office properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/lawton': {
+    title: 'Commercial Roof Coatings in Lawton, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Lawton. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/lawton',
+    regionName: 'Lawton, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Lawton.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lawton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Lawton, Comanche County',
+        'Comanche County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Military and government support facilities',
+        'Manufacturing and industrial properties',
+        'Healthcare and medical buildings',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/edmond': {
+    title: 'Commercial Roof Coatings in Edmond, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Edmond. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/edmond',
+    regionName: 'Edmond, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Edmond.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Edmond for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition.',
+    countiesAndCitiesServed: [
+        'Edmond, Oklahoma County',
+        'Oklahoma County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Corporate offices and business parks',
+        'Healthcare and medical properties',
+        'Retail and mixed use developments'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/norman': {
+    title: 'Commercial Roof Coatings in Norman, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Norman. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/norman',
+    regionName: 'Norman, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Norman.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Norman for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and roof edge details.',
+    countiesAndCitiesServed: [
+        'Norman, Cleveland County',
+        'Cleveland County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and research facilities',
+        'Healthcare and medical campuses',
+        'Retail and commercial properties',
+        'Industrial and warehouse facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/moore': {
+    title: 'Commercial Roof Coatings in Moore, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Moore. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/moore',
+    regionName: 'Moore, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Moore.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Moore for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Moore commercial roofs face severe thunderstorms, hail, high winds and summer heat. Inspections should prioritize wind exposed edges, membrane seams, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Moore, Cleveland County',
+        'Cleveland County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail centers and shopping properties',
+        'Healthcare and medical facilities',
+        'Office and professional buildings',
+        'Warehouses and service commercial properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/midwest-city': {
+    title: 'Commercial Roof Coatings in Midwest City, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Midwest City. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/midwest-city',
+    regionName: 'Midwest City, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Midwest City.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Midwest City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Midwest City roofs face hail, high winds, severe thunderstorms and intense summer heat. Roof condition assessments should include roof edges, penetrations, drainage and metal attachment details.',
+    countiesAndCitiesServed: [
+        'Midwest City, Oklahoma County',
+        'Oklahoma County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Aviation and aerospace support facilities',
+        'Government and institutional properties',
+        'Industrial and warehouse buildings',
+        'Retail and healthcare properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/shawnee': {
+    title: 'Commercial Roof Coatings in Shawnee, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Shawnee. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/shawnee',
+    regionName: 'Shawnee, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Shawnee.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Shawnee for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Shawnee roofs experience hail, high winds, severe storms and seasonal temperature changes. Inspections should document roof condition, drainage, metal fasteners and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Shawnee, Pottawatomie County',
+        'Pottawatomie County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical properties',
+        'Retail and commercial centers',
+        'Education and institutional buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/yukon': {
+    title: 'Commercial Roof Coatings in Yukon, OK | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Yukon. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/yukon',
+    regionName: 'Yukon, Oklahoma',
+    heroHeadline: 'Commercial Roof Coatings in Yukon.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Yukon for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Yukon roofs face severe thunderstorms, hail, high winds and hot summers. Large commercial roof evaluations should focus on wind exposed edges, seams, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Yukon, Canadian County',
+        'Canadian County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Warehousing and logistics facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers',
+        'Healthcare and professional properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/monroe': {
+    title: 'Commercial Roof Coatings in Monroe, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Monroe. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/monroe',
+    regionName: 'Monroe, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Monroe.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Monroe for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Monroe roofs experience humid heat, heavy rainfall and severe thunderstorms. Commercial roof evaluations should consider corrosion, drainage, seams, fasteners and moisture within the existing assembly.',
+    countiesAndCitiesServed: [
+        'Monroe, Ouachita County',
+        'Ouachita County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Manufacturing and industrial facilities',
+        'Retail and commercial centers',
+        'Warehouses and distribution properties'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/west-monroe': {
+    title: 'Commercial Roof Coatings in West Monroe, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in West Monroe. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/west-monroe',
+    regionName: 'West Monroe, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in West Monroe.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in West Monroe for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'West Monroe commercial roofs face humid heat, heavy rainfall, hail and strong storms. Inspections should document drainage, roof penetrations, metal seams, corrosion and coating condition.',
+    countiesAndCitiesServed: [
+        'West Monroe, Ouachita County',
+        'Ouachita County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Office and professional buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/ruston': {
+    title: 'Commercial Roof Coatings in Ruston, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Ruston. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/ruston',
+    regionName: 'Ruston, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Ruston.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Ruston for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Ruston roofs experience humid summers, heavy rainfall and severe thunderstorms. Roof restoration planning should include drainage, seams, flashing transitions, fasteners and substrate condition.',
+    countiesAndCitiesServed: [
+        'Ruston, Lincoln County',
+        'Lincoln County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Healthcare and medical properties',
+        'Manufacturing and industrial buildings',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/alexandria': {
+    title: 'Commercial Roof Coatings in Alexandria, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Alexandria. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/alexandria',
+    regionName: 'Alexandria, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Alexandria.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Alexandria for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Alexandria commercial roofs face humid heat, heavy rainfall, hail and severe thunderstorms. Roof evaluations should include moisture, drainage, corrosion, seams and penetrations.',
+    countiesAndCitiesServed: [
+        'Alexandria, Rapides County',
+        'Rapides County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Government and institutional facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/natchitoches': {
+    title: 'Commercial Roof Coatings in Natchitoches, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Natchitoches. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/natchitoches',
+    regionName: 'Natchitoches, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Natchitoches.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Natchitoches for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Natchitoches roofs experience humid heat, heavy rain and seasonal severe storms. Commercial inspections should evaluate drainage, roof edges, metal fasteners, seams and the condition of existing coatings.',
+    countiesAndCitiesServed: [
+        'Natchitoches, Natchitoches County',
+        'Natchitoches County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Healthcare and medical properties',
+        'Hospitality and tourism properties',
+        'Retail and commercial buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/pineville-la': {
+    title: 'Commercial Roof Coatings in Pineville, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Pineville. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/pineville-la',
+    regionName: 'Pineville, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Pineville.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Pineville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Pineville commercial roofs face humid summers, heavy rainfall and severe thunderstorms. Roof evaluations should document leaks, drainage, flashing, penetrations and restoration suitability.',
+    countiesAndCitiesServed: [
+        'Pineville, Rapides County',
+        'Rapides County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Education and institutional properties',
+        'Retail and commercial centers',
+        'Light industrial and warehouse buildings'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
+},
+  '/service-areas/minden': {
+    title: 'Commercial Roof Coatings in Minden, LA | CRD',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Minden. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    canonicalPath: '/service-areas/minden',
+    regionName: 'Minden, Louisiana',
+    heroHeadline: 'Commercial Roof Coatings in Minden.',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Minden for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    weatherAndStormFactors: 'Minden roofs experience humid heat, heavy rainfall and severe storms. Metal corrosion, seam integrity, fasteners and drainage should be reviewed before recommending a coating system.',
+    countiesAndCitiesServed: [
+        'Minden, Webster County',
+        'Webster County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical buildings',
+        'Retail and commercial centers',
+        'Warehouses and service facilities'
+    ],
+    serviceCapabilities: [
+        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Documented roof inspections and repair, restoration or replacement recommendations'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
+    ]
 }
 };
 
