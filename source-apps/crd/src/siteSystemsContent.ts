@@ -119,7 +119,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Tapered insulation layout and cricket slope geometry',
     ],
     faqs: [
-      { question: 'Why does black EPDM get so hot?', answer: 'Black EPDM can absorb substantial solar energy. A compatible reflective coating may reduce roof surface temperature, but the exact product's published solar reflectance and thermal emittance should be reviewed. Applying a coating does not automatically make a roof ENERGY STAR certified.' },
+      { question: 'Why does black EPDM get so hot?', answer: 'Black EPDM can absorb substantial solar energy. A compatible reflective coating may reduce roof surface temperature, but the exact product’s published solar reflectance and thermal emittance should be reviewed. Applying a coating does not automatically make a roof ENERGY STAR certified.' },
     ],
     relatedServices: [
       { name: 'Commercial Roof Repair', href: '/commercial-roof-repair' },
@@ -4997,8 +4997,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ]
 },
   '/service-areas/desoto': {
-    title: 'Commercial Roof Coatings in DeSoto, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: 'Commercial Roof Coatings in DeSoto, TX | CRD',    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/desoto',
     regionName: 'DeSoto, Texas',
     heroHeadline: 'Commercial Roof Coatings in DeSoto, Texas.',
