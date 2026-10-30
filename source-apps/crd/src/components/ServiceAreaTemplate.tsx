@@ -26,6 +26,7 @@ export interface ServiceAreaData {
   countiesAndCitiesServed: string[];
   keyIndustriesInRegion: string[];
   serviceCapabilities: string[];
+  cityLinks?: { name: string; href: string }[];
 }
 
 interface ServiceAreaTemplateProps {
@@ -123,6 +124,43 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Local Commercial Market Profile & Internal City Links */}
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="max-w-3xl">
+          <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">
+            Local Commercial Market
+          </div>
+          <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">
+            Commercial Properties in {data.regionName}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-5">
+            {data.keyIndustriesInRegion.map((industry, idx) => (
+              <div key={idx} className="p-4 bg-[#0e1422] border border-slate-800 rounded-lg text-xs text-slate-200">
+                {industry}
+              </div>
+            ))}
+          </div>
+        </div>
+        {data.cityLinks && data.cityLinks.length > 0 && (
+          <div className="border-t border-slate-800 pt-6">
+            <h3 className="font-heading font-bold text-sm uppercase text-white mb-3">
+              Nearby Commercial Service Markets
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {data.cityLinks.map((city) => (
+                <Link
+                  key={city.href}
+                  to={city.href}
+                  className="px-3 py-2 bg-slate-900 border border-slate-800 hover:border-amber-500 text-xs text-slate-300 hover:text-white transition-colors"
+                >
+                  {city.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Capabilities */}
