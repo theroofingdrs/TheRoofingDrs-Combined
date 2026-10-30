@@ -372,6 +372,8 @@ export const SERVICES_CONTENT: Record<string, ServicePageData> = {
     relevantRoofSystems: [
       { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing' },
       { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings' },
+      { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings' },
+      { name: 'Polyurethane Roof Coatings', href: '/polyurethane-roof-coatings' },
       { name: 'TPO Roofing', href: '/tpo-roofing' },
       { name: 'EPDM Roofing', href: '/epdm-roofing' },
     ],
