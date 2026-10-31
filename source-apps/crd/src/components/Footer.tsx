@@ -4,6 +4,8 @@ import { Link } from '../router';
 import { BUSINESS_INFO } from '../constants';
 import { CrdLogo } from './CrdLogo';
 
+const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#151515] border-t border-[#262626] text-[#888888] font-sans-crd pt-16 pb-24 lg:pb-16">
@@ -227,9 +229,9 @@ export const Footer: React.FC = () => {
               <Link to="/contact" className="hover:text-[#cccccc] transition-colors">
                 Contact
               </Link>
-              <Link to="/admin" className="hover:text-[#d99a19] font-mono-crd text-[11px] transition-colors">
+              <a href={OPERATIONS_PORTAL_URL} className="hover:text-[#d99a19] font-mono-crd text-[11px] transition-colors">
                 Staff Portal
-              </Link>
+              </a>
             </div>
           </div>
         </div>
