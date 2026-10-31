@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CalendarDays, Clock3, Search } from 'lucide-react';
 import { SeoMeta } from '../components/SeoMeta';
 import { Link } from '../router';
@@ -57,6 +57,27 @@ export const BlogPage: React.FC<{ currentPath: string; onOpenInspection: (type?:
   const slug = currentPath.startsWith('/blog/') ? currentPath.slice('/blog/'.length) : '';
   const article = posts.find((post) => post.slug === slug);
   const visiblePosts = useMemo(() => posts.filter((post) => (category === 'All Articles' || post.category === category) && (post.title + ' ' + post.excerpt).toLowerCase().includes(query.toLowerCase())), [category, query]);
+
+  useEffect(() => {
+    if (!article) return;
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-crd-blog-schema', 'true');
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: article.title,
+      description: article.excerpt,
+      datePublished: '2026-10-31',
+      dateModified: '2026-10-31',
+      mainEntityOfPage: 'https://theroofingdrs.com/commercial/blog/' + article.slug,
+      author: { '@type': 'Organization', name: 'Commercial Roof Doctors' },
+      publisher: { '@type': 'Organization', name: 'Commercial Roof Doctors' },
+      image: 'https://theroofingdrs.com/commercial' + article.image,
+    });
+    document.head.appendChild(script);
+    return () => script.remove();
+  }, [article]);
 
   if (slug && article) {
     const canonical = 'https://theroofingdrs.com/commercial/blog/' + article.slug;
