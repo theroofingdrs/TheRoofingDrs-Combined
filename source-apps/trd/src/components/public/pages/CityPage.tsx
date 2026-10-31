@@ -84,13 +84,13 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
       {
         name: 'Class 4 Impact Roof Replacement',
-        desc: 'Lifetime architectural shingles qualifying for up to 25% Texas insurance discounts.',
+        desc: 'Class 4 impact-resistant shingle options; ask your insurer whether your policy offers a qualifying discount.',
         path: '/roofing/roof-replacement',
       },
     ],
     whyLocalChooseUs: [
       'Local roofing teams serving homeowners throughout Texarkana and surrounding communities.',
-      'True 2-hour emergency dispatch response for storm tarping in Texarkana and Wake Village.',
+      'Emergency storm response availability is confirmed based on weather conditions, current demand and location.',
       'We physically meet Bowie County and Miller County insurance adjusters on your roof.',
       'Strictly compliant with Texas HB 2102 anti-deductible waiver laws.',
     ],
@@ -210,7 +210,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
         path: '/storm-damage/wind-damage',
       },
       {
-        name: '130 MPH High-Wind System Replacement',
+        name: 'High-Wind Roof System Replacement',
         desc: 'Enhanced 6-nail fastening patterns and starter strip locks on every eave and rake.',
         path: '/roofing/roof-replacement',
       },
@@ -222,7 +222,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
     ],
     whyLocalChooseUs: [
       'Local service coverage throughout New Boston and surrounding Northeast Texas communities.',
-      'We never use standard 4-nail installation; we mandate 6 nails per shingle for 130 mph wind certification.',
+      'Shingle fastening patterns follow the selected manufacturer’s installation requirements and the specifications of the complete roof system.',
       'Deep relationships working with Bowie County homeowners and veterans near RRAD.',
       'Assistance meeting insurance adjusters on wind damage and creased shingle claims.',
     ],
@@ -462,7 +462,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
     localServices: [
       {
         name: 'Class 4 Impact-Resistant Upgrades',
-        desc: 'UL 2218 Class 4 certified shingles saving up to 25% on Smith County home insurance.',
+        desc: 'UL 2218 Class 4 impact-resistant shingle options; insurance discounts, if available, depend on the carrier and policy.',
         path: '/roofing/roof-replacement',
       },
       {
@@ -544,7 +544,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       'Unmatched experience preserving historic architectural aesthetics with modern lifetime materials.',
       'We replace rotted decking sheathing—never covering over soft or compromised wood.',
       'Rapid emergency tarping response for fallen limb punctures in Harrison County.',
-      'Certified CertainTeed and Owens Corning installers with 130 mph wind warranties.',
+      'Installation options from established shingle manufacturers, with product warranties subject to manufacturer terms and installation requirements.',
     ],
     localFaqs: [
       {
