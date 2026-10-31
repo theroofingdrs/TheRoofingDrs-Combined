@@ -818,7 +818,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 
   '/service-areas/texas': {
     title: 'Commercial Roofing in Northeast Texas and DFW | CRD',
-    metaDescription: 'Commercial Roof Doctors helps commercial property owners and managers evaluate roof condition, repair needs, restoration suitability and replacement options in Northeast Texas and DFW. Project availability is confirmed by location, roof type and scope.',
+    metaDescription: "Commercial roofing across Northeast Texas and Dallas-Fort Worth. Inspections, repairs, restoration and replacement planning. Confirm project scope.",
     canonicalPath: '/service-areas/texas',
     regionName: 'Northeast Texas Territory',
     heroHeadline: 'Commercial Roofing Across Northeast Texas and DFW.',
@@ -931,7 +931,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 
   '/service-areas/arkansas': {
     title: 'Commercial Roofing Across Arkansas | CRD',
-    metaDescription: 'Commercial Roof Doctors evaluates commercial properties in Arkansas for roof inspections, repairs, restoration, compatible coatings and replacement planning. Project availability is confirmed by location, roof type and scope.',
+    metaDescription: "Commercial roofing across Arkansas. Inspections, repairs, restoration and replacement planning. Project availability confirmed by location and scope.",
     canonicalPath: '/service-areas/arkansas',
     regionName: 'Arkansas Regional Service Markets',
     heroHeadline: 'Commercial Roofing Across Arkansas.',
@@ -1002,7 +1002,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 
   '/service-areas/louisiana': {
     title: 'Commercial Roofing in Northwest Louisiana | CRD',
-    metaDescription: 'Commercial Roof Doctors evaluates Northwest Louisiana commercial roofs for inspections, repairs, restoration, compatible coatings and replacement planning. Project availability is confirmed by location, roof type and scope.',
+    metaDescription: "Commercial roofing in Northwest Louisiana. Inspections, repairs, restoration and replacement planning. Confirm availability by roof type and scope.",
     canonicalPath: '/service-areas/louisiana',
     regionName: 'Northwest Louisiana Territory',
     heroHeadline: 'Commercial Roofing Across Northwest Louisiana.',
@@ -1044,7 +1044,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 
   '/service-areas/oklahoma': {
     title: 'Commercial Roofing Across Oklahoma | CRD',
-    metaDescription: 'Commercial Roof Doctors evaluates Oklahoma commercial properties for roof inspections, repairs, restoration, compatible coatings and replacement planning. Project availability is confirmed by location, roof type and scope.',
+    metaDescription: "Commercial roofing across Oklahoma. Inspections, repairs, restoration and replacement planning. Project availability confirmed by scope.",
     canonicalPath: '/service-areas/oklahoma',
     regionName: 'Oklahoma Regional Service Markets',
     heroHeadline: 'Commercial Roofing Across Oklahoma.',
@@ -1129,7 +1129,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/dallas-fort-worth': {
     title: 'Commercial Roofing in Dallas-Fort Worth | CRD',
-    metaDescription: 'Commercial Roof Doctors evaluates Dallas-Fort Worth commercial roofs for inspections, repairs, restoration, compatible coatings and replacement planning. Project availability is confirmed by roof type and scope.',
+    metaDescription: "Commercial roofing across Dallas-Fort Worth. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/dallas-fort-worth',
     regionName: 'Dallas-Fort Worth Metroplex',
     heroHeadline: 'Commercial Roofing Across Dallas-Fort Worth.',
