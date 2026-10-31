@@ -39,6 +39,7 @@ async function check(path, test, description) {
 try {
   await waitFor('/');
   await check('/', (body) => body.includes('Residential roofing') && body.includes('Commercial roofing'), 'shared landing page');
+  await check('/', (body) => body.includes('G-V9LXQ6DG4H'), 'Google Analytics tag present on landing page');
   await check('/residential/', (body) => body.includes('/residential/assets/'), 'residential app and asset base');
   await check('/commercial/', (body) => body.includes('/commercial/assets/'), 'commercial app and asset base');
   await check('/residential/api/health', (body) => body.includes('ok'), 'residential API proxy');
@@ -46,7 +47,7 @@ try {
   await check('/residential/the_roof_doctors_logo_white.png', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential logo asset');
   await check('/commercial/assets/crd-logo-full-light.png', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial logo asset');
   await check('/residential/assets/images/grand_manor_roof.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential roofing photo');
-  await check('/commercial/assets/images/commercial-warehouse-roof.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial roofing photo');
+  await check('/commercial/assets/images/commercial_warehouse_roof_1788537086946.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial roofing photo');
   console.log('Combined site smoke tests passed.');
 } catch (error) {
   console.error(error instanceof Error ? error.message : error);
