@@ -48,6 +48,7 @@ export const IndustryPageTemplate: React.FC<IndustryPageTemplateProps> = ({
         title={data.title}
         description={data.metaDescription}
         canonicalPath={data.canonicalPath}
+        serviceType={`Commercial roofing for ${data.industryName}`}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Industries', url: '/industries/churches' },
