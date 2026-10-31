@@ -315,6 +315,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             >
               About
             </Link>
+            <Link
+              id="nav-blog-link"
+              to="/blog"
+              className={`px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
+                currentPath.startsWith('/blog') ? 'text-[#d99a19]' : 'text-[#cccccc]'
+              }`}
+            >
+              Insights
+            </Link>
           </nav>
 
           {/* Action Hub / CTAs */}
