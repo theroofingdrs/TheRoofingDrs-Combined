@@ -4,7 +4,7 @@ import { Link, useRouter } from '../router';
 import { BUSINESS_INFO, NAVIGATION_LINKS } from '../constants';
 import { CrdLogo } from './CrdLogo';
 
-const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+const OPERATIONS_PORTAL_URL = 'https://operations.theroofingdrs.com';
 
 interface HeaderProps {
   onOpenInspection: () => void;
