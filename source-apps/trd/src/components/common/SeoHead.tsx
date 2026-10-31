@@ -65,7 +65,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', window.location.origin + canonicalPath);
+    canonical.setAttribute('href', window.location.origin + prefixedCanonicalPath);
 
     // 5. Injected JSON-LD Schema
     const existingSchema = document.getElementById('route-schema-jsonld');
