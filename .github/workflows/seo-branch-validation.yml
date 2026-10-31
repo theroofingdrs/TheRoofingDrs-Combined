@@ -1,0 +1,42 @@
+name: SEO branch validation
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - seo/crd-louisiana-market-pages
+  pull_request:
+    branches:
+      - feature/supabase-persistence
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-smoke-test:
+    name: Combined build and smoke tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build both applications and run combined smoke tests
+        run: npm test
+
+      - name: Confirm generated production assets
+        run: |
+          test -f source-apps/trd/dist/index.html
+          test -f source-apps/crd/dist/index.html
+          test -f source-apps/trd/dist/server.cjs
+          test -f source-apps/crd/dist/server.cjs
