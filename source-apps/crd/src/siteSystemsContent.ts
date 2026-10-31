@@ -4426,8 +4426,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/shreveport',
     regionName: 'Shreveport, Louisiana',
     heroHeadline: 'Commercial Roofing Services in Shreveport, Louisiana.',
-    heroSubtitle: 'Commercial Roof Doctors helps property owners and managers assess commercial roof condition and determine whether repair, restoration, a compatible coating system or replacement is the appropriate next step.'
-    weatherAndStormFactors: 'Shreveport properties face humid heat, heavy rainfall, hail and severe thunderstorms. A useful roof evaluation documents drainage, seams, flashing, fasteners, penetrations and signs of moisture entry before a repair or restoration plan is selected.'
+    heroSubtitle: 'Commercial Roof Doctors helps property owners and managers assess commercial roof condition and determine whether repair, restoration, a compatible coating system or replacement is the appropriate next step.',
+    weatherAndStormFactors: 'Shreveport properties face humid heat, heavy rainfall, hail and severe thunderstorms. A useful roof evaluation documents drainage, seams, flashing, fasteners, penetrations and signs of moisture entry before a repair or restoration plan is selected.',
     countiesAndCitiesServed: [
         'Shreveport, Caddo Parish',
         'Caddo Parish commercial and industrial corridors',
@@ -4466,8 +4466,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/bossier-city',
     regionName: 'Bossier City, Louisiana',
     heroHeadline: 'Commercial Roofing Services in Bossier City, Louisiana.',
-    heroSubtitle: 'Commercial Roof Doctors works with commercial property owners and managers to document roof conditions and compare practical repair, restoration, coating and replacement options for eligible projects.'
-    weatherAndStormFactors: 'Bossier City commercial roofs face humid summers, heavy rainfall, hail and strong storm winds. Roof reviews should pay close attention to drainage, roof edges, seams, penetrations, fasteners and evidence of recurring leaks.'
+    heroSubtitle: 'Commercial Roof Doctors works with commercial property owners and managers to document roof conditions and compare practical repair, restoration, coating and replacement options for eligible projects.',
+    weatherAndStormFactors: 'Bossier City commercial roofs face humid summers, heavy rainfall, hail and strong storm winds. Roof reviews should pay close attention to drainage, roof edges, seams, penetrations, fasteners and evidence of recurring leaks.',
     countiesAndCitiesServed: [
         'Bossier City, Bossier Parish',
         'Bossier Parish commercial and industrial corridors',
