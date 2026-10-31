@@ -1089,7 +1089,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas/dallas': {
     title: 'Commercial Roof Coatings in Dallas, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration for Dallas warehouses, offices, retail centers and multifamily properties. Texarkana-based CRD evaluates commercial properties in the Dallas market. Project availability is confirmed based on location and scope.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration for Dallas warehouses, offices, retail centers and multifamily properties. CRD confirms project availability based on location, roof type and scope.',
     canonicalPath: '/service-areas/dallas',
     regionName: 'Dallas, Texas',
     heroHeadline: 'Commercial Roof Coatings in Dallas, Texas.',
@@ -1102,7 +1102,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/fort-worth': {
     title: 'Commercial Roof Coatings in Fort Worth, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration for Fort Worth industrial, logistics, office and retail properties. CRD evaluates commercial properties in the Fort Worth market. Project availability is confirmed based on location and scope.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration for Fort Worth industrial, logistics, office and retail properties. CRD confirms project availability based on location, roof type and scope.',
     canonicalPath: '/service-areas/fort-worth',
     regionName: 'Fort Worth, Texas',
     heroHeadline: 'Commercial Roof Coatings in Fort Worth, Texas.',
