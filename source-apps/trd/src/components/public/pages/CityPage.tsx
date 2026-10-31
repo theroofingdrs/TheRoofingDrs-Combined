@@ -49,9 +49,9 @@ const CITY_DETAILS: Record<string, CityDetail> = {
     slug: 'texarkana',
     name: 'Texarkana',
     county: 'Bowie County (Texas) & Miller County (Arkansas)',
-    tagline: 'Twin Cities Headquarters • 24/7 Immediate Storm Dispatch',
+    tagline: 'Texarkana Service Area • Residential Storm Response',
     heroImage: '/assets/images/new_roof_install.jpg',
-    intro: 'As our central corporate headquarters, Texarkana represents the cornerstone of The Roof Doctors. Located along the bustling Interstate 30 transit corridor where Texas meets Arkansas, Texarkana homes range from historic craftsman bungalows in Beverly and downtown to modern executive estates around Pleasant Grove and Richmond Road.',
+    intro: 'Texarkana is our home base for serving homeowners throughout Northeast Texas and the surrounding Ark-La-Tex region. Located along the bustling Interstate 30 transit corridor where Texas meets Arkansas, Texarkana homes range from historic craftsman bungalows in Beverly and downtown to modern executive estates around Pleasant Grove and Richmond Road.',
     climateAndGeography: 'Texarkana sits directly at the confluence of Gulf Coast moisture systems and cold Canadian plains fronts. This geographic crossroads creates high-frequency severe thunderstorms that produce baseball-sized hail and sudden microburst gusts. Furthermore, dense loblolly pines throughout Texarkana drop heavy blankets of acidic needles that trap moisture in roof valleys and accelerate shingle erosion.',
     localRoofProblems: [
       {
@@ -89,7 +89,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
     ],
     whyLocalChooseUs: [
-      'Permanent local office at 1420 Richmond Rd, Texarkana, TX 75501.',
+      'Local roofing teams serving homeowners throughout Texarkana and surrounding communities.',
       'True 2-hour emergency dispatch response for storm tarping in Texarkana and Wake Village.',
       'We physically meet Bowie County and Miller County insurance adjusters on your roof.',
       'Strictly compliant with Texas HB 2102 anti-deductible waiver laws.',
@@ -101,14 +101,14 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
       {
         q: 'How quickly can your Texarkana team respond to an active roof leak?',
-        a: 'Because our central fleet is dispatched from 1420 Richmond Rd, we offer same-day diagnostic service for active leaks, and emergency tarping dispatch within 2 hours following major storms.',
+        a: 'Our team coordinates inspections and emergency response throughout the Texarkana service area. Response timing depends on weather, demand and project location.',
       },
       {
         q: 'Can you work on homes on both the Texas and Arkansas sides of Texarkana?',
         a: 'Yes. The Roof Doctors is fully licensed, registered, and insured to perform residential roofing in both Texas and Arkansas.',
       },
     ],
-    metaDescription: 'Certified roofing contractors in Texarkana, TX. Free 21-point forensic roof inspections, hail damage repairs, and full replacements from our 1420 Richmond Rd HQ.',
+    metaDescription: 'Residential roofing in Texarkana, TX. Free 21-point roof inspections, hail damage repairs and roof replacements from a local service team.',
     zipCodes: ['75501', '75503', '75505'],
     permitInfo: 'City of Texarkana Building Inspection Division (220 Texas Blvd)',
   },
@@ -221,7 +221,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
     ],
     whyLocalChooseUs: [
-      'Fast 30-minute dispatch down I-30 and Hwy 82 from our Texarkana headquarters.',
+      'Local service coverage throughout New Boston and surrounding Northeast Texas communities.',
       'We never use standard 4-nail installation; we mandate 6 nails per shingle for 130 mph wind certification.',
       'Deep relationships working with Bowie County homeowners and veterans near RRAD.',
       'Assistance meeting insurance adjusters on wind damage and creased shingle claims.',
@@ -599,20 +599,12 @@ export const CityPage: React.FC<CityPageProps> = ({
         canonicalPath={`/service-areas/${city.slug}`}
         schemaJson={{
           '@context': 'https://schema.org',
-          '@type': 'RoofingContractor',
-          name: `The Roof Doctors - ${city.name}`,
+          '@type': 'Organization',
+          name: 'The Roof Doctors',
           telephone: '+1-903-231-5940',
           areaServed: {
             '@type': 'City',
             name: `${city.name}, TX`,
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '1420 Richmond Rd',
-            addressLocality: 'Texarkana',
-            addressRegion: 'TX',
-            postalCode: '75501',
-            addressCountry: 'US',
           },
         }}
       />
