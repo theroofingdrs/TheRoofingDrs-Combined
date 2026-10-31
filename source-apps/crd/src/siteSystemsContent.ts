@@ -4425,13 +4425,13 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ]
 },
   '/service-areas/shreveport': {
-    title: 'Commercial Roof Coatings in Shreveport, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Shreveport, Louisiana. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: 'Commercial Roofing in Shreveport, LA | CRD',
+    metaDescription: 'Commercial Roof Doctors evaluates Shreveport commercial roofs for inspections, repairs, restoration, coatings and replacement planning. Project availability depends on roof type and scope.',
     canonicalPath: '/service-areas/shreveport',
     regionName: 'Shreveport, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Shreveport, Louisiana.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Shreveport for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Shreveport commercial roofs experience humid heat, heavy rainfall, hail and severe thunderstorms. Industrial and healthcare facilities need documented evaluations of roof drainage, metal corrosion, seams, fasteners and rooftop penetrations.',
+    heroHeadline: 'Commercial Roofing Services in Shreveport, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors helps property owners and managers assess commercial roof condition and determine whether repair, restoration, a compatible coating system or replacement is the appropriate next step.'
+    weatherAndStormFactors: 'Shreveport properties face humid heat, heavy rainfall, hail and severe thunderstorms. A useful roof evaluation documents drainage, seams, flashing, fasteners, penetrations and signs of moisture entry before a repair or restoration plan is selected.'
     countiesAndCitiesServed: [
         'Shreveport, Caddo Parish',
         'Caddo Parish commercial and industrial corridors',
@@ -4451,10 +4451,6 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     cityLinks: [
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
             name: 'Bossier City',
             href: '/service-areas/bossier-city'
         },
@@ -4469,13 +4465,13 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ]
 },
   '/service-areas/bossier-city': {
-    title: 'Commercial Roof Coatings in Bossier City, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bossier City, Louisiana. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: 'Commercial Roofing in Bossier City, LA | CRD',
+    metaDescription: 'Commercial Roof Doctors evaluates Bossier City commercial properties for roof inspections, leak repairs, restoration, coatings and replacement planning. Availability is confirmed by project scope.',
     canonicalPath: '/service-areas/bossier-city',
     regionName: 'Bossier City, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Bossier City, Louisiana.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bossier City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Bossier City roofs face humid summers, heavy rainfall, hail and strong storm winds. Hospitality and commercial properties benefit from planned inspections of drainage, seams, penetrations, metal fasteners and coating condition.',
+    heroHeadline: 'Commercial Roofing Services in Bossier City, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors works with commercial property owners and managers to document roof conditions and compare practical repair, restoration, coating and replacement options for eligible projects.'
+    weatherAndStormFactors: 'Bossier City commercial roofs face humid summers, heavy rainfall, hail and strong storm winds. Roof reviews should pay close attention to drainage, roof edges, seams, penetrations, fasteners and evidence of recurring leaks.'
     countiesAndCitiesServed: [
         'Bossier City, Bossier Parish',
         'Bossier Parish commercial and industrial corridors',
@@ -4497,10 +4493,6 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Bossier City',
-            href: '/service-areas/bossier-city'
         },
         {
             name: 'Monroe',
