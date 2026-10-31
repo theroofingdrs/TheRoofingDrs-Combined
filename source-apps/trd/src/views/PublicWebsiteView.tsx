@@ -31,7 +31,7 @@ import {
   X,
 } from 'lucide-react';
 
-// Keep public image URLs valid when the TRD app is mounted at /residential.
+// Prefix public assets only when the combined host mounts the TRD app at /residential.
 const getTrdPublicAssetPath = (assetPath: string): string => {
   const isResidentialMount = typeof window !== 'undefined' && window.location.pathname.startsWith('/residential');
   return `${isResidentialMount ? '/residential' : ''}${assetPath}`;
