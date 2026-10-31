@@ -10,7 +10,6 @@ import {
   CalendarCheck,
   PhoneCall,
   ArrowRight,
-  Clock,
   CheckCircle2,
 } from 'lucide-react';
 
@@ -105,7 +104,6 @@ export const CITIES_DATA = [
 
 export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
   currentPath,
-  onNavigate,
   onOpenIntake,
 }) => {
   return (
