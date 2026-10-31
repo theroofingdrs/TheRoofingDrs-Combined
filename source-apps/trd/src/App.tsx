@@ -5,7 +5,7 @@ import { PublicWebsiteView } from './views/PublicWebsiteView.tsx';
 import { HomeownerPortalView } from './views/HomeownerPortalView.tsx';
 import { EstimateRequestView } from './views/EstimateRequestView.tsx';
 
-const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+const OPERATIONS_PORTAL_URL = 'https://operations.theroofingdrs.com';
 const RESIDENTIAL_BASE = '/residential';
 const stripResidentialBase = (path: string) => (path.replace(/^\/residential(?=\/|$)/, '') || '/');
 const withResidentialBase = (path: string) => `${RESIDENTIAL_BASE}${path === '/' ? '/' : path.startsWith('/') ? path : `/${path}`}`;
