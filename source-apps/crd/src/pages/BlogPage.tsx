@@ -29,6 +29,12 @@ function renderMarkdown(markdown: string) {
   });
 }
 
+const starterImages: Record<string, string> = {
+  'commercial-roof-coatings-vs-replacement': '/assets/images/commercial_roof_coating_1788537043385.jpg',
+  'tpo-vs-epdm-commercial-roofing': '/assets/images/commercial_logistics_tpo_1788537681612.jpg',
+  'commercial-roof-coatings-energy-performance': '/assets/images/commercial-roof-restoration.jpg',
+};
+
 function mapPublishedPost(row: Record<string, any>): Post {
   const body = String(row.body_markdown || '');
   const words = body.trim().split(/\s+/).filter(Boolean).length;
@@ -38,7 +44,7 @@ function mapPublishedPost(row: Record<string, any>): Post {
     category: String(row.category || 'General'),
     date: publishedAt ? new Date(publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '',
     readTime: Math.max(1, Math.ceil(words / 220)) + ' min read',
-    image: String(row.featured_image_url || '/assets/images/commercial_roof_restoration.jpg'),
+    image: String(row.featured_image_url || starterImages[String(row.slug)] || '/assets/images/commercial_roof_restoration.jpg'),
     alt: String(row.featured_image_alt || ''),
     sections: [], body_markdown: body,
     seoTitle: row.seo_title ? String(row.seo_title) : undefined,
