@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { ArrowRight, CalendarDays, Clock3, Search } from 'lucide-react';
-import { SeoMeta } from './SeoMeta';
+import { SeoMeta } from '../components/SeoMeta';
 import { Link } from '../router';
 import { LeadType } from '../types';
 
