@@ -4154,10 +4154,6 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
         },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
     ]
 },
   '/service-areas/west-monroe': {
