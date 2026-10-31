@@ -229,14 +229,14 @@ const CITY_DETAILS: Record<string, CityDetail> = {
     localFaqs: [
       {
         q: 'Why are my shingles creasing even if they haven’t blown completely off?',
-        a: 'When winds exceed 50 mph, the uplift force breaks the adhesive seal and bends the shingle upward. The dark horizontal line across the top is fractured asphalt. Insurance guidelines in Texas recognize creased shingles as wind damage.',
+        a: 'When winds exceed 50 mph, the uplift force breaks the adhesive seal and bends the shingle upward. The dark horizontal line across the top is fractured asphalt. Whether creased shingles qualify as covered wind damage depends on the policy, inspection findings and the insurer’s claim determination.',
       },
       {
         q: 'How fast can The Roof Doctors inspect my roof in New Boston?',
-        a: 'We can typically dispatch an inspector to New Boston within 2 to 4 hours of your request.',
+        a: 'Inspection timing in New Boston depends on current scheduling, weather conditions and project location. Contact us to confirm availability.',
       },
     ],
-    metaDescription: 'Expert roofing services in New Boston, TX. High-wind creased shingle repairs, 130 mph roof replacements, and storm damage claim inspections.',
+    metaDescription: 'Expert roofing services in New Boston, TX. Wind-damage shingle repairs, manufacturer-specified roof replacement systems, and storm damage inspections.',
     zipCodes: ['75570'],
     permitInfo: 'Bowie County & City of New Boston Permitting Department',
   },
@@ -297,7 +297,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
       {
         q: 'Are Class 4 shingles worth the investment in Paris, Texas?',
-        a: 'Absolutely. Due to frequent hail activity across Lamar County, installing Class 4 impact-resistant shingles typically earns homeowners a 15% to 25% discount on annual homeowners insurance premiums.',
+        a: 'Some insurers offer premium discounts for qualifying UL 2218 Class 4 impact-resistant shingles. Eligibility and savings vary by carrier and policy, so homeowners should confirm directly with their insurer.',
       },
     ],
     metaDescription: 'Trusted roofing contractor in Paris, TX (Lamar County). Historic roof flashing repairs, hail damage assessments, and Class 4 impact shingle installations.',
@@ -599,12 +599,16 @@ export const CityPage: React.FC<CityPageProps> = ({
         canonicalPath={`/service-areas/${city.slug}`}
         schemaJson={{
           '@context': 'https://schema.org',
-          '@type': 'Organization',
+          '@type': 'RoofingContractor',
           name: 'The Roof Doctors',
           telephone: '+1-903-231-5940',
           areaServed: {
             '@type': 'City',
-            name: `${city.name}, TX`,
+            name: `${city.name}, Texas`,
+            containedInPlace: {
+              '@type': 'State',
+              name: 'Texas',
+            },
           },
         }}
       />
