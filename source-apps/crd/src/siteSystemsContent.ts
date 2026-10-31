@@ -1102,7 +1102,14 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Dallas, Dallas County', 'North Dallas and LBJ corridor', 'Downtown and central Dallas', 'Nearby Collin and Tarrant County commercial markets'],
     keyIndustriesInRegion: ['Distribution and logistics facilities', 'Office buildings and commercial campuses', 'Retail centers and shopping properties', 'Multifamily and mixed-use developments'],
     serviceCapabilities: ['Commercial metal roof restoration and corrosion evaluation', 'Silicone and acrylic coating system evaluation for compatible roofs', 'Fastener, seam, flashing and penetration repairs', 'Roof inspections and repair-versus-restoration planning'],
-    cityLinks: [{ name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }],
+    cityLinks: [
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
+    ],
   },
   '/service-areas/fort-worth': {
     title: 'Commercial Roof Coatings in Fort Worth, TX | CRD',
@@ -1115,7 +1122,13 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Fort Worth, Tarrant County', 'Alliance and north Fort Worth logistics area', 'South Fort Worth commercial corridors', 'Nearby Parker and Johnson County markets'],
     keyIndustriesInRegion: ['Industrial and logistics facilities', 'Distribution centers and warehouses', 'Commercial offices and business parks', 'Retail and multifamily properties'],
     serviceCapabilities: ['Metal roof corrosion and fastener assessments', 'Commercial silicone and acrylic coating evaluations', 'Seam, flashing and penetration reinforcement', 'Documented roof condition and restoration recommendations'],
-    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }],
+    cityLinks: [
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
+    ],
   },
   '/service-areas/dallas-fort-worth': {
     title: 'Commercial Roofing in Dallas-Fort Worth | CRD',
@@ -1128,7 +1141,14 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Dallas County', 'Tarrant County', 'Collin County', 'Denton County', 'Rockwall County', 'Ellis and Johnson County commercial corridors'],
     keyIndustriesInRegion: ['Warehousing, distribution and logistics', 'Office campuses and commercial real estate', 'Retail centers and hospitality properties', 'Multifamily portfolios and industrial facilities'],
     serviceCapabilities: ['Commercial roof inspections and documented condition assessments', 'Leak and detail repair planning for seams, flashing and penetrations', 'Restoration and coating evaluations for suitable existing roof assemblies', 'Repair, restoration or replacement recommendations based on documented condition'],
-    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }],
+    cityLinks: [
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
+    ],
   },
   '/service-areas/longview': {
     title: 'Commercial Roof Coatings in Longview, TX | CRD',
@@ -1141,7 +1161,13 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Longview, Gregg County', 'Gregg County industrial and commercial corridors', 'Nearby Harrison and Upshur County properties'],
     keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Healthcare and medical properties', 'Retail centers and office buildings', 'Warehouses and distribution facilities'],
     serviceCapabilities: ['Metal roof corrosion and fastener restoration', 'Commercial roof coatings for compatible substrates', 'Seam, curb, flashing and penetration repairs', 'Roof inspections and restoration planning'],
-    cityLinks: [{ name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }],
+    cityLinks: [
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
+    ],
   },
   '/service-areas/tyler': {
     title: 'Commercial Roof Coatings in Tyler, TX | CRD',
@@ -1154,7 +1180,13 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Tyler, Smith County', 'Smith County commercial corridors', 'Nearby Gregg, Henderson and Cherokee County markets'],
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'Retail and shopping centers', 'Office and professional properties', 'Industrial and distribution facilities'],
     serviceCapabilities: ['Commercial roof coatings and restoration assessments', 'Metal roof rust, fastener and seam repairs', 'Silicone and acrylic system evaluations', 'Documented inspections and capital planning'],
-    cityLinks: [{ name: 'Longview', href: '/service-areas/longview' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }],
+    cityLinks: [
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
+    ],
   },
   '/service-areas/paris': {
     title: 'Commercial Roof Coatings in Paris, TX | CRD',
@@ -1167,7 +1199,13 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Paris, Lamar County', 'Lamar County commercial properties', 'Nearby Red River and Delta County markets'],
     keyIndustriesInRegion: ['Manufacturing and fabrication', 'Healthcare and institutional properties', 'Retail and commercial centers', 'Agricultural supply and warehouse buildings'],
     serviceCapabilities: ['Commercial metal roof restoration evaluations', 'Rust preparation and fastener replacement planning', 'Compatible silicone and acrylic coating assessments', 'Roof inspections and repair-versus-replacement guidance'],
-    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }],
+    cityLinks: [
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
+    ],
   },
   '/service-areas/tulsa': {
     title: 'Commercial Roof Coatings in Tulsa, OK | CRD',
@@ -1180,7 +1218,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Tulsa, Tulsa County', 'Broken Arrow and surrounding Tulsa metro commercial corridors', 'Nearby Rogers and Wagoner County markets'],
     keyIndustriesInRegion: ['Energy and industrial facilities', 'Aerospace and manufacturing properties', 'Warehousing and distribution centers', 'Retail, office and multifamily properties'],
     serviceCapabilities: ['Commercial roof coating and restoration evaluations', 'Metal roof rust and fastener repair planning', 'Seam and flashing reinforcement', 'Roof inspections and repair-versus-replacement guidance'],
-    cityLinks: [{ name: 'Oklahoma City', href: '/service-areas/oklahoma-city' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }],
+    cityLinks: [
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+    ],
   },
   '/service-areas/oklahoma-city': {
     title: 'Commercial Roof Coatings in Oklahoma City, OK | CRD',
@@ -1193,7 +1235,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Oklahoma City, Oklahoma County', 'Edmond and central Oklahoma commercial corridors', 'Nearby Cleveland and Canadian County markets'],
     keyIndustriesInRegion: ['Energy and industrial properties', 'Distribution and logistics facilities', 'Healthcare and institutional buildings', 'Retail centers and office campuses'],
     serviceCapabilities: ['Commercial roof coating and restoration evaluations', 'Metal roof corrosion and fastener assessments', 'Seam, flashing and penetration repairs', 'Documented roof condition and capital planning'],
-    cityLinks: [{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }],
+    cityLinks: [
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+    ],
   },
   '/service-areas/little-rock': {
     title: 'Commercial Roof Coatings in Little Rock, AR | CRD',
@@ -1206,7 +1251,14 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Little Rock, Pulaski County', 'North Little Rock and surrounding Pulaski County', 'Nearby Saline and Faulkner County commercial corridors'],
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'State, municipal and institutional buildings', 'Distribution and logistics facilities', 'Retail centers, offices and multifamily properties'],
     serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener repair planning', 'Silicone and acrylic coating system selection', 'Documented inspections and roof capital planning'],
-    cityLinks: [{ name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Magnolia', href: '/service-areas/magnolia' }],
+    cityLinks: [
+        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
+        { name: 'Springdale', href: '/service-areas/springdale' },
+        { name: 'El Dorado', href: '/service-areas/el-dorado' },
+        { name: 'Magnolia', href: '/service-areas/magnolia' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ],
   },
   '/service-areas/fayetteville': {
     title: 'Commercial Roof Coatings in Fayetteville, AR | CRD',
@@ -1219,7 +1271,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Fayetteville, Washington County', 'Washington County commercial corridors', 'Nearby Benton County and regional Northwest Arkansas markets'],
     keyIndustriesInRegion: ['Higher education and institutional facilities', 'Healthcare and medical properties', 'Retail and hospitality developments', 'Distribution, food processing and manufacturing'],
     serviceCapabilities: ['Commercial coating and restoration assessments', 'Metal roof corrosion and fastener evaluations', 'Seam and flashing repair planning', 'Roof inspections and capital planning'],
-    cityLinks: [{ name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    cityLinks: [
+        { name: 'Springdale', href: '/service-areas/springdale' },
+        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ],
   },
   '/service-areas/springdale': {
     title: 'Commercial Roof Coatings in Springdale, AR | CRD',
@@ -1232,7 +1289,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Springdale, Washington and Benton Counties', 'Northwest Arkansas industrial and logistics corridors', 'Nearby Fayetteville, Rogers and Bentonville markets'],
     keyIndustriesInRegion: ['Food processing and manufacturing', 'Warehousing and distribution', 'Retail and commercial developments', 'Healthcare and institutional facilities'],
     serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust, seam and fastener assessments', 'Compatible coating system selection', 'Documented inspections and repair planning'],
-    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    cityLinks: [
+        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
+        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ],
   },
   '/service-areas/fort-smith': {
     title: 'Commercial Roof Coatings in Fort Smith, AR | CRD',
@@ -1245,7 +1307,13 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Fort Smith, Sebastian County', 'Nearby Van Buren and Crawford County', 'Western Arkansas and eastern Oklahoma commercial corridors'],
     keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Aerospace and component suppliers', 'Food processing and distribution', 'Healthcare, retail and institutional properties'],
     serviceCapabilities: ['Commercial roof coating and restoration evaluations', 'Metal roof corrosion and fastener repair planning', 'Seam, flashing and penetration reinforcement', 'Roof inspections and capital planning'],
-    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Tulsa', href: '/service-areas/tulsa' }],
+    cityLinks: [
+        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
+        { name: 'Springdale', href: '/service-areas/springdale' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ],
   },
   '/service-areas/el-dorado': {
     title: 'Commercial Roof Coatings in El Dorado, AR | CRD',
@@ -1258,7 +1326,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['El Dorado, Union County', 'Union County industrial and commercial corridors', 'Nearby Magnolia and Columbia County markets'],
     keyIndustriesInRegion: ['Energy and chemical processing facilities', 'Timber and forest products', 'Healthcare and institutional properties', 'Retail and commercial buildings'],
     serviceCapabilities: ['Commercial metal roof restoration evaluations', 'Rust preparation, fastener and seam repair planning', 'Silicone and acrylic coating assessments', 'Documented roof inspections and capital planning'],
-    cityLinks: [{ name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    cityLinks: [
+        { name: 'Magnolia', href: '/service-areas/magnolia' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ],
   },
   '/service-areas/magnolia': {
     title: 'Commercial Roof Coatings in Magnolia, AR | CRD',
@@ -1271,7 +1343,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Magnolia, Columbia County', 'Columbia County industrial and commercial properties', 'Nearby El Dorado and South Arkansas markets'],
     keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
     serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener assessments', 'Seam and flashing repair planning', 'Roof inspections and restoration recommendations'],
-    cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    cityLinks: [
+        { name: 'El Dorado', href: '/service-areas/el-dorado' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ],
   },
   '/service-areas/jonesboro': {
     title: 'Commercial Roof Coatings in Jonesboro, Arkansas | CRD',
@@ -1299,18 +1375,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'West Memphis',
-            href: '/service-areas/west-memphis'
-        },
-        {
-            name: 'Searcy',
-            href: '/service-areas/searcy'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        }
+        { name: 'West Memphis', href: '/service-areas/west-memphis' },
+        { name: 'Searcy', href: '/service-areas/searcy' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/rogers': {
@@ -1339,22 +1407,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Bentonville',
-            href: '/service-areas/bentonville'
-        },
-        {
-            name: 'Bella Vista',
-            href: '/service-areas/bella-vista'
-        },
-        {
-            name: 'Siloam Springs',
-            href: '/service-areas/siloam-springs'
-        },
-        {
-            name: 'Fort Smith',
-            href: '/service-areas/fort-smith'
-        }
+        { name: 'Bentonville', href: '/service-areas/bentonville' },
+        { name: 'Bella Vista', href: '/service-areas/bella-vista' },
+        { name: 'Siloam Springs', href: '/service-areas/siloam-springs' },
+        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/conway': {
@@ -1383,22 +1440,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'North Little Rock',
-            href: '/service-areas/north-little-rock'
-        },
-        {
-            name: 'Sherwood',
-            href: '/service-areas/sherwood'
-        },
-        {
-            name: 'Benton',
-            href: '/service-areas/benton'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
+        { name: 'Sherwood', href: '/service-areas/sherwood' },
+        { name: 'Benton', href: '/service-areas/benton' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/north-little-rock': {
@@ -1427,22 +1473,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Conway',
-            href: '/service-areas/conway'
-        },
-        {
-            name: 'Sherwood',
-            href: '/service-areas/sherwood'
-        },
-        {
-            name: 'Maumelle',
-            href: '/service-areas/maumelle'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Conway', href: '/service-areas/conway' },
+        { name: 'Sherwood', href: '/service-areas/sherwood' },
+        { name: 'Maumelle', href: '/service-areas/maumelle' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/bentonville': {
@@ -1471,22 +1506,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Rogers',
-            href: '/service-areas/rogers'
-        },
-        {
-            name: 'Bella Vista',
-            href: '/service-areas/bella-vista'
-        },
-        {
-            name: 'Siloam Springs',
-            href: '/service-areas/siloam-springs'
-        },
-        {
-            name: 'Fayetteville',
-            href: '/service-areas/fayetteville'
-        }
+        { name: 'Rogers', href: '/service-areas/rogers' },
+        { name: 'Bella Vista', href: '/service-areas/bella-vista' },
+        { name: 'Siloam Springs', href: '/service-areas/siloam-springs' },
+        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/pine-bluff': {
@@ -1515,22 +1539,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Benton',
-            href: '/service-areas/benton'
-        },
-        {
-            name: 'Hot Springs',
-            href: '/service-areas/hot-springs'
-        },
-        {
-            name: 'El Dorado',
-            href: '/service-areas/el-dorado'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Benton', href: '/service-areas/benton' },
+        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
+        { name: 'El Dorado', href: '/service-areas/el-dorado' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/benton': {
@@ -1559,22 +1572,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Bryant',
-            href: '/service-areas/bryant'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Hot Springs',
-            href: '/service-areas/hot-springs'
-        },
-        {
-            name: 'Pine Bluff',
-            href: '/service-areas/pine-bluff'
-        }
+        { name: 'Bryant', href: '/service-areas/bryant' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
+        { name: 'Pine Bluff', href: '/service-areas/pine-bluff' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/hot-springs': {
@@ -1603,22 +1605,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Benton',
-            href: '/service-areas/benton'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Malvern',
-            href: '/service-areas/malvern'
-        },
-        {
-            name: 'Arkadelphia',
-            href: '/service-areas/arkadelphia'
-        }
+        { name: 'Benton', href: '/service-areas/benton' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Malvern', href: '/service-areas/malvern' },
+        { name: 'Arkadelphia', href: '/service-areas/arkadelphia' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/sherwood': {
@@ -1647,22 +1638,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'North Little Rock',
-            href: '/service-areas/north-little-rock'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Jacksonville',
-            href: '/service-areas/jacksonville'
-        },
-        {
-            name: 'Conway',
-            href: '/service-areas/conway'
-        }
+        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Jacksonville', href: '/service-areas/jacksonville' },
+        { name: 'Conway', href: '/service-areas/conway' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/bella-vista': {
@@ -1691,22 +1671,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Rogers',
-            href: '/service-areas/rogers'
-        },
-        {
-            name: 'Bentonville',
-            href: '/service-areas/bentonville'
-        },
-        {
-            name: 'Siloam Springs',
-            href: '/service-areas/siloam-springs'
-        },
-        {
-            name: 'Fayetteville',
-            href: '/service-areas/fayetteville'
-        }
+        { name: 'Rogers', href: '/service-areas/rogers' },
+        { name: 'Bentonville', href: '/service-areas/bentonville' },
+        { name: 'Siloam Springs', href: '/service-areas/siloam-springs' },
+        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/russellville': {
@@ -1735,18 +1704,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Fort Smith',
-            href: '/service-areas/fort-smith'
-        },
-        {
-            name: 'Conway',
-            href: '/service-areas/conway'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        }
+        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+        { name: 'Conway', href: '/service-areas/conway' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/jacksonville': {
@@ -1775,18 +1736,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'North Little Rock',
-            href: '/service-areas/north-little-rock'
-        },
-        {
-            name: 'Sherwood',
-            href: '/service-areas/sherwood'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        }
+        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
+        { name: 'Sherwood', href: '/service-areas/sherwood' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/cabot': {
@@ -1814,7 +1767,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
-    cityLinks: []
+    cityLinks: [
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ]
 },
   '/service-areas/searcy': {
     title: 'Commercial Roof Coatings in Searcy, Arkansas | CRD',
@@ -1842,14 +1797,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Jonesboro',
-            href: '/service-areas/jonesboro'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        }
+        { name: 'Jonesboro', href: '/service-areas/jonesboro' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/west-memphis': {
@@ -1878,18 +1828,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Marion',
-            href: '/service-areas/marion'
-        },
-        {
-            name: 'Jonesboro',
-            href: '/service-areas/jonesboro'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        }
+        { name: 'Marion', href: '/service-areas/marion' },
+        { name: 'Jonesboro', href: '/service-areas/jonesboro' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/bryant': {
@@ -1918,18 +1860,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Benton',
-            href: '/service-areas/benton'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Hot Springs',
-            href: '/service-areas/hot-springs'
-        }
+        { name: 'Benton', href: '/service-areas/benton' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/van-buren': {
@@ -1958,14 +1892,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Fort Smith',
-            href: '/service-areas/fort-smith'
-        },
-        {
-            name: 'Russellville',
-            href: '/service-areas/russellville'
-        }
+        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+        { name: 'Russellville', href: '/service-areas/russellville' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/siloam-springs': {
@@ -1994,22 +1923,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Rogers',
-            href: '/service-areas/rogers'
-        },
-        {
-            name: 'Bentonville',
-            href: '/service-areas/bentonville'
-        },
-        {
-            name: 'Bella Vista',
-            href: '/service-areas/bella-vista'
-        },
-        {
-            name: 'Fayetteville',
-            href: '/service-areas/fayetteville'
-        }
+        { name: 'Rogers', href: '/service-areas/rogers' },
+        { name: 'Bentonville', href: '/service-areas/bentonville' },
+        { name: 'Bella Vista', href: '/service-areas/bella-vista' },
+        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/maumelle': {
@@ -2038,18 +1956,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'North Little Rock',
-            href: '/service-areas/north-little-rock'
-        },
-        {
-            name: 'Conway',
-            href: '/service-areas/conway'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
+        { name: 'Conway', href: '/service-areas/conway' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/marion': {
@@ -2078,14 +1988,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'West Memphis',
-            href: '/service-areas/west-memphis'
-        },
-        {
-            name: 'Jonesboro',
-            href: '/service-areas/jonesboro'
-        }
+        { name: 'West Memphis', href: '/service-areas/west-memphis' },
+        { name: 'Jonesboro', href: '/service-areas/jonesboro' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/forrest-city': {
@@ -2114,14 +2019,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'West Memphis',
-            href: '/service-areas/west-memphis'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        }
+        { name: 'West Memphis', href: '/service-areas/west-memphis' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/malvern': {
@@ -2150,18 +2050,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Hot Springs',
-            href: '/service-areas/hot-springs'
-        },
-        {
-            name: 'Arkadelphia',
-            href: '/service-areas/arkadelphia'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        }
+        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
+        { name: 'Arkadelphia', href: '/service-areas/arkadelphia' },
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/arkadelphia': {
@@ -2190,18 +2082,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Malvern',
-            href: '/service-areas/malvern'
-        },
-        {
-            name: 'Hot Springs',
-            href: '/service-areas/hot-springs'
-        },
-        {
-            name: 'El Dorado',
-            href: '/service-areas/el-dorado'
-        }
+        { name: 'Malvern', href: '/service-areas/malvern' },
+        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
+        { name: 'El Dorado', href: '/service-areas/el-dorado' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/camden': {
@@ -2230,18 +2114,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'El Dorado',
-            href: '/service-areas/el-dorado'
-        },
-        {
-            name: 'Magnolia',
-            href: '/service-areas/magnolia'
-        },
-        {
-            name: 'Pine Bluff',
-            href: '/service-areas/pine-bluff'
-        }
+        { name: 'El Dorado', href: '/service-areas/el-dorado' },
+        { name: 'Magnolia', href: '/service-areas/magnolia' },
+        { name: 'Pine Bluff', href: '/service-areas/pine-bluff' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/greenville': {
@@ -2270,26 +2146,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/sulphur-springs': {
@@ -2318,26 +2180,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/mount-pleasant': {
@@ -2366,26 +2214,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/marshall': {
@@ -2414,26 +2248,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/sherman': {
@@ -2462,26 +2282,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/denison': {
@@ -2510,26 +2316,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/nacogdoches': {
@@ -2558,26 +2350,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/lufkin': {
@@ -2606,26 +2384,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/jacksonville-tx': {
@@ -2654,26 +2418,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/palestine': {
@@ -2702,26 +2452,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/henderson': {
@@ -2750,26 +2486,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/athens': {
@@ -2798,26 +2520,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/corsicana': {
@@ -2846,26 +2554,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/arlington': {
@@ -2894,26 +2588,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/plano': {
@@ -2942,26 +2622,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/irving': {
@@ -2990,26 +2656,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/garland': {
@@ -3038,26 +2690,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/frisco': {
@@ -3086,26 +2724,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/mckinney': {
@@ -3134,26 +2758,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/grand-prairie': {
@@ -3182,26 +2792,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/denton': {
@@ -3230,26 +2826,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/mesquite': {
@@ -3278,26 +2860,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/carrollton': {
@@ -3326,26 +2894,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/richardson': {
@@ -3374,26 +2928,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/lewisville': {
@@ -3422,26 +2962,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/allen': {
@@ -3470,26 +2996,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/rowlett': {
@@ -3518,26 +3030,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/mansfield': {
@@ -3566,26 +3064,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/grapevine': {
@@ -3614,26 +3098,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        },
-        {
-            name: 'Tyler',
-            href: '/service-areas/tyler'
-        },
-        {
-            name: 'Paris',
-            href: '/service-areas/paris'
-        }
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Tyler', href: '/service-areas/tyler' },
+        { name: 'Paris', href: '/service-areas/paris' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/broken-arrow': {
@@ -3662,22 +3132,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/muskogee': {
@@ -3706,22 +3163,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/owasso': {
@@ -3750,22 +3194,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/bartlesville': {
@@ -3794,22 +3225,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/lawton': {
@@ -3838,22 +3256,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/edmond': {
@@ -3882,22 +3287,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/norman': {
@@ -3926,22 +3318,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/moore': {
@@ -3970,22 +3349,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/midwest-city': {
@@ -4014,22 +3380,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/shawnee': {
@@ -4058,22 +3411,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/yukon': {
@@ -4102,22 +3442,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Tulsa', href: '/service-areas/tulsa' },
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/monroe': {
@@ -4146,18 +3473,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/west-monroe': {
@@ -4186,22 +3503,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/ruston': {
@@ -4230,22 +3534,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/alexandria': {
@@ -4274,22 +3565,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/natchitoches': {
@@ -4318,22 +3596,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/pineville-la': {
@@ -4362,22 +3627,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/minden': {
@@ -4406,22 +3658,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/shreveport': {
@@ -4450,18 +3689,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Bossier City',
-            href: '/service-areas/bossier-city'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        },
-        {
-            name: 'Minden',
-            href: '/service-areas/minden'
-        }
+        { name: 'Bossier City', href: '/service-areas/bossier-city' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Minden', href: '/service-areas/minden' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/bossier-city': {
@@ -4490,18 +3721,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        },
-        {
-            name: 'Minden',
-            href: '/service-areas/minden'
-        }
+        { name: 'Shreveport', href: '/service-areas/shreveport' },
+        { name: 'Monroe', href: '/service-areas/monroe' },
+        { name: 'Minden', href: '/service-areas/minden' },
+        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
     ]
 },
   '/service-areas/hurst': {
@@ -4530,22 +3753,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/euless': {
@@ -4574,22 +3784,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/bedford': {
@@ -4618,22 +3815,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/north-richland-hills': {
@@ -4662,22 +3846,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/keller': {
@@ -4706,22 +3877,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/burleson': {
@@ -4750,22 +3908,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/rockwall': {
@@ -4794,22 +3939,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/forney': {
@@ -4838,22 +3970,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/waxahachie': {
@@ -4882,22 +4001,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/midlothian': {
@@ -4926,22 +4032,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/lancaster': {
@@ -4970,22 +4063,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/desoto': {
@@ -5011,22 +4091,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/cedar-hill': {
@@ -5055,22 +4122,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/duncanville': {
@@ -5099,22 +4153,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/coppell': {
@@ -5143,22 +4184,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/farmers-branch': {
@@ -5187,22 +4215,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/the-colony': {
@@ -5231,22 +4246,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/sachse': {
@@ -5275,22 +4277,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/balch-springs': {
@@ -5319,22 +4308,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/princeton': {
@@ -5363,22 +4339,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/royse-city': {
@@ -5407,22 +4370,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/melissa': {
@@ -5451,22 +4401,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/anna': {
@@ -5495,22 +4432,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/celina': {
@@ -5539,22 +4463,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/prosper': {
@@ -5583,22 +4494,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/flower-mound': {
@@ -5627,22 +4525,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/wylie': {
@@ -5671,22 +4556,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/centerton': {
@@ -5715,22 +4587,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/hot-springs-village': {
@@ -5759,22 +4617,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/harrison': {
@@ -5803,22 +4647,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/mountain-home': {
@@ -5847,22 +4677,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/batesville': {
@@ -5891,22 +4707,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Little Rock', href: '/service-areas/little-rock' },
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
     ]
 },
   '/service-areas/ardmore': {
@@ -5935,22 +4737,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/duncan': {
@@ -5979,22 +4767,8 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        }
+        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
     ]
 },
   '/service-areas/addison': {
@@ -6023,22 +4797,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/haltom-city': {
@@ -6067,22 +4830,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/white-settlement': {
@@ -6111,22 +4863,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/benbrook': {
@@ -6155,22 +4896,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/watauga': {
@@ -6199,22 +4929,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/saginaw': {
@@ -6243,22 +4962,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/forest-hill': {
@@ -6287,22 +4995,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/crowley': {
@@ -6331,22 +5028,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/cleburne': {
@@ -6375,22 +5061,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/weatherford': {
@@ -6419,22 +5094,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/mineral-wells': {
@@ -6463,22 +5127,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/stephenville': {
@@ -6507,22 +5160,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/ennis': {
@@ -6551,22 +5193,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 },
   '/service-areas/bonham': {
@@ -6595,22 +5226,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Fort Worth',
-            href: '/service-areas/fort-worth'
-        },
-        {
-            name: 'Longview',
-            href: '/service-areas/longview'
-        }
+        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+        { name: 'Dallas', href: '/service-areas/dallas' },
+        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+        { name: 'Longview', href: '/service-areas/longview' },
+        { name: 'Northeast Texas', href: '/service-areas/texas' }
     ]
 }
 };
