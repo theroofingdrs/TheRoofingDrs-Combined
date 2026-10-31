@@ -774,12 +774,12 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
 
 export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas': {
-    title: 'Commercial Roof Coatings & Restoration | 250-Mile Service Area',
-    metaDescription: 'Commercial roof coatings and metal roof restoration across a 250-mile regional service area centered on Texarkana, serving commercial properties in Texas, Arkansas, Louisiana and Oklahoma.',
+    title: 'Commercial Roofing Service Areas in TX, AR, LA & OK | CRD',
+    metaDescription: 'Commercial Roof Doctors evaluates commercial metal and low-slope roofs for coatings, restoration, repairs and replacement planning across Texas, Arkansas, Louisiana and Oklahoma. Project availability is confirmed by location, roof type and scope.',
     canonicalPath: '/service-areas',
-    regionName: 'Texarkana-Based 250-Mile Regional Service Area',
+    regionName: 'Four-State Commercial Service Area',
     heroHeadline: 'Commercial Roof Coatings Across the Ark-La-Tex & Regional Markets.',
-    heroSubtitle: 'Based in Texarkana, CRD evaluates aging commercial metal and low-slope roofs for restoration and coating across Texas, Arkansas, Louisiana and Oklahoma, with regional coverage extending up to 250 miles.',
+    heroSubtitle: 'Based in Texarkana, CRD evaluates commercial metal and low-slope roofs for restoration, coatings, repairs and replacement planning across Texas, Arkansas, Louisiana and Oklahoma. Project availability is confirmed based on location, roof type and scope.',
     weatherAndStormFactors: 'The wider service region spans humid Gulf-influenced weather and severe Great Plains storm systems. Commercial roofs can face prolonged heat, UV exposure, heavy rainfall, hail, high winds and seasonal temperature changes. Roof condition, drainage, seams and fasteners should be evaluated for each property rather than assuming every roof has the same exposure.',
     countiesAndCitiesServed: [
       'Texarkana, TX & AR',
@@ -1089,7 +1089,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas/dallas': {
     title: 'Commercial Roof Coatings in Dallas, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration for Dallas warehouses, offices, retail centers and multifamily properties. Texarkana-based CRD serves regional markets within 250 miles.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration for Dallas warehouses, offices, retail centers and multifamily properties. Texarkana-based CRD evaluates commercial properties in the Dallas market. Project availability is confirmed based on location and scope.',
     canonicalPath: '/service-areas/dallas',
     regionName: 'Dallas, Texas',
     heroHeadline: 'Commercial Roof Coatings in Dallas, Texas.',
@@ -1102,7 +1102,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/fort-worth': {
     title: 'Commercial Roof Coatings in Fort Worth, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration for Fort Worth industrial, logistics, office and retail properties. Serving regional markets within 250 miles of Texarkana.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration for Fort Worth industrial, logistics, office and retail properties. CRD evaluates commercial properties in the Fort Worth market. Project availability is confirmed based on location and scope.',
     canonicalPath: '/service-areas/fort-worth',
     regionName: 'Fort Worth, Texas',
     heroHeadline: 'Commercial Roof Coatings in Fort Worth, Texas.',
