@@ -569,7 +569,27 @@ export const CityPage: React.FC<CityPageProps> = ({
 }) => {
   // Normalize slug
   const normalized = citySlug.toLowerCase().replace(/[^a-z0-9-]/g, '');
-  const city = CITY_DETAILS[normalized] || CITY_DETAILS['texarkana'];
+  const city = CITY_DETAILS[normalized];
+
+  if (!city) {
+    return (
+      <>
+        <SeoHead
+          title="Service Area Not Found | The Roof Doctors"
+          description="This residential service area page could not be found. View The Roof Doctors' residential service area directory."
+          canonicalPath="/service-areas"
+          noIndex
+        />
+        <main className="min-h-screen bg-slate-50 text-slate-900 flex items-center justify-center px-6 py-20">
+          <div className="max-w-xl text-center space-y-4">
+            <h1 className="text-3xl font-black">Service Area Not Found</h1>
+            <p className="text-slate-600">That residential service area page is not available. Residential service is generally focused within 75 miles of Texarkana. Requests beyond that area can be reviewed individually.</p>
+            <button onClick={() => onNavigate('/service-areas')} className="px-5 py-3 rounded-lg bg-red-600 text-white font-bold">View Residential Service Areas</button>
+          </div>
+        </main>
+      </>
+    );
+  }
 
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900 pb-20">
@@ -603,7 +623,7 @@ export const CityPage: React.FC<CityPageProps> = ({
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-red-600/20 text-red-400 border border-red-500/30 uppercase tracking-wide">
               <MapPin className="w-4 h-4 text-red-400" />
-              <span>{city.county} • Dedicated Local Hub</span>
+              <span>{city.county} • Residential Service Area</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
@@ -662,11 +682,11 @@ export const CityPage: React.FC<CityPageProps> = ({
               <div className="p-6 space-y-2 text-xs">
                 <h3 className="font-bold text-white text-base">Local Service Guarantee</h3>
                 <p className="text-slate-300 leading-relaxed">
-                  Serving {city.name} with certified local crews, physical adjuster accompaniment on roof claims, and transparent photo reports.
+                  Residential projects in {city.name} are evaluated based on location, scope, and scheduling. Contact us to confirm availability.
                 </p>
                 <div className="pt-2 border-t border-slate-800 flex justify-between text-slate-400 text-[11px]">
                   <span>County: {city.county.split('&')[0]}</span>
-                  <span>Direct Dispatch: 903-231-5940</span>
+                  <span>Residential Inquiries: 903-231-5940</span>
                 </div>
               </div>
             </div>
@@ -823,20 +843,20 @@ export const CityPage: React.FC<CityPageProps> = ({
       <section className="bg-slate-900 text-white py-14 px-4 sm:px-6 mt-12 border-t border-slate-800">
         <div className="max-w-4xl mx-auto text-center space-y-4">
           <span className="text-xs uppercase tracking-wider text-red-400 font-bold">
-            Direct Dispatch Across {city.county}
+            Residential Service Availability
           </span>
           <h2 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
             Schedule a Free Inspection in {city.name}, TX
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
-            Get an objective, physical 21-point roof health inspection from certified technicians. No sales pitch—just the honest facts about your roof.
+            Our core residential service area is generally within 75 miles of Texarkana. For locations beyond that range, contact us and we will confirm whether the project can be accommodated.
           </p>
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
             <button
               onClick={() => onOpenIntake('DIAGNOSTIC')}
               className="px-6 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg transition-colors cursor-pointer"
             >
-              REQUEST {city.name.toUpperCase()} INSPECTION
+              CHECK {city.name.toUpperCase()} AVAILABILITY
             </button>
             <a
               href="tel:9032315940"
