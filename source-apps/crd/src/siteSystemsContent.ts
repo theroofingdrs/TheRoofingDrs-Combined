@@ -452,7 +452,7 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
           "Phased priority schedule and closeout records"
     ],
     complianceSafety: 'Certified tenant protection zones, warning flags, and daily magnetic roller sweeps.',
-  },,
+  },
 
   '/industries/hoa-communities': {
     title: 'HOA Community Commercial Roofing | Commercial Roof Doctors',
