@@ -1,7 +1,7 @@
 import React from 'react';
+import { BrandLogo } from '../common/BrandLogo.tsx';
 
 const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
-import { BrandLogo } from '../common/BrandLogo.tsx';
 
 interface PublicFooterProps {
   onNavigate: (path: string) => void;
@@ -162,7 +162,7 @@ export const PublicFooter: React.FC<PublicFooterProps> = ({ onNavigate }) => {
           <span className="hidden sm:inline text-slate-700">&bull;</span>
           <span>Northeast Texas</span>
           <span className="hidden sm:inline text-slate-700">&bull;</span>
-          {/* Discreet Admin Login Link */}
+          {/* Discreet Admin Operations Link */}
           <a
             href={OPERATIONS_PORTAL_URL}
             className="text-slate-600 hover:text-slate-400 transition-colors underline decoration-slate-800"
