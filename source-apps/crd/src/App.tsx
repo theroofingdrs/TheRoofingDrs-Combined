@@ -60,6 +60,11 @@ const MainAppContent: React.FC = () => {
     const rawPath = currentPath.split('?')[0].split('#')[0];
     const normalizedPath = (rawPath.replace(/\/+$/, '') || '/').toLowerCase();
 
+    // Commercial roofing insights and individual articles
+    if (normalizedPath === '/blog' || normalizedPath.startsWith('/blog/')) {
+      return <BlogPage currentPath={normalizedPath} onOpenInspection={handleOpenInspection} />;
+    }
+
     // 1. Core Dedicated Pages
     if (normalizedPath === '/' || normalizedPath === '') {
       return (
