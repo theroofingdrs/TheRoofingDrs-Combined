@@ -66,18 +66,10 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
 
     const organizationSchema = {
       '@context': 'https://schema.org',
-      '@type': 'RoofingContractor',
+      '@type': 'Organization',
       name: BUSINESS_INFO.name,
       telephone: BUSINESS_INFO.phone,
       email: BUSINESS_INFO.email,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: BUSINESS_INFO.address.street,
-        addressLocality: BUSINESS_INFO.address.city,
-        addressRegion: BUSINESS_INFO.address.state,
-        postalCode: BUSINESS_INFO.address.zip,
-        addressCountry: 'US',
-      },
       areaServed: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'].map((state) => ({
         '@type': 'AdministrativeArea',
         name: state,
@@ -117,7 +109,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
         '@type': 'Service',
         serviceType,
         provider: {
-          '@type': 'RoofingContractor',
+          '@type': 'Organization',
           name: BUSINESS_INFO.name,
           telephone: BUSINESS_INFO.phone,
         },
