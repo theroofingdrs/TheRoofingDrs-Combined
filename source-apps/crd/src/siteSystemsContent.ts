@@ -1007,7 +1007,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Northwest Louisiana Territory',
     heroHeadline: 'Commercial Roofing Across Northwest Louisiana.',
     heroSubtitle: 'We help commercial property owners and managers assess roof condition and compare repair, restoration, coating and replacement options. Each Northwest Louisiana project is reviewed individually, with availability confirmed by location, roof type and scope.',
-    weatherAndStormFactors: 'Northwest Louisiana's humid conditions, heavy rainfall and seasonal storms make drainage, flashing, penetrations and moisture management important parts of a commercial roof evaluation. The existing roof assembly must be inspected before a restoration or coating system is considered.',
+    weatherAndStormFactors: 'Northwest Louisiana\'s humid conditions, heavy rainfall and seasonal storms make drainage, flashing, penetrations and moisture management important parts of a commercial roof evaluation. The existing roof assembly must be inspected before a restoration or coating system is considered.',
     countiesAndCitiesServed: [
       'Shreveport (Caddo Parish)',
       'Bossier City (Bossier Parish)',
@@ -1107,14 +1107,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Restoration and coating evaluations when the existing roof assembly is suitable',
         'Repair, restoration or replacement recommendations based on documented condition'
     ],
-    cityLinks: [
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ],
+    cityLinks: [{ name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/fort-worth': {
     title: 'Commercial Roofing in Fort Worth, TX | CRD',
@@ -1130,15 +1123,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof inspections and documented condition assessments',
         'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
         'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
-    ],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ],
+        'Repair, restoration or replacement recommendat{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Northeast Texas', href: '/service-areas/texas' }ongview' }, { name: 'Tyler', href: '/service-areas/tyler' }],
   },
   '/service-areas/dallas-fort-worth': {
     title: 'Commercial Roofing in Dallas-Fort Worth | CRD',
@@ -1150,15 +1135,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Dallas-Fort Worth commercial roofs face prolonged summer heat, hail, high winds and intense rainfall. Evaluations should document drainage, roof edges, seams, flashing, penetrations and rooftop equipment details before a repair or restoration plan is selected.',
     countiesAndCitiesServed: ['Dallas County', 'Tarrant County', 'Collin County', 'Denton County', 'Rockwall County', 'Ellis and Johnson County commercial corridors'],
     keyIndustriesInRegion: ['Warehousing, distribution and logistics', 'Office campuses and commercial real estate', 'Retail centers and hospitality properties', 'Multifamily portfolios and industrial facilities'],
-    serviceCapabilities: ['Commercial roof inspections and documented condition assessments', 'Leak and detail repair planning for seams, flashing and penetrations', 'Restoration and coating evaluations for suitable existing roof assemblies', 'Repair, restoration or replacement recommendations based on documented condition'],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ],
+    serviceCapabilities: ['Commercial roof inspections and documented condition assessments', 'Leak and detail repair planning for seams, flashing and penetrations', 'Restoration and coating evaluations for suitable existing r{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }ce-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }],
   },
   '/service-areas/longview': {
     title: 'Commercial Roofing in Longview, TX | CRD',
@@ -1173,16 +1150,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof inspections and documented condition assessments',
         'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
-    ],
-    cityLinks: [
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ],
+        'Restoration and coa{ name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }ice-areas/tyler' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }],
   },
   '/service-areas/tyler': {
     title: 'Commercial Roofing in Tyler, TX | CRD',
@@ -1196,17 +1164,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'Retail and shopping centers', 'Office and professional properties', 'Industrial and distribution facilities'],
     serviceCapabilities: [
         'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+        'Leak repair planning for seams, flashing, fasteners, penet{ name: 'Longview', href: '/service-areas/longview' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }
     ],
-    cityLinks: [
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ],
+    cityLinks: [{ name: 'Longview', href: '/service-areas/longview' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }],
   },
   '/service-areas/paris': {
     title: 'Commercial Roofing in Paris, TX | CRD',
@@ -1220,17 +1180,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     keyIndustriesInRegion: ['Manufacturing and fabrication', 'Healthcare and institutional properties', 'Retail and commercial centers', 'Agricultural supply and warehouse buildings'],
     serviceCapabilities: [
         'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+        { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Northeast Texas', href: '/service-areas/texas' }ndations based on documented condition'
     ],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }],
   },
   '/service-areas/tulsa': {
     title: 'Commercial Roofing in Tulsa, OK | CRD',
@@ -1243,16 +1195,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Tulsa, Tulsa County', 'Broken Arrow and surrounding Tulsa metro commercial corridors', 'Nearby Rogers and Wagoner County markets'],
     keyIndustriesInRegion: ['Energy and industrial facilities', 'Aerospace and manufacturing properties', 'Warehousing and distribution centers', 'Retail, office and multifamily properties'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+        'Commercial roof { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }ons and drainage details',
         'Restoration and coating evaluations when the existing roof assembly is suitable',
         'Repair, restoration or replacement recommendations based on documented condition'
     ],
-    cityLinks: [
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
-    ],
+    cityLinks: [{ name: 'Oklahoma City', href: '/service-areas/oklahoma-city' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }],
   },
   '/service-areas/oklahoma-city': {
     title: 'Commercial Roofing in Oklahoma City, OK | CRD',
@@ -1263,17 +1210,11 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroSubtitle: 'Oklahoma City property owners and facility managers can request a documented assessment of roof condition, leaks, drainage and repair priorities. Any coating or restoration recommendation depends on roof suitability.',
     weatherAndStormFactors: 'Oklahoma City commercial roofs face hail, severe thunderstorms, high winds and large seasonal temperature swings. Inspections should focus on roof edges, metal fasteners, seams, flashings and drainage performance.',
     countiesAndCitiesServed: ['Oklahoma City, Oklahoma County', 'Edmond and central Oklahoma commercial corridors', 'Nearby Cleveland and Canadian County markets'],
-    keyIndustriesInRegion: ['Energy and industrial properties', 'Distribution and logistics facilities', 'Healthcare and institutional buildings', 'Retail centers and office campuses'],
-    serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+    keyIndustriesInRegion: ['Energy and industrial properties', 'Distribution and logistics facilities', 'Healthcare and institutional buildings', 'Retail centers and office campuses'{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
         'Restoration and coating evaluations when the existing roof assembly is suitable',
         'Repair, restoration or replacement recommendations based on documented condition'
     ],
-    cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
-    ],
+    cityLinks: [{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }],
   },
   '/service-areas/little-rock': {
     title: 'Commercial Roofing in Little Rock, AR | CRD',
@@ -1285,20 +1226,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Central Arkansas roofs are exposed to heavy rainfall, humidity, summer heat, hail and severe thunderstorms. Drainage, roof penetrations, membrane seams and metal corrosion are important condition factors.',
     countiesAndCitiesServed: ['Little Rock, Pulaski County', 'North Little Rock and surrounding Pulaski County', 'Nearby Saline and Faulkner County commercial corridors'],
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'State, municipal and institutional buildings', 'Distribution and logistics facilities', 'Retail centers, offices and multifamily properties'],
-    serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+ { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Arkansas', href: '/service-areas/arkansas' }        'Repair, restoration or replacement recommendations based on documented condition'
     ],
-    cityLinks: [
-        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
-        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
-        { name: 'Springdale', href: '/service-areas/springdale' },
-        { name: 'El Dorado', href: '/service-areas/el-dorado' },
-        { name: 'Magnolia', href: '/service-areas/magnolia' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ],
+    cityLinks: [{ name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Magnolia', href: '/service-areas/magnolia' }],
   },
   '/service-areas/fayetteville': {
     title: 'Commercial Roof Coatings in Fayetteville, AR | CRD',
@@ -1308,15 +1238,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroHeadline: 'Commercial Roof Coatings in Fayetteville, Arkansas.',
     heroSubtitle: 'Commercial roof evaluations for Fayetteville property owners, facility managers and institutional operators considering restoration or replacement.',
     weatherAndStormFactors: 'Northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of a restoration decision.',
-    countiesAndCitiesServed: ['Fayetteville, Washington County', 'Washington County commercial corridors', 'Nearby Benton County and regional Northwest Arkansas markets'],
-    keyIndustriesInRegion: ['Higher education and institutional facilities', 'Healthcare and medical properties', 'Retail and hospitality developments', 'Distribution, food processing and manufacturing'],
+    countiesAndCitiesServed: ['Fayetteville, Washington County', 'Washington County commercial corridors', 'Nearby Benton County and regi{ name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }lopments', 'Distribution, food processing and manufacturing'],
     serviceCapabilities: ['Commercial coating and restoration assessments', 'Metal roof corrosion and fastener evaluations', 'Seam and flashing repair planning', 'Roof inspections and capital planning'],
-    cityLinks: [
-        { name: 'Springdale', href: '/service-areas/springdale' },
-        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ],
+    cityLinks: [{ name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
   },
   '/service-areas/springdale': {
     title: 'Commercial Roof Coatings in Springdale, AR | CRD',
@@ -1326,15 +1250,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroHeadline: 'Commercial Roof Coatings in Springdale, Arkansas.',
     heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs in Springdale for restoration, repairs and compatible fluid-applied coating systems.',
     weatherAndStormFactors: 'Springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details need regular attention.',
-    countiesAndCitiesServed: ['Springdale, Washington and Benton Counties', 'Northwest Arkansas industrial and logistics corridors', 'Nearby Fayetteville, Rogers and Bentonville markets'],
-    keyIndustriesInRegion: ['Food processing and manufacturing', 'Warehousing and distribution', 'Retail and commercial developments', 'Healthcare and institutional facilities'],
+    countiesAndCitiesServed: ['Springdale, Washington and Benton Counties', 'Northwest { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }nd distribution', 'Retail and commercial developments', 'Healthcare and institutional facilities'],
     serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust, seam and fastener assessments', 'Compatible coating system selection', 'Documented inspections and repair planning'],
-    cityLinks: [
-        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
-        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ],
+    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
   },
   '/service-areas/fort-smith': {
     title: 'Commercial Roofing in Fort Smith, AR | CRD',
@@ -1345,20 +1263,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroSubtitle: 'Fort Smith commercial property owners can request an assessment of roof condition, leak concerns and repair needs. Restoration or coating systems are considered only after the existing roof assembly has been evaluated.',
     weatherAndStormFactors: 'Fort Smith roofs experience humid summers, heavy rainfall, hail, high winds and seasonal temperature swings. Metal fasteners, roof edges, seams and drainage details can be vulnerable during severe weather.',
     countiesAndCitiesServed: ['Fort Smith, Sebastian County', 'Nearby Van Buren and Crawford County', 'Western Arkansas and eastern Oklahoma commercial corridors'],
-    keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Aerospace and component suppliers', 'Food processing and distribution', 'Healthcare, retail and institutional properties'],
-    serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
+    keyIndustriesInRegion: ['Man{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Arkansas', href: '/service-areas/arkansas' }d documented condition assessments',
         'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
         'Restoration and coating evaluations when the existing roof assembly is suitable',
         'Repair, restoration or replacement recommendations based on documented condition'
     ],
-    cityLinks: [
-        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
-        { name: 'Springdale', href: '/service-areas/springdale' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ],
+    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Tulsa', href: '/service-areas/tulsa' }],
   },
   '/service-areas/el-dorado': {
     title: 'Commercial Roof Coatings in El Dorado, AR | CRD',
@@ -1367,15 +1277,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'El Dorado, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in El Dorado, Arkansas.',
     heroSubtitle: 'Commercial roof evaluations for El Dorado property owners and facility managers considering metal roof restoration, compatible coatings or targeted repairs.',
-    weatherAndStormFactors: 'South Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are important restoration considerations.',
-    countiesAndCitiesServed: ['El Dorado, Union County', 'Union County industrial and commercial corridors', 'Nearby Magnolia and Columbia County markets'],
+    weatherAndStormFactors: 'South Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations a{ name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }industrial and commercial corridors', 'Nearby Magnolia and Columbia County markets'],
     keyIndustriesInRegion: ['Energy and chemical processing facilities', 'Timber and forest products', 'Healthcare and institutional properties', 'Retail and commercial buildings'],
     serviceCapabilities: ['Commercial metal roof restoration evaluations', 'Rust preparation, fastener and seam repair planning', 'Silicone and acrylic coating assessments', 'Documented roof inspections and capital planning'],
-    cityLinks: [
-        { name: 'Magnolia', href: '/service-areas/magnolia' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ],
+    cityLinks: [{ name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
   },
   '/service-areas/magnolia': {
     title: 'Commercial Roof Coatings in Magnolia, AR | CRD',
@@ -1384,15 +1289,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Magnolia, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Magnolia, Arkansas.',
     heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs in Magnolia for restoration, corrosion preparation, seam repairs and compatible coating systems.',
-    weatherAndStormFactors: 'Magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to inspect before restoration.',
-    countiesAndCitiesServed: ['Magnolia, Columbia County', 'Columbia County industrial and commercial properties', 'Nearby El Dorado and South Arkansas markets'],
+    weatherAndStormFactors: 'Magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof draina{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }tiesServed: ['Magnolia, Columbia County', 'Columbia County industrial and commercial properties', 'Nearby El Dorado and South Arkansas markets'],
     keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
     serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener assessments', 'Seam and flashing repair planning', 'Roof inspections and restoration recommendations'],
-    cityLinks: [
-        { name: 'El Dorado', href: '/service-areas/el-dorado' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ],
+    cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
   },
   '/service-areas/jonesboro': {
     title: 'Commercial Roof Coatings in Jonesboro, Arkansas | CRD',
@@ -1404,14 +1304,24 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment, metal fasteners and flashing transitions.',
     countiesAndCitiesServed: [
         'Jonesboro, Craighead County',
-        'Craighead County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Healthcare and medical campuses',
-        'Regional distribution and logistics',
-        'Manufacturing and food processing',
-        'Retail and commercial properties'
+        'Craighead County commercial and ind
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Searcy',
+            href: '/service-areas/searcy'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    properties'
     ],
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
@@ -1420,10 +1330,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'West Memphis', href: '/service-areas/west-memphis' },
-        { name: 'Searcy', href: '/service-areas/searcy' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Searcy',
+            href: '/service-areas/searcy'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
     ]
 },
   '/service-areas/rogers': {
@@ -1435,16 +1353,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Rogers for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and the condition of existing coating systems.',
     countiesAndCitiesServed: [
-        'Rogers, Benton County',
-        'Benton County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Corporate offices and business campuses',
-        'Retail, hospitality and mixed use developments',
-        'Distribution and light industrial facilities',
-        'Healthcare and professional properties'
-    ],
+        'Rogers
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
@@ -1452,11 +1382,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Bentonville', href: '/service-areas/bentonville' },
-        { name: 'Bella Vista', href: '/service-areas/bella-vista' },
-        { name: 'Siloam Springs', href: '/service-areas/siloam-springs' },
-        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        }
     ]
 },
   '/service-areas/conway': {
@@ -1466,15 +1407,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Conway, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Conway, Arkansas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Conway for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations around rooftop equipment.',
-    countiesAndCitiesServed: [
-        'Conway, Faulkner County',
-        'Faulkner County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'University and educational facilities',
-        'Healthcare and medical properties',
+    weatherAndStormFactors: 'Conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membran
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    erties',
         'Distribution and warehouse facilities',
         'Retail and office properties'
     ],
@@ -1485,11 +1439,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
-        { name: 'Sherwood', href: '/service-areas/sherwood' },
-        { name: 'Benton', href: '/service-areas/benton' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        }
     ]
 },
   '/service-areas/north-little-rock': {
@@ -1499,13 +1464,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'North Little Rock, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in North Little Rock, Arkansas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in North Little Rock for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'North Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams, drains, penetrations and perimeter details.',
-    countiesAndCitiesServed: [
-        'North Little Rock, Pulaski County',
-        'Pulaski County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
+    weatherAndStormFactors: 'North Little Rock commercial roofs face heat, hail, wind driven rain an
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Maumelle',
+            href: '/service-areas/maumelle'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    yIndustriesInRegion: [
         'Industrial and manufacturing facilities',
         'Warehousing and transportation properties',
         'Retail and office centers',
@@ -1518,11 +1498,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Conway', href: '/service-areas/conway' },
-        { name: 'Sherwood', href: '/service-areas/sherwood' },
-        { name: 'Maumelle', href: '/service-areas/maumelle' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Maumelle',
+            href: '/service-areas/maumelle'
+        }
     ]
 },
   '/service-areas/bentonville': {
@@ -1532,11 +1523,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Bentonville, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Bentonville, Arkansas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bentonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition of existing membrane or metal systems.',
-    countiesAndCitiesServed: [
-        'Bentonville, Benton County',
-        'Benton County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
+    w
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    commercial properties within the service territory'
     ],
     keyIndustriesInRegion: [
         'Corporate headquarters and office campuses',
@@ -1551,11 +1559,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Rogers', href: '/service-areas/rogers' },
-        { name: 'Bella Vista', href: '/service-areas/bella-vista' },
-        { name: 'Siloam Springs', href: '/service-areas/siloam-springs' },
-        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        }
     ]
 },
   '/service-areas/pine-bluff': {
@@ -1564,10 +1583,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/pine-bluff',
     regionName: 'Pine Bluff, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Pine Bluff, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Pine Bluff for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies deserve close attention.',
-    countiesAndCitiesServed: [
-        'Pine Bluff, Jefferson County',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs 
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    f, Jefferson County',
         'Jefferson County commercial and industrial corridors',
         'Nearby regional commercial properties within the service territory'
     ],
@@ -1584,11 +1621,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Benton', href: '/service-areas/benton' },
-        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
-        { name: 'El Dorado', href: '/service-areas/el-dorado' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        }
     ]
 },
   '/service-areas/benton': {
@@ -1596,9 +1644,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     metaDescription: 'Commercial roof coatings and metal roof restoration in Benton, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/benton',
     regionName: 'Benton, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Benton, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Benton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around rooftop equipment.',
+    heroHeadline: 'Commercial Roof Coatings 
+        {
+            name: 'Bryant',
+            href: '/service-areas/bryant'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    m failures and deterioration around rooftop equipment.',
     countiesAndCitiesServed: [
         'Benton, Saline County',
         'Saline County commercial and industrial corridors',
@@ -1617,21 +1684,50 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Bryant', href: '/service-areas/bryant' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
-        { name: 'Pine Bluff', href: '/service-areas/pine-bluff' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Bryant',
+            href: '/service-areas/bryant'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        }
     ]
 },
   '/service-areas/hot-springs': {
     title: 'Commercial Roof Coatings in Hot Springs, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Hot Springs, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/hot-springs',
-    regionName: 'Hot Springs, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Hot Springs, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Hot Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks, drainage, flashing and coating condition.',
+    regionName: '
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks, drainage, flashing and coating condition.',
     countiesAndCitiesServed: [
         'Hot Springs, Garland County',
         'Garland County commercial and industrial corridors',
@@ -1650,20 +1746,48 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Benton', href: '/service-areas/benton' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Malvern', href: '/service-areas/malvern' },
-        { name: 'Arkadelphia', href: '/service-areas/arkadelphia' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        }
     ]
 },
   '/service-areas/sherwood': {
     title: 'Commercial Roof Coatings in Sherwood, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Sherwood, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/sherwood',
-    regionName: 'Sherwood, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Sherwood, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sherwood for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Sherwood, Arkansas. Commercial roof evaluations, co
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Jacksonville',
+            href: '/service-areas/jacksonville'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ng.',
     weatherAndStormFactors: 'Sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating systems.',
     countiesAndCitiesServed: [
         'Sherwood, Pulaski County',
@@ -1683,20 +1807,48 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Jacksonville', href: '/service-areas/jacksonville' },
-        { name: 'Conway', href: '/service-areas/conway' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Jacksonville',
+            href: '/service-areas/jacksonville'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        }
     ]
 },
   '/service-areas/bella-vista': {
     title: 'Commercial Roof Coatings in Bella Vista, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bella Vista, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/bella-vista',
-    regionName: 'Bella Vista, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Bella Vista, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bella Vista for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    estoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of managed property portfolios.',
     countiesAndCitiesServed: [
         'Bella Vista, Benton County',
@@ -1716,18 +1868,43 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Rogers', href: '/service-areas/rogers' },
-        { name: 'Bentonville', href: '/service-areas/bentonville' },
-        { name: 'Siloam Springs', href: '/service-areas/siloam-springs' },
-        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        }
     ]
 },
   '/service-areas/russellville': {
-    title: 'Commercial Roof Coatings in Russellville, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Russellville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/russellville',
-    regionName: 'Russellville, Arkansas',
+    title: 'Commercial Roof Coatings in Russellville, Arkan
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    kansas',
     heroHeadline: 'Commercial Roof Coatings in Russellville, Arkansas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Russellville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented before restoration is specified.',
@@ -1749,16 +1926,37 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
-        { name: 'Conway', href: '/service-areas/conway' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
     ]
 },
-  '/service-areas/jacksonville': {
-    title: 'Commercial Roof Coatings in Jacksonville, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Jacksonville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/jacksonville',
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    nonicalPath: '/service-areas/jacksonville',
     regionName: 'Jacksonville, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Jacksonville, Arkansas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Jacksonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
@@ -1781,10 +1979,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
-        { name: 'Sherwood', href: '/service-areas/sherwood' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
     ]
 },
   '/service-areas/cabot': {
@@ -1809,15 +2015,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ]
-},
-  '/service-areas/searcy': {
-    title: 'Commercial Roof Coatings in Searcy, Arkansas | CRD',
+        'Silicone, acrylic and polyurethane sys
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+     title: 'Commercial Roof Coatings in Searcy, Arkansas | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Searcy, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/searcy',
     regionName: 'Searcy, Arkansas',
@@ -1842,14 +2053,25 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Jonesboro', href: '/service-areas/jonesboro' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
-    ]
-},
-  '/service-areas/west-memphis': {
-    title: 'Commercial Roof Coatings in West Memphis, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in West Memphis, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+        {
+            
+        {
+            name: 'Marion',
+            href: '/service-areas/marion'
+        },
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+     metaDescription: 'Commercial roof coatings and metal roof restoration in West Memphis, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/west-memphis',
     regionName: 'West Memphis, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in West Memphis, Arkansas.',
@@ -1870,13 +2092,25 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Marion', href: '/service-areas/marion' },
-        { name: 'Jonesboro', href: '/service-areas/jonesboro' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        'Documented roof inspections and repair, restor
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+            href: '/service-areas/little-rock'
+        }
     ]
 },
   '/service-areas/bryant': {
@@ -1902,13 +2136,27 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Benton', href: '/service-areas/benton' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+      
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Russellville',
+            href: '/service-areas/russellville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        }
     ]
 },
   '/service-areas/van-buren': {
@@ -1932,14 +2180,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Fort Smith', href: '/service-areas/fort-smith' },
-        { name: 'Russellville', href: '/service-areas/russellville' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        'Metal roof corrosion, fastener, seam and fl
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    /service-areas/russellville'
+        }
     ]
 },
   '/service-areas/siloam-springs': {
@@ -1964,15 +2227,34 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Rogers', href: '/service-areas/rogers' },
-        { name: 'Bentonville', href: '/service-areas/bentonville' },
-        { name: 'Bella Vista', href: '/service-areas/bella-vista' },
-        { name: 'Fayetteville', href: '/service-areas/fayetteville' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        'Silico
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+      name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        }
     ]
 },
   '/service-areas/maumelle': {
@@ -1994,17 +2276,35 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and service commercial buildings',
         'Healthcare and institutional facilities'
     ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+    serviceCapabilit
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
-        { name: 'Conway', href: '/service-areas/conway' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        }
     ]
 },
   '/service-areas/marion': {
@@ -2022,20 +2322,33 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     keyIndustriesInRegion: [
         'Distribution and logistics facilities',
-        'Industrial and manufacturing buildings',
-        'Retail and commercial centers',
-        'Healthcare and professional properties'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Indu
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    n evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'West Memphis', href: '/service-areas/west-memphis' },
-        { name: 'Jonesboro', href: '/service-areas/jonesboro' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        }
     ]
 },
   '/service-areas/forrest-city': {
@@ -2049,24 +2362,38 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: [
         'Forrest City, St. Francis County',
         'St. Francis County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Agricultural processing and supply facilities',
-        'Warehousing and distribution properties',
-        'Manufacturing and industrial buildings',
-        'Retail and institutional facilities'
-    ],
-    serviceCapabilities: [
+        'Nearby regional commercial prope
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+     [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'West Memphis', href: '/service-areas/west-memphis' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
     ]
 },
   '/service-areas/malvern': {
@@ -2080,25 +2407,41 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: [
         'Malvern, Hot Spring County',
         'Hot Spring County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Manufacturing and industrial properties',
-        'Warehouses and distribution facilities',
-        'Retail and commercial centers',
-        'Healthcare and institutional buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Nearby regional commercial properties within the service territory
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+     and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
-        { name: 'Arkadelphia', href: '/service-areas/arkadelphia' },
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        }
     ]
 },
   '/service-areas/arkadelphia': {
@@ -2110,14 +2453,24 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Arkadelphia for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof materials for restoration.',
     countiesAndCitiesServed: [
-        'Arkadelphia, Clark County',
-        'Clark County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'University and educational facilities',
-        'Manufacturing and industrial properties',
-        'Retail and commercial centers',
+        'Arkadelphia, Cla
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Magnolia',
+            href: '/service-areas/magnolia'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    etail and commercial centers',
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
@@ -2127,10 +2480,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Malvern', href: '/service-areas/malvern' },
-        { name: 'Hot Springs', href: '/service-areas/hot-springs' },
-        { name: 'El Dorado', href: '/service-areas/el-dorado' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        }
     ]
 },
   '/service-areas/camden': {
@@ -2140,29 +2501,50 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Camden, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Camden, Arkansas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Camden for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for metal roof restoration.',
-    countiesAndCitiesServed: [
-        'Camden, Ouachita County',
-        'Ouachita County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Industrial and manufacturing facilities',
-        'Government and institutional properties',
-        'Healthcare and medical buildings',
-        'Retail and commercial properties'
-    ],
-    serviceCapabilities: [
+    weatherAndStormFactors: 'Camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for metal roof rest
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'El Dorado', href: '/service-areas/el-dorado' },
-        { name: 'Magnolia', href: '/service-areas/magnolia' },
-        { name: 'Pine Bluff', href: '/service-areas/pine-bluff' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Magnolia',
+            href: '/service-areas/magnolia'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        }
     ]
 },
   '/service-areas/greenville': {
@@ -2176,27 +2558,56 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: [
         'Greenville, Hunt County',
         'Hunt County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Manufacturing and industrial properties',
-        'Healthcare and medical facilities',
-        'Retail and commercial centers',
-        'Warehousing and distribution facilities'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Nearby North and East Te
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    m and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/sulphur-springs': {
@@ -2208,29 +2619,57 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sulphur Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Sulphur Springs roofs experience humid heat, heavy rainfall and severe thunderstorms. Food production and industrial facilities need roof evaluations that consider exhaust, rooftop equipment, corrosion, drainage and product compatibility.',
     countiesAndCitiesServed: [
-        'Sulphur Springs, Hopkins County',
-        'Hopkins County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Food processing and manufacturing facilities',
-        'Industrial and warehouse properties',
-        'Retail and commercial centers',
-        'Healthcare and institutional buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+       
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/mount-pleasant': {
@@ -2240,15 +2679,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Mount Pleasant, Texas',
     heroHeadline: 'Commercial Roof Coatings in Mount Pleasant, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mount Pleasant for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corrosion, exposed fasteners, seams and flashing transitions should be documented before restoration.',
-    countiesAndCitiesServed: [
-        'Mount Pleasant, Titus County',
-        'Titus County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Manufacturing and industrial facilities',
-        'Agricultural processing and supply buildings',
+    weatherAndStormFactors: 'Mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corro
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    s',
         'Retail and commercial properties',
         'Healthcare and institutional facilities'
     ],
@@ -2259,12 +2715,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/marshall': {
@@ -2274,13 +2744,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Marshall, Texas',
     heroHeadline: 'Commercial Roof Coatings in Marshall, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Marshall for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Marshall roofs experience humid heat, heavy rainfall and seasonal severe storms. Commercial inspections should evaluate roof drainage, metal panel condition, fasteners, penetrations and moisture within existing assemblies.',
-    countiesAndCitiesServed: [
-        'Marshall, Harrison County',
-        'Harrison County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
+    weatherAndStormFactors: 'Marsh
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    striesInRegion: [
         'Manufacturing and industrial facilities',
         'Healthcare and medical campuses',
         'Education and institutional properties',
@@ -2293,12 +2782,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/sherman': {
@@ -2307,11 +2810,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/sherman',
     regionName: 'Sherman, Texas',
     heroHeadline: 'Commercial Roof Coatings in Sherman, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sherman for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Sherman commercial roofs face intense summer heat, hail and severe storms. Large industrial and institutional roofs need condition based review of seams, fasteners, drains, rooftop equipment and existing coating adhesion.',
-    countiesAndCitiesServed: [
-        'Sherman, Grayson County',
-        'Grayson County commercial and industrial corridors',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sherm
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    corridors',
         'Nearby North and East Texas commercial properties within the regional service territory'
     ],
     keyIndustriesInRegion: [
@@ -2327,12 +2851,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/denison': {
@@ -2341,11 +2879,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/denison',
     regionName: 'Denison, Texas',
     heroHeadline: 'Commercial Roof Coatings in Denison, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Denison for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s operational needs.',
-    countiesAndCitiesServed: [
-        'Denison, Grayson County',
-        'Grayson County commercial and industrial corridors',
+    heroSubtitle: 'Commerci
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+           'Grayson County commercial and industrial corridors',
         'Nearby North and East Texas commercial properties within the regional service territory'
     ],
     keyIndustriesInRegion: [
@@ -2361,22 +2920,58 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/nacogdoches': {
     title: 'Commercial Roof Coatings in Nacogdoches, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Nacogdoches, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/nacogdoches',
-    regionName: 'Nacogdoches, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Nacogdoches, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Nacogdoches for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Nacogdoches commercial roofs experience humid heat, heavy rainfall and severe thunderstorms. Timber and industrial properties should receive careful corrosion, drainage, flashing and rooftop penetration evaluations.',
+    regionName
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ful corrosion, drainage, flashing and rooftop penetration evaluations.',
     countiesAndCitiesServed: [
         'Nacogdoches, Nacogdoches County',
         'Nacogdoches County commercial and industrial corridors',
@@ -2395,22 +2990,56 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/lufkin': {
     title: 'Commercial Roof Coatings in Lufkin, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Lufkin, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/lufkin',
-    regionName: 'Lufkin, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Lufkin, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lufkin for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Lufkin roofs face humid heat, heavy rainfall, hail and seasonal storms. Inspections should consider corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior repairs.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Lufkin, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    r corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior repairs.',
     countiesAndCitiesServed: [
         'Lufkin, Angelina County',
         'Angelina County commercial and industrial corridors',
@@ -2429,21 +3058,56 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/jacksonville-tx': {
     title: 'Commercial Roof Coatings in Jacksonville, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Jacksonville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/jacksonville-tx',
-    regionName: 'Jacksonville, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Jacksonville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Jacksonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Jacksonvil
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ng.',
     weatherAndStormFactors: 'Jacksonville commercial roofs face humid heat, heavy rain and severe thunderstorms. Food processing and industrial facilities require attention to roof exhaust, corrosion, drainage and compatible restoration materials.',
     countiesAndCitiesServed: [
         'Jacksonville, Cherokee County',
@@ -2463,21 +3127,54 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
-  '/service-areas/palestine': {
-    title: 'Commercial Roof Coatings in Palestine, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Palestine, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/palestine',
-    regionName: 'Palestine, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Palestine, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Palestine for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+  '/service-area
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    aluates commercial metal and low slope roofs in Palestine for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Palestine roofs experience humid summers, heavy rainfall and seasonal storms. Commercial evaluations should document roof condition, drainage, seams, penetrations and coating compatibility.',
     countiesAndCitiesServed: [
         'Palestine, Anderson County',
@@ -2497,20 +3194,48 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/henderson': {
-    title: 'Commercial Roof Coatings in Henderson, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Henderson, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/henderson',
-    regionName: 'Henderson, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Henderson, Texas.',
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+    
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+     heroHeadline: 'Commercial Roof Coatings in Henderson, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Henderson for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Henderson roofs face humid heat, heavy rainfall and severe thunderstorms. Metal roof corrosion, fastener condition, seam integrity and drainage are key restoration evaluation points.',
     countiesAndCitiesServed: [
@@ -2531,18 +3256,44 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/athens': {
-    title: 'Commercial Roof Coatings in Athens, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Athens, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/athens',
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    calPath: '/service-areas/athens',
     regionName: 'Athens, Texas',
     heroHeadline: 'Commercial Roof Coatings in Athens, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Athens for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
@@ -2565,17 +3316,42 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/corsicana': {
-    title: 'Commercial Roof Coatings in Corsicana, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Corsicana, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    n and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/corsicana',
     regionName: 'Corsicana, Texas',
     heroHeadline: 'Commercial Roof Coatings in Corsicana, Texas.',
@@ -2599,17 +3375,36 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/arlington': {
-    title: 'Commercial Roof Coatings in Arlington, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Arlington, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+       
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+        metaDescription: 'Commercial roof coatings and metal roof restoration in Arlington, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/arlington',
     regionName: 'Arlington, Texas',
     heroHeadline: 'Commercial Roof Coatings in Arlington, Texas.',
@@ -2630,15 +3425,34 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Documented roof inspections and repair, restora
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    is',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/plano': {
@@ -2663,16 +3477,38 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Silicone, acrylic and polyurethane system evaluation based
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/irving': {
@@ -2696,17 +3532,41 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Metal roof corrosion, fastener, seam and flashing 
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+          href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/garland': {
@@ -2729,18 +3589,45 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Commercial roof coating and restoration evaluations for suitable existin
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ice-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/frisco': {
@@ -2763,18 +3650,46 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Commercial roof coatin
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+          name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/mckinney': {
@@ -2793,22 +3708,54 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     keyIndustriesInRegion: [
         'Manufacturing and industrial properties',
         'Healthcare and medical campuses',
-        'Corporate offices and business parks',
-        'Retail and mixed use developments'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+        'Corporate off
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ns'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/grand-prairie': {
@@ -2824,25 +3771,55 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Dallas County commercial and industrial corridors',
         'Nearby North and East Texas commercial properties within the regional service territory'
     ],
-    keyIndustriesInRegion: [
-        'Warehousing and distribution centers',
-        'Manufacturing and industrial facilities',
-        'Entertainment and event properties',
-        'Retail and commercial centers'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+    keyIndustriesI
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    on based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/denton': {
@@ -2856,27 +3833,56 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: [
         'Denton, Denton County',
         'Denton County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
-        'University and educational campuses',
-        'Healthcare and medical facilities',
-        'Manufacturing and industrial properties',
-        'Distribution and logistics buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'Nearby North and East Texas commercial properties wi
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    nning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/mesquite': {
@@ -2889,28 +3895,57 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Mesquite commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should review large roof drainage systems, metal seams, fasteners and existing coatings.',
     countiesAndCitiesServed: [
         'Mesquite, Dallas County',
-        'Dallas County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Distribution and logistics facilities',
-        'Manufacturing and industrial properties',
-        'Retail centers and shopping properties',
-        'Healthcare and institutional buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Dallas County commercia
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    le existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/carrollton': {
@@ -2920,31 +3955,58 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Carrollton, Texas',
     heroHeadline: 'Commercial Roof Coatings in Carrollton, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Carrollton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coating systems.',
-    countiesAndCitiesServed: [
-        'Carrollton, Dallas County',
-        'Dallas County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Industrial and flex space properties',
-        'Corporate offices and business parks',
-        'Retail and commercial centers',
-        'Healthcare and medical buildings'
-    ],
-    serviceCapabilities: [
+    weatherAndStormFactors: 'Carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coat
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+      serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/richardson': {
@@ -2954,14 +4016,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Richardson, Texas',
     heroHeadline: 'Commercial Roof Coatings in Richardson, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Richardson for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Richardson roofs face high summer temperatures, hail and heavy storms. Commercial roof evaluations should document membrane condition, roof edges, penetrations, drainage and restoration suitability.',
-    countiesAndCitiesServed: [
-        'Richardson, Dallas County',
-        'Dallas County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Technology and corporate campuses',
+    weatherAndStormFactors: 'Richardson roofs face high summer t
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    uses',
         'Healthcare and medical properties',
         'Education and research facilities',
         'Retail and commercial centers'
@@ -2973,12 +4053,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/lewisville': {
@@ -2987,12 +4081,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/lewisville',
     regionName: 'Lewisville, Texas',
     heroHeadline: 'Commercial Roof Coatings in Lewisville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lewisville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Lewisville roofs experience summer heat, hail, high winds and heavy rainfall. Large commercial properties need inspections of drainage, rooftop equipment, seams and metal panel attachment.',
-    countiesAndCitiesServed: [
-        'Lewisville, Denton County',
-        'Denton County commercial and industrial corridors',
-        'Nearby North and East Texas commercial properties within the regional service territory'
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lewisville for coating restoration, corrosion a
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    within the regional service territory'
     ],
     keyIndustriesInRegion: [
         'Warehousing and distribution facilities',
@@ -3007,12 +4121,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/allen': {
@@ -3021,11 +4149,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/allen',
     regionName: 'Allen, Texas',
     heroHeadline: 'Commercial Roof Coatings in Allen, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Allen for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Allen commercial roofs face high summer temperatures, hail and severe thunderstorms. Inspections should evaluate roof condition, drainage, penetrations, seams and coating compatibility.',
-    countiesAndCitiesServed: [
-        'Allen, Collin County',
-        'Collin County commercial and industrial corridors',
+    heroSubtitle: 'Commercial Roof Doctors evaluates comme
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    rridors',
         'Nearby North and East Texas commercial properties within the regional service territory'
     ],
     keyIndustriesInRegion: [
@@ -3041,12 +4190,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/rowlett': {
@@ -3054,11 +4217,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     metaDescription: 'Commercial roof coatings and metal roof restoration in Rowlett, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/rowlett',
     regionName: 'Rowlett, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Rowlett, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Rowlett for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Rowlett roofs face heat, hail, high winds and heavy rainfall. Roof evaluations should consider drainage, wind exposed edges, metal details and the condition of existing membranes and coatings.',
-    countiesAndCitiesServed: [
-        'Rowlett, Dallas County',
+    heroHeadline: 'Commercial Roof Coatings in Rowlett
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+       'Rowlett, Dallas County',
         'Dallas County commercial and industrial corridors',
         'Nearby North and East Texas commercial properties within the regional service territory'
     ],
@@ -3075,22 +4259,46 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/mansfield': {
     title: 'Commercial Roof Coatings in Mansfield, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Mansfield, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/mansfield',
-    regionName: 'Mansfield, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Mansfield, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mansfield for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Mansfield commercial roofs face intense heat, hail and severe storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration.',
+
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ere storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration.',
     countiesAndCitiesServed: [
         'Mansfield, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -3109,22 +4317,45 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/grapevine': {
     title: 'Commercial Roof Coatings in Grapevine, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Grapevine, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/grapevine',
-    regionName: 'Grapevine, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Grapevine, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Grapevine for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Grapevine roofs face high summer temperatures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around operations.',
+    canonicalPath: '/service-
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    tures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around operations.',
     countiesAndCitiesServed: [
         'Grapevine, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -3143,22 +4374,44 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Tyler', href: '/service-areas/tyler' },
-        { name: 'Paris', href: '/service-areas/paris' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        }
     ]
 },
   '/service-areas/broken-arrow': {
     title: 'Commercial Roof Coatings in Broken Arrow, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Broken Arrow. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/broken-arrow',
-    regionName: 'Broken Arrow, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Broken Arrow.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Broken Arrow for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating compatibility.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Broken Arrow. Commercial roof inspections, corrosion and seam repairs, and compati
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+       weatherAndStormFactors: 'Broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating compatibility.',
     countiesAndCitiesServed: [
         'Broken Arrow, Tulsa County',
         'Tulsa County commercial and industrial corridors',
@@ -3177,19 +4430,42 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/muskogee': {
     title: 'Commercial Roof Coatings in Muskogee, OK | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Muskogee. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/muskogee',
-    regionName: 'Muskogee, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Muskogee.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Muskogee for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs.',
+    regionName: 'Muskogee, 
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs.',
     countiesAndCitiesServed: [
         'Muskogee, Muskogee County',
         'Muskogee County commercial and industrial corridors',
@@ -3208,9 +4484,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/owasso': {
@@ -3219,9 +4508,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/owasso',
     regionName: 'Owasso, Oklahoma',
     heroHeadline: 'Commercial Roof Coatings in Owasso.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Owasso for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility.',
-    countiesAndCitiesServed: [
+    heroSubtitle: 'Commercial R
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    AndCitiesServed: [
         'Owasso, Tulsa County',
         'Tulsa County commercial and industrial corridors',
         'Nearby regional commercial properties within the service territory'
@@ -3239,9 +4539,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/bartlesville': {
@@ -3250,11 +4563,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/bartlesville',
     regionName: 'Bartlesville, Oklahoma',
     heroHeadline: 'Commercial Roof Coatings in Bartlesville.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bartlesville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage.',
-    countiesAndCitiesServed: [
-        'Bartlesville, Washington County',
-        'Washington County commercial and industrial corridors',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bartlesville for coa
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+      'Washington County commercial and industrial corridors',
         'Nearby regional commercial properties within the service territory'
     ],
     keyIndustriesInRegion: [
@@ -3270,9 +4592,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/lawton': {
@@ -3282,11 +4617,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Lawton, Oklahoma',
     heroHeadline: 'Commercial Roof Coatings in Lawton.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lawton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage.',
-    countiesAndCitiesServed: [
-        'Lawton, Comanche County',
-        'Comanche County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
+    wea
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ies within the service territory'
     ],
     keyIndustriesInRegion: [
         'Military and government support facilities',
@@ -3301,9 +4645,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/edmond': {
@@ -3313,14 +4670,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Edmond, Oklahoma',
     heroHeadline: 'Commercial Roof Coatings in Edmond.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Edmond for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition.',
-    countiesAndCitiesServed: [
-        'Edmond, Oklahoma County',
-        'Oklahoma County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'University and educational facilities',
+    weatherAndStormFactors: 'Edmond commercial roofs face hail, high winds, hot summers
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    niversity and educational facilities',
         'Corporate offices and business parks',
         'Healthcare and medical properties',
         'Retail and mixed use developments'
@@ -3332,9 +4695,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/norman': {
@@ -3345,16 +4721,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroHeadline: 'Commercial Roof Coatings in Norman.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Norman for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and roof edge details.',
-    countiesAndCitiesServed: [
-        'Norman, Cleveland County',
-        'Cleveland County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'University and research facilities',
-        'Healthcare and medical campuses',
-        'Retail and commercial properties',
-        'Industrial and warehouse facilities'
+    co
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    al and warehouse facilities'
     ],
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
@@ -3363,9 +4743,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/moore': {
@@ -3379,24 +4772,41 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: [
         'Moore, Cleveland County',
         'Cleveland County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Retail centers and shopping properties',
-        'Healthcare and medical facilities',
-        'Office and professional buildings',
-        'Warehouses and service commercial properties'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        '
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    tions for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/midwest-city': {
@@ -3410,24 +4820,41 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: [
         'Midwest City, Oklahoma County',
         'Oklahoma County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Aviation and aerospace support facilities',
-        'Government and institutional properties',
-        'Industrial and warehouse buildings',
-        'Retail and healthcare properties'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Nearby regional
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    e existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/shawnee': {
@@ -3446,19 +4873,35 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     keyIndustriesInRegion: [
         'Manufacturing and industrial facilities',
         'Healthcare and medical properties',
-        'Retail and commercial centers',
-        'Education and institutional buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Retail and
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        },
+    e, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/yukon': {
@@ -3478,18 +4921,38 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehousing and logistics facilities',
         'Manufacturing and industrial properties',
         'Retail and commercial centers',
-        'Healthcare and professional properties'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+        'Healthcare and profe
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+     or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Tulsa', href: '/service-areas/tulsa' },
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/monroe': {
@@ -3508,18 +4971,34 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     keyIndustriesInRegion: [
         'Healthcare and medical campuses',
         'Manufacturing and industrial facilities',
-        'Retail and commercial centers',
-        'Warehouses and distribution properties'
-    ],
-    serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+        'Retail an
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    restoration or replacement recommendations based on documented condition'
     ],
     cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
     ]
 },
   '/service-areas/west-monroe': {
@@ -3542,15 +5021,33 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        'Commercial roof coating and restoration evaluations for s
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    e-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/ruston': {
@@ -3575,13 +5072,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        'Silicone, acrylic and polyuretha
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/alexandria': {
@@ -3607,12 +5117,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        'Documented roof inspections and re
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+     name: 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/natchitoches': {
@@ -3638,12 +5158,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        'Documented roof inspections and repair,
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    : 'Monroe',
+            href: '/service-areas/monroe'
+        }
     ]
 },
   '/service-areas/pineville-la': {
@@ -3672,13 +5202,30 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
-    ]
-},
-  '/service-areas/minden': {
-    title: 'Commercial Roof Coatings in Minden, LA | CRD',
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+   
+        {
+            name: 'Bossier City',
+            href: '/service-areas/bossier-city'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Minden',
+            href: '/service-areas/minden'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    itle: 'Commercial Roof Coatings in Minden, LA | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Minden. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/minden',
     regionName: 'Minden, Louisiana',
@@ -3703,9 +5250,27 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Minden',
+            href: '/service-areas/minden'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    as/monroe'
+        }
     ]
 },
   '/service-areas/shreveport': {
@@ -3729,15 +5294,25 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Bossier City', href: '/service-areas/bossier-city' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Minden', href: '/service-areas/minden' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        'Metal
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+             href: '/service-areas/monroe'
+        },
+        {
+            name: 'Minden',
+            href: '/service-areas/minden'
+        }
     ]
 },
   '/service-areas/bossier-city': {
@@ -3762,14 +5337,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Shreveport', href: '/service-areas/shreveport' },
-        { name: 'Monroe', href: '/service-areas/monroe' },
-        { name: 'Minden', href: '/service-areas/minden' },
-        { name: 'Northwest Louisiana', href: '/service-areas/louisiana' }
+        'Silicone, acrylic and polyurethane sys
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    e-areas/minden'
+        }
     ]
 },
   '/service-areas/hurst': {
@@ -3798,13 +5380,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/euless': {
-    title: 'Commercial Roof Coatings in Euless, TX | CRD',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            h
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    s in Euless, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Euless, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/euless',
     regionName: 'Euless, Texas',
@@ -3829,14 +5420,30 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/bedford': {
-    title: 'Commercial Roof Coatings in Bedford, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bedford, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href:
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    tem planning.',
     canonicalPath: '/service-areas/bedford',
     regionName: 'Bedford, Texas',
     heroHeadline: 'Commercial Roof Coatings in Bedford, Texas.',
@@ -3860,16 +5467,34 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/north-richland-hills': {
-    title: 'Commercial Roof Coatings in North Richland Hills, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in North Richland Hills, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/north-richland-hills',
-    regionName: 'North Richland Hills, Texas',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+       regionName: 'North Richland Hills, Texas',
     heroHeadline: 'Commercial Roof Coatings in North Richland Hills, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in North Richland Hills for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'North Richland Hills roofs face high summer temperatures, hail, high winds and heavy rainfall. Inspections should document roof edges, penetrations, drainage and coating condition.',
@@ -3891,17 +5516,34 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/keller': {
-    title: 'Commercial Roof Coatings in Keller, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Keller, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/keller',
-    regionName: 'Keller, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Keller, Texas.',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-cit
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    s in Keller, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Keller for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Keller commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should focus on drainage, membrane seams, metal fasteners and the condition of existing restoration coatings.',
     countiesAndCitiesServed: [
@@ -3922,18 +5564,40 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/burleson': {
     title: 'Commercial Roof Coatings in Burleson, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Burleson, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/burleson',
-    regionName: 'Burleson, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Burleson, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Burleson for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    m
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    oofs in Burleson for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Burleson roofs experience high temperatures, hail, strong winds and heavy rainfall. Large roof areas need documented review of seams, roof edges, fasteners, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Burleson, Johnson County',
@@ -3953,18 +5617,40 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/rockwall': {
     title: 'Commercial Roof Coatings in Rockwall, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Rockwall, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/rockwall',
-    regionName: 'Rockwall, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Rockwall, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Rockwall for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Rockwal
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ented roof condition planning.',
     weatherAndStormFactors: 'Rockwall roofs face heat, hail, wind driven rain and severe thunderstorms. Inspections should assess drainage, roof edges, rooftop equipment and metal or membrane restoration suitability.',
     countiesAndCitiesServed: [
         'Rockwall, Rockwall County',
@@ -3984,19 +5670,41 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/forney': {
     title: 'Commercial Roof Coatings in Forney, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Forney, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/forney',
-    regionName: 'Forney, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Forney, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Forney for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Forney commercial roofs face hot summers, hail and severe storms. Roof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility.',
+    canonica
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    oof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility.',
     countiesAndCitiesServed: [
         'Forney, Kaufman County',
         'Kaufman County commercial and industrial corridors',
@@ -4015,9 +5723,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/waxahachie': {
@@ -4025,10 +5746,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     metaDescription: 'Commercial roof coatings and metal roof restoration in Waxahachie, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/waxahachie',
     regionName: 'Waxahachie, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Waxahachie, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Waxahachie for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Waxahachie roofs face intense summer heat, hail, high winds and heavy rainfall. Restoration planning should document roof moisture, drainage, metal condition and flashing details.',
-    countiesAndCitiesServed: [
+    heroHeadline: 'Commercial Roof Coatings in Waxahachie, Texas
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    untiesAndCitiesServed: [
         'Waxahachie, Ellis County',
         'Ellis County commercial and industrial corridors',
         'Nearby regional commercial properties within the service territory'
@@ -4046,9 +5777,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/midlothian': {
@@ -4057,11 +5801,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/midlothian',
     regionName: 'Midlothian, Texas',
     heroHeadline: 'Commercial Roof Coatings in Midlothian, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Midlothian for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Midlothian roofs face high heat, hail, wind and severe thunderstorms. Industrial roof evaluations should consider corrosion, chemical exposure, rooftop exhaust, seams and drainage.',
-    countiesAndCitiesServed: [
-        'Midlothian, Ellis County',
-        'Ellis County commercial and industrial corridors',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs 
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+     and industrial corridors',
         'Nearby regional commercial properties within the service territory'
     ],
     keyIndustriesInRegion: [
@@ -4077,9 +5830,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/lancaster': {
@@ -4088,12 +5854,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/lancaster',
     regionName: 'Lancaster, Texas',
     heroHeadline: 'Commercial Roof Coatings in Lancaster, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lancaster for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Lancaster commercial roofs face hot summers, hail and high winds. Large industrial roofs need detailed inspection of roof edges, fasteners, seams, drains and coating condition.',
-    countiesAndCitiesServed: [
-        'Lancaster, Dallas County',
-        'Dallas County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lancaster for coating restoration, corrosion and seam repairs, and documen
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+     the service territory'
     ],
     keyIndustriesInRegion: [
         'Distribution and logistics facilities',
@@ -4108,25 +5882,42 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/desoto': {
     title: 'Commercial Roof Coatings in DeSoto, TX | CRD',    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
     heroHeadline: 'Commercial Roof Coatings in DeSoto, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in DeSoto for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'DeSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs.',
-    countiesAndCitiesServed: [
-        'DeSoto, Dallas County',
-        'Dallas County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Healthcare and medical facilities',
-        'Retail and commercial centers',
-        'Industrial and warehouse properties',
+    weatherAndStormFactors: 'DeSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should 
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    'Industrial and warehouse properties',
         'Office and professional buildings'
     ],
     serviceCapabilities: [
@@ -4136,9 +5927,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/cedar-hill': {
@@ -4149,27 +5953,42 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroHeadline: 'Commercial Roof Coatings in Cedar Hill, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Cedar Hill for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Cedar Hill roofs face hot summers, hail, strong winds and heavy rainfall. Roof restoration assessments should document roof condition, drainage, seams, penetrations and existing coating compatibility.',
-    countiesAndCitiesServed: [
-        'Cedar Hill, Dallas County',
-        'Dallas County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Retail and shopping centers',
-        'Healthcare and medical properties',
-        'Office and professional buildings',
-        'Multifamily and managed properties'
-    ],
-    serviceCapabilities: [
+    
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+       serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/duncanville': {
@@ -4182,25 +6001,41 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Duncanville commercial roofs face heat, hail and severe thunderstorms. Inspections should consider roof drainage, membrane seams, metal details and the condition of existing roof coatings.',
     countiesAndCitiesServed: [
         'Duncanville, Dallas County',
-        'Dallas County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Healthcare and medical offices',
-        'Retail and commercial centers',
-        'Professional office properties',
-        'Light industrial buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Dalla
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+     suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/coppell': {
@@ -4217,21 +6052,39 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Nearby regional commercial properties within the service territory'
     ],
     keyIndustriesInRegion: [
-        'Corporate office campuses',
-        'Logistics and distribution facilities',
-        'Airport related commercial properties',
-        'Retail and hospitality buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Corporate office 
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/farmers-branch': {
@@ -4249,20 +6102,38 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     keyIndustriesInRegion: [
         'Office and business parks',
-        'Industrial and flex space properties',
-        'Retail and commercial centers',
-        'Healthcare and professional buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+        'Industrial and flex space properties
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/the-colony': {
@@ -4282,18 +6153,36 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Hospitality and resort properties',
         'Retail and entertainment centers',
         'Office and business parks',
-        'Healthcare and professional facilities'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Healthcare and professional facilities
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    nks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/sachse': {
@@ -4317,14 +6206,30 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+               name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/balch-springs': {
@@ -4349,13 +6254,26 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Silicone, acrylic and p
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/princeton': {
@@ -4381,12 +6299,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Documented roof inspections
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/royse-city': {
@@ -4413,11 +6341,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+   
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    city'
+        }
     ]
 },
   '/service-areas/melissa': {
@@ -4446,13 +6384,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/anna': {
-    title: 'Commercial Roof Coatings in Anna, TX | CRD',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-are
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ,
     metaDescription: 'Commercial roof coatings and metal roof restoration in Anna, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/anna',
     regionName: 'Anna, Texas',
@@ -4477,14 +6424,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/celina': {
-    title: 'Commercial Roof Coatings in Celina, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Celina, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+ 
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    , corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/celina',
     regionName: 'Celina, Texas',
     heroHeadline: 'Commercial Roof Coatings in Celina, Texas.',
@@ -4508,15 +6469,32 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/prosper': {
-    title: 'Commercial Roof Coatings in Prosper, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Prosper, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/prosper',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            na
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
     regionName: 'Prosper, Texas',
     heroHeadline: 'Commercial Roof Coatings in Prosper, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Prosper for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
@@ -4539,18 +6517,39 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/flower-mound': {
-    title: 'Commercial Roof Coatings in Flower Mound, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Flower Mound, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/flower-mound',
-    regionName: 'Flower Mound, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Flower Mound, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Flower Mound for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    titl
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    oSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Flower Mound for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Flower Mound roofs face high summer temperatures, hail and severe storms. Roof inspections should review drainage, membrane seams, rooftop equipment and restoration compatibility.',
     countiesAndCitiesServed: [
         'Flower Mound, Denton County',
@@ -4570,18 +6569,40 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/wylie': {
     title: 'Commercial Roof Coatings in Wylie, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Wylie, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/wylie',
-    regionName: 'Wylie, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Wylie, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Wylie for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    me
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+     for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Wylie commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document roof drainage, metal fasteners, seams, penetrations and coating condition.',
     countiesAndCitiesServed: [
         'Wylie, Collin County',
@@ -4601,19 +6622,36 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/centerton': {
     title: 'Commercial Roof Coatings in Centerton, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Centerton, Arkansas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
-    canonicalPath: '/service-areas/centerton',
-    regionName: 'Centerton, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Centerton, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Centerton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition.',
+    metaDescription: 'Commercial roof coatings and metal roof restoration in Centerton, Arkansas. Commercial roof inspections, corrosion and seam rep
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    mFactors: 'Centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition.',
     countiesAndCitiesServed: [
         'Centerton, Benton County',
         'Benton County commercial and industrial corridors',
@@ -4632,8 +6670,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/hot-springs-village': {
@@ -4642,10 +6694,16 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/hot-springs-village',
     regionName: 'Hot Springs Village, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Hot Springs Village, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Hot Springs Village for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Hot Springs Village roofs experience humid heat, heavy rainfall, hail and seasonal storms. Managed properties benefit from documented inspections, drainage review and planned restoration maintenance.',
-    countiesAndCitiesServed: [
-        'Hot Springs Village, Garland County',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal 
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+     Village, Garland County',
         'Garland County commercial and industrial corridors',
         'Nearby regional commercial properties within the service territory'
     ],
@@ -4662,8 +6720,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/harrison': {
@@ -4673,14 +6745,16 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Harrison, Arkansas',
     heroHeadline: 'Commercial Roof Coatings in Harrison, Arkansas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Harrison for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Harrison roofs face seasonal temperature changes, heavy rain, hail and strong storms. Commercial inspections should evaluate drainage, metal corrosion, seams and coating condition.',
-    countiesAndCitiesServed: [
-        'Harrison, Boone County',
-        'Boone County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Manufacturing and industrial facilities',
+    weatherAndStormFactors: 'Harrison 
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    'Manufacturing and industrial facilities',
         'Healthcare and medical properties',
         'Retail and commercial centers',
         'Warehouses and distribution properties'
@@ -4692,8 +6766,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/mountain-home': {
@@ -4705,25 +6793,37 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mountain Home for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Mountain Home commercial roofs face seasonal temperature swings, hail, heavy rainfall and strong winds. Roof evaluations should document seams, flashing, drainage and existing roof system condition.',
     countiesAndCitiesServed: [
-        'Mountain Home, Baxter County',
-        'Baxter County commercial and industrial corridors',
-        'Nearby regional commercial properties within the service territory'
-    ],
-    keyIndustriesInRegion: [
-        'Healthcare and medical facilities',
-        'Manufacturing and industrial properties',
-        'Retail and commercial centers',
-        'Hospitality and service businesses'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Mountain 
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/batesville': {
@@ -4740,20 +6840,35 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Nearby regional commercial properties within the service territory'
     ],
     keyIndustriesInRegion: [
-        'Manufacturing and industrial facilities',
-        'Healthcare and medical properties',
-        'Retail and commercial centers',
-        'Education and institutional buildings'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
+        'Manufacturing and 
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+     evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Little Rock', href: '/service-areas/little-rock' },
-        { name: 'Arkansas', href: '/service-areas/arkansas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/ardmore': {
@@ -4776,14 +6891,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        'Commercial roof coa
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+              href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/duncan': {
@@ -4808,12 +6938,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
-        { name: 'Oklahoma', href: '/service-areas/oklahoma' }
+        'Silicone, acrylic and polyurethane system evaluation base
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    service-areas/little-rock'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        }
     ]
 },
   '/service-areas/addison': {
@@ -4842,15 +6981,30 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
-    ]
-},
-  '/service-areas/haltom-city': {
-    title: 'Commercial Roof Coatings in Haltom City, TX | CRD',
+        {
+            name: 'Dallas-Fort Worth Metro',
+            hr
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    tings in Haltom City, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Haltom City, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/haltom-city',
     regionName: 'Haltom City, Texas',
@@ -4872,14 +7026,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Documented roof inspections and repair, restoration or replacement recommendat
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    reas/longview'
+        }
     ]
 },
   '/service-areas/white-settlement': {
@@ -4904,15 +7073,33 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Silicone, acrylic and polyurethane system evaluation based on substrate and
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    -areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/benbrook': {
@@ -4936,16 +7123,37 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Metal roof corrosion, fastener, seam and flashing rep
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    vice-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/watauga': {
@@ -4968,17 +7176,41 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Professional offices'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
-    cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        'Commercial roof coating and restoration evaluations for
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    e-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/saginaw': {
@@ -4999,19 +7231,44 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehousing and logistics facilities',
         'Manufacturing and industrial properties',
         'Retail and commercial centers'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
-    ],
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/forest-hill': {
@@ -5029,22 +7286,46 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     keyIndustriesInRegion: [
         'South Fort Worth industrial, retail and commercial property market',
-        'Industrial and warehouse properties',
-        'Retail and commercial centers',
-        'Healthcare and medical facilities'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+        'Industrial and warehous
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+            'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/crowley': {
@@ -5061,23 +7342,48 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Nearby Dallas Fort Worth and North Texas commercial properties'
     ],
     keyIndustriesInRegion: [
-        'South Fort Worth industrial, logistics and retail growth market',
-        'Industrial and distribution facilities',
-        'Retail and commercial centers',
-        'Healthcare and medical properties'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
+        'So
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/cleburne': {
@@ -5091,26 +7397,49 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: [
         'Cleburne, Johnson County',
         'Johnson County commercial and industrial corridors',
-        'Nearby Dallas Fort Worth and North Texas commercial properties'
-    ],
-    keyIndustriesInRegion: [
-        'Southwest DFW manufacturing, healthcare and commercial market',
-        'Manufacturing and industrial facilities',
-        'Healthcare and medical campuses',
-        'Retail and commercial centers'
-    ],
-    serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
+        'Nearby Da
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    isting roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/weatherford': {
@@ -5122,16 +7451,27 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Weatherford for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
     weatherAndStormFactors: 'Warehouses and distribution buildings',
     countiesAndCitiesServed: [
-        'Weatherford, Parker County',
-        'Parker County commercial and industrial corridors',
-        'Nearby Dallas Fort Worth and North Texas commercial properties'
-    ],
-    keyIndustriesInRegion: [
-        'West DFW manufacturing, healthcare and commercial market',
-        'Manufacturing and industrial properties',
-        'Healthcare and medical facilities',
-        'Retail and commercial centers'
-    ],
+        'Weathe
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
     serviceCapabilities: [
         'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
         'Metal roof corrosion, fastener, seam and flashing repair planning',
@@ -5139,11 +7479,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/mineral-wells': {
@@ -5153,16 +7504,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     regionName: 'Mineral Wells, Texas',
     heroHeadline: 'Commercial Roof Coatings in Mineral Wells, Texas.',
     heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mineral Wells for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Warehouses and service buildings',
-    countiesAndCitiesServed: [
-        'Mineral Wells, Palo Pinto County',
-        'Palo Pinto County commercial and industrial corridors',
-        'Nearby Dallas Fort Worth and North Texas commercial properties'
-    ],
-    keyIndustriesInRegion: [
-        'West North Texas industrial, healthcare and commercial market',
-        'Industrial and manufacturing facilities',
-        'Healthcare and institutional properties',
+    weatherAndStormFactors: 'War
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+         'Healthcare and institutional properties',
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
@@ -5172,11 +7535,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/stephenville': {
@@ -5185,15 +7559,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/stephenville',
     regionName: 'Stephenville, Texas',
     heroHeadline: 'Commercial Roof Coatings in Stephenville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Stephenville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Retail and healthcare properties',
-    countiesAndCitiesServed: [
-        'Stephenville, Erath County',
-        'Erath County commercial and industrial corridors',
-        'Nearby Dallas Fort Worth and North Texas commercial properties'
-    ],
-    keyIndustriesInRegion: [
-        'North Central Texas education, agriculture and manufacturing market',
+    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Stephenville for coating restoration, corrosion a
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ture and manufacturing market',
         'University and educational facilities',
         'Agricultural processing and supply properties',
         'Manufacturing and industrial buildings'
@@ -5205,11 +7592,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/ennis': {
@@ -5218,12 +7616,28 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/ennis',
     regionName: 'Ennis, Texas',
     heroHeadline: 'Commercial Roof Coatings in Ennis, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Ennis for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Healthcare and institutional buildings',
-    countiesAndCitiesServed: [
-        'Ennis, Ellis County',
-        'Ellis County commercial and industrial corridors',
-        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    heroSubtitle:
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    orth Texas commercial properties'
     ],
     keyIndustriesInRegion: [
         'South Dallas manufacturing, distribution and commercial market',
@@ -5238,23 +7652,50 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 },
   '/service-areas/bonham': {
     title: 'Commercial Roof Coatings in Bonham, TX | CRD',
     metaDescription: 'Commercial roof coatings and metal roof restoration in Bonham, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
     canonicalPath: '/service-areas/bonham',
-    regionName: 'Bonham, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Bonham, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bonham for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Agricultural supply and warehouse buildings',
-    countiesAndCitiesServed: [
-        'Bonham, Fannin County',
+    regionName: 'Bo
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    y',
         'Fannin County commercial and industrial corridors',
         'Nearby Dallas Fort Worth and North Texas commercial properties'
     ],
@@ -5271,11 +7712,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
     cityLinks: [
-        { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
-        { name: 'Dallas', href: '/service-areas/dallas' },
-        { name: 'Fort Worth', href: '/service-areas/fort-worth' },
-        { name: 'Longview', href: '/service-areas/longview' },
-        { name: 'Northeast Texas', href: '/service-areas/texas' }
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        }
     ]
 }
 };
