@@ -1117,7 +1117,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
   },
   '/service-areas/fort-worth': {
-    title: 'Commercial Roofing in Fort worth, TX | CRD',
+    title: 'Commercial Roofing in Fort Worth, TX | CRD',
     metaDescription: 'Commercial Roof Doctors evaluates Fort Worth commercial roofs for inspections, leak repairs, restoration, compatible coatings and replacement planning. Relevant properties include warehouses, logistics facilities, offices and retail buildings. Project availability is confirmed by location, roof type and scope.',
     canonicalPath: '/service-areas/fort-worth',
     regionName: 'Fort Worth, Texas',
