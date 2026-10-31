@@ -27,6 +27,12 @@ function renderMarkdown(markdown: string) {
   });
 }
 
+const starterImages: Record<string, string> = {
+  'repair-or-replace-your-roof': '/assets/images/old_damaged_shingles.jpg',
+  'what-to-do-after-a-hailstorm': '/assets/images/hail_damage_shingles.jpg',
+  'how-long-does-an-asphalt-shingle-roof-last': '/assets/images/new_roof_install.jpg',
+};
+
 function mapPublishedPost(row: Record<string, any>): Post {
   const body = String(row.body_markdown || '');
   const words = body.trim().split(/\s+/).filter(Boolean).length;
@@ -36,7 +42,7 @@ function mapPublishedPost(row: Record<string, any>): Post {
     category: String(row.category || 'General'),
     date: publishedAt ? new Date(publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '',
     readTime: Math.max(1, Math.ceil(words / 220)) + ' min read',
-    image: String(row.featured_image_url || '/assets/images/old_damaged_shingles.jpg'),
+    image: String(row.featured_image_url || starterImages[String(row.slug)] || '/assets/images/old_damaged_shingles.jpg'),
     alt: String(row.featured_image_alt || ''),
     sections: [], body_markdown: body,
     seoTitle: row.seo_title ? String(row.seo_title) : undefined,
