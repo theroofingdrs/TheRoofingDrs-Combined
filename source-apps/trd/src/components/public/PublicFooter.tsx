@@ -78,6 +78,14 @@ export const PublicFooter: React.FC<PublicFooterProps> = ({ onNavigate }) => {
             </li>
             <li>
               <button
+                onClick={() => onNavigate('/blog')}
+                className="hover:text-white transition-colors cursor-pointer text-left font-semibold text-slate-300"
+              >
+                Homeowner Roofing Blog
+              </button>
+            </li>
+            <li>
+              <button
                 onClick={() => onNavigate('/faq')}
                 className="hover:text-white transition-colors cursor-pointer text-left font-semibold text-slate-300"
               >
