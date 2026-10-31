@@ -4,13 +4,6 @@ export const BUSINESS_INFO = {
   phone: '(903) 231-5940',
   phoneRaw: '9032315940',
   email: 'TheRoofingDrs@gmail.com',
-  address: {
-    street: '614 Robison Rd',
-    city: 'Texarkana',
-    state: 'TX',
-    zip: '75501',
-    display: '614 Robison Rd, Texarkana, TX 75501',
-  },
   model: 'Service-Area Business',
   disclaimerServiceArea:
     'Commercial Roof Doctors is a field-operated commercial roofing and disaster-response contractor. Our physical facility supports regional operations and equipment deployment; we serve commercial clients directly at their facility locations.',
