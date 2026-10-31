@@ -817,13 +817,13 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/texas': {
-    title: 'Commercial Roof Coatings in Northeast Texas & DFW | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Northeast Texas and Dallas-Fort Worth, including Texarkana, Longview, Tyler, Paris and surrounding commercial markets.',
+    title: 'Commercial Roofing in Northeast Texas and DFW | CRD',
+    metaDescription: "Commercial roofing across Northeast Texas and Dallas-Fort Worth. Inspections, repairs, restoration and replacement planning. Confirm project scope.",
     canonicalPath: '/service-areas/texas',
     regionName: 'Northeast Texas Territory',
-    heroHeadline: 'Commercial Roof Coatings Across Northeast Texas & DFW.',
-    heroSubtitle: 'CRD evaluates aging commercial metal and low-slope roofs for coating restoration, seam repairs and replacement planning across Northeast Texas and the Dallas-Fort Worth market.',
-    weatherAndStormFactors: 'Northeast Texas experiences extreme thermal fluctuations, reaching 100°F+ rooftop temperatures in summer and dropping below freezing in winter, causing severe membrane expansion stress. Severe convective storms frequently deliver damaging hail and high straight-line winds.',
+    heroHeadline: 'Commercial Roofing Across Northeast Texas and DFW.',
+    heroSubtitle: 'Commercial Roof Doctors provides project evaluations for commercial properties in Northeast Texas and the Dallas-Fort Worth region. We assess the existing roof before recommending repair, restoration, a compatible coating system or replacement. Availability is confirmed for each project.',
+    weatherAndStormFactors: 'Northeast Texas and the Dallas-Fort Worth region experience hot summers, seasonal storms, hail and periods of heavy rainfall. Commercial roof evaluations should document drainage, seams, flashing, fasteners, penetrations and perimeter details before a repair or restoration approach is selected.',
     countiesAndCitiesServed: [
       'Texarkana (Bowie County)',
       'Longview (Gregg County)',
@@ -838,15 +838,16 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'New Boston (Bowie County)',
     ],
     keyIndustriesInRegion: [
-      'Manufacturing plants and metal fabrication facilities',
-      'Commercial retail centers and distribution hubs',
-      'Medical complexes and regional hospitals',
+      'Warehouses and distribution properties',
+      'Office buildings and commercial real estate',
+      'Retail centers and multifamily properties',
+      'Churches, schools and institutional facilities',
     ],
     serviceCapabilities: [
-      'Commercial roof coating and metal restoration evaluations',
-      'Fastener, seam, flashing and penetration repair planning',
-      'Silicone, acrylic and polyurethane coating system assessments',
-      'Documented inspections and repair-versus-replacement guidance',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak and detail repair planning for seams, flashing, fasteners and penetrations',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on roof condition',
     ],
     cityLinks: [
       { name: 'Dallas', href: '/service-areas/dallas' },
@@ -929,13 +930,13 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/arkansas': {
-    title: 'Commercial Roof Coatings Across Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration across Arkansas, including Little Rock, Fayetteville, Springdale, Fort Smith, El Dorado and Magnolia.',
+    title: 'Commercial Roofing Across Arkansas | CRD',
+    metaDescription: "Commercial roofing across Arkansas. Inspections, repairs, restoration and replacement planning. Project availability confirmed by location and scope.",
     canonicalPath: '/service-areas/arkansas',
     regionName: 'Arkansas Regional Service Markets',
-    heroHeadline: 'Commercial Roof Coatings Across Arkansas.',
-    heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs for coating restoration, corrosion repairs and replacement planning across Southwest, Central and Northwest Arkansas markets.',
-    weatherAndStormFactors: 'Heavy rainfall and severe southern thunderstorm systems bring sudden high-volume water accumulation. Commercial roofs require meticulously maintained internal drains, clear scuppers, and positive tapered drainage.',
+    heroHeadline: 'Commercial Roofing Across Arkansas.',
+    heroSubtitle: 'Commercial Roof Doctors helps property owners and managers understand existing roof conditions and evaluate repair, restoration, coating and replacement options. Project availability is confirmed individually based on location, roof type and scope.',
+    weatherAndStormFactors: 'Across Arkansas, heavy rainfall, humidity, hail and seasonal storms can expose drainage, flashing, seam and penetration problems. A roof assessment should document these details and check the condition of the existing assembly before selecting a repair or restoration approach.',
     countiesAndCitiesServed: [
       'Texarkana (Miller County)',
       'Hope (Hempstead County)',
@@ -949,15 +950,16 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Nashville (Howard County)',
     ],
     keyIndustriesInRegion: [
-      'Poultry processing and agricultural food facilities',
-      'Paper, timber, and forest product manufacturing',
-      'Churches, public school districts, and municipal properties',
+      'Warehouses and distribution properties',
+      'Office and retail buildings',
+      'Multifamily properties and commercial portfolios',
+      'Churches, schools and institutional facilities',
     ],
     serviceCapabilities: [
-      'Commercial roof coating and restoration evaluations',
-      'Metal roof corrosion, fastener and seam repair planning',
-      'Silicone and acrylic coating system assessments',
-      'Documented inspections and repair-versus-replacement guidance',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak and detail repair planning for seams, flashing and penetrations',
+      'Restoration and coating evaluations when roof conditions allow',
+      'Repair, restoration or replacement recommendations based on the roof assessment',
     ],
     cityLinks: [
       { name: 'Little Rock', href: '/service-areas/little-rock' },
@@ -999,13 +1001,13 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/louisiana': {
-    title: 'Commercial Roof Coatings in Northwest Louisiana | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Northwest Louisiana, including Shreveport, Bossier City, Monroe, Ruston and Minden.',
+    title: 'Commercial Roofing in Northwest Louisiana | CRD',
+    metaDescription: "Commercial roofing in Northwest Louisiana. Inspections, repairs, restoration and replacement planning. Confirm availability by roof type and scope.",
     canonicalPath: '/service-areas/louisiana',
     regionName: 'Northwest Louisiana Territory',
-    heroHeadline: 'Commercial Roof Coatings in Northwest Louisiana.',
-    heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs for coating restoration, corrosion repairs and replacement planning across Northwest Louisiana.',
-    weatherAndStormFactors: 'Subtropical humidity and frequent high-intensity precipitation patterns place severe hydrostatic pressure on commercial roof penetrations, curb flashings, and internal building drains.',
+    heroHeadline: 'Commercial Roofing Across Northwest Louisiana.',
+    heroSubtitle: 'We help commercial property owners and managers assess roof condition and compare repair, restoration, coating and replacement options. Each Northwest Louisiana project is reviewed individually, with availability confirmed by location, roof type and scope.',
+    weatherAndStormFactors: 'Northwest Louisiana\'s humid conditions, heavy rainfall and seasonal storms make drainage, flashing, penetrations and moisture management important parts of a commercial roof evaluation. The existing roof assembly must be inspected before a restoration or coating system is considered.',
     countiesAndCitiesServed: [
       'Shreveport (Caddo Parish)',
       'Bossier City (Bossier Parish)',
@@ -1016,15 +1018,16 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Springhill (Webster Parish)',
     ],
     keyIndustriesInRegion: [
-      'Casino, hospitality, and entertainment complexes',
-      'Oil, gas, and energy industrial parks',
-      'Healthcare institutions and commercial retail shopping malls',
+      'Warehouses and distribution properties',
+      'Office buildings and commercial real estate',
+      'Retail and hospitality properties',
+      'Multifamily, church and school facilities',
     ],
     serviceCapabilities: [
-      'Commercial roof coating and restoration evaluations',
-      'Metal roof corrosion, fastener and seam repair planning',
-      'Silicone and acrylic coating system assessments',
-      'Documented inspections and portfolio roof condition reviews',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for flashing, seams, penetrations and drainage details',
+      'Restoration and coating evaluations for suitable existing roof assemblies',
+      'Repair, restoration or replacement recommendations based on documented condition',
     ],
     cityLinks: [
       { name: 'Shreveport', href: '/service-areas/shreveport' },
@@ -1040,13 +1043,13 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/oklahoma': {
-    title: 'Commercial Roof Coatings Across Oklahoma | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Oklahoma, including Tulsa, Oklahoma City, Idabel and Broken Bow. Commercial roof evaluations and repairs.',
+    title: 'Commercial Roofing Across Oklahoma | CRD',
+    metaDescription: "Commercial roofing across Oklahoma. Inspections, repairs, restoration and replacement planning. Project availability confirmed by scope.",
     canonicalPath: '/service-areas/oklahoma',
     regionName: 'Oklahoma Regional Service Markets',
-    heroHeadline: 'Commercial Roof Coatings Across Oklahoma.',
-    heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs for coating restoration, fastener and seam repairs, and replacement planning across Southeast and major Oklahoma markets.',
-    weatherAndStormFactors: 'Located in the transition corridor of severe Great Plains wind and hail weather, commercial roofs in Southeast Oklahoma endure severe uplift pressures, hail impacts, and heavy seasonal precipitation.',
+    heroHeadline: 'Commercial Roofing Across Oklahoma.',
+    heroSubtitle: 'We help commercial property owners and managers document roof condition and compare repair, restoration, coating and replacement options. Project availability is confirmed individually based on location, roof type and scope.',
+    weatherAndStormFactors: 'Oklahoma commercial roofs can be exposed to strong winds, hail, heavy rainfall and seasonal temperature changes. Roof evaluations should document roof edges, fasteners, seams, flashing, penetrations and drainage before recommending repairs or restoration.',
     countiesAndCitiesServed: [
       'Idabel (McCurtain County)',
       'Broken Bow (McCurtain County)',
@@ -1056,15 +1059,16 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Valliant (McCurtain County)',
     ],
     keyIndustriesInRegion: [
-      'Hospitality resorts, cabin management, and tourism facilities',
-      'Forestry, timber mills, and wood manufacturing',
-      'Municipal, educational, and commercial retail properties',
+      'Warehouses and distribution properties',
+      'Office and retail buildings',
+      'Multifamily and commercial real estate portfolios',
+      'Churches, schools and institutional facilities',
     ],
     serviceCapabilities: [
-      'Commercial roof coating and restoration evaluations',
-      'Metal roof corrosion, fastener and seam repair planning',
-      'Silicone, acrylic and polyurethane coating system assessments',
-      'Documented inspections and repair-versus-replacement guidance',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak and detail repair planning for seams, flashing, fasteners and penetrations',
+      'Restoration and coating evaluations when the existing roof is suitable',
+      'Repair, restoration or replacement recommendations based on documented condition',
     ],
     cityLinks: [
       { name: 'Tulsa', href: '/service-areas/tulsa' },
@@ -1088,194 +1092,264 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 
 export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas/dallas': {
-    title: 'Commercial Roof Coatings in Dallas, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration for Dallas warehouses, offices, retail centers and multifamily properties. CRD confirms project availability based on location, roof type and scope.',
+    title: 'Commercial Roofing in Dallas, TX | CRD',
+    metaDescription: "Commercial roofing in Dallas, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/dallas',
     regionName: 'Dallas, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Dallas, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates aging metal and low-slope roofs across Dallas for coating restoration, seam and fastener repairs, and documented roof condition planning.',
+    heroHeadline: 'Commercial Roofing Services in Dallas, Texas.',
+    heroSubtitle: 'Dallas commercial property owners and managers can request a roof evaluation to document existing conditions, investigate leaks and compare repair, restoration and replacement options. Coating systems are considered only when the roof assembly is suitable.',
     weatherAndStormFactors: 'Dallas commercial roofs face intense summer heat, ultraviolet exposure, hail and strong storm winds. These conditions can accelerate coating wear, loosen metal fasteners and expose weak seams, flashings and drainage details.',
     countiesAndCitiesServed: ['Dallas, Dallas County', 'North Dallas and LBJ corridor', 'Downtown and central Dallas', 'Nearby Collin and Tarrant County commercial markets'],
     keyIndustriesInRegion: ['Distribution and logistics facilities', 'Office buildings and commercial campuses', 'Retail centers and shopping properties', 'Multifamily and mixed-use developments'],
-    serviceCapabilities: ['Commercial metal roof restoration and corrosion evaluation', 'Silicone and acrylic coating system evaluation for compatible roofs', 'Fastener, seam, flashing and penetration repairs', 'Roof inspections and repair-versus-restoration planning'],
-    cityLinks: [{ name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/fort-worth': {
-    title: 'Commercial Roof Coatings in Fort Worth, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration for Fort Worth industrial, logistics, office and retail properties. CRD confirms project availability based on location, roof type and scope.',
+    title: 'Commercial Roofing in Fort Worth, TX | CRD',
+    metaDescription: "Commercial roofing in Fort Worth, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/fort-worth',
     regionName: 'Fort Worth, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Fort Worth, Texas.',
-    heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs in Fort Worth for restoration, repairs and coating systems selected for the existing roof condition.',
+    heroHeadline: 'Commercial Roofing Services in Fort Worth, Texas.',
+    heroSubtitle: 'For Fort Worth warehouses, logistics properties and commercial buildings, a roof evaluation should establish the condition of the existing system before repairs, restoration or replacement are recommended. Project availability is confirmed individually.',
     weatherAndStormFactors: 'Fort Worth facilities experience high summer roof temperatures, hail, wind-driven rain and seasonal temperature swings. Roof inspections should pay particular attention to metal panel movement, fasteners, perimeter details and drainage.',
     countiesAndCitiesServed: ['Fort Worth, Tarrant County', 'Alliance and north Fort Worth logistics area', 'South Fort Worth commercial corridors', 'Nearby Parker and Johnson County markets'],
     keyIndustriesInRegion: ['Industrial and logistics facilities', 'Distribution centers and warehouses', 'Commercial offices and business parks', 'Retail and multifamily properties'],
-    serviceCapabilities: ['Metal roof corrosion and fastener assessments', 'Commercial silicone and acrylic coating evaluations', 'Seam, flashing and penetration reinforcement', 'Documented roof condition and restoration recommendations'],
-    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/dallas-fort-worth': {
-    title: 'Commercial Roof Coatings in Dallas-Fort Worth | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration across the Dallas-Fort Worth metroplex. CRD evaluates warehouses, offices, retail centers and multifamily roof systems.',
+    title: 'Commercial Roofing in Dallas-Fort Worth | CRD',
+    metaDescription: "Commercial roofing across Dallas-Fort Worth. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/dallas-fort-worth',
     regionName: 'Dallas-Fort Worth Metroplex',
-    heroHeadline: 'Commercial Roof Coatings Across Dallas-Fort Worth.',
-    heroSubtitle: 'A regional resource for commercial property owners and managers evaluating aging metal and low-slope roofs for coating restoration, repairs or replacement.',
-    weatherAndStormFactors: 'The Dallas-Fort Worth metroplex experiences prolonged summer heat, hail, high winds and intense rainfall. Large roof areas, rooftop equipment, metal panel seams and drainage systems need condition-based evaluation and maintenance.',
+    heroHeadline: 'Commercial Roofing Across Dallas-Fort Worth.',
+    heroSubtitle: 'A regional resource for commercial property owners and managers assessing roof condition, leak concerns, repair options, restoration suitability and replacement planning. Project availability is confirmed by location, roof type and scope.',
+    weatherAndStormFactors: 'Dallas-Fort Worth commercial roofs face prolonged summer heat, hail, high winds and intense rainfall. Evaluations should document drainage, roof edges, seams, flashing, penetrations and rooftop equipment details before a repair or restoration plan is selected.',
     countiesAndCitiesServed: ['Dallas County', 'Tarrant County', 'Collin County', 'Denton County', 'Rockwall County', 'Ellis and Johnson County commercial corridors'],
     keyIndustriesInRegion: ['Warehousing, distribution and logistics', 'Office campuses and commercial real estate', 'Retail centers and hospitality properties', 'Multifamily portfolios and industrial facilities'],
-    serviceCapabilities: ['Commercial roof coating and restoration evaluations', 'Metal roof rust, fastener and seam restoration', 'Silicone and acrylic coating system selection', 'Roof inspections and repair-versus-replacement planning'],
-    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/longview': {
-    title: 'Commercial Roof Coatings in Longview, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Longview, Texas. Roof evaluations, rust and fastener repairs, seam reinforcement and compatible coating systems.',
+    title: 'Commercial Roofing in Longview, TX | CRD',
+    metaDescription: "Commercial roofing in Longview, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/longview',
     regionName: 'Longview, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Longview, Texas.',
-    heroSubtitle: 'CRD helps Longview commercial property owners evaluate aging metal and low-slope roofs for restoration, targeted repairs and coating systems.',
+    heroHeadline: 'Commercial Roofing Services in Longview, Texas.',
+    heroSubtitle: 'Longview property owners and facility managers can request a documented assessment of roof condition, leak concerns and repair priorities. Restoration or coating options are considered only when the existing assembly is suitable.',
     weatherAndStormFactors: 'Longview roofs are exposed to humid conditions, heavy rainfall, summer heat and severe thunderstorms. Moisture management, corrosion control, drainage and sound seam details are important to long-term roof performance.',
     countiesAndCitiesServed: ['Longview, Gregg County', 'Gregg County industrial and commercial corridors', 'Nearby Harrison and Upshur County properties'],
     keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Healthcare and medical properties', 'Retail centers and office buildings', 'Warehouses and distribution facilities'],
-    serviceCapabilities: ['Metal roof corrosion and fastener restoration', 'Commercial roof coatings for compatible substrates', 'Seam, curb, flashing and penetration repairs', 'Roof inspections and restoration planning'],
-    cityLinks: [{ name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/tyler': {
-    title: 'Commercial Roof Coatings in Tyler, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Tyler, Texas. CRD evaluates commercial roofs for rust, leaks, seam repairs and compatible restoration systems.',
+    title: 'Commercial Roofing in Tyler, TX | CRD',
+    metaDescription: "Commercial roofing in Tyler, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/tyler',
     regionName: 'Tyler, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Tyler, Texas.',
-    heroSubtitle: 'Commercial roof evaluations and coating restoration options for Tyler property owners, facility managers and commercial real estate portfolios.',
+    heroHeadline: 'Commercial Roofing Services in Tyler, Texas.',
+    heroSubtitle: 'Tyler commercial property owners and facility managers can use a roof evaluation to understand current conditions, prioritize repairs and compare restoration with replacement when appropriate.',
     weatherAndStormFactors: 'Tyler commercial roofs face humid summers, heavy rain, hail and wind-driven storms. These conditions can expose weaknesses around drains, penetrations, metal panel laps and aging roof coatings.',
     countiesAndCitiesServed: ['Tyler, Smith County', 'Smith County commercial corridors', 'Nearby Gregg, Henderson and Cherokee County markets'],
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'Retail and shopping centers', 'Office and professional properties', 'Industrial and distribution facilities'],
-    serviceCapabilities: ['Commercial roof coatings and restoration assessments', 'Metal roof rust, fastener and seam repairs', 'Silicone and acrylic system evaluations', 'Documented inspections and capital planning'],
-    cityLinks: [{ name: 'Longview', href: '/service-areas/longview' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Longview', href: '/service-areas/longview' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/paris': {
-    title: 'Commercial Roof Coatings in Paris, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Paris, Texas. CRD evaluates aging metal and low-slope roofs for repairs and compatible coating systems.',
+    title: 'Commercial Roofing in Paris, TX | CRD',
+    metaDescription: "Commercial roofing in Paris, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/paris',
     regionName: 'Paris, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Paris, Texas.',
-    heroSubtitle: 'Commercial property owners in Paris can request an evaluation of aging metal and low-slope roofs, including rust, fasteners, seams, drainage and coating compatibility.',
+    heroHeadline: 'Commercial Roofing Services in Paris, Texas.',
+    heroSubtitle: 'Commercial property owners in Paris can request a roof condition assessment covering seams, fasteners, flashing, drainage and penetrations. Recommendations are based on inspection findings, not a coating-first assumption.',
     weatherAndStormFactors: 'Northeast Texas weather brings humid heat, heavy rain, hail and seasonal wind events. Metal roof seams, exposed fasteners, gutters and roof penetrations deserve close attention during inspections.',
     countiesAndCitiesServed: ['Paris, Lamar County', 'Lamar County commercial properties', 'Nearby Red River and Delta County markets'],
     keyIndustriesInRegion: ['Manufacturing and fabrication', 'Healthcare and institutional properties', 'Retail and commercial centers', 'Agricultural supply and warehouse buildings'],
-    serviceCapabilities: ['Commercial metal roof restoration evaluations', 'Rust preparation and fastener replacement planning', 'Compatible silicone and acrylic coating assessments', 'Roof inspections and repair-versus-replacement guidance'],
-    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/tulsa': {
-    title: 'Commercial Roof Coatings in Tulsa, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration for Tulsa, Oklahoma properties. CRD evaluates warehouses, industrial facilities, offices and retail roofs for restoration.',
+    title: 'Commercial Roofing in Tulsa, OK | CRD',
+    metaDescription: "Commercial roofing in Tulsa, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/tulsa',
     regionName: 'Tulsa, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Tulsa, Oklahoma.',
-    heroSubtitle: 'CRD provides commercial roof condition evaluations and restoration planning for compatible metal and low-slope roofs in the Tulsa market.',
+    heroHeadline: 'Commercial Roofing Services in Tulsa, Oklahoma.',
+    heroSubtitle: 'Tulsa commercial property owners and facility managers can request a roof assessment that documents existing conditions, identifies repair priorities and evaluates whether restoration or replacement is appropriate.',
     weatherAndStormFactors: 'Tulsa roofs experience severe thunderstorms, hail, high winds, summer heat and strong seasonal temperature changes. Metal panel attachment, roof edges, penetrations and drainage details are important inspection priorities.',
     countiesAndCitiesServed: ['Tulsa, Tulsa County', 'Broken Arrow and surrounding Tulsa metro commercial corridors', 'Nearby Rogers and Wagoner County markets'],
     keyIndustriesInRegion: ['Energy and industrial facilities', 'Aerospace and manufacturing properties', 'Warehousing and distribution centers', 'Retail, office and multifamily properties'],
-    serviceCapabilities: ['Commercial roof coating and restoration evaluations', 'Metal roof rust and fastener repair planning', 'Seam and flashing reinforcement', 'Roof inspections and repair-versus-replacement guidance'],
-    cityLinks: [{ name: 'Oklahoma City', href: '/service-areas/oklahoma-city' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Oklahoma City', href: '/service-areas/oklahoma-city' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
   },
   '/service-areas/oklahoma-city': {
-    title: 'Commercial Roof Coatings in Oklahoma City, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Oklahoma City. CRD evaluates industrial, logistics, office and retail roofs for compatible restoration systems.',
+    title: 'Commercial Roofing in Oklahoma City, OK | CRD',
+    metaDescription: "Commercial roofing in Oklahoma City, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/oklahoma-city',
     regionName: 'Oklahoma City, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Oklahoma City.',
-    heroSubtitle: 'Commercial roof evaluations for Oklahoma City property owners considering metal roof restoration, silicone or acrylic coatings, targeted repairs or replacement.',
+    heroHeadline: 'Commercial Roofing Services in Oklahoma City.',
+    heroSubtitle: 'Oklahoma City property owners and facility managers can request a documented assessment of roof condition, leaks, drainage and repair priorities. Any coating or restoration recommendation depends on roof suitability.',
     weatherAndStormFactors: 'Oklahoma City commercial roofs face hail, severe thunderstorms, high winds and large seasonal temperature swings. Inspections should focus on roof edges, metal fasteners, seams, flashings and drainage performance.',
     countiesAndCitiesServed: ['Oklahoma City, Oklahoma County', 'Edmond and central Oklahoma commercial corridors', 'Nearby Cleveland and Canadian County markets'],
     keyIndustriesInRegion: ['Energy and industrial properties', 'Distribution and logistics facilities', 'Healthcare and institutional buildings', 'Retail centers and office campuses'],
-    serviceCapabilities: ['Commercial roof coating and restoration evaluations', 'Metal roof corrosion and fastener assessments', 'Seam, flashing and penetration repairs', 'Documented roof condition and capital planning'],
-    cityLinks: [{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
   },
   '/service-areas/little-rock': {
-    title: 'Commercial Roof Coatings in Little Rock, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Little Rock, Arkansas. Roof inspections, seam repairs and compatible restoration systems for commercial properties.',
+    title: 'Commercial Roofing in Little Rock, AR | CRD',
+    metaDescription: "Commercial roofing in Little Rock, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/little-rock',
     regionName: 'Little Rock, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Little Rock, Arkansas.',
-    heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs in Little Rock for restoration, targeted repairs and coating systems selected for the existing roof assembly.',
+    heroHeadline: 'Commercial Roofing Services in Little Rock, Arkansas.',
+    heroSubtitle: 'Little Rock property owners and facility managers can request a documented roof assessment to identify water entry, drainage concerns and repair priorities. Restoration and coating options depend on the condition and compatibility of the existing roof.',
     weatherAndStormFactors: 'Central Arkansas roofs are exposed to heavy rainfall, humidity, summer heat, hail and severe thunderstorms. Drainage, roof penetrations, membrane seams and metal corrosion are important condition factors.',
     countiesAndCitiesServed: ['Little Rock, Pulaski County', 'North Little Rock and surrounding Pulaski County', 'Nearby Saline and Faulkner County commercial corridors'],
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'State, municipal and institutional buildings', 'Distribution and logistics facilities', 'Retail centers, offices and multifamily properties'],
-    serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener repair planning', 'Silicone and acrylic coating system selection', 'Documented inspections and roof capital planning'],
-    cityLinks: [{ name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Magnolia', href: '/service-areas/magnolia' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/fayetteville': {
-    title: 'Commercial Roof Coatings in Fayetteville, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Fayetteville, Arkansas. CRD evaluates commercial facilities for roof condition, repairs and compatible coating systems.',
+    title: "Commercial Roofing in Fayetteville, AR | CRD",
+    metaDescription: "Commercial roofing in Fayetteville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/fayetteville',
     regionName: 'Fayetteville, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Fayetteville, Arkansas.',
-    heroSubtitle: 'Commercial roof evaluations for Fayetteville property owners, facility managers and institutional operators considering restoration or replacement.',
+    heroHeadline: "Commercial Roofing Services in Fayetteville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Fayetteville should account for northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of a restoration decision.',
     countiesAndCitiesServed: ['Fayetteville, Washington County', 'Washington County commercial corridors', 'Nearby Benton County and regional Northwest Arkansas markets'],
     keyIndustriesInRegion: ['Higher education and institutional facilities', 'Healthcare and medical properties', 'Retail and hospitality developments', 'Distribution, food processing and manufacturing'],
-    serviceCapabilities: ['Commercial coating and restoration assessments', 'Metal roof corrosion and fastener evaluations', 'Seam and flashing repair planning', 'Roof inspections and capital planning'],
-    cityLinks: [{ name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/springdale': {
-    title: 'Commercial Roof Coatings in Springdale, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Springdale, Arkansas. Evaluations for industrial, food processing, warehouse, retail and institutional roofs.',
+    title: "Commercial Roofing in Springdale, AR | CRD",
+    metaDescription: "Commercial roofing in Springdale, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/springdale',
     regionName: 'Springdale, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Springdale, Arkansas.',
-    heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs in Springdale for restoration, repairs and compatible fluid-applied coating systems.',
+    heroHeadline: "Commercial Roofing Services in Springdale, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Springdale should account for springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details need regular attention.',
     countiesAndCitiesServed: ['Springdale, Washington and Benton Counties', 'Northwest Arkansas industrial and logistics corridors', 'Nearby Fayetteville, Rogers and Bentonville markets'],
     keyIndustriesInRegion: ['Food processing and manufacturing', 'Warehousing and distribution', 'Retail and commercial developments', 'Healthcare and institutional facilities'],
-    serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust, seam and fastener assessments', 'Compatible coating system selection', 'Documented inspections and repair planning'],
-    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/fort-smith': {
-    title: 'Commercial Roof Coatings in Fort Smith, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Fort Smith, Arkansas. CRD evaluates manufacturing, warehouse, office and retail roofs for compatible restoration.',
+    title: 'Commercial Roofing in Fort Smith, AR | CRD',
+    metaDescription: "Commercial roofing in Fort Smith, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/fort-smith',
     regionName: 'Fort Smith, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Fort Smith, Arkansas.',
-    heroSubtitle: 'Commercial roof inspections and restoration planning for Fort Smith property owners considering metal roof coatings, seam repairs or low-slope roof restoration.',
+    heroHeadline: 'Commercial Roofing Services in Fort Smith, Arkansas.',
+    heroSubtitle: 'Fort Smith commercial property owners can request an assessment of roof condition, leak concerns and repair needs. Restoration or coating systems are considered only after the existing roof assembly has been evaluated.',
     weatherAndStormFactors: 'Fort Smith roofs experience humid summers, heavy rainfall, hail, high winds and seasonal temperature swings. Metal fasteners, roof edges, seams and drainage details can be vulnerable during severe weather.',
     countiesAndCitiesServed: ['Fort Smith, Sebastian County', 'Nearby Van Buren and Crawford County', 'Western Arkansas and eastern Oklahoma commercial corridors'],
     keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Aerospace and component suppliers', 'Food processing and distribution', 'Healthcare, retail and institutional properties'],
-    serviceCapabilities: ['Commercial roof coating and restoration evaluations', 'Metal roof corrosion and fastener repair planning', 'Seam, flashing and penetration reinforcement', 'Roof inspections and capital planning'],
-    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Tulsa', href: '/service-areas/tulsa' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/el-dorado': {
-    title: 'Commercial Roof Coatings in El Dorado, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in El Dorado, Arkansas. CRD evaluates industrial, energy, manufacturing and commercial properties for restoration.',
+    title: "Commercial Roofing in El Dorado, AR | CRD",
+    metaDescription: "Commercial roofing in El Dorado, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/el-dorado',
     regionName: 'El Dorado, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in El Dorado, Arkansas.',
-    heroSubtitle: 'Commercial roof evaluations for El Dorado property owners and facility managers considering metal roof restoration, compatible coatings or targeted repairs.',
+    heroHeadline: "Commercial Roofing Services in El Dorado, Arkansas.",
+    heroSubtitle: "Commercial roof planning in El Dorado should account for south Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'South Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are important restoration considerations.',
     countiesAndCitiesServed: ['El Dorado, Union County', 'Union County industrial and commercial corridors', 'Nearby Magnolia and Columbia County markets'],
     keyIndustriesInRegion: ['Energy and chemical processing facilities', 'Timber and forest products', 'Healthcare and institutional properties', 'Retail and commercial buildings'],
-    serviceCapabilities: ['Commercial metal roof restoration evaluations', 'Rust preparation, fastener and seam repair planning', 'Silicone and acrylic coating assessments', 'Documented roof inspections and capital planning'],
-    cityLinks: [{ name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/magnolia': {
-    title: 'Commercial Roof Coatings in Magnolia, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Magnolia, Arkansas. CRD evaluates industrial, timber, institutional and commercial roofs for compatible restoration.',
+    title: "Commercial Roofing in Magnolia, AR | CRD",
+    metaDescription: "Commercial roofing in Magnolia, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/magnolia',
     regionName: 'Magnolia, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Magnolia, Arkansas.',
-    heroSubtitle: 'CRD evaluates commercial metal and low-slope roofs in Magnolia for restoration, corrosion preparation, seam repairs and compatible coating systems.',
+    heroHeadline: "Commercial Roofing Services in Magnolia, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Magnolia should account for magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to inspect before restoration.',
     countiesAndCitiesServed: ['Magnolia, Columbia County', 'Columbia County industrial and commercial properties', 'Nearby El Dorado and South Arkansas markets'],
     keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
-    serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener assessments', 'Seam and flashing repair planning', 'Roof inspections and restoration recommendations'],
-    cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/jonesboro': {
-    title: 'Commercial Roof Coatings in Jonesboro, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Jonesboro, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Jonesboro, AR | CRD",
+    metaDescription: "Commercial roofing in Jonesboro, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/jonesboro',
     regionName: 'Jonesboro, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Jonesboro, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Jonesboro for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Jonesboro, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Jonesboro should account for northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment, metal fasteners and flashing transitions.',
     countiesAndCitiesServed: [
         'Jonesboro, Craighead County',
@@ -1289,10 +1363,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1306,16 +1380,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/rogers': {
-    title: 'Commercial Roof Coatings in Rogers, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Rogers, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Rogers, AR | CRD",
+    metaDescription: "Commercial roofing in Rogers, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/rogers',
     regionName: 'Rogers, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Rogers, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Rogers for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Rogers, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Rogers should account for rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and the condition of existing coating systems.',
     countiesAndCitiesServed: [
         'Rogers, Benton County',
@@ -1329,10 +1407,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1350,16 +1428,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Fort Smith',
             href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/conway': {
-    title: 'Commercial Roof Coatings in Conway, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Conway, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Conway, AR | CRD",
+    metaDescription: "Commercial roofing in Conway, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/conway',
     regionName: 'Conway, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Conway, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Conway for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Conway, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Conway should account for conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations around rooftop equipment.',
     countiesAndCitiesServed: [
         'Conway, Faulkner County',
@@ -1373,10 +1455,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1394,16 +1476,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Benton',
             href: '/service-areas/benton'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/north-little-rock': {
-    title: 'Commercial Roof Coatings in North Little Rock, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in North Little Rock, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in North Little Rock, AR | CRD",
+    metaDescription: "Commercial roofing in North Little Rock, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/north-little-rock',
     regionName: 'North Little Rock, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in North Little Rock, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in North Little Rock for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in North Little Rock, Arkansas.",
+    heroSubtitle: "Commercial roof planning in North Little Rock should account for north Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'North Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams, drains, penetrations and perimeter details.',
     countiesAndCitiesServed: [
         'North Little Rock, Pulaski County',
@@ -1417,10 +1503,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Public and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1438,16 +1524,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Maumelle',
             href: '/service-areas/maumelle'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/bentonville': {
-    title: 'Commercial Roof Coatings in Bentonville, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bentonville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Bentonville, AR | CRD",
+    metaDescription: "Commercial roofing in Bentonville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bentonville',
     regionName: 'Bentonville, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Bentonville, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bentonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Bentonville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Bentonville should account for bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition of existing membrane or metal systems.',
     countiesAndCitiesServed: [
         'Bentonville, Benton County',
@@ -1461,10 +1551,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1482,16 +1572,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Fayetteville',
             href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/pine-bluff': {
-    title: 'Commercial Roof Coatings in Pine Bluff, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Pine Bluff, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Pine Bluff, AR | CRD",
+    metaDescription: "Commercial roofing in Pine Bluff, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/pine-bluff',
     regionName: 'Pine Bluff, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Pine Bluff, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Pine Bluff for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Pine Bluff, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Pine Bluff should account for pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies deserve close attention.',
     countiesAndCitiesServed: [
         'Pine Bluff, Jefferson County',
@@ -1505,10 +1599,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1526,16 +1620,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'El Dorado',
             href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/benton': {
-    title: 'Commercial Roof Coatings in Benton, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Benton, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Benton, AR | CRD",
+    metaDescription: "Commercial roofing in Benton, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/benton',
     regionName: 'Benton, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Benton, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Benton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Benton, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Benton should account for benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around rooftop equipment.',
     countiesAndCitiesServed: [
         'Benton, Saline County',
@@ -1549,10 +1647,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1570,16 +1668,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Pine Bluff',
             href: '/service-areas/pine-bluff'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/hot-springs': {
-    title: 'Commercial Roof Coatings in Hot Springs, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Hot Springs, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Hot Springs, AR | CRD",
+    metaDescription: "Commercial roofing in Hot Springs, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/hot-springs',
     regionName: 'Hot Springs, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Hot Springs, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Hot Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Hot Springs, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Hot Springs should account for hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks, drainage, flashing and coating condition.',
     countiesAndCitiesServed: [
         'Hot Springs, Garland County',
@@ -1593,10 +1695,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and office buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1614,16 +1716,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Arkadelphia',
             href: '/service-areas/arkadelphia'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/sherwood': {
-    title: 'Commercial Roof Coatings in Sherwood, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Sherwood, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Sherwood, AR | CRD",
+    metaDescription: "Commercial roofing in Sherwood, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sherwood',
     regionName: 'Sherwood, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Sherwood, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sherwood for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Sherwood, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Sherwood should account for sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating systems.',
     countiesAndCitiesServed: [
         'Sherwood, Pulaski County',
@@ -1637,10 +1743,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Professional office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1658,16 +1764,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Conway',
             href: '/service-areas/conway'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/bella-vista': {
-    title: 'Commercial Roof Coatings in Bella Vista, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bella Vista, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Bella Vista, AR | CRD",
+    metaDescription: "Commercial roofing in Bella Vista, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bella-vista',
     regionName: 'Bella Vista, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Bella Vista, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bella Vista for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Bella Vista, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Bella Vista should account for bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of managed property portfolios.',
     countiesAndCitiesServed: [
         'Bella Vista, Benton County',
@@ -1681,10 +1791,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and association managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1702,16 +1812,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Fayetteville',
             href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/russellville': {
-    title: 'Commercial Roof Coatings in Russellville, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Russellville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Russellville, AR | CRD",
+    metaDescription: "Commercial roofing in Russellville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/russellville',
     regionName: 'Russellville, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Russellville, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Russellville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Russellville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Russellville should account for russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented before restoration is specified.',
     countiesAndCitiesServed: [
         'Russellville, Pope County',
@@ -1725,10 +1839,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and healthcare properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1742,16 +1856,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/jacksonville': {
-    title: 'Commercial Roof Coatings in Jacksonville, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Jacksonville, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Jacksonville, AR | CRD",
+    metaDescription: "Commercial roofing in Jacksonville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/jacksonville',
     regionName: 'Jacksonville, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Jacksonville, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Jacksonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Jacksonville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Jacksonville should account for jacksonville commercial roofs face central Arkansas heat, hail, high winds and heavy rain. Large facilities require careful inspection of roof edges, penetrations, drainage and rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Jacksonville commercial roofs face central Arkansas heat, hail, high winds and heavy rain. Large facilities require careful inspection of roof edges, penetrations, drainage and rooftop equipment supports.',
     countiesAndCitiesServed: [
         'Jacksonville, Pulaski County',
@@ -1765,10 +1883,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1782,16 +1900,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/cabot': {
-    title: 'Commercial Roof Coatings in Cabot, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Cabot, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Cabot, AR | CRD",
+    metaDescription: "Commercial roofing in Cabot, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/cabot',
     regionName: 'Cabot, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Cabot, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Cabot for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Cabot, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Cabot should account for cabot roofs experience humid summers, hail, wind and heavy rainfall. Commercial evaluations should review drainage, roof penetrations, exposed fasteners and coating compatibility before.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Cabot roofs experience humid summers, hail, wind and heavy rainfall. Commercial evaluations should review drainage, roof penetrations, exposed fasteners and coating compatibility before restoration work.',
     countiesAndCitiesServed: [
         'Cabot, Lonoke County',
@@ -1805,20 +1927,22 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and service commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
-    cityLinks: []
+    cityLinks: [
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ]
 },
   '/service-areas/searcy': {
-    title: 'Commercial Roof Coatings in Searcy, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Searcy, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Searcy, AR | CRD",
+    metaDescription: "Commercial roofing in Searcy, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/searcy',
     regionName: 'Searcy, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Searcy, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Searcy for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Searcy, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Searcy should account for searcy commercial roofs face hot summers, heavy rainfall, hail and seasonal severe weather. Inspection priorities include moisture conditions, roof seams, flashing transitions and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Searcy commercial roofs face hot summers, heavy rainfall, hail and seasonal severe weather. Inspection priorities include moisture conditions, roof seams, flashing transitions and drainage performance.',
     countiesAndCitiesServed: [
         'Searcy, White County',
@@ -1832,10 +1956,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1845,16 +1969,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/west-memphis': {
-    title: 'Commercial Roof Coatings in West Memphis, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in West Memphis, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in West Memphis, AR | CRD",
+    metaDescription: "Commercial roofing in West Memphis, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/west-memphis',
     regionName: 'West Memphis, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in West Memphis, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in West Memphis for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in West Memphis, Arkansas.",
+    heroSubtitle: "Commercial roof planning in West Memphis should account for west Memphis roofs experience humid heat, heavy rain, wind and severe thunderstorms. Large logistics roofs should be evaluated for drainage, wind exposed edges, metal fasteners, seams.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'West Memphis roofs experience humid heat, heavy rain, wind and severe thunderstorms. Large logistics roofs should be evaluated for drainage, wind exposed edges, metal fasteners, seams and existing coating condition.',
     countiesAndCitiesServed: [
         'West Memphis, Crittenden County',
@@ -1868,10 +1996,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1885,16 +2013,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/bryant': {
-    title: 'Commercial Roof Coatings in Bryant, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bryant, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Bryant, AR | CRD",
+    metaDescription: "Commercial roofing in Bryant, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bryant',
     regionName: 'Bryant, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Bryant, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bryant for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Bryant, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Bryant should account for bryant commercial roofs face heat, hail, heavy rainfall and strong storms. Property managers should document roof condition, ponding, penetrations and repair history before choosing a.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Bryant commercial roofs face heat, hail, heavy rainfall and strong storms. Property managers should document roof condition, ponding, penetrations and repair history before choosing a coating or replacement scope.',
     countiesAndCitiesServed: [
         'Bryant, Saline County',
@@ -1908,10 +2040,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1925,16 +2057,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Hot Springs',
             href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/van-buren': {
-    title: 'Commercial Roof Coatings in Van Buren, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Van Buren, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Van Buren, AR | CRD",
+    metaDescription: "Commercial roofing in Van Buren, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/van-buren',
     regionName: 'Van Buren, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Van Buren, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Van Buren for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Van Buren, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Van Buren should account for van Buren roofs experience hot summers, hail, high winds and heavy rainfall. Metal roof corrosion, fasteners, seams and perimeter details should be inspected alongside drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Van Buren roofs experience hot summers, hail, high winds and heavy rainfall. Metal roof corrosion, fasteners, seams and perimeter details should be inspected alongside drainage and underlying moisture.',
     countiesAndCitiesServed: [
         'Van Buren, Crawford County',
@@ -1948,10 +2084,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1961,16 +2097,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Russellville',
             href: '/service-areas/russellville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/siloam-springs': {
-    title: 'Commercial Roof Coatings in Siloam Springs, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Siloam Springs, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Siloam Springs, AR | CRD",
+    metaDescription: "Commercial roofing in Siloam Springs, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/siloam-springs',
     regionName: 'Siloam Springs, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Siloam Springs, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Siloam Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Siloam Springs, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Siloam Springs should account for siloam Springs roofs face summer heat, hail, strong storms and heavy rainfall. Roof system selection should account for building use, rooftop exhaust, drainage, corrosion and product.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Siloam Springs roofs face summer heat, hail, strong storms and heavy rainfall. Roof system selection should account for building use, rooftop exhaust, drainage, corrosion and product specific chemical compatibility.',
     countiesAndCitiesServed: [
         'Siloam Springs, Benton County',
@@ -1984,10 +2124,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2005,16 +2145,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Fayetteville',
             href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/maumelle': {
-    title: 'Commercial Roof Coatings in Maumelle, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Maumelle, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Maumelle, AR | CRD",
+    metaDescription: "Commercial roofing in Maumelle, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/maumelle',
     regionName: 'Maumelle, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Maumelle, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Maumelle for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Maumelle, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Maumelle should account for maumelle commercial roofs experience humid heat, hail, wind driven rain and severe storms. Large low slope roofs need documented review of drainage, seams, penetrations and the condition.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Maumelle commercial roofs experience humid heat, hail, wind driven rain and severe storms. Large low slope roofs need documented review of drainage, seams, penetrations and the condition of previous repairs or coatings.',
     countiesAndCitiesServed: [
         'Maumelle, Pulaski County',
@@ -2028,10 +2172,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2045,16 +2189,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Conway',
             href: '/service-areas/conway'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/marion': {
-    title: 'Commercial Roof Coatings in Marion, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Marion, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Marion, AR | CRD",
+    metaDescription: "Commercial roofing in Marion, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/marion',
     regionName: 'Marion, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Marion, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Marion for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Marion, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Marion should account for marion roofs face humid summers, heavy rain, hail and strong winds. Commercial inspections should focus on large roof drainage systems, exposed metal details, penetrations and wind.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Marion roofs face humid summers, heavy rain, hail and strong winds. Commercial inspections should focus on large roof drainage systems, exposed metal details, penetrations and wind vulnerable perimeter conditions.',
     countiesAndCitiesServed: [
         'Marion, Crittenden County',
@@ -2068,10 +2216,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2081,16 +2229,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Jonesboro',
             href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/forrest-city': {
-    title: 'Commercial Roof Coatings in Forrest City, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Forrest City, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Forrest City, AR | CRD",
+    metaDescription: "Commercial roofing in Forrest City, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/forrest-city',
     regionName: 'Forrest City, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Forrest City, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Forrest City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Forrest City, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Forrest City should account for forrest City roofs experience humid heat, heavy rainfall and severe thunderstorms. Inspections should evaluate corrosion, drainage, flashing details and moisture before recommending.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Forrest City roofs experience humid heat, heavy rainfall and severe thunderstorms. Inspections should evaluate corrosion, drainage, flashing details and moisture before recommending restoration.',
     countiesAndCitiesServed: [
         'Forrest City, St. Francis County',
@@ -2104,10 +2256,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2117,16 +2269,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/malvern': {
-    title: 'Commercial Roof Coatings in Malvern, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Malvern, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Malvern, AR | CRD",
+    metaDescription: "Commercial roofing in Malvern, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/malvern',
     regionName: 'Malvern, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Malvern, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Malvern for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Malvern, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Malvern should account for malvern commercial roofs face hot summers, hail, wind and heavy rain. Restoration evaluations should include metal condition, seams, fasteners, moisture and drainage around rooftop equipment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Malvern commercial roofs face hot summers, hail, wind and heavy rain. Restoration evaluations should include metal condition, seams, fasteners, moisture and drainage around rooftop equipment.',
     countiesAndCitiesServed: [
         'Malvern, Hot Spring County',
@@ -2140,10 +2296,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2157,16 +2313,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/arkadelphia': {
-    title: 'Commercial Roof Coatings in Arkadelphia, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Arkadelphia, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Arkadelphia, AR | CRD",
+    metaDescription: "Commercial roofing in Arkadelphia, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/arkadelphia',
     regionName: 'Arkadelphia, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Arkadelphia, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Arkadelphia for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Arkadelphia, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Arkadelphia should account for arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof materials for restoration.',
     countiesAndCitiesServed: [
         'Arkadelphia, Clark County',
@@ -2180,10 +2340,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2197,16 +2357,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'El Dorado',
             href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/camden': {
-    title: 'Commercial Roof Coatings in Camden, Arkansas | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Camden, Arkansas. Commercial roof evaluations, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Camden, AR | CRD",
+    metaDescription: "Commercial roofing in Camden, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/camden',
     regionName: 'Camden, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Camden, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Camden for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Camden, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Camden should account for camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for metal roof restoration.',
     countiesAndCitiesServed: [
         'Camden, Ouachita County',
@@ -2220,10 +2384,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2237,16 +2401,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Pine Bluff',
             href: '/service-areas/pine-bluff'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/greenville': {
-    title: 'Commercial Roof Coatings in Greenville, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Greenville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Greenville, TX | CRD",
+    metaDescription: "Commercial roofing in Greenville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/greenville',
     regionName: 'Greenville, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Greenville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Greenville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Greenville, Texas.",
+    heroSubtitle: "Commercial roof planning in Greenville should account for greenville commercial roofs face hot summers, hail, high winds and heavy rainfall. Inspections should document roof edges, drainage, metal fasteners, seams and penetrations before a.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Greenville commercial roofs face hot summers, hail, high winds and heavy rainfall. Inspections should document roof edges, drainage, metal fasteners, seams and penetrations before a coating system is selected.',
     countiesAndCitiesServed: [
         'Greenville, Hunt County',
@@ -2260,10 +2428,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehousing and distribution facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2285,16 +2453,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/sulphur-springs': {
-    title: 'Commercial Roof Coatings in Sulphur Springs, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Sulphur Springs, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Sulphur Springs, TX | CRD",
+    metaDescription: "Commercial roofing in Sulphur Springs, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sulphur-springs',
     regionName: 'Sulphur Springs, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Sulphur Springs, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sulphur Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Sulphur Springs, Texas.",
+    heroSubtitle: "Commercial roof planning in Sulphur Springs should account for sulphur Springs roofs experience humid heat, heavy rainfall and severe thunderstorms. Food production and industrial facilities need roof evaluations that consider exhaust, rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Sulphur Springs roofs experience humid heat, heavy rainfall and severe thunderstorms. Food production and industrial facilities need roof evaluations that consider exhaust, rooftop equipment, corrosion, drainage and product compatibility.',
     countiesAndCitiesServed: [
         'Sulphur Springs, Hopkins County',
@@ -2308,10 +2480,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2333,16 +2505,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/mount-pleasant': {
-    title: 'Commercial Roof Coatings in Mount Pleasant, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Mount Pleasant, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Mount Pleasant, TX | CRD",
+    metaDescription: "Commercial roofing in Mount Pleasant, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mount-pleasant',
     regionName: 'Mount Pleasant, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Mount Pleasant, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mount Pleasant for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Mount Pleasant, Texas.",
+    heroSubtitle: "Commercial roof planning in Mount Pleasant should account for mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corrosion, exposed fasteners, seams and flashing transitions should be documented.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corrosion, exposed fasteners, seams and flashing transitions should be documented before restoration.',
     countiesAndCitiesServed: [
         'Mount Pleasant, Titus County',
@@ -2356,10 +2532,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2381,16 +2557,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/marshall': {
-    title: 'Commercial Roof Coatings in Marshall, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Marshall, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Marshall, TX | CRD",
+    metaDescription: "Commercial roofing in Marshall, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/marshall',
     regionName: 'Marshall, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Marshall, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Marshall for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Marshall, Texas.",
+    heroSubtitle: "Commercial roof planning in Marshall should account for marshall roofs experience humid heat, heavy rainfall and seasonal severe storms. Commercial inspections should evaluate roof drainage, metal panel condition, fasteners, penetrations and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Marshall roofs experience humid heat, heavy rainfall and seasonal severe storms. Commercial inspections should evaluate roof drainage, metal panel condition, fasteners, penetrations and moisture within existing assemblies.',
     countiesAndCitiesServed: [
         'Marshall, Harrison County',
@@ -2404,10 +2584,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2429,16 +2609,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/sherman': {
-    title: 'Commercial Roof Coatings in Sherman, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Sherman, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Sherman, TX | CRD",
+    metaDescription: "Commercial roofing in Sherman, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sherman',
     regionName: 'Sherman, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Sherman, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sherman for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Sherman, Texas.",
+    heroSubtitle: "Commercial roof planning in Sherman should account for sherman commercial roofs face intense summer heat, hail and severe storms. Large industrial and institutional roofs need condition based review of seams, fasteners, drains, rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Sherman commercial roofs face intense summer heat, hail and severe storms. Large industrial and institutional roofs need condition based review of seams, fasteners, drains, rooftop equipment and existing coating adhesion.',
     countiesAndCitiesServed: [
         'Sherman, Grayson County',
@@ -2452,10 +2636,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Distribution and logistics buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2477,16 +2661,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/denison': {
-    title: 'Commercial Roof Coatings in Denison, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Denison, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Denison, TX | CRD",
+    metaDescription: "Commercial roofing in Denison, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/denison',
     regionName: 'Denison, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Denison, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Denison for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Denison, Texas.",
+    heroSubtitle: "Commercial roof planning in Denison should account for denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s operational needs.',
     countiesAndCitiesServed: [
         'Denison, Grayson County',
@@ -2500,10 +2688,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2525,16 +2713,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/nacogdoches': {
-    title: 'Commercial Roof Coatings in Nacogdoches, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Nacogdoches, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Nacogdoches, TX | CRD",
+    metaDescription: "Commercial roofing in Nacogdoches, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/nacogdoches',
     regionName: 'Nacogdoches, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Nacogdoches, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Nacogdoches for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Nacogdoches, Texas.",
+    heroSubtitle: "Commercial roof planning in Nacogdoches should account for nacogdoches commercial roofs experience humid heat, heavy rainfall and severe thunderstorms. Timber and industrial properties should receive careful corrosion, drainage, flashing and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Nacogdoches commercial roofs experience humid heat, heavy rainfall and severe thunderstorms. Timber and industrial properties should receive careful corrosion, drainage, flashing and rooftop penetration evaluations.',
     countiesAndCitiesServed: [
         'Nacogdoches, Nacogdoches County',
@@ -2548,10 +2740,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2573,16 +2765,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/lufkin': {
-    title: 'Commercial Roof Coatings in Lufkin, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Lufkin, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Lufkin, TX | CRD",
+    metaDescription: "Commercial roofing in Lufkin, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lufkin',
     regionName: 'Lufkin, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Lufkin, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lufkin for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Lufkin, Texas.",
+    heroSubtitle: "Commercial roof planning in Lufkin should account for lufkin roofs face humid heat, heavy rainfall, hail and seasonal storms. Inspections should consider corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Lufkin roofs face humid heat, heavy rainfall, hail and seasonal storms. Inspections should consider corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior repairs.',
     countiesAndCitiesServed: [
         'Lufkin, Angelina County',
@@ -2596,10 +2792,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2621,16 +2817,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/jacksonville-tx': {
-    title: 'Commercial Roof Coatings in Jacksonville, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Jacksonville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Jacksonville, TX | CRD",
+    metaDescription: "Commercial roofing in Jacksonville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/jacksonville-tx',
     regionName: 'Jacksonville, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Jacksonville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Jacksonville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Jacksonville, Texas.",
+    heroSubtitle: "Commercial roof planning in Jacksonville should account for jacksonville commercial roofs face humid heat, heavy rain and severe thunderstorms. Food processing and industrial facilities require attention to roof exhaust, corrosion, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Jacksonville commercial roofs face humid heat, heavy rain and severe thunderstorms. Food processing and industrial facilities require attention to roof exhaust, corrosion, drainage and compatible restoration materials.',
     countiesAndCitiesServed: [
         'Jacksonville, Cherokee County',
@@ -2644,10 +2844,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2669,16 +2869,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/palestine': {
-    title: 'Commercial Roof Coatings in Palestine, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Palestine, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Palestine, TX | CRD",
+    metaDescription: "Commercial roofing in Palestine, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/palestine',
     regionName: 'Palestine, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Palestine, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Palestine for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Palestine, Texas.",
+    heroSubtitle: "Commercial roof planning in Palestine should account for palestine roofs experience humid summers, heavy rainfall and seasonal storms. Commercial evaluations should document roof condition, drainage, seams, penetrations and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Palestine roofs experience humid summers, heavy rainfall and seasonal storms. Commercial evaluations should document roof condition, drainage, seams, penetrations and coating compatibility.',
     countiesAndCitiesServed: [
         'Palestine, Anderson County',
@@ -2692,10 +2896,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2717,16 +2921,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/henderson': {
-    title: 'Commercial Roof Coatings in Henderson, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Henderson, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Henderson, TX | CRD",
+    metaDescription: "Commercial roofing in Henderson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/henderson',
     regionName: 'Henderson, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Henderson, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Henderson for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Henderson, Texas.",
+    heroSubtitle: "Commercial roof planning in Henderson should account for henderson roofs face humid heat, heavy rainfall and severe thunderstorms. Metal roof corrosion, fastener condition, seam integrity and drainage are key restoration evaluation points. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Henderson roofs face humid heat, heavy rainfall and severe thunderstorms. Metal roof corrosion, fastener condition, seam integrity and drainage are key restoration evaluation points.',
     countiesAndCitiesServed: [
         'Henderson, Rusk County',
@@ -2740,10 +2948,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2765,16 +2973,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/athens': {
-    title: 'Commercial Roof Coatings in Athens, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Athens, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Athens, TX | CRD",
+    metaDescription: "Commercial roofing in Athens, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/athens',
     regionName: 'Athens, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Athens, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Athens for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Athens, Texas.",
+    heroSubtitle: "Commercial roof planning in Athens should account for athens commercial roofs experience hot humid weather, hail, heavy rain and strong storms. Roof evaluations should include drainage, flashing transitions, metal fasteners and moisture.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Athens commercial roofs experience hot humid weather, hail, heavy rain and strong storms. Roof evaluations should include drainage, flashing transitions, metal fasteners and moisture conditions.',
     countiesAndCitiesServed: [
         'Athens, Henderson County',
@@ -2788,10 +3000,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and light industrial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2813,16 +3025,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/corsicana': {
-    title: 'Commercial Roof Coatings in Corsicana, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Corsicana, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Corsicana, TX | CRD",
+    metaDescription: "Commercial roofing in Corsicana, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/corsicana',
     regionName: 'Corsicana, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Corsicana, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Corsicana for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Corsicana, Texas.",
+    heroSubtitle: "Commercial roof planning in Corsicana should account for corsicana roofs face summer heat, hail and strong storm systems. Large commercial roofs should be evaluated for coating condition, seams, drainage, rooftop equipment and metal corrosion. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Corsicana roofs face summer heat, hail and strong storm systems. Large commercial roofs should be evaluated for coating condition, seams, drainage, rooftop equipment and metal corrosion.',
     countiesAndCitiesServed: [
         'Corsicana, Navarro County',
@@ -2836,10 +3052,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2861,16 +3077,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/arlington': {
-    title: 'Commercial Roof Coatings in Arlington, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Arlington, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Arlington, TX | CRD",
+    metaDescription: "Commercial roofing in Arlington, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/arlington',
     regionName: 'Arlington, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Arlington, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Arlington for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Arlington, Texas.",
+    heroSubtitle: "Commercial roof planning in Arlington should account for arlington roofs face intense summer heat, hail, high winds and heavy rainfall. Large venues and commercial campuses need detailed inspections of roof edges, drainage, penetrations and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Arlington roofs face intense summer heat, hail, high winds and heavy rainfall. Large venues and commercial campuses need detailed inspections of roof edges, drainage, penetrations and existing coating systems.',
     countiesAndCitiesServed: [
         'Arlington, Tarrant County',
@@ -2884,10 +3104,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail, hospitality and multifamily properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2909,16 +3129,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/plano': {
-    title: 'Commercial Roof Coatings in Plano, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Plano, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Plano, TX | CRD",
+    metaDescription: "Commercial roofing in Plano, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/plano',
     regionName: 'Plano, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Plano, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Plano for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Plano, Texas.",
+    heroSubtitle: "Commercial roof planning in Plano should account for plano commercial roofs experience high summer temperatures, hail and severe thunderstorms. Roof evaluations should address large rooftop equipment fields, membrane seams, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Plano commercial roofs experience high summer temperatures, hail and severe thunderstorms. Roof evaluations should address large rooftop equipment fields, membrane seams, drainage and metal details.',
     countiesAndCitiesServed: [
         'Plano, Collin County',
@@ -2932,10 +3156,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Technology and business parks'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2957,16 +3181,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/irving': {
-    title: 'Commercial Roof Coatings in Irving, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Irving, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Irving, TX | CRD",
+    metaDescription: "Commercial roofing in Irving, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/irving',
     regionName: 'Irving, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Irving, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Irving for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Irving, Texas.",
+    heroSubtitle: "Commercial roof planning in Irving should account for irving roofs face intense heat, hail, high winds and heavy rainfall. Large office and hospitality properties benefit from documented roof condition assessments and coating eligibility.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Irving roofs face intense heat, hail, high winds and heavy rainfall. Large office and hospitality properties benefit from documented roof condition assessments and coating eligibility reviews.',
     countiesAndCitiesServed: [
         'Irving, Dallas County',
@@ -2980,10 +3208,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and multifamily portfolios'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3005,16 +3233,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/garland': {
-    title: 'Commercial Roof Coatings in Garland, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Garland, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Garland, TX | CRD",
+    metaDescription: "Commercial roofing in Garland, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/garland',
     regionName: 'Garland, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Garland, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Garland for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Garland, Texas.",
+    heroSubtitle: "Commercial roof planning in Garland should account for garland commercial roofs face heat, hail and severe storms. Metal panel corrosion, fastener movement, roof edge details and drainage should be reviewed before restoration is recommended. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Garland commercial roofs face heat, hail and severe storms. Metal panel corrosion, fastener movement, roof edge details and drainage should be reviewed before restoration is recommended.',
     countiesAndCitiesServed: [
         'Garland, Dallas County',
@@ -3028,10 +3260,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3053,16 +3285,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/frisco': {
-    title: 'Commercial Roof Coatings in Frisco, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Frisco, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Frisco, TX | CRD",
+    metaDescription: "Commercial roofing in Frisco, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/frisco',
     regionName: 'Frisco, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Frisco, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Frisco for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Frisco, Texas.",
+    heroSubtitle: "Commercial roof planning in Frisco should account for frisco roofs experience high summer temperatures, hail, strong winds and heavy rain. Commercial campuses need condition based review of rooftop equipment, drainage, seams and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Frisco roofs experience high summer temperatures, hail, strong winds and heavy rain. Commercial campuses need condition based review of rooftop equipment, drainage, seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Frisco, Collin County',
@@ -3076,10 +3312,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3101,16 +3337,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/mckinney': {
-    title: 'Commercial Roof Coatings in McKinney, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in McKinney, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in McKinney, TX | CRD",
+    metaDescription: "Commercial roofing in McKinney, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mckinney',
     regionName: 'McKinney, Texas',
-    heroHeadline: 'Commercial Roof Coatings in McKinney, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in McKinney for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in McKinney, Texas.",
+    heroSubtitle: "Commercial roof planning in McKinney should account for mcKinney commercial roofs face heat, hail, high winds and heavy rainfall. Inspections should evaluate membrane condition, metal fasteners, roof edges, penetrations and moisture before.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'McKinney commercial roofs face heat, hail, high winds and heavy rainfall. Inspections should evaluate membrane condition, metal fasteners, roof edges, penetrations and moisture before coating restoration.',
     countiesAndCitiesServed: [
         'McKinney, Collin County',
@@ -3124,10 +3364,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and mixed use developments'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3149,16 +3389,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/grand-prairie': {
-    title: 'Commercial Roof Coatings in Grand Prairie, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Grand Prairie, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Grand Prairie, TX | CRD",
+    metaDescription: "Commercial roofing in Grand Prairie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/grand-prairie',
     regionName: 'Grand Prairie, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Grand Prairie, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Grand Prairie for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Grand Prairie, Texas.",
+    heroSubtitle: "Commercial roof planning in Grand Prairie should account for grand Prairie roofs experience high summer temperatures, hail and severe storms. Large industrial roof areas require careful evaluation of drainage, seams, fasteners and roof edge conditions. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Grand Prairie roofs experience high summer temperatures, hail and severe storms. Large industrial roof areas require careful evaluation of drainage, seams, fasteners and roof edge conditions.',
     countiesAndCitiesServed: [
         'Grand Prairie, Dallas County',
@@ -3172,10 +3416,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3197,16 +3441,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/denton': {
-    title: 'Commercial Roof Coatings in Denton, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Denton, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Denton, TX | CRD",
+    metaDescription: "Commercial roofing in Denton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/denton',
     regionName: 'Denton, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Denton, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Denton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Denton, Texas.",
+    heroSubtitle: "Commercial roof planning in Denton should account for denton roofs face hot summers, hail, high winds and seasonal storms. Commercial roof evaluations should document drainage, membrane seams, metal corrosion and rooftop penetrations. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Denton roofs face hot summers, hail, high winds and seasonal storms. Commercial roof evaluations should document drainage, membrane seams, metal corrosion and rooftop penetrations.',
     countiesAndCitiesServed: [
         'Denton, Denton County',
@@ -3220,10 +3468,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Distribution and logistics buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3245,16 +3493,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/mesquite': {
-    title: 'Commercial Roof Coatings in Mesquite, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Mesquite, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Mesquite, TX | CRD",
+    metaDescription: "Commercial roofing in Mesquite, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mesquite',
     regionName: 'Mesquite, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Mesquite, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mesquite for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Mesquite, Texas.",
+    heroSubtitle: "Commercial roof planning in Mesquite should account for mesquite commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should review large roof drainage systems, metal seams, fasteners and existing coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Mesquite commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should review large roof drainage systems, metal seams, fasteners and existing coatings.',
     countiesAndCitiesServed: [
         'Mesquite, Dallas County',
@@ -3268,10 +3520,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3293,16 +3545,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/carrollton': {
-    title: 'Commercial Roof Coatings in Carrollton, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Carrollton, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Carrollton, TX | CRD",
+    metaDescription: "Commercial roofing in Carrollton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/carrollton',
     regionName: 'Carrollton, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Carrollton, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Carrollton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Carrollton, Texas.",
+    heroSubtitle: "Commercial roof planning in Carrollton should account for carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coating systems. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coating systems.',
     countiesAndCitiesServed: [
         'Carrollton, Dallas County',
@@ -3316,10 +3572,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3341,16 +3597,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/richardson': {
-    title: 'Commercial Roof Coatings in Richardson, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Richardson, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Richardson, TX | CRD",
+    metaDescription: "Commercial roofing in Richardson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/richardson',
     regionName: 'Richardson, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Richardson, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Richardson for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Richardson, Texas.",
+    heroSubtitle: "Commercial roof planning in Richardson should account for richardson roofs face high summer temperatures, hail and heavy storms. Commercial roof evaluations should document membrane condition, roof edges, penetrations, drainage and restoration.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Richardson roofs face high summer temperatures, hail and heavy storms. Commercial roof evaluations should document membrane condition, roof edges, penetrations, drainage and restoration suitability.',
     countiesAndCitiesServed: [
         'Richardson, Dallas County',
@@ -3364,10 +3624,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3389,16 +3649,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/lewisville': {
-    title: 'Commercial Roof Coatings in Lewisville, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Lewisville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Lewisville, TX | CRD",
+    metaDescription: "Commercial roofing in Lewisville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lewisville',
     regionName: 'Lewisville, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Lewisville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lewisville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Lewisville, Texas.",
+    heroSubtitle: "Commercial roof planning in Lewisville should account for lewisville roofs experience summer heat, hail, high winds and heavy rainfall. Large commercial properties need inspections of drainage, rooftop equipment, seams and metal panel attachment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Lewisville roofs experience summer heat, hail, high winds and heavy rainfall. Large commercial properties need inspections of drainage, rooftop equipment, seams and metal panel attachment.',
     countiesAndCitiesServed: [
         'Lewisville, Denton County',
@@ -3412,10 +3676,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Corporate offices and business parks'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3437,16 +3701,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/allen': {
-    title: 'Commercial Roof Coatings in Allen, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Allen, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Allen, TX | CRD",
+    metaDescription: "Commercial roofing in Allen, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/allen',
     regionName: 'Allen, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Allen, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Allen for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Allen, Texas.",
+    heroSubtitle: "Commercial roof planning in Allen should account for allen commercial roofs face high summer temperatures, hail and severe thunderstorms. Inspections should evaluate roof condition, drainage, penetrations, seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Allen commercial roofs face high summer temperatures, hail and severe thunderstorms. Inspections should evaluate roof condition, drainage, penetrations, seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Allen, Collin County',
@@ -3460,10 +3728,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Sports and recreation properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3485,16 +3753,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/rowlett': {
-    title: 'Commercial Roof Coatings in Rowlett, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Rowlett, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Rowlett, TX | CRD",
+    metaDescription: "Commercial roofing in Rowlett, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/rowlett',
     regionName: 'Rowlett, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Rowlett, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Rowlett for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Rowlett, Texas.",
+    heroSubtitle: "Commercial roof planning in Rowlett should account for rowlett roofs face heat, hail, high winds and heavy rainfall. Roof evaluations should consider drainage, wind exposed edges, metal details and the condition of existing membranes and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Rowlett roofs face heat, hail, high winds and heavy rainfall. Roof evaluations should consider drainage, wind exposed edges, metal details and the condition of existing membranes and coatings.',
     countiesAndCitiesServed: [
         'Rowlett, Dallas County',
@@ -3508,10 +3780,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and mixed use developments'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3533,16 +3805,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/mansfield': {
-    title: 'Commercial Roof Coatings in Mansfield, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Mansfield, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Mansfield, TX | CRD",
+    metaDescription: "Commercial roofing in Mansfield, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mansfield',
     regionName: 'Mansfield, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Mansfield, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mansfield for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Mansfield, Texas.",
+    heroSubtitle: "Commercial roof planning in Mansfield should account for mansfield commercial roofs face intense heat, hail and severe storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Mansfield commercial roofs face intense heat, hail and severe storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration.',
     countiesAndCitiesServed: [
         'Mansfield, Tarrant County',
@@ -3556,10 +3832,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3581,16 +3857,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/grapevine': {
-    title: 'Commercial Roof Coatings in Grapevine, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Grapevine, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Grapevine, TX | CRD",
+    metaDescription: "Commercial roofing in Grapevine, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/grapevine',
     regionName: 'Grapevine, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Grapevine, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Grapevine for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Grapevine, Texas.",
+    heroSubtitle: "Commercial roof planning in Grapevine should account for grapevine roofs face high summer temperatures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Grapevine roofs face high summer temperatures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around operations.',
     countiesAndCitiesServed: [
         'Grapevine, Tarrant County',
@@ -3604,10 +3884,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and business parks'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3629,16 +3909,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Paris',
             href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/broken-arrow': {
-    title: 'Commercial Roof Coatings in Broken Arrow, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Broken Arrow. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Broken Arrow, OK | CRD",
+    metaDescription: "Commercial roofing in Broken Arrow, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/broken-arrow',
     regionName: 'Broken Arrow, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Broken Arrow.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Broken Arrow for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Broken Arrow, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Broken Arrow should account for broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating compatibility.',
     countiesAndCitiesServed: [
         'Broken Arrow, Tulsa County',
@@ -3652,10 +3936,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical campuses'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3667,22 +3951,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/muskogee': {
-    title: 'Commercial Roof Coatings in Muskogee, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Muskogee. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Muskogee, OK | CRD",
+    metaDescription: "Commercial roofing in Muskogee, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/muskogee',
     regionName: 'Muskogee, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Muskogee.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Muskogee for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Muskogee, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Muskogee should account for muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs.',
     countiesAndCitiesServed: [
         'Muskogee, Muskogee County',
@@ -3696,10 +3976,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3711,22 +3991,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/owasso': {
-    title: 'Commercial Roof Coatings in Owasso, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Owasso. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Owasso, OK | CRD",
+    metaDescription: "Commercial roofing in Owasso, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/owasso',
     regionName: 'Owasso, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Owasso.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Owasso for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Owasso, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Owasso should account for owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility.',
     countiesAndCitiesServed: [
         'Owasso, Tulsa County',
@@ -3740,10 +4016,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3755,22 +4031,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/bartlesville': {
-    title: 'Commercial Roof Coatings in Bartlesville, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bartlesville. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Bartlesville, OK | CRD",
+    metaDescription: "Commercial roofing in Bartlesville, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bartlesville',
     regionName: 'Bartlesville, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Bartlesville.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bartlesville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Bartlesville, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Bartlesville should account for bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage.',
     countiesAndCitiesServed: [
         'Bartlesville, Washington County',
@@ -3784,10 +4056,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3799,22 +4071,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/lawton': {
-    title: 'Commercial Roof Coatings in Lawton, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Lawton. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Lawton, OK | CRD",
+    metaDescription: "Commercial roofing in Lawton, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lawton',
     regionName: 'Lawton, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Lawton.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lawton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Lawton, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Lawton should account for lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Lawton, Comanche County',
@@ -3828,10 +4096,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3843,22 +4111,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/edmond': {
-    title: 'Commercial Roof Coatings in Edmond, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Edmond. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Edmond, OK | CRD",
+    metaDescription: "Commercial roofing in Edmond, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/edmond',
     regionName: 'Edmond, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Edmond.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Edmond for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Edmond, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Edmond should account for edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition.',
     countiesAndCitiesServed: [
         'Edmond, Oklahoma County',
@@ -3872,10 +4136,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and mixed use developments'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3887,22 +4151,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/norman': {
-    title: 'Commercial Roof Coatings in Norman, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Norman. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Norman, OK | CRD",
+    metaDescription: "Commercial roofing in Norman, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/norman',
     regionName: 'Norman, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Norman.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Norman for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Norman, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Norman should account for norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and roof edge details.',
     countiesAndCitiesServed: [
         'Norman, Cleveland County',
@@ -3916,10 +4176,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3931,22 +4191,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/moore': {
-    title: 'Commercial Roof Coatings in Moore, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Moore. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Moore, OK | CRD",
+    metaDescription: "Commercial roofing in Moore, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/moore',
     regionName: 'Moore, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Moore.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Moore for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Moore, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Moore should account for moore commercial roofs face severe thunderstorms, hail, high winds and summer heat. Inspections should prioritize wind exposed edges, membrane seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Moore commercial roofs face severe thunderstorms, hail, high winds and summer heat. Inspections should prioritize wind exposed edges, membrane seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Moore, Cleveland County',
@@ -3960,10 +4216,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and service commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3975,22 +4231,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/midwest-city': {
-    title: 'Commercial Roof Coatings in Midwest City, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Midwest City. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Midwest City, OK | CRD",
+    metaDescription: "Commercial roofing in Midwest City, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/midwest-city',
     regionName: 'Midwest City, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Midwest City.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Midwest City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Midwest City, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Midwest City should account for midwest City roofs face hail, high winds, severe thunderstorms and intense summer heat. Roof condition assessments should include roof edges, penetrations, drainage and metal attachment.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Midwest City roofs face hail, high winds, severe thunderstorms and intense summer heat. Roof condition assessments should include roof edges, penetrations, drainage and metal attachment details.',
     countiesAndCitiesServed: [
         'Midwest City, Oklahoma County',
@@ -4004,10 +4256,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and healthcare properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4019,22 +4271,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/shawnee': {
-    title: 'Commercial Roof Coatings in Shawnee, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Shawnee. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Shawnee, OK | CRD",
+    metaDescription: "Commercial roofing in Shawnee, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/shawnee',
     regionName: 'Shawnee, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Shawnee.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Shawnee for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Shawnee, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Shawnee should account for shawnee roofs experience hail, high winds, severe storms and seasonal temperature changes. Inspections should document roof condition, drainage, metal fasteners and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Shawnee roofs experience hail, high winds, severe storms and seasonal temperature changes. Inspections should document roof condition, drainage, metal fasteners and coating compatibility.',
     countiesAndCitiesServed: [
         'Shawnee, Pottawatomie County',
@@ -4048,10 +4296,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Education and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4063,22 +4311,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/yukon': {
-    title: 'Commercial Roof Coatings in Yukon, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Yukon. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Yukon, OK | CRD",
+    metaDescription: "Commercial roofing in Yukon, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/yukon',
     regionName: 'Yukon, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Yukon.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Yukon for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Yukon, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Yukon should account for yukon roofs face severe thunderstorms, hail, high winds and hot summers. Large commercial roof evaluations should focus on wind exposed edges, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Yukon roofs face severe thunderstorms, hail, high winds and hot summers. Large commercial roof evaluations should focus on wind exposed edges, seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Yukon, Canadian County',
@@ -4092,10 +4336,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4107,22 +4351,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/oklahoma-city'
         },
         {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/monroe': {
-    title: 'Commercial Roof Coatings in Monroe, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Monroe. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: 'Commercial Roofing in Monroe, LA | CRD',
+    metaDescription: "Commercial roofing in Monroe, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/monroe',
     regionName: 'Monroe, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Monroe.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Monroe for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: 'Commercial Roofing Services in Monroe, Louisiana.',
+    heroSubtitle: 'Monroe commercial property owners and facility managers can request a roof condition assessment covering moisture concerns, drainage, seams, flashing and repair priorities. Restoration is considered only when the existing roof is suitable.',
     weatherAndStormFactors: 'Monroe roofs experience humid heat, heavy rainfall and severe thunderstorms. Commercial roof evaluations should consider corrosion, drainage, seams, fasteners and moisture within the existing assembly.',
     countiesAndCitiesServed: [
         'Monroe, Ouachita County',
@@ -4136,37 +4376,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
         },
         {
-            name: 'Monroe',
-            href: '/service-areas/monroe'
-        }
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        },
     ]
 },
   '/service-areas/west-monroe': {
-    title: 'Commercial Roof Coatings in West Monroe, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in West Monroe. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in West Monroe, LA | CRD",
+    metaDescription: "Commercial roofing in West Monroe, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/west-monroe',
     regionName: 'West Monroe, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in West Monroe.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in West Monroe for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in West Monroe, Louisiana.",
+    heroSubtitle: "Commercial roof planning in West Monroe should account for west Monroe commercial roofs face humid heat, heavy rainfall, hail and strong storms. Inspections should document drainage, roof penetrations, metal seams, corrosion and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'West Monroe commercial roofs face humid heat, heavy rainfall, hail and strong storms. Inspections should document drainage, roof penetrations, metal seams, corrosion and coating condition.',
     countiesAndCitiesServed: [
         'West Monroe, Ouachita County',
@@ -4180,20 +4412,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
@@ -4201,16 +4425,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Monroe',
             href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/ruston': {
-    title: 'Commercial Roof Coatings in Ruston, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Ruston. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Ruston, LA | CRD",
+    metaDescription: "Commercial roofing in Ruston, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/ruston',
     regionName: 'Ruston, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Ruston.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Ruston for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Ruston, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Ruston should account for ruston roofs experience humid summers, heavy rainfall and severe thunderstorms. Roof restoration planning should include drainage, seams, flashing transitions, fasteners and substrate.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Ruston roofs experience humid summers, heavy rainfall and severe thunderstorms. Roof restoration planning should include drainage, seams, flashing transitions, fasteners and substrate condition.',
     countiesAndCitiesServed: [
         'Ruston, Lincoln County',
@@ -4224,20 +4452,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
@@ -4245,16 +4465,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Monroe',
             href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/alexandria': {
-    title: 'Commercial Roof Coatings in Alexandria, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Alexandria. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Alexandria, LA | CRD",
+    metaDescription: "Commercial roofing in Alexandria, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/alexandria',
     regionName: 'Alexandria, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Alexandria.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Alexandria for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Alexandria, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Alexandria should account for alexandria commercial roofs face humid heat, heavy rainfall, hail and severe thunderstorms. Roof evaluations should include moisture, drainage, corrosion, seams and penetrations. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Alexandria commercial roofs face humid heat, heavy rainfall, hail and severe thunderstorms. Roof evaluations should include moisture, drainage, corrosion, seams and penetrations.',
     countiesAndCitiesServed: [
         'Alexandria, Rapides County',
@@ -4268,20 +4492,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
@@ -4289,16 +4505,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Monroe',
             href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/natchitoches': {
-    title: 'Commercial Roof Coatings in Natchitoches, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Natchitoches. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Natchitoches, LA | CRD",
+    metaDescription: "Commercial roofing in Natchitoches, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/natchitoches',
     regionName: 'Natchitoches, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Natchitoches.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Natchitoches for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Natchitoches, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Natchitoches should account for natchitoches roofs experience humid heat, heavy rain and seasonal severe storms. Commercial inspections should evaluate drainage, roof edges, metal fasteners, seams and the condition of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Natchitoches roofs experience humid heat, heavy rain and seasonal severe storms. Commercial inspections should evaluate drainage, roof edges, metal fasteners, seams and the condition of existing coatings.',
     countiesAndCitiesServed: [
         'Natchitoches, Natchitoches County',
@@ -4312,20 +4532,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
@@ -4333,16 +4545,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Monroe',
             href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/pineville-la': {
-    title: 'Commercial Roof Coatings in Pineville, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Pineville. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Pineville, LA | CRD",
+    metaDescription: "Commercial roofing in Pineville, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/pineville-la',
     regionName: 'Pineville, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Pineville.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Pineville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Pineville, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Pineville should account for pineville commercial roofs face humid summers, heavy rainfall and severe thunderstorms. Roof evaluations should document leaks, drainage, flashing, penetrations and restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Pineville commercial roofs face humid summers, heavy rainfall and severe thunderstorms. Roof evaluations should document leaks, drainage, flashing, penetrations and restoration suitability.',
     countiesAndCitiesServed: [
         'Pineville, Rapides County',
@@ -4356,20 +4572,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
@@ -4377,16 +4585,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Monroe',
             href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/minden': {
-    title: 'Commercial Roof Coatings in Minden, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Minden. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Minden, LA | CRD",
+    metaDescription: "Commercial roofing in Minden, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/minden',
     regionName: 'Minden, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Minden.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Minden for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Minden, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Minden should account for minden roofs experience humid heat, heavy rainfall and severe storms. Metal corrosion, seam integrity, fasteners and drainage should be reviewed before recommending a coating system. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Minden roofs experience humid heat, heavy rainfall and severe storms. Metal corrosion, seam integrity, fasteners and drainage should be reviewed before recommending a coating system.',
     countiesAndCitiesServed: [
         'Minden, Webster County',
@@ -4400,20 +4612,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and service facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Tulsa',
-            href: '/service-areas/tulsa'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
-        },
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
@@ -4421,17 +4625,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Monroe',
             href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/shreveport': {
-    title: 'Commercial Roof Coatings in Shreveport, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Shreveport, Louisiana. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: 'Commercial Roofing in Shreveport, LA | CRD',
+    metaDescription: "Commercial roofing in Shreveport, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/shreveport',
     regionName: 'Shreveport, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Shreveport, Louisiana.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Shreveport for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Shreveport commercial roofs experience humid heat, heavy rainfall, hail and severe thunderstorms. Industrial and healthcare facilities need documented evaluations of roof drainage, metal corrosion, seams, fasteners and rooftop penetrations.',
+    heroHeadline: 'Commercial Roofing Services in Shreveport, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors helps property owners and managers assess commercial roof condition and determine whether repair, restoration, a compatible coating system or replacement is the appropriate next step.',
+    weatherAndStormFactors: 'Shreveport properties face humid heat, heavy rainfall, hail and severe thunderstorms. A useful roof evaluation documents drainage, seams, flashing, fasteners, penetrations and signs of moisture entry before a repair or restoration plan is selected.',
     countiesAndCitiesServed: [
         'Shreveport, Caddo Parish',
         'Caddo Parish commercial and industrial corridors',
@@ -4444,16 +4652,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail, hospitality and office buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Shreveport',
-            href: '/service-areas/shreveport'
-        },
         {
             name: 'Bossier City',
             href: '/service-areas/bossier-city'
@@ -4465,17 +4669,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Minden',
             href: '/service-areas/minden'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/bossier-city': {
-    title: 'Commercial Roof Coatings in Bossier City, LA | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bossier City, Louisiana. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: 'Commercial Roofing in Bossier City, LA | CRD',
+    metaDescription: "Commercial roofing in Bossier City, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bossier-city',
     regionName: 'Bossier City, Louisiana',
-    heroHeadline: 'Commercial Roof Coatings in Bossier City, Louisiana.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bossier City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Bossier City roofs face humid summers, heavy rainfall, hail and strong storm winds. Hospitality and commercial properties benefit from planned inspections of drainage, seams, penetrations, metal fasteners and coating condition.',
+    heroHeadline: 'Commercial Roofing Services in Bossier City, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors works with commercial property owners and managers to document roof conditions and compare practical repair, restoration, coating and replacement options for eligible projects.',
+    weatherAndStormFactors: 'Bossier City commercial roofs face humid summers, heavy rainfall, hail and strong storm winds. Roof reviews should pay close attention to drainage, roof edges, seams, penetrations, fasteners and evidence of recurring leaks.',
     countiesAndCitiesServed: [
         'Bossier City, Bossier Parish',
         'Bossier Parish commercial and industrial corridors',
@@ -4488,19 +4696,15 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
             name: 'Shreveport',
             href: '/service-areas/shreveport'
-        },
-        {
-            name: 'Bossier City',
-            href: '/service-areas/bossier-city'
         },
         {
             name: 'Monroe',
@@ -4509,16 +4713,20 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Minden',
             href: '/service-areas/minden'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
         }
     ]
 },
   '/service-areas/hurst': {
-    title: 'Commercial Roof Coatings in Hurst, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Hurst, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Hurst, TX | CRD",
+    metaDescription: "Commercial roofing in Hurst, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/hurst',
     regionName: 'Hurst, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Hurst, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Hurst for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Hurst, Texas.",
+    heroSubtitle: "Commercial roof planning in Hurst should account for hurst commercial roofs face hot summers, hail, strong winds and heavy rainfall. Inspections should review roof drainage, rooftop equipment, membrane seams, metal details and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Hurst commercial roofs face hot summers, hail, strong winds and heavy rainfall. Inspections should review roof drainage, rooftop equipment, membrane seams, metal details and coating compatibility.',
     countiesAndCitiesServed: [
         'Hurst, Tarrant County',
@@ -4532,10 +4740,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4547,22 +4755,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/euless': {
-    title: 'Commercial Roof Coatings in Euless, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Euless, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Euless, TX | CRD",
+    metaDescription: "Commercial roofing in Euless, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/euless',
     regionName: 'Euless, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Euless, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Euless for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Euless, Texas.",
+    heroSubtitle: "Commercial roof planning in Euless should account for euless roofs experience intense heat, hail, high winds and heavy storms. Commercial evaluations should document roof condition around rooftop equipment, drains, penetrations and wind.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Euless roofs experience intense heat, hail, high winds and heavy storms. Commercial evaluations should document roof condition around rooftop equipment, drains, penetrations and wind exposed edges.',
     countiesAndCitiesServed: [
         'Euless, Tarrant County',
@@ -4576,10 +4780,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and healthcare buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4591,22 +4795,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/bedford': {
-    title: 'Commercial Roof Coatings in Bedford, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bedford, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Bedford, TX | CRD",
+    metaDescription: "Commercial roofing in Bedford, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bedford',
     regionName: 'Bedford, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Bedford, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bedford for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Bedford, Texas.",
+    heroSubtitle: "Commercial roof planning in Bedford should account for bedford commercial roofs face hot summers, hail and severe thunderstorms. Roof restoration planning should review membrane condition, drainage, seams, flashing and metal corrosion. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Bedford commercial roofs face hot summers, hail and severe thunderstorms. Roof restoration planning should review membrane condition, drainage, seams, flashing and metal corrosion.',
     countiesAndCitiesServed: [
         'Bedford, Tarrant County',
@@ -4620,10 +4820,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4635,22 +4835,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/north-richland-hills': {
-    title: 'Commercial Roof Coatings in North Richland Hills, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in North Richland Hills, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in North Richland Hills, TX | CRD",
+    metaDescription: "Commercial roofing in North Richland Hills, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/north-richland-hills',
     regionName: 'North Richland Hills, Texas',
-    heroHeadline: 'Commercial Roof Coatings in North Richland Hills, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in North Richland Hills for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in North Richland Hills, Texas.",
+    heroSubtitle: "Commercial roof planning in North Richland Hills should account for north Richland Hills roofs face high summer temperatures, hail, high winds and heavy rainfall. Inspections should document roof edges, penetrations, drainage and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'North Richland Hills roofs face high summer temperatures, hail, high winds and heavy rainfall. Inspections should document roof edges, penetrations, drainage and coating condition.',
     countiesAndCitiesServed: [
         'North Richland Hills, Tarrant County',
@@ -4664,10 +4860,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4679,22 +4875,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/keller': {
-    title: 'Commercial Roof Coatings in Keller, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Keller, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Keller, TX | CRD",
+    metaDescription: "Commercial roofing in Keller, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/keller',
     regionName: 'Keller, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Keller, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Keller for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Keller, Texas.",
+    heroSubtitle: "Commercial roof planning in Keller should account for keller commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should focus on drainage, membrane seams, metal fasteners and the condition of existing.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Keller commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should focus on drainage, membrane seams, metal fasteners and the condition of existing restoration coatings.',
     countiesAndCitiesServed: [
         'Keller, Tarrant County',
@@ -4708,10 +4900,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4723,22 +4915,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/burleson': {
-    title: 'Commercial Roof Coatings in Burleson, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Burleson, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Burleson, TX | CRD",
+    metaDescription: "Commercial roofing in Burleson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/burleson',
     regionName: 'Burleson, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Burleson, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Burleson for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Burleson, Texas.",
+    heroSubtitle: "Commercial roof planning in Burleson should account for burleson roofs experience high temperatures, hail, strong winds and heavy rainfall. Large roof areas need documented review of seams, roof edges, fasteners, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Burleson roofs experience high temperatures, hail, strong winds and heavy rainfall. Large roof areas need documented review of seams, roof edges, fasteners, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Burleson, Johnson County',
@@ -4752,10 +4940,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4767,22 +4955,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/rockwall': {
-    title: 'Commercial Roof Coatings in Rockwall, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Rockwall, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Rockwall, TX | CRD",
+    metaDescription: "Commercial roofing in Rockwall, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/rockwall',
     regionName: 'Rockwall, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Rockwall, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Rockwall for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Rockwall, Texas.",
+    heroSubtitle: "Commercial roof planning in Rockwall should account for rockwall roofs face heat, hail, wind driven rain and severe thunderstorms. Inspections should assess drainage, roof edges, rooftop equipment and metal or membrane restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Rockwall roofs face heat, hail, wind driven rain and severe thunderstorms. Inspections should assess drainage, roof edges, rooftop equipment and metal or membrane restoration suitability.',
     countiesAndCitiesServed: [
         'Rockwall, Rockwall County',
@@ -4796,10 +4980,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Hospitality and mixed use properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4811,22 +4995,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/forney': {
-    title: 'Commercial Roof Coatings in Forney, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Forney, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Forney, TX | CRD",
+    metaDescription: "Commercial roofing in Forney, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/forney',
     regionName: 'Forney, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Forney, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Forney for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Forney, Texas.",
+    heroSubtitle: "Commercial roof planning in Forney should account for forney commercial roofs face hot summers, hail and severe storms. Roof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Forney commercial roofs face hot summers, hail and severe storms. Roof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility.',
     countiesAndCitiesServed: [
         'Forney, Kaufman County',
@@ -4840,10 +5020,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4855,22 +5035,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/waxahachie': {
-    title: 'Commercial Roof Coatings in Waxahachie, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Waxahachie, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Waxahachie, TX | CRD",
+    metaDescription: "Commercial roofing in Waxahachie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/waxahachie',
     regionName: 'Waxahachie, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Waxahachie, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Waxahachie for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Waxahachie, Texas.",
+    heroSubtitle: "Commercial roof planning in Waxahachie should account for waxahachie roofs face intense summer heat, hail, high winds and heavy rainfall. Restoration planning should document roof moisture, drainage, metal condition and flashing details. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Waxahachie roofs face intense summer heat, hail, high winds and heavy rainfall. Restoration planning should document roof moisture, drainage, metal condition and flashing details.',
     countiesAndCitiesServed: [
         'Waxahachie, Ellis County',
@@ -4884,10 +5060,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4899,22 +5075,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/midlothian': {
-    title: 'Commercial Roof Coatings in Midlothian, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Midlothian, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Midlothian, TX | CRD",
+    metaDescription: "Commercial roofing in Midlothian, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/midlothian',
     regionName: 'Midlothian, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Midlothian, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Midlothian for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Midlothian, Texas.",
+    heroSubtitle: "Commercial roof planning in Midlothian should account for midlothian roofs face high heat, hail, wind and severe thunderstorms. Industrial roof evaluations should consider corrosion, chemical exposure, rooftop exhaust, seams and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Midlothian roofs face high heat, hail, wind and severe thunderstorms. Industrial roof evaluations should consider corrosion, chemical exposure, rooftop exhaust, seams and drainage.',
     countiesAndCitiesServed: [
         'Midlothian, Ellis County',
@@ -4928,10 +5100,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4943,22 +5115,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/lancaster': {
-    title: 'Commercial Roof Coatings in Lancaster, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Lancaster, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Lancaster, TX | CRD",
+    metaDescription: "Commercial roofing in Lancaster, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lancaster',
     regionName: 'Lancaster, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Lancaster, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Lancaster for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Lancaster, Texas.",
+    heroSubtitle: "Commercial roof planning in Lancaster should account for lancaster commercial roofs face hot summers, hail and high winds. Large industrial roofs need detailed inspection of roof edges, fasteners, seams, drains and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Lancaster commercial roofs face hot summers, hail and high winds. Large industrial roofs need detailed inspection of roof edges, fasteners, seams, drains and coating condition.',
     countiesAndCitiesServed: [
         'Lancaster, Dallas County',
@@ -4972,10 +5140,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and service buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4987,19 +5155,15 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/desoto': {
-    title: 'Commercial Roof Coatings in DeSoto, TX | CRD',    metaDescription: 'Commercial roof coatings and metal roof restoration in DeSoto, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
-    heroHeadline: 'Commercial Roof Coatings in DeSoto, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in DeSoto for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    title: "Commercial Roofing in DeSoto, TX | CRD",    metaDescription: "Commercial roofing in DeSoto, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
+    heroHeadline: "Commercial Roofing Services in DeSoto, Texas.",
+    heroSubtitle: "Commercial roof planning in DeSoto should account for deSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'DeSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs.',
     countiesAndCitiesServed: [
         'DeSoto, Dallas County',
@@ -5013,10 +5177,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5028,22 +5192,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/cedar-hill': {
-    title: 'Commercial Roof Coatings in Cedar Hill, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Cedar Hill, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Cedar Hill, TX | CRD",
+    metaDescription: "Commercial roofing in Cedar Hill, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/cedar-hill',
     regionName: 'Cedar Hill, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Cedar Hill, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Cedar Hill for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Cedar Hill, Texas.",
+    heroSubtitle: "Commercial roof planning in Cedar Hill should account for cedar Hill roofs face hot summers, hail, strong winds and heavy rainfall. Roof restoration assessments should document roof condition, drainage, seams, penetrations and existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Cedar Hill roofs face hot summers, hail, strong winds and heavy rainfall. Roof restoration assessments should document roof condition, drainage, seams, penetrations and existing coating compatibility.',
     countiesAndCitiesServed: [
         'Cedar Hill, Dallas County',
@@ -5057,10 +5217,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5072,22 +5232,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/duncanville': {
-    title: 'Commercial Roof Coatings in Duncanville, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Duncanville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Duncanville, TX | CRD",
+    metaDescription: "Commercial roofing in Duncanville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/duncanville',
     regionName: 'Duncanville, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Duncanville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Duncanville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Duncanville, Texas.",
+    heroSubtitle: "Commercial roof planning in Duncanville should account for duncanville commercial roofs face heat, hail and severe thunderstorms. Inspections should consider roof drainage, membrane seams, metal details and the condition of existing roof coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Duncanville commercial roofs face heat, hail and severe thunderstorms. Inspections should consider roof drainage, membrane seams, metal details and the condition of existing roof coatings.',
     countiesAndCitiesServed: [
         'Duncanville, Dallas County',
@@ -5101,10 +5257,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5116,22 +5272,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/coppell': {
-    title: 'Commercial Roof Coatings in Coppell, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Coppell, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Coppell, TX | CRD",
+    metaDescription: "Commercial roofing in Coppell, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/coppell',
     regionName: 'Coppell, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Coppell, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Coppell for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Coppell, Texas.",
+    heroSubtitle: "Commercial roof planning in Coppell should account for coppell roofs face high summer temperatures, hail, strong winds and heavy rain. Large commercial roofs need documented review of drains, rooftop equipment, seams and roof edge conditions. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Coppell roofs face high summer temperatures, hail, strong winds and heavy rain. Large commercial roofs need documented review of drains, rooftop equipment, seams and roof edge conditions.',
     countiesAndCitiesServed: [
         'Coppell, Dallas County',
@@ -5145,10 +5297,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and hospitality buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5160,22 +5312,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/farmers-branch': {
-    title: 'Commercial Roof Coatings in Farmers Branch, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Farmers Branch, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Farmers Branch, TX | CRD",
+    metaDescription: "Commercial roofing in Farmers Branch, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/farmers-branch',
     regionName: 'Farmers Branch, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Farmers Branch, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Farmers Branch for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Farmers Branch, Texas.",
+    heroSubtitle: "Commercial roof planning in Farmers Branch should account for farmers Branch commercial roofs experience heat, hail and severe storms. Evaluations should review rooftop equipment, drainage, seams, penetrations and the compatibility of proposed.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Farmers Branch commercial roofs experience heat, hail and severe storms. Evaluations should review rooftop equipment, drainage, seams, penetrations and the compatibility of proposed coating systems.',
     countiesAndCitiesServed: [
         'Farmers Branch, Dallas County',
@@ -5189,10 +5337,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5204,22 +5352,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/the-colony': {
-    title: 'Commercial Roof Coatings in The Colony, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in The Colony, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in The Colony, TX | CRD",
+    metaDescription: "Commercial roofing in The Colony, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/the-colony',
     regionName: 'The Colony, Texas',
-    heroHeadline: 'Commercial Roof Coatings in The Colony, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in The Colony for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in The Colony, Texas.",
+    heroSubtitle: "Commercial roof planning in The Colony should account for the Colony roofs face hot summers, hail, high winds and heavy rainfall. Commercial inspections should document drainage, rooftop equipment, membrane condition and metal roof details. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'The Colony roofs face hot summers, hail, high winds and heavy rainfall. Commercial inspections should document drainage, rooftop equipment, membrane condition and metal roof details.',
     countiesAndCitiesServed: [
         'The Colony, Denton County',
@@ -5233,10 +5377,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5248,22 +5392,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/sachse': {
-    title: 'Commercial Roof Coatings in Sachse, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Sachse, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Sachse, TX | CRD",
+    metaDescription: "Commercial roofing in Sachse, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sachse',
     regionName: 'Sachse, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Sachse, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Sachse for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Sachse, Texas.",
+    heroSubtitle: "Commercial roof planning in Sachse should account for sachse commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should include seam condition, drainage, penetrations and existing coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Sachse commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should include seam condition, drainage, penetrations and existing coating compatibility.',
     countiesAndCitiesServed: [
         'Sachse, Dallas County',
@@ -5277,10 +5417,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5292,22 +5432,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/balch-springs': {
-    title: 'Commercial Roof Coatings in Balch Springs, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Balch Springs, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Balch Springs, TX | CRD",
+    metaDescription: "Commercial roofing in Balch Springs, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/balch-springs',
     regionName: 'Balch Springs, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Balch Springs, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Balch Springs for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Balch Springs, Texas.",
+    heroSubtitle: "Commercial roof planning in Balch Springs should account for balch Springs roofs experience intense heat, hail and severe storms. Industrial roof inspections should review corrosion, fasteners, seams, roof edges and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Balch Springs roofs experience intense heat, hail and severe storms. Industrial roof inspections should review corrosion, fasteners, seams, roof edges and drainage.',
     countiesAndCitiesServed: [
         'Balch Springs, Dallas County',
@@ -5321,10 +5457,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Service and fleet facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5336,22 +5472,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/princeton': {
-    title: 'Commercial Roof Coatings in Princeton, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Princeton, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Princeton, TX | CRD",
+    metaDescription: "Commercial roofing in Princeton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/princeton',
     regionName: 'Princeton, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Princeton, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Princeton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Princeton, Texas.",
+    heroSubtitle: "Commercial roof planning in Princeton should account for princeton commercial roofs face hot summers, hail, high winds and heavy rain. Evaluations should document drainage, roof penetrations, metal fasteners and the condition of existing coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Princeton commercial roofs face hot summers, hail, high winds and heavy rain. Evaluations should document drainage, roof penetrations, metal fasteners and the condition of existing coatings.',
     countiesAndCitiesServed: [
         'Princeton, Collin County',
@@ -5365,10 +5497,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5380,22 +5512,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/royse-city': {
-    title: 'Commercial Roof Coatings in Royse City, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Royse City, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Royse City, TX | CRD",
+    metaDescription: "Commercial roofing in Royse City, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/royse-city',
     regionName: 'Royse City, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Royse City, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Royse City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Royse City, Texas.",
+    heroSubtitle: "Commercial roof planning in Royse City should account for royse City roofs face heat, hail, strong winds and heavy rainfall. Commercial inspections should focus on roof drainage, seams, fasteners, flashing and restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Royse City roofs face heat, hail, strong winds and heavy rainfall. Commercial inspections should focus on roof drainage, seams, fasteners, flashing and restoration suitability.',
     countiesAndCitiesServed: [
         'Royse City, Rockwall County',
@@ -5409,10 +5537,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and service commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5424,22 +5552,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/melissa': {
-    title: 'Commercial Roof Coatings in Melissa, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Melissa, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Melissa, TX | CRD",
+    metaDescription: "Commercial roofing in Melissa, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/melissa',
     regionName: 'Melissa, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Melissa, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Melissa for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Melissa, Texas.",
+    heroSubtitle: "Commercial roof planning in Melissa should account for melissa commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should review drainage, rooftop equipment, seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Melissa commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should review drainage, rooftop equipment, seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Melissa, Collin County',
@@ -5453,10 +5577,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5468,22 +5592,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/anna': {
-    title: 'Commercial Roof Coatings in Anna, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Anna, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Anna, TX | CRD",
+    metaDescription: "Commercial roofing in Anna, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/anna',
     regionName: 'Anna, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Anna, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Anna for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Anna, Texas.",
+    heroSubtitle: "Commercial roof planning in Anna should account for anna roofs face high summer temperatures, hail, high winds and heavy rain. Commercial roof assessments should document roof condition, drainage, penetrations and metal or membrane.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Anna roofs face high summer temperatures, hail, high winds and heavy rain. Commercial roof assessments should document roof condition, drainage, penetrations and metal or membrane restoration needs.',
     countiesAndCitiesServed: [
         'Anna, Collin County',
@@ -5497,10 +5617,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5512,22 +5632,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/celina': {
-    title: 'Commercial Roof Coatings in Celina, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Celina, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Celina, TX | CRD",
+    metaDescription: "Commercial roofing in Celina, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/celina',
     regionName: 'Celina, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Celina, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Celina for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Celina, Texas.",
+    heroSubtitle: "Commercial roof planning in Celina should account for celina commercial roofs face intense heat, hail and severe thunderstorms. Inspections should consider large rooftop equipment fields, drainage, roof seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Celina commercial roofs face intense heat, hail and severe thunderstorms. Inspections should consider large rooftop equipment fields, drainage, roof seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Celina, Collin County',
@@ -5541,10 +5657,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5556,22 +5672,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/prosper': {
-    title: 'Commercial Roof Coatings in Prosper, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Prosper, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Prosper, TX | CRD",
+    metaDescription: "Commercial roofing in Prosper, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/prosper',
     regionName: 'Prosper, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Prosper, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Prosper for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Prosper, Texas.",
+    heroSubtitle: "Commercial roof planning in Prosper should account for prosper roofs experience hot summers, hail, high winds and heavy rainfall. Commercial evaluations should document drainage, penetrations, roof edges and the condition of existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Prosper roofs experience hot summers, hail, high winds and heavy rainfall. Commercial evaluations should document drainage, penetrations, roof edges and the condition of existing roof systems.',
     countiesAndCitiesServed: [
         'Prosper, Collin County',
@@ -5585,10 +5697,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5600,22 +5712,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/flower-mound': {
-    title: 'Commercial Roof Coatings in Flower Mound, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Flower Mound, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Flower Mound, TX | CRD",
+    metaDescription: "Commercial roofing in Flower Mound, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/flower-mound',
     regionName: 'Flower Mound, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Flower Mound, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Flower Mound for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Flower Mound, Texas.",
+    heroSubtitle: "Commercial roof planning in Flower Mound should account for flower Mound roofs face high summer temperatures, hail and severe storms. Roof inspections should review drainage, membrane seams, rooftop equipment and restoration compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Flower Mound roofs face high summer temperatures, hail and severe storms. Roof inspections should review drainage, membrane seams, rooftop equipment and restoration compatibility.',
     countiesAndCitiesServed: [
         'Flower Mound, Denton County',
@@ -5629,10 +5737,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5644,22 +5752,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/wylie': {
-    title: 'Commercial Roof Coatings in Wylie, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Wylie, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Wylie, TX | CRD",
+    metaDescription: "Commercial roofing in Wylie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/wylie',
     regionName: 'Wylie, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Wylie, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Wylie for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Wylie, Texas.",
+    heroSubtitle: "Commercial roof planning in Wylie should account for wylie commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document roof drainage, metal fasteners, seams, penetrations and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Wylie commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document roof drainage, metal fasteners, seams, penetrations and coating condition.',
     countiesAndCitiesServed: [
         'Wylie, Collin County',
@@ -5673,10 +5777,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5688,22 +5792,18 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
             href: '/service-areas/dallas'
         },
         {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/centerton': {
-    title: 'Commercial Roof Coatings in Centerton, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Centerton, Arkansas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Centerton, AR | CRD",
+    metaDescription: "Commercial roofing in Centerton, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/centerton',
     regionName: 'Centerton, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Centerton, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Centerton for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Centerton, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Centerton should account for centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition.',
     countiesAndCitiesServed: [
         'Centerton, Benton County',
@@ -5717,37 +5817,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
         },
         {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/hot-springs-village': {
-    title: 'Commercial Roof Coatings in Hot Springs Village, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Hot Springs Village, Arkansas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Hot Springs Village, AR | CRD",
+    metaDescription: "Commercial roofing in Hot Springs Village, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/hot-springs-village',
     regionName: 'Hot Springs Village, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Hot Springs Village, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Hot Springs Village for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Hot Springs Village, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Hot Springs Village should account for hot Springs Village roofs experience humid heat, heavy rainfall, hail and seasonal storms. Managed properties benefit from documented inspections, drainage review and planned restoration.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Hot Springs Village roofs experience humid heat, heavy rainfall, hail and seasonal storms. Managed properties benefit from documented inspections, drainage review and planned restoration maintenance.',
     countiesAndCitiesServed: [
         'Hot Springs Village, Garland County',
@@ -5761,37 +5853,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
         },
         {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/harrison': {
-    title: 'Commercial Roof Coatings in Harrison, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Harrison, Arkansas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Harrison, AR | CRD",
+    metaDescription: "Commercial roofing in Harrison, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/harrison',
     regionName: 'Harrison, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Harrison, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Harrison for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Harrison, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Harrison should account for harrison roofs face seasonal temperature changes, heavy rain, hail and strong storms. Commercial inspections should evaluate drainage, metal corrosion, seams and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Harrison roofs face seasonal temperature changes, heavy rain, hail and strong storms. Commercial inspections should evaluate drainage, metal corrosion, seams and coating condition.',
     countiesAndCitiesServed: [
         'Harrison, Boone County',
@@ -5805,37 +5889,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
         },
         {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/mountain-home': {
-    title: 'Commercial Roof Coatings in Mountain Home, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Mountain Home, Arkansas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Mountain Home, AR | CRD",
+    metaDescription: "Commercial roofing in Mountain Home, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mountain-home',
     regionName: 'Mountain Home, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Mountain Home, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mountain Home for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Mountain Home, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Mountain Home should account for mountain Home commercial roofs face seasonal temperature swings, hail, heavy rainfall and strong winds. Roof evaluations should document seams, flashing, drainage and existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Mountain Home commercial roofs face seasonal temperature swings, hail, heavy rainfall and strong winds. Roof evaluations should document seams, flashing, drainage and existing roof system condition.',
     countiesAndCitiesServed: [
         'Mountain Home, Baxter County',
@@ -5849,37 +5925,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Hospitality and service businesses'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
         },
         {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/batesville': {
-    title: 'Commercial Roof Coatings in Batesville, AR | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Batesville, Arkansas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Batesville, AR | CRD",
+    metaDescription: "Commercial roofing in Batesville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/batesville',
     regionName: 'Batesville, Arkansas',
-    heroHeadline: 'Commercial Roof Coatings in Batesville, Arkansas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Batesville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Batesville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Batesville should account for batesville roofs experience humid summers, heavy rainfall, hail and seasonal storms. Restoration planning should include metal corrosion, drainage, seams, fasteners and moisture assessment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Batesville roofs experience humid summers, heavy rainfall, hail and seasonal storms. Restoration planning should include metal corrosion, drainage, seams, fasteners and moisture assessment.',
     countiesAndCitiesServed: [
         'Batesville, Independence County',
@@ -5893,37 +5961,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Education and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
-        {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
         {
             name: 'Little Rock',
             href: '/service-areas/little-rock'
         },
         {
-            name: 'Oklahoma City',
-            href: '/service-areas/oklahoma-city'
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
         }
     ]
 },
   '/service-areas/ardmore': {
-    title: 'Commercial Roof Coatings in Ardmore, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Ardmore, Oklahoma. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Ardmore, OK | CRD",
+    metaDescription: "Commercial roofing in Ardmore, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/ardmore',
     regionName: 'Ardmore, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Ardmore, Oklahoma.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Ardmore for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Ardmore, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Ardmore should account for ardmore commercial roofs face hot summers, hail, high winds and severe thunderstorms. Roof evaluations should document corrosion, fasteners, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Ardmore commercial roofs face hot summers, hail, high winds and severe thunderstorms. Roof evaluations should document corrosion, fasteners, seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Ardmore, Carter County',
@@ -5937,37 +5997,29 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
             name: 'Oklahoma City',
             href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/duncan': {
-    title: 'Commercial Roof Coatings in Duncan, OK | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Duncan, Oklahoma. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Duncan, OK | CRD",
+    metaDescription: "Commercial roofing in Duncan, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/duncan',
     regionName: 'Duncan, Oklahoma',
-    heroHeadline: 'Commercial Roof Coatings in Duncan, Oklahoma.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Duncan for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
+    heroHeadline: "Commercial Roofing Services in Duncan, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Duncan should account for duncan roofs experience high winds, hail, hot summers and severe storms. Industrial roof inspections should focus on metal corrosion, attachment details, seams, drainage and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Duncan roofs experience high winds, hail, hot summers and severe storms. Industrial roof inspections should focus on metal corrosion, attachment details, seams, drainage and coating compatibility.',
     countiesAndCitiesServed: [
         'Duncan, Stephens County',
@@ -5981,38 +6033,30 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
-            name: 'Dallas-Fort Worth Metro',
-            href: '/service-areas/dallas-fort-worth'
-        },
-        {
-            name: 'Dallas',
-            href: '/service-areas/dallas'
-        },
-        {
-            name: 'Little Rock',
-            href: '/service-areas/little-rock'
-        },
-        {
             name: 'Oklahoma City',
             href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
         }
     ]
 },
   '/service-areas/addison': {
-    title: 'Commercial Roof Coatings in Addison, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Addison, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Addison, TX | CRD",
+    metaDescription: "Commercial roofing in Addison, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/addison',
     regionName: 'Addison, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Addison, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Addison for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Healthcare and professional facilities',
+    heroHeadline: "Commercial Roofing Services in Addison, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Addison commercial roofs serving offices, healthcare and professional properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Addison, Dallas County',
         'Dallas County commercial and industrial corridors',
@@ -6025,10 +6069,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6046,17 +6090,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/haltom-city': {
-    title: 'Commercial Roof Coatings in Haltom City, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Haltom City, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Haltom City, TX | CRD",
+    metaDescription: "Commercial roofing in Haltom City, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/haltom-city',
     regionName: 'Haltom City, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Haltom City, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Haltom City for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Healthcare and office buildings',
+    heroHeadline: "Commercial Roofing Services in Haltom City, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Haltom City commercial roofs serving manufacturing, warehouse and retail properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Haltom City, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -6069,10 +6117,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6090,17 +6138,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/white-settlement': {
-    title: 'Commercial Roof Coatings in White Settlement, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in White Settlement, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in White Settlement, TX | CRD",
+    metaDescription: "Commercial roofing in White Settlement, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/white-settlement',
     regionName: 'White Settlement, Texas',
-    heroHeadline: 'Commercial Roof Coatings in White Settlement, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in White Settlement for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Healthcare and service businesses',
+    heroHeadline: "Commercial Roofing Services in White Settlement, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates White Settlement commercial roofs serving industrial, defense support and retail properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'White Settlement, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -6113,10 +6165,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6134,17 +6186,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/benbrook': {
-    title: 'Commercial Roof Coatings in Benbrook, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Benbrook, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Benbrook, TX | CRD",
+    metaDescription: "Commercial roofing in Benbrook, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/benbrook',
     regionName: 'Benbrook, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Benbrook, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Benbrook for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Light industrial buildings',
+    heroHeadline: "Commercial Roofing Services in Benbrook, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Benbrook commercial roofs serving light industrial, healthcare, retail and office properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Benbrook, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -6157,10 +6213,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6178,17 +6234,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/watauga': {
-    title: 'Commercial Roof Coatings in Watauga, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Watauga, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Watauga, TX | CRD",
+    metaDescription: "Commercial roofing in Watauga, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/watauga',
     regionName: 'Watauga, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Watauga, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Watauga for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Service commercial properties',
+    heroHeadline: "Commercial Roofing Services in Watauga, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Watauga commercial roofs serving retail, healthcare and professional office properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Watauga, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -6201,10 +6261,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Professional offices'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6222,17 +6282,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/saginaw': {
-    title: 'Commercial Roof Coatings in Saginaw, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Saginaw, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Saginaw, TX | CRD",
+    metaDescription: "Commercial roofing in Saginaw, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/saginaw',
     regionName: 'Saginaw, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Saginaw, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Saginaw for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Healthcare and institutional buildings',
+    heroHeadline: "Commercial Roofing Services in Saginaw, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Saginaw commercial roofs serving logistics, manufacturing and retail properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Saginaw, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -6245,10 +6309,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6266,17 +6330,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/forest-hill': {
-    title: 'Commercial Roof Coatings in Forest Hill, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Forest Hill, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Forest Hill, TX | CRD",
+    metaDescription: "Commercial roofing in Forest Hill, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/forest-hill',
     regionName: 'Forest Hill, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Forest Hill, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Forest Hill for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Office and service buildings',
+    heroHeadline: "Commercial Roofing Services in Forest Hill, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Forest Hill commercial roofs serving industrial, retail, healthcare and office properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Forest Hill, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -6289,10 +6357,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6310,17 +6378,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/crowley': {
-    title: 'Commercial Roof Coatings in Crowley, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Crowley, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Crowley, TX | CRD",
+    metaDescription: "Commercial roofing in Crowley, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/crowley',
     regionName: 'Crowley, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Crowley, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Crowley for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Office and professional buildings',
+    heroHeadline: "Commercial Roofing Services in Crowley, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Crowley commercial roofs serving professional offices, retail and light industrial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Crowley, Tarrant County',
         'Tarrant County commercial and industrial corridors',
@@ -6333,10 +6405,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6354,17 +6426,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/cleburne': {
-    title: 'Commercial Roof Coatings in Cleburne, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Cleburne, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Cleburne, TX | CRD",
+    metaDescription: "Commercial roofing in Cleburne, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/cleburne',
     regionName: 'Cleburne, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Cleburne, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Cleburne for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Warehouses and distribution properties',
+    heroHeadline: "Commercial Roofing Services in Cleburne, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Cleburne commercial roofs serving warehouses, distribution and industrial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Cleburne, Johnson County',
         'Johnson County commercial and industrial corridors',
@@ -6377,10 +6453,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6398,17 +6474,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/weatherford': {
-    title: 'Commercial Roof Coatings in Weatherford, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Weatherford, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Weatherford, TX | CRD",
+    metaDescription: "Commercial roofing in Weatherford, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/weatherford',
     regionName: 'Weatherford, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Weatherford, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Weatherford for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Warehouses and distribution buildings',
+    heroHeadline: "Commercial Roofing Services in Weatherford, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Weatherford commercial roofs serving warehouse, distribution and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Weatherford, Parker County',
         'Parker County commercial and industrial corridors',
@@ -6421,10 +6501,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6442,17 +6522,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/mineral-wells': {
-    title: 'Commercial Roof Coatings in Mineral Wells, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Mineral Wells, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Mineral Wells, TX | CRD",
+    metaDescription: "Commercial roofing in Mineral Wells, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mineral-wells',
     regionName: 'Mineral Wells, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Mineral Wells, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Mineral Wells for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Warehouses and service buildings',
+    heroHeadline: "Commercial Roofing Services in Mineral Wells, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Mineral Wells commercial roofs serving warehouse, service and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Mineral Wells, Palo Pinto County',
         'Palo Pinto County commercial and industrial corridors',
@@ -6465,10 +6549,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6486,17 +6570,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/stephenville': {
-    title: 'Commercial Roof Coatings in Stephenville, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Stephenville, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Stephenville, TX | CRD",
+    metaDescription: "Commercial roofing in Stephenville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/stephenville',
     regionName: 'Stephenville, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Stephenville, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Stephenville for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Retail and healthcare properties',
+    heroHeadline: "Commercial Roofing Services in Stephenville, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Stephenville commercial roofs serving retail, healthcare and institutional properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Stephenville, Erath County',
         'Erath County commercial and industrial corridors',
@@ -6509,10 +6597,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Manufacturing and industrial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6530,17 +6618,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/ennis': {
-    title: 'Commercial Roof Coatings in Ennis, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Ennis, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Ennis, TX | CRD",
+    metaDescription: "Commercial roofing in Ennis, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/ennis',
     regionName: 'Ennis, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Ennis, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Ennis for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Healthcare and institutional buildings',
+    heroHeadline: "Commercial Roofing Services in Ennis, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Ennis commercial roofs serving healthcare, institutional and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Ennis, Ellis County',
         'Ellis County commercial and industrial corridors',
@@ -6553,10 +6645,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6574,17 +6666,21 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 },
   '/service-areas/bonham': {
-    title: 'Commercial Roof Coatings in Bonham, TX | CRD',
-    metaDescription: 'Commercial roof coatings and metal roof restoration in Bonham, Texas. Commercial roof inspections, corrosion and seam repairs, and compatible coating system planning.',
+    title: "Commercial Roofing in Bonham, TX | CRD",
+    metaDescription: "Commercial roofing in Bonham, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bonham',
     regionName: 'Bonham, Texas',
-    heroHeadline: 'Commercial Roof Coatings in Bonham, Texas.',
-    heroSubtitle: 'Commercial Roof Doctors evaluates commercial metal and low slope roofs in Bonham for coating restoration, corrosion and seam repairs, and documented roof condition planning.',
-    weatherAndStormFactors: 'Agricultural supply and warehouse buildings',
+    heroHeadline: "Commercial Roofing Services in Bonham, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Bonham commercial roofs serving agricultural supply, warehouse and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
     countiesAndCitiesServed: [
         'Bonham, Fannin County',
         'Fannin County commercial and industrial corridors',
@@ -6597,10 +6693,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6618,6 +6714,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Longview',
             href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
         }
     ]
 }
