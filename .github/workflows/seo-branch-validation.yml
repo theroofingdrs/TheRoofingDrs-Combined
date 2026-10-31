@@ -30,10 +30,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: |
-            source-apps/trd/package-lock.json
-            source-apps/crd/package-lock.json
 
       - name: Build both applications and run combined smoke tests
         run: npm test
