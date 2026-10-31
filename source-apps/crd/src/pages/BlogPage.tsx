@@ -11,19 +11,19 @@ type Post = { slug: string; title: string; excerpt: string; category: string; da
 const BLOG_API = 'https://gubvelngdohrfvqeeabu.supabase.co/functions/v1/crm-public-blog';
 
 function renderMarkdown(markdown: string) {
-  return markdown.split(/\\n\\s*\\n/).map((raw, index) => {
+  return markdown.split(/\n\s*\n/).map((raw, index) => {
     const block = raw.trim();
     if (!block) return null;
-    const heading = block.match(/^(#{2,3})\\s+(.+)$/);
+    const heading = block.match(/^(#{2,3})\s+(.+)$/);
     if (heading) return heading[1].length === 2
       ? <h2 key={index} className="text-2xl font-bold my-5">{heading[2]}</h2>
       : <h3 key={index} className="text-xl font-bold my-4">{heading[2]}</h3>;
-    const lines = block.split('\\n');
-    if (lines.every((line) => /^\\s*[-*]\\s+/.test(line))) {
-      return <ul key={index} className="list-disc pl-6 my-4 space-y-2">{lines.map((line, i) => <li key={i}>{line.replace(/^\\s*[-*]\\s+/, '')}</li>)}</ul>;
+    const lines = block.split('\n');
+    if (lines.every((line) => /^\s*[-*]\s+/.test(line))) {
+      return <ul key={index} className="list-disc pl-6 my-4 space-y-2">{lines.map((line, i) => <li key={i}>{line.replace(/^\s*[-*]\s+/, '')}</li>)}</ul>;
     }
-    if (lines.every((line) => /^\\s*\\d+\\.\\s+/.test(line))) {
-      return <ol key={index} className="list-decimal pl-6 my-4 space-y-2">{lines.map((line, i) => <li key={i}>{line.replace(/^\\s*\\d+\\.\\s+/, '')}</li>)}</ol>;
+    if (lines.every((line) => /^\s*\d+\.\s+/.test(line))) {
+      return <ol key={index} className="list-decimal pl-6 my-4 space-y-2">{lines.map((line, i) => <li key={i}>{line.replace(/^\s*\d+\.\s+/, '')}</li>)}</ol>;
     }
     return <p key={index} className="text-base leading-8 mb-4">{lines.join(' ')}</p>;
   });
@@ -31,7 +31,7 @@ function renderMarkdown(markdown: string) {
 
 function mapPublishedPost(row: Record<string, any>): Post {
   const body = String(row.body_markdown || '');
-  const words = body.trim().split(/\\s+/).filter(Boolean).length;
+  const words = body.trim().split(/\s+/).filter(Boolean).length;
   const publishedAt = String(row.published_at || row.created_at || '');
   return {
     slug: String(row.slug), title: String(row.title), excerpt: String(row.excerpt || ''),
