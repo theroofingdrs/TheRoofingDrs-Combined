@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrandLogo } from '../common/BrandLogo.tsx';
 
-const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+const OPERATIONS_PORTAL_URL = 'https://operations.theroofingdrs.com';
 
 interface PublicFooterProps {
   onNavigate: (path: string) => void;
