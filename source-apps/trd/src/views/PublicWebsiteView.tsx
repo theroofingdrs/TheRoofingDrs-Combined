@@ -31,6 +31,12 @@ import {
   X,
 } from 'lucide-react';
 
+// Keep public image URLs valid when the TRD app is mounted at /residential.
+const getTrdPublicAssetPath = (assetPath: string): string => {
+  const isResidentialMount = typeof window !== 'undefined' && window.location.pathname.startsWith('/residential');
+  return `${isResidentialMount ? '/residential' : ''}${assetPath}`;
+};
+
 interface FeaturedPhoto {
   id: string;
   src: string;
@@ -44,7 +50,7 @@ interface FeaturedPhoto {
 const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   {
     id: 'photo-aerial',
-    src: '/assets/images/aerial_roof_replacement.jpg',
+    src: getTrdPublicAssetPath('/assets/images/aerial_roof_replacement.jpg'),
     title: 'Aerial Drone Diagnostic & Active Replacement',
     tag: 'Drone Diagnostics',
     location: 'Texarkana, TX',
@@ -53,7 +59,7 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   },
   {
     id: 'photo-stone',
-    src: '/assets/images/stone_commercial_roof.jpg',
+    src: getTrdPublicAssetPath('/assets/images/stone_commercial_roof.jpg'),
     title: 'Custom Stone & Heavy Timber Architecture',
     tag: 'Commercial & Estate',
     location: 'Mount Pleasant, TX',
@@ -62,7 +68,7 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   },
   {
     id: 'photo-crew',
-    src: '/assets/images/active_crew_reroof.jpg',
+    src: getTrdPublicAssetPath('/assets/images/active_crew_reroof.jpg'),
     title: 'Certified Roofing Mechanics in Action',
     tag: 'Active Field Operations',
     location: 'Tyler, TX',
@@ -71,7 +77,7 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   },
   {
     id: 'photo-brick',
-    src: '/assets/images/brick_estate_roof.jpg',
+    src: getTrdPublicAssetPath('/assets/images/brick_estate_roof.jpg'),
     title: 'Sprawling Texas Brick Ranch Residence',
     tag: 'Completed Installation',
     location: 'Longview, TX',
