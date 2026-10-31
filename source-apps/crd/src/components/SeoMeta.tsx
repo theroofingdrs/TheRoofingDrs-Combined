@@ -78,23 +78,12 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
         postalCode: BUSINESS_INFO.address.zip,
         addressCountry: 'US',
       },
-      areaServed: [
-        {
-          '@type': 'AdministrativeArea',
-          name: 'Ark-La-Tex and regional commercial markets in Texas, Arkansas, Louisiana and Oklahoma',
-        },
-        {
-          '@type': 'GeoCircle',
-          geoMidpoint: {
-            '@type': 'GeoCoordinates',
-            latitude: 33.4251,
-            longitude: -94.0477,
-          },
-          geoRadius: 402336,
-        },
-      ],
+      areaServed: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'].map((state) => ({
+        '@type': 'AdministrativeArea',
+        name: state,
+      })),
       description:
-        'Commercial roof coatings, metal roof restoration, inspections, repairs and replacement planning for commercial properties across the Texarkana-centered regional service area.',
+        'Commercial roofing evaluations, coatings, restoration, inspections, repairs and replacement planning for commercial properties across Texas, Arkansas, Louisiana and Oklahoma.',
     };
 
     const scriptOrg = document.createElement('script');
@@ -133,7 +122,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
           telephone: BUSINESS_INFO.phone,
         },
         areaServed:
-          'Commercial roof coating and restoration service area extending up to 250 miles from Texarkana, Texas across Texas, Arkansas, Louisiana and Oklahoma',
+          'Commercial roofing service area across Texas, Arkansas, Louisiana and Oklahoma; project availability is confirmed based on location, roof type and scope',
         description,
       };
 
