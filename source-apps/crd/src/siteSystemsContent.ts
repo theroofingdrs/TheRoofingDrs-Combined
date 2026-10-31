@@ -1102,10 +1102,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Dallas, Dallas County', 'North Dallas and LBJ corridor', 'Downtown and central Dallas', 'Nearby Collin and Tarrant County commercial markets'],
     keyIndustriesInRegion: ['Distribution and logistics facilities', 'Office buildings and commercial campuses', 'Retail centers and shopping properties', 'Multifamily and mixed-use developments'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
@@ -1120,10 +1120,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Fort Worth, Tarrant County', 'Alliance and north Fort Worth logistics area', 'South Fort Worth commercial corridors', 'Nearby Parker and Johnson County markets'],
     keyIndustriesInRegion: ['Industrial and logistics facilities', 'Distribution centers and warehouses', 'Commercial offices and business parks', 'Retail and multifamily properties'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
@@ -1137,7 +1137,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Dallas-Fort Worth commercial roofs face prolonged summer heat, hail, high winds and intense rainfall. Evaluations should document drainage, roof edges, seams, flashing, penetrations and rooftop equipment details before a repair or restoration plan is selected.',
     countiesAndCitiesServed: ['Dallas County', 'Tarrant County', 'Collin County', 'Denton County', 'Rockwall County', 'Ellis and Johnson County commercial corridors'],
     keyIndustriesInRegion: ['Warehousing, distribution and logistics', 'Office campuses and commercial real estate', 'Retail centers and hospitality properties', 'Multifamily portfolios and industrial facilities'],
-    serviceCapabilities: ['Commercial roof inspections and documented condition assessments', 'Leak and detail repair planning for seams, flashing and penetrations', 'Restoration and coating evaluations for suitable existing roof assemblies', 'Repair, restoration or replacement recommendations based on documented condition'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
     cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
   '/service-areas/longview': {
@@ -1151,10 +1156,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Longview, Gregg County', 'Gregg County industrial and commercial corridors', 'Nearby Harrison and Upshur County properties'],
     keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Healthcare and medical properties', 'Retail centers and office buildings', 'Warehouses and distribution facilities'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
@@ -1169,10 +1174,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Tyler, Smith County', 'Smith County commercial corridors', 'Nearby Gregg, Henderson and Cherokee County markets'],
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'Retail and shopping centers', 'Office and professional properties', 'Industrial and distribution facilities'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Longview', href: '/service-areas/longview' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
@@ -1187,10 +1192,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Paris, Lamar County', 'Lamar County commercial properties', 'Nearby Red River and Delta County markets'],
     keyIndustriesInRegion: ['Manufacturing and fabrication', 'Healthcare and institutional properties', 'Retail and commercial centers', 'Agricultural supply and warehouse buildings'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
   },
@@ -1205,10 +1210,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Tulsa, Tulsa County', 'Broken Arrow and surrounding Tulsa metro commercial corridors', 'Nearby Rogers and Wagoner County markets'],
     keyIndustriesInRegion: ['Energy and industrial facilities', 'Aerospace and manufacturing properties', 'Warehousing and distribution centers', 'Retail, office and multifamily properties'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Oklahoma City', href: '/service-areas/oklahoma-city' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
   },
@@ -1223,10 +1228,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Oklahoma City, Oklahoma County', 'Edmond and central Oklahoma commercial corridors', 'Nearby Cleveland and Canadian County markets'],
     keyIndustriesInRegion: ['Energy and industrial properties', 'Distribution and logistics facilities', 'Healthcare and institutional buildings', 'Retail centers and office campuses'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
   },
@@ -1241,10 +1246,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Little Rock, Pulaski County', 'North Little Rock and surrounding Pulaski County', 'Nearby Saline and Faulkner County commercial corridors'],
     keyIndustriesInRegion: ['Healthcare and medical campuses', 'State, municipal and institutional buildings', 'Distribution and logistics facilities', 'Retail centers, offices and multifamily properties'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
@@ -1258,7 +1263,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of a restoration decision.',
     countiesAndCitiesServed: ['Fayetteville, Washington County', 'Washington County commercial corridors', 'Nearby Benton County and regional Northwest Arkansas markets'],
     keyIndustriesInRegion: ['Higher education and institutional facilities', 'Healthcare and medical properties', 'Retail and hospitality developments', 'Distribution, food processing and manufacturing'],
-    serviceCapabilities: ['Commercial coating and restoration assessments', 'Metal roof corrosion and fastener evaluations', 'Seam and flashing repair planning', 'Roof inspections and capital planning'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
     cityLinks: [{ name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/springdale': {
@@ -1271,7 +1281,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details need regular attention.',
     countiesAndCitiesServed: ['Springdale, Washington and Benton Counties', 'Northwest Arkansas industrial and logistics corridors', 'Nearby Fayetteville, Rogers and Bentonville markets'],
     keyIndustriesInRegion: ['Food processing and manufacturing', 'Warehousing and distribution', 'Retail and commercial developments', 'Healthcare and institutional facilities'],
-    serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust, seam and fastener assessments', 'Compatible coating system selection', 'Documented inspections and repair planning'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
     cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/fort-smith': {
@@ -1285,10 +1300,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     countiesAndCitiesServed: ['Fort Smith, Sebastian County', 'Nearby Van Buren and Crawford County', 'Western Arkansas and eastern Oklahoma commercial corridors'],
     keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Aerospace and component suppliers', 'Food processing and distribution', 'Healthcare, retail and institutional properties'],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
@@ -1302,7 +1317,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'South Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are important restoration considerations.',
     countiesAndCitiesServed: ['El Dorado, Union County', 'Union County industrial and commercial corridors', 'Nearby Magnolia and Columbia County markets'],
     keyIndustriesInRegion: ['Energy and chemical processing facilities', 'Timber and forest products', 'Healthcare and institutional properties', 'Retail and commercial buildings'],
-    serviceCapabilities: ['Commercial metal roof restoration evaluations', 'Rust preparation, fastener and seam repair planning', 'Silicone and acrylic coating assessments', 'Documented roof inspections and capital planning'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
     cityLinks: [{ name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/magnolia': {
@@ -1315,7 +1335,12 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     weatherAndStormFactors: 'Magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to inspect before restoration.',
     countiesAndCitiesServed: ['Magnolia, Columbia County', 'Columbia County industrial and commercial properties', 'Nearby El Dorado and South Arkansas markets'],
     keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
-    serviceCapabilities: ['Commercial roof coatings and restoration evaluations', 'Metal roof rust and fastener assessments', 'Seam and flashing repair planning', 'Roof inspections and restoration recommendations'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
     cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
   },
   '/service-areas/jonesboro': {
@@ -1338,10 +1363,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1382,10 +1407,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1430,10 +1455,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1478,10 +1503,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Public and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1526,10 +1551,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1574,10 +1599,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1622,10 +1647,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1670,10 +1695,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and office buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1718,10 +1743,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Professional office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1766,10 +1791,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and association managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1814,10 +1839,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and healthcare properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1858,10 +1883,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1902,10 +1927,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and service commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         { name: 'Arkansas', href: '/service-areas/arkansas' }
@@ -1931,10 +1956,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -1971,10 +1996,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2015,10 +2040,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2059,10 +2084,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2099,10 +2124,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2147,10 +2172,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2191,10 +2216,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2231,10 +2256,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2271,10 +2296,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2315,10 +2340,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2359,10 +2384,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2403,10 +2428,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehousing and distribution facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2455,10 +2480,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2507,10 +2532,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2559,10 +2584,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2611,10 +2636,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Distribution and logistics buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2663,10 +2688,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2715,10 +2740,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2767,10 +2792,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2819,10 +2844,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2871,10 +2896,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2923,10 +2948,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -2975,10 +3000,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and light industrial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3027,10 +3052,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3079,10 +3104,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail, hospitality and multifamily properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3131,10 +3156,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Technology and business parks'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3183,10 +3208,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and multifamily portfolios'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3235,10 +3260,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3287,10 +3312,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3339,10 +3364,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and mixed use developments'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3391,10 +3416,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3443,10 +3468,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Distribution and logistics buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3495,10 +3520,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3547,10 +3572,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3599,10 +3624,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3651,10 +3676,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Corporate offices and business parks'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3703,10 +3728,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Sports and recreation properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3755,10 +3780,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and mixed use developments'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3807,10 +3832,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3859,10 +3884,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and business parks'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3911,10 +3936,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical campuses'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3951,10 +3976,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -3991,10 +4016,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4031,10 +4056,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4071,10 +4096,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4111,10 +4136,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and mixed use developments'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4151,10 +4176,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4191,10 +4216,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and service commercial properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4231,10 +4256,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and healthcare properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4271,10 +4296,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Education and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4311,10 +4336,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4351,10 +4376,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof inspections and documented condition assessments',
-        'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
-        'Restoration and coating evaluations when the existing roof assembly is suitable',
-        'Repair, restoration or replacement recommendations based on documented condition'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4387,10 +4412,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4427,10 +4452,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4467,10 +4492,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4507,10 +4532,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4547,10 +4572,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4587,10 +4612,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and service facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4627,10 +4652,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail, hospitality and office buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4671,10 +4696,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4715,10 +4740,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4755,10 +4780,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and healthcare buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4795,10 +4820,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4835,10 +4860,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4875,10 +4900,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4915,10 +4940,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4955,10 +4980,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Hospitality and mixed use properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -4995,10 +5020,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5035,10 +5060,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5075,10 +5100,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5115,10 +5140,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and service buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5152,10 +5177,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5192,10 +5217,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5232,10 +5257,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5272,10 +5297,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and hospitality buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5312,10 +5337,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5352,10 +5377,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5392,10 +5417,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5432,10 +5457,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Service and fleet facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5472,10 +5497,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5512,10 +5537,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and service commercial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5552,10 +5577,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5592,10 +5617,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5632,10 +5657,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Light industrial and warehouse buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5672,10 +5697,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Schools and institutional facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5712,10 +5737,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Multifamily and managed properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5752,10 +5777,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5792,10 +5817,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and professional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5828,10 +5853,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and office properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5864,10 +5889,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Warehouses and distribution properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5900,10 +5925,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Hospitality and service businesses'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5936,10 +5961,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Education and institutional buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -5972,10 +5997,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6008,10 +6033,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6044,10 +6069,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6092,10 +6117,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6140,10 +6165,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6188,10 +6213,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Office and professional properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6236,10 +6261,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Professional offices'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6284,10 +6309,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6332,10 +6357,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical facilities'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6380,10 +6405,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Healthcare and medical properties'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6428,10 +6453,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6476,10 +6501,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6524,10 +6549,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6572,10 +6597,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Manufacturing and industrial buildings'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6620,10 +6645,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
@@ -6668,10 +6693,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Retail and commercial centers'
     ],
     serviceCapabilities: [
-        'Commercial roof coating and restoration evaluations for suitable existing roof assemblies',
-        'Metal roof corrosion, fastener, seam and flashing repair planning',
-        'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
-        'Documented roof inspections and repair, restoration or replacement recommendations'
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
     cityLinks: [
         {
