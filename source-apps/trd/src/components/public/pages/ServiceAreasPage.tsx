@@ -121,11 +121,11 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
         <div className="max-w-7xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-red-600/20 text-red-400 border border-red-500/30 uppercase tracking-wide">
             <MapPin className="w-4 h-4 text-red-400" />
-            <span>Northeast Texas Regional Coverage Network</span>
+            <span>Residential Roofing Coverage</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-            Northeast Texas Service Area &amp; Dispatch Hubs
+            Residential Roofing Service Area
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
@@ -199,10 +199,10 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {CITIES_DATA.map((city) => (
-            <div
+            <a
               key={city.slug}
-              onClick={() => onNavigate(`/service-areas/${city.slug}`)}
-              className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:shadow-lg hover:border-red-500 transition-all cursor-pointer flex flex-col justify-between space-y-4"
+              href={`/residential/service-areas/${city.slug}`}
+              className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:shadow-lg hover:border-red-500 transition-all flex flex-col justify-between space-y-4"
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-red-600 uppercase">
@@ -217,17 +217,11 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-slate-100 space-y-2">
-                <div className="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
-                  <Clock className="w-3 h-3 text-emerald-500" />
-                  <span>{city.responseTime}</span>
-                </div>
-                <div className="text-xs font-bold text-red-600 flex items-center justify-between">
-                  <span>View Local Roofing Information</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
+              <div className="pt-3 border-t border-slate-100 text-xs font-bold text-red-600 flex items-center justify-between">
+                <span>View Local Roofing Information</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -239,7 +233,7 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
             Serving Northeast Texas with Accountability
           </span>
           <h2 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
-            Check Availability &amp; Dispatch an Inspector in Your Area
+            Check Residential Service Availability
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
             Our core residential service area is generally within 75 miles of Texarkana. Contact us to confirm availability for your property and project.
