@@ -25,7 +25,7 @@ export const CITIES_DATA = [
     slug: 'texarkana',
     name: 'Texarkana',
     county: 'Bowie & Miller Counties',
-    hub: 'Headquarters & Primary Dispatch Hub',
+    hub: 'Core Residential Service Area',
     headline: 'Twin Cities Crossroads: High Storm Frequency & Pine Needle Ingress',
     weatherContext: 'Positioned in the Interstate 30 storm corridor, Texarkana experiences intense supercell thunderstorms, frequent spring hail swaths, and high winter rainfall that test valley seals and chimney step flashings.',
     zipCodes: ['75501', '75503', '75505'],
@@ -35,7 +35,7 @@ export const CITIES_DATA = [
     slug: 'atlanta',
     name: 'Atlanta',
     county: 'Cass County',
-    hub: 'Southern Timber Belt Hub',
+    hub: 'Residential Service Area',
     headline: 'Piney Woods Timberland: Dense Tree Canopies & Heavy Branch Punctures',
     weatherContext: 'Cass County’s towering loblolly pine canopies shed immense volumes of acidic needles, clogging roof valleys and promoting persistent moss and fungal rot in shaded roof planes.',
     zipCodes: ['75551'],
@@ -45,7 +45,7 @@ export const CITIES_DATA = [
     slug: 'new-boston',
     name: 'New Boston',
     county: 'Bowie County (West)',
-    hub: 'Red River Valley Dispatch',
+    hub: 'Residential Service Area',
     headline: 'Red River Wind Shear: Creased Shingle Tabs & Agricultural Wind Exposure',
     weatherContext: 'Open terrain near the Red River basin subjects residential roofs to severe crosswinds and microbursts over 60 mph that break factory thermal sealant strips on 3-tab shingles.',
     zipCodes: ['75570'],
@@ -55,7 +55,7 @@ export const CITIES_DATA = [
     slug: 'paris',
     name: 'Paris',
     county: 'Lamar County',
-    hub: 'Western Prairie Dispatch',
+    hub: 'Extended Area, Availability Confirmed by Request',
     headline: 'Prairie Hail Alley: Severe Convective Storms & Historic Architectural Rooflines',
     weatherContext: 'Located where the East Texas timber belt transitions into the open blackland prairies, Paris is directly exposed to intense hail supercells and rapid thermal swings that stress roof decking.',
     zipCodes: ['75460', '75462'],
@@ -65,7 +65,7 @@ export const CITIES_DATA = [
     slug: 'sulphur-springs',
     name: 'Sulphur Springs',
     county: 'Hopkins County',
-    hub: 'Central Prairie Hub',
+    hub: 'Extended Area, Availability Confirmed by Request',
     headline: 'Thermal Expansion & Microburst Squalls in Hopkins County',
     weatherContext: 'Blistering summer heat reaching 100°F+ followed by sudden cold thunderstorm deluges causes severe thermal shock in asphalt shingles, requiring engineered expansion joints and balanced ridge ventilation.',
     zipCodes: ['75482', '75483'],
@@ -75,7 +75,7 @@ export const CITIES_DATA = [
     slug: 'longview',
     name: 'Longview',
     county: 'Gregg County',
-    hub: 'Heart of East Texas Hub',
+    hub: 'Residential Service Area',
     headline: 'Dense Oak Canopies, Humidity & Shaded Valley Deterioration',
     weatherContext: 'Gregg County’s established residential neighborhoods feature mature hardwood trees that drop heavy limbs during spring squalls and create shaded environments where roof moss thrives.',
     zipCodes: ['75601', '75602', '75604', '75605'],
@@ -85,7 +85,7 @@ export const CITIES_DATA = [
     slug: 'tyler',
     name: 'Tyler',
     county: 'Smith County',
-    hub: 'Rose City Regional Hub',
+    hub: 'Extended Area, Availability Confirmed by Request',
     headline: 'Steep Architectural Pitches & Severe Spring Hail Corridors',
     weatherContext: 'Historic homes and luxury subdivisions with intricate multi-gable rooflines face high-frequency supercell hail tracks. Valley metals and lead plumbing boots require specialized craftsmanship.',
     zipCodes: ['75701', '75702', '75703', '75707'],
@@ -95,7 +95,7 @@ export const CITIES_DATA = [
     slug: 'marshall',
     name: 'Marshall',
     county: 'Harrison County',
-    hub: 'Historic Cypress Bayou Hub',
+    hub: 'Residential Service Area',
     headline: 'Cypress Bayou High Moisture, Acidic Needle Litter & Historic Flashings',
     weatherContext: 'High humidity from surrounding bayous and ancient hardwood canopies accelerate asphalt shingle binder erosion and degrade mortar counter-flashing around brick chimneys.',
     zipCodes: ['75670', '75672'],
@@ -129,7 +129,7 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-            Headquartered in Texarkana at 1420 Richmond Rd, our fleet of certified roof inspectors provides rapid physical dispatch throughout Bowie, Cass, Lamar, Hopkins, Gregg, Smith, and Harrison Counties.
+            The Roof Doctors' core residential service area is generally within 75 miles of Texarkana. Projects outside that range may be considered individually, depending on location, scope, and scheduling. Contact us to confirm availability before assuming service coverage.
           </p>
         </div>
       </section>
@@ -187,13 +187,13 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
         <div className="max-w-3xl mb-8">
           <span className="text-xs uppercase tracking-wider text-red-600 font-bold">
-            Municipal Dispatch Network
+            Residential Service Area
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight mt-1">
-            Explore Dedicated Community Hubs
+            Explore Residential Service Areas
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-2">
-            Click any city to view authentic localized weather records, county-specific roofing challenges, and verified customer installations.
+            Select a community to learn about local roofing conditions and services. Coverage beyond our usual 75-mile residential service area is confirmed case by case.
           </p>
         </div>
 
@@ -223,7 +223,7 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
                   <span>{city.responseTime}</span>
                 </div>
                 <div className="text-xs font-bold text-red-600 flex items-center justify-between">
-                  <span>View Local Hub</span>
+                  <span>View Local Roofing Information</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
@@ -242,14 +242,14 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({
             Check Availability &amp; Dispatch an Inspector in Your Area
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
-            Our certified inspectors travel with mobile digital diagnostic kits. Free 21-point roof health audit with zero high-pressure sales.
+            Our core residential service area is generally within 75 miles of Texarkana. Contact us to confirm availability for your property and project.
           </p>
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
             <button
               onClick={() => onOpenIntake('DIAGNOSTIC')}
               className="px-6 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg transition-colors cursor-pointer"
             >
-              SCHEDULE LOCAL INSPECTION ($0 FEE)
+              CHECK RESIDENTIAL SERVICE AVAILABILITY
             </button>
             <a
               href="tel:9032315940"
