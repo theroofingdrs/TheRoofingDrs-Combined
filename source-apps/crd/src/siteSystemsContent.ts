@@ -1093,7 +1093,7 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas/dallas': {
     title: 'Commercial Roofing in Dallas, TX | CRD',
-    metaDescription: "Commercial roofing in Dallas, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Dallas, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/dallas',
     regionName: 'Dallas, Texas',
     heroHeadline: 'Commercial Roofing Services in Dallas, Texas.',
@@ -1111,7 +1111,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/fort-worth': {
     title: 'Commercial Roofing in Fort Worth, TX | CRD',
-    metaDescription: "Commercial roofing in Fort Worth, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Fort Worth, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/fort-worth',
     regionName: 'Fort Worth, Texas',
     heroHeadline: 'Commercial Roofing Services in Fort Worth, Texas.',
@@ -1147,7 +1147,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/longview': {
     title: 'Commercial Roofing in Longview, TX | CRD',
-    metaDescription: "Commercial roofing in Longview, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Longview, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/longview',
     regionName: 'Longview, Texas',
     heroHeadline: 'Commercial Roofing Services in Longview, Texas.',
@@ -1165,7 +1165,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/tyler': {
     title: 'Commercial Roofing in Tyler, TX | CRD',
-    metaDescription: "Commercial roofing in Tyler, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Tyler, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/tyler',
     regionName: 'Tyler, Texas',
     heroHeadline: 'Commercial Roofing Services in Tyler, Texas.',
@@ -1183,7 +1183,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/paris': {
     title: 'Commercial Roofing in Paris, TX | CRD',
-    metaDescription: "Commercial roofing in Paris, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Paris, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/paris',
     regionName: 'Paris, Texas',
     heroHeadline: 'Commercial Roofing Services in Paris, Texas.',
@@ -1201,7 +1201,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/tulsa': {
     title: 'Commercial Roofing in Tulsa, OK | CRD',
-    metaDescription: "Commercial roofing in Tulsa, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Tulsa, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/tulsa',
     regionName: 'Tulsa, Oklahoma',
     heroHeadline: 'Commercial Roofing Services in Tulsa, Oklahoma.',
@@ -1219,7 +1219,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/oklahoma-city': {
     title: 'Commercial Roofing in Oklahoma City, OK | CRD',
-    metaDescription: "Commercial roofing in Oklahoma City, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Oklahoma City, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/oklahoma-city',
     regionName: 'Oklahoma City, Oklahoma',
     heroHeadline: 'Commercial Roofing Services in Oklahoma City.',
@@ -1237,7 +1237,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/little-rock': {
     title: 'Commercial Roofing in Little Rock, AR | CRD',
-    metaDescription: "Commercial roofing in Little Rock, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Little Rock, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/little-rock',
     regionName: 'Little Rock, Arkansas',
     heroHeadline: 'Commercial Roofing Services in Little Rock, Arkansas.',
@@ -1255,7 +1255,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/fayetteville': {
     title: "Commercial Roofing in Fayetteville, AR | CRD",
-    metaDescription: "Commercial roofing in Fayetteville, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Fayetteville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/fayetteville',
     regionName: 'Fayetteville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Fayetteville, Arkansas.",
@@ -1273,7 +1273,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/springdale': {
     title: "Commercial Roofing in Springdale, AR | CRD",
-    metaDescription: "Commercial roofing in Springdale, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Springdale, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/springdale',
     regionName: 'Springdale, Arkansas',
     heroHeadline: "Commercial Roofing Services in Springdale, Arkansas.",
@@ -1291,7 +1291,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/fort-smith': {
     title: 'Commercial Roofing in Fort Smith, AR | CRD',
-    metaDescription: "Commercial roofing in Fort Smith, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Fort Smith, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/fort-smith',
     regionName: 'Fort Smith, Arkansas',
     heroHeadline: 'Commercial Roofing Services in Fort Smith, Arkansas.',
@@ -1309,7 +1309,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/el-dorado': {
     title: "Commercial Roofing in El Dorado, AR | CRD",
-    metaDescription: "Commercial roofing in El Dorado, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in El Dorado, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/el-dorado',
     regionName: 'El Dorado, Arkansas',
     heroHeadline: "Commercial Roofing Services in El Dorado, Arkansas.",
@@ -1327,7 +1327,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/magnolia': {
     title: "Commercial Roofing in Magnolia, AR | CRD",
-    metaDescription: "Commercial roofing in Magnolia, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Magnolia, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/magnolia',
     regionName: 'Magnolia, Arkansas',
     heroHeadline: "Commercial Roofing Services in Magnolia, Arkansas.",
@@ -1345,7 +1345,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
   '/service-areas/jonesboro': {
     title: "Commercial Roofing in Jonesboro, AR | CRD",
-    metaDescription: "Commercial roofing in Jonesboro, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Jonesboro, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/jonesboro',
     regionName: 'Jonesboro, Arkansas',
     heroHeadline: "Commercial Roofing Services in Jonesboro, Arkansas.",
@@ -1389,7 +1389,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/rogers': {
     title: "Commercial Roofing in Rogers, AR | CRD",
-    metaDescription: "Commercial roofing in Rogers, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Rogers, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/rogers',
     regionName: 'Rogers, Arkansas',
     heroHeadline: "Commercial Roofing Services in Rogers, Arkansas.",
@@ -1437,7 +1437,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/conway': {
     title: "Commercial Roofing in Conway, AR | CRD",
-    metaDescription: "Commercial roofing in Conway, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Conway, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/conway',
     regionName: 'Conway, Arkansas',
     heroHeadline: "Commercial Roofing Services in Conway, Arkansas.",
@@ -1485,7 +1485,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/north-little-rock': {
     title: "Commercial Roofing in North Little Rock, AR | CRD",
-    metaDescription: "Commercial roofing in North Little Rock, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in North Little Rock, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/north-little-rock',
     regionName: 'North Little Rock, Arkansas',
     heroHeadline: "Commercial Roofing Services in North Little Rock, Arkansas.",
@@ -1533,7 +1533,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/bentonville': {
     title: "Commercial Roofing in Bentonville, AR | CRD",
-    metaDescription: "Commercial roofing in Bentonville, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Bentonville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bentonville',
     regionName: 'Bentonville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Bentonville, Arkansas.",
@@ -1581,7 +1581,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/pine-bluff': {
     title: "Commercial Roofing in Pine Bluff, AR | CRD",
-    metaDescription: "Commercial roofing in Pine Bluff, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Pine Bluff, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/pine-bluff',
     regionName: 'Pine Bluff, Arkansas',
     heroHeadline: "Commercial Roofing Services in Pine Bluff, Arkansas.",
@@ -1629,7 +1629,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/benton': {
     title: "Commercial Roofing in Benton, AR | CRD",
-    metaDescription: "Commercial roofing in Benton, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Benton, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/benton',
     regionName: 'Benton, Arkansas',
     heroHeadline: "Commercial Roofing Services in Benton, Arkansas.",
@@ -1677,7 +1677,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/hot-springs': {
     title: "Commercial Roofing in Hot Springs, AR | CRD",
-    metaDescription: "Commercial roofing in Hot Springs, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Hot Springs, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/hot-springs',
     regionName: 'Hot Springs, Arkansas',
     heroHeadline: "Commercial Roofing Services in Hot Springs, Arkansas.",
@@ -1725,7 +1725,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/sherwood': {
     title: "Commercial Roofing in Sherwood, AR | CRD",
-    metaDescription: "Commercial roofing in Sherwood, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Sherwood, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sherwood',
     regionName: 'Sherwood, Arkansas',
     heroHeadline: "Commercial Roofing Services in Sherwood, Arkansas.",
@@ -1773,7 +1773,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/bella-vista': {
     title: "Commercial Roofing in Bella Vista, AR | CRD",
-    metaDescription: "Commercial roofing in Bella Vista, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Bella Vista, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bella-vista',
     regionName: 'Bella Vista, Arkansas',
     heroHeadline: "Commercial Roofing Services in Bella Vista, Arkansas.",
@@ -1821,7 +1821,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/russellville': {
     title: "Commercial Roofing in Russellville, AR | CRD",
-    metaDescription: "Commercial roofing in Russellville, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Russellville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/russellville',
     regionName: 'Russellville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Russellville, Arkansas.",
@@ -1865,7 +1865,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/jacksonville': {
     title: "Commercial Roofing in Jacksonville, AR | CRD",
-    metaDescription: "Commercial roofing in Jacksonville, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Jacksonville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/jacksonville',
     regionName: 'Jacksonville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Jacksonville, Arkansas.",
@@ -1909,7 +1909,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/cabot': {
     title: "Commercial Roofing in Cabot, AR | CRD",
-    metaDescription: "Commercial roofing in Cabot, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Cabot, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/cabot',
     regionName: 'Cabot, Arkansas',
     heroHeadline: "Commercial Roofing Services in Cabot, Arkansas.",
@@ -1938,7 +1938,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/searcy': {
     title: "Commercial Roofing in Searcy, AR | CRD",
-    metaDescription: "Commercial roofing in Searcy, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Searcy, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/searcy',
     regionName: 'Searcy, Arkansas',
     heroHeadline: "Commercial Roofing Services in Searcy, Arkansas.",
@@ -1978,7 +1978,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/west-memphis': {
     title: "Commercial Roofing in West Memphis, AR | CRD",
-    metaDescription: "Commercial roofing in West Memphis, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in West Memphis, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/west-memphis',
     regionName: 'West Memphis, Arkansas',
     heroHeadline: "Commercial Roofing Services in West Memphis, Arkansas.",
@@ -2022,7 +2022,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/bryant': {
     title: "Commercial Roofing in Bryant, AR | CRD",
-    metaDescription: "Commercial roofing in Bryant, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Bryant, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bryant',
     regionName: 'Bryant, Arkansas',
     heroHeadline: "Commercial Roofing Services in Bryant, Arkansas.",
@@ -2066,7 +2066,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/van-buren': {
     title: "Commercial Roofing in Van Buren, AR | CRD",
-    metaDescription: "Commercial roofing in Van Buren, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Van Buren, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/van-buren',
     regionName: 'Van Buren, Arkansas',
     heroHeadline: "Commercial Roofing Services in Van Buren, Arkansas.",
@@ -2106,7 +2106,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/siloam-springs': {
     title: "Commercial Roofing in Siloam Springs, AR | CRD",
-    metaDescription: "Commercial roofing in Siloam Springs, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Siloam Springs, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/siloam-springs',
     regionName: 'Siloam Springs, Arkansas',
     heroHeadline: "Commercial Roofing Services in Siloam Springs, Arkansas.",
@@ -2154,7 +2154,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/maumelle': {
     title: "Commercial Roofing in Maumelle, AR | CRD",
-    metaDescription: "Commercial roofing in Maumelle, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Maumelle, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/maumelle',
     regionName: 'Maumelle, Arkansas',
     heroHeadline: "Commercial Roofing Services in Maumelle, Arkansas.",
@@ -2198,7 +2198,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/marion': {
     title: "Commercial Roofing in Marion, AR | CRD",
-    metaDescription: "Commercial roofing in Marion, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Marion, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/marion',
     regionName: 'Marion, Arkansas',
     heroHeadline: "Commercial Roofing Services in Marion, Arkansas.",
@@ -2238,7 +2238,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/forrest-city': {
     title: "Commercial Roofing in Forrest City, AR | CRD",
-    metaDescription: "Commercial roofing in Forrest City, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Forrest City, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/forrest-city',
     regionName: 'Forrest City, Arkansas',
     heroHeadline: "Commercial Roofing Services in Forrest City, Arkansas.",
@@ -2278,7 +2278,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/malvern': {
     title: "Commercial Roofing in Malvern, AR | CRD",
-    metaDescription: "Commercial roofing in Malvern, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Malvern, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/malvern',
     regionName: 'Malvern, Arkansas',
     heroHeadline: "Commercial Roofing Services in Malvern, Arkansas.",
@@ -2322,7 +2322,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/arkadelphia': {
     title: "Commercial Roofing in Arkadelphia, AR | CRD",
-    metaDescription: "Commercial roofing in Arkadelphia, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Arkadelphia, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/arkadelphia',
     regionName: 'Arkadelphia, Arkansas',
     heroHeadline: "Commercial Roofing Services in Arkadelphia, Arkansas.",
@@ -2366,7 +2366,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/camden': {
     title: "Commercial Roofing in Camden, AR | CRD",
-    metaDescription: "Commercial roofing in Camden, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Camden, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/camden',
     regionName: 'Camden, Arkansas',
     heroHeadline: "Commercial Roofing Services in Camden, Arkansas.",
@@ -2410,7 +2410,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/greenville': {
     title: "Commercial Roofing in Greenville, TX | CRD",
-    metaDescription: "Commercial roofing in Greenville, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Greenville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/greenville',
     regionName: 'Greenville, Texas',
     heroHeadline: "Commercial Roofing Services in Greenville, Texas.",
@@ -2462,7 +2462,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/sulphur-springs': {
     title: "Commercial Roofing in Sulphur Springs, TX | CRD",
-    metaDescription: "Commercial roofing in Sulphur Springs, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Sulphur Springs, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sulphur-springs',
     regionName: 'Sulphur Springs, Texas',
     heroHeadline: "Commercial Roofing Services in Sulphur Springs, Texas.",
@@ -2514,7 +2514,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/mount-pleasant': {
     title: "Commercial Roofing in Mount Pleasant, TX | CRD",
-    metaDescription: "Commercial roofing in Mount Pleasant, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Mount Pleasant, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mount-pleasant',
     regionName: 'Mount Pleasant, Texas',
     heroHeadline: "Commercial Roofing Services in Mount Pleasant, Texas.",
@@ -2566,7 +2566,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/marshall': {
     title: "Commercial Roofing in Marshall, TX | CRD",
-    metaDescription: "Commercial roofing in Marshall, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Marshall, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/marshall',
     regionName: 'Marshall, Texas',
     heroHeadline: "Commercial Roofing Services in Marshall, Texas.",
@@ -2618,7 +2618,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/sherman': {
     title: "Commercial Roofing in Sherman, TX | CRD",
-    metaDescription: "Commercial roofing in Sherman, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Sherman, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sherman',
     regionName: 'Sherman, Texas',
     heroHeadline: "Commercial Roofing Services in Sherman, Texas.",
@@ -2670,7 +2670,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/denison': {
     title: "Commercial Roofing in Denison, TX | CRD",
-    metaDescription: "Commercial roofing in Denison, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Denison, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/denison',
     regionName: 'Denison, Texas',
     heroHeadline: "Commercial Roofing Services in Denison, Texas.",
@@ -2722,7 +2722,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/nacogdoches': {
     title: "Commercial Roofing in Nacogdoches, TX | CRD",
-    metaDescription: "Commercial roofing in Nacogdoches, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Nacogdoches, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/nacogdoches',
     regionName: 'Nacogdoches, Texas',
     heroHeadline: "Commercial Roofing Services in Nacogdoches, Texas.",
@@ -2774,7 +2774,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/lufkin': {
     title: "Commercial Roofing in Lufkin, TX | CRD",
-    metaDescription: "Commercial roofing in Lufkin, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Lufkin, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lufkin',
     regionName: 'Lufkin, Texas',
     heroHeadline: "Commercial Roofing Services in Lufkin, Texas.",
@@ -2826,7 +2826,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/jacksonville-tx': {
     title: "Commercial Roofing in Jacksonville, TX | CRD",
-    metaDescription: "Commercial roofing in Jacksonville, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Jacksonville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/jacksonville-tx',
     regionName: 'Jacksonville, Texas',
     heroHeadline: "Commercial Roofing Services in Jacksonville, Texas.",
@@ -2878,7 +2878,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/palestine': {
     title: "Commercial Roofing in Palestine, TX | CRD",
-    metaDescription: "Commercial roofing in Palestine, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Palestine, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/palestine',
     regionName: 'Palestine, Texas',
     heroHeadline: "Commercial Roofing Services in Palestine, Texas.",
@@ -2930,7 +2930,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/henderson': {
     title: "Commercial Roofing in Henderson, TX | CRD",
-    metaDescription: "Commercial roofing in Henderson, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Henderson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/henderson',
     regionName: 'Henderson, Texas',
     heroHeadline: "Commercial Roofing Services in Henderson, Texas.",
@@ -2982,7 +2982,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/athens': {
     title: "Commercial Roofing in Athens, TX | CRD",
-    metaDescription: "Commercial roofing in Athens, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Athens, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/athens',
     regionName: 'Athens, Texas',
     heroHeadline: "Commercial Roofing Services in Athens, Texas.",
@@ -3034,7 +3034,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/corsicana': {
     title: "Commercial Roofing in Corsicana, TX | CRD",
-    metaDescription: "Commercial roofing in Corsicana, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Corsicana, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/corsicana',
     regionName: 'Corsicana, Texas',
     heroHeadline: "Commercial Roofing Services in Corsicana, Texas.",
@@ -3086,7 +3086,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/arlington': {
     title: "Commercial Roofing in Arlington, TX | CRD",
-    metaDescription: "Commercial roofing in Arlington, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Arlington, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/arlington',
     regionName: 'Arlington, Texas',
     heroHeadline: "Commercial Roofing Services in Arlington, Texas.",
@@ -3138,7 +3138,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/plano': {
     title: "Commercial Roofing in Plano, TX | CRD",
-    metaDescription: "Commercial roofing in Plano, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Plano, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/plano',
     regionName: 'Plano, Texas',
     heroHeadline: "Commercial Roofing Services in Plano, Texas.",
@@ -3190,7 +3190,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/irving': {
     title: "Commercial Roofing in Irving, TX | CRD",
-    metaDescription: "Commercial roofing in Irving, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Irving, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/irving',
     regionName: 'Irving, Texas',
     heroHeadline: "Commercial Roofing Services in Irving, Texas.",
@@ -3242,7 +3242,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/garland': {
     title: "Commercial Roofing in Garland, TX | CRD",
-    metaDescription: "Commercial roofing in Garland, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Garland, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/garland',
     regionName: 'Garland, Texas',
     heroHeadline: "Commercial Roofing Services in Garland, Texas.",
@@ -3294,7 +3294,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/frisco': {
     title: "Commercial Roofing in Frisco, TX | CRD",
-    metaDescription: "Commercial roofing in Frisco, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Frisco, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/frisco',
     regionName: 'Frisco, Texas',
     heroHeadline: "Commercial Roofing Services in Frisco, Texas.",
@@ -3346,7 +3346,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/mckinney': {
     title: "Commercial Roofing in McKinney, TX | CRD",
-    metaDescription: "Commercial roofing in McKinney, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in McKinney, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mckinney',
     regionName: 'McKinney, Texas',
     heroHeadline: "Commercial Roofing Services in McKinney, Texas.",
@@ -3398,7 +3398,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/grand-prairie': {
     title: "Commercial Roofing in Grand Prairie, TX | CRD",
-    metaDescription: "Commercial roofing in Grand Prairie, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Grand Prairie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/grand-prairie',
     regionName: 'Grand Prairie, Texas',
     heroHeadline: "Commercial Roofing Services in Grand Prairie, Texas.",
@@ -3450,7 +3450,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/denton': {
     title: "Commercial Roofing in Denton, TX | CRD",
-    metaDescription: "Commercial roofing in Denton, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Denton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/denton',
     regionName: 'Denton, Texas',
     heroHeadline: "Commercial Roofing Services in Denton, Texas.",
@@ -3502,7 +3502,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/mesquite': {
     title: "Commercial Roofing in Mesquite, TX | CRD",
-    metaDescription: "Commercial roofing in Mesquite, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Mesquite, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mesquite',
     regionName: 'Mesquite, Texas',
     heroHeadline: "Commercial Roofing Services in Mesquite, Texas.",
@@ -3554,7 +3554,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/carrollton': {
     title: "Commercial Roofing in Carrollton, TX | CRD",
-    metaDescription: "Commercial roofing in Carrollton, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Carrollton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/carrollton',
     regionName: 'Carrollton, Texas',
     heroHeadline: "Commercial Roofing Services in Carrollton, Texas.",
@@ -3606,7 +3606,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/richardson': {
     title: "Commercial Roofing in Richardson, TX | CRD",
-    metaDescription: "Commercial roofing in Richardson, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Richardson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/richardson',
     regionName: 'Richardson, Texas',
     heroHeadline: "Commercial Roofing Services in Richardson, Texas.",
@@ -3658,7 +3658,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/lewisville': {
     title: "Commercial Roofing in Lewisville, TX | CRD",
-    metaDescription: "Commercial roofing in Lewisville, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Lewisville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lewisville',
     regionName: 'Lewisville, Texas',
     heroHeadline: "Commercial Roofing Services in Lewisville, Texas.",
@@ -3710,7 +3710,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/allen': {
     title: "Commercial Roofing in Allen, TX | CRD",
-    metaDescription: "Commercial roofing in Allen, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Allen, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/allen',
     regionName: 'Allen, Texas',
     heroHeadline: "Commercial Roofing Services in Allen, Texas.",
@@ -3762,7 +3762,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/rowlett': {
     title: "Commercial Roofing in Rowlett, TX | CRD",
-    metaDescription: "Commercial roofing in Rowlett, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Rowlett, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/rowlett',
     regionName: 'Rowlett, Texas',
     heroHeadline: "Commercial Roofing Services in Rowlett, Texas.",
@@ -3814,7 +3814,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/mansfield': {
     title: "Commercial Roofing in Mansfield, TX | CRD",
-    metaDescription: "Commercial roofing in Mansfield, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Mansfield, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mansfield',
     regionName: 'Mansfield, Texas',
     heroHeadline: "Commercial Roofing Services in Mansfield, Texas.",
@@ -3866,7 +3866,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/grapevine': {
     title: "Commercial Roofing in Grapevine, TX | CRD",
-    metaDescription: "Commercial roofing in Grapevine, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Grapevine, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/grapevine',
     regionName: 'Grapevine, Texas',
     heroHeadline: "Commercial Roofing Services in Grapevine, Texas.",
@@ -3918,7 +3918,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/broken-arrow': {
     title: "Commercial Roofing in Broken Arrow, OK | CRD",
-    metaDescription: "Commercial roofing in Broken Arrow, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Broken Arrow, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/broken-arrow',
     regionName: 'Broken Arrow, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Broken Arrow, Oklahoma.",
@@ -3958,7 +3958,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/muskogee': {
     title: "Commercial Roofing in Muskogee, OK | CRD",
-    metaDescription: "Commercial roofing in Muskogee, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Muskogee, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/muskogee',
     regionName: 'Muskogee, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Muskogee, Oklahoma.",
@@ -3998,7 +3998,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/owasso': {
     title: "Commercial Roofing in Owasso, OK | CRD",
-    metaDescription: "Commercial roofing in Owasso, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Owasso, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/owasso',
     regionName: 'Owasso, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Owasso, Oklahoma.",
@@ -4038,7 +4038,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/bartlesville': {
     title: "Commercial Roofing in Bartlesville, OK | CRD",
-    metaDescription: "Commercial roofing in Bartlesville, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Bartlesville, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bartlesville',
     regionName: 'Bartlesville, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Bartlesville, Oklahoma.",
@@ -4078,7 +4078,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/lawton': {
     title: "Commercial Roofing in Lawton, OK | CRD",
-    metaDescription: "Commercial roofing in Lawton, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Lawton, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lawton',
     regionName: 'Lawton, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Lawton, Oklahoma.",
@@ -4118,7 +4118,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/edmond': {
     title: "Commercial Roofing in Edmond, OK | CRD",
-    metaDescription: "Commercial roofing in Edmond, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Edmond, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/edmond',
     regionName: 'Edmond, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Edmond, Oklahoma.",
@@ -4158,7 +4158,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/norman': {
     title: "Commercial Roofing in Norman, OK | CRD",
-    metaDescription: "Commercial roofing in Norman, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Norman, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/norman',
     regionName: 'Norman, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Norman, Oklahoma.",
@@ -4198,7 +4198,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/moore': {
     title: "Commercial Roofing in Moore, OK | CRD",
-    metaDescription: "Commercial roofing in Moore, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Moore, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/moore',
     regionName: 'Moore, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Moore, Oklahoma.",
@@ -4238,7 +4238,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/midwest-city': {
     title: "Commercial Roofing in Midwest City, OK | CRD",
-    metaDescription: "Commercial roofing in Midwest City, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Midwest City, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/midwest-city',
     regionName: 'Midwest City, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Midwest City, Oklahoma.",
@@ -4278,7 +4278,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/shawnee': {
     title: "Commercial Roofing in Shawnee, OK | CRD",
-    metaDescription: "Commercial roofing in Shawnee, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Shawnee, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/shawnee',
     regionName: 'Shawnee, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Shawnee, Oklahoma.",
@@ -4318,7 +4318,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/yukon': {
     title: "Commercial Roofing in Yukon, OK | CRD",
-    metaDescription: "Commercial roofing in Yukon, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Yukon, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/yukon',
     regionName: 'Yukon, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Yukon, Oklahoma.",
@@ -4358,7 +4358,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/monroe': {
     title: 'Commercial Roofing in Monroe, LA | CRD',
-    metaDescription: "Commercial roofing in Monroe, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Monroe, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/monroe',
     regionName: 'Monroe, Louisiana',
     heroHeadline: 'Commercial Roofing Services in Monroe, Louisiana.',
@@ -4394,7 +4394,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/west-monroe': {
     title: "Commercial Roofing in West Monroe, LA | CRD",
-    metaDescription: "Commercial roofing in West Monroe, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in West Monroe, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/west-monroe',
     regionName: 'West Monroe, Louisiana',
     heroHeadline: "Commercial Roofing Services in West Monroe, Louisiana.",
@@ -4434,7 +4434,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/ruston': {
     title: "Commercial Roofing in Ruston, LA | CRD",
-    metaDescription: "Commercial roofing in Ruston, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Ruston, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/ruston',
     regionName: 'Ruston, Louisiana',
     heroHeadline: "Commercial Roofing Services in Ruston, Louisiana.",
@@ -4474,7 +4474,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/alexandria': {
     title: "Commercial Roofing in Alexandria, LA | CRD",
-    metaDescription: "Commercial roofing in Alexandria, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Alexandria, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/alexandria',
     regionName: 'Alexandria, Louisiana',
     heroHeadline: "Commercial Roofing Services in Alexandria, Louisiana.",
@@ -4514,7 +4514,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/natchitoches': {
     title: "Commercial Roofing in Natchitoches, LA | CRD",
-    metaDescription: "Commercial roofing in Natchitoches, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Natchitoches, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/natchitoches',
     regionName: 'Natchitoches, Louisiana',
     heroHeadline: "Commercial Roofing Services in Natchitoches, Louisiana.",
@@ -4554,7 +4554,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/pineville-la': {
     title: "Commercial Roofing in Pineville, LA | CRD",
-    metaDescription: "Commercial roofing in Pineville, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Pineville, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/pineville-la',
     regionName: 'Pineville, Louisiana',
     heroHeadline: "Commercial Roofing Services in Pineville, Louisiana.",
@@ -4594,7 +4594,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/minden': {
     title: "Commercial Roofing in Minden, LA | CRD",
-    metaDescription: "Commercial roofing in Minden, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Minden, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/minden',
     regionName: 'Minden, Louisiana',
     heroHeadline: "Commercial Roofing Services in Minden, Louisiana.",
@@ -4634,7 +4634,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/shreveport': {
     title: 'Commercial Roofing in Shreveport, LA | CRD',
-    metaDescription: "Commercial roofing in Shreveport, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Shreveport, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/shreveport',
     regionName: 'Shreveport, Louisiana',
     heroHeadline: 'Commercial Roofing Services in Shreveport, Louisiana.',
@@ -4678,7 +4678,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/bossier-city': {
     title: 'Commercial Roofing in Bossier City, LA | CRD',
-    metaDescription: "Commercial roofing in Bossier City, Louisiana. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Bossier City, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bossier-city',
     regionName: 'Bossier City, Louisiana',
     heroHeadline: 'Commercial Roofing Services in Bossier City, Louisiana.',
@@ -4722,7 +4722,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/hurst': {
     title: "Commercial Roofing in Hurst, TX | CRD",
-    metaDescription: "Commercial roofing in Hurst, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Hurst, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/hurst',
     regionName: 'Hurst, Texas',
     heroHeadline: "Commercial Roofing Services in Hurst, Texas.",
@@ -4762,7 +4762,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/euless': {
     title: "Commercial Roofing in Euless, TX | CRD",
-    metaDescription: "Commercial roofing in Euless, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Euless, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/euless',
     regionName: 'Euless, Texas',
     heroHeadline: "Commercial Roofing Services in Euless, Texas.",
@@ -4802,7 +4802,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/bedford': {
     title: "Commercial Roofing in Bedford, TX | CRD",
-    metaDescription: "Commercial roofing in Bedford, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Bedford, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bedford',
     regionName: 'Bedford, Texas',
     heroHeadline: "Commercial Roofing Services in Bedford, Texas.",
@@ -4842,7 +4842,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/north-richland-hills': {
     title: "Commercial Roofing in North Richland Hills, TX | CRD",
-    metaDescription: "Commercial roofing in North Richland Hills, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in North Richland Hills, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/north-richland-hills',
     regionName: 'North Richland Hills, Texas',
     heroHeadline: "Commercial Roofing Services in North Richland Hills, Texas.",
@@ -4882,7 +4882,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/keller': {
     title: "Commercial Roofing in Keller, TX | CRD",
-    metaDescription: "Commercial roofing in Keller, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Keller, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/keller',
     regionName: 'Keller, Texas',
     heroHeadline: "Commercial Roofing Services in Keller, Texas.",
@@ -4922,7 +4922,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/burleson': {
     title: "Commercial Roofing in Burleson, TX | CRD",
-    metaDescription: "Commercial roofing in Burleson, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Burleson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/burleson',
     regionName: 'Burleson, Texas',
     heroHeadline: "Commercial Roofing Services in Burleson, Texas.",
@@ -4962,7 +4962,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/rockwall': {
     title: "Commercial Roofing in Rockwall, TX | CRD",
-    metaDescription: "Commercial roofing in Rockwall, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Rockwall, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/rockwall',
     regionName: 'Rockwall, Texas',
     heroHeadline: "Commercial Roofing Services in Rockwall, Texas.",
@@ -5002,7 +5002,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/forney': {
     title: "Commercial Roofing in Forney, TX | CRD",
-    metaDescription: "Commercial roofing in Forney, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Forney, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/forney',
     regionName: 'Forney, Texas',
     heroHeadline: "Commercial Roofing Services in Forney, Texas.",
@@ -5042,7 +5042,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/waxahachie': {
     title: "Commercial Roofing in Waxahachie, TX | CRD",
-    metaDescription: "Commercial roofing in Waxahachie, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Waxahachie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/waxahachie',
     regionName: 'Waxahachie, Texas',
     heroHeadline: "Commercial Roofing Services in Waxahachie, Texas.",
@@ -5082,7 +5082,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/midlothian': {
     title: "Commercial Roofing in Midlothian, TX | CRD",
-    metaDescription: "Commercial roofing in Midlothian, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Midlothian, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/midlothian',
     regionName: 'Midlothian, Texas',
     heroHeadline: "Commercial Roofing Services in Midlothian, Texas.",
@@ -5122,7 +5122,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/lancaster': {
     title: "Commercial Roofing in Lancaster, TX | CRD",
-    metaDescription: "Commercial roofing in Lancaster, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Lancaster, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/lancaster',
     regionName: 'Lancaster, Texas',
     heroHeadline: "Commercial Roofing Services in Lancaster, Texas.",
@@ -5161,7 +5161,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ]
 },
   '/service-areas/desoto': {
-    title: "Commercial Roofing in DeSoto, TX | CRD",    metaDescription: "Commercial roofing in DeSoto, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
+    title: "Commercial Roofing in DeSoto, TX | CRD",    metaDescription: "Commercial roofing in DeSoto, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
     heroHeadline: "Commercial Roofing Services in DeSoto, Texas.",
     heroSubtitle: "Commercial roof planning in DeSoto should account for deSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'DeSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs.',
@@ -5199,7 +5199,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/cedar-hill': {
     title: "Commercial Roofing in Cedar Hill, TX | CRD",
-    metaDescription: "Commercial roofing in Cedar Hill, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Cedar Hill, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/cedar-hill',
     regionName: 'Cedar Hill, Texas',
     heroHeadline: "Commercial Roofing Services in Cedar Hill, Texas.",
@@ -5239,7 +5239,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/duncanville': {
     title: "Commercial Roofing in Duncanville, TX | CRD",
-    metaDescription: "Commercial roofing in Duncanville, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Duncanville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/duncanville',
     regionName: 'Duncanville, Texas',
     heroHeadline: "Commercial Roofing Services in Duncanville, Texas.",
@@ -5279,7 +5279,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/coppell': {
     title: "Commercial Roofing in Coppell, TX | CRD",
-    metaDescription: "Commercial roofing in Coppell, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Coppell, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/coppell',
     regionName: 'Coppell, Texas',
     heroHeadline: "Commercial Roofing Services in Coppell, Texas.",
@@ -5319,7 +5319,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/farmers-branch': {
     title: "Commercial Roofing in Farmers Branch, TX | CRD",
-    metaDescription: "Commercial roofing in Farmers Branch, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Farmers Branch, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/farmers-branch',
     regionName: 'Farmers Branch, Texas',
     heroHeadline: "Commercial Roofing Services in Farmers Branch, Texas.",
@@ -5359,7 +5359,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/the-colony': {
     title: "Commercial Roofing in The Colony, TX | CRD",
-    metaDescription: "Commercial roofing in The Colony, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in The Colony, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/the-colony',
     regionName: 'The Colony, Texas',
     heroHeadline: "Commercial Roofing Services in The Colony, Texas.",
@@ -5399,7 +5399,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/sachse': {
     title: "Commercial Roofing in Sachse, TX | CRD",
-    metaDescription: "Commercial roofing in Sachse, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Sachse, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/sachse',
     regionName: 'Sachse, Texas',
     heroHeadline: "Commercial Roofing Services in Sachse, Texas.",
@@ -5439,7 +5439,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/balch-springs': {
     title: "Commercial Roofing in Balch Springs, TX | CRD",
-    metaDescription: "Commercial roofing in Balch Springs, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Balch Springs, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/balch-springs',
     regionName: 'Balch Springs, Texas',
     heroHeadline: "Commercial Roofing Services in Balch Springs, Texas.",
@@ -5479,7 +5479,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/princeton': {
     title: "Commercial Roofing in Princeton, TX | CRD",
-    metaDescription: "Commercial roofing in Princeton, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Princeton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/princeton',
     regionName: 'Princeton, Texas',
     heroHeadline: "Commercial Roofing Services in Princeton, Texas.",
@@ -5519,7 +5519,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/royse-city': {
     title: "Commercial Roofing in Royse City, TX | CRD",
-    metaDescription: "Commercial roofing in Royse City, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Royse City, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/royse-city',
     regionName: 'Royse City, Texas',
     heroHeadline: "Commercial Roofing Services in Royse City, Texas.",
@@ -5559,7 +5559,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/melissa': {
     title: "Commercial Roofing in Melissa, TX | CRD",
-    metaDescription: "Commercial roofing in Melissa, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Melissa, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/melissa',
     regionName: 'Melissa, Texas',
     heroHeadline: "Commercial Roofing Services in Melissa, Texas.",
@@ -5599,7 +5599,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/anna': {
     title: "Commercial Roofing in Anna, TX | CRD",
-    metaDescription: "Commercial roofing in Anna, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Anna, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/anna',
     regionName: 'Anna, Texas',
     heroHeadline: "Commercial Roofing Services in Anna, Texas.",
@@ -5639,7 +5639,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/celina': {
     title: "Commercial Roofing in Celina, TX | CRD",
-    metaDescription: "Commercial roofing in Celina, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Celina, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/celina',
     regionName: 'Celina, Texas',
     heroHeadline: "Commercial Roofing Services in Celina, Texas.",
@@ -5679,7 +5679,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/prosper': {
     title: "Commercial Roofing in Prosper, TX | CRD",
-    metaDescription: "Commercial roofing in Prosper, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Prosper, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/prosper',
     regionName: 'Prosper, Texas',
     heroHeadline: "Commercial Roofing Services in Prosper, Texas.",
@@ -5719,7 +5719,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/flower-mound': {
     title: "Commercial Roofing in Flower Mound, TX | CRD",
-    metaDescription: "Commercial roofing in Flower Mound, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Flower Mound, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/flower-mound',
     regionName: 'Flower Mound, Texas',
     heroHeadline: "Commercial Roofing Services in Flower Mound, Texas.",
@@ -5759,7 +5759,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/wylie': {
     title: "Commercial Roofing in Wylie, TX | CRD",
-    metaDescription: "Commercial roofing in Wylie, Texas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Wylie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/wylie',
     regionName: 'Wylie, Texas',
     heroHeadline: "Commercial Roofing Services in Wylie, Texas.",
@@ -5799,7 +5799,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/centerton': {
     title: "Commercial Roofing in Centerton, AR | CRD",
-    metaDescription: "Commercial roofing in Centerton, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Centerton, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/centerton',
     regionName: 'Centerton, Arkansas',
     heroHeadline: "Commercial Roofing Services in Centerton, Arkansas.",
@@ -5835,7 +5835,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/hot-springs-village': {
     title: "Commercial Roofing in Hot Springs Village, AR | CRD",
-    metaDescription: "Commercial roofing in Hot Springs Village, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Hot Springs Village, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/hot-springs-village',
     regionName: 'Hot Springs Village, Arkansas',
     heroHeadline: "Commercial Roofing Services in Hot Springs Village, Arkansas.",
@@ -5871,7 +5871,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/harrison': {
     title: "Commercial Roofing in Harrison, AR | CRD",
-    metaDescription: "Commercial roofing in Harrison, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Harrison, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/harrison',
     regionName: 'Harrison, Arkansas',
     heroHeadline: "Commercial Roofing Services in Harrison, Arkansas.",
@@ -5907,7 +5907,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/mountain-home': {
     title: "Commercial Roofing in Mountain Home, AR | CRD",
-    metaDescription: "Commercial roofing in Mountain Home, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Mountain Home, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mountain-home',
     regionName: 'Mountain Home, Arkansas',
     heroHeadline: "Commercial Roofing Services in Mountain Home, Arkansas.",
@@ -5943,7 +5943,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/batesville': {
     title: "Commercial Roofing in Batesville, AR | CRD",
-    metaDescription: "Commercial roofing in Batesville, Arkansas. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Batesville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/batesville',
     regionName: 'Batesville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Batesville, Arkansas.",
@@ -5979,7 +5979,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/ardmore': {
     title: "Commercial Roofing in Ardmore, OK | CRD",
-    metaDescription: "Commercial roofing in Ardmore, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Ardmore, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/ardmore',
     regionName: 'Ardmore, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Ardmore, Oklahoma.",
@@ -6015,7 +6015,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/duncan': {
     title: "Commercial Roofing in Duncan, OK | CRD",
-    metaDescription: "Commercial roofing in Duncan, Oklahoma. Inspections, repairs, restoration and replacement planning. Availability confirmed by roof type and scope.",
+    metaDescription: "Commercial roofing in Duncan, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/duncan',
     regionName: 'Duncan, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Duncan, Oklahoma.",
@@ -6051,7 +6051,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/addison': {
     title: "Commercial Roofing in Addison, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Addison offices and professional properties. Project availability is confirmed by scope.",
+    metaDescription: "Commercial roofing in Addison, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/addison',
     regionName: 'Addison, Texas',
     heroHeadline: "Commercial Roofing Services in Addison, Texas.",
@@ -6099,7 +6099,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/haltom-city': {
     title: "Commercial Roofing in Haltom City, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Haltom City industrial, warehouse and retail properties. Confirm project availability.",
+    metaDescription: "Commercial roofing in Haltom City, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/haltom-city',
     regionName: 'Haltom City, Texas',
     heroHeadline: "Commercial Roofing Services in Haltom City, Texas.",
@@ -6147,7 +6147,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/white-settlement': {
     title: "Commercial Roofing in White Settlement, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for White Settlement industrial, defense support and retail properties. Confirm availability.",
+    metaDescription: "Commercial roofing in White Settlement, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/white-settlement',
     regionName: 'White Settlement, Texas',
     heroHeadline: "Commercial Roofing Services in White Settlement, Texas.",
@@ -6195,7 +6195,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/benbrook': {
     title: "Commercial Roofing in Benbrook, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Benbrook light industrial, healthcare and retail properties. Confirm project availability.",
+    metaDescription: "Commercial roofing in Benbrook, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/benbrook',
     regionName: 'Benbrook, Texas',
     heroHeadline: "Commercial Roofing Services in Benbrook, Texas.",
@@ -6243,7 +6243,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/watauga': {
     title: "Commercial Roofing in Watauga, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Watauga retail, healthcare and professional office properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Watauga, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/watauga',
     regionName: 'Watauga, Texas',
     heroHeadline: "Commercial Roofing Services in Watauga, Texas.",
@@ -6291,7 +6291,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/saginaw': {
     title: "Commercial Roofing in Saginaw, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Saginaw logistics, manufacturing and retail properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Saginaw, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/saginaw',
     regionName: 'Saginaw, Texas',
     heroHeadline: "Commercial Roofing Services in Saginaw, Texas.",
@@ -6339,7 +6339,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/forest-hill': {
     title: "Commercial Roofing in Forest Hill, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Forest Hill industrial, retail and healthcare properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Forest Hill, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/forest-hill',
     regionName: 'Forest Hill, Texas',
     heroHeadline: "Commercial Roofing Services in Forest Hill, Texas.",
@@ -6387,7 +6387,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/crowley': {
     title: "Commercial Roofing in Crowley, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Crowley professional offices, retail and light industrial properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Crowley, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/crowley',
     regionName: 'Crowley, Texas',
     heroHeadline: "Commercial Roofing Services in Crowley, Texas.",
@@ -6435,7 +6435,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/cleburne': {
     title: "Commercial Roofing in Cleburne, TX | CRD",
-    metaDescription: "Commercial roof inspections, leak repairs, restoration and replacement planning for Cleburne warehouses, distribution and industrial properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Cleburne, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/cleburne',
     regionName: 'Cleburne, Texas',
     heroHeadline: "Commercial Roofing Services in Cleburne, Texas.",
@@ -6483,7 +6483,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/weatherford': {
     title: "Commercial Roofing in Weatherford, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Weatherford warehouse, distribution and commercial properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Weatherford, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/weatherford',
     regionName: 'Weatherford, Texas',
     heroHeadline: "Commercial Roofing Services in Weatherford, Texas.",
@@ -6531,7 +6531,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/mineral-wells': {
     title: "Commercial Roofing in Mineral Wells, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Mineral Wells warehouse, service and commercial properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Mineral Wells, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/mineral-wells',
     regionName: 'Mineral Wells, Texas',
     heroHeadline: "Commercial Roofing Services in Mineral Wells, Texas.",
@@ -6579,7 +6579,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/stephenville': {
     title: "Commercial Roofing in Stephenville, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Stephenville retail, healthcare and institutional properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Stephenville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/stephenville',
     regionName: 'Stephenville, Texas',
     heroHeadline: "Commercial Roofing Services in Stephenville, Texas.",
@@ -6627,7 +6627,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/ennis': {
     title: "Commercial Roofing in Ennis, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Ennis healthcare, institutional and commercial properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Ennis, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/ennis',
     regionName: 'Ennis, Texas',
     heroHeadline: "Commercial Roofing Services in Ennis, Texas.",
@@ -6675,7 +6675,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
 },
   '/service-areas/bonham': {
     title: "Commercial Roofing in Bonham, TX | CRD",
-    metaDescription: "Commercial roof inspections, repairs, restoration and replacement planning for Bonham agricultural supply, warehouse and commercial properties. Confirm availability.",
+    metaDescription: "Commercial roofing in Bonham, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
     canonicalPath: '/service-areas/bonham',
     regionName: 'Bonham, Texas',
     heroHeadline: "Commercial Roofing Services in Bonham, Texas.",
