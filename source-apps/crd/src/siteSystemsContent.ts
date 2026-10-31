@@ -1907,7 +1907,9 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         'Silicone, acrylic and polyurethane system evaluation based on substrate and drainage',
         'Documented roof inspections and repair, restoration or replacement recommendations'
     ],
-    cityLinks: []
+    cityLinks: [
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ]
 },
   '/service-areas/searcy': {
     title: 'Commercial Roof Coatings in Searcy, Arkansas | CRD',
