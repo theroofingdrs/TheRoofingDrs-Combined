@@ -270,6 +270,32 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Single-Ply Membrane', href: '/tpo-roofing', reason: 'Energy-efficient low-slope protection for fellowship halls and gymnasiums.' },
       { name: 'Fluid Silicone Coatings', href: '/silicone-roof-coatings', reason: 'Budget-conscious restoration that preserves church capital reserves.' },
     ],
+    planningGuide: [
+          {
+                "title": "Protect the sanctuary and the spaces around it",
+                "detail": "Map reported leaks in sanctuaries, fellowship halls, classrooms, offices, kitchens and sound or lighting areas. High ceilings and finished interiors can make leak tracing and interior protection especially important."
+          },
+          {
+                "title": "Plan around worship and community schedules",
+                "detail": "Coordinate work around services, funerals, weddings, school programs, food distribution and community events. Confirm parking, entrances, accessibility routes and any periods when noise must be limited."
+          },
+          {
+                "title": "Understand complex roof transitions",
+                "detail": "Church campuses may combine steep-slope shingles or metal, low-slope membrane roofs, towers, steeples, parapets and additions. Each assembly needs its own inspection and compatible repair details."
+          },
+          {
+                "title": "Give trustees a clear decision record",
+                "detail": "A useful proposal should show roof areas, photos, observed conditions, repair priorities, alternatives, exclusions, warranty terms and the reason a repair, restoration or replacement is recommended."
+          }
+    ],
+    inspectionChecklist: [
+          "Roof sections and building uses mapped, including sanctuary, education wing and fellowship spaces",
+          "Steep-slope and low-slope systems evaluated separately",
+          "Towers, steeples, valleys, flashing, gutters, penetrations and transitions photographed",
+          "Interior leak reports matched to likely roof areas",
+          "Service schedules, accessibility, parking and event restrictions documented",
+          "Board-ready options and phased budget priorities"
+    ],
     complianceSafety: 'CRD operates with clean staging footprints, safety perimeter netting, and full background-checked commercial crews.',
   },
 
@@ -297,6 +323,32 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'Commercial Standing Seam Metal', href: '/commercial-metal-roofing', reason: 'Structural durability for heavy manufacturing facilities.' },
       { name: 'High-Solids Silicone Coatings', href: '/silicone-roof-coatings', reason: 'Fast, seamless water-tight sealing without business downtime.' },
     ],
+    planningGuide: [
+          {
+                "title": "Identify what the building cannot afford to lose",
+                "detail": "Locate production lines, electrical rooms, control systems, stored inventory, loading operations and other critical areas below the roof. Include them in leak-response and temporary protection planning."
+          },
+          {
+                "title": "Inspect roof details around equipment",
+                "detail": "Industrial roofs can have heavy rooftop traffic, exhaust, process piping, curbs, supports and penetrations. Confirm that equipment supports and service paths are not damaging the membrane or metal panels."
+          },
+          {
+                "title": "Coordinate work with plant operations",
+                "detail": "Review shutdown windows, hot-work restrictions, lift routes, crane placement, truck traffic, ventilation and material staging with the facility contact before work is scheduled."
+          },
+          {
+                "title": "Compare lifecycle options transparently",
+                "detail": "A proposal should explain preparation, insulation or deck concerns, repairs, coating compatibility, tear-off assumptions, downtime and maintenance obligations. Lowest initial price alone does not describe lifecycle cost."
+          }
+    ],
+    inspectionChecklist: [
+          "Roof zones mapped against production, inventory and critical equipment below",
+          "Membrane or metal panel condition, seams, fasteners and flashings documented",
+          "Penetrations, exhausts, supports, drains and rooftop traffic paths inspected",
+          "Interior moisture risks and active leak impacts recorded",
+          "Plant access, shutdown, lift, crane and staging requirements agreed",
+          "Repair, restoration and replacement options with downtime assumptions"
+    ],
     complianceSafety: 'Full OSHA compliance, fall-protection harnesses, leading-edge warning lines, and industrial forklift coordination.',
   },
 
@@ -322,6 +374,32 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Single-Ply Membrane', href: '/tpo-roofing', reason: 'Clean, reflective, and cost-effective across large retail centers.' },
       { name: 'Fluid-Applied Silicone Restoration', href: '/silicone-roof-coatings', reason: 'Renews strip center roofs without noise or dust entering tenant shops.' },
     ],
+    planningGuide: [
+          {
+                "title": "Connect tenant reports to roof locations",
+                "detail": "Record the suite, room, date, weather and reported leak conditions. A labeled roof plan can help distinguish one shared roof defect from separate issues at different tenant spaces."
+          },
+          {
+                "title": "Keep customers and storefronts protected",
+                "detail": "Plan pedestrian routes, entrances, parking, overhead protection, deliveries and signage. Work near customer areas should be coordinated with property management and affected tenants."
+          },
+          {
+                "title": "Check rooftop exhaust and HVAC details",
+                "detail": "Restaurant exhaust, grease, HVAC curbs, service access and roof penetrations can create distinct maintenance and compatibility requirements. Identify these before selecting materials."
+          },
+          {
+                "title": "Use phases that preserve business operations",
+                "detail": "For larger centers, divide work by roof zone and tenant impact. Define temporary weather protection, work hours, access, cleanup and how urgent leaks will be handled during each phase."
+          }
+    ],
+    inspectionChecklist: [
+          "Tenant leak reports linked to suite and roof-zone map",
+          "Drains, seams, flashing, parapets, skylights and penetrations documented",
+          "Restaurant exhaust, grease exposure and HVAC service paths reviewed",
+          "Customer access, storefront protection, parking and delivery plan",
+          "Tenant communication and emergency response contact identified",
+          "Phased scope, temporary protection and daily cleanup requirements"
+    ],
     complianceSafety: 'Daily magnetic perimeter nail sweeps and ground-level safety barricades protecting retail customers.',
   },
 
@@ -346,6 +424,32 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
     recommendedRoofSystems: [
       { name: 'TPO Flat Roof Systems', href: '/tpo-roofing', reason: 'Durable, clean low-slope protection for flat apartment roofs and breezeways.' },
       { name: 'Restorative Roof Coatings', href: '/commercial-roof-coatings', reason: 'Extends remaining roof life without loud tear-off noise disturbing residents.' },
+    ],
+    planningGuide: [
+          {
+                "title": "Prioritize buildings by risk, not just age",
+                "detail": "A complex may contain buildings installed in different years or with different exposures. Compare active leaks, roof condition, resident impact, repair history and system type before setting replacement order."
+          },
+          {
+                "title": "Coordinate tenant access and notices",
+                "detail": "Plan for parking, balconies, patios, pets, pool areas, playgrounds, leasing offices and accessible entrances. Give residents clear dates, expected noise and a contact for urgent concerns."
+          },
+          {
+                "title": "Look beyond the membrane",
+                "detail": "Drainage, scuppers, gutters, parapets, rooftop HVAC, plumbing vents and equipment service paths often contribute to recurring problems. Include these details in the inspection report."
+          },
+          {
+                "title": "Build a repeatable property record",
+                "detail": "Use building identifiers and consistent photo locations so managers can compare inspections year to year, track completed repairs and plan capital work across the portfolio."
+          }
+    ],
+    inspectionChecklist: [
+          "Building-by-building roof inventory with age and system type where known",
+          "Active leak history tied to units, floors and roof zones",
+          "Drains, gutters, scuppers, parapets, penetrations and HVAC curbs checked",
+          "Resident safety, parking, access and notice plan",
+          "Repair, restoration and replacement suitability documented per building",
+          "Phased priority schedule and closeout records"
     ],
     complianceSafety: 'Certified tenant protection zones, warning flags, and daily magnetic roller sweeps.',
   },,
