@@ -22,5 +22,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Build both websites
-        run: npm test
+      - name: Install and build residential website
+        working-directory: source-apps/trd
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+      - name: Install and build commercial website
+        working-directory: source-apps/crd
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
