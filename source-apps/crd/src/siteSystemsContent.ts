@@ -374,6 +374,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'A reflective low-slope option for clubhouses, amenity buildings and other common-area facilities.' },
       { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'A durable option for appropriate sloped roofs and community facilities.' },
     ],
+    planningGuide: [
+          {
+                "title": "Start with the association's responsibility map",
+                "detail": "Review declarations, bylaws, maintenance schedules and insurance documents to determine which roofs are common elements and who is responsible for repairs. Do not assume every attached roof is governed the same way."
+          },
+          {
+                "title": "Compare buildings on a common scorecard",
+                "detail": "Ask the roofer to identify each building, roof area, system, approximate age, visible condition, active leaks and recommended timing. Separate urgent water-entry issues from planned capital work."
+          },
+          {
+                "title": "Make board decisions auditable",
+                "detail": "A board-ready proposal should include labeled photos, a defined scope, exclusions, access assumptions, alternates, warranty terms and a schedule. Ask bidders to price the same scope so comparisons are meaningful."
+          },
+          {
+                "title": "Plan resident communication before mobilization",
+                "detail": "Coordinate notices, parking relocations, pets, balconies, pool or clubhouse access, deliveries and emergency contacts. A technically sound project can still go poorly if residents are surprised."
+          }
+    ],
+    inspectionChecklist: [
+          "Building-by-building roof plan with unique labels and approximate roof areas",
+          "Photos of seams, laps, penetrations, flashing, edges, drains and gutters",
+          "Interior leak history matched to roof locations where possible",
+          "Condition of insulation or deck where accessible and safely testable",
+          "Repair, restoration and replacement options with the reasons each is or is not suitable",
+          "Prioritized reserve-planning schedule and clear assumptions"
+    ],
+    faqs: [
+          {
+                "question": "Should an HOA replace every roof at the same time?",
+                "answer": "Not automatically. Roofs of different ages or exposures may have different remaining service lives. A documented portfolio assessment can help phase work while identifying buildings that need immediate attention."
+          },
+          {
+                "question": "What should an HOA require in a roofing proposal?",
+                "answer": "Require a defined roof-by-roof scope, product and assembly details, preparation requirements, photos, exclusions, protection plan, schedule, cleanup standards, warranty terms and change-order process."
+          },
+          {
+                "question": "Can roof coatings reduce association costs?",
+                "answer": "Sometimes. A coating is only appropriate when the existing assembly, substrate, moisture condition, drainage and details qualify for the selected system. It should not be used to conceal wet insulation, failing structure or widespread defects."
+          }
+    ],
     complianceSafety: 'Work planning emphasizes resident notifications, controlled access, fall protection, debris management and daily cleanup.',
   },
   '/industries/townhomes-condominiums': {
@@ -399,6 +439,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For qualifying sloped roofs where panel condition, fastening and details can be evaluated.' },
       { name: 'Architectural Roof Restoration', href: '/commercial-roof-coatings', reason: 'For eligible roof assemblies where restoration is technically appropriate.' },
       { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'For flat and low-slope sections, breezeways and shared amenity structures.' },
+    ],
+    planningGuide: [
+          {
+                "title": "Confirm ownership boundaries first",
+                "detail": "Condominium declarations, party-wall details and maintenance agreements can divide responsibility between associations and individual owners. Confirm the legal maintenance boundary before defining the project."
+          },
+          {
+                "title": "Inspect connected roof transitions",
+                "detail": "Pay close attention to valleys, shared walls, parapets, end walls, step flashing, gutters and transitions between phases. Water can travel from the visible ceiling stain before appearing indoors."
+          },
+          {
+                "title": "Protect occupied homes",
+                "detail": "Plan for resident notices, vehicle moves, patio and balcony access, pets, noise, dust and temporary access restrictions. Identify how crews will protect landscaping and outdoor living areas."
+          },
+          {
+                "title": "Keep appearance and water management consistent",
+                "detail": "Phased work should consider color availability, drainage paths, flashing heights and transitions so one repaired section does not create a weak connection to the next."
+          }
+    ],
+    inspectionChecklist: [
+          "Ownership and maintenance responsibility confirmed for each roof section",
+          "Roof transitions, shared walls, valleys, eaves and drainage paths photographed",
+          "Interior leak reports mapped to the relevant building or unit",
+          "Material compatibility checked where new work meets existing roof sections",
+          "Resident protection, access and vehicle relocation plan",
+          "Written scope identifying unit or building boundaries and finish expectations"
+    ],
+    faqs: [
+          {
+                "question": "Who pays for a townhouse or condo roof?",
+                "answer": "It depends on the governing documents and ownership structure. The association may maintain common roof elements, while some communities assign portions of responsibility to individual owners. Review the documents before authorizing work."
+          },
+          {
+                "question": "Can one building be repaired while another is replaced?",
+                "answer": "Yes, if inspection findings support different scopes and the interfaces can be detailed correctly. A portfolio assessment should document why each building receives its recommended treatment."
+          },
+          {
+                "question": "Why do leaks appear away from the roof defect?",
+                "answer": "Water can move along underlayment, decking, framing or insulation before reaching an interior finish. A proper investigation traces the likely water path instead of assuming the ceiling stain is directly below the entry point."
+          }
     ],
     complianceSafety: 'Project planning includes occupied-property protection, fall protection, debris control and clear communication with property representatives.',
   },
@@ -426,6 +506,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For suitable sloped metal roof assemblies.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'For eligible roof surfaces where coating is a sound restoration option.' },
     ],
+    planningGuide: [
+          {
+                "title": "Treat recurring leaks as a building issue",
+                "detail": "Record the date, weather, room, ceiling location and any temporary repairs for every tenant report. Patterns can help the inspector connect multiple complaints to one roof detail or drainage problem."
+          },
+          {
+                "title": "Compare repair cost with remaining roof condition",
+                "detail": "A small repair may be sensible on a serviceable roof. Repeated patching across deteriorated materials can become more expensive and less reliable than planning a larger project."
+          },
+          {
+                "title": "Protect tenants and their belongings",
+                "detail": "Give clear notice of work dates, parking impacts, access needs and any items that should be moved from patios or exterior walls. Provide a contact for urgent water entry."
+          },
+          {
+                "title": "Ask for a useful owner record",
+                "detail": "Keep the roof photos, repair invoices, material details, warranty documents and next inspection recommendation with the property file. This helps with future budgeting and ownership transfers."
+          }
+    ],
+    inspectionChecklist: [
+          "Roof age and known repair history",
+          "Flashings, penetrations, valleys, gutters and drainage checked",
+          "Interior leak locations documented by unit and room",
+          "Roof deck or insulation concerns identified where accessible",
+          "Repair and replacement options with scope boundaries",
+          "Tenant notice, access and property protection requirements"
+    ],
+    faqs: [
+          {
+                "question": "Is a duplex or fourplex too small for a commercial roofer?",
+                "answer": "Not necessarily. The right contractor depends on the roof system, project size, licensing and insurance requirements, and the contractor's experience with the building type. Ask for relevant examples and a written scope."
+          },
+          {
+                "question": "Should I repair or replace a rental property's roof?",
+                "answer": "Consider roof age, extent of deterioration, leak frequency, underlying moisture, repairability, and the cost and disruption of repeat visits. An inspection should explain the evidence behind the recommendation."
+          },
+          {
+                "question": "Can I get one assessment for several rental properties?",
+                "answer": "Yes. Provide addresses, building counts and known roof concerns. A grouped inspection can organize findings by property and help prioritize the portfolio."
+          }
+    ],
     complianceSafety: 'Crews coordinate with property contacts to protect residents, maintain safe access and keep work areas orderly.',
   },
   '/industries/nursing-homes-assisted-living': {
@@ -451,6 +571,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'A reflective single-ply option for many low-slope healthcare buildings.' },
       { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'A membrane option often considered where rooftop grease or chemical exposure is a concern.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A possible restoration path for compatible existing roof assemblies.' },
+    ],
+    planningGuide: [
+          {
+                "title": "Coordinate with the facility before inspection",
+                "detail": "Identify resident-care areas, memory-care boundaries, medication and food-service spaces, infection-control expectations, emergency routes and approved roof access. The facility should designate one person to coordinate the contractor."
+          },
+          {
+                "title": "Control noise, odor and disruption",
+                "detail": "Ask about work methods, adhesives, coatings, equipment and expected odors or noise. Schedule disruptive tasks around resident routines and sensitive operations whenever practical."
+          },
+          {
+                "title": "Prioritize leak-sensitive spaces",
+                "detail": "Map known leaks near resident rooms, dining areas, kitchens, medication storage, electrical rooms and records. Include temporary protection and escalation contacts in the response plan."
+          },
+          {
+                "title": "Require daily site closeout",
+                "detail": "The work plan should address tools, debris, fasteners, access doors, barricades and cleanup. Facility staff should know when the roof area is secured and whether any access restrictions remain."
+          }
+    ],
+    inspectionChecklist: [
+          "Facility-approved access, escort and communication process",
+          "Resident areas, emergency routes and sensitive departments identified",
+          "Roof penetrations, drains, edges and rooftop equipment inspected",
+          "Interior leak locations and affected operations recorded",
+          "Work methods reviewed for noise, odor, dust and schedule impacts",
+          "Daily cleanup, site security and emergency response contacts documented"
+    ],
+    faqs: [
+          {
+                "question": "Can roofing work continue while a nursing home is occupied?",
+                "answer": "Often it can, but the facility and contractor must plan the work around residents, staff, emergency access and sensitive areas. Some activities may need restricted hours or additional controls."
+          },
+          {
+                "question": "What should happen if a roof leak affects a resident room?",
+                "answer": "The facility should follow its internal resident-safety and incident procedures while the roofing contractor investigates and provides appropriate temporary protection. The roof report should document the source investigation and permanent repair scope."
+          },
+          {
+                "question": "Are coatings suitable for senior living buildings?",
+                "answer": "They may be suitable for certain existing roof assemblies, but only after checking substrate condition, moisture, drainage, compatibility, ventilation and the manufacturer's application requirements. Odor and work-zone impacts also need planning."
+          }
     ],
     complianceSafety: 'Work plans are coordinated with facility management and prioritize controlled access, occupant protection, fall protection and clean staging.',
   },
@@ -478,6 +638,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'Worth evaluating in areas with grease, chemical or exhaust exposure.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'Potential restoration option for compatible existing assemblies.' },
     ],
+    planningGuide: [
+          {
+                "title": "Map critical areas and building systems",
+                "detail": "Before work begins, identify emergency departments, operating and procedure areas, imaging suites, laboratories, pharmacies, data rooms, medical gas systems, air intakes and critical mechanical equipment. Facility engineering should approve access and protection plans."
+          },
+          {
+                "title": "Treat rooftop penetrations as high-priority details",
+                "detail": "Hospitals often have dense rooftop equipment and many curbs, exhausts and service lines. Ask for photos and condition notes for each major penetration, flashing transition and drainage point."
+          },
+          {
+                "title": "Coordinate air quality and operational controls",
+                "detail": "Review adhesives, primers, coatings, dust, fumes, exhaust locations and material staging with the facility. The contractor should not assume ordinary work hours or ordinary access procedures."
+          },
+          {
+                "title": "Use phased scopes with clear hold points",
+                "detail": "Large campuses may need separate work packages by building or roof zone. Define weather protection, inspection hold points, shutdown approvals and communication before each phase."
+          }
+    ],
+    inspectionChecklist: [
+          "Facility engineering approval and access protocol",
+          "Critical departments, air intakes and rooftop mechanical systems mapped",
+          "Roof condition and leak history documented by building and zone",
+          "Penetrations, curbs, drains, flashings and perimeter details photographed",
+          "Work methods and materials reviewed with facility infection-control and safety teams as applicable",
+          "Phasing, temporary weather protection and emergency contacts recorded"
+    ],
+    faqs: [
+          {
+                "question": "Can a hospital roof be replaced without closing the building?",
+                "answer": "Many projects are completed while buildings remain operational, but the plan must be developed with hospital facilities and safety teams. Access, noise, odors, air intakes, emergency routes and critical systems can affect sequencing."
+          },
+          {
+                "question": "What roof details deserve special attention at hospitals?",
+                "answer": "Mechanical curbs, exhausts, intakes, pipes, drains, expansion joints and wall transitions deserve careful documentation because failures can affect sensitive interior spaces or building operations."
+          },
+          {
+                "question": "Does a hospital need a special roofing warranty?",
+                "answer": "Warranty terms should match the selected assembly, manufacturer requirements, installation details and maintenance responsibilities. Review coverage, exclusions, inspection obligations and response procedures rather than relying on the warranty label alone."
+          }
+    ],
     complianceSafety: 'Project coordination emphasizes facility-approved access, controlled work zones, fall protection and protection of occupied areas.',
   },
   '/industries/schools': {
@@ -503,6 +703,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective low-slope protection for classrooms and large campus buildings.' },
       { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For sloped roofs and appropriate campus structures.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A potential way to restore eligible roofs while reducing tear-off waste.' },
+    ],
+    planningGuide: [
+          {
+                "title": "Use the school calendar strategically",
+                "detail": "Summer break is not automatically enough time for every project. Confirm procurement dates, material lead times, weather allowances, testing schedules, athletic events and when staff need rooms ready for occupancy."
+          },
+          {
+                "title": "Separate students from every work activity",
+                "detail": "The site plan should address fencing, roof access, ladders, cranes, deliveries, dumpsters, bus lanes, playgrounds, athletic fields and emergency vehicle routes. Do not rely on informal verbal warnings."
+          },
+          {
+                "title": "Build a district-wide roof inventory",
+                "detail": "Record each building's roof system, approximate age, area, known leak history, prior repairs and observed condition. Consistent records make campus priorities easier to explain to boards and taxpayers."
+          },
+          {
+                "title": "Protect classroom interiors and equipment",
+                "detail": "Identify technology rooms, libraries, kitchens, gym floors, ceiling systems and stored materials below work areas. Temporary protection and leak-response procedures should be agreed before tear-off."
+          }
+    ],
+    inspectionChecklist: [
+          "Building and roof-section inventory with labeled photographs",
+          "Drainage, seams, flashings, rooftop equipment and perimeter details reviewed",
+          "Interior leak history and sensitive spaces recorded",
+          "Student separation, bus circulation and emergency access plan",
+          "Calendar, procurement lead times and weather contingency",
+          "Closeout package with warranty, product data and maintenance instructions"
+    ],
+    faqs: [
+          {
+                "question": "When is the best time to reroof a school?",
+                "answer": "School breaks can reduce disruption, but the schedule should be based on project size, material availability, weather, procurement and the date rooms must be ready. Some work may be phased during occupied periods with strict separation."
+          },
+          {
+                "question": "Can a district prioritize roofs across multiple campuses?",
+                "answer": "Yes. A consistent assessment method can rank roofs by active leakage, safety concerns, system condition, interior risk and estimated timing. The report should explain the basis for each priority."
+          },
+          {
+                "question": "What should a school district include in bid documents?",
+                "answer": "Define roof areas, assembly requirements, preparation, tear-off assumptions, insulation, flashing, drainage, safety controls, schedule, submittals, warranty, closeout documents and alternates. Comparable scopes produce more useful bids."
+          }
     ],
     complianceSafety: 'Scheduling and site controls are coordinated with school leadership, with strict separation from students and occupied public areas.',
   },
@@ -530,6 +770,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'EPDM Roofing', href: '/epdm-roofing', reason: 'A flexible membrane option used on many existing campus roofs.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A restoration option when the existing roof is compatible and structurally sound.' },
     ],
+    planningGuide: [
+          {
+                "title": "Manage the roof as a campus asset portfolio",
+                "detail": "Build a roof register by building, section, system, age, area, repair history and condition. Include residence halls, libraries, labs, athletic facilities, dining buildings and central utility structures."
+          },
+          {
+                "title": "Identify specialized buildings early",
+                "detail": "Laboratories, vivariums, data centers, kitchens and research facilities may have sensitive exhaust, air intakes, process equipment or access controls. Facilities staff should identify these before the contractor proposes methods."
+          },
+          {
+                "title": "Plan around campus life",
+                "detail": "Coordinate work with semesters, move-in and move-out, graduation, athletic events, summer programs and major public gatherings. Consider pedestrian routes, deliveries and residence hall access."
+          },
+          {
+                "title": "Make procurement and phasing transparent",
+                "detail": "For multi-building programs, separate urgent repairs from capital projects and define how alternates, unit prices, allowances and change orders will be evaluated."
+          }
+    ],
+    inspectionChecklist: [
+          "Campus roof register with building IDs and mapped roof zones",
+          "System condition, drainage, penetrations and equipment supports documented",
+          "Historic or specialized buildings flagged for appropriate review",
+          "Sensitive exhausts, intakes, labs and data facilities identified",
+          "Campus access, events, pedestrian routes and delivery plans",
+          "Prioritized multi-year repair and capital plan with supporting photos"
+    ],
+    faqs: [
+          {
+                "question": "How should a university prioritize dozens of roofs?",
+                "answer": "Use a repeatable condition assessment that records active leaks, safety issues, moisture concerns, roof age, repairability and the consequences of failure. Priorities should be evidence-based and reviewed with campus facilities staff."
+          },
+          {
+                "question": "Can roofing work be phased across academic years?",
+                "answer": "Yes. A multi-year plan can address urgent defects first and schedule larger projects around academic calendars, procurement and funding. Each phase should preserve sound transitions and drainage."
+          },
+          {
+                "question": "Do laboratories require different roofing coordination?",
+                "answer": "They can. Exhaust systems, air intakes, process equipment, security and research operations may impose additional constraints. Facility engineering and relevant department contacts should approve the plan before work starts."
+          }
+    ],
     complianceSafety: 'Work plans account for campus access, occupied buildings, pedestrian protection, fall protection and coordinated deliveries.',
   },
   '/industries/correctional-facilities': {
@@ -555,6 +835,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'A common low-slope membrane option for institutional buildings.' },
       { name: 'Modified Bitumen Roofing', href: '/modified-bitumen-roofing', reason: 'A multi-ply option that may suit certain existing roof assemblies.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A potential restoration option for suitable existing roof systems.' },
+    ],
+    planningGuide: [
+          {
+                "title": "Let facility administration control access",
+                "detail": "All visits, escorts, tools, materials, deliveries, photography and work areas must be approved under the facility's own procedures. A roofing proposal should state that work is contingent on those approvals."
+          },
+          {
+                "title": "Document roof areas without compromising security",
+                "detail": "Agree in advance what can be photographed, mapped or included in reports. The contractor should provide the facility with useful condition documentation while respecting restrictions on sensitive information."
+          },
+          {
+                "title": "Plan material movement and staging",
+                "detail": "Roofing materials, dumpsters, lifts and equipment may require specific routes, inspection and timing. Confirm approved staging and secure storage before mobilization."
+          },
+          {
+                "title": "Protect occupied operations",
+                "detail": "Coordinate noise, temporary closures, weather protection, emergency access and work sequencing with the facility's designated representative. Do not make assumptions about movement or occupancy."
+          }
+    ],
+    inspectionChecklist: [
+          "Written facility approval and designated point of contact",
+          "Access, escort, tool, material and photography restrictions confirmed",
+          "Approved inspection route and roof areas identified",
+          "Leak locations, roof details and repair needs documented within facility rules",
+          "Material delivery, staging, debris and daily tool-accountability plan",
+          "Work windows, emergency contacts and weather protection plan"
+    ],
+    faqs: [
+          {
+                "question": "Can contractors photograph a correctional facility roof?",
+                "answer": "Only if the facility authorizes it and defines what may be photographed. Reporting methods must follow facility security rules."
+          },
+          {
+                "question": "Can roofing work occur while a jail or prison is operating?",
+                "answer": "Potentially, but only under facility-approved procedures. Access, escorts, tools, deliveries, work zones and scheduling must be coordinated with authorized staff."
+          },
+          {
+                "question": "What should a correctional facility include in a roofing bid?",
+                "answer": "In addition to the technical roof scope, identify access assumptions, security coordination, approved work hours, material controls, photography restrictions, staging, cleanup and required submittals."
+          }
     ],
     complianceSafety: 'All work is subject to facility authorization, security screening and approved procedures; no security arrangements are assumed.',
   },
@@ -582,6 +902,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'May be considered in areas with restaurant exhaust or grease exposure.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'Can be evaluated for compatible existing roofs to avoid unnecessary tear-off.' },
     ],
+    planningGuide: [
+          {
+                "title": "Map the roof by tenant and roof zone",
+                "detail": "A mall or retail center may have multiple roof elevations, tenant suites, additions and ownership boundaries. Label roof zones and connect leak reports to the closest known suite, equipment area or grid reference."
+          },
+          {
+                "title": "Coordinate tenant and customer movement",
+                "detail": "Plan overhead protection, sidewalk closures, parking, storefront access, deliveries and work near restaurants or busy entrances. Property management should approve notices and alternate routes."
+          },
+          {
+                "title": "Inspect restaurant exhaust and rooftop equipment",
+                "detail": "Grease, heat, exhaust discharge, service traffic and equipment curbs can affect membrane selection and detail maintenance. Identify these conditions before choosing a restoration or replacement system."
+          },
+          {
+                "title": "Protect merchandise and business continuity",
+                "detail": "Agree on temporary weather protection, after-hours work where needed, inventory protection and a clear response if water enters a tenant space during construction."
+          }
+    ],
+    inspectionChecklist: [
+          "Roof-zone map linked to tenant suites and reported leak locations",
+          "Drains, scuppers, seams, curbs, skylights and parapets documented",
+          "Restaurant exhaust, grease exposure and HVAC service paths identified",
+          "Customer entrances, sidewalks, parking and loading routes protected",
+          "Tenant notice and emergency water-entry communication process",
+          "Phased scope, temporary protection and daily cleanup plan"
+    ],
+    faqs: [
+          {
+                "question": "How do you find the source of a leak in a multi-tenant shopping center?",
+                "answer": "Start with the reported location and timing, then inspect the related roof zone, drainage path, penetrations and transitions. Water can travel before entering the tenant space, so the ceiling location alone may not identify the defect."
+          },
+          {
+                "question": "Can a shopping center roof be restored in phases?",
+                "answer": "Often, if the existing assembly and substrate are suitable and the project can create reliable tie-ins between phases. The contractor should map each phase and explain how temporary and permanent transitions will be protected."
+          },
+          {
+                "question": "Do restaurant tenants affect roof-system selection?",
+                "answer": "They can. Grease and exhaust exposure may influence membrane or coating compatibility and detail requirements. The actual discharge and roof conditions should be evaluated before specifying materials."
+          }
+    ],
     complianceSafety: 'Work zones, pedestrian routes, tenant access and debris controls are coordinated with property management.',
   },
   '/industries/warehouses-distribution': {
@@ -607,6 +967,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective single-ply option for many large low-slope roofs.' },
       { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'Potential fit where rooftop exhaust or chemical exposure calls for evaluation.' },
       { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For appropriate structural and architectural metal roof assemblies.' },
+    ],
+    planningGuide: [
+          {
+                "title": "Protect inventory before work starts",
+                "detail": "Identify high-value storage, racking, automation, electrical rooms and shipping zones below the roof. Establish temporary protection and a response path for unexpected water entry."
+          },
+          {
+                "title": "Map large roofs into manageable zones",
+                "detail": "A single roof can hide different ages, repairs, drainage patterns and exposure conditions. Zone maps and repeatable photo locations help track problems and compare phases."
+          },
+          {
+                "title": "Coordinate around logistics",
+                "detail": "Crane locations, lifts, deliveries, dumpsters and material staging can interfere with truck courts, loading docks and fire lanes. Confirm a traffic plan with operations before mobilization."
+          },
+          {
+                "title": "Evaluate rooftop traffic and equipment",
+                "detail": "Repeated HVAC service traffic, dropped tools, unsupported piping and equipment changes can damage membranes and flashings. Review access paths and protection requirements."
+          }
+    ],
+    inspectionChecklist: [
+          "Roof zone plan with drains, penetrations, equipment and leak locations",
+          "Membrane seams, fasteners, flashings, edges and rooftop traffic paths",
+          "Interior inventory or equipment risks below reported leak areas",
+          "Drainage capacity, ponding observations and debris conditions",
+          "Truck court, dock, crane, lift and staging logistics",
+          "Phased schedule and temporary weather protection for active operations"
+    ],
+    faqs: [
+          {
+                "question": "Can a warehouse roof be replaced without stopping operations?",
+                "answer": "It may be possible to phase work and coordinate around loading schedules, but the answer depends on roof size, weather, access, interior risks and the facility's operating requirements. The plan should identify any unavoidable restrictions."
+          },
+          {
+                "question": "Why is roof zoning important on large industrial buildings?",
+                "answer": "Zoning helps connect leak reports and inspection findings to specific areas. It also supports phased repairs, budget planning and tracking of recurring issues."
+          },
+          {
+                "question": "Are reflective roofs useful for warehouses?",
+                "answer": "A reflective roof can reduce solar heat gain at the roof surface, but actual building energy savings depend on insulation, HVAC efficiency, climate, operating hours and the whole building envelope. Avoid promises of a fixed savings percentage without project-specific analysis."
+          }
     ],
     complianceSafety: 'Site logistics emphasize forklift and truck traffic coordination, fall protection, controlled staging and daily housekeeping.',
   },
@@ -634,6 +1034,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For panel replacement or new metal roof assemblies.' },
       { name: 'Commercial Roof Repair', href: '/commercial-roof-repair', reason: 'For localized leaks, fastener issues and detail repairs where appropriate.' },
     ],
+    planningGuide: [
+          {
+                "title": "Separate roof leaks from condensation problems",
+                "detail": "Water on the underside of a roof may come from rain entry, condensation or both. Evaluate ventilation, humidity, temperature differences, insulation, air leakage and roof details before assuming a coating will solve the issue."
+          },
+          {
+                "title": "Coordinate with flock and biosecurity schedules",
+                "detail": "Agree on access routes, vehicle cleaning or disinfection requirements, clothing and equipment rules, downtime windows and any restrictions around active flocks. The farm operator's procedures take priority."
+          },
+          {
+                "title": "Inspect the full metal roof assembly",
+                "detail": "Check panels, exposed fasteners, washers, side laps, end laps, ridge caps, eaves, gutters, penetrations and corrosion. Document whether deterioration is isolated or widespread."
+          },
+          {
+                "title": "Specify coatings based on the actual substrate",
+                "detail": "A coating system needs compatible metal, sound attachment, appropriate preparation and correct detailing. Rust treatment, primer, film thickness, weather conditions and cure time must follow the selected manufacturer's written requirements."
+          }
+    ],
+    inspectionChecklist: [
+          "Panel condition, corrosion, fasteners and washer condition",
+          "Ridge, eave, side-lap, end-lap and penetration details",
+          "Interior condensation observations separated from rain-leak reports",
+          "Ventilation, humidity and insulation conditions considered",
+          "Farm access, biosecurity, flock timing and vehicle route requirements",
+          "Coating preparation, primer, application conditions and cure plan if restoration is proposed"
+    ],
+    faqs: [
+          {
+                "question": "Can a metal roof coating stop condensation inside a chicken house?",
+                "answer": "Not by itself in every case. Condensation is often tied to humidity, ventilation, air leakage, insulation and surface temperatures. The cause should be investigated before selecting a roof coating."
+          },
+          {
+                "question": "When is a poultry house metal roof a candidate for coating?",
+                "answer": "When panels remain serviceable, attachment and details can be corrected, corrosion is manageable and the selected coating is approved for the substrate. Severely deteriorated panels or structural issues may require replacement or other repairs."
+          },
+          {
+                "question": "How should roofing work be scheduled around poultry production?",
+                "answer": "Coordinate with the operator's flock schedule, access rules and biosecurity plan. Do not assume ordinary contractor access or vehicle movement is acceptable."
+          }
+    ],
     complianceSafety: 'Work is coordinated with the farm operator and applicable site biosecurity procedures; coating suitability and ventilation conditions are evaluated before work.',
   },
   '/industries/horse-barns-equestrian': {
@@ -660,6 +1100,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'Metal Roof Coatings', href: '/metal-roof-coatings', reason: 'A potential restoration option for suitable existing metal roofs.' },
       { name: 'Commercial Roof Repair', href: '/commercial-roof-repair', reason: 'For repairable leaks and deteriorated roof details.' },
     ],
+    planningGuide: [
+          {
+                "title": "Plan around horses, riders and daily routines",
+                "detail": "Separate work zones from stalls, paddocks, arenas, tack rooms and public areas. Agree on animal relocation, gates, noise-sensitive periods, equipment movement and emergency access with the facility operator."
+          },
+          {
+                "title": "Understand ventilation before choosing materials",
+                "detail": "Barn moisture and ventilation conditions can affect condensation and corrosion. Evaluate airflow, insulation and roof assembly rather than assuming the roof surface alone explains interior moisture."
+          },
+          {
+                "title": "Inspect long metal panel runs carefully",
+                "detail": "Check fasteners, washers, panel laps, ridge caps, eaves, valleys, gutters and penetrations. Long runs can conceal repeated fastener or seam problems that should be mapped."
+          },
+          {
+                "title": "Protect animals from construction debris",
+                "detail": "Plan for dropped fasteners, metal scraps, dust, solvents, wet coatings, equipment noise and temporary fencing. Keep materials and waste inaccessible to horses and other animals."
+          }
+    ],
+    inspectionChecklist: [
+          "Metal panels, fasteners, washers, laps, ridge and eave details",
+          "Corrosion and water-entry points documented with photos",
+          "Ventilation and condensation conditions considered",
+          "Stalls, paddocks, arenas and animal movement routes identified",
+          "Animal separation, debris control and material storage plan",
+          "Coating or repair product suitability and cure restrictions reviewed"
+    ],
+    faqs: [
+          {
+                "question": "Are roof coatings safe to apply over horse barns?",
+                "answer": "Product selection and application must follow the manufacturer's requirements, including ventilation, overspray control, cure time and restrictions on occupancy. Animals should be kept away from work and curing areas as directed."
+          },
+          {
+                "question": "Can a leaking barn metal roof be repaired without replacing all panels?",
+                "answer": "Sometimes. If damage is localized and the surrounding panels and attachment remain sound, targeted repairs may be practical. Widespread corrosion, failed laps or structural deterioration may change the recommendation."
+          },
+          {
+                "question": "Does barn condensation mean the roof is leaking?",
+                "answer": "No. Condensation can form when moist interior air contacts a cooler surface. The investigation should consider ventilation, humidity, insulation and air leakage as well as roof leaks."
+          }
+    ],
     complianceSafety: 'Work plans include animal separation, controlled equipment access, fall protection and coordination with facility operators.',
   },
   '/industries/office-buildings': {
@@ -685,6 +1165,46 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
       { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective low-slope option for many office buildings.' },
       { name: 'EPDM Roofing', href: '/epdm-roofing', reason: 'A flexible membrane system found on many existing commercial properties.' },
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A potential restoration alternative for suitable existing roof assemblies.' },
+    ],
+    planningGuide: [
+          {
+                "title": "Protect business-critical interiors",
+                "detail": "Identify server rooms, electrical equipment, records, tenant improvements and high-value areas below reported leaks. Document temporary protection and who receives urgent notifications."
+          },
+          {
+                "title": "Coordinate tenants and building operations",
+                "detail": "Agree on notices, access, parking, noise, rooftop equipment shutdowns and after-hours work. Multi-tenant properties need a clear path for reporting and tracking leaks."
+          },
+          {
+                "title": "Track rooftop service traffic",
+                "detail": "HVAC contractors and other service providers can damage roof surfaces or flashings. Ask for designated walk paths, protection pads and documentation after equipment work."
+          },
+          {
+                "title": "Use a roof plan for long-term budgeting",
+                "detail": "Record system type, age, repair history, roof zones and observed condition. A consistent record helps owners compare repair needs across buildings and plan capital spending."
+          }
+    ],
+    inspectionChecklist: [
+          "Roof plan and building or tenant zones identified",
+          "Membrane or panel condition, seams, flashings, edges and drains documented",
+          "HVAC curbs, service routes, supports and penetrations inspected",
+          "Leak reports mapped to affected suites and critical interior areas",
+          "Tenant communications, access and equipment coordination plan",
+          "Prioritized repair and capital recommendations with photo evidence"
+    ],
+    faqs: [
+          {
+                "question": "Can roof work be performed during normal office hours?",
+                "answer": "Often, but noise, odor, access, parking and rooftop equipment needs may require specific work windows. Property management should approve the schedule and tenant notices."
+          },
+          {
+                "question": "How often should an office building roof be inspected?",
+                "answer": "Inspection frequency depends on the roof system, age, exposure, warranty and site conditions. At minimum, owners should follow manufacturer and warranty requirements and arrange additional checks after significant storms or known damage."
+          },
+          {
+                "question": "What should a commercial roof inspection report include?",
+                "answer": "It should identify the roof areas inspected, access limitations, system observations, labeled photos, active and potential leak points, drainage and flashing conditions, recommended priorities and the reasoning behind proposed repairs."
+          }
     ],
     complianceSafety: 'Work is coordinated with property management to protect occupants, entrances, vehicles and building operations.',
   },
