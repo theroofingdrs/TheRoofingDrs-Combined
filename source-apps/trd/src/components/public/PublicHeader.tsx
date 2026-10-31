@@ -33,6 +33,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
     { label: 'Roofing Systems', path: '/roofing-systems' },
     { label: 'Service Areas', path: '/service-areas' },
     { label: 'FAQ', path: '/faq' },
+    { label: 'Blog', path: '/blog' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ];
