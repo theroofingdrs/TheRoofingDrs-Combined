@@ -44,6 +44,10 @@ export interface RoofSystemPageData {
   manufacturerBenefits?: string[];
   manufacturerWarrantyDetails?: string;
   manufacturerWarrantyUrl?: string;
+  projectImageUrl?: string;
+  projectImageAlt?: string;
+  projectImageCaption?: string;
+  projectImageSourceUrl?: string;
 }
 
 interface RoofSystemPageTemplateProps {
@@ -120,6 +124,19 @@ export const RoofSystemPageTemplate: React.FC<RoofSystemPageTemplateProps> = ({
           </div>
         </div>
       </section>
+
+      {data.projectImageUrl && (
+        <section className="pb-14 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto overflow-hidden rounded-xl border border-slate-800 bg-[#0e1422]">
+            <img src={data.projectImageUrl} alt={data.projectImageAlt || 'White modified-bitumen commercial roof'} className="w-full h-auto max-h-[620px] object-cover" loading="lazy" />
+            <div className="px-5 py-4 space-y-2">
+              <h2 className="text-lg font-heading font-bold uppercase text-white">White Modified Bitumen Roof Installation</h2>
+              <p className="text-sm text-slate-300 leading-relaxed">{data.projectImageCaption}</p>
+              {data.projectImageSourceUrl && <a href={data.projectImageSourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-amber-400 hover:underline">Photo reference: Polyglass project gallery</a>}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 1. What It Is & Where It's Used */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
