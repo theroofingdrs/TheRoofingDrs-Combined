@@ -70,14 +70,14 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          cp -R image-review/previews /tmp/generated-previews
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin image-review || true
           git checkout -B image-review
-          git rm -r -f image-review/previews 2>/dev/null || true
+          rm -rf image-review/previews
           mkdir -p image-review
-          cp -R image-review/previews /tmp/generated-previews 2>/dev/null || true
-          if [ -d /tmp/generated-previews ]; then cp -R /tmp/generated-previews image-review/previews; fi
+          cp -R /tmp/generated-previews image-review/previews
           git add image-review/previews
           git commit -m "Refresh compressed image review previews" || echo "No preview changes"
           git push origin image-review --force
