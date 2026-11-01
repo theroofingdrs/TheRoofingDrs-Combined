@@ -39,6 +39,8 @@ export interface RoofSystemPageData {
   costFactors: string[];
   faqs: { question: string; answer: string }[];
   relatedServices: { name: string; href: string }[];
+  manufacturerLogoUrl?: string;
+  manufacturerWebsiteUrl?: string;
 }
 
 interface RoofSystemPageTemplateProps {
@@ -79,6 +81,25 @@ export const RoofSystemPageTemplate: React.FC<RoofSystemPageTemplateProps> = ({
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
             {data.heroSubtitle}
           </p>
+          {data.manufacturerLogoUrl && (
+            <div className="pt-5 flex justify-center">
+              <a
+                href={data.manufacturerWebsiteUrl || 'https://www.certainteed.com/'}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit CertainTeed, manufacturer of Flintlastic modified bitumen roofing"
+                className="inline-flex items-center justify-center bg-white rounded-lg border border-slate-700 px-6 py-3 shadow-lg"
+              >
+                <img
+                  src={data.manufacturerLogoUrl}
+                  alt="CertainTeed manufacturer logo"
+                  className="w-44 sm:w-52 h-auto max-h-20 object-contain"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </a>
+            </div>
+          )}
           <div className="pt-4 flex flex-wrap justify-center gap-4">
             <button
               onClick={() => onOpenInspection('Inspection')}
