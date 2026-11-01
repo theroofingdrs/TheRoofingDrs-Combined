@@ -1,5 +1,6 @@
 import { RoofSystemPageData } from './components/RoofSystemPageTemplate';
 import { IndustryPageData } from './components/IndustryPageTemplate';
+import { INDUSTRY_EXPANSION } from './industryExpansion';
 import { ServiceAreaData } from './components/ServiceAreaTemplate';
 
 export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
@@ -450,6 +451,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
 };
 
 export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
+  ...INDUSTRY_EXPANSION,
   '/industries/churches': {
     title: 'Commercial Roofing for Churches & Sanctuaries | Ark-La-Tex',
     metaDescription: 'Specialized commercial roofing for churches, sanctuaries, and worship facilities across Texas, Arkansas, Louisiana, and Oklahoma. Stealth staging and capital planning.',
