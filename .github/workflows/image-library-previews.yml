@@ -1,0 +1,83 @@
+name: Build private image review previews
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'image-library/incoming/**'
+      - '.github/workflows/image-library-previews.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: image-library-preview
+  cancel-in-progress: true
+
+jobs:
+  previews:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source images
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Build compressed previews and contact sheet
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps, ImageDraw
+          import hashlib, json
+          src = Path("image-library/incoming")
+          out = Path("image-review/previews")
+          out.mkdir(parents=True, exist_ok=True)
+          supported = {".jpg", ".jpeg", ".png", ".webp"}
+          files = sorted(p for p in src.iterdir() if p.is_file() and p.suffix.lower() in supported)
+          cards = []
+          manifest = []
+          for p in files:
+              try:
+                  im = Image.open(p)
+                  im = ImageOps.exif_transpose(im).convert("RGB")
+                  thumb = im.copy()
+                  thumb.thumbnail((420, 300))
+                  name = p.stem + ".jpg"
+                  thumb.save(out / name, "JPEG", quality=78, optimize=True)
+                  card = Image.new("RGB", (460, 360), "white")
+                  card.paste(thumb, ((460-thumb.width)//2, 8))
+                  ImageDraw.Draw(card).text((12, 320), p.name, fill="black")
+                  cards.append(card)
+                  manifest.append({"source": p.name, "preview": name, "sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "dimensions": list(im.size)})
+              except Exception as e:
+                  manifest.append({"source": p.name, "error": str(e)})
+          cols = 3
+          rows = (len(cards)+cols-1)//cols
+          sheet = Image.new("RGB", (cols*460, max(1, rows)*360), "#dddddd")
+          for i, card in enumerate(cards):
+              sheet.paste(card, ((i%cols)*460, (i//cols)*360))
+          sheet.save(out / "contact-sheet.jpg", "JPEG", quality=82, optimize=True)
+          (out / "manifest.json").write_text(json.dumps(manifest, indent=2))
+          PY
+
+      - name: Publish previews to separate review branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin image-review || true
+          git checkout -B image-review
+          git rm -r -f image-review/previews 2>/dev/null || true
+          mkdir -p image-review
+          cp -R image-review/previews /tmp/generated-previews 2>/dev/null || true
+          if [ -d /tmp/generated-previews ]; then cp -R /tmp/generated-previews image-review/previews; fi
+          git add image-review/previews
+          git commit -m "Refresh compressed image review previews" || echo "No preview changes"
+          git push origin image-review --force
