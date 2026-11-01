@@ -77,7 +77,7 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   },
   {
     id: 'photo-brick',
-    src: getTrdPublicAssetPath('/assets/images/library/residential-roofing-hero-detail.jpg'),
+    src: getTrdPublicAssetPath('/assets/images/trd-residential-home-exterior.jpg'),
     title: 'Residential Roofing Project',
     tag: 'Residential Roofing',
     location: 'Residential Roofing',

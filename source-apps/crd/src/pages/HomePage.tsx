@@ -47,7 +47,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
         {/* Editorial Commercial Roof Photography Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/images/library/commercial-industrial-roofing.jpg"
+            src="/assets/images/library/crd-industrial-distribution-center-aerial.jpg"
             alt="Large commercial distribution center rooftop and architectural building envelope"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center brightness-[0.45] contrast-[1.05]"
@@ -212,7 +212,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
               <img
-                src="/assets/images/library/commercial-roof-inspection.jpg"
+                src="/assets/images/library/crd-commercial-roof-drain-inspection.jpg"
                 alt="Commercial roof leak diagnostic examination"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-500"
