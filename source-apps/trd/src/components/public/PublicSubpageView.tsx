@@ -21,6 +21,7 @@ import { RoofInspectionPage } from './pages/RoofInspectionPage.tsx';
 import { RoofingSystemsPage } from './pages/RoofingSystemsPage.tsx';
 import { ContactPage } from './pages/ContactPage.tsx';
 import { FaqSection, getFaqPageSchema } from './FaqSection.tsx';
+import { BlogPage } from './pages/BlogPage.tsx';
 import { PublicFooter } from './PublicFooter.tsx';
 
 interface PublicSubpageViewProps {
@@ -55,6 +56,11 @@ export const PublicSubpageView: React.FC<PublicSubpageViewProps> = ({
       return { label, path: fullPath };
     }),
   ];
+
+  // Residential blog and individual articles
+  if (currentPath === '/blog' || currentPath.startsWith('/blog/')) {
+    return <BlogPage currentPath={currentPath} onNavigate={onNavigate} onOpenIntake={() => onOpenIntake('DIAGNOSTIC')} />;
+  }
 
   // 0. FAQ & KNOWLEDGE BASE (Google People Also Ask Target)
   if (currentPath === '/faq') {

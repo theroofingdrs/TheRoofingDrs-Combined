@@ -102,6 +102,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/blog" className="hover:text-[#d99a19] text-[#d99a19] font-semibold transition-colors">
+                  Commercial Roofing Insights
+                </Link>
+              </li>
+              <li>
                 <Link to="/coat-vs-replace" className="hover:text-[#d99a19] text-[#d99a19] font-medium transition-colors">
                   Coat vs. Replace Guide
                 </Link>
