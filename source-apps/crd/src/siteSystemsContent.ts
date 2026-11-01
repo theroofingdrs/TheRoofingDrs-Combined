@@ -229,7 +229,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
   },
 
   '/modified-bitumen': {
-    manufacturerLogoUrl: 'https://logo.clearbit.com/certainteed.com',
+    manufacturerLogoUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/CertainTeedLogo.gif',
     manufacturerWebsiteUrl: 'https://www.certainteed.com/',
     manufacturerBenefits: [
       'Flintlastic SA uses factory-applied adhesive and a weighted roller, eliminating open-flame torching, kettles and hot asphalt during field application. This can reduce hot-work exposure and disruption around occupied buildings.',
