@@ -462,6 +462,25 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             </div>
           </div>
 
+          {/* Section: Industries */}
+          <div>
+            <div className="text-xs font-mono-crd text-[#d99a19] uppercase tracking-wider py-1 border-b border-[#2a2a2a]">
+              Property Types & Industries
+            </div>
+            <div className="grid grid-cols-1 gap-1 mt-1">
+              {NAVIGATION_LINKS.industries.map((s) => (
+                <Link
+                  key={s.href}
+                  to={s.href}
+                  className="py-1.5 text-sm text-[#cccccc] hover:text-[#d99a19] flex items-center justify-between"
+                >
+                  <span>{s.name}</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#666666]" />
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* Section: Property Protection */}
           <div>
             <div className="text-xs font-mono-crd text-[#d99a19] uppercase tracking-wider py-1 border-b border-[#2a2a2a]">
