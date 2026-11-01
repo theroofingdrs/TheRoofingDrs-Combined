@@ -322,7 +322,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                 currentPath.startsWith('/blog') ? 'text-[#d99a19]' : 'text-[#cccccc]'
               }`}
             >
-              Insights
+              Blog
             </Link>
           </nav>
 
@@ -508,6 +508,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             </Link>
             <Link to="/service-areas" className="block py-1.5 text-sm text-[#cccccc] hover:text-white">
               Service Areas (TX, AR, LA, OK)
+            </Link>
+            <Link to="/blog" className="block py-1.5 text-sm font-bold text-[#d99a19] hover:underline">
+              Commercial Roofing Blog
             </Link>
             <Link to="/contact" className="block py-1.5 text-sm text-[#cccccc] hover:text-white">
               Contact & Direct Inquiries
