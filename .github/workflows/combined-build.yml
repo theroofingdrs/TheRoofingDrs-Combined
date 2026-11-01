@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+      - integration/path-routing
 
 concurrency:
   group: combined-site-ci-${{ github.event_name }}
