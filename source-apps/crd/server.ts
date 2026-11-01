@@ -790,6 +790,17 @@ async function start() {
       immutable: true,
       index: false,
     }));
+
+    // Never serve the SPA HTML as a substitute for a missing JS, CSS, or media asset.
+    // Browsers reject HTML returned for module scripts, which otherwise produces a blank page.
+    app.use((req: Request, res: Response, next) => {
+      const assetPath = req.path.startsWith('/assets/') || /\\.(?:js|mjs|css|map|woff2?|ttf|otf|png|jpe?g|gif|svg|webp|avif|ico)$/i.test(req.path);
+      if (assetPath) {
+        return res.status(404).type('text/plain').send('CRD asset not found');
+      }
+      next();
+    });
+
     app.get('*', (req: Request, res: Response) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
       res.sendFile(path.join(distPath, 'index.html'));
