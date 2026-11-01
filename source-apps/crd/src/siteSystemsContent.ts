@@ -229,8 +229,18 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
   },
 
   '/modified-bitumen': {
-    manufacturerLogoUrl: 'https://sextongroup.com/supplier_logos/logo-196.jpg?v=2024-02-13-12-05-49',
+    manufacturerLogoUrl: 'https://logo.clearbit.com/certainteed.com',
     manufacturerWebsiteUrl: 'https://www.certainteed.com/',
+    manufacturerBenefits: [
+      'Flintlastic SA uses factory-applied adhesive and a weighted roller, eliminating open-flame torching, kettles and hot asphalt during field application. This can reduce hot-work exposure and disruption around occupied buildings.',
+      'CertainTeed reports that Flintlastic SA multi-ply systems can install faster than traditional modified-bitumen methods; labor savings can make installed costs competitive.',
+      'SBS-modified asphalt and reinforced sheets provide flexibility, elongation and recovery, including pliability in colder temperatures.',
+      'The Flintlastic family offers self-adhered, torch-applied, hot-asphalt and cold-adhesive product choices to match substrate, fire restrictions and project conditions.',
+      'Product options include reflective CoolStar surfacing and multiple granule colors. Reflectance, fire and impact ratings depend on the exact cap-sheet product and published test data.',
+      'CertainTeed offers material-only and system-level warranty pathways, including Integrity Roof System and No Dollar Limit options for qualifying assemblies.'
+    ],
+    manufacturerWarrantyDetails: 'CertainTeed publishes standard asphaltic membrane warranty durations from 10 to 25 years. Options include Limited Warranty on Materials, Integrity Roof System Limited Warranty and Integrity Roof System No Dollar Limit (NDL) Limited Warranty. Coverage differs: a materials warranty addresses covered product defects; Integrity Roof System coverage addresses qualifying leaks caused by covered product defects; NDL coverage may include covered workmanship when installed by an eligible Silver or Gold Star Credentialed Contractor and when the project meets CertainTeed requirements. CertainTeed lists a 25-year modified-bitumen NDL option subject to additional requirements. Warranty term is not automatic and depends on the exact product combination, cap sheet, base/interply, application method, approved assembly, contractor credential, inspection and project documentation. CertainTeed states roofs should be inspected at least twice yearly, in spring and fall, and after severe weather; failure to maintain the roof can void commercial roofing limited warranties. The issued project-specific warranty controls.',
+    manufacturerWarrantyUrl: 'https://www.certainteed.com/commercial-roofing-warranties',
     title: 'Modified Bitumen Roofing | CertainTeed Flintlastic Systems | CRD',
     metaDescription: 'Commercial modified bitumen roofing by Commercial Roof Doctors. Compare CertainTeed Flintlastic torch-applied APP and SBS systems with self-adhered SBS systems, multi-ply protection, 20-25 year warranty options and reflective white cap-sheet energy benefits.',
     canonicalPath: '/modified-bitumen',
