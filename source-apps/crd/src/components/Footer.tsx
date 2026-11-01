@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-[#d99a19] shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs text-[#888888] block font-mono-crd">OPERATIONS & DISPATCH BASE</span>
-                  <span>{BUSINESS_INFO.address.display}</span>
+                  <span>{BUSINESS_INFO.address?.display || [BUSINESS_INFO.address?.street, BUSINESS_INFO.address?.city, BUSINESS_INFO.address?.state, BUSINESS_INFO.address?.zip].filter(Boolean).join(', ') || 'Texarkana, TX'}</span>
                 </div>
               </div>
             </div>
