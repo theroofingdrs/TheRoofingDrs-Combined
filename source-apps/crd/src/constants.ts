@@ -97,7 +97,7 @@ export const NAVIGATION_LINKS = {
     { name: 'Multifamily Roofing', href: '/multifamily-roofing', desc: 'Apartment complexes and resident safety' },
     { name: 'HOA Community Roofing', href: '/hoa-roofing', desc: 'Condos, townhomes, and board compliance' },
   ],
-  industries: [
+  industries: [\n    { name: 'All Industries', href: '/industries', desc: 'Explore commercial roofing by property type' },
     { name: 'Churches & Houses of Worship', href: '/industries/churches', desc: 'Sanctuary protection, steep-slope & flat transitions' },
     { name: 'Schools & Educational Facilities', href: '/industries/schools', desc: 'Classroom dry-in, scheduled break installations' },
     { name: 'Healthcare & Medical Centers', href: '/industries/healthcare', desc: 'Zero-tolerance for water ingress & infection control' },
