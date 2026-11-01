@@ -30,9 +30,9 @@ function renderMarkdown(markdown: string) {
 }
 
 const starterImages: Record<string, string> = {
-  'commercial-roof-coatings-vs-replacement': '/assets/images/commercial_roof_coating_1788537043385.jpg',
-  'tpo-vs-epdm-commercial-roofing': '/assets/images/commercial_logistics_tpo_1788537681612.jpg',
-  'commercial-roof-coatings-energy-performance': '/assets/images/commercial-roof-restoration.jpg',
+  'commercial-roof-coatings-vs-replacement': '/assets/images/commercial-fluid-membrane.jpg',
+  'tpo-vs-epdm-commercial-roofing': '/assets/images/commercial-logistics-tpo.jpg',
+  'commercial-roof-coatings-energy-performance': '/assets/images/commercial-campus-roofs.jpg',
 };
 
 function mapPublishedPost(row: Record<string, any>): Post {
@@ -44,7 +44,7 @@ function mapPublishedPost(row: Record<string, any>): Post {
     category: String(row.category || 'General'),
     date: publishedAt ? new Date(publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '',
     readTime: Math.max(1, Math.ceil(words / 220)) + ' min read',
-    image: String(row.featured_image_url || starterImages[String(row.slug)] || '/assets/images/commercial_roof_restoration.jpg'),
+    image: String(row.featured_image_url || starterImages[String(row.slug)] || '/assets/images/commercial-campus-roofs.jpg'),
     alt: String(row.featured_image_alt || ''),
     sections: [], body_markdown: body,
     seoTitle: row.seo_title ? String(row.seo_title) : undefined,
@@ -59,7 +59,7 @@ const posts: Post[] = [
     title: 'Commercial Roof Coatings vs. Replacement: How to Evaluate the Options',
     excerpt: 'A coating is not the right answer for every roof. Learn which conditions should be evaluated before comparing restoration with tear-off and replacement.',
     category: 'Coatings & Restoration', date: 'October 31, 2026', readTime: '7 min read',
-    image: '/assets/images/commercial_roof_coating_1788537043385.jpg', alt: 'Fluid-applied coating being installed on a commercial roof',
+    image: '/assets/images/commercial-fluid-membrane.jpg', alt: 'Fluid-applied coating being installed on a commercial roof',
     sections: [
       { heading: 'Begin with the existing roof assembly', paragraphs: ['A restoration decision starts with a condition assessment, not a coating product. The evaluation should identify the existing membrane or metal system, roof age and repair history, moisture conditions, drainage, seams, penetrations, flashings, and substrate integrity.', 'The purpose is to determine whether the existing assembly is a suitable candidate for restoration and what preparation or repairs would be required.'] },
       { heading: 'Conditions that can support restoration', paragraphs: ['A roof with a serviceable substrate, manageable moisture conditions, sound attachment, and repairable details may be a candidate for a properly specified restoration system. The selected chemistry must be compatible with the existing roof and intended service conditions.', 'Preparation is critical. Cleaning, repairs, adhesion testing where required, reinforcement, and correct application thickness are part of the system, not optional extras.'] },
@@ -72,7 +72,7 @@ const posts: Post[] = [
     title: 'TPO vs. EPDM: Comparing Two Common Commercial Roofing Systems',
     excerpt: 'Understand the practical differences in membrane composition, seams, detailing, maintenance, and project considerations.',
     category: 'Roof Systems', date: 'October 31, 2026', readTime: '6 min read',
-    image: '/assets/images/commercial_logistics_tpo_1788537681612.jpg', alt: 'Commercial building with a single-ply membrane roof',
+    image: '/assets/images/commercial-logistics-tpo.jpg', alt: 'Commercial building with a single-ply membrane roof',
     sections: [
       { heading: 'Different materials, different installation methods', paragraphs: ['TPO is a thermoplastic single-ply membrane commonly installed with heat-welded seams. EPDM is a synthetic rubber membrane that uses system-specific seam tapes, adhesives, and detailing components.', 'Neither system is automatically best for every building. Design, substrate, insulation, wind requirements, roof geometry, contractor experience, and manufacturer specifications should guide selection.'] },
       { heading: 'Details and transitions deserve attention', paragraphs: ['Penetrations, drains, curbs, perimeter edges, expansion joints, and transitions are frequent sources of roof performance problems when they are poorly designed or installed.', 'A bid comparison should make these details visible instead of focusing only on the membrane name or thickness.'] },
@@ -85,7 +85,7 @@ const posts: Post[] = [
     title: 'Can Commercial Roof Coatings Help with Building Energy Performance?',
     excerpt: 'Reflective roof surfaces can influence solar heat gain, but real results depend on climate, insulation, HVAC, roof condition, and the complete building.',
     category: 'Energy & Building Performance', date: 'October 31, 2026', readTime: '5 min read',
-    image: '/assets/images/commercial-roof-restoration.jpg', alt: 'Restored commercial roof surface',
+    image: '/assets/images/commercial-campus-roofs.jpg', alt: 'Restored commercial roof surface',
     sections: [
       { heading: 'Understand reflectivity and emittance', paragraphs: ['Some roof coating systems are designed to create a reflective surface that can reduce the amount of solar energy absorbed by a roof. The effect on building energy use depends on many factors, including climate, insulation levels, HVAC efficiency, occupancy, roof area, and operating schedules.', 'A reflective coating is not a substitute for sound insulation, air sealing, or properly maintained mechanical equipment.'] },
       { heading: 'Start with the roof and the building', paragraphs: ['Before projecting savings, document the existing roof assembly, current surface condition, insulation, moisture, and HVAC configuration. A building energy assessment may be needed to estimate potential changes in cooling demand.', 'Do not assume a published product rating translates directly into a guaranteed utility-bill reduction for a specific property.'] },
