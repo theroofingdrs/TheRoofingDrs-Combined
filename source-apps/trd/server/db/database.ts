@@ -143,6 +143,55 @@ function generateId(prefix: string): string {
   return `${prefix}_${time}${rand}`;
 }
 
+function createLifetimeRoofingResource(now: string): Resource {
+  return {
+    id: 'res_lifetime_roofing_systems',
+    title: 'Understanding Roofing Materials, Lifespan, and Long-Term Value',
+    slug: 'understanding-roofing-materials-lifespan-and-value',
+    summary: 'A practical comparison of asphalt shingles, impact-resistant shingles, metal, and premium roofing systems. Learn what really affects roof life, how installation and maintenance change performance, and how to compare long-term value.',
+    category: 'GUIDE',
+    content: `### What Does “Lifetime Roofing” Really Mean?
+The phrase “lifetime roof” is often used in roofing advertisements, but it needs context. A manufacturer’s limited lifetime warranty is a contract with specific coverage, exclusions, transfer rules, and workmanship requirements. It is not a promise that the roof will never need repair or replacement. Actual service life depends on the roofing material, installation quality, ventilation, weather exposure, maintenance, and the condition of the roof deck.
+
+### Asphalt Shingles: Practical Value and Broad Availability
+Quality architectural asphalt shingles are a common choice because they offer a wide range of colors and styles at a comparatively accessible installed cost. Depending on product quality, climate, ventilation, maintenance, and workmanship, many systems provide roughly 15 to 30 years of service. Severe hail, repeated high winds, poor attic ventilation, and installation shortcuts can shorten that life.
+
+### Impact-Resistant Shingles: Added Hail Protection
+Class 4 impact-resistant shingles are tested to a defined impact-resistance standard and can be a useful option in hail-prone areas. They may help reduce damage from certain impacts, and some insurers offer discounts when eligibility requirements are met. A Class 4 rating does not guarantee that a roof cannot be damaged by hail, nor does it automatically mean the roof will last longer than every standard shingle system. Confirm product specifications and any insurance discount directly with the manufacturer and insurer.
+
+### Metal Roofing: Long Service Potential
+Standing-seam metal roofing uses raised, interlocking seams and concealed clips or fasteners. Properly designed and installed systems can provide several decades of service, often around 40 to 70 years depending on the metal, coating, details, environment, and maintenance. Panel gauge, compatible trim, underlayment, ventilation, expansion allowances, and workmanship all matter. Exposed-fastener metal systems have different inspection and maintenance needs because washers and fasteners are exposed to weather.
+
+### Premium Roofing: Tile, Slate, and Composite Systems
+Clay or concrete tile, natural slate, and high-quality composite products can offer long service lives and distinctive appearance. Some tile and slate roofs can remain in service for many decades, but the supporting structure, underlayment, flashings, and individual units still require inspection and maintenance. Composite products vary significantly, so compare the specific product’s tested performance, installation requirements, warranty terms, and repairability rather than relying on the category name alone.
+
+### Installation Quality Is a Major Part of Roof Life
+Even an expensive roofing material can fail early when installed incorrectly. Critical details include proper roof-deck preparation, correct underlayment, flashing at walls and penetrations, valley construction, starter and ridge components, fastening patterns, ventilation design, and compliance with the manufacturer’s instructions and local building requirements. A roof inspection should look beyond the visible surface and evaluate these details where accessible.
+
+### Ventilation, Heat, and Moisture
+A properly designed attic ventilation system helps manage heat and moisture, but more ventilation is not automatically better. Intake and exhaust must be balanced and appropriate for the building. Poor ventilation, air leaks from the living space, and inadequate insulation can contribute to moisture problems and excess heat. Reflective or “cool roof” products may reduce roof-surface temperatures under suitable conditions, but actual energy savings depend on climate, roof design, insulation, HVAC efficiency, and the product selected.
+
+### Compare Long-Term Value, Not Just the Initial Price
+A useful comparison includes the installed price, expected maintenance, likely repair costs, product availability, appearance, energy characteristics, warranty limitations, and how long you expect to own the property. A higher-priced roof is not automatically the better investment for every home. Ask for a written scope that identifies the exact product, underlayment, flashing, ventilation work, accessories, tear-off assumptions, and workmanship coverage.
+
+### Questions to Ask Before Choosing a Roofing System
+- What exact manufacturer and product line will be installed?
+- What is the product’s tested wind and impact rating, and what does that rating actually cover?
+- What underlayment, flashing, ventilation, and fastening details are included?
+- Who performs the installation, and what workmanship coverage is provided?
+- What maintenance is recommended, and are replacement materials readily available?
+- What are the exclusions, prorating rules, and transfer conditions in the written warranty?
+
+### The Roof Doctors’ Recommendation
+Choose a roofing system based on the home, roof design, local weather exposure, budget, and long-term plans—not a “lifetime” label alone. A documented roof evaluation and a detailed written installation scope make it easier to compare options fairly and understand what you are buying.`,
+    published: true,
+    readingTimeMinutes: 6,
+    publishedAt: now,
+    createdAt: now,
+  };
+}
+
+
 function getInitialDatabase(): DatabaseSchema {
   const now = new Date().toISOString();
 
@@ -607,6 +656,7 @@ Under Texas law, it is illegal for contractors to waive, absorb, or rebate your 
       publishedAt: now,
       createdAt: now,
     },
+    createLifetimeRoofingResource(now),
   ];
 
   const maintenancePlans: MaintenancePlan[] = [
@@ -1026,6 +1076,10 @@ export function getDatabase(): DatabaseSchema {
         dbInstance!.scopeTemplates = getDefaultScopeTemplates();
       }
       if (!dbInstance!.sales) dbInstance!.sales = [];
+      if (!dbInstance!.resources) dbInstance!.resources = [];
+      if (!dbInstance!.resources.some((resource) => resource.id === 'res_lifetime_roofing_systems')) {
+        dbInstance!.resources.push(createLifetimeRoofingResource(new Date().toISOString()));
+      }
       console.log('[DB] Loaded existing persistent database from disk.');
       return dbInstance!;
     }
