@@ -368,7 +368,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Surface rust and oxidation measurement along valleys and gutters',
     ],
     repairApproach: 'Loose screws are removed and replaced with oversized commercial gasket fasteners. Panel laps are reinforced with stitch screws and sealed with elastomeric mastics.',
-    restorationPotential: 'Metal roofs are the #1 candidate for fluid restoration. Rust-inhibiting primers followed by high-tensile fabric over seams and screws, topped with high-solids silicone, creates a monolithic seal that stops leaks permanently at half the cost of replacement.',
+    restorationPotential: 'Both rusted and non-rusted metal roofs may qualify for fluid-applied restoration, but the preparation differs. On non-rusted panels, evaluate coating adhesion, remove dirt, chalking and loose finish, correct fasteners and laps, and use the primer and reinforcement specified for the coating system. On rusted panels, determine whether corrosion is superficial or has reduced panel thickness or perforated the metal. Remove loose scale and corrosion to the preparation standard required by the selected system, replace perforated or structurally weakened panels, treat remaining corrosion with a compatible corrosion-control primer where specified, and reinforce seams, fasteners and transitions. A coating cannot restore lost metal thickness, repair failed structural connections or stop leaks permanently. Confirm substrate condition, moisture, drainage, compatibility and manufacturer requirements before recommending restoration.',
     replacementTriggers: [
       'Panel rust has perforated through the structural steel substrate.',
       'Hail has crushed standing seams beyond the ability to seal.',
@@ -384,7 +384,8 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Restoration coating vs complete metal tear-off and retrofit',
     ],
     faqs: [
-      { question: 'Can you coat a rusted metal roof?', answer: 'Yes. We apply industrial rust-converting primers that chemically neutralize oxidation before applying reinforcement fabric over seams and a monolithic fluid silicone topcoat.' },
+      { question: 'Can a rusted metal roof be coated?', answer: 'Sometimes. Superficial corrosion may be addressed through approved cleaning, preparation and a compatible corrosion-control primer. Panels with perforation, significant section loss or structural deterioration need repair or replacement before coating is considered.' },
+      { question: 'Does a non-rusted metal roof need primer before coating?', answer: 'Not always. The need and type of primer depend on the existing paint or finish, chalking, contamination, coating chemistry and manufacturer requirements. A test area may be needed to confirm adhesion.' },
     ],
     relatedServices: [
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
@@ -393,55 +394,62 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
   },
 
   '/silicone-roof-coatings': {
-    title: 'Silicone Roof Coatings | 100% High-Solids Fluid Systems | CRD',
-    metaDescription: 'High-solids silicone roof coatings for commercial facilities. Resists ponding water, reflects 85% of UV, and extends commercial roof life by 15-20 years.',
+    title: 'Commercial Silicone Roof Coatings | Fluid-Applied Restoration | CRD',
+    metaDescription: 'Commercial silicone roof coating and restoration assessments for eligible metal, modified-bitumen and single-ply roofs. Learn about preparation, compatibility, ponding water, repairs and system-specific warranty requirements.',
     canonicalPath: '/silicone-roof-coatings',
     systemName: 'High-Solids Silicone Coatings',
     systemType: 'Roof Coating',
-    heroHeadline: 'Silicone Roof Coatings. Permanent Water Barrier.',
-    heroSubtitle: '100% high-solids silicone roof coatings create a seamless, monolithic membrane over existing metal, single-ply, or modified bitumen roofs—unaffected by standing ponding water.',
-    whatItIs: 'High-solids silicone is a moisture-cured, solvent-free polymer coating engineered specifically for low-slope commercial roofs. Once applied, it cures into a flexible rubberized silicone sheet that will not break down, wash away, or soften even under permanent submersion.',
+    heroHeadline: 'Silicone Roof Coatings. A Restoration Option for Qualified Roofs.',
+    heroSubtitle: 'Fluid-applied silicone can provide a continuous, reflective weathering surface over certain existing commercial roof assemblies when the substrate is sound, dry, properly prepared and approved for the selected coating system. Compatibility and ponding-water suitability must be confirmed for the specific product.'
+    whatItIs: 'Commercial silicone roof coatings are fluid-applied materials that cure into an elastomeric weathering membrane. Products differ in chemistry, solids content, application rate, required dry-film thickness, primer, reinforcement and warranty terms. Some silicone systems are designed to tolerate ponding water, but suitability must be confirmed in the current product data and warranty documents. Coatings do not correct wet insulation, deteriorated decking, failed attachment or unresolved drainage defects.'
     whereItIsUsed: [
       'Commercial roofs with areas of slow drainage or chronic ponding water',
       'Aging TPO, PVC, and EPDM single-ply membranes nearing warranty end',
       'Industrial corrugated metal roofs seeking long-term seam sealing',
     ],
     advantages: [
-      'Completely impervious to permanent ponding water (hydrophobic chemistry)',
-      'Reflects 85%+ of solar radiation, dramatically cutting cooling costs',
-      'Seamless application eliminates 100% of mechanical seams and fasteners',
-      'Qualifies for 10, 15, or 20-year manufacturer leak-free warranties',
+      'Some silicone formulations are designed for ponding-water exposure; verify the exact product approval and correct drainage defects where practical',
+      'Light-colored coatings may increase roof-surface reflectance; use product-specific tested data and avoid assuming a fixed energy-savings percentage',
+      'Fluid-applied systems can cover broad roof areas, but existing seams, fasteners, penetrations and transitions require compatible repairs and reinforcement as specified',
+      'System warranties may be available for specified terms when the exact product, preparation, application rate, dry-film thickness, installer and project conditions qualify; read the actual warranty exclusions',
     ],
     considerations: [
-      'Substrate must be completely dry and cleaned with power-washers prior to application',
+      'Substrate must meet the selected manufacturer’s cleanliness, dryness, preparation and adhesion requirements. Pressure washing is not suitable for every roof or condition and must be performed without driving water into the assembly',
       'Silicone surfaces can be slick when wet; dedicated walk pads are required for service routes',
-      'Nothing adheres to cured silicone except fresh silicone (subsequent repairs must use silicone chemistry)',
+      'Future repairs and recoats generally require compatible silicone products or a manufacturer-approved preparation and primer system; verify compatibility before applying another coating chemistry',
     ],
     commonProblems: [
-      { title: 'Delamination from Poor Surface Prep', desc: 'Applying silicone over dirt, grease, or chalky oxidation without proper wash primers.' },
+      { title: 'Delamination from Poor Surface Preparation', desc: 'Applying a coating over dirt, grease, chalking, incompatible existing coatings or an unsuitable substrate can cause adhesion failure.' },
+      { title: 'Trapped Moisture Below the Membrane', desc: 'Coating over wet insulation or deteriorated roof components can conceal rather than correct the underlying problem.' },
+      { title: 'Insufficient Coating Thickness', desc: 'Applying less material than the approved system requires can compromise performance and may invalidate warranty coverage.' },
+      { title: 'Unresolved Drainage and Detail Failures', desc: 'A coating does not correct inadequate slope, loose edge metal, failed drains or structurally unsound details unless those items are separately repaired.' },
       { title: 'Inadequate Dry Film Thickness', desc: 'Spraying below manufacturer mil specifications, reducing long-term durability.' },
     ],
     inspectionProtocols: [
-      'ASTM C794 pull-adhesion testing on prepared test patches',
+      'Adhesion testing using the coating manufacturer’s prescribed method and acceptance criteria for the specific substrate',
       'Infrared moisture scan ensuring underlying insulation is dry',
       'Inspection of fabric reinforcement over all curbs, seams, and penetrations',
       'Wet-film and dry-film mil gauge testing during application',
     ],
-    repairApproach: 'Silicone is self-flashing and easily repaired using compatible commercial silicone sealants and topcoats.',
-    restorationPotential: 'Silicone is the gold standard of commercial roof restoration, offering the longest warranty terms of any fluid-applied coating category.',
-    replacementTriggers: ['Underlying insulation core moisture exceeds 20%–25%.'],
+    repairApproach: 'Repairs require identification of the existing coating and substrate, cleaning and preparation, and compatible repair materials applied at the manufacturer’s specified thickness. Reinforce seams, penetrations and transitions where the approved system requires it; do not assume a generic sealant is an acceptable repair.'
+    restorationPotential: 'A silicone restoration may be appropriate where the existing roof assembly is sound and adequately attached, moisture conditions meet the system requirements, the substrate is compatible, and required repairs and drainage work are completed. Silicone is not universally suitable for every TPO, PVC, EPDM, modified-bitumen or metal roof. Confirm written compatibility, primer, reinforcement, application rate, dry-film thickness and warranty conditions for the exact products proposed.'
+    replacementTriggers: ['Widespread wet or deteriorated insulation that cannot be economically removed and replaced as part of a restoration scope.', 'Perforated or structurally weakened metal panels, deteriorated deck, widespread loss of membrane attachment or extensive membrane failure.', 'An existing roof assembly or building-code condition that does not permit the proposed restoration or recover system.'],
     maintenanceGuidelines: [
-      'Annual pressure washing to maintain high solar reflectance',
+      'Inspect the coating, drains, flashings, walk pads and rooftop service areas at the intervals recommended by the manufacturer; clean only as required using an approved method',
       'Inspect walk pads and service pathways around rooftop units',
     ],
     stormConsiderations: 'High elasticity provides excellent resistance to small-to-medium hail impact without cracking.',
     costFactors: [
-      'Required Dry Film Thickness (20 mils for 10-year vs 30+ mils for 20-year warranty)',
+      'Specified coating chemistry, total material quantity and dry-film thickness required by the exact manufacturer system and warranty',
       'Condition of underlying roof (amount of seam prep and fastener stitching required)',
       'Square footage of roof surface',
     ],
     faqs: [
-      { question: 'Does a silicone coating count as a new roof layer under building code?', answer: 'No. In virtually all jurisdictions, fluid-applied coatings are classified as maintenance, meaning you do not have to tear off existing layers to comply with the two-layer code limit.' },
+      { question: 'Does a silicone coating count as a new roof layer under building code?', answer: 'Do not assume a universal exemption. The adopted code, existing assembly, proposed work and authority having jurisdiction determine applicable requirements. Confirm the classification and any roof-covering layer limits with the local building official before work is specified.' },
+      { question: 'Can every TPO, PVC or EPDM roof be coated with silicone?', answer: 'No. Compatibility varies by membrane formulation, age, surface condition, prior coatings, primers and the silicone product. Obtain written manufacturer guidance and perform any required test area before specifying a system.' },
+      { question: 'Will a silicone coating fix wet insulation or a failing roof deck?', answer: 'No. Wet or deteriorated materials must be identified and addressed, and structural or attachment problems must be corrected. A coating is not a substitute for repairing the roof assembly.' },
+      { question: 'How long will a silicone roof coating last?', answer: 'Service life depends on the product, installed thickness, preparation, exposure, maintenance and warranty terms. The specified warranty is not a guarantee that every roof will remain maintenance-free for that period.' },
+      { question: 'Can silicone coatings reduce cooling costs?', answer: 'A reflective coating may reduce roof-surface temperatures and cooling loads under suitable conditions. Actual savings depend on existing roof color, insulation, HVAC efficiency, climate, building use and measured product reflectance; no fixed savings should be promised.' },
     ],
     relatedServices: [
       { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' },
