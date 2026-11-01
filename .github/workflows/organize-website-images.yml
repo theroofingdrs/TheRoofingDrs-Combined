@@ -22,7 +22,7 @@ jobs:
       - name: Check out isolated website image branch
         uses: actions/checkout@v4
         with:
-          ref: feature/website-image-library
+          ref: feature/integration-image-library
           path: target
           fetch-depth: 0
       - name: Copy and organize original resolution images
@@ -145,4 +145,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add source-apps/trd/public/assets/images/library source-apps/crd/public/assets/images/library image-library/website-image-map.json image-library/WEBSITE-IMAGE-PLACEMENTS.md
           git commit -m "Organize approved roofing website image assets"
-          git push origin HEAD:feature/website-image-library
+          git push origin HEAD:feature/integration-image-library
