@@ -98,12 +98,16 @@ export const NAVIGATION_LINKS = {
     { name: 'HOA Community Roofing', href: '/hoa-roofing', desc: 'Condos, townhomes, and board compliance' },
   ],
   industries: [
+    { name: 'All Industries', href: '/industries', desc: 'Explore commercial roofing by property type' },
     { name: 'Churches & Houses of Worship', href: '/industries/churches', desc: 'Sanctuary protection, steep-slope & flat transitions' },
     { name: 'Schools & Educational Facilities', href: '/industries/schools', desc: 'Classroom dry-in, scheduled break installations' },
     { name: 'Healthcare & Medical Centers', href: '/industries/healthcare', desc: 'Zero-tolerance for water ingress & infection control' },
     { name: 'Industrial & Warehouses', href: '/industries/industrial', desc: 'Large-footprint distribution centers & manufacturing' },
     { name: 'Retail & Shopping Centers', href: '/industries/retail', desc: 'Tenant protection, customer safety & minimal disruption' },
     { name: 'Apartments & Multifamily', href: '/industries/apartments', desc: 'Multi-building complexes and continuous tenant comfort' },
+    { name: 'HOA, Condos & Townhomes', href: '/industries/hoa-communities', desc: 'Association-managed communities and phased roof programs' },
+    { name: 'Agricultural & Equestrian', href: '/industries/agricultural', desc: 'Poultry houses, horse barns and agricultural buildings' },
+    { name: 'Government & Correctional', href: '/industries/government', desc: 'Municipal buildings, jails and secure facilities' },
   ],
   serviceAreas: [
     { name: 'Regional Territory Hub', href: '/service-areas', desc: '75-mile Texarkana Ark-La-Tex radius' },

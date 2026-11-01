@@ -47,7 +47,7 @@ export const IndustryPageTemplate: React.FC<IndustryPageTemplateProps> = ({
         canonicalPath={data.canonicalPath}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Industries', url: '/industries/churches' },
+          { name: 'Industries', url: '/industries' },
           { name: data.industryName, url: data.canonicalPath },
         ]}
       />

@@ -19,6 +19,7 @@ import { EmergencyRoofingPage } from './pages/EmergencyRoofingPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { LeadsAdminPage } from './pages/LeadsAdminPage';
+import { IndustriesDirectoryPage } from './pages/IndustriesDirectoryPage';
 
 // Reusable Templates
 import { ServicePageTemplate } from './components/ServicePageTemplate';
