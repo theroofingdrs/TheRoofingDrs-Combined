@@ -43,7 +43,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
     if (ogDesc) ogDesc.setAttribute('content', description);
 
     // Canonical
-    const fullUrl = `https://commercialroofdoctors.com${canonicalPath}`;
+    const fullUrl = `https://theroofingdrs.com${canonicalPath}`;
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {
       canonical = document.createElement('link');
@@ -104,7 +104,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
           '@type': 'ListItem',
           position: idx + 1,
           name: item.name,
-          item: `https://commercialroofdoctors.com${item.url}`,
+          item: `https://theroofingdrs.com${item.url}`,
         })),
       };
 
