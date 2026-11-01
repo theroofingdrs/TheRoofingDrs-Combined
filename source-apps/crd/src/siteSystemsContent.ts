@@ -229,6 +229,8 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
   },
 
   '/modified-bitumen': {
+    manufacturerLogoUrl: 'https://sextongroup.com/supplier_logos/logo-196.jpg?v=2024-02-13-12-05-49',
+    manufacturerWebsiteUrl: 'https://www.certainteed.com/',
     title: 'Modified Bitumen Roofing | CertainTeed Flintlastic Systems | CRD',
     metaDescription: 'Commercial modified bitumen roofing by Commercial Roof Doctors. Compare CertainTeed Flintlastic torch-applied APP and SBS systems with self-adhered SBS systems, multi-ply protection, 20-25 year warranty options and reflective white cap-sheet energy benefits.',
     canonicalPath: '/modified-bitumen',
