@@ -730,6 +730,15 @@ async function start() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
+    // The CRD Vite build uses /commercial/ as its public asset base.
+    // Mount the dist directory at that prefix so JS/CSS/image requests resolve
+    // to dist/assets instead of falling through to the SPA HTML response.
+    app.use('/commercial', express.static(distPath, {
+      maxAge: '1y',
+      immutable: true,
+      index: false,
+    }));
+    // Keep root-relative serving for the standalone app and legacy asset URLs.
     app.use(express.static(distPath, {
       maxAge: '1y',
       immutable: true,
