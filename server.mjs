@@ -12,17 +12,48 @@ const apps = [
   { name: 'commercial', prefix: '/commercial', port: 3102, dir: path.join(ROOT, 'source-apps', 'crd') },
 ];
 
-const children = apps.map((app) => {
+const childProcesses = new Map();
+const restartCounts = new Map();
+const restartTimers = new Map();
+let shuttingDown = false;
+
+function startChild(app) {
+  if (shuttingDown) return;
+
+  console.log('[' + app.name + '] starting child server on port ' + app.port);
+  const startedAt = Date.now();
   const child = spawn(process.execPath, ['dist/server.cjs'], {
     cwd: app.dir,
     env: { ...process.env, NODE_ENV: 'production', PORT: String(app.port) },
     stdio: 'inherit',
   });
-  child.on('exit', (code, signal) => {
-    console.error(`[${app.name}] child server exited (code=${code}, signal=${signal})`);
+  childProcesses.set(app.name, child);
+
+  child.on('error', (error) => {
+    console.error('[' + app.name + '] child process error:', error);
   });
-  return child;
-});
+
+  child.on('exit', (code, signal) => {
+    if (childProcesses.get(app.name) === child) childProcesses.delete(app.name);
+    const uptimeMs = Date.now() - startedAt;
+    if (uptimeMs > 60_000) restartCounts.set(app.name, 0);
+    console.error('[' + app.name + '] child server exited (code=' + code + ', signal=' + signal + ', uptimeMs=' + uptimeMs + ')');
+
+    if (shuttingDown || restartTimers.has(app.name)) return;
+    const failures = (restartCounts.get(app.name) || 0) + 1;
+    restartCounts.set(app.name, failures);
+    const delayMs = Math.min(1000 * (2 ** Math.min(failures - 1, 4)), 15_000);
+    console.error('[' + app.name + '] scheduling automatic restart in ' + delayMs + 'ms (failure ' + failures + ')');
+    const timer = setTimeout(() => {
+      restartTimers.delete(app.name);
+      startChild(app);
+    }, delayMs);
+    timer.unref();
+    restartTimers.set(app.name, timer);
+  });
+}
+
+for (const app of apps) startChild(app);
 
 function safeDistPath(app, pathname) {
   const dist = path.resolve(app.dir, 'dist');
@@ -67,11 +98,11 @@ function proxy(req, res, app, targetPath) {
 
     upstream.on('error', (error) => {
       const retryable = ['ECONNREFUSED', 'ECONNRESET', 'EHOSTUNREACH'].includes(error.code);
-      if (canRetry && retryable && attempts < 13 && !res.destroyed) {
+      if (canRetry && retryable && attempts < 41 && !res.destroyed) {
         setTimeout(send, 250);
         return;
       }
-      console.error(`[${app.name}] proxy error after ${attempts} attempt(s):`, error.message);
+      console.error('[' + app.name + '] proxy error after ' + attempts + ' attempt(s): code=' + (error.code || 'unknown') + ' syscall=' + (error.syscall || 'unknown') + ' address=' + (error.address || 'unknown') + ' port=' + (error.port || 'unknown') + ' path=' + targetPath + ': ' + error.message);
       if (!res.headersSent) res.writeHead(502, { 'content-type': 'text/plain; charset=utf-8' });
       res.end('The website service is starting or temporarily unavailable.');
     });
@@ -124,8 +155,12 @@ server.listen(PORT, '0.0.0.0', () => {
 });
 
 function shutdown() {
+  if (shuttingDown) return;
+  shuttingDown = true;
+  for (const timer of restartTimers.values()) clearTimeout(timer);
+  restartTimers.clear();
   server.close();
-  for (const child of children) child.kill('SIGTERM');
+  for (const child of childProcesses.values()) child.kill('SIGTERM');
 }
 process.on('SIGTERM', shutdown);
 process.on('SIGINT', shutdown);
