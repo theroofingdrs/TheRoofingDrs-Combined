@@ -121,6 +121,8 @@ jobs:
                   "recommended_placement": placement,
                   "sha256": hashlib.sha256(source.read_bytes()).hexdigest()
               })
+          # Ensure the target branch has the manifest directory.
+          (dst / "image-library").mkdir(parents=True, exist_ok=True)
           # Exact duplicate: retain IMG_4707 and do not create a second website copy for IMG_4708.
           (dst / "image-library/website-image-map.json").write_text(json.dumps(manifest, indent=2))
           (dst / "image-library/WEBSITE-IMAGE-PLACEMENTS.md").write_text(
