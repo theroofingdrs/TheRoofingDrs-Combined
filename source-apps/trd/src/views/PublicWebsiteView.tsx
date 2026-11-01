@@ -56,15 +56,6 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
     specs: 'Synthetic Underlayment • Drone Verified Alignment • 100% Perimeter Tarping',
   },
   {
-    id: 'photo-stone',
-    src: getTrdPublicAssetPath('/assets/images/stone_commercial_roof.jpg'),
-    title: 'Custom Stone & Heavy Timber Architecture',
-    tag: 'Commercial & Estate',
-    location: 'Mount Pleasant, TX',
-    description: 'Distinctive stacked stone and brick architectural building with heavy timber cedar porch trusses, paired with freshly installed dark charcoal dimensional architectural shingles.',
-    specs: 'Heavy Timber Trusses • Dimensional Charcoal Shingles • Architectural Flashings',
-  },
-  {
     id: 'photo-crew',
     src: getTrdPublicAssetPath('/assets/images/active_crew_reroof.jpg'),
     title: 'Certified Roofing Mechanics in Action',
