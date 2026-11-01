@@ -230,7 +230,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
 
   '/modified-bitumen': {
     title: 'Modified Bitumen Roofing | CertainTeed Flintlastic Systems | CRD',
-    metaDescription: 'Commercial modified bitumen roofing by Commercial Roof Doctors. Compare CertainTeed Flintlastic torch-applied APP and SBS systems with self-adhered SBS systems, including single-cap, 2-ply and 3-ply assemblies.',
+    metaDescription: 'Commercial modified bitumen roofing by Commercial Roof Doctors. Compare CertainTeed Flintlastic torch-applied APP and SBS systems with self-adhered SBS systems, multi-ply protection, 20-25 year warranty options and reflective white cap-sheet energy benefits.',
     canonicalPath: '/modified-bitumen',
     systemName: 'Modified Bitumen Roofing',
     systemType: 'Modified Bitumen',
@@ -244,11 +244,15 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Recover or replacement projects where deck type, slope and existing conditions support an approved modified-bitumen assembly',
     ],
     advantages: [
-      'Base, interply and cap-sheet configurations can provide multiple layers of water-shedding protection',
-      'Flintlastic offers both torch-applied and self-adhered product families',
-      'Granule-surfaced cap sheets provide a finished exposed surface and product-specific color choices',
-      'SBS-modified membranes offer flexibility; APP-modified membranes are commonly selected for torch-applied applications and heat resistance',
-      'Individual plies and flashing details can be inspected and repaired using compatible asphaltic materials',
+      'Multiple plies create layered water-shedding protection: if the cap sheet is locally damaged, the underlying base and interply layers provide additional protection while the damage is addressed',
+      'A robust asphaltic assembly can offer strong puncture and traffic resistance when the correct membrane, reinforcement, cover board and protection details are specified for the building use',
+      'SBS-modified membranes provide flexibility and elongation to accommodate normal building movement and temperature cycling; APP-modified products offer a different polymer profile often selected for torch-applied applications',
+      'CertainTeed Flintlastic includes both torch-applied and self-adhered product families, allowing the attachment method to be selected around building use, fire restrictions and project conditions',
+      'Base, interply and cap-sheet options allow the designer to match ply count, reinforcement and membrane thickness to the roof deck, exposure and performance requirements',
+      'Granule-surfaced cap sheets provide UV protection for the asphaltic membrane and a durable finished surface, with available colors and reflective options depending on the specific product',
+      'A white or other highly reflective cap sheet can reduce solar heat gain at the roof surface and may lower air-conditioning demand in suitable buildings, especially where cooling loads are significant',
+      'Individual plies, laps and flashing details can be inspected, maintained and repaired with compatible asphaltic materials; localized damage does not automatically require replacement of the entire roof',
+      'Multi-ply CertainTeed Flintlastic assemblies may be eligible for extended manufacturer warranty terms, including 20- or 25-year options when the exact system specification, product selection, installation and warranty requirements qualify',
     ],
     considerations: [
       'Torch application uses open flame and requires trained applicators, hot-work controls, fire watch and strict compliance with site rules and manufacturer instructions',
@@ -297,6 +301,10 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       { question: 'What is the difference between torch-applied and self-adhered Flintlastic?', answer: 'Torch-applied Flintlastic products are bonded using controlled heat and are commonly APP-modified, while Flintlastic SA products are SBS-modified membranes with a factory-applied adhesive backing. The product designation and current manufacturer instructions determine the correct application method.' },
       { question: 'What is the difference between a one-ply, 2-ply and 3-ply modified-bitumen roof?', answer: 'A one-ply configuration uses a cap membrane over an approved substrate or assembly. A 2-ply system commonly uses a base sheet and cap sheet. A 3-ply system commonly uses a base, mid-ply and cap sheet. The specified assembly, substrate and attachment details determine whether a configuration is approved for a particular building.' },
       { question: 'Does self-adhered modified bitumen require a torch?', answer: 'No. Flintlastic SA is designed to adhere using its factory-applied adhesive backing, with primer and detail materials used where specified. Correct substrate preparation, temperature and rolling pressure remain essential.' },
+      { question: 'What warranty can a CertainTeed Flintlastic modified-bitumen roof receive?', answer: 'CertainTeed lists standard asphaltic membrane warranty durations from 10 to 25 years, depending on the system specification and product selection. A properly specified multi-ply assembly may be eligible for a 20- or 25-year warranty option, but the term is not automatic. The exact Flintlastic products, number of plies, attachment method, approved details, installer requirements, inspections and selected warranty type must meet CertainTeed requirements. The written project-specific warranty controls.' },
+      { question: 'Does a white modified-bitumen cap sheet qualify the building for an ENERGY STAR tax credit?', answer: 'No. A white color alone does not create an ENERGY STAR qualification or a tax credit. ENERGY STAR qualification is product-specific and depends on measured solar-reflectance performance and listing status. For low-slope roof products, the ENERGY STAR criteria include initial solar reflectance of at least 0.65 and reflectance of at least 0.50 after three years under normal conditions. A reflective white cap sheet can still help reduce roof heat gain and cooling demand, but confirm the exact product listing and measured performance rather than relying on color.' },
+      { question: 'Can a reflective modified-bitumen roof qualify for a federal tax deduction?', answer: 'Potentially, but not simply because the cap sheet is white or ENERGY STAR qualified. Section 179D requires a qualifying commercial building project, energy-savings certification and other statutory conditions. Under current federal law, the deduction is unavailable for property whose construction begins after June 30, 2026; projects that began on or before that date may still need to meet all other requirements. Ask a qualified tax professional or energy-efficiency certifier to evaluate the specific building and project. Utility rebates and state or local incentives may also vary by location.' },
+      { question: 'What are the energy advantages of a white reflective cap sheet?', answer: 'A reflective surface sends more incoming solar energy away from the roof instead of absorbing it. That can lower roof-surface temperatures and reduce heat transfer into the building, potentially easing air-conditioning loads during sunny, hot weather. Actual savings depend on the product’s tested reflectance, insulation, HVAC efficiency, building use, climate and roof maintenance.' },
       { question: 'Is torch-applied roofing appropriate for every commercial building?', answer: 'No. Open-flame work may be restricted by building occupancy, combustible construction, insurance requirements or site safety rules. A self-adhered or other approved system may be more appropriate after evaluating the project.' },
     ],
     relatedServices: [
