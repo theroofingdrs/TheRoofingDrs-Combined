@@ -400,8 +400,8 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
     systemName: 'High-Solids Silicone Coatings',
     systemType: 'Roof Coating',
     heroHeadline: 'Silicone Roof Coatings. A Restoration Option for Qualified Roofs.',
-    heroSubtitle: 'Fluid-applied silicone can provide a continuous, reflective weathering surface over certain existing commercial roof assemblies when the substrate is sound, dry, properly prepared and approved for the selected system. Compatibility and ponding-water suitability must be confirmed for the specific product.'
-    whatItIs: 'Commercial silicone roof coatings are fluid-applied materials that cure into an elastomeric weathering membrane. Products differ in chemistry, solids content, application rate, required dry-film thickness, primer, reinforcement and warranty terms. Some silicone systems are designed to tolerate ponding water, but suitability must be confirmed in current product data and warranty documents. Coatings do not correct wet insulation, deteriorated decking, failed attachment or unresolved drainage defects.'
+    heroSubtitle: 'Fluid-applied silicone can provide a continuous, reflective weathering surface over certain existing commercial roof assemblies when the substrate is sound, dry, properly prepared and approved for the selected system. Compatibility and ponding-water suitability must be confirmed for the specific product.',
+    whatItIs: 'Commercial silicone roof coatings are fluid-applied materials that cure into an elastomeric weathering membrane. Products differ in chemistry, solids content, application rate, required dry-film thickness, primer, reinforcement and warranty terms. Some silicone systems are designed to tolerate ponding water, but suitability must be confirmed in current product data and warranty documents. Coatings do not correct wet insulation, deteriorated decking, failed attachment or unresolved drainage defects.',
     whereItIsUsed: [
       'Commercial roofs with areas of slow drainage or chronic ponding water',
       'Aging TPO, PVC, and EPDM single-ply membranes nearing warranty end',
