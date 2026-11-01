@@ -19,6 +19,7 @@ import { InsuranceClaimsPage } from './pages/InsuranceClaimsPage';
 import { EmergencyRoofingPage } from './pages/EmergencyRoofingPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { BlogPage } from './pages/BlogPage';
 
 // Reusable Templates
 import { ServicePageTemplate } from './components/ServicePageTemplate';
