@@ -24,7 +24,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <div className={`inline-flex flex-col select-none ${className}`}>
       <img
-        src={`${import.meta.env.BASE_URL}the_roof_doctors_logo_white.svg`}
+        src={`${import.meta.env.BASE_URL}the_roof_doctors_logo_transparent.png`}
         alt="The Roof Doctors"
         className={`${logoSizes[size]} w-auto object-contain shrink-0`}
         loading="eager"
@@ -42,4 +42,3 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     </div>
   );
 };
-
