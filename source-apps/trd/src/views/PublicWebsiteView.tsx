@@ -814,12 +814,12 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
             </div>
             <div className="px-6 py-6 overflow-y-auto max-h-[calc(85vh-112px)] space-y-5">
               <p className="text-sm text-slate-600 leading-relaxed">{selectedResource.summary}</p>
-              {selectedResource.content.split(/\\n\\s*\\n/).filter(Boolean).map((paragraph, index) => {
-                const heading = paragraph.match(/^###\\s+(.+)$/);
+              {selectedResource.content.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => {
+                const heading = paragraph.match(/^###\s+(.+)$/);
                 return heading ? (
                   <h3 key={index} className="text-base font-bold text-slate-900 pt-2">{heading[1]}</h3>
                 ) : (
-                  <p key={index} className="text-sm text-slate-700 leading-7">{paragraph.replace(/\\n/g, ' ')}</p>
+                  <p key={index} className="text-sm text-slate-700 leading-7">{paragraph.replace(/\n/g, ' ')}</p>
                 );
               })}
             </div>
