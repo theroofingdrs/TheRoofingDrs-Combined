@@ -21,15 +21,15 @@ if (assetRefs.length === 0) {
 }
 
 for (const url of assetRefs) {
-  const relativeAssetPath = url.replace(/^\\/commercial\\//, '');
+  const relativeAssetPath = url.slice('/commercial/'.length);
   const assetPath = path.join(dist, relativeAssetPath);
   if (!fs.existsSync(assetPath)) {
     fail(`Built HTML references a missing asset: ${url} (expected ${assetPath})`);
   }
 }
 
-const jsAssets = assetRefs.filter((url) => /\\.js(?:$|\\?)/.test(url));
-const cssAssets = assetRefs.filter((url) => /\\.css(?:$|\\?)/.test(url));
+const jsAssets = assetRefs.filter((url) => url.endsWith('.js'));
+const cssAssets = assetRefs.filter((url) => url.endsWith('.css'));
 
 if (jsAssets.length === 0) fail('No JavaScript entry asset found.');
 if (cssAssets.length === 0) fail('No CSS entry asset found.');
