@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import crdLogoFullDark from '../assets/crd-logo-full-dark.png';
+import crdLogoFullLight from '../assets/crd-logo-full-light.png';
 import crdLogoMarkDark from '../assets/crd-logo-mark.png';
 import crdLogoMarkLight from '../assets/crd-logo-mark-light.png';
 
@@ -18,8 +20,8 @@ export interface CRDLogoProps {
  */
 const BUNDLED_LOGOS = {
   full: {
-    dark: '/commercial/assets/CRD-logo-1296x367.png',
-    light: '/commercial/assets/CRD-logo-1296x367.png',
+    dark: crdLogoFullDark,
+    light: crdLogoFullLight,
   },
   mark: {
     dark: crdLogoMarkDark,
