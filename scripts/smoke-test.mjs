@@ -49,20 +49,20 @@ try {
 
   // Request the actual built frontend bundles, not just the HTML shell.
   const commercialAssetUrls = [
-    ...commercialPage.body.matchAll(/<(?:script|link)\\b[^>]*(?:src|href)="([^"]+\\.(?:js|mjs|css)(?:\\?[^"]*)?)"[^>]*>/gi),
+    ...commercialPage.body.matchAll(/<(?:script|link)\b[^>]*(?:src|href)="([^"]+\.(?:js|mjs|css)(?:\\?[^"]*)?)"[^>]*>/gi),
   ].map((match) => match[1]).filter((url) => url.includes('/assets/'));
   const uniqueCommercialAssets = [...new Set(commercialAssetUrls)];
-  if (!uniqueCommercialAssets.some((url) => /\\.js(?:\\?|$)/i.test(url))) {
+  if (!uniqueCommercialAssets.some((url) => /\.js(?:\\?|$)/i.test(url))) {
     throw new Error('commercial frontend JavaScript bundle was not referenced by the HTML');
   }
   for (const assetUrl of uniqueCommercialAssets) {
     const assetPath = new URL(assetUrl, base).pathname + new URL(assetUrl, base).search;
     const { response, body } = await request(assetPath);
-    const isCss = /\\.css(?:\\?|$)/i.test(assetUrl);
+    const isCss = /\.css(?:\\?|$)/i.test(assetUrl);
     const contentType = response.headers.get('content-type') || '';
     if (!response.ok || (isCss && !contentType.includes('text/css')) ||
         (!isCss && !/(?:javascript|ecmascript)/i.test(contentType)) ||
-        /^\\s*<!doctype html|^\\s*<html/i.test(body)) {
+        /^\s*<!doctype html|^\s*<html/i.test(body)) {
       throw new Error(`commercial frontend asset failed: ${assetPath} HTTP ${response.status}, content-type ${contentType}`);
     }
     console.log(`PASS commercial frontend asset ${assetPath}`);
