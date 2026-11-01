@@ -3,12 +3,12 @@ import { IndustryPageData } from './components/IndustryPageTemplate';
 export const INDUSTRY_EXPANSION: Record<string, IndustryPageData> = {
   '/industries/schools': {
     title: 'Commercial Roofing for Schools, Colleges & Campuses | CRD',
-    metaDescription: 'Commercial roofing for K-12 schools, colleges, universities and campus facilities across the Ark-La-Tex. Planned projects, leak response and roof asset assessments.',
+    metaDescription: 'Commercial roofing for public and private K-12 schools, colleges, universities and campus facilities across the Ark-La-Tex. Planned projects, leak response and roof asset assessments.',
     canonicalPath: '/industries/schools',
-    industryName: 'Schools, Colleges & Educational Facilities',
+    industryName: 'Public & Private Schools, Colleges & Educational Facilities',
     propertyType: 'School',
     heroHeadline: 'Roofing That Keeps Education Moving.',
-    heroSubtitle: 'Commercial roof inspections, repairs, restoration and replacement planning for school districts, colleges, universities, athletic facilities and campus buildings.',
+    heroSubtitle: 'Commercial roof inspections, repairs, restoration and replacement planning for public and private school districts, colleges, universities, athletic facilities and campus buildings.',
     sectorChallenges: [
       { title: 'Occupied Campuses', desc: 'Students, staff, visitors, buses and daily campus activity require controlled work zones, clear access routes and reliable communication.' },
       { title: 'Academic Calendar Windows', desc: 'Large projects often need to be phased around summer break, holidays, testing periods, athletic events and occupied classrooms.' },
@@ -60,7 +60,7 @@ export const INDUSTRY_EXPANSION: Record<string, IndustryPageData> = {
     industryName: 'HOA, Condo & Townhome Communities',
     propertyType: 'HOA',
     heroHeadline: 'One Roofing Partner for the Entire Community.',
-    heroSubtitle: 'Roof inspections, repairs, restoration and replacement planning for condominium associations, townhome communities, duplex and fourplex developments, and HOA-managed properties.',
+    heroSubtitle: 'Roof inspections, repairs, restoration and replacement planning for condominium associations, townhome communities, duplex, triplex and fourplex developments, and HOA-managed properties.',
     sectorChallenges: [
       { title: 'Board Decisions & Reserve Planning', desc: 'Association boards need consistent condition information, comparable scopes and clear options to support responsible reserve and assessment decisions.' },
       { title: 'Resident Coordination', desc: 'Occupied homes, parking, pets, access and daily routines require advance notice and predictable work sequencing.' },
