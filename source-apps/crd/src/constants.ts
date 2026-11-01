@@ -82,7 +82,7 @@ export const NAVIGATION_LINKS = {
     { name: 'Large-Loss Roofing', href: '/large-loss-roofing', desc: 'Major commercial & industrial disaster recovery' },
   ],
   systems: [
-    { name: 'TPO Roofing', href: '/tpo-roofing', desc: 'Thermoplastic polyolefin single-ply membrane' },
+    { name: 'Duro-TECH TPO Roofing', href: '/tpo-roofing', desc: 'Duro-Last reinforced TPO membrane systems' },
     { name: 'EPDM Roofing', href: '/epdm-roofing', desc: 'Durable vulcanized synthetic rubber membrane' },
     { name: 'PVC Roofing', href: '/pvc-roofing', desc: 'Chemical, fire & grease resistant single-ply' },
     { name: 'Modified Bitumen', href: '/modified-bitumen', desc: 'Multi-ply asphaltic redundant roof systems' },
