@@ -104,6 +104,9 @@ export const NAVIGATION_LINKS = {
     { name: 'Industrial & Warehouses', href: '/industries/industrial', desc: 'Large-footprint distribution centers & manufacturing' },
     { name: 'Retail & Shopping Centers', href: '/industries/retail', desc: 'Tenant protection, customer safety & minimal disruption' },
     { name: 'Apartments & Multifamily', href: '/industries/apartments', desc: 'Multi-building complexes and continuous tenant comfort' },
+    { name: 'HOA, Condos & Townhomes', href: '/industries/hoa-communities', desc: 'Association-managed communities and phased roof programs' },
+    { name: 'Agricultural & Equestrian', href: '/industries/agricultural', desc: 'Poultry houses, horse barns and agricultural buildings' },
+    { name: 'Government & Correctional', href: '/industries/government', desc: 'Municipal buildings, jails and secure facilities' },
   ],
   serviceAreas: [
     { name: 'Regional Territory Hub', href: '/service-areas', desc: '75-mile Texarkana Ark-La-Tex radius' },
