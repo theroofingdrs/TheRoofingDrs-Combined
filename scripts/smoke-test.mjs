@@ -41,7 +41,32 @@ try {
   await check('/', (body) => body.includes('Residential roofing') && body.includes('Commercial roofing'), 'shared landing page');
   await check('/', (body) => body.includes('G-V9LXQ6DG4H'), 'Google Analytics tag present on landing page');
   await check('/residential/', (body) => body.includes('/residential/assets/'), 'residential app and asset base');
-  await check('/commercial/', (body) => body.includes('/commercial/assets/'), 'commercial app and asset base');
+  const commercialPage = await request('/commercial/');
+  if (!commercialPage.response.ok || !commercialPage.body.includes('/commercial/assets/')) {
+    throw new Error(`commercial app and asset base: HTTP ${commercialPage.response.status}`);
+  }
+  console.log('PASS commercial app and asset base');
+
+  // Request the actual built frontend bundles, not just the HTML shell.
+  const commercialAssetUrls = [
+    ...commercialPage.body.matchAll(/<(?:script|link)\\b[^>]*(?:src|href)="([^"]+\\.(?:js|mjs|css)(?:\\?[^"]*)?)"[^>]*>/gi),
+  ].map((match) => match[1]).filter((url) => url.includes('/assets/'));
+  const uniqueCommercialAssets = [...new Set(commercialAssetUrls)];
+  if (!uniqueCommercialAssets.some((url) => /\\.js(?:\\?|$)/i.test(url))) {
+    throw new Error('commercial frontend JavaScript bundle was not referenced by the HTML');
+  }
+  for (const assetUrl of uniqueCommercialAssets) {
+    const assetPath = new URL(assetUrl, base).pathname + new URL(assetUrl, base).search;
+    const { response, body } = await request(assetPath);
+    const isCss = /\\.css(?:\\?|$)/i.test(assetUrl);
+    const contentType = response.headers.get('content-type') || '';
+    if (!response.ok || (isCss && !contentType.includes('text/css')) ||
+        (!isCss && !/(?:javascript|ecmascript)/i.test(contentType)) ||
+        /^\\s*<!doctype html|^\\s*<html/i.test(body)) {
+      throw new Error(`commercial frontend asset failed: ${assetPath} HTTP ${response.status}, content-type ${contentType}`);
+    }
+    console.log(`PASS commercial frontend asset ${assetPath}`);
+  }
   await check('/residential/api/health', (body) => body.includes('ok'), 'residential API proxy');
   await check('/commercial/sitemap.xml', (body) => body.includes('/commercial/commercial-roofing'), 'commercial sitemap paths');
   await check('/residential/the_roof_doctors_logo_white.svg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential SVG logo asset');
