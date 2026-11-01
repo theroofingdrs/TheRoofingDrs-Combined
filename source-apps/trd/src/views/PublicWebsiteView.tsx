@@ -96,6 +96,7 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [selectedArea, setSelectedArea] = useState<ServiceArea | null>(null);
   const [previewPhoto, setPreviewPhoto] = useState<FeaturedPhoto | null>(null);
+  const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
 
   useEffect(() => {
     // Load live content from verified API
@@ -682,7 +683,13 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {resources.map((res) => (
-              <div key={res.id} className="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-slate-300 transition-colors space-y-3">
+              <button
+                key={res.id}
+                type="button"
+                onClick={() => setSelectedResource(res)}
+                aria-label={`Read guide: ${res.title}`}
+                className="w-full h-full text-left p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-red-300 hover:bg-white hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 transition-all space-y-3 cursor-pointer"
+              >
                 <span className="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold text-red-700 bg-red-50 border border-red-200 uppercase tracking-wider">
                   {res.category.replace(/_/g, ' ')}
                 </span>
@@ -692,10 +699,13 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {res.summary}
                 </p>
-                <div className="text-[11px] font-semibold text-slate-400 pt-2 border-t border-slate-200">
-                  {res.readingTimeMinutes} min forensic read
+                <div className="flex items-center justify-between text-[11px] font-semibold text-slate-400 pt-2 border-t border-slate-200">
+                  <span>{res.readingTimeMinutes} min forensic read</span>
+                  <span className="inline-flex items-center gap-1 text-red-600">
+                    Read guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -759,6 +769,52 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
         onClose={() => setModalOpen(false)}
         defaultType={modalType}
       />
+
+      {/* Forensic Resource Reader */}
+      {selectedResource && (
+        <div
+          className="fixed inset-0 z-[60] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+          onClick={() => setSelectedResource(null)}
+        >
+          <article
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="resource-reader-title"
+            className="relative w-full max-w-3xl max-h-[85vh] overflow-hidden bg-white rounded-2xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4 px-6 py-5 border-b border-slate-200">
+              <div className="space-y-2">
+                <span className="inline-block px-2.5 py-1 rounded text-[10px] font-bold text-red-700 bg-red-50 border border-red-200 uppercase tracking-wider">
+                  {selectedResource.category.replace(/_/g, ' ')} · {selectedResource.readingTimeMinutes} min read
+                </span>
+                <h2 id="resource-reader-title" className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+                  {selectedResource.title}
+                </h2>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedResource(null)}
+                className="shrink-0 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center cursor-pointer"
+                aria-label="Close guide"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="px-6 py-6 overflow-y-auto max-h-[calc(85vh-112px)] space-y-5">
+              <p className="text-sm text-slate-600 leading-relaxed">{selectedResource.summary}</p>
+              {selectedResource.content.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => {
+                const heading = paragraph.match(/^###\s+(.+)$/);
+                return heading ? (
+                  <h3 key={index} className="text-base font-bold text-slate-900 pt-2">{heading[1]}</h3>
+                ) : (
+                  <p key={index} className="text-sm text-slate-700 leading-7">{paragraph.replace(/\n/g, ' ')}</p>
+                );
+              })}
+            </div>
+          </article>
+        </div>
+      )}
 
       {/* Featured Photo Lightbox Modal */}
       {previewPhoto && (
