@@ -118,7 +118,7 @@ export const NAVIGATION_LINKS = {
     { name: 'All Industries', href: '/industries', desc: 'Explore commercial roofing by property type' },
   ],
   serviceAreas: [
-    { name: 'Regional Territory Hub', href: '/service-areas', desc: '75-mile Texarkana Ark-La-Tex radius' },
+    { name: 'Regional Territory Hub', href: '/service-areas', desc: 'Statewide commercial service coverage across TX, AR, LA, and OK' },
     { name: 'Texas Commercial Service Area', href: '/service-areas/texas', desc: 'Texarkana TX, Bowie County, NE Texas' },
     { name: 'Arkansas Commercial Service Area', href: '/service-areas/arkansas', desc: 'Texarkana AR, Miller County, SW Arkansas' },
     { name: 'Louisiana Commercial Service Area', href: '/service-areas/louisiana', desc: 'Shreveport, Bossier, NW Louisiana' },
