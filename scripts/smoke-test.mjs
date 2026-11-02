@@ -76,6 +76,11 @@ try {
   await check('/commercial/api/health', (body) => body.includes('"status":"ok"') && body.includes('Commercial Roof Doctors'), 'commercial API health and route isolation');
   await check('/residential/roofing/roof-replacement', (body) => body.includes('/residential/assets/'), 'residential deep-link refresh');
   await check('/commercial/tpo-roofing', (body) => body.includes('/commercial/assets/'), 'commercial deep-link refresh');
+  await check('/residential/blog', (body) => body.includes('/residential/assets/'), 'residential blog deep-link refresh');
+  await check('/commercial/blog', (body) => body.includes('/commercial/assets/'), 'commercial blog deep-link refresh');
+  await check('/residential/estimate-request', (body) => body.includes('/residential/assets/'), 'residential estimate-request deep link');
+  await check('/commercial/commercial-roof-restoration', (body) => body.includes('/commercial/assets/'), 'commercial restoration-center deep link');
+  await check('/commercial/industries', (body) => body.includes('/commercial/assets/'), 'commercial industry-directory deep link');
   await check('/commercial/sitemap.xml', (body) => body.includes('/commercial/commercial-roofing'), 'commercial sitemap paths');
   await check('/residential/the_roof_doctors_logo.svg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential SVG logo asset');
   await check('/residential/the_roof_doctors_logo_transparent.png', (_body, response) => response.headers.get('content-type')?.includes('image/png'), 'residential transparent logo asset');
