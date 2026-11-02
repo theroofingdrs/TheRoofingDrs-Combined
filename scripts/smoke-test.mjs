@@ -45,11 +45,14 @@ try {
   await check('/', (body) => body.includes('choice residential') && body.includes('/residential/assets/images/library/residential-roof-project-detail.jpg') && body.includes('choice commercial') && body.includes('/commercial/assets/images/library/crd-industrial-distribution-center-aerial.jpg'), 'distinct residential and commercial landing card photography');
   await check('/', (body) => body.includes('G-V9LXQ6DG4H'), 'Google Analytics tag present on landing page');
   await check('/residential/', (body) => body.includes('/residential/assets/'), 'residential app and asset base');
+  await check('/residential/', (body) => body.includes('/residential/the_roof_doctors_logo_transparent.png') && body.includes('https://theroofingdrs.com/residential/assets/images/library/residential-roof-project-detail.jpg'), 'residential favicon and social sharing metadata');
   const commercialPage = await request('/commercial/');
   if (!commercialPage.response.ok || !commercialPage.body.includes('/commercial/assets/')) {
     throw new Error(`commercial app and asset base: HTTP ${commercialPage.response.status}`);
   }
   console.log('PASS commercial app and asset base');
+  await check('/commercial/', (body) => body.includes('/commercial/assets/crd-logo-mark.png') && body.includes('https://theroofingdrs.com/commercial/assets/images/library/commercial-industrial-roofing.jpg'), 'commercial favicon and social sharing metadata');
+  await check('/', (body) => body.includes('https://theroofingdrs.com/') && body.includes('og:image'), 'shared landing canonical and social sharing metadata');
 
   // Request the actual built frontend bundles, not just the HTML shell.
   const commercialAssetUrls = [
