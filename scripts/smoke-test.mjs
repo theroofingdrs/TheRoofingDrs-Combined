@@ -42,6 +42,7 @@ async function check(path, test, description) {
 try {
   await waitFor('/');
   await check('/', (body) => body.toLowerCase().includes('residential') && body.toLowerCase().includes('commercial'), 'shared landing page');
+  await check('/', (body) => body.includes('choice residential') && body.includes('/residential/assets/images/library/residential-roof-project-detail.jpg') && body.includes('choice commercial') && body.includes('/commercial/assets/images/library/crd-industrial-distribution-center-aerial.jpg'), 'distinct residential and commercial landing card photography');
   await check('/', (body) => body.includes('G-V9LXQ6DG4H'), 'Google Analytics tag present on landing page');
   await check('/residential/', (body) => body.includes('/residential/assets/'), 'residential app and asset base');
   const commercialPage = await request('/commercial/');
@@ -82,7 +83,7 @@ try {
   await check('/residential/assets/images/grand_manor_roof.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential roofing photo');
   await check('/residential/assets/images/library/residential-roof-project-detail.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential approved image-library photo');
   await check('/commercial/assets/images/commercial_warehouse_roof_1788537086946.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial roofing photo');
-  await check('/assets/images/library/crd-industrial-distribution-center-aerial.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial approved image-library photo', '/commercial/');
+  await check('/commercial/assets/images/library/crd-industrial-distribution-center-aerial.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial approved image-library photo');
   console.log('Combined site smoke tests passed.');
 } catch (error) {
   console.error(error instanceof Error ? error.message : error);
