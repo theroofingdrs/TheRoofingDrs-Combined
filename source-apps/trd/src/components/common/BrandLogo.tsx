@@ -26,9 +26,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       <img
         src={`${import.meta.env.BASE_URL}the_roof_doctors_logo_transparent.png`}
         alt="The Roof Doctors"
-        className={`${logoSizes[size]} w-auto object-contain shrink-0 ${
-          isLight ? 'brightness-0 invert' : ''
-        }`}
+        className={`${logoSizes[size]} w-auto object-contain shrink-0`}
         loading="eager"
         decoding="async"
       />
@@ -44,4 +42,3 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     </div>
   );
 };
-
