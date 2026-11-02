@@ -13,12 +13,13 @@ import { CalculatorPage } from './pages/CalculatorPage';
 import { CrdPppPage } from './pages/CrdPppPage';
 import { PropertyManagementPage } from './pages/PropertyManagementPage';
 import { CoatVsReplacePage } from './pages/CoatVsReplacePage';
+import { RestorationCenterPage } from './pages/RestorationCenterPage';
 import { StormDamagePage } from './pages/StormDamagePage';
 import { InsuranceClaimsPage } from './pages/InsuranceClaimsPage';
 import { EmergencyRoofingPage } from './pages/EmergencyRoofingPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
-import { LeadsAdminPage } from './pages/LeadsAdminPage';
+import { BlogPage } from './pages/BlogPage';
 import { IndustriesDirectoryPage } from './pages/IndustriesDirectoryPage';
 
 // Reusable Templates
@@ -35,6 +36,8 @@ import {
   SERVICE_AREAS_CONTENT,
 } from './siteSystemsContent';
 import { LeadType } from './types';
+
+const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
 
 const MainAppContent: React.FC = () => {
   const { currentPath, navigate } = useRouter();
@@ -59,11 +62,16 @@ const MainAppContent: React.FC = () => {
     const rawPath = currentPath.split('?')[0].split('#')[0];
     const normalizedPath = (rawPath.replace(/\/+$/, '') || '/').toLowerCase();
 
-    // 1. Core Dedicated Pages
     if (normalizedPath === '/industries') {
       return <IndustriesDirectoryPage />;
     }
 
+    // Commercial roofing insights and individual articles
+    if (normalizedPath === '/blog' || normalizedPath.startsWith('/blog/')) {
+      return <BlogPage currentPath={normalizedPath} onOpenInspection={handleOpenInspection} />;
+    }
+
+    // 1. Core Dedicated Pages
     if (normalizedPath === '/' || normalizedPath === '') {
       return (
         <HomePage
@@ -93,6 +101,10 @@ const MainAppContent: React.FC = () => {
           onOpenEmergency={handleOpenEmergency}
         />
       );
+    }
+
+    if (normalizedPath === '/commercial-roof-restoration') {
+      return <RestorationCenterPage onOpenInspection={handleOpenInspection} />;
     }
 
     if (normalizedPath === '/coat-vs-replace') {
@@ -134,7 +146,7 @@ const MainAppContent: React.FC = () => {
       return <ContactPage />;
     }
 
-    // Staff Portal & Admin Dashboard Routes
+    // Legacy staff and admin URLs now point users to the secure Operations Center.
     if (
       normalizedPath === '/admin' ||
       normalizedPath === '/admin/leads' ||
@@ -145,7 +157,15 @@ const MainAppContent: React.FC = () => {
       normalizedPath === '/portal' ||
       normalizedPath === '/leads'
     ) {
-      return <LeadsAdminPage />;
+      return (
+        <div className="min-h-[70vh] bg-[#090d16] text-slate-100 flex items-center justify-center p-6">
+          <div className="max-w-md w-full bg-[#0e1422] border border-slate-800 rounded-2xl p-8 text-center space-y-4">
+            <h1 className="text-2xl font-black text-white">Operations Portal</h1>
+            <p className="text-sm text-slate-400">The former staff and admin portal has moved to the secure TRD and CRD Operations Center.</p>
+            <a href={OPERATIONS_PORTAL_URL} className="inline-flex items-center justify-center rounded-lg bg-amber-500 hover:bg-amber-400 px-5 py-3 text-sm font-bold text-slate-950">Open Secure Operations Center</a>
+          </div>
+        </div>
+      );
     }
 
     // 2. Commercial Services
