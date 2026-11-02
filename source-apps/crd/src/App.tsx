@@ -122,6 +122,26 @@ const MainAppContent: React.FC = () => {
       );
     }
 
+    // Legacy and campaign URLs used by the CRD navigation and storm-response content.
+    // Keep these URLs live by routing them to the closest existing dedicated resources.
+    if (normalizedPath === '/large-loss-roofing' || normalizedPath === '/adjuster-meetings') {
+      return (
+        <InsuranceClaimsPage
+          onOpenInspection={handleOpenInspection}
+          onOpenEmergency={handleOpenEmergency}
+        />
+      );
+    }
+
+    if (normalizedPath === '/commercial-storm-inspections') {
+      return (
+        <StormDamagePage
+          onOpenInspection={handleOpenInspection}
+          onOpenEmergency={handleOpenEmergency}
+        />
+      );
+    }
+
     if (normalizedPath === '/emergency-roofing') {
       return <EmergencyRoofingPage onOpenEmergency={handleOpenEmergency} />;
     }
