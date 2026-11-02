@@ -72,7 +72,7 @@ export const NAVIGATION_LINKS = {
     { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace', desc: 'Evaluation framework for commercial decision makers' },
   ],
   storm: [
-    { name: 'Storm Damage Hub', href: '/storm-damage', desc: 'Ark-La-Tex storm response and damage mitigation' },
+    { name: 'Storm Damage Hub', href: '/storm-damage', desc: 'Four-state storm response and damage mitigation' },
     { name: 'Hail Damage', href: '/hail-damage', desc: 'Fractured membranes, bruised insulation & spatter' },
     { name: 'Wind Damage', href: '/wind-damage', desc: 'Edge metal blow-off, uplift & membrane detachment' },
     { name: 'Emergency Roofing', href: '/emergency-roofing', desc: 'Active water intrusion containment & dry-in' },
