@@ -10,7 +10,7 @@ on:
       - integration/path-routing
 
 concurrency:
-  group: combined-site-ci-${{ github.event_name }}
+  group: combined-site-ci-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
