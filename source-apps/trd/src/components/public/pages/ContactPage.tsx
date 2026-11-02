@@ -3,7 +3,6 @@ import { SeoHead } from '../../common/SeoHead.tsx';
 import {
   PhoneCall,
   Mail,
-  MapPin,
   Clock,
   ShieldCheck,
   CalendarCheck,
@@ -73,8 +72,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900 pb-20">
       <SeoHead
-        title="Contact The Roof Doctors | Texarkana Headquarters & Northeast Texas Dispatch"
-        description="Contact The Roof Doctors at 1420 Richmond Rd, Texarkana, TX. Phone: 903-231-5940. Email: TheRoofingDrs@gmail.com. Schedule a free 21-point inspection or 24/7 storm dispatch."
+        title="Contact The Roof Doctors | Northeast Texas Roofing Dispatch"
+        description="Contact The Roof Doctors in Texarkana, TX. Phone: 903-231-5940. Email: TheRoofingDrs@gmail.com. Schedule a free 21-point inspection or 24/7 storm dispatch."
         canonicalPath={currentPath}
       />
 
@@ -91,7 +90,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-            Headquartered in Texarkana, TX, our certified inspectors provide rapid dispatch across Bowie, Cass, Lamar, Hopkins, Gregg, Smith, and Harrison Counties.
+            Based in Texarkana, TX, our certified inspectors provide rapid dispatch across Bowie, Cass, Lamar, Hopkins, Gregg, Smith, and Harrison Counties.
           </p>
         </div>
       </section>
@@ -103,21 +102,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs space-y-6">
               <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">
-                Corporate Headquarters
+                Contact & Dispatch
               </h2>
 
               <div className="space-y-5 text-xs text-slate-600">
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <strong className="text-slate-900 block font-bold text-sm">Physical Office</strong>
-                    <span>1420 Richmond Rd</span>
-                    <span className="block">Texarkana, TX 75501</span>
-                  </div>
-                </div>
-
                 <div className="flex items-start gap-3">
                   <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <PhoneCall className="w-5 h-5" />
@@ -187,7 +175,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     Inspection Request Received
                   </h3>
                   <p className="text-xs sm:text-sm text-emerald-900 max-w-md mx-auto leading-relaxed">
-                    Thank you! A certified diagnostic project manager from our Texarkana office has received your request and will call you shortly at <strong>{formData.phone}</strong> to confirm scheduling.
+                    Thank you! A certified diagnostic project manager from our dispatch team has received your request and will call you shortly at <strong>{formData.phone}</strong> to confirm scheduling.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
