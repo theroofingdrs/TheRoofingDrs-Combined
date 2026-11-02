@@ -34,7 +34,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
       const prefixedPath = (normalizedPath === '/commercial' || normalizedPath.startsWith('/commercial/'))
         ? normalizedPath
         : `/commercial${normalizedPath === '/' ? '/' : normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`}`;
-      return `${window.location.origin}${prefixedPath}`;
+      return `https://theroofingdrs.com${prefixedPath}`;
     };
     const fullUrl = toCommercialUrl(canonicalPath);
 
