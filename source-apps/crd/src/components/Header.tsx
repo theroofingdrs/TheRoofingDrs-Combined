@@ -297,7 +297,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                     className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
                   >
                     <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
-                      Ark-La-Tex Service Territory
+                      Four-State Service Territory
                     </div>
                     <div className="text-xs text-[#888888] mt-0.5">Four-state commercial roofing coverage</div>
                   </Link>
@@ -387,7 +387,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           {/* Quick Contact Header in Mobile */}
           <div className="bg-[#111111] p-3 rounded-none border border-[#333333] flex items-center justify-between">
             <div>
-              <div className="text-xs text-[#888888] font-mono-crd">ARK-LA-TEX DISPATCH</div>
+              <div className="text-xs text-[#888888] font-mono-crd">FOUR-STATE DISPATCH</div>
               <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="text-base font-bold text-[#d99a19]">
                 {BUSINESS_INFO.phone}
               </a>
