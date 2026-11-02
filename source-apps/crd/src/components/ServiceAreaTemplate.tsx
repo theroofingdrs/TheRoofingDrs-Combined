@@ -57,7 +57,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
         <div className="max-w-4xl mx-auto text-center space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono-crd uppercase tracking-wider">
             <MapPin className="w-3.5 h-3.5" />
-            <span>Regional Commercial Roofing Territory</span>
+            <span>Four-State Commercial Roofing Coverage</span>
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight uppercase text-white leading-tight">
             {data.heroHeadline}
@@ -90,7 +90,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
           <span className="font-bold text-amber-400 uppercase font-mono-crd block">
             Service-Area Business Model Disclosure:
           </span>
-          Commercial Roof Doctors provides direct on-site commercial roofing, restoration, and storm mitigation across {data.regionName}. Our Texarkana headquarters at 614 Robison Rd coordinates field logistics and dispatch—not a retail storefront.
+          Commercial Roof Doctors serves commercial properties across Texas, Arkansas, Louisiana, and Oklahoma. Our Texarkana operations hub at 614 Robison Rd coordinates field logistics and dispatch; project availability and travel are confirmed based on location and scope.
         </div>
       </section>
 
@@ -112,7 +112,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
 
           <div className="lg:col-span-6 bg-[#0e1422] border border-slate-800 rounded-xl p-6 space-y-4">
             <h3 className="font-heading font-bold text-base uppercase text-white border-b border-slate-800 pb-2">
-              Regional Commercial Coverage & Municipalities
+              Example Markets & Communities
             </h3>
             <div className="flex flex-wrap gap-2">
               {data.countiesAndCitiesServed.map((loc, idx) => (
