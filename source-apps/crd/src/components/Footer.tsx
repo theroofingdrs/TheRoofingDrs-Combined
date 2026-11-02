@@ -23,14 +23,14 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-[#cccccc] max-w-md leading-relaxed">
-              Commercial roofing, membrane restoration, storm disaster response, and long-term roof asset management for property owners, facility directors, and commercial portfolios across the Ark-La-Tex and surrounding 75-mile radius.
+              Commercial roofing, membrane restoration, storm disaster response, and long-term roof asset management for property owners, facility directors, and commercial portfolios across Texas, Arkansas, Louisiana, and Oklahoma.
             </p>
 
             <div className="space-y-2 pt-2 text-sm text-[#dddddd]">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#d99a19] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-[#888888] block font-mono-crd">ARK-LA-TEX DIRECT DISPATCH</span>
+                  <span className="text-xs text-[#888888] block font-mono-crd">FOUR-STATE DIRECT DISPATCH</span>
                   <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="font-bold hover:text-[#d99a19] transition-colors">
                     {BUSINESS_INFO.phone}
                   </a>
