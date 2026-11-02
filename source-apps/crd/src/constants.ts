@@ -116,9 +116,9 @@ export const NAVIGATION_LINKS = {
     { name: 'Chicken Houses & Poultry', href: '/industries/chicken-houses-poultry', desc: 'Agricultural metal roof repair and restoration' },
     { name: 'Horse Barns & Equestrian', href: '/industries/horse-barns-equestrian', desc: 'Barns, stables and riding arenas' },
     { name: 'All Industries', href: '/industries', desc: 'Explore commercial roofing by property type' },
-    { name: 'Healthcare & Medical Centers', href: '/industries/healthcare', desc: 'Zero-tolerance for water ingress & infection control' },
-    { name: 'Agricultural & Equestrian', href: '/industries/agricultural', desc: 'Poultry houses, horse barns and agricultural buildings' },
-    { name: 'Government & Correctional', href: '/industries/government', desc: 'Municipal buildings, jails and secure facilities' },
+    { name: 'Healthcare & Medical Centers', href: '/industries/hospitals-medical-centers', desc: 'Healthcare campuses and critical building operations' },
+    { name: 'Agricultural & Equestrian', href: '/industries/horse-barns-equestrian', desc: 'Agricultural and equestrian building roofing' },
+    { name: 'Government & Correctional', href: '/industries/correctional-facilities', desc: 'Secure institutional and correctional facilities' },
   ],
   serviceAreas: [
     { name: 'Regional Territory Hub', href: '/service-areas', desc: '75-mile Texarkana Ark-La-Tex radius' },
