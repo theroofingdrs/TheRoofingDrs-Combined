@@ -26,6 +26,9 @@ export interface IndustryPageData {
   crdSolutions: string[];
   recommendedRoofSystems: { name: string; href: string; reason: string }[];
   complianceSafety: string;
+  planningGuide?: { title: string; detail: string }[];
+  inspectionChecklist?: string[];
+  faqs?: { question: string; answer: string }[];
 }
 
 interface IndustryPageTemplateProps {
@@ -45,6 +48,7 @@ export const IndustryPageTemplate: React.FC<IndustryPageTemplateProps> = ({
         title={data.title}
         description={data.metaDescription}
         canonicalPath={data.canonicalPath}
+        serviceType={`Commercial roofing for ${data.industryName}`}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Industries', url: '/industries' },
@@ -159,6 +163,66 @@ export const IndustryPageTemplate: React.FC<IndustryPageTemplateProps> = ({
           ))}
         </div>
       </section>
+
+      {/* Practical owner guidance */}
+      {data.planningGuide?.length ? (
+        <section className="py-16 bg-[#0b111e] border-y border-slate-800 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto space-y-8">
+            <div className="max-w-3xl">
+              <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">Property Owner's Field Guide</div>
+              <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">Decisions Worth Making Before You Approve Roof Work</h2>
+              <p className="text-sm text-slate-400 mt-3 leading-relaxed">Use these points to prepare for an inspection, compare proposals and understand what a responsible scope should address. Final recommendations depend on field conditions and the specific roof assembly.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {data.planningGuide.map((item, idx) => (
+                <article key={idx} className="bg-[#0e1422] border border-slate-800 p-6 rounded-xl space-y-2">
+                  <h3 className="font-heading font-bold text-lg text-amber-400">{item.title}</h3>
+                  <p className="text-sm text-slate-300 leading-relaxed">{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {data.inspectionChecklist?.length ? (
+        <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div>
+              <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">Inspection Scope</div>
+              <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">What a Useful Roof Assessment Should Document</h2>
+              <p className="text-sm text-slate-400 mt-3 leading-relaxed">A useful report connects roof observations to building impact, urgency and next steps. Ask for labeled photographs and clear limits where areas could not be safely accessed.</p>
+            </div>
+            <ul className="space-y-3">
+              {data.inspectionChecklist.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3 bg-[#0e1422] border border-slate-800 rounded-lg p-4">
+                  <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                  <span className="text-sm text-slate-300 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+
+      {data.faqs?.length ? (
+        <section className="py-16 bg-[#060911] border-y border-slate-800 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto space-y-6">
+            <div>
+              <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">Straight Answers</div>
+              <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">Frequently Asked Questions</h2>
+            </div>
+            <div className="space-y-4">
+              {data.faqs.map((item, idx) => (
+                <article key={idx} className="border-b border-slate-800 pb-4">
+                  <h3 className="font-heading font-bold text-lg text-white">{item.question}</h3>
+                  <p className="text-sm text-slate-300 leading-relaxed mt-2">{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Conversion Banner */}
       <section className="pt-16 max-w-4xl mx-auto px-4 text-center space-y-6">
