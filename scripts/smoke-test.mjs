@@ -82,7 +82,7 @@ try {
   await check('/commercial/assets/images/commercial_warehouse_roof_1788537086946.jpg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial roofing photo');
   // Validate every image URL embedded in the built frontend bundles. This catches
   // broken library allocations that a single representative-photo check misses.
-  const repoRoot = path.dirname(fileURLToPath(import.meta.url)).replace(/[/\\]scripts$/, '');
+  const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   for (const app of ['residential', 'commercial']) {
     const assetRoot = path.join(repoRoot, 'source-apps', app === 'residential' ? 'trd' : 'crd', 'dist', 'assets');
     const pending = [assetRoot];
@@ -98,28 +98,28 @@ try {
       for (const entry of entries) {
         const fullPath = path.join(current, entry.name);
         if (entry.isDirectory()) pending.push(fullPath);
-        else if (entry.isFile() && /\\.(?:js|mjs|css)$/i.test(entry.name)) files.push(fullPath);
+        else if (entry.isFile() && /\.(?:js|mjs|css)$/i.test(entry.name)) files.push(fullPath);
       }
     }
     const referenced = new Set();
     for (const fullPath of files) {
       const source = await fs.readFile(fullPath, 'utf8');
-      for (const match of source.matchAll(/(?:\\/|\\b)assets\\/[^"'\\s)\\]}]+\\.(?:png|jpe?g|webp|avif|svg)(?:\\?[^"'\\s)\\]}]*)?/gi)) {
-        const relative = match[0].replace(/^\\//, '');
+      for (const match of source.matchAll(/(?:\/|\b)assets\/[^"'\s)\]}]+\.(?:png|jpe?g|webp|avif|svg)(?:\?[^"'\s)\]}]*)?/gi)) {
+        const relative = match[0].replace(/^\//, '');
         if (!relative.startsWith('assets/')) continue;
         referenced.add(relative);
       }
     }
     for (const relative of referenced) {
-      const assetPath = `/${app}/${relative}`;
+      const assetPath = '/' + app + '/' + relative;
       const { response } = await request(assetPath);
       const contentType = response.headers.get('content-type') || '';
       if (!response.ok || !contentType.startsWith('image/')) {
-        throw new Error(`${app} referenced image failed: ${assetPath} HTTP ${response.status}, content-type ${contentType}`);
+        throw new Error(app + ' referenced image failed: ' + assetPath + ' HTTP ' + response.status + ', content-type ' + contentType);
       }
-      console.log(`PASS ${app} referenced image ${assetPath}`);
+      console.log('PASS ' + app + ' referenced image ' + assetPath);
     }
-    console.log(`PASS ${app} bundle image references (${referenced.size} checked)`);
+    console.log('PASS ' + app + ' bundle image references (' + referenced.size + ' checked)');
   }
 
   console.log('Combined site smoke tests passed.');
