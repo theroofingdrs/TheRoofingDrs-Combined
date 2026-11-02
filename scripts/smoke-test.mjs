@@ -68,6 +68,10 @@ try {
     console.log(`PASS commercial frontend asset ${assetPath}`);
   }
   await check('/residential/api/health', (body) => body.includes('ok'), 'residential API proxy');
+  await check('/residential/api/v1/health', (body) => body.includes('OPERATIONAL') && body.includes('"database"'), 'residential versioned API health and route isolation');
+  await check('/commercial/api/health', (body) => body.includes('"status":"ok"') && body.includes('Commercial Roof Doctors'), 'commercial API health and route isolation');
+  await check('/residential/roofing/roof-replacement', (body) => body.includes('/residential/assets/'), 'residential deep-link refresh');
+  await check('/commercial/tpo-roofing', (body) => body.includes('/commercial/assets/'), 'commercial deep-link refresh');
   await check('/commercial/sitemap.xml', (body) => body.includes('/commercial/commercial-roofing'), 'commercial sitemap paths');
   await check('/residential/the_roof_doctors_logo.svg', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'residential SVG logo asset');
   await check('/commercial/assets/crd-logo-full-light.png', (_body, response) => response.headers.get('content-type')?.includes('image/'), 'commercial logo asset');
