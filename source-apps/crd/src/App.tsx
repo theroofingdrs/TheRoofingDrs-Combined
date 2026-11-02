@@ -60,6 +60,10 @@ const MainAppContent: React.FC = () => {
     const normalizedPath = (rawPath.replace(/\/+$/, '') || '/').toLowerCase();
 
     // 1. Core Dedicated Pages
+    if (normalizedPath === '/industries') {
+      return <IndustriesDirectoryPage />;
+    }
+
     if (normalizedPath === '/' || normalizedPath === '') {
       return (
         <HomePage
