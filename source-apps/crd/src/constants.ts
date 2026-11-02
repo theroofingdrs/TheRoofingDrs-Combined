@@ -39,7 +39,6 @@ export const BUSINESS_INFO = {
     { name: 'EagleView Technologies', desc: 'High-precision aerial roof geometry & pitch analytics' },
     { name: 'CompanyCam', desc: 'Real-time timestamped, GPS-verified jobsite photo documentation' },
     { name: 'HOVER 3D Modeling', desc: 'Dimensional envelope measurement & structural simulation' },
-    { name: 'AccuLynx CRM', desc: 'Enterprise project tracking & crew coordination' },
   ],
   insuranceDisclaimer:
     'Commercial Roof Doctors provides forensic roof inspections, detailed storm damage mapping, and technical consultation during adjuster inspections. We do not act as public adjusters and do not guarantee claim coverage or settlement amounts. Final insurance decisions remain with your insurer.',
