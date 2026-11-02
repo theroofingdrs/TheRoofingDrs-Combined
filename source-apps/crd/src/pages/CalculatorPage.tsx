@@ -121,7 +121,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
     <div className="min-h-screen bg-[#090d16] text-slate-100 font-sans-crd pb-24">
       <SeoMeta
         title="Commercial Roof Cost Calculator | Planning Estimates"
-        description="Estimate commercial roof replacement, restoration, and coating planning budgets for Ark-La-Tex facilities. Educational budget calculator."
+        description="Estimate commercial roof replacement, restoration, and coating planning budgets for facilities across Texas, Arkansas, Louisiana, and Oklahoma. Educational budget calculator."
         canonicalPath="/commercial-roof-cost-calculator"
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -140,7 +140,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
             Commercial Roof Cost Calculator
           </h1>
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Calculate preliminary planning budget ranges for commercial roof replacement, fluid-applied restoration coatings, and repairs across the Ark-La-Tex.
+            Calculate preliminary planning budget ranges for commercial roof replacement, fluid-applied restoration coatings, and repairs across Texas, Arkansas, Louisiana, and Oklahoma.
           </p>
         </div>
       </section>
