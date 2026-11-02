@@ -364,6 +364,7 @@ export interface Lead {
   insuranceRelatedFlag: boolean;
   preferredContactMethod: 'PHONE' | 'EMAIL' | 'SMS';
   message?: string;
+  estimateDetails?: Record<string, any>;
   photoUrls?: string[];
   landingPage?: string;
   source: AttributionSource;
