@@ -53,6 +53,11 @@ try {
   console.log('PASS commercial app and asset base');
   await check('/commercial/', (body) => body.includes('/commercial/assets/crd-logo-mark.png') && body.includes('https://theroofingdrs.com/commercial/assets/images/library/commercial-industrial-roofing.jpg'), 'commercial favicon and social sharing metadata');
   await check('/', (body) => body.includes('https://theroofingdrs.com/') && body.includes('og:image'), 'shared landing canonical and social sharing metadata');
+  await check('/sitemap.xml', (body) => body.includes('/residential/sitemap.xml') && body.includes('/commercial/sitemap.xml'), 'root sitemap index for both brands');
+  await check('/robots.txt', (body) => body.includes('https://theroofingdrs.com/sitemap.xml'), 'root robots.txt sitemap reference');
+  await check('/residential/sitemap.xml', (body) => body.includes('https://theroofingdrs.com/residential/service-areas/texarkana') && body.includes('https://theroofingdrs.com/residential/blog'), 'residential sitemap content');
+  await check('/residential/robots.txt', (body) => body.includes('/residential/sitemap.xml'), 'residential robots.txt sitemap reference');
+  await check('/commercial/robots.txt', (body) => body.includes('/commercial/sitemap.xml'), 'commercial robots.txt sitemap reference');
 
   // Request the actual built frontend bundles, not just the HTML shell.
   const commercialAssetUrls = [
