@@ -299,7 +299,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                     <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
                       Ark-La-Tex Service Territory
                     </div>
-                    <div className="text-xs text-[#888888] mt-0.5">75-mile radius and regional commercial coverage</div>
+                    <div className="text-xs text-[#888888] mt-0.5">Four-state commercial roofing coverage</div>
                   </Link>
                 </div>
               )}
