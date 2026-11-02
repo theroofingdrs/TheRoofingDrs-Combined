@@ -124,9 +124,33 @@ function serveLanding(req, res) {
   fs.createReadStream(path.join(ROOT, 'index.html')).pipe(res);
 }
 
+function serveText(req, res, body, contentType) {
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    res.writeHead(405, { allow: 'GET, HEAD' });
+    return res.end();
+  }
+  res.writeHead(200, { 'content-type': contentType, 'cache-control': 'public, max-age=3600' });
+  if (req.method === 'HEAD') return res.end();
+  res.end(body);
+}
+
+const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://theroofingdrs.com/residential/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://theroofingdrs.com/commercial/sitemap.xml</loc></sitemap>
+</sitemapindex>`;
+
+const rootRobots = `User-agent: *
+Allow: /
+Sitemap: https://theroofingdrs.com/sitemap.xml
+`;
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url || '/', 'http://localhost');
   const pathname = decodeURIComponent(url.pathname);
+
+  if (pathname === '/sitemap.xml') return serveText(req, res, sitemapIndex, 'application/xml; charset=utf-8');
+  if (pathname === '/robots.txt') return serveText(req, res, rootRobots, 'text/plain; charset=utf-8');
 
   if (pathname === '/') return serveLanding(req, res);
 
