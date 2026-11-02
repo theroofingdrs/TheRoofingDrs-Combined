@@ -61,7 +61,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenInspection }) => {
           </div>
 
           <div className="bg-[#0e1422] border border-slate-800 p-6 rounded-xl space-y-3">
-            <div className="text-3xl font-heading font-black text-amber-400">75-Mile</div>
+            <div className="text-3xl font-heading font-black text-amber-400">250-Mile</div>
             <h3 className="font-heading font-bold text-lg uppercase text-white">
               Regional Ark-La-Tex Service Footprint
             </h3>
