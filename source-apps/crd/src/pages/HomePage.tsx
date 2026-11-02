@@ -35,7 +35,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
   return (
     <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd selection:bg-[#181818] selection:text-[#f4f3ef]">
       <SeoMeta
-        title="Commercial Roofing Ark-La-Tex | Commercial Roof Doctors"
+        title="Commercial Roofing TX, AR, LA & OK | Commercial Roof Doctors"
         description="Commercial roofing, large-loss storm response, restoration coatings, and roof asset management across Texas, Arkansas, Louisiana, and Oklahoma. (903) 231-5940."
         canonicalPath="/"
       />
@@ -71,7 +71,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Territorial Marker */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-2 bg-[#111111]/85 backdrop-blur-sm border border-[#333333] text-[#d99a19] text-xs font-mono-crd tracking-wider uppercase">
               <span className="w-2 h-2 rounded-full bg-[#d99a19] shrink-0 animate-pulse" />
-              <span>Ark-La-Tex Commercial Specialist • Field Operations Hub</span>
+              <span>Four-State Commercial Roofing • Field Operations Hub</span>
             </div>
 
             {/* Hero Main Copy */}
@@ -181,7 +181,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 Regional Commercial Coverage
               </div>
               <p className="text-xs text-[#666666] mt-1 leading-relaxed">
-                Field-deployed within ~75 miles of Texarkana across TX, AR, LA, and OK, with extended travel for large projects.
+                Field-deployed across Texas, Arkansas, Louisiana, and Oklahoma. Project availability and travel are confirmed based on property location and scope.
               </p>
             </div>
           </div>
@@ -724,7 +724,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                   </div>
                 </div>
                 <div className="text-xs font-mono-crd text-[#bbbbbb] shrink-0">
-                  Documented Ark-La-Tex Portfolios
+                  Documented Four-State Portfolios
                 </div>
               </div>
             </div>
@@ -871,7 +871,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 Roof Systems Engineered for Commercial Performance.
               </h2>
               <p className="text-base text-[#555555] leading-relaxed">
-                We engineer, repair, restore, and replace all major low-slope and commercial steep-slope systems across the Ark-La-Tex.
+                We engineer, repair, restore, and replace all major low-slope and commercial steep-slope systems across Texas, Arkansas, Louisiana, and Oklahoma.
               </p>
             </div>
             <div className="text-xs font-mono-crd text-[#77736b] uppercase tracking-wider">
@@ -1200,7 +1200,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               <div className="p-6 space-y-3">
                 <div className="flex items-center justify-between text-[11px] font-mono-crd text-[#666666]">
                   <span>SYSTEM: 60-MIL TPO HEAT-WELDED</span>
-                  <span>ARK-LA-TEX REGION</span>
+                  <span>FOUR-STATE SERVICE AREA</span>
                 </div>
                 <h3 className="font-heading font-bold text-2xl uppercase text-[#181818]">
                   Industrial Distribution Logistics Center
@@ -1325,7 +1325,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       </section>
 
       {/* -------------------------------------------------------------------------
-          15. SERVICE AREA: Restrained Ark-La-Tex Regional Reach
+          15. SERVICE AREA: Four-State Commercial Coverage
          ------------------------------------------------------------------------- */}
       <section className="bg-white border-b border-[#e6e4df] py-18 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -1334,10 +1334,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               REGIONAL OPERATING TERRITORY
             </div>
             <h2 className="text-3xl sm:text-5xl font-heading font-black uppercase text-[#181818] tracking-tight leading-[0.95]">
-              Commercial Roofing Across the Ark-La-Tex.
+              Commercial Roofing Across Four States.
             </h2>
             <p className="text-sm text-[#444444] leading-relaxed">
-              CRD's primary operating territory is centered around Texarkana and surrounding markets within approximately 75 miles, with larger commercial, industrial, and disaster-response projects potentially justifying additional travel across Texas, Arkansas, Louisiana, and Oklahoma.
+              Commercial Roof Doctors serves commercial, industrial, and multi-site properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability, mobilization, and travel are confirmed during consultation based on property location and scope.
             </p>
 
             <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
