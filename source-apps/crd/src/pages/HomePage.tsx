@@ -175,10 +175,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Block 4 */}
             <div className="pt-4 sm:pt-0 sm:pl-6">
               <div className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#181818] tracking-tight leading-none uppercase">
-                Ark-La-Tex
+                Four States
               </div>
               <div className="text-xs uppercase tracking-wider font-heading font-bold text-[#181818] mt-2">
-                Regional Commercial Coverage
+                Commercial Coverage
               </div>
               <p className="text-xs text-[#666666] mt-1 leading-relaxed">
                 Field-deployed across Texas, Arkansas, Louisiana, and Oklahoma. Project availability and travel are confirmed based on property location and scope.
