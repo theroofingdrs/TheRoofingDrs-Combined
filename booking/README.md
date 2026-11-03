@@ -28,9 +28,9 @@ Future availability calculations, displayed appointment times and Calendar integ
 
 ## Independent review status
 
-A separate reviewer assessed exact code SHA `5bdae8b09514d84bc4c8130d965ab1ff1429931f` independently of the implementation author. Result: **FAIL — medium-severity malformed calendar identifier validation gap**. A NUL-character ID passes the current nonblank check and is returned in an otherwise complete synthetic preview. Runtime remains false. A bounded correction requires a documented supported identifier contract and negative tests; no fix is included in this documentation update. Keep PR #32 draft until findings are resolved and independently verified.
+A separate reviewer assessed exact code SHA `5bdae8b09514d84bc4c8130d965ab1ff1429931f` independently of the implementation author. Result: **FAIL — medium-severity malformed calendar identifier validation gap**. A NUL-character ID passes the current nonblank check and is returned in an otherwise complete synthetic preview. Runtime remains false. The current bounded correction adds the provider-backed identifier contract below and negative regressions. It must receive an independent re-review; no live provider integration or activation is included. Keep PR #32 draft until findings are resolved and independently verified.
 
-The review also distinguishes this isolated package's disabled runtime from unchanged legacy appointment/integration paths: global booking disable is not established by this module. No legacy implementation is changed or activated here. Full independent evidence and reproduction are delivered separately with the review report; this docs-only follow-up does not change the reviewed code or extend its verdict to a new SHA.
+The review also distinguishes this isolated package's disabled runtime from unchanged legacy appointment/integration paths: global booking disable is not established by this module. No legacy implementation is changed or activated here. Full independent evidence and reproduction are delivered separately with the review report; the old verdict applies to the frozen SHA; the corrected implementation requires its own exact-SHA verdict.
 
 ## Approved direction and current boundary
 
@@ -91,7 +91,7 @@ npm --prefix source-apps/crd run build
 SMOKE_TEST_PORT=8137 node scripts/smoke-test.mjs
 ```
 
-Synthetic fixtures use example.test URLs, dummy calendar IDs and explicitly test-only times/durations. Eleven test groups cover unresolved settings, both identities, central routing, all 20 division/service/mode handoffs, missing/swapped/ambiguous calendars, invalid/missing schedules/timezone, unset durations/buffers, rejected Church identities/domains, unsafe/duplicate URLs, unsupported services, confirmation gating, malformed configuration, no mutation and no network/credential requirement. Approved identity/service/mode registries are frozen so JavaScript consumers cannot rebind the accepted policy. Actual saved customer/profile data is not used.
+Synthetic fixtures use example.test URLs, dummy calendar IDs and explicitly test-only times/durations. Fourteen test groups cover unresolved settings, both identities, central routing, all 20 division/service/mode handoffs, missing/swapped/ambiguous calendars, invalid/missing schedules/timezone, unset durations/buffers, rejected Church identities/domains, unsafe/duplicate URLs, unsupported services, confirmation gating, malformed configuration, no mutation and no network/credential requirement. Approved identity/service/mode registries are frozen so JavaScript consumers cannot rebind the accepted policy. Actual saved customer/profile data is not used.
 
 The pure module is not imported into either app or existing registry. No existing shared package.json/workflow/router/auth/persistence/migration files were edited. A new isolated `.github/workflows/booking-readiness.yml` runs the synthetic suite and a pinned TypeScript 5.8.3 standalone check, independently of existing whole-app CI. The compiler is CI tooling only; no runtime dependency or app package change is introduced. Reviewers can also run the commands above explicitly.
 
@@ -104,7 +104,7 @@ Future activation requires operational approval, real adapter readiness, durable
 
 ## Local validation results
 
-- `node --experimental-strip-types booking/readiness.test.mjs`: 11 test groups passed, 0 failed; includes all 20 division/service/mode handoff combinations.
+- `node --experimental-strip-types booking/readiness.test.mjs`: 14 test groups passed, 0 failed; includes all 20 division/service/mode handoff combinations.
 - `/workspace/TheRoofingDrs-Combined/source-apps/trd/node_modules/.bin/tsc -p booking/tsconfig.json`: passed using TypeScript 5.8.3.
 - Both `npm --prefix source-apps/{trd,crd} run build` commands: passed; existing >500 kB Vite bundle warnings remain.
 - `npm --prefix source-apps/crd run lint`: passed.
@@ -113,3 +113,23 @@ Future activation requires operational approval, real adapter readiness, durable
 - `git diff --check`: passed.
 
 Only synthetic fixtures and local servers were used. No live Google account, Calendar, booking URL, notification, appointment, customer record, production database or production configuration was accessed/changed. These results establish configuration preflight coverage, not a working Google integration or release approval.
+
+
+## Calendar identifier correction — provider requirements and local policy
+
+Public provider references inspected 2026-11-03:
+- [Google Calendar v3 Calendars.get parameters](https://developers.google.com/workspace/calendar/api/v3/reference/calendars/get#parameters): calendarId is a string; retrieve IDs with calendarList.list. Google also supports the account-relative `primary` keyword.
+- [Google CalendarList resource](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList#resource-representations): id identifies the calendar; provider metadata/accessRole is separate from identifier syntax.
+
+These references do not specify a universal email-only regular expression for calendar IDs. This implementation therefore treats explicit IDs as opaque strings, without applying event-ID rules, lowercasing, trimming or decoding them. Example-shaped IDs are not proof of an existing or accessible calendar.
+
+Local booking input contract, deliberately distinguished from a Google-wide syntax claim:
+1. Require a nonempty raw string from a future approved CalendarList selection, explicitly bound to TRD or CRD.
+2. Reject NUL, all ASCII/C1 controls, whitespace anywhere and malformed UTF-16. Do not silently trim or repair an identifier.
+3. Reject pasted scheme:// URLs; the input expects an ID, not a Calendar link or API endpoint.
+4. Exclude Google's valid `primary` shortcut from this application contract because it resolves relative to the signed-in account rather than identifying an explicit division calendar.
+5. Preserve all other opaque characters and case exactly. Percent sequences are literal ID characters, not decoded escapes; a future adapter must encode a raw ID exactly once as an API path parameter. No HTTP request is performed here.
+6. Validate before adding the ID to readiness or constructing any preview context. Missing/wrong-division/duplicate assignment checks remain intact; runtimeEnabled remains false.
+7. A syntactically accepted ID still requires independently approved provider access, identity and division-binding verification before any live use. No calendar existence/ownership is inferred by preflight.
+
+The corrected tests reproduce the exact NUL finding: configurationReady=false and no preview context for either division. Additional cases cover nonstrings, empty values, whitespace, all ASCII/C1 control codepoints, malformed Unicode, primary alias, pasted URLs and preservation of synthetic opaque IDs. The new regression suite was also run against the exact reviewed old SHA: the NUL/unsafe-ID regression groups failed as expected. Current suite: 14 groups passed; strict standalone TypeScript check passed. Further build/CI/re-review results are associated with the exact corrective commit in PR #32.

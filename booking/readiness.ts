@@ -28,6 +28,17 @@ const record = (v: unknown): Record<string, unknown> => v !== null && typeof v =
 const text = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
 const integer = (v: unknown, min: number): boolean => typeof v === 'number' && Number.isSafeInteger(v) && v >= min;
 
+// Google documents opaque CalendarList IDs, not a universal email/ID regex.
+// Local boundary policy: explicit raw ID, safe for transport, no account alias.
+// Existence/access/division ownership still require a future provider check.
+function calendarIdentifier(value: unknown): value is string {
+  if (typeof value !== 'string' || value.length === 0 || value === 'primary') return false;
+  if (/[\s\u0000-\u001f\u007f-\u009f]/u.test(value)) return false;
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(value)) return false;
+  try { encodeURIComponent(value); } catch { return false; } // malformed UTF-16
+  return true;
+}
+
 export function createUnconfiguredBookingConfig(): BookingConfig {
   const make = (division: Division): DivisionConfig => ({
     identity: IDENTITIES[division], publicUrl: null, calendar: null, services: [...SERVICES], operatingHours: null,
@@ -77,8 +88,8 @@ export function validateBookingConfiguration(input: unknown): Readiness {
     else urls.push(url.href.replace(/\/$/, ''));
     const calendar = record(d.calendar);
     keys(calendar, ['division', 'id'], p + '.calendar');
-    if (calendar.division !== division || !text(calendar.id)) add(p + '.calendar', 'Approve an explicit calendar assignment bound to this division.');
-    else calendars.push(calendar.id.trim());
+    if (calendar.division !== division || !calendarIdentifier(calendar.id)) add(p + '.calendar', 'Assign an explicit raw CalendarList ID to this division; no primary alias, whitespace, controls, malformed Unicode or pasted URLs.');
+    else calendars.push(calendar.id);
     const services = d.services;
     if (!Array.isArray(services) || services.length !== SERVICES.length || !SERVICES.every(s => services.includes(s))) add(p + '.services', 'Configure all five approved services for this division without duplicates or unsupported services.');
     const clock = (v: unknown): v is string => typeof v === 'string' && /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(v);
@@ -117,5 +128,5 @@ export function previewBookingHandoff(input: unknown, division: unknown, service
   const config = input as BookingConfig;
   const d = config.divisions[division as Division];
   if (!d.services.includes(service as Service)) return { ok: false as const, issues: [{ path: 'selection.service', message: 'Service is unavailable in this division.' }] };
-  return { ok: true as const, context: Object.freeze({ status: 'not-submitted' as const, division: division as Division, identity: d.identity, publicUrl: d.publicUrl!, provider: config.central.provider, accountAlias: config.central.accountAlias, calendarId: d.calendar!.id.trim(), service: service as Service, mode: mode as Mode }), runtimeEnabled: false as const };
+  return { ok: true as const, context: Object.freeze({ status: 'not-submitted' as const, division: division as Division, identity: d.identity, publicUrl: d.publicUrl!, provider: config.central.provider, accountAlias: config.central.accountAlias, calendarId: d.calendar!.id, service: service as Service, mode: mode as Mode }), runtimeEnabled: false as const };
 }

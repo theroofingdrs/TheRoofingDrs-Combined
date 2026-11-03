@@ -135,3 +135,44 @@ test('approved brand/service registries cannot be rebound by JavaScript consumer
   assert.throws(() => { MODES[0] = 'unapproved-mode'; }, TypeError);
   const c = configured(); c.divisions.CRD.identity = 'Church Roofing Drs'; rejected(c);
 });
+
+
+test('independent NUL defect: invalid ID cannot produce ready state or any preview context', () => {
+  const c = configured(); c.divisions.TRD.calendar.id = '\u0000';
+  const readiness = validateBookingConfiguration(c);
+  assert.equal(readiness.configurationReady, false);
+  assert.equal(readiness.runtimeEnabled, false);
+  assert(readiness.issues.some(issue => issue.path === 'divisions.TRD.calendar'));
+  for (const division of ['TRD', 'CRD']) {
+    const preview = previewBookingHandoff(c, division, SERVICES[0], 'phone');
+    assert.equal(preview.ok, false);
+    assert.equal('context' in preview, false);
+  }
+});
+
+test('both division boundaries reject unsafe and nonexplicit calendar identifier forms', () => {
+  const bad = [null, undefined, 42, {}, [], '', ' ', '\u0000', 'id\u0000tail',
+    'id\r\ntail', 'id\ttail', 'id tail', ' id', 'id ', 'id\u007ftail',
+    'id\u0085tail', '\ud800', '\udfff', 'primary',
+    'https://calendar.google.com/calendar/u/0/r', 'https://www.googleapis.com/calendar/v3/calendars/synthetic'];
+  // Cover every ASCII/C1 control code rather than only the reported NUL.
+  for (let n = 0; n < 32; n++) bad.push('id' + String.fromCharCode(n) + 'tail');
+  for (let n = 127; n <= 159; n++) bad.push('id' + String.fromCharCode(n) + 'tail');
+  for (const division of ['TRD', 'CRD']) for (const id of bad) {
+    const c = configured(); c.divisions[division].calendar.id = id;
+    const result = rejected(c);
+    assert(result.issues.some(issue => issue.path === `divisions.${division}.calendar`));
+    assert.equal(previewBookingHandoff(c, division, SERVICES[0], 'phone').ok, false);
+  }
+});
+
+test('opaque explicit IDs retain exact case/characters rather than email-only rules or decoding', () => {
+  for (const id of ['synthetic-user@example.test', 'synthetic-group@group.calendar.google.com',
+    'Opaque-Case+id_%2F#?@test', 'synthetic-\u{1f4c5}-opaque']) {
+    const c = configured(); c.divisions.TRD.calendar.id = id;
+    const preview = previewBookingHandoff(c, 'TRD', SERVICES[0], 'on-site');
+    assert.equal(preview.ok, true);
+    assert.equal(preview.context.calendarId, id);
+    assert.equal(preview.runtimeEnabled, false);
+  }
+});
