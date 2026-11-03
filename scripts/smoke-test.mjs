@@ -48,6 +48,8 @@ try {
     response.headers.get('content-type')?.includes('application/xml') &&
     body.includes('<loc>https://theroofingdrs.com/</loc>') &&
     body.includes('<loc>https://theroofingdrs.com/residential/</loc>') &&
+    body.includes('<loc>https://theroofingdrs.com/residential/faq</loc>') &&
+    body.includes('<loc>https://theroofingdrs.com/residential/contact</loc>') &&
     body.includes('<loc>https://theroofingdrs.com/commercial/</loc>') &&
     body.includes('<loc>https://theroofingdrs.com/commercial/commercial-roofing</loc>'),
     'combined root XML sitemap and canonical route coverage');
