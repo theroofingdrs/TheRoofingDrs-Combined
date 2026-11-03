@@ -2,6 +2,36 @@
 
 Bounded preflight package for Website Issue #29 and tracker #30. Based on release-candidate/combined-site at `31885540cfae96557331a87e38ccbe033a8dd392`. Owner: Crystal.
 
+## Latest approved operating requirements (2026-11-03)
+
+- Timezone: **America/Chicago** (Central Time), using IANA DST rules rather than a fixed UTC offset.
+- Appointment window: **Monday through Saturday, 08:30–18:00 Central**. **No Sunday appointments**.
+- Separate customer-facing identities and URLs for **The Roofing Doctors (TRD)** and **Commercial Roof Doctors (CRD)**, using one centralized Google booking arrangement managed through `theroofingdrs@gmail.com`.
+- All five listed appointment types remain required for both divisions. Church Roofing Drs / churchroofingdrs.com remains excluded.
+- **Automatic confirmation is requested**, not an implemented/verified provider capability. No channel, sender, operator or notification integration is silently selected.
+- Durations, buffers, exact calendar assignments, individual operators, public URLs and additional availability rules remain unresolved. Do not infer holidays, lead times, start-time cutoffs, resource capacity or any other schedule rules from the approved daily window.
+
+The frozen implementation's factory remains deliberately unconfigured. The following documentation-only profile represents the approved timezone/window while leaving all other values unset and booking disabled:
+
+```ts
+const config = createUnconfiguredBookingConfig();
+config.timezone = 'America/Chicago';
+for (const division of ['TRD', 'CRD'] as const) {
+  config.divisions[division].operatingHours = [1, 2, 3, 4, 5, 6].map(day => ({
+    day, start: '08:30', end: '18:00',
+  }));
+}
+// enabled stays false; URLs/calendars/durations/buffers/confirmation stay unresolved.
+```
+
+Future availability calculations, displayed appointment times and Calendar integration must consistently use America/Chicago. There is no availability/time-slot engine in this package. Before activation, interval-boundary semantics must be reviewed against approved durations/buffers; no appointment-duration rule is inferred here.
+
+## Independent review status
+
+A separate reviewer assessed exact code SHA `5bdae8b09514d84bc4c8130d965ab1ff1429931f` independently of the implementation author. Result: **FAIL — medium-severity malformed calendar identifier validation gap**. A NUL-character ID passes the current nonblank check and is returned in an otherwise complete synthetic preview. Runtime remains false. A bounded correction requires a documented supported identifier contract and negative tests; no fix is included in this documentation update. Keep PR #32 draft until findings are resolved and independently verified.
+
+The review also distinguishes this isolated package's disabled runtime from unchanged legacy appointment/integration paths: global booking disable is not established by this module. No legacy implementation is changed or activated here. Full independent evidence and reproduction are delivered separately with the review report; this docs-only follow-up does not change the reviewed code or extend its verdict to a new SHA.
+
 ## Approved direction and current boundary
 
 Two customer-facing experiences: **The Roofing Doctors (TRD)** and **Commercial Roof Doctors (CRD)**. One centrally managed Google booking arrangement, with explicit division-calendar routing and service identity retained. Use the approved central account through the server-side alias `central-booking-account`; no login, credentials or OAuth tokens are stored in this module. Church Roofing Drs and churchroofingdrs.com are excluded; this owner decision supersedes the older Issue #29 wording.
@@ -67,7 +97,7 @@ The pure module is not imported into either app or existing registry. No existin
 
 ## Unresolved decisions and release gates
 
-Exact public URLs/domain deployment mapping, timezone, operating hours/blackouts, durations, buffers, calendar IDs/access, resource capacity and cross-division busy rules, minimum notice/horizon, notification approval, operational recovery owner, OAuth consent/redirect/scopes and staff-management workflow remain unapproved/unverified. Required settings stay configurable and unset. Central Google management is approved; a live connection is not.
+Timezone and the weekly operating window are now approved as above. Exact public URLs/domain deployment mapping, holiday/blackout policy, durations, buffers, calendar IDs/access, resource capacity and cross-division busy rules, minimum notice/horizon, confirmation channel/sender integration, individual operators/recovery owner, OAuth consent/redirect/scopes and staff-management workflow remain unresolved or unverified. Required settings stay configurable and unset. Central Google management is approved; a live connection is not.
 
 Future activation requires operational approval, real adapter readiness, durable reservation/concurrency tests, exact resource authorization and safe confirmation/recovery integration. Do not enable booking, connect an account, create calendars, send notifications, migrate production data, merge or deploy from this package. Original branches, PRs and uncommitted security/persistence drafts are preserved.
 
