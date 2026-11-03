@@ -188,10 +188,10 @@ const server = http.createServer((req, res) => {
       ...residentialRoutes.map((route) => 'https://theroofingdrs.com/residential' + (route === '/' ? '/' : route)),
       ...commercialRoutes.map((route) => 'https://theroofingdrs.com/commercial' + (route === '/' ? '/' : route)),
     ];
-    const xml = '<?xml version="1.0" encoding="UTF-8"?>\\n' +
-      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n' +
-      locations.map((location) => '  <url><loc>' + location + '</loc></url>').join('\\n') +
-      '\\n</urlset>\\n';
+    const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+      locations.map((location) => '  <url><loc>' + location + '</loc></url>').join('\n') +
+      '\n</urlset>\n';
     res.writeHead(200, {
       'content-type': 'application/xml; charset=utf-8',
       'cache-control': 'public, max-age=3600',
@@ -208,7 +208,7 @@ const server = http.createServer((req, res) => {
       'Disallow: /api/',
       'Sitemap: https://theroofingdrs.com/sitemap.xml',
       '',
-    ].join('\\n');
+    ].join('\n');
     res.writeHead(200, {
       'content-type': 'text/plain; charset=utf-8',
       'cache-control': 'public, max-age=3600',
