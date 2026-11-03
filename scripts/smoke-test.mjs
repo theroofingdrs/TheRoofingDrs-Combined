@@ -43,6 +43,21 @@ try {
   await waitFor('/');
   await check('/', (body) => body.includes('Residential roofing') && body.includes('Commercial roofing'), 'shared landing page');
   await check('/', (body) => body.includes('G-V9LXQ6DG4H'), 'Google Analytics tag present on landing page');
+  await check('/', (body) => body.includes('<link rel="canonical" href="https://theroofingdrs.com/">'), 'shared homepage canonical URL');
+  await check('/sitemap.xml', (body, response) =>
+    response.headers.get('content-type')?.includes('application/xml') &&
+    body.includes('<loc>https://theroofingdrs.com/</loc>') &&
+    body.includes('<loc>https://theroofingdrs.com/residential/</loc>') &&
+    body.includes('<loc>https://theroofingdrs.com/residential/faq</loc>') &&
+    body.includes('<loc>https://theroofingdrs.com/residential/contact</loc>') &&
+    body.includes('<loc>https://theroofingdrs.com/commercial/</loc>') &&
+    body.includes('<loc>https://theroofingdrs.com/commercial/commercial-roofing</loc>'),
+    'combined root XML sitemap and canonical route coverage');
+  await check('/robots.txt', (body, response) =>
+    response.headers.get('content-type')?.includes('text/plain') &&
+    body.includes('Sitemap: https://theroofingdrs.com/sitemap.xml') &&
+    body.includes('Disallow: /commercial/api/'),
+    'root robots.txt and sitemap declaration');
   await check('/residential/', (body) => body.includes('/residential/assets/'), 'residential app and asset base');
   const commercialPage = await request('/commercial/');
   if (!commercialPage.response.ok || !commercialPage.body.includes('/commercial/assets/')) {
