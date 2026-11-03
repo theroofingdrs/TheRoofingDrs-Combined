@@ -128,6 +128,94 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url || '/', 'http://localhost');
   const pathname = decodeURIComponent(url.pathname);
 
+  if (pathname === '/sitemap.xml') {
+    const residentialRoutes = [
+      '/',
+      '/roofing/roof-replacement',
+    ];
+    const commercialRoutes = [
+      '/',
+      '/commercial-roofing',
+      '/commercial-roof-repair',
+      '/commercial-roof-replacement',
+      '/commercial-roof-inspection',
+      '/commercial-roof-maintenance',
+      '/new-commercial-construction',
+      '/commercial-roof-coatings',
+      '/commercial-roof-restoration',
+      '/silicone-roof-coatings',
+      '/acrylic-roof-coatings',
+      '/polyurethane-roof-coatings',
+      '/coat-vs-replace',
+      '/storm-damage',
+      '/hail-damage',
+      '/wind-damage',
+      '/emergency-roofing',
+      '/insurance-claims',
+      '/commercial-storm-inspections',
+      '/adjuster-meetings',
+      '/large-loss-roofing',
+      '/tpo-roofing',
+      '/epdm-roofing',
+      '/pvc-roofing',
+      '/modified-bitumen',
+      '/built-up-roofing',
+      '/metal-roofing',
+      '/crd-ppp',
+      '/property-management',
+      '/roof-asset-management',
+      '/multi-property-roofing',
+      '/multifamily-roofing',
+      '/hoa-roofing',
+      '/industries/churches',
+      '/industries/schools',
+      '/industries/healthcare',
+      '/industries/industrial',
+      '/industries/retail',
+      '/industries/apartments',
+      '/commercial-roof-cost-calculator',
+      '/about',
+      '/about/credentials',
+      '/service-areas',
+      '/service-areas/texas',
+      '/service-areas/arkansas',
+      '/service-areas/louisiana',
+      '/service-areas/oklahoma',
+      '/contact',
+    ];
+    const locations = [
+      'https://theroofingdrs.com/',
+      ...residentialRoutes.map((route) => 'https://theroofingdrs.com/residential' + (route === '/' ? '/' : route)),
+      ...commercialRoutes.map((route) => 'https://theroofingdrs.com/commercial' + (route === '/' ? '/' : route)),
+    ];
+    const xml = '<?xml version="1.0" encoding="UTF-8"?>\\n' +
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n' +
+      locations.map((location) => '  <url><loc>' + location + '</loc></url>').join('\\n') +
+      '\\n</urlset>\\n';
+    res.writeHead(200, {
+      'content-type': 'application/xml; charset=utf-8',
+      'cache-control': 'public, max-age=3600',
+    });
+    return res.end(req.method === 'HEAD' ? undefined : xml);
+  }
+
+  if (pathname === '/robots.txt') {
+    const robots = [
+      'User-agent: *',
+      'Allow: /',
+      'Disallow: /commercial/api/',
+      'Disallow: /residential/api/',
+      'Disallow: /api/',
+      'Sitemap: https://theroofingdrs.com/sitemap.xml',
+      '',
+    ].join('\\n');
+    res.writeHead(200, {
+      'content-type': 'text/plain; charset=utf-8',
+      'cache-control': 'public, max-age=3600',
+    });
+    return res.end(req.method === 'HEAD' ? undefined : robots);
+  }
+
   if (pathname === '/') return serveLanding(req, res);
 
   for (const app of apps) {
