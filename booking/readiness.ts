@@ -1,7 +1,7 @@
 /** Pure preflight only: no environment, credentials, network, database or activation. */
-export const SERVICES = ['roof-inspection', 'roof-repair-estimate', 'roof-replacement-estimate', 'storm-damage-inspection', 'insurance-claim-inspection'] as const;
-export const MODES = ['on-site', 'phone'] as const;
-export const IDENTITIES = { TRD: 'The Roofing Doctors', CRD: 'Commercial Roof Doctors' } as const;
+export const SERVICES = Object.freeze(['roof-inspection', 'roof-repair-estimate', 'roof-replacement-estimate', 'storm-damage-inspection', 'insurance-claim-inspection'] as const);
+export const MODES = Object.freeze(['on-site', 'phone'] as const);
+export const IDENTITIES = Object.freeze({ TRD: 'The Roofing Doctors', CRD: 'Commercial Roof Doctors' } as const);
 export type Division = keyof typeof IDENTITIES;
 export type Service = typeof SERVICES[number];
 export type Mode = typeof MODES[number];

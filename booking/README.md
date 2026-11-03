@@ -61,7 +61,7 @@ npm --prefix source-apps/crd run build
 SMOKE_TEST_PORT=8137 node scripts/smoke-test.mjs
 ```
 
-Synthetic fixtures use example.test URLs, dummy calendar IDs and explicitly test-only times/durations. Ten test groups cover unresolved settings, both identities, central routing, all 20 division/service/mode handoffs, missing/swapped/ambiguous calendars, invalid/missing schedules/timezone, unset durations/buffers, rejected Church identities/domains, unsafe/duplicate URLs, unsupported services, confirmation gating, malformed configuration, no mutation and no network/credential requirement. Actual saved customer/profile data is not used.
+Synthetic fixtures use example.test URLs, dummy calendar IDs and explicitly test-only times/durations. Eleven test groups cover unresolved settings, both identities, central routing, all 20 division/service/mode handoffs, missing/swapped/ambiguous calendars, invalid/missing schedules/timezone, unset durations/buffers, rejected Church identities/domains, unsafe/duplicate URLs, unsupported services, confirmation gating, malformed configuration, no mutation and no network/credential requirement. Approved identity/service/mode registries are frozen so JavaScript consumers cannot rebind the accepted policy. Actual saved customer/profile data is not used.
 
 The pure module is not imported into either app or existing registry. No existing shared package.json/workflow/router/auth/persistence/migration files were edited. A new isolated `.github/workflows/booking-readiness.yml` runs the synthetic suite and a pinned TypeScript 5.8.3 standalone check, independently of existing whole-app CI. The compiler is CI tooling only; no runtime dependency or app package change is introduced. Reviewers can also run the commands above explicitly.
 
@@ -74,7 +74,7 @@ Future activation requires operational approval, real adapter readiness, durable
 
 ## Local validation results
 
-- `node --experimental-strip-types booking/readiness.test.mjs`: 10 test groups passed, 0 failed; includes all 20 division/service/mode handoff combinations.
+- `node --experimental-strip-types booking/readiness.test.mjs`: 11 test groups passed, 0 failed; includes all 20 division/service/mode handoff combinations.
 - `/workspace/TheRoofingDrs-Combined/source-apps/trd/node_modules/.bin/tsc -p booking/tsconfig.json`: passed using TypeScript 5.8.3.
 - Both `npm --prefix source-apps/{trd,crd} run build` commands: passed; existing >500 kB Vite bundle warnings remain.
 - `npm --prefix source-apps/crd run lint`: passed.

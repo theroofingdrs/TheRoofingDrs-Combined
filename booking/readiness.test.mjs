@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createUnconfiguredBookingConfig, validateBookingConfiguration, previewBookingHandoff, SERVICES, MODES } from './readiness.ts';
+import { createUnconfiguredBookingConfig, validateBookingConfiguration, previewBookingHandoff, SERVICES, MODES, IDENTITIES } from './readiness.ts';
 
 // Explicit synthetic settings; these are NOT business defaults or approvals.
 function configured() {
@@ -125,4 +125,13 @@ test('malformed data fails closed; validation does not mutate caller configurati
   validateBookingConfiguration(c); previewBookingHandoff(c, 'CRD', SERVICES[2], 'on-site');
   assert.deepEqual(c, before);
   assert.equal(validateBookingConfiguration(c).runtimeEnabled, false);
+});
+
+
+test('approved brand/service registries cannot be rebound by JavaScript consumers', () => {
+  for (const registry of [IDENTITIES, SERVICES, MODES]) assert(Object.isFrozen(registry));
+  assert.throws(() => { IDENTITIES.CRD = 'Church Roofing Drs'; }, TypeError);
+  assert.throws(() => { SERVICES[0] = 'unapproved-service'; }, TypeError);
+  assert.throws(() => { MODES[0] = 'unapproved-mode'; }, TypeError);
+  const c = configured(); c.divisions.CRD.identity = 'Church Roofing Drs'; rejected(c);
 });
