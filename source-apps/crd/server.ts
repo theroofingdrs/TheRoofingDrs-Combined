@@ -629,6 +629,50 @@ Sitemap: ${protocol}://${host}/commercial/sitemap.xml
 `);
 });
 
+type SeoManifestRecord = {
+  title: string;
+  description: string;
+  canonicalPath: string;
+};
+
+function escapeHtmlAttribute(value: string): string {
+  return value.replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  })[character] || character);
+}
+
+function upsertHeadTag(html: string, matcher: RegExp, replacement: string): string {
+  if (matcher.test(html)) return html.replace(matcher, replacement);
+  return html.replace(/<\/head>/i, replacement + '\n  </head>');
+}
+
+function applySeoMetadata(html: string, metadata: SeoManifestRecord): string {
+  const title = metadata.title.includes('Commercial Roof Doctors') || /\|\s*CRD$/i.test(metadata.title)
+    ? metadata.title
+    : metadata.title + ' | CRD';
+  const description = escapeHtmlAttribute(metadata.description);
+  const socialTitle = escapeHtmlAttribute(metadata.title);
+  const canonicalPath = metadata.canonicalPath || '/';
+  const pathWithoutPrefix = canonicalPath.replace(/^\/commercial(?=\/|$)/, '') || '/';
+  const canonicalUrl = 'https://theroofingdrs.com/commercial' +
+    (pathWithoutPrefix === '/' ? '/' : pathWithoutPrefix.startsWith('/') ? pathWithoutPrefix : '/' + pathWithoutPrefix);
+
+  let output = html;
+  output = upsertHeadTag(output, /<title>[\s\S]*?<\/title>/i, '<title>' + escapeHtmlAttribute(title) + '</title>');
+  output = upsertHeadTag(output, /<meta\s+name=["']description["'][^>]*>/i, '<meta name="description" content="' + description + '" />');
+  output = upsertHeadTag(output, /<link\s+rel=["']canonical["'][^>]*>/i, '<link rel="canonical" href="' + escapeHtmlAttribute(canonicalUrl) + '" />');
+  output = upsertHeadTag(output, /<meta\s+property=["']og:title["'][^>]*>/i, '<meta property="og:title" content="' + socialTitle + '" />');
+  output = upsertHeadTag(output, /<meta\s+property=["']og:description["'][^>]*>/i, '<meta property="og:description" content="' + description + '" />');
+  output = upsertHeadTag(output, /<meta\s+property=["']og:url["'][^>]*>/i, '<meta property="og:url" content="' + escapeHtmlAttribute(canonicalUrl) + '" />');
+  output = upsertHeadTag(output, /<meta\s+name=["']twitter:title["'][^>]*>/i, '<meta name="twitter:title" content="' + socialTitle + '" />');
+  output = upsertHeadTag(output, /<meta\s+name=["']twitter:description["'][^>]*>/i, '<meta name="twitter:description" content="' + description + '" />');
+  return output;
+}
+
 // ---------------- VITE & FRONTEND MOUNTING ----------------
 
 // Serve static assets from public directory
@@ -646,6 +690,15 @@ async function start() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
+    const indexHtml = fs.readFileSync(path.join(distPath, 'index.html'), 'utf8');
+    let seoManifest: Record<string, SeoManifestRecord> = {};
+    try {
+      seoManifest = JSON.parse(fs.readFileSync(path.join(distPath, 'seo-manifest.json'), 'utf8'));
+      console.log('[CRD SEO] Loaded ' + Object.keys(seoManifest).length + ' server-rendered route metadata entries.');
+    } catch (error) {
+      console.error('[CRD SEO] Route metadata manifest unavailable; serving default document metadata.', error);
+    }
+
     app.use('/commercial', express.static(distPath, {
       maxAge: '1y',
       immutable: true,
@@ -670,7 +723,9 @@ async function start() {
 
     app.get('*', (req: Request, res: Response) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
-      res.sendFile(path.join(distPath, 'index.html'));
+      const normalizedPath = (req.path.replace(/\\/+$/, '') || '/').toLowerCase();
+      const metadata = seoManifest[normalizedPath];
+      res.type('html').send(metadata ? applySeoMetadata(indexHtml, metadata) : indexHtml);
     });
   }
 
