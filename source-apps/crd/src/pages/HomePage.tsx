@@ -241,8 +241,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
               <img decoding="async" loading="lazy"
-                src="/assets/images/library/commercial-roof-maintenance.jpg"
-                alt="Commercial flat roof storm wind damage and emergency response"
+                src="/assets/images/library/commercial-roof-inspection.jpg"
+                alt="Commercial roof inspection on a low-slope roofing system"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-500"
               />
@@ -1406,7 +1406,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.google.com/search?q=Commercial+Roof+Doctors+Texarkana"
+              href="https://www.google.com/maps/search/?api=1&query=Commercial%20Roof%20Doctors&query_place_id=ChIJgzuONCdqNIYRle0DzKrk2iQ"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#e6e4df] text-xs font-bold text-[#181818] border border-[#d5d2ca] uppercase tracking-wider transition-colors"
@@ -1415,7 +1415,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               <ExternalLink className="w-3.5 h-3.5 text-[#666666]" />
             </a>
             <a
-              href="https://www.google.com/search?q=Commercial+Roof+Doctors+Texarkana"
+              href="https://search.google.com/local/writereview?placeid=ChIJgzuONCdqNIYRle0DzKrk2iQ"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#e6e4df] text-xs font-bold text-[#181818] border border-[#d5d2ca] uppercase tracking-wider transition-colors"
