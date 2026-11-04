@@ -45,7 +45,8 @@ async function startServer() {
       // Preserve the existing non-public portal/staff shell and auth behavior.
       if (route.startsWith('/app') || route.startsWith('/field') || route.startsWith('/portal')) return res.type('html').send(html);
       let fallback: Metadata = {...manifest['/__fallback'],canonicalPath:route,schemaJson:undefined};
-      if (route.startsWith('/service-areas/')) fallback=manifest['/service-areas/'+(route.split('/')[2]||'texarkana')] || manifest['/service-areas/__unknown__'];
+      if (route.startsWith('/estimate-request')) fallback=manifest['/estimate-request'];
+      else if (route.startsWith('/service-areas/')) fallback=manifest['/service-areas/'+(route.split('/')[2]||'texarkana')] || manifest['/service-areas/__unknown__'];
       else if (route.startsWith('/blog/')) fallback=manifest['/blog'];
       else if (route.startsWith('/insurance-claims')) fallback={...manifest['/insurance-claims'],canonicalPath:route};
       else if (route.startsWith('/storm-damage')) {

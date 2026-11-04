@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
+import { posts as starterPosts } from '../src/pages/BlogPage';
+import { commercialBlogMetadata } from '../../../shared/seo/blog.ts';
 import { SERVICES_CONTENT } from '../src/siteContent';
 import {
   ROOF_SYSTEMS_CONTENT,
@@ -42,6 +44,7 @@ addRecords(INDUSTRIES_CONTENT);
 addRecords(SERVICE_AREAS_CONTENT);
 addRecords(CITY_SERVICE_AREAS_CONTENT);
 addRecords(COATING_ARTICLES_CONTENT);
+for(const post of starterPosts)manifest['/blog/'+post.slug]=commercialBlogMetadata(post);
 
 // Read the nine dedicated pages' existing JSX declarations. Fail the build if a
 // declaration stops being static rather than silently inventing fallback copy.

@@ -68,6 +68,35 @@ try{
    console.log('PASS residential client navigation: FAQ/home schema present; repair/contact schema cleared; shared Organization/canonical retained');
   }
 
+  if(division==='residential'){
+   for(const route of ['/estimate-request/','/estimate-request/extra']){
+    const url='http://127.0.0.1:19200/residential'+route;
+    const html=await (await fetch(url)).text();
+    const title=html.match(/<title>(.*?)<\/title>/s)[1];
+    const description=html.match(/<meta name="description" content="([^"]*)"/)[1];
+    await p.call('Page.navigate',{url});
+    await wait(()=>p.evaluate(`document.querySelector('h1')?.textContent.includes('Request a Roof Estimate')&&document.querySelector('link[rel=canonical]')?.href==='https://theroofingdrs.com/residential/estimate-request'`));
+    assert.equal(await p.evaluate('document.title'),title);
+    assert.equal(await p.evaluate(`document.querySelector('meta[name="description"]').content`),description);
+   }
+   await p.call('Page.navigate',{url:'http://127.0.0.1:19200/residential/contact?utm_campaign=mobile-synthetic'});
+   await wait(()=>p.evaluate(`!!document.querySelector('form input')&&document.querySelector('link[rel=canonical]')?.href==='https://theroofingdrs.com/residential/contact'`));
+   console.log('PASS estimate aliases: initial HTTP metadata agrees with rendered title, description and canonical; no routing changes');
+   await p.evaluate(`window.__twitterNodes=[document.querySelector('meta[name="twitter:title"]'),document.querySelector('meta[name="twitter:description"]')]`);
+   const social=async()=>{
+    await wait(()=>p.evaluate(`document.querySelector('meta[name="twitter:title"]')?.content===document.querySelector('meta[property="og:title"]')?.content&&document.querySelector('meta[name="twitter:description"]')?.content===document.querySelector('meta[property="og:description"]')?.content`));
+    return p.evaluate(`(()=>{const names=['twitter:title','twitter:description'];if(!names.every((name,i)=>document.querySelectorAll('meta[name="'+name+'"]').length===1&&document.querySelector('meta[name="'+name+'"]')===window.__twitterNodes[i]))throw Error('Twitter tags were duplicated or replaced');return{title:document.querySelector('meta[name="twitter:title"]').content,description:document.querySelector('meta[name="twitter:description"]').content};})()`);
+   };
+   const initial=await social();
+   for(const route of ['/roofing/roof-repair','/contact']){
+    await p.evaluate(`history.pushState({},'',${JSON.stringify('/residential'+route+'?utm_campaign=mobile-synthetic')});window.dispatchEvent(new PopStateEvent('popstate'));`);
+    await wait(()=>p.evaluate(`document.querySelector('link[rel=canonical]')?.href===${JSON.stringify('https://theroofingdrs.com/residential'+route)}`));
+    const current=await social();
+    if(route==='/roofing/roof-repair'){assert.notEqual(current.title,initial.title);assert.notEqual(current.description,initial.description);}else assert.deepEqual(current,initial);
+   }
+   console.log('PASS residential Twitter/OG metadata parity on initial render and Repair/Contact navigation; existing tag nodes retained without duplicates');
+  }
+
   await p.evaluate(`(async()=>{for(const e of document.querySelectorAll('form input')){if(['checkbox','radio','hidden'].includes(e.type))continue;const value=e.type==='email'?'mobile@example.test':e.type==='tel'?'9035550100':e.name==='zip'?'00000':e.name==='state'?'TX':e.name==='city'?'Test':'Synthetic mobile';Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(e,value);e.dispatchEvent(new Event('input',{bubbles:true}));await new Promise(r=>requestAnimationFrame(r));}return true;})()`);
   assert.equal(await p.evaluate('document.querySelector("form").checkValidity()'),true);
   assert.equal(await p.evaluate('[...document.querySelectorAll("form input")].filter(e=>e.type!=="checkbox"&&e.type!=="radio").every(e=>e.labels.length>0)'),true);

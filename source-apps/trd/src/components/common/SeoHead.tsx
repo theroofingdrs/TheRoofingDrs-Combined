@@ -53,6 +53,16 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute('content', description);
 
+    for (const [name, content] of [['twitter:title', fullTitle], ['twitter:description', description]]) {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('name', name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', content);
+    }
+
     let ogUrl = document.querySelector('meta[property="og:url"]');
     if (!ogUrl) {
       ogUrl = document.createElement('meta');

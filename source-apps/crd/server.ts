@@ -1,5 +1,5 @@
 import { staffBookingRuntime } from '../../booking/runtime.ts';
-import { publishedBlogPost } from '../../shared/seo/blog.ts';
+import { publishedBlogPost, publishedCommercialMetadata } from '../../shared/seo/blog.ts';
 import { validCalculatorInput } from '../../shared/intake-validation.ts';
 import { deliverInquiry, IntakeError } from '../../shared/intake-server.ts';
 import express, { Request, Response } from 'express';
@@ -726,12 +726,17 @@ async function start() {
     app.get('*', async (req: Request, res: Response) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
       const normalizedPath = (req.path.replace(new RegExp('/+$'), '') || '/').toLowerCase();
-      const metadata = seoManifest[normalizedPath];
+      let metadata = seoManifest[normalizedPath];
       let known = appRoutes.has(normalizedPath);
-      if(!known && /^\/blog\/[^/]+$/.test(normalizedPath)) {
+      if(/^\/blog\/[^/]+$/.test(normalizedPath)) {
         const published = await publishedBlogPost('CRD',normalizedPath.slice('/blog/'.length));
-        if(!published.available)return res.status(503).type('html').send(indexHtml);
-        known=!!published.post;
+        if(published.post) {
+          metadata=publishedCommercialMetadata(published.post);
+          known=true;
+        } else if(!known) {
+          if(!published.available)return res.status(503).type('html').send(indexHtml);
+          known=false;
+        }
       }
       if(!known) {
         res.set('X-Robots-Tag','noindex');
