@@ -1,3 +1,4 @@
+import { AddressAutocomplete } from '../common/AddressAutocomplete.tsx';
 import React, { useState } from 'react';
 import { api } from '../../lib/api.ts';
 import type { Lead } from '../../../shared/types/index.ts';
@@ -69,7 +70,7 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
         email: formData.email.trim(),
         address: formData.address.trim(),
         city: formData.city.trim(),
-        state: formData.state.trim().toUpperCase() || 'TX',
+        state: formData.state.trim().toUpperCase(),
         zip: formData.zip.trim(),
         leadType: formData.leadType as any,
         serviceRequested: formData.serviceRequested,
@@ -91,7 +92,7 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs overflow-y-auto">
+    <div role="dialog" aria-modal="true" aria-label="Residential inspection request" className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs overflow-y-auto">
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden my-8">
         {/* Header */}
         <div className="bg-slate-900 px-6 py-4 flex items-center justify-between text-white border-b border-slate-800">
@@ -242,7 +243,7 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                 <label htmlFor="inspection-address" className="block text-xs font-semibold text-slate-700 mb-1">
                   Street Address *
                 </label>
-                <input
+                <AddressAutocomplete
                   type="text"
                   placeholder="e.g. 1420 Richmond Rd"
                   id="inspection-address"
@@ -251,6 +252,8 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                   className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600"
+                  onPlaceSelected={address => setFormData(current => ({...current, address:address.street, city:address.city, state:address.state, zip:address.zip}))}
+                  onSelectionCleared={() => setFormData(current => ({...current, city:'', state:'', zip:''}))}
                 />
               </div>
 

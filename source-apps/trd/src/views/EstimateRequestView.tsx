@@ -1,3 +1,4 @@
+import { AddressAutocomplete } from '../components/common/AddressAutocomplete.tsx';
 import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 
@@ -88,9 +89,12 @@ export const EstimateRequestView: React.FC<EstimateRequestViewProps> = ({ onNavi
               <h2 className="mb-4 border-b border-slate-200 pb-2 text-lg font-bold">Your Contact and Property</h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div><label className={labelClass}>Full name *</label><input className={inputClass} autoComplete="name" required value={form.name} onChange={(e) => update('name', e.target.value)} /></div>
-                <div><label className={labelClass}>Property address *</label><input className={inputClass} autoComplete="street-address" required value={form.address} onChange={(e) => update('address', e.target.value)} /></div>
-                <div><label className={labelClass}>City</label><input className={inputClass} autoComplete="address-level2" value={form.city} onChange={(e) => update('city', e.target.value)} /></div>
-                <div className="grid grid-cols-2 gap-3"><div><label className={labelClass}>State</label><input className={inputClass} autoComplete="address-level1" value={form.state} onChange={(e) => update('state', e.target.value)} /></div><div><label className={labelClass}>ZIP</label><input className={inputClass} autoComplete="postal-code" value={form.zip} onChange={(e) => update('zip', e.target.value)} /></div></div>
+                <div><label htmlFor="residential-estimate-address" className={labelClass}>Property address *</label><AddressAutocomplete id="residential-estimate-address" className={inputClass} autoComplete="street-address" required value={form.address} onChange={(e) => update('address', e.target.value)}
+                onPlaceSelected={address => setForm(current => ({...current, address:address.street, city:address.city, state:address.state, zip:address.zip}))}
+                onSelectionCleared={() => setForm(current => ({...current, city:'', state:'', zip:''}))}
+                    /></div>
+                <div><label htmlFor="residential-estimate-city" className={labelClass}>City</label><input id="residential-estimate-city" className={inputClass} autoComplete="address-level2" value={form.city} onChange={(e) => update('city', e.target.value)} /></div>
+                <div className="grid grid-cols-2 gap-3"><div><label htmlFor="residential-estimate-state" className={labelClass}>State</label><input id="residential-estimate-state" className={inputClass} autoComplete="address-level1" value={form.state} onChange={(e) => update('state', e.target.value)} /></div><div><label htmlFor="residential-estimate-zip" className={labelClass}>ZIP</label><input id="residential-estimate-zip" className={inputClass} autoComplete="postal-code" value={form.zip} onChange={(e) => update('zip', e.target.value)} /></div></div>
                 <div><label className={labelClass}>Phone *</label><input className={inputClass} autoComplete="tel" type="tel" required value={form.phone} onChange={(e) => update('phone', e.target.value)} /></div>
                 <div><label className={labelClass}>Email *</label><input className={inputClass} autoComplete="email" type="email" required value={form.email} onChange={(e) => update('email', e.target.value)} /></div>
               </div>

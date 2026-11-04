@@ -5,7 +5,9 @@ WORKDIR /app
 # Vite embeds these public Supabase values into the browser bundles at build time.
 # They must be supplied as Docker build arguments. Never pass the service role key here.
 ARG VITE_SUPABASE_URL
+ARG VITE_GOOGLE_MAPS_API_KEY
 ARG VITE_SUPABASE_PUBLISHABLE_KEY
+ENV VITE_GOOGLE_MAPS_API_KEY=${VITE_GOOGLE_MAPS_API_KEY}
 ENV VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
 ENV VITE_SUPABASE_PUBLISHABLE_KEY=${VITE_SUPABASE_PUBLISHABLE_KEY}
 

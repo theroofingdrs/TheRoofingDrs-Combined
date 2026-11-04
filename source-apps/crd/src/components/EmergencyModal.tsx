@@ -1,3 +1,4 @@
+import { AddressAutocomplete } from './AddressAutocomplete.tsx';
 import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import { X, AlertTriangle, Phone, Upload, CheckCircle2, ShieldAlert } from 'lucide-react';
@@ -20,8 +21,8 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
     phone: '',
     email: '',
     address: '',
-    city: '',
-    state: 'TX',
+    city: '', state: '', zip: '',
+    propertyRecord: null as {address:string;city:string;state:string;zip:string}|null,
     description: '',
   });
 
@@ -98,7 +99,7 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+    <div role="dialog" aria-modal="true" aria-label="Commercial emergency request" className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
       <div className="bg-[#0e1422] border-2 border-red-700/80 rounded-xl shadow-2xl max-w-2xl w-full text-slate-100 my-8 overflow-hidden font-sans-crd relative">
         {/* Header */}
         <div className="bg-red-950/90 border-b border-red-800 p-5 flex items-start justify-between">
@@ -242,10 +243,10 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
 
             {/* Property Address */}
             <div>
-              <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
+              <label htmlFor="emergency-address-input" className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
                 Commercial Property Address & City *
               </label>
-              <input
+              <AddressAutocomplete autoComplete="address-line1"
                 id="emergency-address-input"
                 type="text"
                 required
@@ -253,6 +254,9 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
                 value={formData.address}
                 onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                 className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500 placeholder-slate-500"
+                onPlaceSelected={address => setFormData(current => ({...current, address:address.formatted, city:address.city, state:address.state, zip:address.zip, propertyRecord: {address:address.street,city:address.city,state:address.state,zip:address.zip}}))}
+                onSelectionCleared={() => setFormData(current => ({...current, city:'', state:'', zip:'', propertyRecord:null}))}
+                theme="dark" format="combined"
               />
             </div>
 

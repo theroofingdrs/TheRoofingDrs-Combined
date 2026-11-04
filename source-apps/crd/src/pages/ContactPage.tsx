@@ -1,3 +1,4 @@
+import { AddressAutocomplete } from '../components/AddressAutocomplete.tsx';
 import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import {
@@ -22,6 +23,8 @@ export const ContactPage: React.FC = () => {
     email: '',
     phone: '',
     propertyAddress: '',
+    city: '', state: '', zip: '',
+    propertyRecord: null as {address:string;city:string;state:string;zip:string}|null,
     propertyType: 'Commercial Retail / Office' as PropertyType,
     leadType: 'Inspection' as LeadType,
     isEmergency: false,
@@ -49,6 +52,7 @@ export const ContactPage: React.FC = () => {
           email: formData.email,
           phone: formData.phone,
           propertyAddress: formData.propertyAddress,
+          city: formData.city, state: formData.state, zip: formData.zip, propertyRecord:formData.propertyRecord,
           propertyType: formData.propertyType,
           leadType: formData.isEmergency ? 'Emergency' : formData.leadType,
           urgency: formData.isEmergency ? 'Emergency (Active Leak)' : 'Standard Business Hours',
@@ -243,12 +247,15 @@ export const ContactPage: React.FC = () => {
 
                 <div className="space-y-1">
                   <label className="text-xs font-mono-crd uppercase text-slate-400" htmlFor="commercial-contact-propertyAddress">Property Address / City</label>
-                  <input id="commercial-contact-propertyAddress" name="propertyAddress" autoComplete="address-line1"
+                  <AddressAutocomplete id="commercial-contact-propertyAddress" name="propertyAddress" autoComplete="address-line1"
                     type="text"
                     placeholder="e.g., 1200 Industrial Pkwy, Texarkana, TX"
                     value={formData.propertyAddress}
                     onChange={(e) => setFormData({ ...formData, propertyAddress: e.target.value })}
                     className="w-full px-3 py-2 rounded bg-slate-900 border border-slate-700 text-sm text-white focus:border-amber-500 outline-none"
+                    onPlaceSelected={address => setFormData(current => ({...current, propertyAddress:address.formatted, city:address.city, state:address.state, zip:address.zip, propertyRecord: {address:address.street,city:address.city,state:address.state,zip:address.zip}}))}
+                    onSelectionCleared={() => setFormData(current => ({...current, city:'', state:'', zip:'', propertyRecord:null}))}
+                    theme="dark" format="combined"
                   />
                 </div>
 

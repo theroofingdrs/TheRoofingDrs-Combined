@@ -1,3 +1,4 @@
+import { AddressAutocomplete } from './AddressAutocomplete.tsx';
 import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import { X, FileText, CheckCircle2, Upload, AlertCircle } from 'lucide-react';
@@ -23,9 +24,8 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
     phone: '',
     email: '',
     address: '',
-    city: 'Texarkana Region',
-    state: 'TX',
-    zip: '',
+    city: '', state: '', zip: '',
+    propertyRecord: null as {address:string;city:string;state:string;zip:string}|null,
     propertyType: 'Commercial' as PropertyType,
     roofSystem: 'Unknown' as RoofSystemType,
     approximateRoofArea: '',
@@ -118,7 +118,7 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+    <div role="dialog" aria-modal="true" aria-label="Commercial inspection request" className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
       <div className="bg-[#0e1422] border border-slate-700 rounded-xl shadow-2xl max-w-3xl w-full text-slate-100 my-8 overflow-hidden font-sans-crd relative">
         {/* Header */}
         <div className="bg-slate-900 border-b border-slate-800 p-5 flex items-start justify-between">
@@ -289,16 +289,19 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
+                  <label htmlFor="commercial-inspection-address" className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
                     Property Address & City *
                   </label>
-                  <input
+                  <AddressAutocomplete autoComplete="address-line1" id="commercial-inspection-address"
                     type="text"
                     required
                     placeholder="Address, City, State"
                     value={formData.address}
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                     className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500"
+                    onPlaceSelected={address => setFormData(current => ({...current, address:address.formatted, city:address.city, state:address.state, zip:address.zip, propertyRecord: {address:address.street,city:address.city,state:address.state,zip:address.zip}}))}
+                    onSelectionCleared={() => setFormData(current => ({...current, city:'', state:'', zip:'', propertyRecord:null}))}
+                    theme="dark" format="combined"
                   />
                 </div>
 
