@@ -30,21 +30,8 @@ interface CRDDatabase {
   timelineEvents: any[];
 }
 
-function initDB(): CRDDatabase {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-
-  if (fs.existsSync(DB_FILE)) {
-    try {
-      const data = fs.readFileSync(DB_FILE, 'utf-8');
-      return JSON.parse(data);
-    } catch (e) {
-      console.error('Error reading database file, resetting:', e);
-    }
-  }
-
-  const defaultDb: CRDDatabase = {
+function emptyCRDDatabase(): CRDDatabase {
+  return {
     organizations: [],
     contacts: [],
     properties: [],
@@ -53,23 +40,119 @@ function initDB(): CRDDatabase {
     calculatorSubmissions: [],
     timelineEvents: [],
   };
-
-  saveDB(defaultDb);
-  return defaultDb;
 }
 
-function saveDB(data: CRDDatabase) {
-  try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
+function hasDurableSupabaseConfig(): boolean {
+  return Boolean(
+    process.env.SUPABASE_URL?.startsWith('https://') &&
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
+
+function mergeById(localRows: any[], remoteRows: any[], idField: string): any[] {
+  const rows = new Map<string, any>();
+  for (const row of localRows || []) if (row?.[idField]) rows.set(String(row[idField]), row);
+  for (const row of remoteRows || []) if (row?.[idField]) rows.set(String(row[idField]), row);
+  return [...rows.values()];
+}
+
+async function initDB(): Promise<CRDDatabase> {
+  let local = emptyCRDDatabase();
+  if (fs.existsSync(DB_FILE)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
+      if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+        throw new Error('Local commercial database is not an object.');
+      }
+      local = { ...local, ...parsed };
+    } catch (error) {
+      throw new Error('Existing commercial database could not be read safely; refusing to discard it.', { cause: error });
     }
-    fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
-  } catch (e) {
-    console.error('Error saving database file:', e);
   }
+
+  if (!hasDurableSupabaseConfig()) {
+    if (process.env.NODE_ENV === 'production' && process.env.ALLOW_EPHEMERAL_DATABASE !== 'true') {
+      throw new Error('Production commercial database startup blocked: Supabase server credentials are required.');
+    }
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+    fs.writeFileSync(DB_FILE, JSON.stringify(local, null, 2), 'utf-8');
+    console.warn('[CRD DB] Using local JSON only in development or explicit CI mode.');
+    return local;
+  }
+
+  const [organizations, contacts, properties, roofs, timeline, leadRows] = await Promise.all([
+    selectRows<any>('crd_organizations', 'select=organization_id,payload'),
+    selectRows<any>('crd_contacts', 'select=contact_id,payload'),
+    selectRows<any>('crd_properties', 'select=property_id,payload'),
+    selectRows<any>('crd_roofs', 'select=roof_id,payload'),
+    selectRows<any>('crd_timeline_events', 'select=event_id,payload'),
+    selectRows<any>('trd_records', 'select=id,payload&record_type=eq.lead'),
+  ]);
+
+  const restored: CRDDatabase = {
+    organizations: mergeById(local.organizations, organizations.map(row => row.payload), 'organizationId'),
+    contacts: mergeById(local.contacts, contacts.map(row => row.payload), 'contactId'),
+    properties: mergeById(local.properties, properties.map(row => row.payload), 'propertyId'),
+    roofs: mergeById(local.roofs, roofs.map(row => row.payload), 'roofId'),
+    leads: leadRows.map(row => row.payload).filter(lead =>
+      lead && (lead.leadId || lead.division === 'commercial' || lead.division === 'COMMERCIAL')
+    ),
+    calculatorSubmissions: local.calculatorSubmissions || [],
+    timelineEvents: mergeById(local.timelineEvents, timeline.map(row => row.payload), 'id'),
+  };
+
+  // Upsert legacy local rows and the normalized read model before serving traffic.
+  await saveDB(restored);
+  console.log('[CRD DB] Loaded durable Supabase records and completed any local-data migration.');
+  return restored;
 }
 
-let db = initDB();
+async function saveDB(data: CRDDatabase): Promise<void> {
+  if (!hasDurableSupabaseConfig()) {
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+    fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+    return;
+  }
+
+  const now = new Date().toISOString();
+  const writes: Promise<any>[] = [];
+  if (data.organizations.length) writes.push(upsertRows('crd_organizations', data.organizations.map(row => ({
+    organization_id: String(row.organizationId),
+    payload: row,
+    created_at: row.createdAt || now,
+    updated_at: row.updatedAt || now,
+  })), 'organization_id'));
+  if (data.contacts.length) writes.push(upsertRows('crd_contacts', data.contacts.map(row => ({
+    contact_id: String(row.contactId),
+    organization_id: row.organizationId || null,
+    payload: row,
+    created_at: row.createdAt || now,
+    updated_at: row.updatedAt || now,
+  })), 'contact_id'));
+  if (data.properties.length) writes.push(upsertRows('crd_properties', data.properties.map(row => ({
+    property_id: String(row.propertyId),
+    organization_id: row.organizationId || null,
+    payload: row,
+    created_at: row.createdAt || now,
+    updated_at: row.updatedAt || now,
+  })), 'property_id'));
+  if (data.roofs.length) writes.push(upsertRows('crd_roofs', data.roofs.map(row => ({
+    roof_id: String(row.roofId),
+    property_id: row.propertyId || null,
+    payload: row,
+    created_at: row.createdAt || now,
+    updated_at: row.updatedAt || now,
+  })), 'roof_id'));
+  if (data.timelineEvents.length) writes.push(upsertRows('crd_timeline_events', data.timelineEvents.map(row => ({
+    event_id: String(row.id),
+    lead_id: String(row.leadId),
+    payload: row,
+    created_at: row.timestamp || now,
+  })), 'event_id'));
+  await Promise.all(writes);
+}
+
+let db: CRDDatabase = emptyCRDDatabase();
 
 // Helper to generate IDs
 function generateId(prefix: string): string {
@@ -293,7 +376,7 @@ app.patch('/api/leads/:id', async (req: Request, res: Response) => {
     console.error('Shared commercial lead update failed:', error);
     return res.status(503).json({ error: 'Lead update could not be saved.' });
   }
-  saveDB(db);
+  await saveDB(db);
 
   res.json({ success: true, lead: currentLead });
 });
@@ -682,6 +765,7 @@ app.use(express.static(path.join(process.cwd(), 'public'), {
 }));
 
 async function start() {
+  db = await initDB();
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
       server: { middlewareMode: true },
@@ -734,4 +818,7 @@ async function start() {
   });
 }
 
-start();
+start().catch((error) => {
+  console.error('[Commercial Roof Doctors] Failed to initialize durable database or start server:', error);
+  process.exit(1);
+});
