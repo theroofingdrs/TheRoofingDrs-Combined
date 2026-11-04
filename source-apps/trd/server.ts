@@ -3,6 +3,7 @@ import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import dotenv from 'dotenv';
 import { apiV1Router } from './server/api/v1/router.ts';
+import { initializeDatabase, flushDatabasePersistence, hasPendingDatabasePersistence } from './server/db/database.ts';
 
 dotenv.config();
 
@@ -10,6 +11,30 @@ async function startServer() {
   const app = express();
   app.set('trust proxy', true);
   const PORT = Number(process.env.PORT) || 3000;
+
+  await initializeDatabase();
+
+  // Hold successful API responses until their database snapshot is durable.
+  app.use((req, res, next) => {
+    const originalSend = res.send.bind(res);
+    let waitingForCommit = false;
+    res.send = ((body?: any) => {
+      if (!hasPendingDatabasePersistence()) return originalSend(body);
+      if (waitingForCommit) return res;
+      waitingForCommit = true;
+      void flushDatabasePersistence()
+        .then(() => originalSend(body))
+        .catch((error) => {
+          console.error('[RoofDoctors] Refusing success response because persistence failed:', error);
+          if (res.headersSent) return res.destroy(error as Error);
+          res.statusCode = 503;
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          return res.end(JSON.stringify({ error: 'Data could not be saved. Please retry.' }));
+        });
+      return res;
+    }) as typeof res.send;
+    next();
+  });
 
   // Mount API routes FIRST
   app.use('/api/v1', apiV1Router);
@@ -51,7 +76,7 @@ async function startServer() {
 
   const shutdown = () => {
     server.close(() => {
-      process.exit(0);
+      void flushDatabasePersistence().catch((error) => console.error('[RoofDoctors] Final database flush failed:', error)).finally(() => process.exit(0));
     });
   };
   process.on('SIGTERM', shutdown);

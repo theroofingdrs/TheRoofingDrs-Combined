@@ -8,7 +8,7 @@ import assert from 'node:assert/strict';
 const port = Number(process.env.SMOKE_TEST_PORT) || 8080;
 const base = `http://127.0.0.1:${port}`;
 const testDirectory = await fs.mkdtemp(path.join(os.tmpdir(), 'roofing-smoke-'));
-const testEnv = { ...process.env, NODE_ENV: 'production', PORT: String(port), WEBSITE_DATA_DIR: testDirectory };
+const testEnv = { ...process.env, NODE_ENV: 'production', ALLOW_EPHEMERAL_DATABASE: 'true', PORT: String(port), WEBSITE_DATA_DIR: testDirectory };
 for (const key of ['SUPABASE_URL','SUPABASE_SERVICE_ROLE_KEY','SUPABASE_ANON_KEY','SUPABASE_PUBLISHABLE_KEY']) delete testEnv[key];
 const server = spawn(process.execPath, ['server.mjs'], {
   env: testEnv,

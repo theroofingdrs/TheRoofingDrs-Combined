@@ -1034,72 +1034,201 @@ Under Texas law, it is illegal for contractors to waive, absorb, or rebate your 
   };
 }
 
-export function getDatabase(): DatabaseSchema {
-  if (dbInstance) {
-    return dbInstance;
+
+type StoredCollectionRow = {
+  id: string;
+  record_type: string;
+  payload: any;
+};
+
+let persistenceQueue: Promise<void> = Promise.resolve();
+let pendingPersistenceWrites = 0;
+let lastPersistenceError: Error | null = null;
+
+function getSupabaseConfig() {
+  const url = process.env.SUPABASE_URL?.replace(/\/$/, '');
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key || !/^https:\/\//i.test(url)) return null;
+  return { url, key };
+}
+
+async function readSupabaseRows(recordType: string): Promise<StoredCollectionRow[]> {
+  const config = getSupabaseConfig();
+  if (!config) throw new Error('Supabase persistence is not configured.');
+  const response = await fetch(
+    `${config.url}/rest/v1/trd_records?select=id,record_type,payload&record_type=eq.${encodeURIComponent(recordType)}`,
+    {
+      signal: AbortSignal.timeout(15000),
+      headers: {
+        apikey: config.key,
+        Authorization: `Bearer ${config.key}`,
+        Accept: 'application/json',
+      },
+    }
+  );
+  if (!response.ok) {
+    throw new Error(`Supabase database load failed (${response.status}).`);
+  }
+  return await response.json() as StoredCollectionRow[];
+}
+
+async function writeSupabaseSnapshot(snapshot: DatabaseSchema): Promise<void> {
+  const config = getSupabaseConfig();
+  if (!config) throw new Error('Supabase persistence is not configured.');
+  const updatedAt = new Date().toISOString();
+  const rows: Array<Record<string, unknown>> = Object.entries(snapshot)
+    .filter(([collection]) => collection !== 'leads')
+    .map(([collection, items]) => ({
+      id: `db_collection:${collection}`,
+      record_type: 'db_collection',
+      payload: { items },
+      updated_at: updatedAt,
+    }));
+
+  // Leads retain their existing public/shared record shape and IDs.
+  for (const lead of snapshot.leads || []) {
+    rows.push({
+      id: lead.id,
+      record_type: 'lead',
+      payload: lead,
+      created_at: lead.createdAt || updatedAt,
+      updated_at: lead.updatedAt || updatedAt,
+    });
   }
 
-  try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
+  const response = await fetch(`${config.url}/rest/v1/trd_records?on_conflict=id`, {
+    method: 'POST',
+    signal: AbortSignal.timeout(20000),
+    headers: {
+      apikey: config.key,
+      Authorization: `Bearer ${config.key}`,
+      'Content-Type': 'application/json',
+      Prefer: 'resolution=merge-duplicates,return=minimal',
+    },
+    body: JSON.stringify(rows),
+  });
+  if (!response.ok) {
+    const detail = (await response.text()).slice(0, 300);
+    throw new Error(`Supabase database save failed (${response.status}): ${detail}`);
+  }
+}
 
-    if (fs.existsSync(DB_FILE)) {
-      const data = fs.readFileSync(DB_FILE, 'utf-8');
-      dbInstance = JSON.parse(data);
-      if (!dbInstance!.roofRecordEvents) dbInstance!.roofRecordEvents = [];
-      if (!dbInstance!.tasks) dbInstance!.tasks = [];
-      if (!dbInstance!.stormEvents) dbInstance!.stormEvents = [];
-      if (!dbInstance!.documents) dbInstance!.documents = [];
-      if (!dbInstance!.photos) dbInstance!.photos = [];
-      if (!dbInstance!.fileRecords) dbInstance!.fileRecords = [];
-      if (!dbInstance!.crews || dbInstance!.crews.length === 0) {
-        dbInstance!.crews = getDefaultCrews();
-      }
-      if (!dbInstance!.materials || dbInstance!.materials.length === 0) {
-        dbInstance!.materials = getDefaultMaterials();
-      }
-      if (!dbInstance!.vendors || dbInstance!.vendors.length === 0) {
-        dbInstance!.vendors = getDefaultVendors();
-      }
-      if (!dbInstance!.invoices) dbInstance!.invoices = [];
-      if (!dbInstance!.payments) dbInstance!.payments = [];
-      if (!dbInstance!.purchaseOrders) dbInstance!.purchaseOrders = [];
-      if (!dbInstance!.projectCosts) dbInstance!.projectCosts = [];
-      if (!dbInstance!.fieldCheckIns) dbInstance!.fieldCheckIns = [];
-      if (!dbInstance!.roofModels) dbInstance!.roofModels = [];
-      if (!dbInstance!.priceBooks || dbInstance!.priceBooks.length === 0) {
-        dbInstance!.priceBooks = getDefaultPriceBooks();
-      }
-      if (!dbInstance!.scopeTemplates || dbInstance!.scopeTemplates.length === 0) {
-        dbInstance!.scopeTemplates = getDefaultScopeTemplates();
-      }
-      if (!dbInstance!.sales) dbInstance!.sales = [];
-      if (!dbInstance!.resources) dbInstance!.resources = [];
-      if (!dbInstance!.resources.some((resource) => resource.id === 'res_lifetime_roofing_systems')) {
-        dbInstance!.resources.push(createLifetimeRoofingResource(new Date().toISOString()));
-      }
-      console.log('[DB] Loaded existing persistent database from disk.');
-      return dbInstance!;
-    }
-  } catch (err) {
-    console.error('[DB] Error loading file-based database, initializing fresh seed:', err);
+function writeLocalSnapshot(snapshot: DatabaseSchema): void {
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(DB_FILE, JSON.stringify(snapshot, null, 2), 'utf-8');
+}
+
+/**
+ * Initialize before accepting requests. Production must use durable Supabase
+ * storage; local JSON is retained only for development and explicit CI smoke tests.
+ */
+export async function initializeDatabase(): Promise<void> {
+  if (dbInstance) return;
+  const config = getSupabaseConfig();
+  const ephemeralAllowed = process.env.NODE_ENV !== 'production' || process.env.ALLOW_EPHEMERAL_DATABASE === 'true';
+  if (!config && !ephemeralAllowed) {
+    throw new Error('Production database startup blocked: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required.');
   }
 
-  dbInstance = getInitialDatabase();
+  let localData: Partial<DatabaseSchema> = {};
+  if (fs.existsSync(DB_FILE)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
+      if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+        throw new Error('Local database file does not contain a database object.');
+      }
+      localData = parsed as Partial<DatabaseSchema>;
+    } catch (error) {
+      throw new Error('Existing local database could not be read safely; refusing to initialize an empty database.', { cause: error });
+    }
+  }
+
+  const defaults = getInitialDatabase();
+  const restored: Record<string, unknown> = { ...defaults, ...localData };
+  for (const [key, value] of Object.entries(defaults)) {
+    if (!Array.isArray(restored[key])) restored[key] = value;
+  }
+
+  if (config) {
+    const [collections, leads] = await Promise.all([
+      readSupabaseRows('db_collection'),
+      readSupabaseRows('lead'),
+    ]);
+    for (const row of collections) {
+      const collection = row.id.replace(/^db_collection:/, '');
+      if (!Object.prototype.hasOwnProperty.call(defaults, collection) || collection === 'leads') continue;
+      if (!Array.isArray(row.payload?.items)) {
+        throw new Error(`Supabase database collection "${collection}" has an invalid payload; refusing to overwrite it.`);
+      }
+      restored[collection] = row.payload.items;
+    }
+
+    const leadById = new Map<string, Record<string, unknown>>();
+    for (const lead of Array.isArray(localData.leads) ? localData.leads : []) {
+      if (lead && typeof lead === 'object' && typeof (lead as any).id === 'string') {
+        leadById.set((lead as any).id, lead as unknown as Record<string, unknown>);
+      }
+    }
+    for (const row of leads) {
+      if (row.payload && typeof row.payload === 'object' && typeof (row.payload as any).id === 'string') {
+        leadById.set((row.payload as any).id, row.payload as Record<string, unknown>);
+      }
+    }
+    restored.leads = [...leadById.values()];
+    dbInstance = restored as unknown as DatabaseSchema;
+    persistDatabase();
+    await flushDatabasePersistence();
+    console.log(`[DB] Loaded durable Supabase database (${collections.length} collections, ${leads.length} shared leads).`);
+    return;
+  }
+
+  dbInstance = restored as unknown as DatabaseSchema;
   persistDatabase();
+  console.warn('[DB] Using local JSON persistence only; this mode is restricted to development and CI.');
+}
+
+export function getDatabase(): DatabaseSchema {
+  if (!dbInstance) {
+    throw new Error('Database has not been initialized. Await initializeDatabase() before serving requests.');
+  }
   return dbInstance;
 }
 
+/** Queue a durable snapshot. API responses wait for queued writes to finish. */
 export function persistDatabase(): void {
   if (!dbInstance) return;
-  try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
+  const snapshot = JSON.parse(JSON.stringify(dbInstance)) as DatabaseSchema;
+  if (!getSupabaseConfig()) {
+    try {
+      writeLocalSnapshot(snapshot);
+    } catch (error) {
+      console.error('[DB] Error persisting local development database:', error);
     }
-    fs.writeFileSync(DB_FILE, JSON.stringify(dbInstance, null, 2), 'utf-8');
-  } catch (err) {
-    console.error('[DB] Error persisting database to disk:', err);
+    return;
+  }
+
+  pendingPersistenceWrites += 1;
+  persistenceQueue = persistenceQueue
+    .then(() => writeSupabaseSnapshot(snapshot))
+    .catch((error) => {
+      lastPersistenceError = error instanceof Error ? error : new Error('Unknown Supabase persistence error.');
+      console.error('[DB] Durable Supabase persistence failed:', lastPersistenceError.message);
+    })
+    .finally(() => {
+      pendingPersistenceWrites = Math.max(0, pendingPersistenceWrites - 1);
+    });
+}
+
+export function hasPendingDatabasePersistence(): boolean {
+  return pendingPersistenceWrites > 0 || lastPersistenceError !== null;
+}
+
+export async function flushDatabasePersistence(): Promise<void> {
+  await persistenceQueue;
+  if (lastPersistenceError) {
+    const error = lastPersistenceError;
+    lastPersistenceError = null;
+    throw error;
   }
 }
 

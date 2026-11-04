@@ -39,7 +39,7 @@ jobs:
             --tag combined-roofing:ci .
       - name: Smoke test both container applications and private API access
         run: |
-          docker run --detach --rm --name combined-roofing-ci --publish 8080:8080 combined-roofing:ci
+          docker run --detach --rm --name combined-roofing-ci --env ALLOW_EPHEMERAL_DATABASE=true --publish 8080:8080 combined-roofing:ci
           trap 'docker stop combined-roofing-ci >/dev/null 2>&1 || true' EXIT
           for attempt in $(seq 1 30); do
             if curl --fail --silent http://localhost:8080/residential/api/health >/dev/null && curl --fail --silent http://localhost:8080/commercial/api/health >/dev/null; then
