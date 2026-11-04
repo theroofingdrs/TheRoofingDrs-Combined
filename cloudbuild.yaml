@@ -12,9 +12,14 @@ steps:
       - .
   - name: gcr.io/cloud-builders/docker
     id: push-combined-image
+    entrypoint: sh
     args:
-      - push
-      - ${_IMAGE_URI}
+      - -c
+      - |
+        set -eu
+        docker push "${_IMAGE_URI}"
+        # Inspect this build's local image after push, not the mutable remote tag.
+        docker image inspect "${_IMAGE_URI}" --format '{{index .RepoDigests 0}}' > /workspace/combined-image-reference.txt
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     id: deploy-combined-cloud-run
     # Repository consolidation validates source; production cutover stays explicit.
@@ -26,7 +31,19 @@ steps:
           echo "Image built; production deployment was not requested."
           exit 0
         fi
-        exec gcloud run deploy roof-doctors-combined --image "${_IMAGE_URI}" --region us-east1 --project trdcrd --quiet
+        set -eu
+        image="$$(cat /workspace/combined-image-reference.txt)"
+        repository="$$(printf '%s' '${_IMAGE_URI}' | sed 's/:[^/]*$$//')"
+        case "$$image" in
+          "$$repository"@sha256:*) ;;
+          *) echo "Pushed image repository does not match; refusing deployment." >&2; exit 1 ;;
+        esac
+        digest="$${image#"$$repository"@sha256:}"
+        if [ "$${#digest}" -ne 64 ] || printf '%s' "$$digest" | grep -q '[^0-9a-f]'; then
+          echo "Missing or invalid pushed image digest; refusing deployment." >&2
+          exit 1
+        fi
+        exec gcloud run deploy roof-doctors-combined --image "$$image" --no-traffic --region us-east1 --project trdcrd --quiet
 
 images:
   - ${_IMAGE_URI}
