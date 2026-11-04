@@ -1038,7 +1038,7 @@ Under Texas law, it is illegal for contractors to waive, absorb, or rebate your 
 type StoredCollectionRow = {
   id: string;
   record_type: string;
-  payload: { items?: unknown[] };
+  payload: any;
 };
 
 let persistenceQueue: Promise<void> = Promise.resolve();
@@ -1046,9 +1046,9 @@ let pendingPersistenceWrites = 0;
 let lastPersistenceError: Error | null = null;
 
 function getSupabaseConfig() {
-  const url = process.env.SUPABASE_URL?.replace(/\\/$/, '');
+  const url = process.env.SUPABASE_URL?.replace(/\/$/, '');
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key || !/^https:\\/\\//i.test(url)) return null;
+  if (!url || !key || !/^https:\/\//i.test(url)) return null;
   return { url, key };
 }
 
