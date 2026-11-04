@@ -1,3 +1,4 @@
+import { AddressAutocomplete } from '../components/AddressAutocomplete.tsx';
 import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import { Calculator, CheckCircle2, ArrowRight, ArrowLeft, ShieldAlert, FileText, AlertTriangle, Building, Layers, Wrench } from 'lucide-react';
@@ -15,6 +16,8 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
   const [inputs, setInputs] = useState({
     propertyType: 'Commercial' as PropertyType,
     address: '',
+    city: '', state: '', zip: '',
+    propertyRecord: null as {address:string;city:string;state:string;zip:string}|null,
     squareFootage: 12000,
     roofSystem: 'TPO' as RoofSystemType,
     desiredWork: 'Replacement' as 'Replacement' | 'Restoration/Coating' | 'Repair',
@@ -220,10 +223,10 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
               </div>
 
               <div>
-                <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
+                <label htmlFor="commercial-calculator-address" className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
                   Property Address *
                 </label>
-                <input
+                <AddressAutocomplete id="commercial-calculator-address"
                   type="text"
                   required
                   autoComplete="street-address"
@@ -231,6 +234,9 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
                   value={inputs.address}
                   onChange={(e) => setInputs({ ...inputs, address: e.target.value })}
                   className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500"
+                  onPlaceSelected={address => setInputs(current => ({...current, address:address.formatted, city:address.city, state:address.state, zip:address.zip, propertyRecord: {address:address.street,city:address.city,state:address.state,zip:address.zip}}))}
+                  onSelectionCleared={() => setInputs(current => ({...current, city:'', state:'', zip:'', propertyRecord:null}))}
+                  theme="dark" format="combined"
                 />
               </div>
 

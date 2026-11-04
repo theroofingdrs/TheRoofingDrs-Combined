@@ -31,6 +31,8 @@ jobs:
         run: npm test
       - name: Verify public mobile contact workflows in Chromium
         run: npm run test:mobile
+      - name: Verify address selection, fallback and mobile portals in Chromium
+        run: npm run test:address:browser
       - name: Build combined production container
         run: |
           docker build \

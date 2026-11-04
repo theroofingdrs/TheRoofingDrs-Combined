@@ -7,6 +7,8 @@ steps:
       - VITE_SUPABASE_URL=${_VITE_SUPABASE_URL}
       - --build-arg
       - VITE_SUPABASE_PUBLISHABLE_KEY=${_VITE_SUPABASE_PUBLISHABLE_KEY}
+      - --build-arg
+      - VITE_GOOGLE_MAPS_API_KEY=${_VITE_GOOGLE_MAPS_API_KEY}
       - --tag
       - ${_IMAGE_URI}
       - .
@@ -31,6 +33,7 @@ steps:
 images:
   - ${_IMAGE_URI}
 substitutions:
+  _VITE_GOOGLE_MAPS_API_KEY: ""
   _APPROVE_PRODUCTION_DEPLOY: "false"
   _VITE_SUPABASE_URL: https://gubvelngdohrfvqeeabu.supabase.co
   _VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_o2OYRMRHrl8nz8mLdhX9Mg_Pk3jFz-K
