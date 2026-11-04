@@ -21,4 +21,4 @@ Use images as illustrative service imagery unless a specific completed customer 
 ## Exclusions and handling
 Aqua-branded photos are excluded from website-ready copies pending a clean crop. The exact duplicate IMG_4708 is omitted; IMG_4707 is retained. The three previously identified deletion candidates remain in the incoming archive and are not copied to website assets.
 
-Use these images as roofing/service illustrations. Do not attach fabricated customer names, locations, project specifications or testimonials to an image unless independently verified.
+Treat each image as illustrative service imagery unless a specific completed customer project is independently verified. Do not imply a customer relationship, address, project result, testimonial or endorsement from an image alone.
