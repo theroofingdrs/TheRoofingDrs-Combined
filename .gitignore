@@ -14,3 +14,7 @@ the-roof-doctors.zip
 commercial-roof-doctors (2).zip
 
 work/
+
+# Derived SEO artifacts; page declarations remain the source of truth.
+source-apps/crd/public/seo-manifest.json
+source-apps/crd/public/app-routes.json
