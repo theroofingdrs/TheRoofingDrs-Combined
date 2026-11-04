@@ -24,11 +24,11 @@ test('missing key does not load any script or need a DOM to preserve manual entr
  const previous=globalThis.window;globalThis.window={};try{const {loadPlaces}=await import('./places.ts?missing');await assert.rejects(loadPlaces(undefined));}finally{globalThis.window=previous;}
 });
 test('failed SDK load can be retried instead of permanently caching the rejection',async()=>{
- const oldWindow=globalThis.window,oldDocument=globalThis.document;const listeners=new Map();let appended=0;
- const script={addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:()=>{}};
- globalThis.window={};globalThis.document={querySelector:()=>null,createElement:()=>script,head:{appendChild:()=>appended++}};
+ const oldWindow=globalThis.window,oldDocument=globalThis.document;const listeners=new Map();let appended=0,attached=null;
+ const script={addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:()=>{},remove:()=>{attached=null;}};
+ globalThis.window={};globalThis.document={querySelector:()=>attached,createElement:()=>script,head:{appendChild:node=>{appended++;attached=node;}}};
  try{
-  const {loadPlaces}=await import('./places.ts?retry');const first=loadPlaces('public-test-key');listeners.get('error')();await assert.rejects(first);assert.equal(appended,1);
+  const {loadPlaces}=await import('./places.ts?retry');const first=loadPlaces('public-test-key');listeners.get('error')();await assert.rejects(first);assert.equal(appended,1);assert.equal(attached,null);
   const second=loadPlaces('public-test-key');assert.equal(appended,2);
   globalThis.window.google={maps:{importLibrary:async()=>({AutocompleteSessionToken:class{},AutocompleteSuggestion:{fetchAutocompleteSuggestions:async()=>({suggestions:[]})}})}};
   globalThis.window.__trdcrdPlacesReady();await second;
