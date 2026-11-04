@@ -5,12 +5,14 @@ const browserBin=process.env.CHROME_BIN||['chromium','google-chrome','google-chr
 if(!browserBin)throw Error('Chromium is required for mobile workflow validation.');
 const processes=[],clients=[];
 const start=(args,cwd,env={})=>{const p=spawn(process.execPath,args,{cwd,env:{...process.env,NODE_ENV:'production',WEBSITE_DATA_DIR:temp,...env},stdio:'ignore'});processes.push(p);return p;};
-const wait=async(predicate)=>{for(let i=0;i<150;i++){try{if(await predicate())return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error('Mobile workflow timed out');};
+const wait=async(predicate,label='Mobile workflow',timeoutMs=15000)=>{const deadline=Date.now()+timeoutMs;while(Date.now()<deadline){try{if(await predicate())return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error(`${label} timed out after ${timeoutMs}ms`);};
 try{
  start(['server.mjs'],root,{PORT:'19200'});
  if(process.env.CRM_SOURCE_DIR)start(['node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port','19201'],process.env.CRM_SOURCE_DIR);
- const browser=spawn(browserBin,['--headless=new','--no-sandbox','--disable-dev-shm-usage','--disable-background-networking','--disable-component-update','--no-first-run','--remote-debugging-port=19222','--user-data-dir='+path.join(temp,'chrome'),'about:blank'],{stdio:'ignore'});processes.push(browser);
- await wait(async()=>{return(await fetch('http://127.0.0.1:19222/json/version')).ok;});
+ const browserErrors=[];
+ const browser=spawn(browserBin,['--headless=new','--no-sandbox','--disable-dev-shm-usage','--disable-background-networking','--disable-component-update','--no-first-run','--remote-debugging-port=19222','--user-data-dir='+path.join(temp,'chrome'),'about:blank'],{stdio:['ignore','ignore','pipe']});processes.push(browser);
+ browser.stderr.setEncoding('utf8');browser.stderr.on('data',chunk=>browserErrors.push(chunk));
+ await wait(async()=>{if(browser.exitCode!==null)throw Error(`Chromium exited before DevTools was ready (code=${browser.exitCode}, signal=${browser.signalCode||'none'}): ${browserErrors.join('').slice(-3000)}`);const response=await fetch('http://127.0.0.1:19222/json/version').catch(()=>null);return Boolean(response?.ok);},'Chromium DevTools endpoint',60000);
  async function page(crm=false,staff=false){
   const target=await(await fetch('http://127.0.0.1:19222/json/new?about:blank',{method:'PUT'})).json();
   const ws=new WebSocket(target.webSocketDebuggerUrl);clients.push(ws);await new Promise(resolve=>ws.addEventListener('open',resolve,{once:true}));

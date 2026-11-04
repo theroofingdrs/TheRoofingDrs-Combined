@@ -49,7 +49,7 @@ jobs:
           done
           curl --fail --silent http://localhost:8080/residential/api/health | grep -q '"status":"ok"'
           curl --fail --silent http://localhost:8080/commercial/api/health | grep -q '"status":"ok"'
-          curl --fail --silent http://localhost:8080/commercial/ | grep -Fq '<title>Commercial Roof Coatings | Texarkana | CRD</title>'
+          curl --fail --silent http://localhost:8080/commercial/ | grep -Fq '<title>Commercial Roofing | Commercial Roof Doctors – Texarkana, TX</title>'
           curl --fail --silent http://localhost:8080/commercial/commercial-roofing | grep -Fq '<title>Commercial Roofing Services | Ark-La-Tex Roof Doctors | CRD</title>'
           curl --fail --silent http://localhost:8080/commercial/commercial-roofing | grep -Fq 'href="https://theroofingdrs.com/commercial/commercial-roofing"'
           test "$(curl --silent --output /dev/null --write-out '%{http_code}' http://localhost:8080/residential/api/v1/leads)" = 401
