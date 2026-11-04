@@ -13,7 +13,7 @@ test('TRD operational collections and leads survive a fresh process through Supa
     const url = new URL(String(input));
     const method = init.method || 'GET';
     if (method === 'GET') {
-      const recordType = (url.searchParams.get('record_type') || '').replace(/^eq\\./, '');
+      const recordType = (url.searchParams.get('record_type') || '').replace(/^eq\./, '');
       const rows = [...records.values()].filter((row) => row.record_type === recordType);
       return new Response(JSON.stringify(rows), {
         status: 200,
