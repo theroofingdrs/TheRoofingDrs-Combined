@@ -1,5 +1,6 @@
 import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
+import { SeoHead } from '../components/common/SeoHead.tsx';
 
 type EstimateRequestViewProps = { onNavigate: (path: string) => void };
 
@@ -77,6 +78,7 @@ export const EstimateRequestView: React.FC<EstimateRequestViewProps> = ({ onNavi
 
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-10 text-slate-900 sm:py-14">
+      <SeoHead title="Request a Roof Estimate" description="Tell us about the property and roof. Your name, property address, phone, and email are required before we can review your request. Insurance details are optional." canonicalPath="/estimate-request" />
       <section className="mx-auto max-w-4xl">
         <button type="button" onClick={() => onNavigate('/')} className="mb-5 text-sm font-semibold text-red-700 hover:underline">← Back to The Roof Doctors</button>
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">

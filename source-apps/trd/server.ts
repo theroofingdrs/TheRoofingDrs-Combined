@@ -2,6 +2,9 @@ import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import dotenv from 'dotenv';
+import fs from 'node:fs';
+import { applyResidentialMetadata, type Metadata } from '../../shared/seo/html.ts';
+import { publishedBlogPost, publishedResidentialMetadata } from '../../shared/seo/blog.ts';
 import { apiV1Router } from './server/api/v1/router.ts';
 
 dotenv.config();
@@ -31,9 +34,30 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (_req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
+    const html = fs.readFileSync(path.join(distPath, 'index.html'),'utf8');
+    const manifest: Record<string,Metadata> = JSON.parse(fs.readFileSync(path.join(distPath,'seo-manifest.json'),'utf8'));
+    app.use(express.static(distPath,{index:false}));
+    app.get('*', async (req, res) => {
+      // Match the existing case-sensitive client dispatcher; do not consolidate
+      // aliases or silently turn /faq/ (a fallback page) into the /faq screen.
+      const route = req.path || '/';
+      res.set('Cache-Control','no-cache');
+      // Preserve the existing non-public portal/staff shell and auth behavior.
+      if (route.startsWith('/app') || route.startsWith('/field') || route.startsWith('/portal')) return res.type('html').send(html);
+      let fallback: Metadata = {...manifest['/__fallback'],canonicalPath:route,schemaJson:undefined};
+      if (route.startsWith('/service-areas/')) fallback=manifest['/service-areas/'+(route.split('/')[2]||'texarkana')] || manifest['/service-areas/__unknown__'];
+      else if (route.startsWith('/blog/')) fallback=manifest['/blog'];
+      else if (route.startsWith('/insurance-claims')) fallback={...manifest['/insurance-claims'],canonicalPath:route};
+      else if (route.startsWith('/storm-damage')) {
+        const storm = route.includes('hail') ? '/storm-damage/hail-damage' : route.includes('wind') ? '/storm-damage/wind-damage' : route.includes('fallen-tree') ? '/storm-damage/fallen-tree-damage' : route.includes('what-to-do') ? '/storm-damage/what-to-do' : '/storm-damage';
+        fallback={...manifest[storm],canonicalPath:route};
+      }
+      let metadata = manifest[route] || fallback;
+      if(/^\/blog\/[^/]+$/.test(route)) {
+        const result = await publishedBlogPost('TRD',route.slice('/blog/'.length));
+        if(result.post)metadata=publishedResidentialMetadata(result.post);
+      }
+      res.type('html').send(applyResidentialMetadata(html,metadata,route==='/'));
     });
   }
 
