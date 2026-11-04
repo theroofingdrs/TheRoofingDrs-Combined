@@ -55,8 +55,8 @@ export function loadPlaces(key: string | undefined): Promise<Places> {
     const failure = () => { cleanup(); if (!existing) script.remove(); reject(Error('Places unavailable')); };
     const finish = () => {
       cleanup();
-      if (!scope.google?.maps?.importLibrary) { reject(Error('Places unavailable')); return; }
-      Promise.resolve(scope.google.maps.importLibrary('places')).then(placesProvider).then(resolve, reject);
+      if (!scope.google?.maps?.importLibrary) { if (!existing) script.remove(); reject(Error('Places unavailable')); return; }
+      Promise.resolve(scope.google.maps.importLibrary('places')).then(placesProvider).then(resolve, error => { if (!existing) script.remove(); reject(error); });
     };
     const timer = setTimeout(failure, 12000);
     script.addEventListener('error', failure, { once: true });
