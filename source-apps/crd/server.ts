@@ -1,3 +1,4 @@
+import { staffBookingRuntime } from '../../booking/runtime.ts';
 import { validCalculatorInput } from '../../shared/intake-validation.ts';
 import { deliverInquiry, IntakeError } from '../../shared/intake-server.ts';
 import express, { Request, Response } from 'express';
@@ -108,16 +109,24 @@ app.post('/api/save-logo', requireOwnerAuth, async (req: Request, res: Response)
   }
 });
 
-// Protect commercial CRM data and mutations. Public lead, emergency, calculator,
-// health, and branding submissions remain available without a staff session.
-app.use((req: Request, res: Response, next) => {
-  const isStaffRoute =
-    req.path === '/api/admin/stats' ||
-    req.path === '/api/calculator' && req.method === 'GET' ||
-    req.path === '/api/leads' && req.method !== 'POST' ||
-    /^\/api\/leads\/[^/]+/.test(req.path) ||
-    req.path === '/api/save-logo' && req.method !== 'POST';
-  if (!isStaffRoute) return next();
+// Staff calendar operations have their own verified-session and exact-division
+// gate. Default-off runtime returns before any credential or provider access.
+app.all('/api/staff/booking', async (req: Request, res: Response) => {
+  const headers = new Headers();
+  for (const name of ['authorization','origin','content-type']) { const value = req.get(name); if (value) headers.set(name,value); }
+  const request = new globalThis.Request('https://theroofingdrs.com/commercial/api/staff/booking', {method:req.method,headers,...(['GET','HEAD'].includes(req.method)?{}:{body:JSON.stringify(req.body)})});
+  const result = await staffBookingRuntime(request,process.env);
+  result.headers.forEach((value,name)=>res.setHeader(name,value));
+  res.status(result.status).send(await result.text());
+});
+
+// Mirror Express's case-insensitive, optional-trailing-slash routing. Only
+// enumerated public endpoints may bypass verified staff authentication.
+app.use('/api', (req: Request, res: Response, next) => {
+  const route = req.path.toLowerCase().replace(/\/+$/, '') || '/';
+  const publicRead = ['GET', 'HEAD'].includes(req.method) && route === '/health';
+  const publicSubmission = req.method === 'POST' && ['/leads', '/emergency', '/calculator'].includes(route);
+  if (publicRead || publicSubmission) return next();
   return requireOwnerAuth(req, res, next);
 });
 

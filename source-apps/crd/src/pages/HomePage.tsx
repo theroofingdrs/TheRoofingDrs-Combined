@@ -46,7 +46,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-[#151515] border-b border-[#242424] overflow-hidden">
         {/* Editorial Commercial Roof Photography Background */}
         <div className="absolute inset-0 z-0">
-          <img
+          <img decoding="async" fetchPriority="high"
             src="/assets/images/library/owner-commercial-roof-inspection-01.jpeg"
             alt="Commercial roofing inspection documenting roof-surface conditions on a low-slope roof"
             referrerPolicy="no-referrer"
@@ -211,7 +211,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => onOpenInspection('Repair')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
+              <img decoding="async" loading="lazy"
                 src="/assets/images/library/crd-commercial-roof-drain-inspection.jpg"
                 alt="Commercial roof leak diagnostic examination"
                 referrerPolicy="no-referrer"
@@ -240,7 +240,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => onOpenInspection('Storm Damage')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
+              <img decoding="async" loading="lazy"
                 src="/assets/images/library/commercial-roof-maintenance.jpg"
                 alt="Commercial flat roof storm wind damage and emergency response"
                 referrerPolicy="no-referrer"
@@ -269,7 +269,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => onOpenInspection('Replacement')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
+              <img decoding="async" loading="lazy"
                 src="/assets/images/library/commercial-property-roofing-01.jpg"
                 alt="Commercial roof replacement and restoration planning"
                 referrerPolicy="no-referrer"
@@ -298,7 +298,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => navigate('/property-management')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
+              <img decoding="async" loading="lazy"
                 src="/assets/images/library/commercial-property-roofing-02.jpg"
                 alt="Commercial property management portfolio flat rooftops and facilities"
                 referrerPolicy="no-referrer"
@@ -333,7 +333,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
           {/* Left Column: Authentic Inspection Image */}
           <div className="lg:col-span-6 relative">
             <div className="relative overflow-hidden bg-[#181818] border border-[#e6e4df]">
-              <img
+              <img decoding="async" loading="lazy"
                 src="/assets/images/library/commercial-roof-inspection-detail.jpg"
                 alt="Commercial roof technical inspection in progress"
                 referrerPolicy="no-referrer"
@@ -435,7 +435,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="bg-white border border-[#e6e4df] p-7 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="h-48 overflow-hidden bg-[#181818]">
-                  <img
+                  <img decoding="async" loading="lazy"
                     src="/assets/images/library/commercial-roof-maintenance-detail.jpg"
                     alt="Commercial roof repair and curb flashing work"
                     referrerPolicy="no-referrer"
@@ -465,7 +465,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="bg-white border border-[#e6e4df] p-7 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="h-48 overflow-hidden bg-[#181818]">
-                  <img
+                  <img decoding="async" loading="lazy"
                     src="/assets/images/library/commercial-single-ply-roofing-01.jpg"
                     alt="Commercial roof silicone restoration coating application"
                     referrerPolicy="no-referrer"
@@ -495,7 +495,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="bg-white border-2 border-[#181818] p-7 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="h-48 overflow-hidden bg-[#181818]">
-                  <img
+                  <img decoding="async" loading="lazy"
                     src="/assets/images/library/commercial-roof-replacement.jpg"
                     alt="Engineered commercial roof replacement and complete tear-off"
                     referrerPolicy="no-referrer"
@@ -530,7 +530,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       <section className="relative bg-[#151515] border-y border-[#2a2a2a] text-white py-20 sm:py-32 overflow-hidden">
         {/* Full-width dramatic storm photograph backdrop */}
         <div className="absolute inset-0 z-0">
-          <img
+          <img decoding="async" loading="lazy"
             src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=2000&q=85"
             alt="Severe storm front over commercial architecture"
             referrerPolicy="no-referrer"
@@ -670,7 +670,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
 
           <div className="lg:col-span-6">
             <div className="relative overflow-hidden bg-[#181818] border border-[#e6e4df]">
-              <img
+              <img decoding="async" loading="lazy"
                 src="/assets/images/library/commercial-single-ply-roofing-02.jpg"
                 alt="Seamless high-solids silicone commercial roof restoration membrane"
                 referrerPolicy="no-referrer"
@@ -707,7 +707,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
           <div className="bg-white border border-[#e6e4df] overflow-hidden">
             {/* Architectural Property Banner */}
             <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-[#181818]">
-              <img
+              <img decoding="async" loading="lazy"
                 src="/assets/images/library/commercial-property-roofing-02.jpg"
                 alt="Commercial asset management and multi-facility roof lifecycle protection"
                 referrerPolicy="no-referrer"
@@ -798,7 +798,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       <section className="bg-white border-b border-[#e6e4df] py-18 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 relative order-2 lg:order-1">
-            <img
+            <img decoding="async" loading="lazy"
               src="/assets/images/library/commercial-property-roofing-03.jpg"
               alt="Multi-property commercial real estate roof assets and facility management"
               referrerPolicy="no-referrer"
@@ -1098,7 +1098,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 className="group block bg-[#f4f3ef] border border-[#e6e4df] overflow-hidden hover:border-[#181818] transition-colors"
               >
                 <div className="h-32 overflow-hidden bg-[#181818]">
-                  <img
+                  <img decoding="async" loading="lazy"
                     src={ind.img}
                     alt={ind.title}
                     referrerPolicy="no-referrer"
@@ -1190,7 +1190,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 01 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
+                <img decoding="async" loading="lazy"
                   src="/assets/images/library/commercial-industrial-roofing.jpg"
                   alt="Industrial distribution center heat-welded white TPO single-ply roofing"
                   referrerPolicy="no-referrer"
@@ -1214,7 +1214,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 02 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
+                <img decoding="async" loading="lazy"
                   src="/assets/images/library/commercial-roof-system-detail.jpg"
                   alt="Commercial standing seam metal roof restoration"
                   referrerPolicy="no-referrer"
@@ -1238,7 +1238,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 03 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
+                <img decoding="async" loading="lazy"
                   src="/assets/images/library/commercial-roofing-feature.jpg"
                   alt="Commercial medical pavilion high-solids silicone roof restoration"
                   referrerPolicy="no-referrer"
@@ -1262,7 +1262,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 04 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
+                <img decoding="async" loading="lazy"
                   src="/assets/images/library/commercial-roof-inspection.jpg"
                   alt="Severe hail damage commercial forensic mapping"
                   referrerPolicy="no-referrer"

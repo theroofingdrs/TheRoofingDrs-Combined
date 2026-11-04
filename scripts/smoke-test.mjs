@@ -147,6 +147,14 @@ try {
     console.log('PASS ' + app + ' bundle image references (' + referenced.size + ' checked)');
   }
 
+  // Express routing is case-insensitive and accepts trailing slashes by default.
+  // The authorization gate must cover the same route variants as the handlers.
+  for (const route of ['/commercial/api/leads/', '/commercial/API/LEADS', '/commercial/api/admin/stats/', '/commercial/API/CALCULATOR', '/commercial/api/leads/synthetic/photos', '/commercial/API/LEADS/synthetic', '/commercial/api/calculator/']) {
+    const result = await fetch(base + route);
+    assert.equal(result.status, 401, 'Anonymous route variant must require authentication: ' + route);
+  }
+  console.log('PASS case and trailing-slash variants cannot bypass commercial authorization');
+
   // Run only against isolated local data with no production credentials.
   for (const route of ['/residential/api/v1/leads','/commercial/api/leads']) {
     const denied = await fetch(base + route);
@@ -158,6 +166,7 @@ try {
     const unavailable = await fetch(base + route, {method:'POST',headers:{'content-type':'application/json','Idempotency-Key':'f0000000-0000-4000-8000-000000000001'},body:JSON.stringify({name:'Synthetic test',phone:'9035550100'})});
     assert.equal(unavailable.status, 503, 'Missing durable storage must not report success: ' + route);
   }
+  assert.equal((await fetch(base + '/commercial/api/staff/booking',{method:'POST',headers:{'content-type':'application/json'},body:'{}'})).status,503,'Staff booking must remain disabled');
   assert.equal((await fetch(base + '/commercial/api/save-logo', {method:'POST',headers:{'content-type':'application/json'},body:'{}'})).status, 401);
   console.log('PASS private lead access, malformed submissions, and durable-storage failure behavior');
   console.log('Combined site smoke tests passed.');

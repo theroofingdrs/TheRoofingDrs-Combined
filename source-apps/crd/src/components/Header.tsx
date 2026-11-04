@@ -15,6 +15,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
   const { currentPath } = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const mobileToggleRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') { setActiveDropdown(null); if (mobileMenuOpen) { setMobileMenuOpen(false); mobileToggleRef.current?.focus(); } } };
+    document.addEventListener('keydown', close); return () => document.removeEventListener('keydown', close);
+  }, [mobileMenuOpen]);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -57,6 +62,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-services-btn"
                 onClick={() => toggleDropdown('services')}
+                aria-expanded={activeDropdown === 'services'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'services' || currentPath.includes('commercial-roof')
                     ? 'text-[#d99a19]'
@@ -92,6 +98,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-systems-btn"
                 onClick={() => toggleDropdown('systems')}
+                aria-expanded={activeDropdown === 'systems'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'systems' ||
                   currentPath.includes('tpo') ||
@@ -130,6 +137,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-storm-btn"
                 onClick={() => toggleDropdown('storm')}
+                aria-expanded={activeDropdown === 'storm'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'storm' || currentPath.includes('storm') || currentPath.includes('insurance')
                     ? 'text-[#d99a19]'
@@ -168,6 +176,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-industries-btn"
                 onClick={() => toggleDropdown('industries')}
+                aria-expanded={activeDropdown === 'industries'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'industries' || currentPath.includes('industries')
                     ? 'text-[#d99a19]'
@@ -203,6 +212,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-protection-btn"
                 onClick={() => toggleDropdown('protection')}
+                aria-expanded={activeDropdown === 'protection'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'protection' || currentPath.includes('ppp') || currentPath.includes('property')
                     ? 'text-[#d99a19]'
@@ -238,6 +248,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-resources-btn"
                 onClick={() => toggleDropdown('resources')}
+                aria-expanded={activeDropdown === 'resources'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'resources' ||
                   currentPath.includes('calculator') ||
@@ -403,6 +414,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               onClick={onOpenEmergency}
               className="bg-[#b83232] text-white p-2 rounded-none text-xs font-bold font-heading"
               title="Report Roof Emergency"
+              aria-label="Report Roof Emergency"
             >
               <ShieldAlert className="w-5 h-5" />
             </button>
@@ -410,7 +422,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-[#cccccc] hover:text-white bg-[#222222] rounded-none"
-              aria-label="Toggle menu"
+              ref={mobileToggleRef}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="commercial-mobile-navigation"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -420,7 +435,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#181818] border-b border-[#2a2a2a] px-4 pt-3 pb-8 space-y-4 max-h-[85vh] overflow-y-auto">
+        <nav id="commercial-mobile-navigation" aria-label="Commercial mobile navigation" className="lg:hidden bg-[#181818] border-b border-[#2a2a2a] px-4 pt-3 pb-8 space-y-4 max-h-[85vh] overflow-y-auto">
           {/* Quick Contact Header in Mobile */}
           <div className="bg-[#111111] p-3 rounded-none border border-[#333333] flex items-center justify-between">
             <div>
@@ -577,7 +592,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               Staff / Admin Operations
             </a>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

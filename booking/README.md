@@ -141,3 +141,27 @@ The corrected tests reproduce the exact NUL finding: configurationReady=false an
 Tests cover the approved time zone/window, closures, lead-time/horizon validation, reserve/replay, provider uncertainty, cancel, non-overlapping reschedule, unknown availability and suppressed provider notifications. Database tests separately cover the disabled gate, capacity, claim identity, both-slot retention during uncertain rescheduling and browser execution denial. They do not establish live Google permission or appointment behavior.
 
 Overlapping rescheduling requires staff review; FreeBusy cannot safely subtract our old event without potentially hiding another event. Unknown create/change outcomes require provider reconciliation before releasing capacity. Production confirmation/reminder dispatch and a hosted staff booking workflow remain release dependencies. No route, schedule, real event or email was activated.
+
+## Default-off staff operations and evidence recovery
+
+`/commercial/api/staff/booking` is now mounted behind an explicit disabled runtime
+and configuration preflight. It verifies the caller's Supabase session, derives
+the actor server-side, and uses the Operations exact-division scheduling RPC before
+any provider action. CORS permits only the configured HTTPS CRM origin. The CRM
+staff panel supports creating, rescheduling, cancelling and checking uncertain
+bookings; the controls stay disabled until the database gate is approved.
+
+`google-auth.ts` refreshes OAuth credentials server-side with bounded requests and
+no provider error-body logging. `GoogleCalendarProvider.inspect` verifies current
+write authority, event identity, private booking reference and exact interval.
+Recovery never repeats an uncertain create/move. Positive evidence is committed
+through `crm_reconcile_booking` with the inspected claim; absent events can settle
+only a pending cancellation. Wrong/missing evidence retains capacity. Reminder and
+customer-update jobs are captured by Operations only after its independent,
+default-off notification gates are approved.
+
+Run `node --experimental-strip-types scripts/runtime-readiness.mjs` for a
+configuration-only preflight. It prints binding names, never secret values. It
+cannot establish actual OAuth access, deployed migrations, backups or live
+provider behavior. Those require separately approved hosted verification. No live
+booking or provider messages were activated during development.

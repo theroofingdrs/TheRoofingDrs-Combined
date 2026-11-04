@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrandLogo } from '../common/BrandLogo.tsx';
 import {
   PhoneCall,
@@ -23,6 +23,11 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
   onOpenIntake,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileToggleRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape' && mobileMenuOpen) { setMobileMenuOpen(false); mobileToggleRef.current?.focus(); } };
+    document.addEventListener('keydown', close); return () => document.removeEventListener('keydown', close);
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { label: 'Home', path: '/', isHome: true },
@@ -152,6 +157,8 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+              ref={mobileToggleRef}
+              aria-controls="residential-mobile-navigation"
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
@@ -165,7 +172,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
 
         {/* 3. Mobile Navigation Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-slate-200 px-4 py-4 shadow-xl divide-y divide-slate-100 max-h-[calc(100vh-120px)] overflow-y-auto">
+          <div id="residential-mobile-navigation" role="navigation" aria-label="Residential mobile navigation" className="lg:hidden bg-white border-t border-slate-200 px-4 py-4 shadow-xl divide-y divide-slate-100 max-h-[calc(100vh-120px)] overflow-y-auto">
             <div className="py-2 space-y-1">
               {navLinks.map((link) => {
                 const active = isLinkActive(link.path);

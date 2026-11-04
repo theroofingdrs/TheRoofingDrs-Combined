@@ -1,12 +1,13 @@
 /** Server-side orchestration. Not mounted on a public route; production remains disabled. */
 import {validateBookingConfiguration,type BookingConfig,type Division,type Service,type Mode} from './readiness.ts';
 export type Policy={enabled:boolean;providerVerified:boolean;booking:BookingConfig;operators:Record<Division,string|null>;minNoticeMinutes:number|null;maxAdvanceDays:number|null};
-export type Reservation={request_key:string;division_id:Division;calendar_id:string;start_at:string;end_at:string;proposed_start?:string;proposed_end?:string;claim:string;provider_id?:string;status:string;context:{before:number;after:number;service:Service;mode:Mode;request?:unknown}};
+export type Reservation={request_key:string;division_id:Division;calendar_id:string;start_at:string;end_at:string;proposed_start?:string;proposed_end?:string;claim:string;provider_id?:string;status:string;operation?:'create'|'move'|'cancel';context:{before:number;after:number;service:Service;mode:Mode;request?:unknown}};
 export type Store={call:(action:string,request:Record<string,unknown>)=>Promise<Reservation&{action?:string}>};
-export type Provider={busy:(calendars:string[],start:string,end:string)=>Promise<boolean>;create:(calendar:string,event:string,details:{key:string;start:string;end:string;division:Division})=>Promise<string>;cancel:(calendar:string,event:string)=>Promise<void>;move:(calendar:string,event:string,start:string,end:string)=>Promise<void>};
+export type EventEvidence={state:'present'|'cancelled'|'absent';key?:string;start?:string;end?:string};
+export type Provider={inspect?:(calendar:string,event:string)=>Promise<EventEvidence>;busy:(calendars:string[],start:string,end:string)=>Promise<boolean>;create:(calendar:string,event:string,details:{key:string;start:string;end:string;division:Division})=>Promise<string>;cancel:(calendar:string,event:string)=>Promise<void>;move:(calendar:string,event:string,start:string,end:string)=>Promise<void>};
 const iso=(ms:number)=>new Date(ms).toISOString();
 function allowed(policy:Policy){
- if(!policy.enabled||!policy.providerVerified||!validateBookingConfiguration(policy.booking).configurationReady||!policy.operators.TRD||!policy.operators.CRD||!Number.isInteger(policy.minNoticeMinutes)||Number(policy.minNoticeMinutes)<0||!Number.isInteger(policy.maxAdvanceDays)||Number(policy.maxAdvanceDays)<1)throw new Error('Booking is disabled or prerequisites are unverified.');
+ if(policy.booking.timezone!=='America/Chicago'||!policy.enabled||!policy.providerVerified||!validateBookingConfiguration(policy.booking).configurationReady||!policy.operators.TRD||!policy.operators.CRD||!Number.isInteger(policy.minNoticeMinutes)||Number(policy.minNoticeMinutes)<0||!Number.isInteger(policy.maxAdvanceDays)||Number(policy.maxAdvanceDays)<1)throw new Error('Booking is disabled or prerequisites are unverified.');
 }
 function interval(policy:Policy,division:Division,service:Service,mode:Mode,start:string,now:number){
  const d=policy.booking.divisions[division];const duration=d.durationsMinutes[service]?.[mode];
@@ -39,6 +40,24 @@ export class BookingEngine{
    return {status:'confirmed',reference:request.key,notification:'pending'};
   }catch(error){await this.store.call('finish',{key:request.key,claim:row.claim,status:'uncertain'});throw error;}
  }
+ async reconcile(key:string){
+  allowed(this.policy);
+  const row=await this.store.call('get',{key});
+  if(!['reserved','changing','uncertain'].includes(row.status))return {status:row.status};
+  if(!this.provider.inspect)throw Error('Provider evidence inspection is unavailable.');
+  const event=row.provider_id||'roof'+key.replaceAll('-','');
+  const evidence=await this.provider.inspect(row.calendar_id,event);
+  if(row.operation==='cancel'){
+   if(!['absent','cancelled'].includes(evidence.state))return {status:'uncertain'};
+   await this.store.call('reconcile',{key,claim:row.claim,status:'cancelled',provider:event});
+   return {status:'cancelled'};
+  }
+  const start=iso(Date.parse(row.proposed_start||row.start_at)+row.context.before*60000);
+  const end=iso(Date.parse(row.proposed_end||row.end_at)-row.context.after*60000);
+  if(evidence.state!=='present'||evidence.key!==key||Date.parse(evidence.start!)!==Date.parse(start)||Date.parse(evidence.end!)!==Date.parse(end))return {status:'uncertain'};
+  await this.store.call('reconcile',{key,claim:row.claim,status:'confirmed',provider:event,start,end});
+  return {status:'confirmed',notification:'pending'};
+ }
  async cancel(key:string){
   allowed(this.policy);const existing=await this.store.call('get',{key});
   if(existing.status==='cancelled')return {status:'cancelled'};
@@ -64,10 +83,27 @@ export class GoogleCalendarProvider implements Provider{
  private token:()=>Promise<string>;private transport:typeof fetch;
  constructor(token:()=>Promise<string>,transport:typeof fetch=fetch){this.token=token;this.transport=transport;}
  private async request(route:string,method='GET',body?:unknown){const r=await this.transport('https://www.googleapis.com/calendar/v3/'+route,{method,headers:{Authorization:'Bearer '+await this.token(),'Content-Type':'application/json'},...(body===undefined?{}:{body:JSON.stringify(body)}),signal:AbortSignal.timeout(15000),redirect:'error'});return r;}
+ private async writable(calendar:string){
+  const r=await this.request('users/me/calendarList/'+encodeURIComponent(calendar));
+  const data=r.ok?await r.json():null;
+  if(data?.id!==calendar||!['writer','owner'].includes(data.accessRole))throw Error('Calendar write authority is unverified.');
+ }
+ async inspect(calendar:string,event:string):Promise<EventEvidence>{
+  await this.writable(calendar);
+  const r=await this.request('calendars/'+encodeURIComponent(calendar)+'/events/'+encodeURIComponent(event));
+  if(r.status===404||r.status===410)return {state:'absent'};
+  if(!r.ok)throw Error('Calendar recovery evidence unavailable.');
+  const data=await r.json();
+  if(data.id!==event)throw Error('Provider evidence identity mismatch.');
+  if(data.status==='cancelled')return {state:'cancelled'};
+  if(data.status!=='confirmed')throw Error('Provider event is not confirmed.');
+  if(!Number.isFinite(Date.parse(data.start?.dateTime))||!Number.isFinite(Date.parse(data.end?.dateTime)))throw Error('Provider evidence interval missing.');
+  return {state:'present',key:data.extendedProperties?.private?.trdcrd_booking,start:data.start.dateTime,end:data.end.dateTime};
+ }
  async busy(calendars:string[],start:string,end:string){const r=await this.request('freeBusy','POST',{timeMin:start,timeMax:end,items:calendars.map(id=>({id}))});if(!r.ok)throw Error('Calendar availability unavailable.');const data=await r.json();return calendars.some(id=>{const calendar=data.calendars?.[id];if(!calendar||calendar.errors?.length||!Array.isArray(calendar.busy))throw Error('Calendar access unverified.');return calendar.busy.length>0;});}
- async create(calendar:string,event:string,details:{key:string;start:string;end:string;division:Division}){const route='calendars/'+encodeURIComponent(calendar)+'/events';const r=await this.request(route+'?sendUpdates=none','POST',{id:event,summary:(details.division==='TRD'?'The Roofing Doctors':'Commercial Roof Doctors')+' roofing appointment',start:{dateTime:details.start},end:{dateTime:details.end},extendedProperties:{private:{trdcrd_booking:details.key}}});if(!r.ok)throw Error('Calendar creation outcome unconfirmed.');const data=await r.json();if(data.id!==event||data.status==='cancelled'||Date.parse(data.start?.dateTime)!==Date.parse(details.start)||Date.parse(data.end?.dateTime)!==Date.parse(details.end))throw Error('Unexpected calendar event identity or interval.');return data.id;}
+ async create(calendar:string,event:string,details:{key:string;start:string;end:string;division:Division}){const route='calendars/'+encodeURIComponent(calendar)+'/events';const r=await this.request(route+'?sendUpdates=none','POST',{id:event,summary:(details.division==='TRD'?'The Roofing Doctors':'Commercial Roof Doctors')+' roofing appointment',start:{dateTime:details.start},end:{dateTime:details.end},extendedProperties:{private:{trdcrd_booking:details.key}}});if(!r.ok)throw Error('Calendar creation outcome unconfirmed.');const data=await r.json();if(data.id!==event||data.status!=='confirmed'||Date.parse(data.start?.dateTime)!==Date.parse(details.start)||Date.parse(data.end?.dateTime)!==Date.parse(details.end))throw Error('Unexpected calendar event identity or interval.');return data.id;}
  async cancel(calendar:string,event:string){const r=await this.request('calendars/'+encodeURIComponent(calendar)+'/events/'+encodeURIComponent(event)+'?sendUpdates=none','DELETE');if(!r.ok){if(r.status!==404&&r.status!==410)throw Error('Cancellation outcome unconfirmed.');const binding=await this.request('users/me/calendarList/'+encodeURIComponent(calendar));const data=binding.ok?await binding.json():null;if(data?.id!==calendar||!['writer','owner'].includes(data.accessRole))throw Error('Calendar access must be reverified before treating absence as cancellation.');}}
- async move(calendar:string,event:string,start:string,end:string){const r=await this.request('calendars/'+encodeURIComponent(calendar)+'/events/'+encodeURIComponent(event)+'?sendUpdates=none','PATCH',{start:{dateTime:start},end:{dateTime:end}});if(!r.ok)throw Error('Reschedule outcome unconfirmed.');const data=await r.json();if(data.id!==event||Date.parse(data.start?.dateTime)!==Date.parse(start)||Date.parse(data.end?.dateTime)!==Date.parse(end))throw Error('Reschedule evidence does not match.');}
+ async move(calendar:string,event:string,start:string,end:string){const r=await this.request('calendars/'+encodeURIComponent(calendar)+'/events/'+encodeURIComponent(event)+'?sendUpdates=none','PATCH',{start:{dateTime:start},end:{dateTime:end}});if(!r.ok)throw Error('Reschedule outcome unconfirmed.');const data=await r.json();if(data.id!==event||data.status!=='confirmed'||Date.parse(data.start?.dateTime)!==Date.parse(start)||Date.parse(data.end?.dateTime)!==Date.parse(end))throw Error('Reschedule evidence does not match.');}
 }
 export function createApprovedBookingDraft(){
  const config:BookingConfig={enabled:false,central:{provider:'GOOGLE_CALENDAR',accountAlias:'central-booking-account'},timezone:'America/Chicago',confirmation:null,divisions:{} as BookingConfig['divisions']};
@@ -75,4 +111,4 @@ export function createApprovedBookingDraft(){
  return config;
 }
 
-export function createRpcBookingStore(rpc:(name:string,args:Record<string,unknown>)=>Promise<{data:any;error:any}>):Store { return {call:async(action,request)=>{const {data,error}=await rpc('crm_booking_operation',{p_action:action,p_request:request});if(error)throw new Error('Booking persistence failed; inspect the saved operation before retrying.');return data;}}; }
+export function createRpcBookingStore(rpc:(name:string,args:Record<string,unknown>)=>Promise<{data:any;error:any}>):Store { return {call:async(action,request)=>{const {data,error}=action==='reconcile'?await rpc('crm_reconcile_booking',{p_key:request.key,p_claim:request.claim,p_outcome:request.status,p_provider:request.provider,p_start:request.start??null,p_end:request.end??null}):await rpc('crm_booking_operation',{p_action:action,p_request:request});if(error)throw new Error('Booking persistence failed; inspect the saved operation before retrying.');return data;}}; }

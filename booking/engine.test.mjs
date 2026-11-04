@@ -15,10 +15,27 @@ test('Central operating hours, Sunday closure and lead-time limits are enforced'
 test('book/replay, reschedule and cancellation persist outcomes without duplicate provider creation',async()=>{const f=fixture();assert.equal((await f.engine.book(f.request)).status,'confirmed');assert.equal((await f.engine.book(f.request)).status,'confirmed');assert.equal(f.events.filter(x=>x[0]==='create').length,1);assert.equal((await f.engine.reschedule(f.request.key,'2027-01-05T15:00:00Z')).status,'confirmed');assert.equal((await f.engine.cancel(f.request.key)).status,'cancelled');assert.equal((await f.engine.cancel(f.request.key)).status,'cancelled');});
 test('uncertain creation is persisted and never blindly repeated',async()=>{const f=fixture();f.provider.create=async()=>{throw Error('Lost provider response');};await assert.rejects(f.engine.book(f.request));assert.equal(f.rows.get(f.request.key).status,'uncertain');assert.equal((await f.engine.book(f.request)).status,'uncertain');});
 test('provider availability errors fail closed before event creation',async()=>{const f=fixture();f.provider.busy=async()=>{throw Error('Calendar unavailable');};await assert.rejects(f.engine.book(f.request));assert.equal(f.events.length,0);assert.equal(f.rows.get(f.request.key).status,'cancelled');});
-test('provider adapter denies missing calendar access and suppresses provider notifications',async()=>{const calls=[];const p=new GoogleCalendarProvider(async()=>'synthetic-token',async(url,options)=>{calls.push({url,...options});if(url.endsWith('freeBusy'))return Response.json({calendars:{}});const b=JSON.parse(options.body);return Response.json({id:b.id,start:b.start,end:b.end});});await assert.rejects(p.busy(['missing'],'2027-01-04T15:00:00Z','2027-01-04T16:00:00Z'));await p.create('synthetic','roof123',{key:'123',division:'TRD',start:'2027-01-04T15:00:00Z',end:'2027-01-04T16:00:00Z'});assert(calls.at(-1).url.endsWith('sendUpdates=none'));});
+test('provider adapter denies missing calendar access and suppresses provider notifications',async()=>{const calls=[];const p=new GoogleCalendarProvider(async()=>'synthetic-token',async(url,options)=>{calls.push({url,...options});if(url.endsWith('freeBusy'))return Response.json({calendars:{}});const b=JSON.parse(options.body);return Response.json({id:b.id,status:'confirmed',start:b.start,end:b.end});});await assert.rejects(p.busy(['missing'],'2027-01-04T15:00:00Z','2027-01-04T16:00:00Z'));await p.create('synthetic','roof123',{key:'123',division:'TRD',start:'2027-01-04T15:00:00Z',end:'2027-01-04T16:00:00Z'});assert(calls.at(-1).url.endsWith('sendUpdates=none'));});
 
 test('replay tolerates database JSON object key ordering and observes Central DST',async()=>{
  const f=fixture();await f.engine.book(f.request);f.rows.get(f.request.key).context.request=Object.fromEntries(Object.entries(f.request).sort(([a],[b])=>a.localeCompare(b)));assert.equal((await f.engine.book(f.request)).status,'confirmed');
  const dst=fixture();const engine=new BookingEngine(dst.policy,dst.store,dst.provider,()=>Date.parse('2027-03-12T12:00:00Z'));assert.equal((await engine.book({...dst.request,start:'2027-03-15T13:30:00Z'})).status,'confirmed');
  await assert.rejects(engine.book({...dst.request,key:'early-dst',start:'2027-03-15T12:30:00Z'}));
+});
+
+test('reconciliation reads positive provider evidence without repeating an uncertain creation',async()=>{
+ const f=fixture();f.provider.create=async()=>{throw Error('lost acknowledgement');};
+ await assert.rejects(f.engine.book(f.request));const row=f.rows.get(f.request.key);row.operation='create';
+ let reads=0;f.provider.inspect=async()=>{reads++;return {state:'present',key:f.request.key,start:f.request.start,end:'2027-01-04T15:30:00Z'};};
+ assert.equal((await f.engine.reconcile(f.request.key)).status,'confirmed');assert.equal(row.status,'confirmed');assert.equal(reads,1);assert.equal(f.events.length,0);
+});
+test('absent, wrong-key and wrong-interval evidence never releases uncertain create capacity',async()=>{
+ for(const evidence of [{state:'absent'},{state:'present',key:'different',start:'2027-01-04T15:00Z',end:'2027-01-04T15:30Z'},{state:'present',key:'synthetic-key',start:'2027-01-04T16:00Z',end:'2027-01-04T16:30Z'}]){
+  const f=fixture();f.provider.create=async()=>{throw Error('lost');};await assert.rejects(f.engine.book(f.request));f.provider.inspect=async()=>evidence;
+  assert.equal((await f.engine.reconcile(f.request.key)).status,'uncertain');assert.equal(f.rows.get(f.request.key).status,'uncertain');
+ }
+});
+test('calendar recovery requires current write authority and matching event identity',async()=>{
+ const p=new GoogleCalendarProvider(async()=>'test',async(url)=>Response.json(url.includes('calendarList')?{id:'test',accessRole:'reader'}:{id:'event'}));await assert.rejects(p.inspect('test','event'),/authority/);
+ const q=new GoogleCalendarProvider(async()=>'test',async(url)=>url.includes('calendarList')?Response.json({id:'test',accessRole:'writer'}):new Response('',{status:404}));assert.deepEqual(await q.inspect('test','event'),{state:'absent'});
 });
