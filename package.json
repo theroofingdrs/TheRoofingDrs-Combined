@@ -7,6 +7,9 @@
     "typecheck": "npm --prefix source-apps/trd run lint && npm --prefix source-apps/crd run lint",
     "build": "npm --prefix source-apps/trd run build && npm --prefix source-apps/crd run build",
     "start": "node server.mjs",
-    "test": "npm run typecheck && node --experimental-strip-types booking/readiness.test.mjs && npm run build && node scripts/smoke-test.mjs"
+    "test": "npm run typecheck && npm run test:intake && npm run test:booking && npm run build && node scripts/smoke-test.mjs",
+    "test:intake": "node --experimental-strip-types shared/intake-server.test.mjs && node --experimental-strip-types shared/intake-client.test.mjs",
+    "test:booking": "node --experimental-strip-types booking/readiness.test.mjs && node --experimental-strip-types booking/engine.test.mjs && source-apps/trd/node_modules/.bin/tsc -p booking/tsconfig.json",
+    "test:mobile": "node scripts/mobile-workflows.mjs"
   }
 }

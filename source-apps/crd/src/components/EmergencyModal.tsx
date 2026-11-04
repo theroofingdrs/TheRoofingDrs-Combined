@@ -1,3 +1,4 @@
+import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import { X, AlertTriangle, Phone, Upload, CheckCircle2, ShieldAlert } from 'lucide-react';
 import { BUSINESS_INFO } from '../constants';
@@ -35,7 +36,9 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
     if (!e.target.files) return;
     const files = Array.from(e.target.files) as File[];
 
+    if(photos.length+files.length>10||photos.reduce((sum,p)=>sum+p.size,0)+files.reduce((sum,file)=>sum+file.size,0)>18*1024*1024){setErrorMessage('Use up to 10 photographs totaling 18 MB. Your form details are preserved.');return;}
     files.forEach((file: File) => {
+      if(!['image/jpeg','image/png','image/webp'].includes(file.type)){setErrorMessage('Use JPEG, PNG or WebP photographs.');return;}
       // Basic client-side check
       if (file.size > 15 * 1024 * 1024) {
         alert(`File ${file.name} exceeds 15MB size limit.`);
@@ -82,21 +85,12 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
         message: `EMERGENCY ALERT: ${formData.emergencyType}. Water entering: ${formData.waterEnteringBuilding}. Occupied: ${formData.buildingOccupied}. Details: ${formData.description}`,
       };
 
-      const res = await fetch('/api/emergency', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await res.json();
-      if (!res.ok || !data.success) {
-        throw new Error(data.error || 'Failed to submit emergency dispatch request.');
-      }
+      await submitInquiry('/commercial/api/emergency', payload);
 
       setIsSuccess(true);
     } catch (err: any) {
       setErrorMessage(
-        `We couldn't submit your request. Please try again or call CRD at ${BUSINESS_INFO.phone}.`
+        err.message || `We couldn't submit your request. Please retry or call CRD at ${BUSINESS_INFO.phone}.`
       );
     } finally {
       setIsSubmitting(false);
@@ -151,7 +145,7 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
               Emergency Report Logged
             </h3>
             <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed">
-              Your emergency dispatch request has been recorded into the CRD Field Operations system. Our commercial team has received your priority alert and documentation.
+              Your emergency inquiry has reached Operations. For urgent safety or dispatch coordination, call our team directly. This form does not confirm dispatch.
             </p>
             <div className="bg-slate-900 p-4 rounded-lg border border-slate-800 max-w-md mx-auto text-left text-xs space-y-1 text-slate-300">
               <div className="font-bold text-amber-400 uppercase font-mono-crd mb-1">
@@ -353,7 +347,7 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose 
                   id="emergency-photo-file-input"
                   type="file"
                   multiple
-                  accept="image/*"
+                  accept="image/jpeg,image/png,image/webp"
                   onChange={handlePhotoUpload}
                   className="hidden"
                 />

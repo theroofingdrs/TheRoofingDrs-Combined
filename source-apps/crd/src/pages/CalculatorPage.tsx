@@ -1,3 +1,4 @@
+import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import { Calculator, CheckCircle2, ArrowRight, ArrowLeft, ShieldAlert, FileText, AlertTriangle, Building, Layers, Wrench } from 'lucide-react';
 import { SeoMeta } from '../components/SeoMeta';
@@ -44,6 +45,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
 
   const [isCalculating, setIsCalculating] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState('');
 
   // Isolated calculation function
   const runCalculation = async () => {
@@ -100,18 +102,12 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
     e.preventDefault();
     setIsCalculating(true);
     try {
-      const response = await fetch('/api/calculator', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...inputs, submitLead: true }),
-      });
-      const result = await response.json();
-      if (!response.ok || !result.success) throw new Error(result.error || 'Unable to submit request');
+      await submitInquiry('/commercial/api/calculator', { ...inputs, submitLead: true });
+      setSubmissionError('');
       setSubmitted(true);
       setStep(5);
     } catch (e) {
-      setSubmitted(true);
-      setStep(5);
+      setSubmissionError(e instanceof Error ? e.message : 'Submission failed. Please retry.');
     } finally {
       setIsCalculating(false);
     }
@@ -119,6 +115,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenInspection
 
   return (
     <div className="min-h-screen bg-[#090d16] text-slate-100 font-sans-crd pb-24">
+      {submissionError && <p role="alert" className="p-4 text-red-300">{submissionError}</p>}
       <SeoMeta
         title="Commercial Roof Cost Calculator | Planning Estimates"
         description="Estimate commercial roof replacement, restoration, and coating planning budgets for facilities across Texas, Arkansas, Louisiana, and Oklahoma. Educational budget calculator."

@@ -1,3 +1,4 @@
+import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import { X, FileText, CheckCircle2, Upload, AlertCircle } from 'lucide-react';
 import { BUSINESS_INFO } from '../constants';
@@ -51,7 +52,9 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
     if (!e.target.files) return;
     const files = Array.from(e.target.files) as File[];
 
+    if(photos.length+files.length>10||photos.reduce((sum,p)=>sum+p.size,0)+files.reduce((sum,file)=>sum+file.size,0)>18*1024*1024){setErrorMessage('Use up to 10 photographs totaling 18 MB. Your form details are preserved.');return;}
     files.forEach((file: File) => {
+      if(!['image/jpeg','image/png','image/webp'].includes(file.type)){setErrorMessage('Use JPEG, PNG or WebP photographs.');return;}
       if (file.size > 15 * 1024 * 1024) {
         alert(`File ${file.name} exceeds 15MB size limit.`);
         return;
@@ -102,21 +105,12 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
         referrer: document.referrer || '',
       };
 
-      const res = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await res.json();
-      if (!res.ok || !data.success) {
-        throw new Error(data.error || 'Failed to submit commercial roof inspection request.');
-      }
+      await submitInquiry('/commercial/api/leads', payload);
 
       setIsSuccess(true);
     } catch (err: any) {
       setErrorMessage(
-        `We couldn't submit your request. Please try again or call CRD at ${BUSINESS_INFO.phone}.`
+        err.message || `We couldn't submit your request. Please retry or call CRD at ${BUSINESS_INFO.phone}.`
       );
     } finally {
       setIsSubmitting(false);

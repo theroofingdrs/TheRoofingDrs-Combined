@@ -1,3 +1,4 @@
+import { deliverInquiry, IntakeError } from '../../../../../shared/intake-server.ts';
 /**
  * The Roof Doctors — Versioned REST API Router (/api/v1/*)
  * Houses all server-side endpoints, business validations, scoring, and audit hooks.
@@ -59,7 +60,7 @@ import type {
 } from '../../../shared/types/index.ts';
 
 export const apiV1Router = express.Router();
-apiV1Router.use(express.json());
+apiV1Router.use(express.json({limit:'25mb'}));
 
 // Helper to extract caller context for audit logging
 function getCallerContext(req: Request) {
@@ -185,93 +186,17 @@ apiV1Router.get('/leads', async (req, res) => {
 });
 
 apiV1Router.post('/leads', async (req, res) => {
-  const db = getDatabase();
   const body = req.body;
-  const textFields = ['name','phone','email','address','city','state','zip','serviceRequested','leadType','preferredContactMethod','message','source','landingPage','referrer','utmSource','utmMedium','utmCampaign'];
-  if (!body || typeof body !== 'object' || Array.isArray(body) || textFields.some(field => body[field] !== undefined && (typeof body[field] !== 'string' || body[field].length > 10000))) {
-    return res.status(400).json({ error: 'Please enter valid contact and roofing request details.' });
+  const fields = ['name','phone','email','address','city','state','zip','serviceRequested','leadType','preferredContactMethod','message','source','landingPage','referrer','utmSource','utmMedium','utmCampaign'];
+  if (!body || typeof body !== 'object' || Array.isArray(body) || fields.some(field => body[field] !== undefined && (typeof body[field] !== 'string' || body[field].length > 10000)) || !body.name?.trim() || (!body.phone?.trim() && !body.email?.trim())) {
+    return res.status(400).json({ error: 'Enter your name and a phone number or email address.' });
   }
-
-  if (!body.name?.trim() || !body.phone?.trim()) {
-    return res.status(400).json({ error: 'Name and phone number are required to submit an inquiry.' });
+  try {
+    const receipt = await deliverInquiry('TRD', req.get('Idempotency-Key'), body);
+    return res.status(receipt.replayed ? 200 : 201).json({ ...body, id: receipt.source_id, crmLeadId: receipt.lead_id, createdAt: receipt.received_at, deliveryStatus: 'delivered' });
+  } catch (error) {
+    return res.status(error instanceof IntakeError ? error.status : 503).json({ error: error instanceof Error ? error.message : 'Inquiry delivery is unavailable.' });
   }
-
-  const scoringRule = db.businessRules.find((r) => r.ruleKey === 'lead_scoring_weights');
-  const { score, scoreReasons } = calculateLeadScore(body, scoringRule);
-
-  const now = new Date().toISOString();
-  const leadId = generateId('lead');
-
-  const newLead: Lead = {
-    id: leadId,
-    name: body.name.trim(),
-    phone: body.phone.trim(),
-    email: body.email?.trim() || '',
-    address: body.address?.trim() || '',
-    city: body.city?.trim() || '',
-    state: body.state?.trim() || 'TX',
-    zip: body.zip?.trim() || '',
-    leadType: body.leadType || 'NOT_SURE',
-    serviceRequested: body.serviceRequested || 'Diagnostic Inspection',
-    emergencyFlag: Boolean(body.emergencyFlag),
-    stormRelatedFlag: Boolean(body.stormRelatedFlag),
-    insuranceRelatedFlag: Boolean(body.insuranceRelatedFlag),
-    preferredContactMethod: body.preferredContactMethod || 'PHONE',
-    message: body.message || '',
-    estimateDetails: body.estimateDetails || undefined,
-    photoUrls: body.photoUrls || [],
-    landingPage: body.landingPage || '/',
-    source: body.source || 'Direct',
-    utmSource: body.utmSource,
-    utmCampaign: body.utmCampaign,
-    utmMedium: body.utmMedium,
-    referrer: body.referrer,
-    firstTouchAttribution: body.source || 'Direct',
-    lastTouchAttribution: body.source || 'Direct',
-    division: 'RESIDENTIAL',
-    status: 'NEW',
-    score,
-    scoreReasons,
-    createdAt: now,
-    updatedAt: now,
-  };
-
-  try { await saveSharedLead(newLead); }
-  catch (error) { console.error('Shared lead save failed:', error); return res.status(503).json({ error: 'We could not save your inquiry right now. Please try again.' }); }
-  db.leads.unshift(newLead);
-
-  // Record initial activity
-  db.leadActivities.unshift({
-    id: generateId('lact'),
-    leadId: newLead.id,
-    activityType: 'CREATED',
-    description: `Lead created from ${newLead.source} with score ${newLead.score}.`,
-    createdAt: now,
-  });
-
-  persistDatabase();
-
-  const ctx = getCallerContext(req);
-  logAuditAction({
-    userId: ctx.userId,
-    userRole: ctx.userRole,
-    action: 'CREATE',
-    entityType: 'Lead',
-    entityId: newLead.id,
-    newState: { id: newLead.id, name: newLead.name, score: newLead.score },
-    ipAddress: ctx.ipAddress,
-    userAgent: ctx.userAgent,
-  });
-
-  try { await emitSystemEvent({
-    type: 'LEAD_CREATED',
-    entityType: 'Lead',
-    entityId: newLead.id,
-    data: newLead,
-    userId: ctx.userId,
-  }); } catch (error) { console.error('Lead saved; follow-up event failed:', error); }
-
-  res.status(201).json(newLead);
 });
 
 apiV1Router.get('/leads/:id', async (req, res) => {

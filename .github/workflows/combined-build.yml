@@ -29,6 +29,8 @@ jobs:
         run: npm run install:apps
       - name: Typecheck, build both applications, and run combined smoke tests
         run: npm test
+      - name: Verify public mobile contact workflows in Chromium
+        run: npm run test:mobile
       - name: Build combined production container
         run: |
           docker build \

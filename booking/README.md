@@ -133,3 +133,11 @@ Local booking input contract, deliberately distinguished from a Google-wide synt
 7. A syntactically accepted ID still requires independently approved provider access, identity and division-binding verification before any live use. No calendar existence/ownership is inferred by preflight.
 
 The corrected tests reproduce the exact NUL finding: configurationReady=false and no preview context for either division. Additional cases cover nonstrings, empty values, whitespace, all ASCII/C1 control codepoints, malformed Unicode, primary alias, pasted URLs and preservation of synthetic opaque IDs. The new regression suite was also run against the exact reviewed old SHA: the NUL/unsafe-ID regression groups failed as expected. Current suite: 14 groups passed; strict standalone TypeScript check passed. Further build/CI/re-review results are associated with the exact corrective commit in PR #32.
+
+## Prepared disabled engine (November 4)
+
+`engine.ts` adds a server-side orchestration boundary and injected Google transport. The database reservation store is in the Operations repository migration `20261104040000_disabled_booking_store.sql`. Both gates remain disabled, and no public booking endpoint is mounted. `createApprovedBookingDraft` retains the already approved Central schedule while leaving all unresolved resource/provider settings unset.
+
+Tests cover the approved time zone/window, closures, lead-time/horizon validation, reserve/replay, provider uncertainty, cancel, non-overlapping reschedule, unknown availability and suppressed provider notifications. Database tests separately cover the disabled gate, capacity, claim identity, both-slot retention during uncertain rescheduling and browser execution denial. They do not establish live Google permission or appointment behavior.
+
+Overlapping rescheduling requires staff review; FreeBusy cannot safely subtract our old event without potentially hiding another event. Unknown create/change outcomes require provider reconciliation before releasing capacity. Production confirmation/reminder dispatch and a hosted staff booking workflow remain release dependencies. No route, schedule, real event or email was activated.

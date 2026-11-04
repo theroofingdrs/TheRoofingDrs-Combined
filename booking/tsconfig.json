@@ -4,5 +4,5 @@
     "lib": ["ES2022", "DOM"], "types": [], "strict": true,
     "noEmit": true, "skipLibCheck": true, "allowImportingTsExtensions": true
   },
-  "files": ["readiness.ts"]
+  "files": ["readiness.ts", "engine.ts"]
 }
