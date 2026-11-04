@@ -3,6 +3,7 @@ name: Combined site build
 on:
   push:
     branches:
+      - main
       - release-candidate/combined-site
   pull_request:
     branches:
@@ -10,7 +11,7 @@ on:
       - release-candidate/combined-site
 
 concurrency:
-  group: combined-site-ci-${{ github.event_name }}
+  group: combined-site-ci-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

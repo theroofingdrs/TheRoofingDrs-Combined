@@ -25,7 +25,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
     <div className="min-h-screen bg-[#090d16] text-slate-100 font-sans-crd pb-24">
       <SeoMeta
         title="Coat vs. Replace: Commercial Roof Decision Guide | CRD"
-        description="Replace it, restore it, or protect it? Technical decision criteria for commercial roof coatings vs total replacement. Learn moisture limits, tax expensing, and CapEx savings."
+        description="Compare commercial roof restoration and replacement using roof condition, moisture, attachment, drainage, code and project cost factors."
         canonicalPath="/coat-vs-replace"
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -216,7 +216,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">03. Fastener Attachment</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Wind Uplift Resistance</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                A coating provides waterproofing—it does not provide mechanical holding power. If the underlying insulation boards or base membrane have pulled loose from the deck, re-fastening is required.
+                A coating provides waterproofing—it does not provide mechanical holding power. If insulation boards, membrane or metal panels have failed attachment, the assembly needs an engineered repair or replacement plan before any coating is considered.
               </p>
             </div>
 

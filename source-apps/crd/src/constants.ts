@@ -63,11 +63,14 @@ export const NAVIGATION_LINKS = {
     { name: 'New Commercial Construction', href: '/new-commercial-construction', desc: 'Architectural specification and new installs' },
   ],
   restoration: [
+    { name: 'Restoration & Coatings Center', href: '/commercial-roof-restoration', desc: 'Roof system guides, restoration process and benefits' },
     { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', desc: 'Seamless fluid-applied membrane systems' },
     { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration', desc: 'Renew existing membranes without tear-off' },
     { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings', desc: 'Ponding water resistance & UV reflection' },
-    { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings', desc: 'High-tensile cost-effective solar coatings' },
-    { name: 'Polyurethane Coatings', href: '/polyurethane-roof-coatings', desc: 'High-impact puncture & foot-traffic resistance' },
+    { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings', desc: 'Reflective coating options for compatible, well-drained roofs' },
+    { name: 'Polyurethane Coatings', href: '/polyurethane-roof-coatings', desc: 'Abrasion and impact resistance for selected systems' },
+    { name: 'SEBS Rubberized Coatings', href: '/sebs-roof-coatings', desc: 'Flexible coating options for compatible roof substrates' },
+    { name: 'Aluminum Roof Coatings', href: '/aluminum-roof-coatings', desc: 'Reflective maintenance coatings for selected roofs' },
     { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace', desc: 'Evaluation framework for commercial decision makers' },
   ],
   storm: [
@@ -86,7 +89,7 @@ export const NAVIGATION_LINKS = {
     { name: 'PVC Roofing', href: '/pvc-roofing', desc: 'Chemical, fire & grease resistant single-ply' },
     { name: 'Modified Bitumen', href: '/modified-bitumen', desc: 'Multi-ply asphaltic redundant roof systems' },
     { name: 'Built-Up Roofing (BUR)', href: '/built-up-roofing', desc: 'Heavy-duty gravel & asphalt redundant roofs' },
-    { name: 'Commercial Metal Roofing', href: '/metal-roofing', desc: 'Standing seam & R-panel architectural metal' },
+    { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', desc: 'Standing seam & R-panel architectural metal' },
   ],
   propertyProtection: [
     { name: 'CRD PPP™ Program', href: '/crd-ppp', desc: 'Property Protection Program tiered coverage' },

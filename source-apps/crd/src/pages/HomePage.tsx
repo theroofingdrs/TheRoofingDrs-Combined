@@ -899,7 +899,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                     code: 'EPDM',
                     title: 'Ethylene Propylene Diene Monomer',
                     specs: '45 to 90-mil • Vulcanized Synthetic Rubber',
-                    desc: 'Decades of proven Ark-La-Tex thermal cycling tolerance, extreme UV resistance, hail elongation, and low life-cycle cost.',
+                    desc: 'Designed for demanding regional thermal cycling, extreme UV resistance, hail elongation, and low life-cycle cost.',
                     href: '/epdm-roofing',
                   },
                   {
@@ -1331,7 +1331,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-5">
             <div className="text-xs font-mono-crd text-[#666666] uppercase tracking-wider">
-              REGIONAL OPERATING TERRITORY
+              FOUR-STATE OPERATING TERRITORY
             </div>
             <h2 className="text-3xl sm:text-5xl font-heading font-black uppercase text-[#181818] tracking-tight leading-[0.95]">
               Commercial Roofing Across Four States.
@@ -1346,28 +1346,28 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Texas Operations</div>
-                <div className="text-[11px] text-[#666666]">Texarkana TX, Bowie County, NE Texas</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
               <Link
                 to="/service-areas/arkansas"
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Arkansas Operations</div>
-                <div className="text-[11px] text-[#666666]">Texarkana AR, Miller County, SW Arkansas</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
               <Link
                 to="/service-areas/louisiana"
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Louisiana Operations</div>
-                <div className="text-[11px] text-[#666666]">Shreveport, Bossier, NW Louisiana</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
               <Link
                 to="/service-areas/oklahoma"
                 className="p-3 bg-[#f4f3ef] border border-[#e6e4df] hover:border-[#181818] transition-colors"
               >
                 <div className="font-heading font-bold uppercase text-[#181818]">Oklahoma Operations</div>
-                <div className="text-[11px] text-[#666666]">McCurtain County, SE Oklahoma</div>
+                <div className="text-[11px] text-[#666666]">Statewide commercial coverage</div>
               </Link>
             </div>
           </div>

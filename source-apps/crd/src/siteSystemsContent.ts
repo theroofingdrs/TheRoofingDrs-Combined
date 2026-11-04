@@ -438,11 +438,11 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Inspect the coating, drains, flashings, walk pads and rooftop service areas at manufacturer-recommended intervals; clean only as required using an approved method',
       'Inspect walk pads and service pathways around rooftop units',
     ],
-    stormConsiderations: 'High elasticity provides excellent resistance to small-to-medium hail impact without cracking.',
+    stormConsiderations: 'Hail and wind-driven debris can damage the coating or underlying roof. Inspect impacts, seams, flashings and penetrations after significant storms and repair using approved details.',
     costFactors: [
       'Specified coating chemistry, total material quantity and dry-film thickness required by the exact manufacturer system and warranty',
       'Condition of underlying roof (amount of seam prep and fastener stitching required)',
-      'Square footage of roof surface',
+      'Roof area, details, penetrations, access and project phasing',
     ],
     faqs: [
       { question: 'Does a silicone coating count as a new roof layer under building code?', answer: 'Do not assume a universal exemption. The adopted code, existing assembly, proposed work and authority having jurisdiction determine applicable requirements. Confirm classification and any roof-covering layer limits with the local building official before work is specified.' },
@@ -456,6 +456,251 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
     ],
   },
+
+
+  '/acrylic-roof-coatings': {
+    title: 'Commercial Acrylic Roof Coatings | CRD',
+    metaDescription: 'Commercial acrylic roof coating guide covering reflectivity, drainage, substrate preparation, limitations and restoration suitability.',
+    canonicalPath: '/acrylic-roof-coatings',
+    systemName: 'Acrylic Roof Coatings',
+    systemType: 'Roof Coating',
+    heroHeadline: 'Acrylic Roof Coatings. Reflective Protection for Suitable Roofs.',
+    heroSubtitle: 'Acrylic coatings can provide a reflective, water-resistant surface on compatible commercial roof assemblies. Climate, drainage, substrate condition and manufacturer specifications matter.',
+    whatItIs: 'Acrylic roof coatings are water-based elastomeric coatings commonly used on selected low-slope roof systems. They are available in reflective formulations and can be useful where the roof has positive drainage and the substrate is compatible. Product formulations, solids content and performance vary.',
+    whereItIsUsed: ['Compatible metal roof assemblies', 'Selected modified bitumen and built-up roof surfaces', 'Other substrates only where the coating manufacturer approves the complete assembly'],
+    advantages: ['Reflective white formulations can reduce solar heat gain at the roof surface', 'Water-based application may offer practical handling and cleanup advantages', 'Can be renewed as part of a planned maintenance program when the existing coating and roof remain sound'],
+    considerations: ['Acrylic coatings are generally less suitable for areas of persistent ponding water', 'Rain, dew, humidity and temperature affect drying and cure', 'Surface contamination, chalking and incompatible prior coatings can impair adhesion', 'The roof must be sound, adequately drained and within manufacturer moisture limits'],
+    commonProblems: [
+      { title: 'Softening or erosion in ponding areas', desc: 'Persistent standing water can shorten performance and may make acrylic unsuitable for the roof condition.' },
+      { title: 'Poor adhesion', desc: 'Dirt, chalking, moisture or an incompatible prior coating can prevent proper bonding.' }
+    ],
+    inspectionProtocols: ['Identify the roof membrane, prior coatings and surface condition', 'Review drainage and map areas of persistent ponding', 'Inspect seams, fasteners, flashings, penetrations and transitions', 'Investigate suspected wet insulation and verify moisture findings', 'Complete manufacturer-specified preparation and field adhesion testing'],
+    repairApproach: 'Correct leaks, open seams, damaged flashings, loose fasteners and other defects with compatible repair materials before coating. Apply primer, reinforcement and coating only as specified for the exact assembly.',
+    restorationPotential: 'Acrylic may be appropriate on selected well-drained roofs when the substrate is dry, stable and compatible. It should not be selected solely because it is reflective or economical. Persistent ponding, wet insulation, failed attachment or unsuitable substrate conditions may rule it out.',
+    replacementTriggers: ['Wet or deteriorated roof components that cannot be repaired in place', 'Widespread membrane failure or failed attachment', 'Persistent drainage problems that cannot be corrected as part of the project', 'No manufacturer-approved coating assembly for the existing substrate'],
+    maintenanceGuidelines: ['Inspect drainage, coating wear and details at least annually', 'Remove debris from drains and scuppers', 'Repair damage using approved materials', 'Follow the coating manufacturer’s cleaning, inspection and recoat guidance'],
+    stormConsiderations: 'Inspect for punctures, impact damage, displaced flashings and coating erosion after significant storms. Repair exposed substrate promptly using compatible materials.',
+    costFactors: ['Roof area and surface profile', 'Drainage corrections and ponding conditions', 'Cleaning, repairs, primer and reinforcement', 'Specified coating thickness and number of coats', 'Access, rooftop equipment and project phasing'],
+    faqs: [
+      { question: 'Is acrylic roof coating suitable for ponding water?', answer: 'Acrylic coatings are generally not the first choice for persistent ponding water. Drainage and the product manufacturer’s written limitations should guide selection.' },
+      { question: 'Can acrylic coating be applied to any metal or membrane roof?', answer: 'No. Substrate compatibility, surface condition, preparation, primer and adhesion testing must be confirmed for the specific product and roof assembly.' }
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }]
+  },
+
+  '/polyurethane-roof-coatings': {
+    title: 'Commercial Polyurethane Roof Coatings | CRD',
+    metaDescription: 'Commercial polyurethane roof coating guide covering abrasion resistance, impact exposure, primers, application and substrate compatibility.',
+    canonicalPath: '/polyurethane-roof-coatings',
+    systemName: 'Polyurethane Roof Coatings',
+    systemType: 'Roof Coating',
+    heroHeadline: 'Polyurethane Roof Coatings. Protection for Demanding Roof Areas.',
+    heroSubtitle: 'Polyurethane coating systems can offer abrasion and impact resistance for selected commercial roofs. Product type, substrate, exposure and complete system design determine suitability.',
+    whatItIs: 'Polyurethane roof coatings are resin-based fluid-applied materials available in different formulations, including aromatic and aliphatic products. They are used in selected roofing assemblies where toughness, abrasion resistance or weathering performance is required. Primer, base coat and topcoat selection must be treated as a complete system.',
+    whereItIsUsed: ['Selected commercial roofs with service traffic or mechanical exposure', 'Roof assemblies where the manufacturer specifies a polyurethane coating system', 'As part of multi-coat systems with compatible primers and protective topcoats'],
+    advantages: ['Some formulations provide strong abrasion and impact resistance', 'Can be useful around equipment and service pathways when detailed correctly', 'System options allow selection of base and finish coats for different exposures'],
+    considerations: ['Aromatic and aliphatic polyurethane products have different UV and finish characteristics', 'Moisture sensitivity, mixing, pot life and application conditions vary by product', 'Solvent content and ventilation requirements must be considered', 'Compatibility with the existing membrane and prior coatings must be verified'],
+    commonProblems: [
+      { title: 'Adhesion failure', desc: 'Incorrect primer, contamination or incompatible existing coatings can cause delamination.' },
+      { title: 'Application defects', desc: 'Improper mixing, recoat timing, temperature or moisture can affect cure and film performance.' }
+    ],
+    inspectionProtocols: ['Identify the existing roof and all previous coating layers', 'Inspect substrate condition, moisture, seams, flashings and penetrations', 'Review traffic routes, equipment service zones and exposure conditions', 'Confirm product-specific primer and compatibility requirements', 'Perform field adhesion testing and document application conditions'],
+    repairApproach: 'Repair the underlying roof and details first. Use the manufacturer-approved primer, base coat, reinforcement and topcoat sequence, observing mixing ratios, recoat windows and environmental limits.',
+    restorationPotential: 'Polyurethane may be appropriate where abrasion or impact resistance is a priority, but it is not automatically suitable for every roof or every exposure. Confirm the exact formulation, UV protection, substrate compatibility and manufacturer-approved assembly.',
+    replacementTriggers: ['Wet insulation, deteriorated deck or widespread membrane failure', 'Loose or failed roof attachment', 'Substrate incompatibility or inability to achieve specified adhesion', 'Damage extensive enough that a coating system cannot provide a reliable repair'],
+    maintenanceGuidelines: ['Inspect coating wear and service pathways regularly', 'Maintain drains and flashings', 'Repair punctures and damaged areas with compatible materials', 'Follow manufacturer guidance for recoating and maintenance'],
+    stormConsiderations: 'Inspect for impact damage, punctures, displaced details and coating separation after hail or severe wind. A tough coating does not make the underlying roof impact-proof.',
+    costFactors: ['Selected polyurethane formulation and full system build', 'Primer and topcoat requirements', 'Surface repairs and reinforcement', 'Traffic protection and detailing', 'Access, ventilation and application conditions'],
+    faqs: [
+      { question: 'Are all polyurethane coatings UV stable?', answer: 'No. Formulations differ. Some systems use an aliphatic topcoat or another specified protective layer for UV exposure.' },
+      { question: 'Does polyurethane make a roof puncture-proof?', answer: 'No. It may improve abrasion or impact resistance in some applications, but the complete roof assembly can still be damaged.' }
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }]
+  },
+
+  '/sebs-roof-coatings': {
+    title: 'SEBS Rubberized Roof Coatings | Commercial Roof Restoration | CRD',
+    metaDescription: 'SEBS rubberized commercial roof coating guide covering flexibility, metal roof applications, preparation and system limitations.',
+    canonicalPath: '/sebs-roof-coatings',
+    systemName: 'SEBS Rubberized Roof Coatings',
+    systemType: 'Roof Coating',
+    heroHeadline: 'SEBS Roof Coatings. Flexible Protection for Compatible Roofs.',
+    heroSubtitle: 'SEBS rubberized coatings are used in selected roof maintenance and restoration applications. The specific formulation and approved substrate determine performance.',
+    whatItIs: 'SEBS refers to styrene-ethylene-butylene-styrene, an elastomeric polymer used in some rubberized roof coating formulations. Products vary and may be designed for particular metal, asphaltic or other roof surfaces. SEBS is not a universal coating category with one standard application method.',
+    whereItIsUsed: ['Selected metal roof maintenance systems', 'Certain compatible asphaltic or previously coated roof surfaces', 'Roof assemblies specifically listed by the product manufacturer'],
+    advantages: ['Elastomeric formulations can accommodate some movement in the roof surface', 'Some products are designed for metal roof maintenance and corrosion protection', 'May be incorporated into a system with primers and reinforced details'],
+    considerations: ['Formulations differ significantly by manufacturer', 'Not every SEBS product is approved for every membrane or roof coating', 'Reflectivity, ponding-water resistance and warranty terms must be verified product by product', 'Rust, loose coating, oil, chalk and failed fasteners require proper treatment before application'],
+    commonProblems: [
+      { title: 'Incompatible substrate or old coating', desc: 'Unverified compatibility can lead to poor adhesion or coating failure.' },
+      { title: 'Unprepared corrosion and details', desc: 'Coating over active rust, failed fasteners or open seams does not correct the underlying defect.' }
+    ],
+    inspectionProtocols: ['Identify metal panel type or existing roof membrane', 'Map corrosion, fasteners, seams, laps and flashing conditions', 'Assess prior coatings and perform compatibility checks', 'Specify rust treatment, primer and reinforcement where required', 'Complete manufacturer-directed adhesion testing'],
+    repairApproach: 'Replace failed fasteners and repair seams, laps, flashings and penetrations before coating. Remove loose corrosion and failed coatings, then use the approved rust treatment, primer and reinforcement system.',
+    restorationPotential: 'SEBS products may be considered for specific roof substrates when the product data and manufacturer confirm compatibility. Do not assume that an SEBS coating is interchangeable with silicone, acrylic or polyurethane.',
+    replacementTriggers: ['Perforated or structurally weakened metal panels', 'Widespread wet insulation or deteriorated roof components', 'Failed attachment or extensive damage beyond practical repair', 'No approved coating system for the actual roof substrate'],
+    maintenanceGuidelines: ['Inspect corrosion, fasteners, seams and coating condition annually', 'Keep drainage paths clear', 'Repair damaged details promptly with approved products', 'Retain product and application records for future maintenance'],
+    stormConsiderations: 'Inspect panels, fasteners, seams and coating after hail or high winds. Coating does not restore metal thickness lost to advanced corrosion or repair structural damage.',
+    costFactors: ['Corrosion severity and metal panel condition', 'Fastener, seam and flashing repairs', 'Surface preparation, rust treatment and primer', 'Reinforcement and specified coating thickness', 'Access and rooftop equipment'],
+    faqs: [
+      { question: 'Can SEBS coating be used on every metal roof?', answer: 'No. Product formulation, panel finish, corrosion condition and manufacturer approval determine suitability.' },
+      { question: 'Does SEBS coating stop advanced rust?', answer: 'No. Loose corrosion must be removed and the remaining metal assessed. Perforated or structurally weakened panels may require replacement.' }
+    ],
+    relatedServices: [{ name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing' }, { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }]
+  },
+
+  '/aluminum-roof-coatings': {
+    title: 'Aluminum Roof Coatings for Commercial Roofing | CRD',
+    metaDescription: 'Commercial aluminum roof coating guide covering reflective asphalt aluminum coatings, metal roof use, preparation and limitations.',
+    canonicalPath: '/aluminum-roof-coatings',
+    systemName: 'Aluminum Roof Coatings',
+    systemType: 'Roof Coating',
+    heroHeadline: 'Aluminum Roof Coatings. Reflective Maintenance for Selected Roofs.',
+    heroSubtitle: 'Aluminum-pigmented roof coatings are used in selected maintenance applications, particularly on compatible asphaltic and metal roof surfaces. They are not interchangeable with seamless elastomeric restoration systems.',
+    whatItIs: 'Aluminum roof coatings commonly contain reflective aluminum flakes in an asphaltic or other binder. They form a reflective surface coating for certain roof types and maintenance conditions. Product chemistry, substrate approval and intended use must be checked before specification.',
+    whereItIsUsed: ['Selected asphaltic built-up and modified bitumen roof surfaces', 'Certain compatible metal roof maintenance applications', 'Existing roof surfaces specifically listed by the coating manufacturer'],
+    advantages: ['Aluminum flakes can provide a reflective metallic finish', 'May be suitable for certain asphaltic roof maintenance applications', 'Can be a practical maintenance option when the existing roof is sound and compatible'],
+    considerations: ['Not every aluminum coating is a seamless elastomeric waterproofing membrane', 'Some products are not intended for ponding water or use on all metal finishes', 'Surface oils, rust, loose granules and failed details must be addressed', 'Reflective appearance does not by itself establish energy savings or roof restoration suitability'],
+    commonProblems: [
+      { title: 'Coating loss or poor adhesion', desc: 'Contamination, moisture or incompatible prior materials can cause peeling or loss of film.' },
+      { title: 'Unrepaired roof defects', desc: 'Aluminum coating cannot replace failed flashing, open seams, deteriorated membrane or corroded-through metal.' }
+    ],
+    inspectionProtocols: ['Identify the coating binder and intended substrate', 'Inspect asphalt condition, granule loss, rust and prior coatings', 'Review drainage and ponding conditions', 'Repair seams, flashings, penetrations and other defects', 'Confirm product compatibility and preparation instructions'],
+    repairApproach: 'Complete substrate repairs first and prepare the surface according to the selected product data sheet. Apply only at the specified coverage rate and environmental conditions.',
+    restorationPotential: 'Aluminum coatings can be appropriate for selected roof maintenance projects, but they should not be presented as equivalent to silicone, acrylic, polyurethane or other full restoration assemblies. Evaluate whether the project needs a reflective maintenance coating or a reinforced waterproofing system.',
+    replacementTriggers: ['Corroded-through or structurally weakened metal', 'Wet or deteriorated roof components', 'Widespread membrane failure or failed attachment', 'Roof conditions outside the product manufacturer’s approved use'],
+    maintenanceGuidelines: ['Inspect the coating, drainage and roof details annually', 'Keep drains and scuppers clear', 'Repair exposed or deteriorated areas with compatible materials', 'Follow product-specific reapplication intervals and preparation requirements'],
+    stormConsiderations: 'Inspect for displaced metal, punctures, impact damage and water intrusion after significant storms. A reflective coating does not protect against structural hail or wind damage.',
+    costFactors: ['Existing roof type and coating compatibility', 'Surface preparation and repairs', 'Required coverage rate and number of coats', 'Drainage and detail work', 'Access and project phasing'],
+    faqs: [
+      { question: 'Is aluminum roof coating the same as silicone roof coating?', answer: 'No. Aluminum-pigmented coatings often use a different binder and serve different maintenance purposes. They should not be treated as interchangeable systems.' },
+      { question: 'Can aluminum coating waterproof a leaking roof?', answer: 'It should not be used to cover unresolved leaks or failed roof details. Diagnose and repair the roof first, then confirm the product is approved for the intended use.' }
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing' }]
+  },
+
+  '/pvc-roofing': {
+    title: 'Commercial PVC Roofing Restoration & Repair | CRD',
+    metaDescription: 'Commercial PVC roof inspection, repair and compatible restoration evaluation. Learn about welded seams, membrane aging, plasticizer migration and coating preparation.',
+    canonicalPath: '/pvc-roofing',
+    systemName: 'PVC Single-Ply Roofing',
+    systemType: 'PVC',
+    heroHeadline: 'PVC Commercial Roofing. Chemistry Matters.',
+    heroSubtitle: 'PVC membranes are heat-welded thermoplastic roof systems often selected for commercial facilities where chemical, grease or fire performance matters. Repair and coating decisions must account for membrane condition and compatibility.',
+    whatItIs: 'Polyvinyl chloride (PVC) roofing is a reinforced thermoplastic single-ply membrane. Sheets are joined with hot-air welded seams. Formulations and reinforcement vary by manufacturer and product generation, so identification and manufacturer guidance matter before repairs or restoration are specified.',
+    whereItIsUsed: ['Restaurants and facilities with kitchen exhaust exposure', 'Commercial buildings and institutional low-slope roofs', 'Facilities where chemical resistance is a design consideration'],
+    advantages: ['Heat-welded seams can be inspected and re-welded when the membrane remains suitable', 'Certain PVC formulations offer resistance to grease, oils and selected chemicals', 'Light-colored membranes may provide high solar reflectance when maintained'],
+    considerations: ['Chemical exposure must be matched to the exact membrane formulation', 'Older membranes may experience plasticizer migration, embrittlement or shrinkage', 'A coating must be verified as compatible with the aged PVC surface and any primer'],
+    commonProblems: [
+      { title: 'Weld Separation', desc: 'Aged, contaminated or poorly executed seams can separate and allow water entry.' },
+      { title: 'Plasticizer Migration or Embrittlement', desc: 'Some older PVC formulations can lose flexibility over time, affecting weldability and repair options.' },
+      { title: 'Chemical or Grease Exposure', desc: 'Exhaust contaminants may degrade membrane surfaces when the product is not suited to the exposure.' },
+    ],
+    inspectionProtocols: ['Identify manufacturer and membrane type where possible', 'Probe and test representative heat-welded seams', 'Inspect flashings, penetrations, drains and termination details', 'Assess membrane flexibility, surface condition and evidence of chemical exposure', 'Evaluate underlying insulation and attachment where warranted'],
+    repairApproach: 'Repairs generally require cleaning and preparing the membrane, then using compatible PVC membrane patches and hot-air welding where the existing material remains weldable. Sealants alone are not a substitute for a properly detailed membrane repair.',
+    restorationPotential: 'A PVC roof may be considered for restoration only after the membrane condition, seams, attachment, insulation moisture and coating compatibility have been evaluated. The selected coating manufacturer should approve the complete preparation and primer system, supported by field adhesion testing where specified.',
+    replacementTriggers: ['Widespread embrittlement or loss of weldability', 'Extensive wet insulation or deteriorated roof deck', 'Systemic attachment failure or damage that cannot be reliably repaired'],
+    maintenanceGuidelines: ['Keep drains and scuppers clear', 'Inspect seams and flashings at least annually and after significant storms', 'Remove incompatible grease and chemical contaminants using approved procedures', 'Document repairs and any coating or primer maintenance'],
+    stormConsiderations: 'Hail, wind uplift and falling debris can damage PVC membranes and flashings. A post-storm evaluation should distinguish cosmetic surface marks from punctures, seam damage or compromised insulation.',
+    costFactors: ['Membrane age, formulation and condition', 'Extent of seam and flashing repairs', 'Moisture investigation and insulation replacement needs', 'Approved primer and coating requirements', 'Access, rooftop equipment and project phasing'],
+    faqs: [
+      { question: 'Can a PVC roof be coated?', answer: 'Sometimes. Suitability depends on the membrane formulation, age, surface condition, contamination, moisture below the membrane and the coating manufacturer’s written compatibility requirements. Testing and proper preparation are essential.' },
+      { question: 'Why does PVC require special coating preparation?', answer: 'PVC formulations can contain plasticizers and surface additives that affect adhesion. The selected system may require specific cleaning, primer and adhesion testing.' },
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
+  },
+  '/modified-bitumen': {
+    title: 'Modified Bitumen Roof Restoration & Repair | Commercial Roof Doctors',
+    metaDescription: 'Commercial modified bitumen roof inspection, repair and restoration evaluation. Understand smooth and granulated cap sheets, asphalt condition, moisture and coating compatibility.',
+    canonicalPath: '/modified-bitumen',
+    systemName: 'Modified Bitumen Roofing',
+    systemType: 'Modified Bitumen',
+    heroHeadline: 'Modified Bitumen Roofing. Restore Only When It Qualifies.',
+    heroSubtitle: 'Modified bitumen assemblies need substrate-specific inspection. Surface type, asphalt condition, laps, blisters, moisture and previous repairs all affect whether a roof can be restored.',
+    whatItIs: 'Modified bitumen is an asphalt-based low-slope roofing membrane modified with polymers and commonly installed in one or more plies. The exposed surface may be smooth or granulated. Attachment and surfacing vary, so the actual assembly must be identified before a repair or coating system is selected.',
+    whereItIsUsed: ['Retail and office buildings', 'Schools, churches and institutional properties', 'Commercial facilities with low-slope roof sections'],
+    advantages: ['Multi-ply assemblies can provide redundant waterproofing', 'Localized defects may be repairable when surrounding materials remain sound', 'Some assemblies can accept compatible restoration systems after proper preparation'],
+    considerations: ['Smooth and granulated surfaces require different preparation', 'Asphalt bleed-through and surface oils may require a compatible bleed-blocking primer', 'Blisters, open laps and trapped moisture must be addressed before coating'],
+    commonProblems: [
+      { title: 'Open or Split Laps', desc: 'Thermal movement, aging or installation defects can open seams and allow water intrusion.' },
+      { title: 'Blisters and Alligatoring', desc: 'Trapped moisture, heat and material aging can cause surface deformation or cracking.' },
+      { title: 'Exposed or Deteriorated Asphalt', desc: 'Weathering and loss of protective surfacing can expose asphalt to accelerated degradation.' },
+    ],
+    inspectionProtocols: ['Identify smooth or granulated cap sheet and number of roof layers where known', 'Inspect laps, flashings, penetrations, drains and transitions', 'Evaluate blisters and determine whether moisture is present', 'Check for exposed asphalt, granule loss and incompatible prior coatings', 'Use moisture investigation or core sampling when conditions warrant'],
+    repairApproach: 'Repairs depend on the cap sheet and assembly. Defects may require compatible modified bitumen patches, reinforcement and asphaltic materials installed according to the system requirements. Wet or deteriorated sections must be addressed rather than covered.',
+    restorationPotential: 'Restoration may be appropriate when the membrane and underlying assembly are dry, stable and adequately attached. Smooth and granulated surfaces may require different cleaning, primers, bleed blocking, repairs and reinforcement. The coating manufacturer’s approved assembly and adhesion testing should guide selection.',
+    replacementTriggers: ['Widespread wet insulation or trapped moisture', 'Extensive membrane splits, delamination or loss of integrity', 'Deck deterioration or multiple failed roof layers that cannot be reliably restored'],
+    maintenanceGuidelines: ['Keep drains and scuppers free of debris', 'Inspect laps, flashings and penetrations annually', 'Repair blisters and open seams using compatible materials', 'Avoid unapproved coatings or solvent cleaners'],
+    stormConsiderations: 'Hail can fracture surfacing, bruise underlying plies or damage flashings. Wind can lift edge details and open laps. Inspection should determine whether damage is superficial or affects the waterproofing assembly.',
+    costFactors: ['Smooth versus granulated cap sheet', 'Number and extent of repairs', 'Need for bleed-blocking primer or reinforcement', 'Moisture and deck condition', 'Coating system, access and required dry-film thickness'],
+    faqs: [
+      { question: 'Can modified bitumen be coated?', answer: 'Some modified bitumen roofs can be restored, but the surface type, asphalt condition, moisture, prior coatings and selected coating manufacturer’s requirements determine suitability.' },
+      { question: 'Does a granulated cap sheet need different preparation?', answer: 'Yes. Loose granules, embedded dirt and surface condition affect adhesion. Preparation and primer selection must follow the coating system specification.' },
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' }],
+  },
+  '/built-up-roofing': {
+    title: 'Built-Up Roofing (BUR) Restoration & Repair | CRD',
+    metaDescription: 'Commercial built-up roofing inspection and restoration evaluation. Learn how gravel surfacing, asphalt condition, blisters, moisture and preparation affect coating suitability.',
+    canonicalPath: '/built-up-roofing',
+    systemName: 'Built-Up Roofing (BUR)',
+    systemType: 'BUR',
+    heroHeadline: 'Built-Up Roofing. Evaluate Every Layer.',
+    heroSubtitle: 'Built-up roofs are layered assemblies. Their surfacing, asphalt condition, drainage and moisture profile must be understood before repairs or a restoration coating are considered.',
+    whatItIs: 'Built-up roofing (BUR) is a multi-ply low-slope roof assembly made with alternating reinforcing felts and bitumen, typically finished with aggregate surfacing or a smooth roof coating. Existing roofs vary in materials, layer count and condition.',
+    whereItIsUsed: ['Older commercial and institutional buildings', 'Warehouses and industrial facilities', 'Retail, office and multifamily low-slope roof sections'],
+    advantages: ['Multiple plies can provide redundant waterproofing', 'Localized repairs may be possible where the assembly remains sound', 'Some smooth or properly prepared aggregate surfaces may qualify for compatible restoration'],
+    considerations: ['Gravel-surfaced roofs require removal or securement of loose aggregate as specified', 'Moisture can be concealed within multiple roof layers', 'Asphalt bleed-through, surface contamination and drainage defects can affect coating adhesion'],
+    commonProblems: [
+      { title: 'Blisters and Splits', desc: 'Heat, moisture and movement can cause blisters, cracks or splits in the roof surface.' },
+      { title: 'Loose or Displaced Aggregate', desc: 'Loose gravel can interfere with adhesion and may conceal deteriorated bitumen below.' },
+      { title: 'Deteriorated Flashings', desc: 'Perimeter and penetration details often fail before the field of the roof.' },
+    ],
+    inspectionProtocols: ['Identify aggregate-surfaced or smooth BUR construction', 'Inspect parapets, penetrations, drains and roof transitions', 'Evaluate blisters, splits, exposed bitumen and loose aggregate', 'Investigate moisture within the multi-ply assembly where indicated', 'Assess deck condition and drainage performance'],
+    repairApproach: 'BUR repairs must be compatible with the existing bitumen and surfacing. Loose aggregate, wet materials and deteriorated plies need to be addressed using an assembly-specific repair detail before any coating is applied.',
+    restorationPotential: 'A BUR roof may be restorable when the assembly is dry, stable and adequately attached. Aggregate removal or stabilization, surface preparation, compatible primers, reinforcement and coating selection must follow the selected manufacturer’s written specification.',
+    replacementTriggers: ['Widespread moisture between roof plies', 'Extensive deterioration or delamination through multiple layers', 'Structural deck damage or drainage problems that cannot be corrected within a restoration scope'],
+    maintenanceGuidelines: ['Keep internal drains and scuppers clear', 'Inspect flashings and penetrations annually', 'Remove damaging debris and monitor ponding areas', 'Document and repair splits or blisters before water reaches lower plies'],
+    stormConsiderations: 'Hail can displace aggregate or damage exposed bitumen, while wind can affect perimeter flashings. A proper inspection checks the roof assembly, not just visible surface marks.',
+    costFactors: ['Aggregate removal, recovery or stabilization requirements', 'Number of plies and condition of underlying layers', 'Moisture testing and deck repairs', 'Primer, reinforcement and coating system requirements', 'Drainage, access and rooftop equipment'],
+    faqs: [
+      { question: 'Can a gravel BUR roof be coated?', answer: 'Possibly, but loose aggregate and the condition of the underlying bitumen must be evaluated. The coating manufacturer must approve the preparation and complete assembly.' },
+      { question: 'Why is moisture testing important on BUR?', answer: 'Multiple plies can conceal moisture. Applying a coating over a wet or deteriorated assembly can trap problems rather than solve them.' },
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
+  },
+
+
+  '/spray-foam-roofing': {
+    title: 'Commercial Spray Foam Roofing (SPF) Restoration | CRD',
+    metaDescription: 'Commercial spray polyurethane foam roof inspection, repair and recoating. Learn how moisture, damaged foam, UV exposure and protective coating condition determine restoration suitability.',
+    canonicalPath: '/spray-foam-roofing',
+    systemName: 'Spray Polyurethane Foam Roofing',
+    systemType: 'SPF',
+    heroHeadline: 'SPF Roofing. Protect the Foam. Find the Damage.',
+    heroSubtitle: 'Spray polyurethane foam roofs rely on a continuous foam layer and protective coating. Restoration starts by locating moisture and damaged foam, not simply applying another coat.',
+    whatItIs: 'Spray polyurethane foam (SPF) roofing is formed by applying liquid components that expand and cure into a continuous insulating foam layer. The foam is protected from ultraviolet exposure and weather by a compatible elastomeric coating, often renewed as part of a maintenance or restoration program.',
+    whereItIsUsed: ['Commercial and industrial low-slope buildings', 'Facilities with complex roof geometry and rooftop penetrations', 'Buildings seeking combined insulation and waterproofing performance'],
+    advantages: ['Seamless foam application can conform around complex roof details', 'The foam layer can provide insulation as part of the roof assembly', 'Protective coatings can be renewed when the foam and underlying assembly remain sound'],
+    considerations: ['Exposed or deteriorated foam must be evaluated and repaired before recoating', 'Moisture intrusion can damage foam and may not be visible from the surface', 'Coating type, thickness and recoat compatibility depend on the existing system'],
+    commonProblems: [
+      { title: 'UV-Damaged Exposed Foam', desc: 'Loss or erosion of the protective coating exposes foam to sunlight and weather.' },
+      { title: 'Moisture-Damaged Foam', desc: 'Water entry can saturate or deteriorate foam and may require removal to sound material.' },
+      { title: 'Coating Erosion or Delamination', desc: 'Weathering, inadequate thickness or adhesion problems can reduce protection.' },
+    ],
+    inspectionProtocols: ['Map coating erosion, exposed foam and suspected moisture areas', 'Probe and assess damaged foam to determine whether it remains sound', 'Inspect drains, penetrations, flashings and transitions', 'Check coating adhesion and compatibility with proposed recoat material', 'Document repairs and specified coating thickness'],
+    repairApproach: 'Damaged or wet foam should be cut back to sound material and repaired with compatible SPF. The repaired area must be prepared and protected with the specified coating system. Coating over wet or deteriorated foam is not a proper repair.',
+    restorationPotential: 'An SPF roof may be a strong recoating candidate when the foam is dry, firmly bonded and structurally sound. Restoration generally includes localized foam repairs, detail work, preparation and application of a compatible protective coating at the specified thickness.',
+    replacementTriggers: ['Widespread wet or deteriorated foam', 'Extensive loss of adhesion or failure of the roof assembly', 'Deck or structural conditions that make restoration unsuitable'],
+    maintenanceGuidelines: ['Inspect coating condition at least annually', 'Repair exposed foam promptly using compatible materials', 'Keep drains clear and monitor ponding areas', 'Record coating thickness and maintenance history'],
+    stormConsiderations: 'Hail and wind-driven debris can puncture or fracture the protective coating and foam. After severe weather, inspect impact areas and penetrations and repair exposed foam before prolonged UV exposure.',
+    costFactors: ['Area and depth of foam requiring removal and replacement', 'Existing coating condition and preparation needs', 'Specified coating chemistry and dry-film thickness', 'Moisture investigation, access and rooftop equipment'],
+    faqs: [
+      { question: 'Can an SPF roof simply be recoated?', answer: 'Only when the existing foam is dry, sound and adequately bonded. Wet or deteriorated foam must be removed and repaired before a new protective coating is applied.' },
+      { question: 'How often should an SPF roof be inspected?', answer: 'At least annually and after significant storms. Inspection frequency and coating renewal depend on the system manufacturer, exposure and observed condition.' },
+    ],
+    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
+  },
+
 };
 
 export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
@@ -1562,21 +1807,21 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Multifamily housing communities and distribution warehouses',
     ],
     serviceCapabilities: [
-      'Emergency roof leak dry-in and storm response within 2–4 hours',
+      'Emergency roof leak mitigation and storm response, subject to location, conditions, and crew availability',
       'Complete forensic commercial roof inspections with drone and infrared cameras',
       'Commercial fluid silicone and acrylic restoration coatings',
-      'Full tear-off and engineered replacement with 20-year NDL warranties',
+      'Full tear-off and engineered replacement with applicable manufacturer-backed warranty options',
       'Carrier-compliant Xactimate storm claim documentation and adjuster walk-throughs',
     ],
   },
 
   '/service-areas/texas': {
-    title: 'Commercial Roofing in Northeast Texas | Texarkana, Longview, Marshall',
-    metaDescription: 'Commercial roofing, flat roof leak repair, storm damage restoration, and asset management in Northeast Texas: Texarkana, Longview, Marshall, Mount Pleasant.',
+    title: 'Commercial Roofing Across Texas | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing, flat roof leak repair, storm damage restoration, and asset management for commercial properties across Texas. Featured markets include Texarkana, Longview, Marshall, Mount Pleasant, and Paris.',
     canonicalPath: '/service-areas/texas',
-    regionName: 'Northeast Texas Territory',
-    heroHeadline: 'Commercial Roofing in Northeast Texas.',
-    heroSubtitle: 'Providing specialized commercial roof diagnostics, emergency storm response, and fluid restoration coatings across Bowie, Cass, Harrison, Gregg, and Titus counties.',
+    regionName: 'Texas',
+    heroHeadline: 'Commercial Roofing Across Texas.',
+    heroSubtitle: 'Providing commercial roof diagnostics, emergency storm response, and restoration services statewide. Featured markets include Northeast Texas communities, with project travel and availability confirmed by scope.',
     weatherAndStormFactors: 'Northeast Texas experiences extreme thermal fluctuations, reaching 100°F+ rooftop temperatures in summer and dropping below freezing in winter, causing severe membrane expansion stress. Severe convective storms frequently deliver damaging hail and high straight-line winds.',
     countiesAndCitiesServed: [
       'Texarkana (Bowie County)',
@@ -1601,12 +1846,12 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/arkansas': {
-    title: 'Commercial Roofing in Southwest Arkansas | Texarkana, Hope, Magnolia',
-    metaDescription: 'Commercial roofing services in Southwest Arkansas: Texarkana AR, Hope, Magnolia, Camden, and El Dorado. Inspections, leak repair, and restoration.',
+    title: 'Commercial Roofing Across Arkansas | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing services across Arkansas. Featured markets include Texarkana, Hope, Magnolia, Camden, and El Dorado. Inspections, leak repair, and restoration.',
     canonicalPath: '/service-areas/arkansas',
-    regionName: 'Southwest Arkansas Territory',
-    heroHeadline: 'Commercial Roofing in Southwest Arkansas.',
-    heroSubtitle: 'Serving commercial property managers, school districts, and industrial facilities throughout Miller, Hempstead, Columbia, Ouachita, and Union counties.',
+    regionName: 'Arkansas',
+    heroHeadline: 'Commercial Roofing Across Arkansas.',
+    heroSubtitle: 'Serving commercial property managers, school districts, and industrial facilities statewide, with featured markets in southern Arkansas.',
     weatherAndStormFactors: 'Heavy rainfall and severe southern thunderstorm systems bring sudden high-volume water accumulation. Commercial roofs require meticulously maintained internal drains, clear scuppers, and positive tapered drainage.',
     countiesAndCitiesServed: [
       'Texarkana (Miller County)',
@@ -1631,12 +1876,12 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/louisiana': {
-    title: 'Commercial Roofing in Northwest Louisiana | Shreveport & Bossier City',
-    metaDescription: 'Commercial roofing contractors serving Northwest Louisiana: Shreveport, Bossier City, and Minden. Flat roof repairs, restoration coatings, and inspections.',
+    title: 'Commercial Roofing Across Louisiana | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing contractors serving Louisiana. Featured markets include Shreveport, Bossier City, and Minden. Flat roof repairs, restoration coatings, and inspections.',
     canonicalPath: '/service-areas/louisiana',
-    regionName: 'Northwest Louisiana Territory',
-    heroHeadline: 'Commercial Roofing in Northwest Louisiana.',
-    heroSubtitle: 'Commercial roof engineering, leak mitigation, and capital asset management across Caddo, Bossier, and Webster parishes.',
+    regionName: 'Louisiana',
+    heroHeadline: 'Commercial Roofing Across Louisiana.',
+    heroSubtitle: 'Commercial roof engineering, leak mitigation, and capital asset management for commercial properties statewide, with featured markets in Northwest Louisiana.',
     weatherAndStormFactors: 'Subtropical humidity and frequent high-intensity precipitation patterns place severe hydrostatic pressure on commercial roof penetrations, curb flashings, and internal building drains.',
     countiesAndCitiesServed: [
       'Shreveport (Caddo Parish)',
@@ -1658,12 +1903,12 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   },
 
   '/service-areas/oklahoma': {
-    title: 'Commercial Roofing in Southeast Oklahoma | Idabel & Broken Bow',
-    metaDescription: 'Commercial roofing in Southeast Oklahoma: Idabel, Broken Bow, and McCurtain County. Low-slope flat roofs, metal roof restoration, and storm repairs.',
+    title: 'Commercial Roofing Across Oklahoma | Commercial Roof Doctors',
+    metaDescription: 'Commercial roofing in Oklahoma. Featured markets include Idabel, Broken Bow, and communities across the state. Low-slope flat roofs, metal roof restoration, and storm repairs.',
     canonicalPath: '/service-areas/oklahoma',
-    regionName: 'Southeast Oklahoma Territory',
-    heroHeadline: 'Commercial Roofing in Southeast Oklahoma.',
-    heroSubtitle: 'Commercial roof inspections, emergency storm triage, and long-term asset management for facilities in McCurtain County and surrounding areas.',
+    regionName: 'Oklahoma',
+    heroHeadline: 'Commercial Roofing Across Oklahoma.',
+    heroSubtitle: 'Commercial roof inspections, emergency storm triage, and long-term asset management for facilities statewide, with featured markets in Southeast Oklahoma.',
     weatherAndStormFactors: 'Located in the transition corridor of severe Great Plains wind and hail weather, commercial roofs in Southeast Oklahoma endure severe uplift pressures, hail impacts, and heavy seasonal precipitation.',
     countiesAndCitiesServed: [
       'Idabel (McCurtain County)',

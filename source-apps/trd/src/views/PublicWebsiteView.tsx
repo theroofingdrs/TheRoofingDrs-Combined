@@ -31,11 +31,9 @@ import {
   X,
 } from 'lucide-react';
 
-// Prefix public assets only when the combined host mounts the TRD app at /residential.
-const getTrdPublicAssetPath = (assetPath: string): string => {
-  const isResidentialMount = typeof window !== 'undefined' && window.location.pathname.startsWith('/residential');
-  return `${isResidentialMount ? '/residential' : ''}${assetPath}`;
-};
+// Resolve public assets consistently for standalone and combined builds.
+const getTrdPublicAssetPath = (assetPath: string): string =>
+  `${import.meta.env.BASE_URL}${assetPath.replace(/^\/+/, '')}`;
 
 interface FeaturedPhoto {
   id: string;
@@ -442,7 +440,7 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
                 Recent Projects &amp; Active Field Operations
               </h2>
               <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                Explore real photography from our recent East Texas roof replacements—featuring aerial drone diagnostic documentation, custom commercial timber architecture, active crew execution, and completed residential estates.
+                Explore roofing photography highlighting residential roof replacement work, installation activity, and field operations.
               </p>
             </div>
 
@@ -466,8 +464,8 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
             </div>
           </div>
 
-          {/* 4 Photo Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 3 Photo Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {HOME_FEATURED_PHOTOS.map((photo) => (
               <div
                 key={photo.id}
