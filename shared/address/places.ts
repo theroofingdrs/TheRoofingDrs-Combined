@@ -52,7 +52,7 @@ export function loadPlaces(key: string | undefined): Promise<Places> {
     const existing = document.querySelector<HTMLScriptElement>('script[src^="https://maps.googleapis.com/maps/api/js"]');
     const script = existing || document.createElement('script');
     const cleanup = () => { clearTimeout(timer); script.removeEventListener('load', finish); script.removeEventListener('error', failure); };
-    const failure = () => { cleanup(); reject(Error('Places unavailable')); };
+    const failure = () => { cleanup(); if (!existing) script.remove(); reject(Error('Places unavailable')); };
     const finish = () => {
       cleanup();
       if (!scope.google?.maps?.importLibrary) { reject(Error('Places unavailable')); return; }
