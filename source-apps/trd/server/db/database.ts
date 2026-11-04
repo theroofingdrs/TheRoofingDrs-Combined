@@ -1166,7 +1166,7 @@ export async function initializeDatabase(): Promise<void> {
     const leadById = new Map<string, Record<string, unknown>>();
     for (const lead of Array.isArray(localData.leads) ? localData.leads : []) {
       if (lead && typeof lead === 'object' && typeof (lead as any).id === 'string') {
-        leadById.set((lead as any).id, lead as Record<string, unknown>);
+        leadById.set((lead as any).id, lead as unknown as Record<string, unknown>);
       }
     }
     for (const row of leads) {
