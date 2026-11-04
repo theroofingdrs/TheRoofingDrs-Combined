@@ -4,7 +4,7 @@ const root=process.cwd(),temp=await mkdtemp(path.join(os.tmpdir(),'roofing-mobil
 const browserBin=process.env.CHROME_BIN||['chromium','google-chrome','google-chrome-stable'].find(bin=>spawnSync('which',[bin]).status===0);
 if(!browserBin)throw Error('Chromium is required for mobile workflow validation.');
 const processes=[],clients=[];
-const start=(args,cwd,env={})=>{const p=spawn(process.execPath,args,{cwd,env:{...process.env,NODE_ENV:'production',WEBSITE_DATA_DIR:temp,...env},stdio:'ignore'});processes.push(p);return p;};
+const start=(args,cwd,env={})=>{const p=spawn(process.execPath,args,{cwd,env:{...process.env,NODE_ENV:'production',ALLOW_EPHEMERAL_DATABASE:'true',WEBSITE_DATA_DIR:temp,...env},stdio:'ignore'});processes.push(p);return p;};
 const wait=async(predicate,label='Mobile workflow',timeoutMs=15000)=>{const deadline=Date.now()+timeoutMs;while(Date.now()<deadline){try{if(await predicate())return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error(`${label} timed out after ${timeoutMs}ms`);};
 try{
  start(['server.mjs'],root,{PORT:'19200'});
