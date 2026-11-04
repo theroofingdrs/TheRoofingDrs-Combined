@@ -723,7 +723,7 @@ async function start() {
 
     app.get('*', (req: Request, res: Response) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
-      const normalizedPath = (req.path.replace(/\\/+$/, '') || '/').toLowerCase();
+      const normalizedPath = (req.path.replace(new RegExp('/+$'), '') || '/').toLowerCase();
       const metadata = seoManifest[normalizedPath];
       res.type('html').send(metadata ? applySeoMetadata(indexHtml, metadata) : indexHtml);
     });
