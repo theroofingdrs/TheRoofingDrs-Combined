@@ -6,6 +6,7 @@ interface SeoHeadProps {
   canonicalPath?: string;
   schemaJson?: Record<string, any> | Record<string, any>[];
   ogType?: 'website' | 'article';
+  noIndex?: boolean;
 }
 
 export const SeoHead: React.FC<SeoHeadProps> = ({
@@ -14,6 +15,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
   canonicalPath = '/',
   schemaJson,
   ogType = 'website',
+  noIndex = false,
 }) => {
   useEffect(() => {
     const toResidentialUrl = (path: string) => {
@@ -71,6 +73,14 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
     }
     canonical.setAttribute('href', toResidentialUrl(canonicalPath));
 
+    let robots = document.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.setAttribute('name', 'robots');
+      document.head.appendChild(robots);
+    }
+    robots.setAttribute('content', noIndex ? 'noindex, nofollow' : 'index, follow');
+
     // 5. Injected JSON-LD Schema
     const existingSchema = document.getElementById('route-schema-jsonld');
     if (existingSchema) {
@@ -89,7 +99,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       const s = document.getElementById('route-schema-jsonld');
       if (s) s.remove();
     };
-  }, [title, description, canonicalPath, schemaJson, ogType]);
+  }, [title, description, canonicalPath, schemaJson, ogType, noIndex]);
 
   return null;
 };

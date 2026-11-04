@@ -92,16 +92,16 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block text-sm">Lower Initial Scope Cost (When the Roof Qualifies)</strong>
-                  <span className="text-slate-400">A qualified restoration may avoid full tear-off and disposal. Actual savings depend on roof condition, moisture removal, repairs, coating chemistry, required dry-film thickness and warranty scope.</span>
+                  <strong className="text-white block text-sm">Potentially Lower Initial Project Cost</strong>
+                  <span className="text-slate-400">When the existing assembly is suitable, restoration may avoid much of the tear-off, disposal and replacement material cost. Actual savings depend on roof condition, repairs, access, coating system and local pricing. Compare project-specific proposals rather than relying on a universal percentage.</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block text-sm">Potentially Less Disruption</strong>
-                  <span className="text-slate-400">Restoration often avoids broad tear-off, but cleaning, repairs, equipment, odors, noise, access restrictions and weather can still affect building operations. A site-specific plan is required.</span>
+                  <strong className="text-white block text-sm">Potentially Less Disruption to Building Operations</strong>
+                  <span className="text-slate-400">Restoration can reduce tear-off, hauling and staging, but repairs, surface preparation, equipment and weather can still affect operations. The contractor should provide a site-specific safety and access plan.</span>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block text-sm">Tax Treatment Requires Project-Specific Review</strong>
-                  <span className="text-slate-400">Tax treatment depends on the actual scope and applicable IRS rules. Do not assume a coating qualifies for an immediate deduction or Section 179D benefit. Owners should consult their tax professional.</span>
+                  <span className="text-slate-400">Tax treatment depends on the work performed and the owner's circumstances. Do not assume a coating project is automatically deductible as a repair or qualifies for immediate expensing. Section 179D has a separate technical eligibility test and a construction-start deadline. Consult your CPA or tax attorney.</span>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               </div>
 
               <div className="p-3 rounded bg-emerald-950/40 border border-emerald-900/60 text-emerald-200">
-                <strong>Best Candidate:</strong> A roof with a sound, adequately attached substrate and deck, functioning drainage, compatible membrane/coating combination, and moisture conditions that meet the coating manufacturer's written requirements. Wet or deteriorated materials must be removed and replaced.
+                <strong>Best Candidate:</strong> Roofs with a sound deck and attachment, manageable moisture conditions, serviceable substrate, correctable details and a coating system approved for the existing assembly.
               </div>
             </div>
           </div>
@@ -159,8 +159,8 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block text-sm">Higher Initial Capital Outlay</strong>
-                  <span className="text-slate-400">Replacement generally has a higher initial cost and may be treated as a capital improvement for tax purposes. Actual tax treatment and recovery period depend on the project and current law; consult a qualified tax professional.</span>
+                  <strong className="text-white block text-sm">Higher Capital Outlay & Depreciation Schedule</strong>
+                  <span className="text-slate-400">Replacement generally has a higher initial scope because it may include tear-off, disposal, new insulation, deck repairs and a new roof assembly. Tax depreciation depends on the property and current tax rules; consult a tax professional.</span>
                 </div>
               </div>
 
@@ -173,7 +173,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               </div>
 
               <div className="p-3 rounded bg-amber-950/40 border border-amber-900/60 text-amber-200">
-                <strong>Consider Replacement When:</strong> Widespread wet insulation, deteriorated deck, failed attachment, widespread membrane failure, incompatible existing layers, or adopted code requirements make restoration or recover unsuitable.
+                <strong>Replacement or substantial reconstruction may be necessary when:</strong> the deck is structurally compromised, widespread wet insulation cannot be isolated, roof attachment has failed, panels are perforated or code and assembly conditions do not permit restoration.
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">01. Substrate Moisture</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Infrared & Core Sampling</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Use a moisture survey appropriate to the roof assembly and confirm suspect areas with test cuts or cores. There is no universal 20% or 25% pass/fail threshold for every roof or coating system. Wet insulation and deteriorated materials identified in the assessment must be removed and replaced before restoration.
+                Moisture testing and core sampling help identify wet insulation and concealed deterioration. There is no universal 20% or 25% moisture cutoff that applies to every roof. The project specification and manufacturer's requirements should define what material must be removed or repaired.
               </p>
             </div>
 
@@ -224,7 +224,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">04. Building Code Limits</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Maximum Roof Layers</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                The adopted building code and the authority having jurisdiction determine whether a recover is permitted and how existing roof coverings are counted. A fluid-applied coating is not a blanket exemption from code, fire, wind-uplift, drainage or substrate requirements. Verify the proposed assembly and local requirements before specifying the work.
+                Building-code requirements depend on the adopted code, existing roof layers, assembly, structural capacity and local amendments. A coating is not a way to bypass roof replacement requirements. Confirm the applicable code with the authority having jurisdiction and the project design professional.
               </p>
             </div>
           </div>

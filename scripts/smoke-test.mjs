@@ -2,11 +2,16 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import os from 'node:os';
+import assert from 'node:assert/strict';
 
 const port = Number(process.env.SMOKE_TEST_PORT) || 8080;
 const base = `http://127.0.0.1:${port}`;
+const testDirectory = await fs.mkdtemp(path.join(os.tmpdir(), 'roofing-smoke-'));
+const testEnv = { ...process.env, NODE_ENV: 'production', PORT: String(port), WEBSITE_DATA_DIR: testDirectory };
+for (const key of ['SUPABASE_URL','SUPABASE_SERVICE_ROLE_KEY','SUPABASE_ANON_KEY','SUPABASE_PUBLISHABLE_KEY']) delete testEnv[key];
 const server = spawn(process.execPath, ['server.mjs'], {
-  env: { ...process.env, NODE_ENV: 'production', PORT: String(port) },
+  env: testEnv,
   stdio: 'ignore',
 });
 
@@ -56,7 +61,7 @@ try {
   console.log('PASS commercial app and asset base');
   await check('/commercial/', (body) => body.includes('/commercial/assets/crd-logo-mark.png') && body.includes('https://theroofingdrs.com/commercial/assets/images/library/commercial-industrial-roofing.jpg'), 'commercial favicon and social sharing metadata');
   await check('/', (body) => body.includes('https://theroofingdrs.com/') && body.includes('og:image'), 'shared landing canonical and social sharing metadata');
-  await check('/sitemap.xml', (body) => body.includes('/residential/sitemap.xml') && body.includes('/commercial/sitemap.xml'), 'root sitemap index for both brands');
+  await check('/sitemap.xml', (body) => body.includes('https://theroofingdrs.com/residential/faq') && body.includes('https://theroofingdrs.com/commercial/commercial-roofing'), 'root sitemap includes public routes for both brands');
   await check('/robots.txt', (body) => body.includes('https://theroofingdrs.com/sitemap.xml'), 'root robots.txt sitemap reference');
   await check('/residential/sitemap.xml', (body) => body.includes('https://theroofingdrs.com/residential/service-areas/texarkana') && body.includes('https://theroofingdrs.com/residential/blog'), 'residential sitemap content');
   await check('/residential/robots.txt', (body) => body.includes('/residential/sitemap.xml'), 'residential robots.txt sitemap reference');
@@ -142,10 +147,26 @@ try {
     console.log('PASS ' + app + ' bundle image references (' + referenced.size + ' checked)');
   }
 
+  // Run only against isolated local data with no production credentials.
+  for (const route of ['/residential/api/v1/leads','/commercial/api/leads']) {
+    const denied = await fetch(base + route);
+    assert.equal(denied.status, 401, 'Anonymous lead lists must be denied: ' + route);
+    for (const body of [{name: 42, phone: {}}, {name: ' ', phone: ' '}]) {
+      const result = await fetch(base + route, {method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify(body)});
+      assert.equal(result.status, 400, 'Malformed contact data must be rejected: ' + route);
+    }
+    const unavailable = await fetch(base + route, {method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({name:'Synthetic test',phone:'9035550100'})});
+    assert.equal(unavailable.status, 503, 'Missing durable storage must not report success: ' + route);
+  }
+  assert.equal((await fetch(base + '/commercial/api/save-logo', {method:'POST',headers:{'content-type':'application/json'},body:'{}'})).status, 401);
+  console.log('PASS private lead access, malformed submissions, and durable-storage failure behavior');
   console.log('Combined site smoke tests passed.');
 } catch (error) {
   console.error(error instanceof Error ? error.message : error);
   process.exitCode = 1;
 } finally {
+  const stopped = new Promise(resolve => server.once('exit', resolve));
   server.kill('SIGTERM');
+  await stopped;
+  await fs.rm(testDirectory, {recursive:true,force:true});
 }

@@ -27,6 +27,7 @@ import { ServicePageTemplate } from './components/ServicePageTemplate';
 import { RoofSystemPageTemplate } from './components/RoofSystemPageTemplate';
 import { IndustryPageTemplate } from './components/IndustryPageTemplate';
 import { ServiceAreaTemplate } from './components/ServiceAreaTemplate';
+import { ArticlePageTemplate } from './components/ArticlePageTemplate';
 
 // Content Dictionaries
 import { SERVICES_CONTENT } from './siteContent';
@@ -34,6 +35,8 @@ import {
   ROOF_SYSTEMS_CONTENT,
   INDUSTRIES_CONTENT,
   SERVICE_AREAS_CONTENT,
+  CITY_SERVICE_AREAS_CONTENT,
+  COATING_ARTICLES_CONTENT,
 } from './siteSystemsContent';
 import { LeadType } from './types';
 
@@ -70,6 +73,9 @@ const MainAppContent: React.FC = () => {
     if (normalizedPath === '/blog' || normalizedPath.startsWith('/blog/')) {
       return <BlogPage currentPath={normalizedPath} onOpenInspection={handleOpenInspection} />;
     }
+
+    const articleData = COATING_ARTICLES_CONTENT[normalizedPath];
+    if (articleData) return <ArticlePageTemplate data={articleData} onOpenInspection={handleOpenInspection} />;
 
     // 1. Core Dedicated Pages
     if (normalizedPath === '/' || normalizedPath === '') {
@@ -222,10 +228,24 @@ const MainAppContent: React.FC = () => {
     }
 
     // 5. Service Areas
-    if (SERVICE_AREAS_CONTENT[normalizedPath] || SERVICE_AREAS_CONTENT[rawPath] || SERVICE_AREAS_CONTENT[currentPath]) {
+    if (
+      CITY_SERVICE_AREAS_CONTENT[normalizedPath] ||
+      SERVICE_AREAS_CONTENT[normalizedPath] ||
+      CITY_SERVICE_AREAS_CONTENT[rawPath] ||
+      SERVICE_AREAS_CONTENT[rawPath] ||
+      CITY_SERVICE_AREAS_CONTENT[currentPath] ||
+      SERVICE_AREAS_CONTENT[currentPath]
+    ) {
       return (
         <ServiceAreaTemplate
-          data={SERVICE_AREAS_CONTENT[normalizedPath] || SERVICE_AREAS_CONTENT[rawPath] || SERVICE_AREAS_CONTENT[currentPath]}
+          data={
+            CITY_SERVICE_AREAS_CONTENT[normalizedPath] ||
+            SERVICE_AREAS_CONTENT[normalizedPath] ||
+            CITY_SERVICE_AREAS_CONTENT[rawPath] ||
+            SERVICE_AREAS_CONTENT[rawPath] ||
+            CITY_SERVICE_AREAS_CONTENT[currentPath] ||
+            SERVICE_AREAS_CONTENT[currentPath]
+          }
           onOpenInspection={handleOpenInspection}
           onOpenEmergency={handleOpenEmergency}
         />

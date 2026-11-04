@@ -49,9 +49,9 @@ const CITY_DETAILS: Record<string, CityDetail> = {
     slug: 'texarkana',
     name: 'Texarkana',
     county: 'Bowie County (Texas) & Miller County (Arkansas)',
-    tagline: 'Twin Cities Headquarters • 24/7 Immediate Storm Dispatch',
+    tagline: 'Texarkana Service Area • Residential Storm Response',
     heroImage: '/assets/images/new_roof_install.jpg',
-    intro: 'As our central corporate headquarters, Texarkana represents the cornerstone of The Roof Doctors. Located along the bustling Interstate 30 transit corridor where Texas meets Arkansas, Texarkana homes range from historic craftsman bungalows in Beverly and downtown to modern executive estates around Pleasant Grove and Richmond Road.',
+    intro: 'Texarkana is our home base for serving homeowners throughout Northeast Texas and the surrounding Ark-La-Tex region. Located along the bustling Interstate 30 transit corridor where Texas meets Arkansas, Texarkana homes range from historic craftsman bungalows in Beverly and downtown to modern executive estates around Pleasant Grove and Richmond Road.',
     climateAndGeography: 'Texarkana sits directly at the confluence of Gulf Coast moisture systems and cold Canadian plains fronts. This geographic crossroads creates high-frequency severe thunderstorms that produce baseball-sized hail and sudden microburst gusts. Furthermore, dense loblolly pines throughout Texarkana drop heavy blankets of acidic needles that trap moisture in roof valleys and accelerate shingle erosion.',
     localRoofProblems: [
       {
@@ -89,7 +89,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
     ],
     whyLocalChooseUs: [
-      'Permanent local office at 1420 Richmond Rd, Texarkana, TX 75501.',
+      'Local roofing teams serving homeowners throughout Texarkana and surrounding communities.',
       'True 2-hour emergency dispatch response for storm tarping in Texarkana and Wake Village.',
       'We physically meet Bowie County and Miller County insurance adjusters on your roof.',
       'Strictly compliant with Texas HB 2102 anti-deductible waiver laws.',
@@ -101,14 +101,14 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
       {
         q: 'How quickly can your Texarkana team respond to an active roof leak?',
-        a: 'Because our central fleet is dispatched from 1420 Richmond Rd, we offer same-day diagnostic service for active leaks, and emergency tarping dispatch within 2 hours following major storms.',
+        a: 'Our team coordinates inspections and emergency response throughout the Texarkana service area. Response timing depends on weather, demand and project location.',
       },
       {
         q: 'Can you work on homes on both the Texas and Arkansas sides of Texarkana?',
         a: 'Yes. The Roof Doctors is fully licensed, registered, and insured to perform residential roofing in both Texas and Arkansas.',
       },
     ],
-    metaDescription: 'Certified roofing contractors in Texarkana, TX. Free 21-point forensic roof inspections, hail damage repairs, and full replacements from our 1420 Richmond Rd HQ.',
+    metaDescription: 'Residential roofing in Texarkana, TX. Free 21-point roof inspections, hail damage repairs and roof replacements from a local service team.',
     zipCodes: ['75501', '75503', '75505'],
     permitInfo: 'City of Texarkana Building Inspection Division (220 Texas Blvd)',
   },
@@ -221,7 +221,7 @@ const CITY_DETAILS: Record<string, CityDetail> = {
       },
     ],
     whyLocalChooseUs: [
-      'Fast 30-minute dispatch down I-30 and Hwy 82 from our Texarkana headquarters.',
+      'Local service coverage throughout New Boston and surrounding Northeast Texas communities.',
       'We never use standard 4-nail installation; we mandate 6 nails per shingle for 130 mph wind certification.',
       'Deep relationships working with Bowie County homeowners and veterans near RRAD.',
       'Assistance meeting insurance adjusters on wind damage and creased shingle claims.',
@@ -569,7 +569,27 @@ export const CityPage: React.FC<CityPageProps> = ({
 }) => {
   // Normalize slug
   const normalized = citySlug.toLowerCase().replace(/[^a-z0-9-]/g, '');
-  const city = CITY_DETAILS[normalized] || CITY_DETAILS['texarkana'];
+  const city = CITY_DETAILS[normalized];
+
+  if (!city) {
+    return (
+      <>
+        <SeoHead
+          title="Service Area Not Found | The Roof Doctors"
+          description="This residential service area page could not be found. View The Roof Doctors' residential service area directory."
+          canonicalPath="/service-areas"
+          noIndex
+        />
+        <main className="min-h-screen bg-slate-50 text-slate-900 flex items-center justify-center px-6 py-20">
+          <div className="max-w-xl text-center space-y-4">
+            <h1 className="text-3xl font-black">Service Area Not Found</h1>
+            <p className="text-slate-600">That residential service area page is not available. Residential service is generally focused within 75 miles of Texarkana. Requests beyond that area can be reviewed individually.</p>
+            <button onClick={() => onNavigate('/service-areas')} className="px-5 py-3 rounded-lg bg-red-600 text-white font-bold">View Residential Service Areas</button>
+          </div>
+        </main>
+      </>
+    );
+  }
 
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900 pb-20">
@@ -579,20 +599,12 @@ export const CityPage: React.FC<CityPageProps> = ({
         canonicalPath={`/service-areas/${city.slug}`}
         schemaJson={{
           '@context': 'https://schema.org',
-          '@type': 'RoofingContractor',
-          name: `The Roof Doctors - ${city.name}`,
+          '@type': 'Organization',
+          name: 'The Roof Doctors',
           telephone: '+1-903-231-5940',
           areaServed: {
             '@type': 'City',
             name: `${city.name}, TX`,
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '1420 Richmond Rd',
-            addressLocality: 'Texarkana',
-            addressRegion: 'TX',
-            postalCode: '75501',
-            addressCountry: 'US',
           },
         }}
       />
@@ -603,7 +615,7 @@ export const CityPage: React.FC<CityPageProps> = ({
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-red-600/20 text-red-400 border border-red-500/30 uppercase tracking-wide">
               <MapPin className="w-4 h-4 text-red-400" />
-              <span>{city.county} • Dedicated Local Hub</span>
+              <span>{city.county} • Residential Service Area</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
@@ -662,11 +674,11 @@ export const CityPage: React.FC<CityPageProps> = ({
               <div className="p-6 space-y-2 text-xs">
                 <h3 className="font-bold text-white text-base">Local Service Guarantee</h3>
                 <p className="text-slate-300 leading-relaxed">
-                  Serving {city.name} with certified local crews, physical adjuster accompaniment on roof claims, and transparent photo reports.
+                  Residential projects in {city.name} are evaluated based on location, scope, and scheduling. Contact us to confirm availability.
                 </p>
                 <div className="pt-2 border-t border-slate-800 flex justify-between text-slate-400 text-[11px]">
                   <span>County: {city.county.split('&')[0]}</span>
-                  <span>Direct Dispatch: 903-231-5940</span>
+                  <span>Residential Inquiries: 903-231-5940</span>
                 </div>
               </div>
             </div>
@@ -823,20 +835,20 @@ export const CityPage: React.FC<CityPageProps> = ({
       <section className="bg-slate-900 text-white py-14 px-4 sm:px-6 mt-12 border-t border-slate-800">
         <div className="max-w-4xl mx-auto text-center space-y-4">
           <span className="text-xs uppercase tracking-wider text-red-400 font-bold">
-            Direct Dispatch Across {city.county}
+            Residential Service Availability
           </span>
           <h2 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
             Schedule a Free Inspection in {city.name}, TX
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
-            Get an objective, physical 21-point roof health inspection from certified technicians. No sales pitch—just the honest facts about your roof.
+            Our core residential service area is generally within 75 miles of Texarkana. For locations beyond that range, contact us and we will confirm whether the project can be accommodated.
           </p>
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
             <button
               onClick={() => onOpenIntake('DIAGNOSTIC')}
               className="px-6 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg transition-colors cursor-pointer"
             >
-              REQUEST {city.name.toUpperCase()} INSPECTION
+              CHECK {city.name.toUpperCase()} AVAILABILITY
             </button>
             <a
               href="tel:9032315940"

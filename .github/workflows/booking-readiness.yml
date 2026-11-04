@@ -1,9 +1,9 @@
 name: Booking configuration readiness
 on:
   push:
-    branches: [feature/booking-configuration-readiness]
+    branches: [main, feature/booking-configuration-readiness]
   pull_request:
-    branches: [release-candidate/combined-site]
+    branches: [main, release-candidate/combined-site]
     paths: ['booking/**', '.github/workflows/booking-readiness.yml']
 permissions:
   contents: read

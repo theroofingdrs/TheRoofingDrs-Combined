@@ -114,6 +114,24 @@ function proxy(req, res, app, targetPath) {
   send();
 }
 
+function serveRootFile(req, res, filename, contentType) {
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    res.writeHead(405, { allow: 'GET, HEAD' });
+    return res.end();
+  }
+  const filePath = path.join(ROOT, filename);
+  if (!fs.existsSync(filePath)) {
+    res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' });
+    return res.end('Not found.');
+  }
+  res.writeHead(200, {
+    'content-type': contentType,
+    'cache-control': 'public, max-age=3600',
+  });
+  if (req.method === 'HEAD') return res.end();
+  fs.createReadStream(filePath).pipe(res);
+}
+
 function serveLanding(req, res) {
   if (req.method !== 'GET' && req.method !== 'HEAD') {
     res.writeHead(405, { allow: 'GET, HEAD' });
@@ -124,33 +142,23 @@ function serveLanding(req, res) {
   fs.createReadStream(path.join(ROOT, 'index.html')).pipe(res);
 }
 
-function serveText(req, res, body, contentType) {
-  if (req.method !== 'GET' && req.method !== 'HEAD') {
-    res.writeHead(405, { allow: 'GET, HEAD' });
-    return res.end();
-  }
-  res.writeHead(200, { 'content-type': contentType, 'cache-control': 'public, max-age=3600' });
-  if (req.method === 'HEAD') return res.end();
-  res.end(body);
-}
-
-const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://theroofingdrs.com/residential/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://theroofingdrs.com/commercial/sitemap.xml</loc></sitemap>
-</sitemapindex>`;
-
-const rootRobots = `User-agent: *
-Allow: /
-Sitemap: https://theroofingdrs.com/sitemap.xml
-`;
-
 const server = http.createServer((req, res) => {
   const url = new URL(req.url || '/', 'http://localhost');
-  const pathname = decodeURIComponent(url.pathname);
+  let pathname;
+  try { pathname = decodeURIComponent(url.pathname); }
+  catch { res.writeHead(400); return res.end('Invalid URL.'); }
+  const requestHost = (req.headers.host || '').split(':')[0].toLowerCase();
+  if (requestHost === 'www.theroofingdrs.com') {
+    res.writeHead(301, {
+      location: `https://theroofingdrs.com${req.url || '/'}`,
+      'cache-control': 'public, max-age=3600',
+    });
+    return res.end();
+  }
 
-  if (pathname === '/sitemap.xml') return serveText(req, res, sitemapIndex, 'application/xml; charset=utf-8');
-  if (pathname === '/robots.txt') return serveText(req, res, rootRobots, 'text/plain; charset=utf-8');
+  if (pathname === '/robots.txt') return serveRootFile(req, res, 'robots.txt', 'text/plain; charset=utf-8');
+  if (pathname === '/sitemap.xml') return serveRootFile(req, res, 'sitemap.xml', 'application/xml; charset=utf-8');
+
 
   if (pathname === '/') return serveLanding(req, res);
 

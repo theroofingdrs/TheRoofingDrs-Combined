@@ -35,8 +35,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
   return (
     <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd selection:bg-[#181818] selection:text-[#f4f3ef]">
       <SeoMeta
-        title="Commercial Roofing TX, AR, LA & OK | Commercial Roof Doctors"
-        description="Commercial roofing, large-loss storm response, restoration coatings, and roof asset management across Texas, Arkansas, Louisiana, and Oklahoma. (903) 231-5940."
+        title="Commercial Roof Coatings | Texarkana"
+        description="Commercial roof coatings and restoration for aging metal and low-slope roofs. Silicone, acrylic and polyurethane systems, inspections and repairs. Serving Texarkana and regional markets within 250 miles. Call (903) 231-5940."
         canonicalPath="/"
       />
 
@@ -63,7 +63,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="pt-2">
               <CRDLogo
                 variant="full"
-                theme="dark"
+                theme="light"
                 className="h-12 sm:h-14 lg:h-16 w-auto max-h-[64px] max-w-[260px] object-contain"
               />
             </div>
@@ -71,22 +71,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Territorial Marker */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-2 bg-[#111111]/85 backdrop-blur-sm border border-[#333333] text-[#d99a19] text-xs font-mono-crd tracking-wider uppercase">
               <span className="w-2 h-2 rounded-full bg-[#d99a19] shrink-0 animate-pulse" />
-              <span>Four-State Commercial Roofing • Field Operations Hub</span>
+              <span>Commercial Roof Coatings & Restoration • Texarkana Based</span>
             </div>
 
             {/* Hero Main Copy */}
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-heading font-black tracking-tight uppercase text-white leading-[0.92]">
-                Commercial Roofing.{' '}
-                <span className="text-[#eeeeee]">Diagnosed.</span>{' '}
-                <span className="text-[#eeeeee]">Documented.</span>{' '}
+                Commercial Roof Coatings.{' '}
+                <span className="text-[#eeeeee]">Restoration.</span>{' '}
+                <span className="text-[#eeeeee]">Metal Roof Renewal.</span>{' '}
                 <span className="text-[#d99a19]">Done Right.</span>
               </h1>
             </div>
 
             {/* Supporting Paragraph */}
             <p className="text-lg sm:text-xl text-[#d4d4d4] max-w-2xl leading-relaxed font-normal">
-              Commercial roofing requires more than a repair quote. CRD starts with the roof itself — its condition, system, failure points, history and future — then builds the right plan around it.
+              CRD evaluates aging commercial metal and low-slope roofs for restoration with professionally specified silicone, acrylic, and polyurethane coating systems. We inspect the roof first, address seams, fasteners, flashings and drainage, then determine whether coating, repair or replacement is the right investment.
             </p>
 
             {/* Primary & Secondary Action CTAs */}
@@ -181,7 +181,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 Commercial Coverage
               </div>
               <p className="text-xs text-[#666666] mt-1 leading-relaxed">
-                Field-deployed across Texas, Arkansas, Louisiana, and Oklahoma. Project availability and travel are confirmed based on property location and scope.
+                Regional commercial coverage extending up to 250 miles from Texarkana across TX, AR, LA, and OK.
               </p>
             </div>
           </div>

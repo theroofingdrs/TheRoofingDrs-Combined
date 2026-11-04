@@ -25,5 +25,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install dependencies, build both applications, and run combined smoke tests
+      - name: Install locked application dependencies
+        run: npm run install:apps
+      - name: Typecheck, build both applications, and run combined smoke tests
         run: npm test

@@ -70,7 +70,7 @@ import type {
 import { getDefaultPriceBooks, getDefaultScopeTemplates } from './pricingSeeds.ts';
 import { getDefaultVendors, getDefaultMaterials, getDefaultCrews } from './productionSeeds.ts';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_DIR = process.env.WEBSITE_DATA_DIR || path.join(process.cwd(), 'data');
 const DB_FILE = path.join(DATA_DIR, 'roof_doctors_db.json');
 
 export interface DatabaseSchema {

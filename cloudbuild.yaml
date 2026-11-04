@@ -17,21 +17,21 @@ steps:
       - ${_IMAGE_URI}
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     id: deploy-combined-cloud-run
-    entrypoint: gcloud
+    # Repository consolidation validates source; production cutover stays explicit.
+    entrypoint: sh
     args:
-      - run
-      - deploy
-      - roof-doctors-combined
-      - --image
-      - ${_IMAGE_URI}
-      - --region
-      - us-east1
-      - --project
-      - trdcrd
-      - --quiet
+      - -c
+      - |
+        if [ "${_APPROVE_PRODUCTION_DEPLOY}" != "true" ]; then
+          echo "Image built; production deployment was not requested."
+          exit 0
+        fi
+        exec gcloud run deploy roof-doctors-combined --image "${_IMAGE_URI}" --region us-east1 --project trdcrd --quiet
+
 images:
   - ${_IMAGE_URI}
 substitutions:
+  _APPROVE_PRODUCTION_DEPLOY: "false"
   _VITE_SUPABASE_URL: https://gubvelngdohrfvqeeabu.supabase.co
   _VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_o2OYRMRHrl8nz8mLdhX9Mg_Pk3jFz-K
   _IMAGE_URI: us-east1-docker.pkg.dev/trdcrd/roof-doctors/combined:integration

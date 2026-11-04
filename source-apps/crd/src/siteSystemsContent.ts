@@ -20,11 +20,10 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Projects where a reflective thermoplastic membrane and coordinated accessories fit the building requirements',
     ],
     advantages: [
-      'Hot-air welded seams create a continuous thermoplastic bond when installed and tested correctly',
-      '45, 60 and 80 mil membrane choices allow the assembly to be selected around project demands',
-      'Duro-TECH’s 9-by-9 weft-inserted anti-wicking scrim is designed to limit moisture travel through the reinforcement',
-      'Mechanically fastened, induction-welded and adhered installation approaches are available, subject to the approved assembly',
-      'White, tan and gray options are available; reflective performance depends on membrane color and current rating data',
+      'Heat-welded seams are physically 3x to 4x stronger than adhesive or taped seams',
+      'High solar reflectance, when verified for the exact product, can reduce roof surface temperature and heat transfer',
+      'Resistant to ozone, UV degradation, microbial algae, and bacterial growth',
+      'No open flames or hot kettles required during commercial installation',
     ],
     considerations: [
       'TPO is not chemically compatible with PVC membrane; repairs and tie-ins must use compatible materials',
@@ -120,8 +119,8 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Review pipe boots, HVAC curbs, drains and pitch pockets for compatible detailing',
       'Look for punctures, surface aging, ponding and evidence of trapped moisture below the membrane',
     ],
-    repairApproach: 'EPDM repairs require membrane-specific cleaning and preparation, approved primer and compatible EPDM flashing tape or patch material. The repair must be rolled and detailed according to the manufacturer’s instructions. Asphaltic mastics, silicone sealants and unrelated membrane scraps are not reliable substitutes for a compatible EPDM repair.',
-    restorationPotential: 'An existing EPDM roof may be a candidate for a recover or fluid-applied restoration system, but compatibility must be established first. Surface oxidation, existing coatings, seams, adhesives, ponding, wet insulation and manufacturer requirements all affect the decision. A test area and adhesion evaluation may be necessary before specifying a coating.',
+    repairApproach: 'EPDM repairs require cleaning with weathered membrane cleaners, applying specialized EPDM primers, and installing cured or uncured EPDM flashing tapes with mechanical roller pressure.',
+    restorationPotential: 'Some aging EPDM roofs may be candidates for a compatible fluid-applied coating system after cleaning, adhesion testing and any required primer. A reflective white finish may reduce roof surface temperature; actual performance depends on the exact product, roof assembly and conditions.',
     replacementTriggers: [
       'Widespread membrane shrinkage, splitting or deterioration beyond practical repair',
       'Wet or deteriorated insulation and cover board that require removal',
@@ -143,9 +142,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Tear-off, disposal, access requirements and warranty specifications',
     ],
     faqs: [
-      { question: 'Are EPDM seams heat-welded?', answer: 'No. EPDM is a thermoset rubber membrane. Seams are typically made with manufacturer-approved primer and seam tape or adhesive systems.' },
-      { question: 'Is black EPDM less energy efficient than white roofing?', answer: 'Black EPDM absorbs more solar energy than a white reflective membrane. Building energy impact depends on climate, insulation, HVAC operation and the complete roof assembly.' },
-      { question: 'Can an EPDM roof be coated?', answer: 'Sometimes. The existing membrane, seams, adhesives, surface condition and moisture levels must be evaluated, and the coating manufacturer’s approved preparation and compatibility requirements must be followed.' },
+      { question: 'Why does black EPDM get so hot?', answer: 'Black EPDM can absorb substantial solar energy. A compatible reflective coating may reduce roof surface temperature, but the exact product’s published solar reflectance and thermal emittance should be reviewed. Applying a coating does not automatically make a roof ENERGY STAR certified.' },
     ],
     relatedServices: [
       { name: 'TPO Commercial Roofing', href: '/tpo-roofing' },
@@ -368,7 +365,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
       'Surface rust and oxidation measurement along valleys and gutters',
     ],
     repairApproach: 'Loose screws are removed and replaced with oversized commercial gasket fasteners. Panel laps are reinforced with stitch screws and sealed with elastomeric mastics.',
-    restorationPotential: 'Both rusted and non-rusted metal roofs may qualify for fluid-applied restoration, but preparation differs. For non-rusted panels, assess coating adhesion, remove dirt and chalking, correct fasteners and laps, and use the primer and reinforcement specified by the selected system. For rusted panels, determine whether corrosion is superficial or has reduced panel thickness or perforated the metal. Remove loose scale to the preparation standard required by the system, replace perforated or structurally weakened panels, use a compatible corrosion-control primer where specified, and reinforce seams, fasteners and transitions. A coating cannot restore lost metal thickness, repair failed structural connections or guarantee a permanent leak-free roof. Confirm substrate condition, moisture, drainage, compatibility and manufacturer requirements before recommending restoration.',
+    restorationPotential: 'Many serviceable metal roofs may be candidates for fluid-applied restoration after corrosion, fasteners, seams, flashing and attachment are evaluated and repaired. A properly specified system can provide a renewed weathering surface, but it does not guarantee permanent leak elimination or a fixed percentage savings compared with replacement.',
     replacementTriggers: [
       'Panel rust has perforated through the structural steel substrate.',
       'Hail has crushed standing seams beyond the ability to seal.',
@@ -389,318 +386,291 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
     ],
     relatedServices: [
       { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
       { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
     ],
   },
 
   '/silicone-roof-coatings': {
-    title: 'Commercial Silicone Roof Coatings | Fluid-Applied Restoration | CRD',
-    metaDescription: 'Commercial silicone roof coating and restoration assessments for eligible metal, modified-bitumen and single-ply roofs. Learn about preparation, compatibility, ponding water, repairs and system-specific warranty requirements.',
+    title: 'Commercial Silicone Roof Coatings | CRD',
+    metaDescription: 'Commercial silicone roof coatings for compatible metal and low-slope roofs. CRD evaluates drainage, moisture, adhesion and surface condition before specifying a restoration system in Texarkana and regional markets.',
     canonicalPath: '/silicone-roof-coatings',
-    systemName: 'High-Solids Silicone Coatings',
+    systemName: 'Silicone Roof Coating Systems',
     systemType: 'Roof Coating',
-    heroHeadline: 'Silicone Roof Coatings. A Restoration Option for Qualified Roofs.',
-    heroSubtitle: 'Fluid-applied silicone can provide a continuous, reflective weathering surface over certain existing commercial roof assemblies when the substrate is sound, dry, properly prepared and approved for the selected system. Compatibility and ponding-water suitability must be confirmed for the specific product.',
-    whatItIs: 'Commercial silicone roof coatings are fluid-applied materials that cure into an elastomeric weathering membrane. Products differ in chemistry, solids content, application rate, required dry-film thickness, primer, reinforcement and warranty terms. Some silicone systems are designed to tolerate ponding water, but suitability must be confirmed in current product data and warranty documents. Coatings do not correct wet insulation, deteriorated decking, failed attachment or unresolved drainage defects.',
+    heroHeadline: 'Commercial Silicone Roof Coatings.',
+    heroSubtitle: 'Silicone coating systems can provide a seamless, weather-resistant surface on eligible commercial metal and low-slope roofs. CRD evaluates the existing assembly and product compatibility before recommending an application.',
+    whatItIs: 'Silicone roof coatings are fluid-applied materials that cure into a flexible protective membrane. Formulations and solids content vary by manufacturer. They are often considered for low-slope roofs where ponding water is a concern, but suitability still depends on the specific product, substrate, preparation, drainage and installation requirements.',
     whereItIsUsed: [
-      'Commercial roofs with areas of slow drainage or chronic ponding water',
-      'Aging TPO, PVC, and EPDM single-ply membranes nearing warranty end',
-      'Industrial corrugated metal roofs seeking long-term seam sealing',
+      'Eligible low-slope commercial roofs where the selected product is approved for the drainage conditions',
+      'Prepared metal roofs requiring seam, fastener and surface protection',
+      'Compatible existing single-ply or modified bitumen roof assemblies after testing and preparation',
     ],
     advantages: [
-      'Some silicone formulations are designed for ponding-water exposure; verify the exact product approval and correct drainage defects where practical',
-      'Light-colored coatings may increase roof-surface reflectance; use product-specific tested data and avoid assuming a fixed energy-savings percentage',
-      'Fluid-applied systems can cover broad roof areas, but existing seams, fasteners, penetrations and transitions require compatible repairs and reinforcement as specified',
-      'System warranties may be available for specified terms when the exact product, preparation, application rate, dry-film thickness, installer and project conditions qualify; read the actual warranty exclusions',
+      'Many silicone formulations have strong resistance to prolonged water exposure when installed as specified',
+      'Fluid application can create a continuous protective layer over properly detailed roof surfaces',
+      'Available in reflective finishes that may reduce solar heat absorption when supported by product data',
+      'Some systems can be maintained or recoated using compatible materials under manufacturer guidance',
     ],
     considerations: [
-      'Substrate must meet the selected manufacturer’s cleanliness, dryness, preparation and adhesion requirements. Pressure washing is not suitable for every roof or condition and must not drive water into the assembly',
-      'Silicone surfaces can be slick when wet; dedicated walk pads are required for service routes',
-      'Future repairs and recoats generally require compatible silicone products or a manufacturer-approved preparation and primer system; verify compatibility before applying another coating chemistry',
+      'Underlying insulation and roof assembly must be evaluated for trapped moisture and deterioration',
+      'Surface preparation, primer selection and adhesion testing are critical to system performance',
+      'Silicone surfaces may retain dirt and can be slippery when wet; walk pads and service routes may be needed',
+      'Future repairs and recoating generally require materials compatible with the cured silicone surface',
     ],
     commonProblems: [
-      { title: 'Delamination from Poor Surface Preparation', desc: 'Applying a coating over dirt, grease, chalking, incompatible existing coatings or an unsuitable substrate can cause adhesion failure.' },
-      { title: 'Trapped Moisture Below the Membrane', desc: 'Coating over wet insulation or deteriorated roof components can conceal rather than correct the underlying problem.' },
-      { title: 'Insufficient Coating Thickness', desc: 'Applying less material than the approved system requires can compromise performance and may invalidate warranty coverage.' },
-      { title: 'Unresolved Drainage and Detail Failures', desc: 'A coating does not correct inadequate slope, loose edge metal, failed drains or structurally unsound details unless separately repaired.' },
-      { title: 'Inadequate Dry Film Thickness', desc: 'Spraying below manufacturer mil specifications, reducing long-term durability.' },
+      { title: 'Poor Surface Preparation', desc: 'Dirt, grease, chalking, oxidation or incompatible existing coatings can prevent reliable adhesion.' },
+      { title: 'Uncorrected Roof Defects', desc: 'Open seams, failed fasteners, damaged flashings and active leaks must be repaired and detailed before the coating is applied.' },
+      { title: 'Insufficient Application Thickness', desc: 'Applying less material than the selected system requires can compromise performance and manufacturer warranty eligibility.' },
     ],
     inspectionProtocols: [
-      'Adhesion testing using the coating manufacturer’s prescribed method and acceptance criteria for the specific substrate',
-      'Infrared moisture scan ensuring underlying insulation is dry',
-      'Inspection of fabric reinforcement over all curbs, seams, and penetrations',
-      'Wet-film and dry-film mil gauge testing during application',
+      'Moisture evaluation of the existing roof assembly and insulation',
+      'Surface cleaning and adhesion testing on representative areas',
+      'Inspection of seams, fasteners, penetrations, curbs and perimeter details',
+      'Review of drainage and ponding conditions against the selected product requirements',
+      'Wet-film and dry-film thickness verification during application where specified',
     ],
-    repairApproach: 'Repairs require identification of the existing coating and substrate, cleaning and preparation, and compatible repair materials applied at the manufacturer’s specified thickness. Reinforce seams, penetrations and transitions where the approved system requires it; do not assume a generic sealant is acceptable.',
-    restorationPotential: 'A silicone restoration may be appropriate where the existing roof assembly is sound and adequately attached, moisture conditions meet system requirements, the substrate is compatible, and required repairs and drainage work are completed. Silicone is not universally suitable for every TPO, PVC, EPDM, modified-bitumen or metal roof. Confirm written compatibility, primer, reinforcement, application rate, dry-film thickness and warranty conditions for the exact products proposed.',
-    replacementTriggers: ['Widespread wet or deteriorated insulation that cannot be economically removed and replaced as part of a restoration scope.', 'Perforated or structurally weakened metal panels, deteriorated deck, widespread loss of membrane attachment or extensive membrane failure.', 'An existing roof assembly or building-code condition that does not permit the proposed restoration or recover system.'],
+    repairApproach: 'Repairs should use materials approved for the existing substrate and silicone system. The scope may include seam and flashing reinforcement, compatible sealants and localized coating restoration.',
+    restorationPotential: 'Silicone may be appropriate where the existing roof is structurally sound, acceptably dry, properly prepared and compatible with the selected system. It is not a substitute for correcting deck damage, widespread saturated insulation or failed roof details.',
+    replacementTriggers: [
+      'Widespread saturated insulation or concealed moisture cannot be corrected within a restoration scope.',
+      'The deck or supporting assembly has structural deterioration.',
+      'The substrate cannot achieve reliable adhesion with an approved system.',
+    ],
     maintenanceGuidelines: [
-      'Inspect the coating, drains, flashings, walk pads and rooftop service areas at manufacturer-recommended intervals; clean only as required using an approved method',
-      'Inspect walk pads and service pathways around rooftop units',
+      'Inspect roof drains, scuppers and drainage paths on a scheduled basis',
+      'Review seams, penetrations, walk pads and rooftop service areas after significant weather',
+      'Use only manufacturer-compatible materials for repairs and recoating',
     ],
-    stormConsiderations: 'Hail and wind-driven debris can damage the coating or underlying roof. Inspect impacts, seams, flashings and penetrations after significant storms and repair using approved details.',
+    stormConsiderations: 'After hail or severe wind, inspect the coating, underlying roof assembly, flashings and perimeter details. Impact resistance and repair requirements depend on the specific product and installed system.',
     costFactors: [
-      'Specified coating chemistry, total material quantity and dry-film thickness required by the exact manufacturer system and warranty',
-      'Condition of underlying roof (amount of seam prep and fastener stitching required)',
-      'Roof area, details, penetrations, access and project phasing',
+      'Roof condition, access and total surface area',
+      'Cleaning, preparation, primer and adhesion testing requirements',
+      'Seam, fastener, flashing and penetration repairs',
+      'Specified coating coverage, thickness and manufacturer warranty requirements',
     ],
     faqs: [
-      { question: 'Does a silicone coating count as a new roof layer under building code?', answer: 'Do not assume a universal exemption. The adopted code, existing assembly, proposed work and authority having jurisdiction determine applicable requirements. Confirm classification and any roof-covering layer limits with the local building official before work is specified.' },
-      { question: 'Can every TPO, PVC or EPDM roof be coated with silicone?', answer: 'No. Compatibility varies by membrane formulation, age, surface condition, prior coatings, primers and the silicone product. Obtain written manufacturer guidance and perform any required test area before specifying a system.' },
-      { question: 'Will a silicone coating fix wet insulation or a failing roof deck?', answer: 'No. Wet or deteriorated materials must be identified and addressed, and structural or attachment problems must be corrected. A coating is not a substitute for repairing the roof assembly.' },
-      { question: 'How long will a silicone roof coating last?', answer: 'Service life depends on the product, installed thickness, preparation, exposure, maintenance and warranty terms. The specified warranty is not a guarantee that every roof will remain maintenance-free for that period.' },
-      { question: 'Can silicone coatings reduce cooling costs?', answer: 'A reflective coating may reduce roof-surface temperatures and cooling loads under suitable conditions. Actual savings depend on existing roof color, insulation, HVAC efficiency, climate, building use and measured product reflectance; no fixed savings should be promised.' },
+      { question: 'Are silicone roof coatings suitable for ponding water?', answer: 'Many silicone products are designed to tolerate prolonged water exposure better than many acrylic systems. The exact product must be approved for the roof conditions, and drainage defects should still be evaluated and corrected where practical.' },
+      { question: 'Can silicone coatings be applied over an existing metal or single-ply roof?', answer: 'Some metal and single-ply assemblies may qualify. The substrate must be inspected, prepared and tested, and the selected manufacturer must approve the primer and coating system for that surface.' },
+      { question: 'Can another coating be applied over cured silicone?', answer: 'Only a compatible system should be considered. Cured silicone generally requires silicone-compatible repair and recoat materials, so the existing coating history must be identified before work begins.' },
+      { question: 'Does a silicone coating guarantee that a roof will never leak?', answer: 'No coating can guarantee that a roof will never leak. Performance depends on the existing assembly, preparation, detailing, application quality, maintenance and weather exposure.' },
     ],
     relatedServices: [
-      { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
       { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
     ],
   },
 
-
   '/acrylic-roof-coatings': {
     title: 'Commercial Acrylic Roof Coatings | CRD',
-    metaDescription: 'Commercial acrylic roof coating guide covering reflectivity, drainage, substrate preparation, limitations and restoration suitability.',
+    metaDescription: 'Acrylic commercial roof coatings for compatible metal and low-slope roofs with positive drainage. Surface preparation, seam reinforcement and reflective restoration in Texarkana and regional markets.',
     canonicalPath: '/acrylic-roof-coatings',
-    systemName: 'Acrylic Roof Coatings',
+    systemName: 'Acrylic Roof Coating Systems',
     systemType: 'Roof Coating',
-    heroHeadline: 'Acrylic Roof Coatings. Reflective Protection for Suitable Roofs.',
-    heroSubtitle: 'Acrylic coatings can provide a reflective, water-resistant surface on compatible commercial roof assemblies. Climate, drainage, substrate condition and manufacturer specifications matter.',
-    whatItIs: 'Acrylic roof coatings are water-based elastomeric coatings commonly used on selected low-slope roof systems. They are available in reflective formulations and can be useful where the roof has positive drainage and the substrate is compatible. Product formulations, solids content and performance vary.',
-    whereItIsUsed: ['Compatible metal roof assemblies', 'Selected modified bitumen and built-up roof surfaces', 'Other substrates only where the coating manufacturer approves the complete assembly'],
-    advantages: ['Reflective white formulations can reduce solar heat gain at the roof surface', 'Water-based application may offer practical handling and cleanup advantages', 'Can be renewed as part of a planned maintenance program when the existing coating and roof remain sound'],
-    considerations: ['Acrylic coatings are generally less suitable for areas of persistent ponding water', 'Rain, dew, humidity and temperature affect drying and cure', 'Surface contamination, chalking and incompatible prior coatings can impair adhesion', 'The roof must be sound, adequately drained and within manufacturer moisture limits'],
+    heroHeadline: 'Commercial Acrylic Roof Coatings.',
+    heroSubtitle: 'Acrylic coating systems can be an option for compatible commercial roofs with positive drainage. CRD evaluates the substrate, drainage, existing coating and product requirements before recommending restoration.',
+    whatItIs: 'Acrylic roof coatings are typically water-based elastomeric materials that cure into a protective film. They are used on selected metal and low-slope roof assemblies, particularly where positive drainage is available. Product formulations differ, so the approved substrate, application conditions and performance limits must be checked before selection.',
+    whereItIsUsed: [
+      'Commercial metal roofs with suitable slope and positive drainage',
+      'Compatible low-slope roof assemblies where the selected product is approved',
+      'Existing roof surfaces where preparation and adhesion testing confirm compatibility',
+    ],
+    advantages: [
+      'Reflective finishes are available and may help reduce solar heat absorption when supported by product ratings',
+      'Water-based formulations are available for selected commercial restoration applications',
+      'Some systems can be maintained or recoated under manufacturer requirements',
+      'Can provide a cost-conscious restoration option when the existing roof is a suitable candidate',
+    ],
+    considerations: [
+      'Many acrylic systems are not intended for prolonged ponding water',
+      'Rain, dew, temperature and humidity during application and curing must meet product requirements',
+      'Surface contamination, chalking and incompatible existing coatings can cause adhesion failure',
+      'The roof must have suitable drainage or a separate drainage correction plan',
+    ],
     commonProblems: [
-      { title: 'Softening or erosion in ponding areas', desc: 'Persistent standing water can shorten performance and may make acrylic unsuitable for the roof condition.' },
-      { title: 'Poor adhesion', desc: 'Dirt, chalking, moisture or an incompatible prior coating can prevent proper bonding.' }
+      { title: 'Applying Acrylic Where Water Stands', desc: 'Prolonged ponding can cause premature deterioration in acrylic systems not approved for those conditions.' },
+      { title: 'Rain Before Proper Cure', desc: 'Application during unsuitable weather can affect film formation and coating performance.' },
+      { title: 'Coating Over Contamination', desc: 'Dust, oils, chalking and loose material can prevent adhesion if the surface is not properly prepared.' },
     ],
-    inspectionProtocols: ['Identify the roof membrane, prior coatings and surface condition', 'Review drainage and map areas of persistent ponding', 'Inspect seams, fasteners, flashings, penetrations and transitions', 'Investigate suspected wet insulation and verify moisture findings', 'Complete manufacturer-specified preparation and field adhesion testing'],
-    repairApproach: 'Correct leaks, open seams, damaged flashings, loose fasteners and other defects with compatible repair materials before coating. Apply primer, reinforcement and coating only as specified for the exact assembly.',
-    restorationPotential: 'Acrylic may be appropriate on selected well-drained roofs when the substrate is dry, stable and compatible. It should not be selected solely because it is reflective or economical. Persistent ponding, wet insulation, failed attachment or unsuitable substrate conditions may rule it out.',
-    replacementTriggers: ['Wet or deteriorated roof components that cannot be repaired in place', 'Widespread membrane failure or failed attachment', 'Persistent drainage problems that cannot be corrected as part of the project', 'No manufacturer-approved coating assembly for the existing substrate'],
-    maintenanceGuidelines: ['Inspect drainage, coating wear and details at least annually', 'Remove debris from drains and scuppers', 'Repair damage using approved materials', 'Follow the coating manufacturer’s cleaning, inspection and recoat guidance'],
-    stormConsiderations: 'Inspect for punctures, impact damage, displaced flashings and coating erosion after significant storms. Repair exposed substrate promptly using compatible materials.',
-    costFactors: ['Roof area and surface profile', 'Drainage corrections and ponding conditions', 'Cleaning, repairs, primer and reinforcement', 'Specified coating thickness and number of coats', 'Access, rooftop equipment and project phasing'],
+    inspectionProtocols: [
+      'Review of slope, drains, scuppers and recurring ponding areas',
+      'Inspection of substrate condition and existing coating history',
+      'Cleaning and adhesion testing on representative areas',
+      'Evaluation of seams, fasteners, flashings and penetrations',
+      'Review of weather and application requirements for the specified product',
+    ],
+    repairApproach: 'Acrylic systems should be repaired with compatible materials approved by the coating manufacturer. Roof defects, seams and flashings must be addressed before field coating.',
+    restorationPotential: 'Acrylic may be suitable where the roof has positive drainage, the substrate is sound and dry, and the selected product is approved for the existing surface. Persistent ponding or unresolved moisture may make another system or replacement more appropriate.',
+    replacementTriggers: [
+      'Persistent ponding cannot be corrected and the selected coating is not approved for those conditions.',
+      'The roof assembly contains widespread trapped moisture or structural deterioration.',
+      'The existing surface cannot be prepared to achieve the required adhesion.',
+    ],
+    maintenanceGuidelines: [
+      'Keep drains and scuppers clear to maintain positive drainage',
+      'Inspect seams, penetrations and coating wear on a scheduled basis',
+      'Follow manufacturer guidance for cleaning, repairs and recoating',
+    ],
+    stormConsiderations: 'Inspect the roof after hail, wind and severe storms for punctures, displaced flashing, ponding or coating damage. Repair methods depend on the coating product and underlying roof assembly.',
+    costFactors: [
+      'Existing roof condition and drainage profile',
+      'Surface cleaning, preparation, primer and repair requirements',
+      'Coating coverage and specified dry-film thickness',
+      'Access, rooftop equipment and manufacturer warranty requirements',
+    ],
     faqs: [
-      { question: 'Is acrylic roof coating suitable for ponding water?', answer: 'Acrylic coatings are generally not the first choice for persistent ponding water. Drainage and the product manufacturer’s written limitations should guide selection.' },
-      { question: 'Can acrylic coating be applied to any metal or membrane roof?', answer: 'No. Substrate compatibility, surface condition, preparation, primer and adhesion testing must be confirmed for the specific product and roof assembly.' }
+      { question: 'Are acrylic roof coatings suitable for ponding water?', answer: 'Many acrylic systems are intended for roofs with positive drainage and are not designed for prolonged ponding. The selected product data must be checked, and drainage problems should be addressed before coating.' },
+      { question: 'Can acrylic coatings be used on commercial metal roofs?', answer: 'Some acrylic products are approved for prepared metal roofs. Rust, existing finishes, seams, fasteners and panel condition must be evaluated, and the primer and coating must be approved for the substrate.' },
+      { question: 'Can acrylic coatings be applied over TPO or EPDM?', answer: 'Only when a specific coating system and primer are approved for that membrane and the surface passes required preparation and adhesion checks. Compatibility should never be assumed.' },
+      { question: 'How long will an acrylic roof coating last?', answer: 'Service life depends on the selected product, application thickness, preparation, drainage, weather exposure and maintenance. Any warranty term must be tied to the actual manufacturer system and project specifications.' },
     ],
-    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }]
+    relatedServices: [
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
+    ],
   },
 
   '/polyurethane-roof-coatings': {
     title: 'Commercial Polyurethane Roof Coatings | CRD',
-    metaDescription: 'Commercial polyurethane roof coating guide covering abrasion resistance, impact exposure, primers, application and substrate compatibility.',
+    metaDescription: 'Commercial polyurethane roof coating systems for selected roofs exposed to foot traffic, abrasion and mechanical wear. System evaluation and compatible restoration in Texarkana and regional markets.',
     canonicalPath: '/polyurethane-roof-coatings',
-    systemName: 'Polyurethane Roof Coatings',
+    systemName: 'Polyurethane Roof Coating Systems',
     systemType: 'Roof Coating',
-    heroHeadline: 'Polyurethane Roof Coatings. Protection for Demanding Roof Areas.',
-    heroSubtitle: 'Polyurethane coating systems can offer abrasion and impact resistance for selected commercial roofs. Product type, substrate, exposure and complete system design determine suitability.',
-    whatItIs: 'Polyurethane roof coatings are resin-based fluid-applied materials available in different formulations, including aromatic and aliphatic products. They are used in selected roofing assemblies where toughness, abrasion resistance or weathering performance is required. Primer, base coat and topcoat selection must be treated as a complete system.',
-    whereItIsUsed: ['Selected commercial roofs with service traffic or mechanical exposure', 'Roof assemblies where the manufacturer specifies a polyurethane coating system', 'As part of multi-coat systems with compatible primers and protective topcoats'],
-    advantages: ['Some formulations provide strong abrasion and impact resistance', 'Can be useful around equipment and service pathways when detailed correctly', 'System options allow selection of base and finish coats for different exposures'],
-    considerations: ['Aromatic and aliphatic polyurethane products have different UV and finish characteristics', 'Moisture sensitivity, mixing, pot life and application conditions vary by product', 'Solvent content and ventilation requirements must be considered', 'Compatibility with the existing membrane and prior coatings must be verified'],
+    heroHeadline: 'Commercial Polyurethane Roof Coatings.',
+    heroSubtitle: 'Polyurethane coating systems may be specified for selected commercial roof areas where abrasion, impact or service traffic are important design considerations. The complete system must match the roof and exposure.',
+    whatItIs: 'Polyurethane roof coatings are available in different formulations and may be used as base coats, top coats or components of a multi-layer roof restoration system. Aromatic and aliphatic formulations have different weathering characteristics, so the exact product and system design matter.',
+    whereItIsUsed: [
+      'Selected commercial roof areas exposed to recurring maintenance traffic',
+      'Roof assemblies where the manufacturer specifies a polyurethane base coat or top coat',
+      'Projects where abrasion, mechanical wear or chemical exposure are part of the design criteria',
+    ],
+    advantages: [
+      'Some formulations provide strong abrasion and wear resistance',
+      'Certain systems are designed for reinforcement within multi-layer coating assemblies',
+      'Aliphatic top coats are available for improved UV color and weathering stability compared with many aromatic formulations',
+      'System options can be selected around the roof’s actual service conditions',
+    ],
+    considerations: [
+      'Polyurethane products vary significantly; a base coat and a UV-stable top coat are not interchangeable',
+      'Moisture, temperature and humidity limits during application must follow product instructions',
+      'Surface preparation, primer and compatibility testing remain essential',
+      'Chemical handling, ventilation and worker protection requirements must be followed',
+    ],
     commonProblems: [
-      { title: 'Adhesion failure', desc: 'Incorrect primer, contamination or incompatible existing coatings can cause delamination.' },
-      { title: 'Application defects', desc: 'Improper mixing, recoat timing, temperature or moisture can affect cure and film performance.' }
+      { title: 'Using the Wrong Formulation as a Top Coat', desc: 'Some aromatic polyurethane products can chalk or discolor under UV exposure and may require a compatible aliphatic top coat.' },
+      { title: 'Ignoring Moisture and Weather Limits', desc: 'Application outside product temperature, humidity or moisture limits can affect curing and adhesion.' },
+      { title: 'Treating a Coating as a Structural Repair', desc: 'A coating cannot correct damaged decking, failed fasteners or an unsound roof assembly.' },
     ],
-    inspectionProtocols: ['Identify the existing roof and all previous coating layers', 'Inspect substrate condition, moisture, seams, flashings and penetrations', 'Review traffic routes, equipment service zones and exposure conditions', 'Confirm product-specific primer and compatibility requirements', 'Perform field adhesion testing and document application conditions'],
-    repairApproach: 'Repair the underlying roof and details first. Use the manufacturer-approved primer, base coat, reinforcement and topcoat sequence, observing mixing ratios, recoat windows and environmental limits.',
-    restorationPotential: 'Polyurethane may be appropriate where abrasion or impact resistance is a priority, but it is not automatically suitable for every roof or every exposure. Confirm the exact formulation, UV protection, substrate compatibility and manufacturer-approved assembly.',
-    replacementTriggers: ['Wet insulation, deteriorated deck or widespread membrane failure', 'Loose or failed roof attachment', 'Substrate incompatibility or inability to achieve specified adhesion', 'Damage extensive enough that a coating system cannot provide a reliable repair'],
-    maintenanceGuidelines: ['Inspect coating wear and service pathways regularly', 'Maintain drains and flashings', 'Repair punctures and damaged areas with compatible materials', 'Follow manufacturer guidance for recoating and maintenance'],
-    stormConsiderations: 'Inspect for impact damage, punctures, displaced details and coating separation after hail or severe wind. A tough coating does not make the underlying roof impact-proof.',
-    costFactors: ['Selected polyurethane formulation and full system build', 'Primer and topcoat requirements', 'Surface repairs and reinforcement', 'Traffic protection and detailing', 'Access, ventilation and application conditions'],
+    inspectionProtocols: [
+      'Review of roof use, service traffic, abrasion and chemical exposure',
+      'Assessment of substrate moisture, condition and surface preparation needs',
+      'Verification of primer and coating compatibility',
+      'Review of base coat, reinforcement and top coat system requirements',
+      'Application thickness and cure checks according to product instructions',
+    ],
+    repairApproach: 'Repairs must use materials compatible with the installed polyurethane system and follow the manufacturer’s preparation and recoat instructions.',
+    restorationPotential: 'Polyurethane may be useful as part of a specified system where abrasion or mechanical wear is a priority. It should be selected as part of a complete roof design, not treated as a universal replacement for silicone or acrylic.',
+    replacementTriggers: [
+      'The existing roof assembly has widespread moisture or structural damage.',
+      'The substrate cannot be prepared to meet the specified adhesion requirements.',
+      'The roof condition requires replacement rather than another coating layer.',
+    ],
+    maintenanceGuidelines: [
+      'Inspect high-traffic routes and equipment service areas regularly',
+      'Repair damage with compatible products and manufacturer-approved procedures',
+      'Maintain drainage and avoid unapproved chemicals or cleaning methods',
+    ],
+    stormConsiderations: 'After severe weather, inspect coating surfaces, seams, flashings and the underlying roof assembly. Impact performance depends on the full system and product data.',
+    costFactors: [
+      'Specified formulation and whether a base coat, top coat or multi-layer system is required',
+      'Surface preparation, primers and reinforcement requirements',
+      'Roof access, service traffic and chemical exposure conditions',
+      'Specified coverage, thickness and warranty terms',
+    ],
     faqs: [
-      { question: 'Are all polyurethane coatings UV stable?', answer: 'No. Formulations differ. Some systems use an aliphatic topcoat or another specified protective layer for UV exposure.' },
-      { question: 'Does polyurethane make a roof puncture-proof?', answer: 'No. It may improve abrasion or impact resistance in some applications, but the complete roof assembly can still be damaged.' }
+      { question: 'Why would a commercial roof use polyurethane coating?', answer: 'Some polyurethane formulations are selected for abrasion, wear or mechanical exposure. The correct formulation depends on whether it is used as a base coat, top coat or part of a multi-layer system.' },
+      { question: 'Is polyurethane always better than silicone or acrylic?', answer: 'No. Each chemistry serves different conditions. Silicone is often considered where prolonged water exposure is a concern, acrylic may suit positively drained roofs, and polyurethane may be selected where abrasion or wear resistance is important.' },
+      { question: 'Can polyurethane be applied over an existing roof coating?', answer: 'Only when the manufacturer approves the existing surface and the required preparation, primer and compatibility tests are completed.' },
+      { question: 'Does polyurethane coating eliminate the need for roof maintenance?', answer: 'No. All roof systems require periodic inspection, drainage maintenance and compatible repairs.' },
     ],
-    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }]
+    relatedServices: [
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings' },
+      { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings' },
+    ],
   },
 
-  '/sebs-roof-coatings': {
-    title: 'SEBS Rubberized Roof Coatings | Commercial Roof Restoration | CRD',
-    metaDescription: 'SEBS rubberized commercial roof coating guide covering flexibility, metal roof applications, preparation and system limitations.',
-    canonicalPath: '/sebs-roof-coatings',
-    systemName: 'SEBS Rubberized Roof Coatings',
-    systemType: 'Roof Coating',
-    heroHeadline: 'SEBS Roof Coatings. Flexible Protection for Compatible Roofs.',
-    heroSubtitle: 'SEBS rubberized coatings are used in selected roof maintenance and restoration applications. The specific formulation and approved substrate determine performance.',
-    whatItIs: 'SEBS refers to styrene-ethylene-butylene-styrene, an elastomeric polymer used in some rubberized roof coating formulations. Products vary and may be designed for particular metal, asphaltic or other roof surfaces. SEBS is not a universal coating category with one standard application method.',
-    whereItIsUsed: ['Selected metal roof maintenance systems', 'Certain compatible asphaltic or previously coated roof surfaces', 'Roof assemblies specifically listed by the product manufacturer'],
-    advantages: ['Elastomeric formulations can accommodate some movement in the roof surface', 'Some products are designed for metal roof maintenance and corrosion protection', 'May be incorporated into a system with primers and reinforced details'],
-    considerations: ['Formulations differ significantly by manufacturer', 'Not every SEBS product is approved for every membrane or roof coating', 'Reflectivity, ponding-water resistance and warranty terms must be verified product by product', 'Rust, loose coating, oil, chalk and failed fasteners require proper treatment before application'],
-    commonProblems: [
-      { title: 'Incompatible substrate or old coating', desc: 'Unverified compatibility can lead to poor adhesion or coating failure.' },
-      { title: 'Unprepared corrosion and details', desc: 'Coating over active rust, failed fasteners or open seams does not correct the underlying defect.' }
-    ],
-    inspectionProtocols: ['Identify metal panel type or existing roof membrane', 'Map corrosion, fasteners, seams, laps and flashing conditions', 'Assess prior coatings and perform compatibility checks', 'Specify rust treatment, primer and reinforcement where required', 'Complete manufacturer-directed adhesion testing'],
-    repairApproach: 'Replace failed fasteners and repair seams, laps, flashings and penetrations before coating. Remove loose corrosion and failed coatings, then use the approved rust treatment, primer and reinforcement system.',
-    restorationPotential: 'SEBS products may be considered for specific roof substrates when the product data and manufacturer confirm compatibility. Do not assume that an SEBS coating is interchangeable with silicone, acrylic or polyurethane.',
-    replacementTriggers: ['Perforated or structurally weakened metal panels', 'Widespread wet insulation or deteriorated roof components', 'Failed attachment or extensive damage beyond practical repair', 'No approved coating system for the actual roof substrate'],
-    maintenanceGuidelines: ['Inspect corrosion, fasteners, seams and coating condition annually', 'Keep drainage paths clear', 'Repair damaged details promptly with approved products', 'Retain product and application records for future maintenance'],
-    stormConsiderations: 'Inspect panels, fasteners, seams and coating after hail or high winds. Coating does not restore metal thickness lost to advanced corrosion or repair structural damage.',
-    costFactors: ['Corrosion severity and metal panel condition', 'Fastener, seam and flashing repairs', 'Surface preparation, rust treatment and primer', 'Reinforcement and specified coating thickness', 'Access and rooftop equipment'],
-    faqs: [
-      { question: 'Can SEBS coating be used on every metal roof?', answer: 'No. Product formulation, panel finish, corrosion condition and manufacturer approval determine suitability.' },
-      { question: 'Does SEBS coating stop advanced rust?', answer: 'No. Loose corrosion must be removed and the remaining metal assessed. Perforated or structurally weakened panels may require replacement.' }
-    ],
-    relatedServices: [{ name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing' }, { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }]
-  },
 
-  '/aluminum-roof-coatings': {
-    title: 'Aluminum Roof Coatings for Commercial Roofing | CRD',
-    metaDescription: 'Commercial aluminum roof coating guide covering reflective asphalt aluminum coatings, metal roof use, preparation and limitations.',
-    canonicalPath: '/aluminum-roof-coatings',
-    systemName: 'Aluminum Roof Coatings',
-    systemType: 'Roof Coating',
-    heroHeadline: 'Aluminum Roof Coatings. Reflective Maintenance for Selected Roofs.',
-    heroSubtitle: 'Aluminum-pigmented roof coatings are used in selected maintenance applications, particularly on compatible asphaltic and metal roof surfaces. They are not interchangeable with seamless elastomeric restoration systems.',
-    whatItIs: 'Aluminum roof coatings commonly contain reflective aluminum flakes in an asphaltic or other binder. They form a reflective surface coating for certain roof types and maintenance conditions. Product chemistry, substrate approval and intended use must be checked before specification.',
-    whereItIsUsed: ['Selected asphaltic built-up and modified bitumen roof surfaces', 'Certain compatible metal roof maintenance applications', 'Existing roof surfaces specifically listed by the coating manufacturer'],
-    advantages: ['Aluminum flakes can provide a reflective metallic finish', 'May be suitable for certain asphaltic roof maintenance applications', 'Can be a practical maintenance option when the existing roof is sound and compatible'],
-    considerations: ['Not every aluminum coating is a seamless elastomeric waterproofing membrane', 'Some products are not intended for ponding water or use on all metal finishes', 'Surface oils, rust, loose granules and failed details must be addressed', 'Reflective appearance does not by itself establish energy savings or roof restoration suitability'],
-    commonProblems: [
-      { title: 'Coating loss or poor adhesion', desc: 'Contamination, moisture or incompatible prior materials can cause peeling or loss of film.' },
-      { title: 'Unrepaired roof defects', desc: 'Aluminum coating cannot replace failed flashing, open seams, deteriorated membrane or corroded-through metal.' }
-    ],
-    inspectionProtocols: ['Identify the coating binder and intended substrate', 'Inspect asphalt condition, granule loss, rust and prior coatings', 'Review drainage and ponding conditions', 'Repair seams, flashings, penetrations and other defects', 'Confirm product compatibility and preparation instructions'],
-    repairApproach: 'Complete substrate repairs first and prepare the surface according to the selected product data sheet. Apply only at the specified coverage rate and environmental conditions.',
-    restorationPotential: 'Aluminum coatings can be appropriate for selected roof maintenance projects, but they should not be presented as equivalent to silicone, acrylic, polyurethane or other full restoration assemblies. Evaluate whether the project needs a reflective maintenance coating or a reinforced waterproofing system.',
-    replacementTriggers: ['Corroded-through or structurally weakened metal', 'Wet or deteriorated roof components', 'Widespread membrane failure or failed attachment', 'Roof conditions outside the product manufacturer’s approved use'],
-    maintenanceGuidelines: ['Inspect the coating, drainage and roof details annually', 'Keep drains and scuppers clear', 'Repair exposed or deteriorated areas with compatible materials', 'Follow product-specific reapplication intervals and preparation requirements'],
-    stormConsiderations: 'Inspect for displaced metal, punctures, impact damage and water intrusion after significant storms. A reflective coating does not protect against structural hail or wind damage.',
-    costFactors: ['Existing roof type and coating compatibility', 'Surface preparation and repairs', 'Required coverage rate and number of coats', 'Drainage and detail work', 'Access and project phasing'],
-    faqs: [
-      { question: 'Is aluminum roof coating the same as silicone roof coating?', answer: 'No. Aluminum-pigmented coatings often use a different binder and serve different maintenance purposes. They should not be treated as interchangeable systems.' },
-      { question: 'Can aluminum coating waterproof a leaking roof?', answer: 'It should not be used to cover unresolved leaks or failed roof details. Diagnose and repair the roof first, then confirm the product is approved for the intended use.' }
-    ],
-    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing' }]
-  },
-
-  '/pvc-roofing': {
-    title: 'Commercial PVC Roofing Restoration & Repair | CRD',
-    metaDescription: 'Commercial PVC roof inspection, repair and compatible restoration evaluation. Learn about welded seams, membrane aging, plasticizer migration and coating preparation.',
-    canonicalPath: '/pvc-roofing',
-    systemName: 'PVC Single-Ply Roofing',
-    systemType: 'PVC',
-    heroHeadline: 'PVC Commercial Roofing. Chemistry Matters.',
-    heroSubtitle: 'PVC membranes are heat-welded thermoplastic roof systems often selected for commercial facilities where chemical, grease or fire performance matters. Repair and coating decisions must account for membrane condition and compatibility.',
-    whatItIs: 'Polyvinyl chloride (PVC) roofing is a reinforced thermoplastic single-ply membrane. Sheets are joined with hot-air welded seams. Formulations and reinforcement vary by manufacturer and product generation, so identification and manufacturer guidance matter before repairs or restoration are specified.',
-    whereItIsUsed: ['Restaurants and facilities with kitchen exhaust exposure', 'Commercial buildings and institutional low-slope roofs', 'Facilities where chemical resistance is a design consideration'],
-    advantages: ['Heat-welded seams can be inspected and re-welded when the membrane remains suitable', 'Certain PVC formulations offer resistance to grease, oils and selected chemicals', 'Light-colored membranes may provide high solar reflectance when maintained'],
-    considerations: ['Chemical exposure must be matched to the exact membrane formulation', 'Older membranes may experience plasticizer migration, embrittlement or shrinkage', 'A coating must be verified as compatible with the aged PVC surface and any primer'],
-    commonProblems: [
-      { title: 'Weld Separation', desc: 'Aged, contaminated or poorly executed seams can separate and allow water entry.' },
-      { title: 'Plasticizer Migration or Embrittlement', desc: 'Some older PVC formulations can lose flexibility over time, affecting weldability and repair options.' },
-      { title: 'Chemical or Grease Exposure', desc: 'Exhaust contaminants may degrade membrane surfaces when the product is not suited to the exposure.' },
-    ],
-    inspectionProtocols: ['Identify manufacturer and membrane type where possible', 'Probe and test representative heat-welded seams', 'Inspect flashings, penetrations, drains and termination details', 'Assess membrane flexibility, surface condition and evidence of chemical exposure', 'Evaluate underlying insulation and attachment where warranted'],
-    repairApproach: 'Repairs generally require cleaning and preparing the membrane, then using compatible PVC membrane patches and hot-air welding where the existing material remains weldable. Sealants alone are not a substitute for a properly detailed membrane repair.',
-    restorationPotential: 'A PVC roof may be considered for restoration only after the membrane condition, seams, attachment, insulation moisture and coating compatibility have been evaluated. The selected coating manufacturer should approve the complete preparation and primer system, supported by field adhesion testing where specified.',
-    replacementTriggers: ['Widespread embrittlement or loss of weldability', 'Extensive wet insulation or deteriorated roof deck', 'Systemic attachment failure or damage that cannot be reliably repaired'],
-    maintenanceGuidelines: ['Keep drains and scuppers clear', 'Inspect seams and flashings at least annually and after significant storms', 'Remove incompatible grease and chemical contaminants using approved procedures', 'Document repairs and any coating or primer maintenance'],
-    stormConsiderations: 'Hail, wind uplift and falling debris can damage PVC membranes and flashings. A post-storm evaluation should distinguish cosmetic surface marks from punctures, seam damage or compromised insulation.',
-    costFactors: ['Membrane age, formulation and condition', 'Extent of seam and flashing repairs', 'Moisture investigation and insulation replacement needs', 'Approved primer and coating requirements', 'Access, rooftop equipment and project phasing'],
-    faqs: [
-      { question: 'Can a PVC roof be coated?', answer: 'Sometimes. Suitability depends on the membrane formulation, age, surface condition, contamination, moisture below the membrane and the coating manufacturer’s written compatibility requirements. Testing and proper preparation are essential.' },
-      { question: 'Why does PVC require special coating preparation?', answer: 'PVC formulations can contain plasticizers and surface additives that affect adhesion. The selected system may require specific cleaning, primer and adhesion testing.' },
-    ],
-    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
-  },
-  '/modified-bitumen': {
-    title: 'Modified Bitumen Roof Restoration & Repair | Commercial Roof Doctors',
-    metaDescription: 'Commercial modified bitumen roof inspection, repair and restoration evaluation. Understand smooth and granulated cap sheets, asphalt condition, moisture and coating compatibility.',
-    canonicalPath: '/modified-bitumen',
-    systemName: 'Modified Bitumen Roofing',
-    systemType: 'Modified Bitumen',
-    heroHeadline: 'Modified Bitumen Roofing. Restore Only When It Qualifies.',
-    heroSubtitle: 'Modified bitumen assemblies need substrate-specific inspection. Surface type, asphalt condition, laps, blisters, moisture and previous repairs all affect whether a roof can be restored.',
-    whatItIs: 'Modified bitumen is an asphalt-based low-slope roofing membrane modified with polymers and commonly installed in one or more plies. The exposed surface may be smooth or granulated. Attachment and surfacing vary, so the actual assembly must be identified before a repair or coating system is selected.',
-    whereItIsUsed: ['Retail and office buildings', 'Schools, churches and institutional properties', 'Commercial facilities with low-slope roof sections'],
-    advantages: ['Multi-ply assemblies can provide redundant waterproofing', 'Localized defects may be repairable when surrounding materials remain sound', 'Some assemblies can accept compatible restoration systems after proper preparation'],
-    considerations: ['Smooth and granulated surfaces require different preparation', 'Asphalt bleed-through and surface oils may require a compatible bleed-blocking primer', 'Blisters, open laps and trapped moisture must be addressed before coating'],
-    commonProblems: [
-      { title: 'Open or Split Laps', desc: 'Thermal movement, aging or installation defects can open seams and allow water intrusion.' },
-      { title: 'Blisters and Alligatoring', desc: 'Trapped moisture, heat and material aging can cause surface deformation or cracking.' },
-      { title: 'Exposed or Deteriorated Asphalt', desc: 'Weathering and loss of protective surfacing can expose asphalt to accelerated degradation.' },
-    ],
-    inspectionProtocols: ['Identify smooth or granulated cap sheet and number of roof layers where known', 'Inspect laps, flashings, penetrations, drains and transitions', 'Evaluate blisters and determine whether moisture is present', 'Check for exposed asphalt, granule loss and incompatible prior coatings', 'Use moisture investigation or core sampling when conditions warrant'],
-    repairApproach: 'Repairs depend on the cap sheet and assembly. Defects may require compatible modified bitumen patches, reinforcement and asphaltic materials installed according to the system requirements. Wet or deteriorated sections must be addressed rather than covered.',
-    restorationPotential: 'Restoration may be appropriate when the membrane and underlying assembly are dry, stable and adequately attached. Smooth and granulated surfaces may require different cleaning, primers, bleed blocking, repairs and reinforcement. The coating manufacturer’s approved assembly and adhesion testing should guide selection.',
-    replacementTriggers: ['Widespread wet insulation or trapped moisture', 'Extensive membrane splits, delamination or loss of integrity', 'Deck deterioration or multiple failed roof layers that cannot be reliably restored'],
-    maintenanceGuidelines: ['Keep drains and scuppers free of debris', 'Inspect laps, flashings and penetrations annually', 'Repair blisters and open seams using compatible materials', 'Avoid unapproved coatings or solvent cleaners'],
-    stormConsiderations: 'Hail can fracture surfacing, bruise underlying plies or damage flashings. Wind can lift edge details and open laps. Inspection should determine whether damage is superficial or affects the waterproofing assembly.',
-    costFactors: ['Smooth versus granulated cap sheet', 'Number and extent of repairs', 'Need for bleed-blocking primer or reinforcement', 'Moisture and deck condition', 'Coating system, access and required dry-film thickness'],
-    faqs: [
-      { question: 'Can modified bitumen be coated?', answer: 'Some modified bitumen roofs can be restored, but the surface type, asphalt condition, moisture, prior coatings and selected coating manufacturer’s requirements determine suitability.' },
-      { question: 'Does a granulated cap sheet need different preparation?', answer: 'Yes. Loose granules, embedded dirt and surface condition affect adhesion. Preparation and primer selection must follow the coating system specification.' },
-    ],
-    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' }],
-  },
   '/built-up-roofing': {
-    title: 'Built-Up Roofing (BUR) Restoration & Repair | CRD',
-    metaDescription: 'Commercial built-up roofing inspection and restoration evaluation. Learn how gravel surfacing, asphalt condition, blisters, moisture and preparation affect coating suitability.',
+    title: 'Commercial Built-Up Roofing Systems | CRD',
+    metaDescription: 'Commercial built-up roofing inspections, repairs and restoration evaluations. Review aggregate, bitumen layers, flashings, drainage and roof assembly moisture.',
     canonicalPath: '/built-up-roofing',
     systemName: 'Built-Up Roofing (BUR)',
     systemType: 'BUR',
-    heroHeadline: 'Built-Up Roofing. Evaluate Every Layer.',
-    heroSubtitle: 'Built-up roofs are layered assemblies. Their surfacing, asphalt condition, drainage and moisture profile must be understood before repairs or a restoration coating are considered.',
-    whatItIs: 'Built-up roofing (BUR) is a multi-ply low-slope roof assembly made with alternating reinforcing felts and bitumen, typically finished with aggregate surfacing or a smooth roof coating. Existing roofs vary in materials, layer count and condition.',
-    whereItIsUsed: ['Older commercial and institutional buildings', 'Warehouses and industrial facilities', 'Retail, office and multifamily low-slope roof sections'],
-    advantages: ['Multiple plies can provide redundant waterproofing', 'Localized repairs may be possible where the assembly remains sound', 'Some smooth or properly prepared aggregate surfaces may qualify for compatible restoration'],
-    considerations: ['Gravel-surfaced roofs require removal or securement of loose aggregate as specified', 'Moisture can be concealed within multiple roof layers', 'Asphalt bleed-through, surface contamination and drainage defects can affect coating adhesion'],
+    heroHeadline: 'Commercial Built-Up Roofing Systems.',
+    heroSubtitle: 'Built-up roofing uses multiple layers of bitumen and reinforcing felts, often with a protective surface. CRD evaluates the assembly and surfacing before recommending repairs, restoration or replacement.',
+    whatItIs: 'Built-up roofing (BUR) is a multi-ply low-slope roof assembly made from alternating layers of bitumen and reinforcing felts. The surface may include aggregate, a cap sheet or another protective finish. Existing system design and condition vary by building and installation history.',
+    whereItIsUsed: [
+      'Older commercial and institutional low-slope buildings',
+      'Industrial facilities and warehouses with existing multi-ply roof assemblies',
+      'Buildings where repair or restoration may be considered after moisture and substrate evaluation',
+    ],
+    advantages: [
+      'Multiple plies can provide redundancy in a properly installed assembly',
+      'Established system type with repair methods suited to its materials',
+      'Some existing assemblies may be candidates for compatible restoration after preparation',
+    ],
+    considerations: [
+      'Aggregate surfacing can require specialized preparation before a coating is considered',
+      'Hidden moisture between plies may not be visible from the roof surface',
+      'Open seams, blisters and flashing failures need targeted repair',
+      'The age and composition of older assemblies should be identified before disturbance',
+    ],
     commonProblems: [
-      { title: 'Blisters and Splits', desc: 'Heat, moisture and movement can cause blisters, cracks or splits in the roof surface.' },
-      { title: 'Loose or Displaced Aggregate', desc: 'Loose gravel can interfere with adhesion and may conceal deteriorated bitumen below.' },
-      { title: 'Deteriorated Flashings', desc: 'Perimeter and penetration details often fail before the field of the roof.' },
+      { title: 'Blisters and Delamination', desc: 'Moisture or loss of adhesion between plies can create blisters and weak areas.' },
+      { title: 'Aggregate Loss or Surface Deterioration', desc: 'Displaced or embedded aggregate and weathered bitumen can affect surface protection and coating compatibility.' },
+      { title: 'Drainage and Flashing Failures', desc: 'Water accumulation and deteriorated flashing details can accelerate roof deterioration.' },
     ],
-    inspectionProtocols: ['Identify aggregate-surfaced or smooth BUR construction', 'Inspect parapets, penetrations, drains and roof transitions', 'Evaluate blisters, splits, exposed bitumen and loose aggregate', 'Investigate moisture within the multi-ply assembly where indicated', 'Assess deck condition and drainage performance'],
-    repairApproach: 'BUR repairs must be compatible with the existing bitumen and surfacing. Loose aggregate, wet materials and deteriorated plies need to be addressed using an assembly-specific repair detail before any coating is applied.',
-    restorationPotential: 'A BUR roof may be restorable when the assembly is dry, stable and adequately attached. Aggregate removal or stabilization, surface preparation, compatible primers, reinforcement and coating selection must follow the selected manufacturer’s written specification.',
-    replacementTriggers: ['Widespread moisture between roof plies', 'Extensive deterioration or delamination through multiple layers', 'Structural deck damage or drainage problems that cannot be corrected within a restoration scope'],
-    maintenanceGuidelines: ['Keep internal drains and scuppers clear', 'Inspect flashings and penetrations annually', 'Remove damaging debris and monitor ponding areas', 'Document and repair splits or blisters before water reaches lower plies'],
-    stormConsiderations: 'Hail can displace aggregate or damage exposed bitumen, while wind can affect perimeter flashings. A proper inspection checks the roof assembly, not just visible surface marks.',
-    costFactors: ['Aggregate removal, recovery or stabilization requirements', 'Number of plies and condition of underlying layers', 'Moisture testing and deck repairs', 'Primer, reinforcement and coating system requirements', 'Drainage, access and rooftop equipment'],
+    inspectionProtocols: [
+      'Identify visible surfacing and the known or estimated number of plies',
+      'Inspect aggregate distribution, blisters, cracks and exposed bitumen',
+      'Evaluate moisture in the roof assembly and condition of the deck',
+      'Inspect parapets, drains, curbs and penetrations',
+      'Determine whether preparation can create a compatible surface for restoration',
+    ],
+    repairApproach: 'BUR repairs should be matched to the existing bitumen and surfacing. Aggregate may need to be removed or secured in selected areas, and flashing and seam details should be repaired before any restoration coating is applied.',
+    restorationPotential: 'Some BUR assemblies may qualify for an approved coating system, but aggregate surfacing, trapped moisture and adhesion must be addressed. A coating should not be applied over loose aggregate or an unsound roof assembly.',
+    replacementTriggers: [
+      'Widespread moisture is trapped between plies or in the insulation.',
+      'The deck or underlying structure is deteriorated.',
+      'Multiple plies have extensive failure and cannot be restored reliably.',
+    ],
+    maintenanceGuidelines: [
+      'Keep roof drains and scuppers clear',
+      'Inspect aggregate movement, exposed bitumen and flashing details',
+      'Address blisters, cracks and open seams before they spread',
+      'Document maintenance and repair history',
+    ],
+    stormConsiderations: 'After hail and wind events, inspect the surface, flashings and roof assembly for displaced aggregate, punctures, water entry and damage to perimeter details.',
+    costFactors: [
+      'Number and condition of existing plies',
+      'Aggregate removal, surface preparation and disposal',
+      'Moisture and deck repairs',
+      'Flashing and drainage corrections',
+      'Coating compatibility or tear-off requirements',
+    ],
     faqs: [
-      { question: 'Can a gravel BUR roof be coated?', answer: 'Possibly, but loose aggregate and the condition of the underlying bitumen must be evaluated. The coating manufacturer must approve the preparation and complete assembly.' },
-      { question: 'Why is moisture testing important on BUR?', answer: 'Multiple plies can conceal moisture. Applying a coating over a wet or deteriorated assembly can trap problems rather than solve them.' },
+      { question: 'Can a built-up roof be restored with a coating?', answer: 'Some BUR roofs can be candidates, but aggregate surfacing, trapped moisture, surface adhesion and roof condition must be evaluated. Preparation requirements can be substantial.' },
+      { question: 'Does aggregate need to be removed before coating a BUR roof?', answer: 'Loose or unsuitable aggregate generally needs to be addressed. The exact preparation method depends on the selected coating system and manufacturer requirements.' },
+      { question: 'How do you know if a BUR roof has moisture between the plies?', answer: 'The evaluation may include visual inspection, appropriate moisture testing and selective verification where warranted. The method depends on the roof assembly and observed conditions.' },
     ],
-    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
+    relatedServices: [
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' },
+      { name: 'Commercial Roof Inspections', href: '/commercial-roof-inspections' },
+    ],
   },
-
-
-  '/spray-foam-roofing': {
-    title: 'Commercial Spray Foam Roofing (SPF) Restoration | CRD',
-    metaDescription: 'Commercial spray polyurethane foam roof inspection, repair and recoating. Learn how moisture, damaged foam, UV exposure and protective coating condition determine restoration suitability.',
-    canonicalPath: '/spray-foam-roofing',
-    systemName: 'Spray Polyurethane Foam Roofing',
-    systemType: 'SPF',
-    heroHeadline: 'SPF Roofing. Protect the Foam. Find the Damage.',
-    heroSubtitle: 'Spray polyurethane foam roofs rely on a continuous foam layer and protective coating. Restoration starts by locating moisture and damaged foam, not simply applying another coat.',
-    whatItIs: 'Spray polyurethane foam (SPF) roofing is formed by applying liquid components that expand and cure into a continuous insulating foam layer. The foam is protected from ultraviolet exposure and weather by a compatible elastomeric coating, often renewed as part of a maintenance or restoration program.',
-    whereItIsUsed: ['Commercial and industrial low-slope buildings', 'Facilities with complex roof geometry and rooftop penetrations', 'Buildings seeking combined insulation and waterproofing performance'],
-    advantages: ['Seamless foam application can conform around complex roof details', 'The foam layer can provide insulation as part of the roof assembly', 'Protective coatings can be renewed when the foam and underlying assembly remain sound'],
-    considerations: ['Exposed or deteriorated foam must be evaluated and repaired before recoating', 'Moisture intrusion can damage foam and may not be visible from the surface', 'Coating type, thickness and recoat compatibility depend on the existing system'],
-    commonProblems: [
-      { title: 'UV-Damaged Exposed Foam', desc: 'Loss or erosion of the protective coating exposes foam to sunlight and weather.' },
-      { title: 'Moisture-Damaged Foam', desc: 'Water entry can saturate or deteriorate foam and may require removal to sound material.' },
-      { title: 'Coating Erosion or Delamination', desc: 'Weathering, inadequate thickness or adhesion problems can reduce protection.' },
-    ],
-    inspectionProtocols: ['Map coating erosion, exposed foam and suspected moisture areas', 'Probe and assess damaged foam to determine whether it remains sound', 'Inspect drains, penetrations, flashings and transitions', 'Check coating adhesion and compatibility with proposed recoat material', 'Document repairs and specified coating thickness'],
-    repairApproach: 'Damaged or wet foam should be cut back to sound material and repaired with compatible SPF. The repaired area must be prepared and protected with the specified coating system. Coating over wet or deteriorated foam is not a proper repair.',
-    restorationPotential: 'An SPF roof may be a strong recoating candidate when the foam is dry, firmly bonded and structurally sound. Restoration generally includes localized foam repairs, detail work, preparation and application of a compatible protective coating at the specified thickness.',
-    replacementTriggers: ['Widespread wet or deteriorated foam', 'Extensive loss of adhesion or failure of the roof assembly', 'Deck or structural conditions that make restoration unsuitable'],
-    maintenanceGuidelines: ['Inspect coating condition at least annually', 'Repair exposed foam promptly using compatible materials', 'Keep drains clear and monitor ponding areas', 'Record coating thickness and maintenance history'],
-    stormConsiderations: 'Hail and wind-driven debris can puncture or fracture the protective coating and foam. After severe weather, inspect impact areas and penetrations and repair exposed foam before prolonged UV exposure.',
-    costFactors: ['Area and depth of foam requiring removal and replacement', 'Existing coating condition and preparation needs', 'Specified coating chemistry and dry-film thickness', 'Moisture investigation, access and rooftop equipment'],
-    faqs: [
-      { question: 'Can an SPF roof simply be recoated?', answer: 'Only when the existing foam is dry, sound and adequately bonded. Wet or deteriorated foam must be removed and repaired before a new protective coating is applied.' },
-      { question: 'How often should an SPF roof be inspected?', answer: 'At least annually and after significant storms. Inspection frequency and coating renewal depend on the system manufacturer, exposure and observed condition.' },
-    ],
-    relatedServices: [{ name: 'Commercial Roof Restoration', href: '/commercial-roof-restoration' }, { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' }],
-  },
-
 };
 
 export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
@@ -912,917 +882,116 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
     ],
     complianceSafety: 'Certified tenant protection zones, warning flags, and daily magnetic roller sweeps.',
   },
-
-  '/industries/hoa-communities': {
-    title: 'HOA Community Commercial Roofing | Commercial Roof Doctors',
-    metaDescription: 'Roof inspections, repairs, restoration and replacement planning for HOA communities, condominium associations and managed residential properties.',
-    canonicalPath: '/industries/hoa-communities',
-    industryName: 'HOA Communities & Associations',
-    propertyType: 'HOA',
-    heroHeadline: 'Commercial Roofing for HOA Communities.',
-    heroSubtitle: 'Clear condition reporting and practical roof planning for association boards, community managers and homeowners who share responsibility for common-area buildings.',
-    sectorChallenges: [
-      { title: 'Board Approval & Reserve Planning', desc: 'Associations need understandable condition reports, comparable options and phased recommendations that support responsible reserve decisions.' },
-      { title: 'Resident Safety & Communication', desc: 'Work around occupied homes, shared parking, sidewalks, pools and community amenities requires advance notices and controlled work zones.' },
-      { title: 'Multiple Building Conditions', desc: 'Buildings installed in different phases can have different roof ages, materials and repair histories across one community.' },
-    ],
-    crdSolutions: [
-      'Board-ready photo reports that document observed conditions, priorities and recommended next steps.',
-      'Building-by-building inspections and phased scopes to help associations plan projects across budget cycles.',
-      'Resident notices, access coordination and clearly marked work areas during active construction.',
-      'Repair, restoration and replacement alternatives when the existing roof condition supports more than one option.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A potential restoration option for eligible existing roofs with suitable substrates and conditions.' },
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'A reflective low-slope option for clubhouses, amenity buildings and other common-area facilities.' },
-      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'A durable option for appropriate sloped roofs and community facilities.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Start with the association's responsibility map",
-                "detail": "Review declarations, bylaws, maintenance schedules and insurance documents to determine which roofs are common elements and who is responsible for repairs. Do not assume every attached roof is governed the same way."
-          },
-          {
-                "title": "Compare buildings on a common scorecard",
-                "detail": "Ask the roofer to identify each building, roof area, system, approximate age, visible condition, active leaks and recommended timing. Separate urgent water-entry issues from planned capital work."
-          },
-          {
-                "title": "Make board decisions auditable",
-                "detail": "A board-ready proposal should include labeled photos, a defined scope, exclusions, access assumptions, alternates, warranty terms and a schedule. Ask bidders to price the same scope so comparisons are meaningful."
-          },
-          {
-                "title": "Plan resident communication before mobilization",
-                "detail": "Coordinate notices, parking relocations, pets, balconies, pool or clubhouse access, deliveries and emergency contacts. A technically sound project can still go poorly if residents are surprised."
-          }
-    ],
-    inspectionChecklist: [
-          "Building-by-building roof plan with unique labels and approximate roof areas",
-          "Photos of seams, laps, penetrations, flashing, edges, drains and gutters",
-          "Interior leak history matched to roof locations where possible",
-          "Condition of insulation or deck where accessible and safely testable",
-          "Repair, restoration and replacement options with the reasons each is or is not suitable",
-          "Prioritized reserve-planning schedule and clear assumptions"
-    ],
-    faqs: [
-          {
-                "question": "Should an HOA replace every roof at the same time?",
-                "answer": "Not automatically. Roofs of different ages or exposures may have different remaining service lives. A documented portfolio assessment can help phase work while identifying buildings that need immediate attention."
-          },
-          {
-                "question": "What should an HOA require in a roofing proposal?",
-                "answer": "Require a defined roof-by-roof scope, product and assembly details, preparation requirements, photos, exclusions, protection plan, schedule, cleanup standards, warranty terms and change-order process."
-          },
-          {
-                "question": "Can roof coatings reduce association costs?",
-                "answer": "Sometimes. A coating is only appropriate when the existing assembly, substrate, moisture condition, drainage and details qualify for the selected system. It should not be used to conceal wet insulation, failing structure or widespread defects."
-          }
-    ],
-    complianceSafety: 'Work planning emphasizes resident notifications, controlled access, fall protection, debris management and daily cleanup.',
-  },
-  '/industries/townhomes-condominiums': {
-    title: 'Townhouse & Condominium Roofing | Commercial Roof Doctors',
-    metaDescription: 'Roofing inspections, repairs and replacement planning for townhouse developments, condominium buildings and attached-home communities.',
-    canonicalPath: '/industries/townhomes-condominiums',
-    industryName: 'Townhouse & Condominium Communities',
-    propertyType: 'Multifamily',
-    heroHeadline: 'Roofing for Townhouse & Condominium Communities.',
-    heroSubtitle: 'Coordinated roofing programs for attached homes and condominium properties where shared roof assemblies, ownership responsibilities and resident access all matter.',
-    sectorChallenges: [
-      { title: 'Shared Roof Responsibilities', desc: 'Association documents and ownership structures can determine who approves, funds and maintains each roof section.' },
-      { title: 'Occupied Building Coordination', desc: 'Noise, parking restrictions, patios, balconies and resident access must be considered before work begins.' },
-      { title: 'Consistent Appearance', desc: 'Repairs and phased replacements should account for drainage, transitions and a consistent finished appearance across connected buildings.' },
-    ],
-    crdSolutions: [
-      'Roof-by-roof documentation to help boards and managers understand the scope across the property.',
-      'Coordination plans for resident notices, vehicle relocation, access and daily site cleanup.',
-      'Review of flashing, party-wall transitions, drainage paths and shared roof details.',
-      'Repair, coating and replacement scopes based on actual roof condition rather than a one-size-fits-all recommendation.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For qualifying sloped roofs where panel condition, fastening and details can be evaluated.' },
-      { name: 'Architectural Roof Restoration', href: '/commercial-roof-coatings', reason: 'For eligible roof assemblies where restoration is technically appropriate.' },
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'For flat and low-slope sections, breezeways and shared amenity structures.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Confirm ownership boundaries first",
-                "detail": "Condominium declarations, party-wall details and maintenance agreements can divide responsibility between associations and individual owners. Confirm the legal maintenance boundary before defining the project."
-          },
-          {
-                "title": "Inspect connected roof transitions",
-                "detail": "Pay close attention to valleys, shared walls, parapets, end walls, step flashing, gutters and transitions between phases. Water can travel from the visible ceiling stain before appearing indoors."
-          },
-          {
-                "title": "Protect occupied homes",
-                "detail": "Plan for resident notices, vehicle moves, patio and balcony access, pets, noise, dust and temporary access restrictions. Identify how crews will protect landscaping and outdoor living areas."
-          },
-          {
-                "title": "Keep appearance and water management consistent",
-                "detail": "Phased work should consider color availability, drainage paths, flashing heights and transitions so one repaired section does not create a weak connection to the next."
-          }
-    ],
-    inspectionChecklist: [
-          "Ownership and maintenance responsibility confirmed for each roof section",
-          "Roof transitions, shared walls, valleys, eaves and drainage paths photographed",
-          "Interior leak reports mapped to the relevant building or unit",
-          "Material compatibility checked where new work meets existing roof sections",
-          "Resident protection, access and vehicle relocation plan",
-          "Written scope identifying unit or building boundaries and finish expectations"
-    ],
-    faqs: [
-          {
-                "question": "Who pays for a townhouse or condo roof?",
-                "answer": "It depends on the governing documents and ownership structure. The association may maintain common roof elements, while some communities assign portions of responsibility to individual owners. Review the documents before authorizing work."
-          },
-          {
-                "question": "Can one building be repaired while another is replaced?",
-                "answer": "Yes, if inspection findings support different scopes and the interfaces can be detailed correctly. A portfolio assessment should document why each building receives its recommended treatment."
-          },
-          {
-                "question": "Why do leaks appear away from the roof defect?",
-                "answer": "Water can move along underlayment, decking, framing or insulation before reaching an interior finish. A proper investigation traces the likely water path instead of assuming the ceiling stain is directly below the entry point."
-          }
-    ],
-    complianceSafety: 'Project planning includes occupied-property protection, fall protection, debris control and clear communication with property representatives.',
-  },
-  '/industries/duplex-triplex-fourplex': {
-    title: 'Duplex, Triplex & Fourplex Roofing | Commercial Roof Doctors',
-    metaDescription: 'Roof repair, inspection and replacement services for duplexes, triplexes, fourplexes and small multifamily investment properties.',
-    canonicalPath: '/industries/duplex-triplex-fourplex',
-    industryName: 'Duplexes, Triplexes & Fourplexes',
-    propertyType: 'Multifamily',
-    heroHeadline: 'Roofing for Duplexes, Triplexes & Fourplexes.',
-    heroSubtitle: 'Practical roof assessments for owners and managers of small multifamily properties who need to protect occupied units, control repair costs and plan ahead.',
-    sectorChallenges: [
-      { title: 'Occupied Rental Units', desc: 'A leak can affect multiple households, interiors and tenant relationships even when the roof area is relatively small.' },
-      { title: 'Investment & Cash-Flow Decisions', desc: 'Owners need to understand immediate repair needs alongside the likely cost and timing of larger roof work.' },
-      { title: 'Shared Drainage & Roof Details', desc: 'Connected units can share valleys, walls, gutters and roof transitions that require careful inspection.' },
-    ],
-    crdSolutions: [
-      'Photo-documented inspections that identify visible concerns and distinguish urgent items from maintenance recommendations.',
-      'Repair-versus-replacement discussions based on roof age, condition and observed system limitations.',
-      'Scheduling and site protection designed around tenants, pets, vehicles and occupied entrances.',
-      'Written scopes that help owners compare options and plan future capital expenses.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'Commercial Roof Repair', href: '/commercial-roof-repair', reason: 'For localized leaks and repairable roof details.' },
-      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For suitable sloped metal roof assemblies.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'For eligible roof surfaces where coating is a sound restoration option.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Treat recurring leaks as a building issue",
-                "detail": "Record the date, weather, room, ceiling location and any temporary repairs for every tenant report. Patterns can help the inspector connect multiple complaints to one roof detail or drainage problem."
-          },
-          {
-                "title": "Compare repair cost with remaining roof condition",
-                "detail": "A small repair may be sensible on a serviceable roof. Repeated patching across deteriorated materials can become more expensive and less reliable than planning a larger project."
-          },
-          {
-                "title": "Protect tenants and their belongings",
-                "detail": "Give clear notice of work dates, parking impacts, access needs and any items that should be moved from patios or exterior walls. Provide a contact for urgent water entry."
-          },
-          {
-                "title": "Ask for a useful owner record",
-                "detail": "Keep the roof photos, repair invoices, material details, warranty documents and next inspection recommendation with the property file. This helps with future budgeting and ownership transfers."
-          }
-    ],
-    inspectionChecklist: [
-          "Roof age and known repair history",
-          "Flashings, penetrations, valleys, gutters and drainage checked",
-          "Interior leak locations documented by unit and room",
-          "Roof deck or insulation concerns identified where accessible",
-          "Repair and replacement options with scope boundaries",
-          "Tenant notice, access and property protection requirements"
-    ],
-    faqs: [
-          {
-                "question": "Is a duplex or fourplex too small for a commercial roofer?",
-                "answer": "Not necessarily. The right contractor depends on the roof system, project size, licensing and insurance requirements, and the contractor's experience with the building type. Ask for relevant examples and a written scope."
-          },
-          {
-                "question": "Should I repair or replace a rental property's roof?",
-                "answer": "Consider roof age, extent of deterioration, leak frequency, underlying moisture, repairability, and the cost and disruption of repeat visits. An inspection should explain the evidence behind the recommendation."
-          },
-          {
-                "question": "Can I get one assessment for several rental properties?",
-                "answer": "Yes. Provide addresses, building counts and known roof concerns. A grouped inspection can organize findings by property and help prioritize the portfolio."
-          }
-    ],
-    complianceSafety: 'Crews coordinate with property contacts to protect residents, maintain safe access and keep work areas orderly.',
-  },
-  '/industries/nursing-homes-assisted-living': {
-    title: 'Nursing Home & Assisted Living Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing for nursing homes, assisted living and senior living communities with resident-sensitive scheduling and leak prevention.',
-    canonicalPath: '/industries/nursing-homes-assisted-living',
-    industryName: 'Nursing Homes & Assisted Living Facilities',
-    propertyType: 'Healthcare',
-    heroHeadline: 'Commercial Roofing for Senior Living Facilities.',
-    heroSubtitle: 'Roofing assessments and project coordination for nursing homes, assisted living communities and senior care campuses where resident comfort, safety and continuity are essential.',
-    sectorChallenges: [
-      { title: 'Resident Comfort & Safety', desc: 'Noise, odors, access changes and active work zones must be planned carefully around residents, visitors and staff.' },
-      { title: 'Sensitive Interior Areas', desc: 'Leaks can threaten resident rooms, medication areas, dining spaces, records and building systems.' },
-      { title: 'Operational Continuity', desc: 'Facility teams need predictable schedules, clear points of contact and prompt notice of any changing site conditions.' },
-    ],
-    crdSolutions: [
-      'Preconstruction coordination with facility leadership to identify sensitive areas, access routes and operating schedules.',
-      'Prioritized leak investigations and temporary protection when active water intrusion is reported.',
-      'Phased work plans that help keep entrances, emergency routes and essential operations accessible.',
-      'Photo reports and written scopes for ownership, administrators and facilities teams.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'A reflective single-ply option for many low-slope healthcare buildings.' },
-      { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'A membrane option often considered where rooftop grease or chemical exposure is a concern.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A possible restoration path for compatible existing roof assemblies.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Coordinate with the facility before inspection",
-                "detail": "Identify resident-care areas, memory-care boundaries, medication and food-service spaces, infection-control expectations, emergency routes and approved roof access. The facility should designate one person to coordinate the contractor."
-          },
-          {
-                "title": "Control noise, odor and disruption",
-                "detail": "Ask about work methods, adhesives, coatings, equipment and expected odors or noise. Schedule disruptive tasks around resident routines and sensitive operations whenever practical."
-          },
-          {
-                "title": "Prioritize leak-sensitive spaces",
-                "detail": "Map known leaks near resident rooms, dining areas, kitchens, medication storage, electrical rooms and records. Include temporary protection and escalation contacts in the response plan."
-          },
-          {
-                "title": "Require daily site closeout",
-                "detail": "The work plan should address tools, debris, fasteners, access doors, barricades and cleanup. Facility staff should know when the roof area is secured and whether any access restrictions remain."
-          }
-    ],
-    inspectionChecklist: [
-          "Facility-approved access, escort and communication process",
-          "Resident areas, emergency routes and sensitive departments identified",
-          "Roof penetrations, drains, edges and rooftop equipment inspected",
-          "Interior leak locations and affected operations recorded",
-          "Work methods reviewed for noise, odor, dust and schedule impacts",
-          "Daily cleanup, site security and emergency response contacts documented"
-    ],
-    faqs: [
-          {
-                "question": "Can roofing work continue while a nursing home is occupied?",
-                "answer": "Often it can, but the facility and contractor must plan the work around residents, staff, emergency access and sensitive areas. Some activities may need restricted hours or additional controls."
-          },
-          {
-                "question": "What should happen if a roof leak affects a resident room?",
-                "answer": "The facility should follow its internal resident-safety and incident procedures while the roofing contractor investigates and provides appropriate temporary protection. The roof report should document the source investigation and permanent repair scope."
-          },
-          {
-                "question": "Are coatings suitable for senior living buildings?",
-                "answer": "They may be suitable for certain existing roof assemblies, but only after checking substrate condition, moisture, drainage, compatibility, ventilation and the manufacturer's application requirements. Odor and work-zone impacts also need planning."
-          }
-    ],
-    complianceSafety: 'Work plans are coordinated with facility management and prioritize controlled access, occupant protection, fall protection and clean staging.',
-  },
-  '/industries/hospitals-medical-centers': {
-    title: 'Hospital & Medical Center Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roof inspections, repairs, restoration and replacement for hospitals, medical centers, clinics and healthcare campuses.',
-    canonicalPath: '/industries/hospitals-medical-centers',
-    industryName: 'Hospitals & Medical Centers',
-    propertyType: 'Hospital',
-    heroHeadline: 'Commercial Roofing for Hospitals & Medical Centers.',
-    heroSubtitle: 'Roofing services planned around occupied healthcare buildings, critical building systems, patient care areas and the operational demands of medical campuses.',
-    sectorChallenges: [
-      { title: 'Critical Operations', desc: 'Roof work must account for emergency access, patient care schedules, sensitive departments and building continuity.' },
-      { title: 'Rooftop Mechanical Density', desc: 'Large HVAC systems, exhausts, medical ventilation and equipment penetrations create complex roof details.' },
-      { title: 'Water Intrusion Risk', desc: 'Leaks near electrical rooms, imaging equipment, records and clinical spaces can create costly operational disruptions.' },
-    ],
-    crdSolutions: [
-      'Pre-work coordination with facilities teams for access, staging, equipment protection and work windows.',
-      'Detailed roof condition documentation with attention to penetrations, curbs, drains and transitions.',
-      'Phased scopes designed to reduce disruption and maintain safe access around active facilities.',
-      'Repair, restoration and replacement alternatives supported by documented roof conditions.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective low-slope membrane option for many healthcare roofs.' },
-      { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'Worth evaluating in areas with grease, chemical or exhaust exposure.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'Potential restoration option for compatible existing assemblies.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Map critical areas and building systems",
-                "detail": "Before work begins, identify emergency departments, operating and procedure areas, imaging suites, laboratories, pharmacies, data rooms, medical gas systems, air intakes and critical mechanical equipment. Facility engineering should approve access and protection plans."
-          },
-          {
-                "title": "Treat rooftop penetrations as high-priority details",
-                "detail": "Hospitals often have dense rooftop equipment and many curbs, exhausts and service lines. Ask for photos and condition notes for each major penetration, flashing transition and drainage point."
-          },
-          {
-                "title": "Coordinate air quality and operational controls",
-                "detail": "Review adhesives, primers, coatings, dust, fumes, exhaust locations and material staging with the facility. The contractor should not assume ordinary work hours or ordinary access procedures."
-          },
-          {
-                "title": "Use phased scopes with clear hold points",
-                "detail": "Large campuses may need separate work packages by building or roof zone. Define weather protection, inspection hold points, shutdown approvals and communication before each phase."
-          }
-    ],
-    inspectionChecklist: [
-          "Facility engineering approval and access protocol",
-          "Critical departments, air intakes and rooftop mechanical systems mapped",
-          "Roof condition and leak history documented by building and zone",
-          "Penetrations, curbs, drains, flashings and perimeter details photographed",
-          "Work methods and materials reviewed with facility infection-control and safety teams as applicable",
-          "Phasing, temporary weather protection and emergency contacts recorded"
-    ],
-    faqs: [
-          {
-                "question": "Can a hospital roof be replaced without closing the building?",
-                "answer": "Many projects are completed while buildings remain operational, but the plan must be developed with hospital facilities and safety teams. Access, noise, odors, air intakes, emergency routes and critical systems can affect sequencing."
-          },
-          {
-                "question": "What roof details deserve special attention at hospitals?",
-                "answer": "Mechanical curbs, exhausts, intakes, pipes, drains, expansion joints and wall transitions deserve careful documentation because failures can affect sensitive interior spaces or building operations."
-          },
-          {
-                "question": "Does a hospital need a special roofing warranty?",
-                "answer": "Warranty terms should match the selected assembly, manufacturer requirements, installation details and maintenance responsibilities. Review coverage, exclusions, inspection obligations and response procedures rather than relying on the warranty label alone."
-          }
-    ],
-    complianceSafety: 'Project coordination emphasizes facility-approved access, controlled work zones, fall protection and protection of occupied areas.',
-  },
   '/industries/schools': {
-    title: 'School District & K-12 School Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing for public and private schools, school districts, campuses, gymnasiums and administrative buildings.',
+    title: 'Commercial Roofing for Schools & Educational Facilities | CRD',
+    metaDescription: 'Commercial roof coatings, inspections, repairs and restoration planning for schools, campuses and educational facilities across the Texarkana region.',
     canonicalPath: '/industries/schools',
-    industryName: 'Schools & School Districts',
+    industryName: 'Schools & Educational Facilities',
     propertyType: 'School',
-    heroHeadline: 'Commercial Roofing for Schools & School Districts.',
-    heroSubtitle: 'Roof inspections, repairs, restoration and capital planning for classrooms, cafeterias, gymnasiums, athletic facilities and multi-building school campuses.',
+    heroHeadline: 'Commercial Roofing for Schools & Educational Facilities.',
+    heroSubtitle: 'CRD helps school districts and educational property managers evaluate aging metal and low-slope roofs, plan coating restoration and coordinate work around campus operations.',
     sectorChallenges: [
-      { title: 'Academic Calendar Constraints', desc: 'Major work may need to align with summer breaks, holidays, testing periods and after-hours access.' },
-      { title: 'Student & Staff Safety', desc: 'Construction zones must be separated from students, buses, playgrounds, athletic areas and public entrances.' },
-      { title: 'District-Wide Capital Planning', desc: 'Facilities teams need comparable condition data across campuses to prioritize limited maintenance and bond budgets.' },
+      { title: 'Protecting Occupied Classrooms', desc: 'Leaks can disrupt instruction, damage technology and classroom materials, and create safety concerns in active buildings.' },
+      { title: 'Working Around the School Calendar', desc: 'Roof inspections, noisy work, staging and larger projects often need to be coordinated around classes, testing, athletics and scheduled breaks.' },
+      { title: 'District-Wide Capital Planning', desc: 'District teams need clear roof condition documentation and prioritized recommendations to compare immediate repairs with restoration and replacement budgets.' },
     ],
     crdSolutions: [
-      'Campus-by-campus roof assessments with photo records and priority rankings.',
-      'Phased scheduling around school calendars and facility access requirements.',
-      'Repair-versus-restoration-versus-replacement comparisons for budget and board review.',
-      'Coordination with district facilities staff on staging, deliveries and safe pedestrian routes.',
+      'Documented roof condition assessments for individual buildings and multi-campus portfolios.',
+      'Coating and metal roof restoration evaluations where the existing assembly is suitable.',
+      'Repair planning for seams, fasteners, flashings, drains and rooftop equipment penetrations.',
+      'Project scheduling coordinated with district operations and campus access requirements.',
+      'Repair-versus-restoration-versus-replacement comparisons to support capital planning.',
     ],
     recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective low-slope protection for classrooms and large campus buildings.' },
-      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For sloped roofs and appropriate campus structures.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A potential way to restore eligible roofs while reducing tear-off waste.' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'May restore eligible existing roofs without a full tear-off when the assembly and substrate qualify.' },
+      { name: 'TPO Single-Ply', href: '/tpo-roofing', reason: 'A common low-slope membrane option for compatible school and campus buildings.' },
+      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'Relevant for metal roof assemblies, gymnasiums and auxiliary buildings.' },
     ],
-    planningGuide: [
-          {
-                "title": "Use the school calendar strategically",
-                "detail": "Summer break is not automatically enough time for every project. Confirm procurement dates, material lead times, weather allowances, testing schedules, athletic events and when staff need rooms ready for occupancy."
-          },
-          {
-                "title": "Separate students from every work activity",
-                "detail": "The site plan should address fencing, roof access, ladders, cranes, deliveries, dumpsters, bus lanes, playgrounds, athletic fields and emergency vehicle routes. Do not rely on informal verbal warnings."
-          },
-          {
-                "title": "Build a district-wide roof inventory",
-                "detail": "Record each building's roof system, approximate age, area, known leak history, prior repairs and observed condition. Consistent records make campus priorities easier to explain to boards and taxpayers."
-          },
-          {
-                "title": "Protect classroom interiors and equipment",
-                "detail": "Identify technology rooms, libraries, kitchens, gym floors, ceiling systems and stored materials below work areas. Temporary protection and leak-response procedures should be agreed before tear-off."
-          }
-    ],
-    inspectionChecklist: [
-          "Building and roof-section inventory with labeled photographs",
-          "Drainage, seams, flashings, rooftop equipment and perimeter details reviewed",
-          "Interior leak history and sensitive spaces recorded",
-          "Student separation, bus circulation and emergency access plan",
-          "Calendar, procurement lead times and weather contingency",
-          "Closeout package with warranty, product data and maintenance instructions"
-    ],
-    faqs: [
-          {
-                "question": "When is the best time to reroof a school?",
-                "answer": "School breaks can reduce disruption, but the schedule should be based on project size, material availability, weather, procurement and the date rooms must be ready. Some work may be phased during occupied periods with strict separation."
-          },
-          {
-                "question": "Can a district prioritize roofs across multiple campuses?",
-                "answer": "Yes. A consistent assessment method can rank roofs by active leakage, safety concerns, system condition, interior risk and estimated timing. The report should explain the basis for each priority."
-          },
-          {
-                "question": "What should a school district include in bid documents?",
-                "answer": "Define roof areas, assembly requirements, preparation, tear-off assumptions, insulation, flashing, drainage, safety controls, schedule, submittals, warranty, closeout documents and alternates. Comparable scopes produce more useful bids."
-          }
-    ],
-    complianceSafety: 'Scheduling and site controls are coordinated with school leadership, with strict separation from students and occupied public areas.',
+    complianceSafety: 'Work should be coordinated with district facility leadership, campus access controls and site-specific safety requirements. Staging, lifts, material storage and work zones must be planned to protect students, staff and visitors.',
   },
-  '/industries/colleges-universities': {
-    title: 'College & University Campus Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing for colleges, universities, technical schools and multi-building higher education campuses.',
-    canonicalPath: '/industries/colleges-universities',
-    industryName: 'Colleges & University Campuses',
-    propertyType: 'School',
-    heroHeadline: 'Commercial Roofing for College Campuses.',
-    heroSubtitle: 'Coordinated roof asset management for academic buildings, residence halls, libraries, laboratories, athletic facilities and campus support buildings.',
+
+  '/industries/healthcare': {
+    title: 'Commercial Roofing for Healthcare Facilities | CRD',
+    metaDescription: 'Commercial roof coatings, inspections and restoration planning for hospitals, clinics and healthcare properties. Coordinate roof work around critical facility operations.',
+    canonicalPath: '/industries/healthcare',
+    industryName: 'Healthcare & Medical Facilities',
+    propertyType: 'Healthcare',
+    heroHeadline: 'Commercial Roofing for Healthcare Facilities.',
+    heroSubtitle: 'CRD evaluates aging commercial roofs at hospitals, clinics and medical campuses, with planning focused on protecting occupied spaces and coordinating work around facility operations.',
     sectorChallenges: [
-      { title: 'Large, Diverse Building Portfolio', desc: 'Campuses often combine historic structures, modern flat roofs, residence halls and specialized facilities with different roof systems.' },
-      { title: 'Continuous Campus Activity', desc: 'Pedestrian traffic, events, move-in periods and academic schedules require careful logistics and communication.' },
-      { title: 'Long-Range Capital Planning', desc: 'Facilities leaders need reliable condition information to prioritize projects across multiple buildings and fiscal years.' },
+      { title: 'Protecting Critical Interior Spaces', desc: 'Water intrusion can affect patient areas, medical equipment, records, electrical systems and other sensitive spaces.' },
+      { title: 'Coordinating With Facility Operations', desc: 'Roof access, rooftop equipment, air intakes, service routes and work schedules need to be coordinated with facility management.' },
+      { title: 'Managing Multi-Building Campuses', desc: 'Healthcare portfolios may include different roof systems, building ages and priorities that require a documented, phased approach.' },
     ],
     crdSolutions: [
-      'Portfolio inspections that organize findings by building, roof section and urgency.',
-      'Phased project planning around semesters, campus events and residence hall occupancy.',
-      'Coordination for rooftop equipment, laboratories, loading zones and pedestrian routes.',
-      'Clear documentation for facilities departments, procurement teams and campus leadership.',
+      'Roof condition documentation for hospitals, clinics and multi-building healthcare portfolios.',
+      'Coating restoration evaluations for existing roofs that pass moisture, substrate and compatibility checks.',
+      'Targeted repairs at seams, penetrations, curbs, flashings and drainage details.',
+      'Work planning coordinated with facility management and site-specific operational protocols.',
+      'Prioritized repair, restoration and replacement recommendations for capital planning.',
     ],
     recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'For many large low-slope academic and residential buildings.' },
-      { name: 'EPDM Roofing', href: '/epdm-roofing', reason: 'A flexible membrane option used on many existing campus roofs.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A restoration option when the existing roof is compatible and structurally sound.' },
+      { name: 'PVC Single-Ply', href: '/pvc-roofing', reason: 'May be appropriate for selected roofs where product-specific chemical or grease resistance is required.' },
+      { name: 'TPO Single-Ply', href: '/tpo-roofing', reason: 'A common low-slope roof system for compatible healthcare buildings.' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'May offer a restoration option when the existing roof assembly is suitable.' },
     ],
-    planningGuide: [
-          {
-                "title": "Manage the roof as a campus asset portfolio",
-                "detail": "Build a roof register by building, section, system, age, area, repair history and condition. Include residence halls, libraries, labs, athletic facilities, dining buildings and central utility structures."
-          },
-          {
-                "title": "Identify specialized buildings early",
-                "detail": "Laboratories, vivariums, data centers, kitchens and research facilities may have sensitive exhaust, air intakes, process equipment or access controls. Facilities staff should identify these before the contractor proposes methods."
-          },
-          {
-                "title": "Plan around campus life",
-                "detail": "Coordinate work with semesters, move-in and move-out, graduation, athletic events, summer programs and major public gatherings. Consider pedestrian routes, deliveries and residence hall access."
-          },
-          {
-                "title": "Make procurement and phasing transparent",
-                "detail": "For multi-building programs, separate urgent repairs from capital projects and define how alternates, unit prices, allowances and change orders will be evaluated."
-          }
-    ],
-    inspectionChecklist: [
-          "Campus roof register with building IDs and mapped roof zones",
-          "System condition, drainage, penetrations and equipment supports documented",
-          "Historic or specialized buildings flagged for appropriate review",
-          "Sensitive exhausts, intakes, labs and data facilities identified",
-          "Campus access, events, pedestrian routes and delivery plans",
-          "Prioritized multi-year repair and capital plan with supporting photos"
-    ],
-    faqs: [
-          {
-                "question": "How should a university prioritize dozens of roofs?",
-                "answer": "Use a repeatable condition assessment that records active leaks, safety issues, moisture concerns, roof age, repairability and the consequences of failure. Priorities should be evidence-based and reviewed with campus facilities staff."
-          },
-          {
-                "question": "Can roofing work be phased across academic years?",
-                "answer": "Yes. A multi-year plan can address urgent defects first and schedule larger projects around academic calendars, procurement and funding. Each phase should preserve sound transitions and drainage."
-          },
-          {
-                "question": "Do laboratories require different roofing coordination?",
-                "answer": "They can. Exhaust systems, air intakes, process equipment, security and research operations may impose additional constraints. Facility engineering and relevant department contacts should approve the plan before work starts."
-          }
-    ],
-    complianceSafety: 'Work plans account for campus access, occupied buildings, pedestrian protection, fall protection and coordinated deliveries.',
+    complianceSafety: 'Roof work should be coordinated with facility leadership and the site’s infection prevention, safety, security and operations protocols. CRD should not begin work near sensitive intakes or occupied clinical areas without the facility’s approval and required controls.',
   },
-  '/industries/correctional-facilities': {
-    title: 'Jail & Prison Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing for jails, prisons, detention centers and correctional facilities with controlled-access project coordination.',
-    canonicalPath: '/industries/correctional-facilities',
-    industryName: 'Jails, Prisons & Detention Centers',
-    propertyType: 'Municipal',
-    heroHeadline: 'Commercial Roofing for Correctional Facilities.',
-    heroSubtitle: 'Roof assessments, repairs and replacement planning coordinated with facility administrators and authorized security personnel.',
-    sectorChallenges: [
-      { title: 'Controlled Access & Security', desc: 'Site entry, tools, deliveries, escorts and work zones must follow facility-specific approval and security procedures.' },
-      { title: 'Occupied, Mission-Critical Buildings', desc: 'Roofing work must be planned around facility operations, staff movement and essential building functions.' },
-      { title: 'Complex Roof Access', desc: 'Perimeter controls, secure courtyards and restricted access points can affect inspection and material logistics.' },
-    ],
-    crdSolutions: [
-      'Preconstruction planning with designated facility representatives and approved access protocols.',
-      'Documented inspection findings and clear scopes for procurement and administrative review.',
-      'Phased work and delivery schedules aligned with facility operating requirements.',
-      'Leak response planning to protect occupied areas and critical building interiors.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'A common low-slope membrane option for institutional buildings.' },
-      { name: 'Modified Bitumen Roofing', href: '/modified-bitumen-roofing', reason: 'A multi-ply option that may suit certain existing roof assemblies.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A potential restoration option for suitable existing roof systems.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Let facility administration control access",
-                "detail": "All visits, escorts, tools, materials, deliveries, photography and work areas must be approved under the facility's own procedures. A roofing proposal should state that work is contingent on those approvals."
-          },
-          {
-                "title": "Document roof areas without compromising security",
-                "detail": "Agree in advance what can be photographed, mapped or included in reports. The contractor should provide the facility with useful condition documentation while respecting restrictions on sensitive information."
-          },
-          {
-                "title": "Plan material movement and staging",
-                "detail": "Roofing materials, dumpsters, lifts and equipment may require specific routes, inspection and timing. Confirm approved staging and secure storage before mobilization."
-          },
-          {
-                "title": "Protect occupied operations",
-                "detail": "Coordinate noise, temporary closures, weather protection, emergency access and work sequencing with the facility's designated representative. Do not make assumptions about movement or occupancy."
-          }
-    ],
-    inspectionChecklist: [
-          "Written facility approval and designated point of contact",
-          "Access, escort, tool, material and photography restrictions confirmed",
-          "Approved inspection route and roof areas identified",
-          "Leak locations, roof details and repair needs documented within facility rules",
-          "Material delivery, staging, debris and daily tool-accountability plan",
-          "Work windows, emergency contacts and weather protection plan"
-    ],
-    faqs: [
-          {
-                "question": "Can contractors photograph a correctional facility roof?",
-                "answer": "Only if the facility authorizes it and defines what may be photographed. Reporting methods must follow facility security rules."
-          },
-          {
-                "question": "Can roofing work occur while a jail or prison is operating?",
-                "answer": "Potentially, but only under facility-approved procedures. Access, escorts, tools, deliveries, work zones and scheduling must be coordinated with authorized staff."
-          },
-          {
-                "question": "What should a correctional facility include in a roofing bid?",
-                "answer": "In addition to the technical roof scope, identify access assumptions, security coordination, approved work hours, material controls, photography restrictions, staging, cleanup and required submittals."
-          }
-    ],
-    complianceSafety: 'All work is subject to facility authorization, security screening and approved procedures; no security arrangements are assumed.',
-  },
-  '/industries/malls-shopping-centers': {
-    title: 'Shopping Mall & Retail Center Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing for shopping malls, regional retail centers, shopping plazas and multi-tenant properties.',
-    canonicalPath: '/industries/malls-shopping-centers',
-    industryName: 'Shopping Malls & Retail Centers',
-    propertyType: 'Retail',
-    heroHeadline: 'Commercial Roofing for Malls & Shopping Centers.',
-    heroSubtitle: 'Protecting tenant spaces, merchandise, customers and common areas with coordinated roof maintenance, leak response and phased capital projects.',
-    sectorChallenges: [
-      { title: 'Many Tenants, One Roof', desc: 'Large centers have multiple suites, roof zones, tenant contacts and lease responsibilities that complicate leak tracing and project coordination.' },
-      { title: 'Customer-Facing Work Areas', desc: 'Entrances, sidewalks, parking lots and delivery routes must remain safe and organized during construction.' },
-      { title: 'High Rooftop Equipment Density', desc: 'HVAC units, exhaust fans, skylights and penetrations create maintenance points across expansive roof areas.' },
-    ],
-    crdSolutions: [
-      'Roof-zone mapping and photo documentation to connect reported leaks with the relevant roof area.',
-      'Tenant and property-management coordination for access, notices and work scheduling.',
-      'Phased repairs or restoration plans to manage large roofs without treating every section identically.',
-      'Drainage, flashing and rooftop equipment detail inspections as part of roof condition reviews.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective membrane option for many large low-slope retail roofs.' },
-      { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'May be considered in areas with restaurant exhaust or grease exposure.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'Can be evaluated for compatible existing roofs to avoid unnecessary tear-off.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Map the roof by tenant and roof zone",
-                "detail": "A mall or retail center may have multiple roof elevations, tenant suites, additions and ownership boundaries. Label roof zones and connect leak reports to the closest known suite, equipment area or grid reference."
-          },
-          {
-                "title": "Coordinate tenant and customer movement",
-                "detail": "Plan overhead protection, sidewalk closures, parking, storefront access, deliveries and work near restaurants or busy entrances. Property management should approve notices and alternate routes."
-          },
-          {
-                "title": "Inspect restaurant exhaust and rooftop equipment",
-                "detail": "Grease, heat, exhaust discharge, service traffic and equipment curbs can affect membrane selection and detail maintenance. Identify these conditions before choosing a restoration or replacement system."
-          },
-          {
-                "title": "Protect merchandise and business continuity",
-                "detail": "Agree on temporary weather protection, after-hours work where needed, inventory protection and a clear response if water enters a tenant space during construction."
-          }
-    ],
-    inspectionChecklist: [
-          "Roof-zone map linked to tenant suites and reported leak locations",
-          "Drains, scuppers, seams, curbs, skylights and parapets documented",
-          "Restaurant exhaust, grease exposure and HVAC service paths identified",
-          "Customer entrances, sidewalks, parking and loading routes protected",
-          "Tenant notice and emergency water-entry communication process",
-          "Phased scope, temporary protection and daily cleanup plan"
-    ],
-    faqs: [
-          {
-                "question": "How do you find the source of a leak in a multi-tenant shopping center?",
-                "answer": "Start with the reported location and timing, then inspect the related roof zone, drainage path, penetrations and transitions. Water can travel before entering the tenant space, so the ceiling location alone may not identify the defect."
-          },
-          {
-                "question": "Can a shopping center roof be restored in phases?",
-                "answer": "Often, if the existing assembly and substrate are suitable and the project can create reliable tie-ins between phases. The contractor should map each phase and explain how temporary and permanent transitions will be protected."
-          },
-          {
-                "question": "Do restaurant tenants affect roof-system selection?",
-                "answer": "They can. Grease and exhaust exposure may influence membrane or coating compatibility and detail requirements. The actual discharge and roof conditions should be evaluated before specifying materials."
-          }
-    ],
-    complianceSafety: 'Work zones, pedestrian routes, tenant access and debris controls are coordinated with property management.',
-  },
-  '/industries/warehouses-distribution': {
-    title: 'Warehouse & Distribution Center Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roof inspections, leak repairs, coatings and replacement for warehouses, logistics hubs and distribution centers.',
-    canonicalPath: '/industries/warehouses-distribution',
-    industryName: 'Warehouses & Distribution Centers',
-    propertyType: 'Industrial',
-    heroHeadline: 'Commercial Roofing for Warehouses & Distribution Centers.',
-    heroSubtitle: 'Roofing programs for large facilities where inventory protection, loading dock activity, rooftop equipment and operational continuity are essential.',
-    sectorChallenges: [
-      { title: 'Inventory & Equipment Exposure', desc: 'Water intrusion can damage stored goods, racking, automation, electrical systems and active shipping operations.' },
-      { title: 'Large Roof Areas', desc: 'Expansive roofs require organized inspections of seams, drains, penetrations, perimeter details and rooftop traffic paths.' },
-      { title: 'Loading Dock Coordination', desc: 'Crane placement, material staging and deliveries must be coordinated around truck courts and shipping schedules.' },
-    ],
-    crdSolutions: [
-      'Roof-zone inspection records that help facilities teams track recurring leaks and developing conditions.',
-      'Phased work and staging plans coordinated around loading docks and shipping windows.',
-      'Evaluation of drainage, rooftop traffic, penetrations and membrane condition.',
-      'Repair, restoration and replacement options with attention to operational disruption and lifecycle planning.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective single-ply option for many large low-slope roofs.' },
-      { name: 'PVC Roofing', href: '/pvc-roofing', reason: 'Potential fit where rooftop exhaust or chemical exposure calls for evaluation.' },
-      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For appropriate structural and architectural metal roof assemblies.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Protect inventory before work starts",
-                "detail": "Identify high-value storage, racking, automation, electrical rooms and shipping zones below the roof. Establish temporary protection and a response path for unexpected water entry."
-          },
-          {
-                "title": "Map large roofs into manageable zones",
-                "detail": "A single roof can hide different ages, repairs, drainage patterns and exposure conditions. Zone maps and repeatable photo locations help track problems and compare phases."
-          },
-          {
-                "title": "Coordinate around logistics",
-                "detail": "Crane locations, lifts, deliveries, dumpsters and material staging can interfere with truck courts, loading docks and fire lanes. Confirm a traffic plan with operations before mobilization."
-          },
-          {
-                "title": "Evaluate rooftop traffic and equipment",
-                "detail": "Repeated HVAC service traffic, dropped tools, unsupported piping and equipment changes can damage membranes and flashings. Review access paths and protection requirements."
-          }
-    ],
-    inspectionChecklist: [
-          "Roof zone plan with drains, penetrations, equipment and leak locations",
-          "Membrane seams, fasteners, flashings, edges and rooftop traffic paths",
-          "Interior inventory or equipment risks below reported leak areas",
-          "Drainage capacity, ponding observations and debris conditions",
-          "Truck court, dock, crane, lift and staging logistics",
-          "Phased schedule and temporary weather protection for active operations"
-    ],
-    faqs: [
-          {
-                "question": "Can a warehouse roof be replaced without stopping operations?",
-                "answer": "It may be possible to phase work and coordinate around loading schedules, but the answer depends on roof size, weather, access, interior risks and the facility's operating requirements. The plan should identify any unavoidable restrictions."
-          },
-          {
-                "question": "Why is roof zoning important on large industrial buildings?",
-                "answer": "Zoning helps connect leak reports and inspection findings to specific areas. It also supports phased repairs, budget planning and tracking of recurring issues."
-          },
-          {
-                "question": "Are reflective roofs useful for warehouses?",
-                "answer": "A reflective roof can reduce solar heat gain at the roof surface, but actual building energy savings depend on insulation, HVAC efficiency, climate, operating hours and the whole building envelope. Avoid promises of a fixed savings percentage without project-specific analysis."
-          }
-    ],
-    complianceSafety: 'Site logistics emphasize forklift and truck traffic coordination, fall protection, controlled staging and daily housekeeping.',
-  },
-  '/industries/chicken-houses-poultry': {
-    title: 'Chicken House & Poultry Building Roofing | Commercial Roof Doctors',
-    metaDescription: 'Roof inspections, metal roof repairs, coatings and replacement for poultry houses, chicken houses and agricultural production buildings.',
-    canonicalPath: '/industries/chicken-houses-poultry',
-    industryName: 'Chicken Houses & Poultry Facilities',
-    propertyType: 'Industrial',
-    heroHeadline: 'Roofing for Chicken Houses & Poultry Facilities.',
-    heroSubtitle: 'Practical metal roof repair, restoration and replacement planning for poultry houses and agricultural buildings where moisture, ventilation and production schedules matter.',
-    sectorChallenges: [
-      { title: 'Moisture & Condensation', desc: 'Interior humidity and temperature differences can contribute to condensation and corrosion concerns that require evaluation beyond the roof surface alone.' },
-      { title: 'Production & Biosecurity Routines', desc: 'Farm access, vehicle movement, flock schedules and site-specific biosecurity procedures must be coordinated with the owner or operator.' },
-      { title: 'Long Metal Roof Runs', desc: 'Fasteners, panel laps, ridge details, penetrations and exposed edges can deteriorate across long agricultural roof spans.' },
-    ],
-    crdSolutions: [
-      'Metal roof inspections focused on fasteners, seams, panel condition, ridge caps, penetrations and drainage.',
-      'Repair and coating evaluations based on substrate condition, corrosion severity and manufacturer system requirements.',
-      'Scheduling coordinated with farm operators, flock cycles, access routes and site protocols.',
-      'Replacement scopes for areas where deterioration or structural conditions make restoration unsuitable.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'Metal Roof Restoration', href: '/metal-roof-coatings', reason: 'A potential option for eligible metal panels after preparation and condition assessment.' },
-      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'For panel replacement or new metal roof assemblies.' },
-      { name: 'Commercial Roof Repair', href: '/commercial-roof-repair', reason: 'For localized leaks, fastener issues and detail repairs where appropriate.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Separate roof leaks from condensation problems",
-                "detail": "Water on the underside of a roof may come from rain entry, condensation or both. Evaluate ventilation, humidity, temperature differences, insulation, air leakage and roof details before assuming a coating will solve the issue."
-          },
-          {
-                "title": "Coordinate with flock and biosecurity schedules",
-                "detail": "Agree on access routes, vehicle cleaning or disinfection requirements, clothing and equipment rules, downtime windows and any restrictions around active flocks. The farm operator's procedures take priority."
-          },
-          {
-                "title": "Inspect the full metal roof assembly",
-                "detail": "Check panels, exposed fasteners, washers, side laps, end laps, ridge caps, eaves, gutters, penetrations and corrosion. Document whether deterioration is isolated or widespread."
-          },
-          {
-                "title": "Specify coatings based on the actual substrate",
-                "detail": "A coating system needs compatible metal, sound attachment, appropriate preparation and correct detailing. Rust treatment, primer, film thickness, weather conditions and cure time must follow the selected manufacturer's written requirements."
-          }
-    ],
-    inspectionChecklist: [
-          "Panel condition, corrosion, fasteners and washer condition",
-          "Ridge, eave, side-lap, end-lap and penetration details",
-          "Interior condensation observations separated from rain-leak reports",
-          "Ventilation, humidity and insulation conditions considered",
-          "Farm access, biosecurity, flock timing and vehicle route requirements",
-          "Coating preparation, primer, application conditions and cure plan if restoration is proposed"
-    ],
-    faqs: [
-          {
-                "question": "Can a metal roof coating stop condensation inside a chicken house?",
-                "answer": "Not by itself in every case. Condensation is often tied to humidity, ventilation, air leakage, insulation and surface temperatures. The cause should be investigated before selecting a roof coating."
-          },
-          {
-                "question": "When is a poultry house metal roof a candidate for coating?",
-                "answer": "When panels remain serviceable, attachment and details can be corrected, corrosion is manageable and the selected coating is approved for the substrate. Severely deteriorated panels or structural issues may require replacement or other repairs."
-          },
-          {
-                "question": "How should roofing work be scheduled around poultry production?",
-                "answer": "Coordinate with the operator's flock schedule, access rules and biosecurity plan. Do not assume ordinary contractor access or vehicle movement is acceptable."
-          }
-    ],
-    complianceSafety: 'Work is coordinated with the farm operator and applicable site biosecurity procedures; coating suitability and ventilation conditions are evaluated before work.',
-  },
-  '/industries/horse-barns-equestrian': {
-    title: 'Horse Barn & Equestrian Facility Roofing | Commercial Roof Doctors',
-    metaDescription: 'Metal roof inspections, repairs, restoration and replacement for horse barns, riding arenas, stables and equestrian facilities.',
-    canonicalPath: '/industries/horse-barns-equestrian',
-    industryName: 'Horse Barns & Equestrian Facilities',
-    propertyType: 'Other',
-    heroHeadline: 'Roofing for Horse Barns & Equestrian Facilities.',
-    heroSubtitle: 'Roofing services for stables, riding arenas, tack rooms and equestrian buildings with careful attention to animals, ventilation and daily facility use.',
-    sectorChallenges: [
-      { title: 'Animal & Occupant Safety', desc: 'Work areas, equipment and material staging must be separated from horses, handlers, riders and visitors.' },
-      { title: 'Ventilation & Moisture', desc: 'Barn ventilation, condensation and interior air movement should be considered when evaluating roof assemblies and coatings.' },
-      { title: 'Large Span Structures', desc: 'Barns and arenas may have long metal panel runs, exposed fasteners and difficult access at ridges and eaves.' },
-    ],
-    crdSolutions: [
-      'Inspection of panels, fasteners, ridge details, penetrations, gutters and visible corrosion.',
-      'Work scheduling with owners to relocate or protect animals and keep riding areas safely separated.',
-      'Evaluation of metal roof repair and restoration options based on substrate condition and ventilation needs.',
-      'Replacement planning for roof sections where deterioration cannot be responsibly restored.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'Commercial Metal Roofing', href: '/commercial-metal-roofing', reason: 'A common roof assembly for barns and large agricultural structures.' },
-      { name: 'Metal Roof Coatings', href: '/metal-roof-coatings', reason: 'A potential restoration option for suitable existing metal roofs.' },
-      { name: 'Commercial Roof Repair', href: '/commercial-roof-repair', reason: 'For repairable leaks and deteriorated roof details.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Plan around horses, riders and daily routines",
-                "detail": "Separate work zones from stalls, paddocks, arenas, tack rooms and public areas. Agree on animal relocation, gates, noise-sensitive periods, equipment movement and emergency access with the facility operator."
-          },
-          {
-                "title": "Understand ventilation before choosing materials",
-                "detail": "Barn moisture and ventilation conditions can affect condensation and corrosion. Evaluate airflow, insulation and roof assembly rather than assuming the roof surface alone explains interior moisture."
-          },
-          {
-                "title": "Inspect long metal panel runs carefully",
-                "detail": "Check fasteners, washers, panel laps, ridge caps, eaves, valleys, gutters and penetrations. Long runs can conceal repeated fastener or seam problems that should be mapped."
-          },
-          {
-                "title": "Protect animals from construction debris",
-                "detail": "Plan for dropped fasteners, metal scraps, dust, solvents, wet coatings, equipment noise and temporary fencing. Keep materials and waste inaccessible to horses and other animals."
-          }
-    ],
-    inspectionChecklist: [
-          "Metal panels, fasteners, washers, laps, ridge and eave details",
-          "Corrosion and water-entry points documented with photos",
-          "Ventilation and condensation conditions considered",
-          "Stalls, paddocks, arenas and animal movement routes identified",
-          "Animal separation, debris control and material storage plan",
-          "Coating or repair product suitability and cure restrictions reviewed"
-    ],
-    faqs: [
-          {
-                "question": "Are roof coatings safe to apply over horse barns?",
-                "answer": "Product selection and application must follow the manufacturer's requirements, including ventilation, overspray control, cure time and restrictions on occupancy. Animals should be kept away from work and curing areas as directed."
-          },
-          {
-                "question": "Can a leaking barn metal roof be repaired without replacing all panels?",
-                "answer": "Sometimes. If damage is localized and the surrounding panels and attachment remain sound, targeted repairs may be practical. Widespread corrosion, failed laps or structural deterioration may change the recommendation."
-          },
-          {
-                "question": "Does barn condensation mean the roof is leaking?",
-                "answer": "No. Condensation can form when moist interior air contacts a cooler surface. The investigation should consider ventilation, humidity, insulation and air leakage as well as roof leaks."
-          }
-    ],
-    complianceSafety: 'Work plans include animal separation, controlled equipment access, fall protection and coordination with facility operators.',
-  },
-  '/industries/office-buildings': {
-    title: 'Office Building Commercial Roofing | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing for office buildings, professional campuses and multi-tenant office properties with planned maintenance and leak response.',
-    canonicalPath: '/industries/office-buildings',
-    industryName: 'Office Buildings & Professional Campuses',
-    propertyType: 'Office',
-    heroHeadline: 'Commercial Roofing for Office Buildings.',
-    heroSubtitle: 'Protecting tenants, technology, records and daily business operations with documented inspections, responsive repairs and long-term roof planning.',
-    sectorChallenges: [
-      { title: 'Occupied Business Environments', desc: 'Roof work must account for employee and visitor access, parking, entrances and business hours.' },
-      { title: 'Sensitive Interior Assets', desc: 'Leaks can affect server rooms, electrical equipment, tenant improvements and valuable records.' },
-      { title: 'Tenant & Owner Coordination', desc: 'Multi-tenant buildings require clear communication about access, reported leaks and responsibility for affected areas.' },
-    ],
-    crdSolutions: [
-      'Documented inspections with roof-area photos and prioritized observations.',
-      'Leak response coordination with building engineers and property managers.',
-      'Phased restoration or replacement planning to manage capital budgets and tenant impact.',
-      'Review of rooftop HVAC curbs, drains, penetrations and service walk paths.',
-    ],
-    recommendedRoofSystems: [
-      { name: 'TPO Roofing', href: '/tpo-roofing', reason: 'Reflective low-slope option for many office buildings.' },
-      { name: 'EPDM Roofing', href: '/epdm-roofing', reason: 'A flexible membrane system found on many existing commercial properties.' },
-      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings', reason: 'A potential restoration alternative for suitable existing roof assemblies.' },
-    ],
-    planningGuide: [
-          {
-                "title": "Protect business-critical interiors",
-                "detail": "Identify server rooms, electrical equipment, records, tenant improvements and high-value areas below reported leaks. Document temporary protection and who receives urgent notifications."
-          },
-          {
-                "title": "Coordinate tenants and building operations",
-                "detail": "Agree on notices, access, parking, noise, rooftop equipment shutdowns and after-hours work. Multi-tenant properties need a clear path for reporting and tracking leaks."
-          },
-          {
-                "title": "Track rooftop service traffic",
-                "detail": "HVAC contractors and other service providers can damage roof surfaces or flashings. Ask for designated walk paths, protection pads and documentation after equipment work."
-          },
-          {
-                "title": "Use a roof plan for long-term budgeting",
-                "detail": "Record system type, age, repair history, roof zones and observed condition. A consistent record helps owners compare repair needs across buildings and plan capital spending."
-          }
-    ],
-    inspectionChecklist: [
-          "Roof plan and building or tenant zones identified",
-          "Membrane or panel condition, seams, flashings, edges and drains documented",
-          "HVAC curbs, service routes, supports and penetrations inspected",
-          "Leak reports mapped to affected suites and critical interior areas",
-          "Tenant communications, access and equipment coordination plan",
-          "Prioritized repair and capital recommendations with photo evidence"
-    ],
-    faqs: [
-          {
-                "question": "Can roof work be performed during normal office hours?",
-                "answer": "Often, but noise, odor, access, parking and rooftop equipment needs may require specific work windows. Property management should approve the schedule and tenant notices."
-          },
-          {
-                "question": "How often should an office building roof be inspected?",
-                "answer": "Inspection frequency depends on the roof system, age, exposure, warranty and site conditions. At minimum, owners should follow manufacturer and warranty requirements and arrange additional checks after significant storms or known damage."
-          },
-          {
-                "question": "What should a commercial roof inspection report include?",
-                "answer": "It should identify the roof areas inspected, access limitations, system observations, labeled photos, active and potential leak points, drainage and flashing conditions, recommended priorities and the reasoning behind proposed repairs."
-          }
-    ],
-    complianceSafety: 'Work is coordinated with property management to protect occupants, entrances, vehicles and building operations.',
-  },
+
 };
 
 export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas': {
-    title: 'Commercial Roofing Service Areas | Four-State Coverage',
-    metaDescription: 'Commercial Roof Doctors serves commercial properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability and travel are confirmed based on property location and scope.',
+    title: 'Commercial Roofing Service Areas in TX, AR, LA & OK | CRD',
+    metaDescription: 'Commercial Roof Doctors evaluates commercial metal and low-slope roofs for coatings, restoration, repairs and replacement planning across Texas, Arkansas, Louisiana and Oklahoma. Project availability is confirmed by location, roof type and scope.',
     canonicalPath: '/service-areas',
-    regionName: 'Texas, Arkansas, Louisiana & Oklahoma',
-    heroHeadline: 'Four-State Commercial Roofing Coverage.',
-    heroSubtitle: 'Centrally dispatched from Texarkana, Commercial Roof Doctors provides direct on-site commercial roofing, restoration, and storm disaster response across four states.',
-    weatherAndStormFactors: 'The Ark-La-Tex region sits at the intersection of humid subtropical Gulf air and severe Great Plains frontal boundaries. This dynamic climate triggers intense supercell thunderstorms, 2-inch hail outbreaks, convective straight-line wind events exceeding 80 mph, and severe summer UV thermal cycling.',
+    regionName: 'Four-State Commercial Service Area',
+    heroHeadline: 'Commercial Roof Coatings Across the Ark-La-Tex & Regional Markets.',
+    heroSubtitle: 'Based in Texarkana, CRD evaluates commercial metal and low-slope roofs for restoration, coatings, repairs and replacement planning across Texas, Arkansas, Louisiana and Oklahoma. Project availability is confirmed based on location, roof type and scope.',
+    weatherAndStormFactors: 'The wider service region spans humid Gulf-influenced weather and severe Great Plains storm systems. Commercial roofs can face prolonged heat, UV exposure, heavy rainfall, hail, high winds and seasonal temperature changes. Roof condition, drainage, seams and fasteners should be evaluated for each property rather than assuming every roof has the same exposure.',
     countiesAndCitiesServed: [
       'Texarkana, TX & AR',
-      'Longview, TX',
-      'Marshall, TX',
-      'Mount Pleasant, TX',
-      'Paris, TX',
-      'Atlanta, TX',
-      'Hope, AR',
-      'Magnolia, AR',
-      'Camden, AR',
-      'El Dorado, AR',
-      'Shreveport, LA',
-      'Bossier City, LA',
-      'Minden, LA',
-      'Idabel, OK',
-      'Broken Bow, OK',
+      'Dallas-Fort Worth, TX',
+      'Longview and Tyler, TX',
+      'Paris, Greenville and Sulphur Springs, TX',
+      'Little Rock, AR',
+      'Fayetteville, Springdale and Fort Smith, AR',
+      'El Dorado and Magnolia, AR',
+      'Shreveport and Bossier City, LA',
+      'Monroe, Ruston and Minden, LA',
+      'Tulsa and Oklahoma City, OK',
+      'Idabel and Broken Bow, OK',
     ],
     keyIndustriesInRegion: [
-      'Industrial manufacturing and timber/paper processing plants',
-      'Regional hospital and healthcare systems',
-      'Commercial retail strip centers and auto dealerships',
-      'Churches, religious sanctuaries, and private schools',
-      'Multifamily housing communities and distribution warehouses',
+      'Industrial manufacturing, food processing and metal fabrication',
+      'Warehouses, distribution centers and logistics facilities',
+      'Energy, chemical processing and timber operations',
+      'Commercial retail, office and multifamily properties',
+      'Healthcare, churches, schools and institutional facilities',
     ],
     serviceCapabilities: [
-      'Emergency roof leak mitigation and storm response, subject to location, conditions, and crew availability',
-      'Complete forensic commercial roof inspections with drone and infrared cameras',
-      'Commercial fluid silicone and acrylic restoration coatings',
-      'Full tear-off and engineered replacement with applicable manufacturer-backed warranty options',
-      'Carrier-compliant Xactimate storm claim documentation and adjuster walk-throughs',
+      'Commercial roof coating and restoration evaluations for compatible roof assemblies',
+      'Metal roof corrosion preparation, fastener replacement and seam reinforcement',
+      'Silicone, acrylic and polyurethane coating system evaluations',
+      'Documented roof inspections and repair-versus-restoration planning',
+      'Targeted repairs, maintenance and replacement when restoration is not appropriate',
+    ],
+    cityLinks: [
+      { name: 'Texas Service Area', href: '/service-areas/texas' },
+      { name: 'Arkansas Service Area', href: '/service-areas/arkansas' },
+      { name: 'Louisiana Service Area', href: '/service-areas/louisiana' },
+      { name: 'Oklahoma Service Area', href: '/service-areas/oklahoma' }
     ],
   },
 
   '/service-areas/texas': {
-    title: 'Commercial Roofing Across Texas | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing, flat roof leak repair, storm damage restoration, and asset management for commercial properties across Texas. Featured markets include Texarkana, Longview, Marshall, Mount Pleasant, and Paris.',
+    title: 'Commercial Roofing in Northeast Texas and DFW | CRD',
+    metaDescription: "Commercial roofing across Northeast Texas and Dallas-Fort Worth. Inspections, repairs, restoration and replacement planning. Confirm project scope.",
     canonicalPath: '/service-areas/texas',
-    regionName: 'Texas',
-    heroHeadline: 'Commercial Roofing Across Texas.',
-    heroSubtitle: 'Providing commercial roof diagnostics, emergency storm response, and restoration services statewide. Featured markets include Northeast Texas communities, with project travel and availability confirmed by scope.',
-    weatherAndStormFactors: 'Northeast Texas experiences extreme thermal fluctuations, reaching 100°F+ rooftop temperatures in summer and dropping below freezing in winter, causing severe membrane expansion stress. Severe convective storms frequently deliver damaging hail and high straight-line winds.',
+    regionName: 'Northeast Texas Territory',
+    heroHeadline: 'Commercial Roofing Across Northeast Texas and DFW.',
+    heroSubtitle: 'Commercial Roof Doctors provides project evaluations for commercial properties in Northeast Texas and the Dallas-Fort Worth region. We assess the existing roof before recommending repair, restoration, a compatible coating system or replacement. Availability is confirmed for each project.',
+    weatherAndStormFactors: 'Northeast Texas and the Dallas-Fort Worth region experience hot summers, seasonal storms, hail and periods of heavy rainfall. Commercial roof evaluations should document drainage, seams, flashing, fasteners, penetrations and perimeter details before a repair or restoration approach is selected.',
     countiesAndCitiesServed: [
       'Texarkana (Bowie County)',
       'Longview (Gregg County)',
@@ -1830,101 +999,6446 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Mount Pleasant (Titus County)',
       'Atlanta (Cass County)',
       'Paris (Lamar County)',
+      'Tyler (Smith County)',
+      'Dallas-Fort Worth metro commercial markets',
+      'Greenville and Sulphur Springs',
+      'Sherman and Denison',
       'New Boston (Bowie County)',
     ],
     keyIndustriesInRegion: [
-      'Manufacturing plants and metal fabrication facilities',
-      'Commercial retail centers and distribution hubs',
-      'Medical complexes and regional hospitals',
+      'Warehouses and distribution properties',
+      'Office buildings and commercial real estate',
+      'Retail centers and multifamily properties',
+      'Churches, schools and institutional facilities',
     ],
     serviceCapabilities: [
-      'Same-day emergency commercial leak response',
-      'TPO and EPDM flat roof engineered replacements',
-      'Silicone roof coatings for aging metal buildings',
-      'Hail damage inspections and insurance claim support',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak and detail repair planning for seams, flashing, fasteners and penetrations',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on roof condition',
+    ],
+    cityLinks: [
+      { name: 'Dallas', href: '/service-areas/dallas' },
+      { name: 'Fort Worth', href: '/service-areas/fort-worth' },
+      { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' },
+      { name: 'Longview', href: '/service-areas/longview' },
+      { name: 'Tyler', href: '/service-areas/tyler' },
+      { name: 'Paris', href: '/service-areas/paris' },
+      { name: 'Greenville', href: '/service-areas/greenville' },
+      { name: 'Sulphur Springs', href: '/service-areas/sulphur-springs' },
+      { name: 'Mount Pleasant', href: '/service-areas/mount-pleasant' },
+      { name: 'Marshall', href: '/service-areas/marshall' },
+      { name: 'Sherman', href: '/service-areas/sherman' },
+      { name: 'Denison', href: '/service-areas/denison' },
+      { name: 'Nacogdoches', href: '/service-areas/nacogdoches' },
+      { name: 'Lufkin', href: '/service-areas/lufkin' },
+      { name: 'Jacksonville Tx', href: '/service-areas/jacksonville-tx' },
+      { name: 'Palestine', href: '/service-areas/palestine' },
+      { name: 'Henderson', href: '/service-areas/henderson' },
+      { name: 'Athens', href: '/service-areas/athens' },
+      { name: 'Corsicana', href: '/service-areas/corsicana' },
+      { name: 'Arlington', href: '/service-areas/arlington' },
+      { name: 'Plano', href: '/service-areas/plano' },
+      { name: 'Irving', href: '/service-areas/irving' },
+      { name: 'Garland', href: '/service-areas/garland' },
+      { name: 'Frisco', href: '/service-areas/frisco' },
+      { name: 'Mckinney', href: '/service-areas/mckinney' },
+      { name: 'Grand Prairie', href: '/service-areas/grand-prairie' },
+      { name: 'Denton', href: '/service-areas/denton' },
+      { name: 'Mesquite', href: '/service-areas/mesquite' },
+      { name: 'Carrollton', href: '/service-areas/carrollton' },
+      { name: 'Richardson', href: '/service-areas/richardson' },
+      { name: 'Lewisville', href: '/service-areas/lewisville' },
+      { name: 'Allen', href: '/service-areas/allen' },
+      { name: 'Rowlett', href: '/service-areas/rowlett' },
+      { name: 'Mansfield', href: '/service-areas/mansfield' },
+      { name: 'Grapevine', href: '/service-areas/grapevine' },
+      { name: 'Hurst', href: '/service-areas/hurst' },
+      { name: 'Euless', href: '/service-areas/euless' },
+      { name: 'Bedford', href: '/service-areas/bedford' },
+      { name: 'North Richland Hills', href: '/service-areas/north-richland-hills' },
+      { name: 'Keller', href: '/service-areas/keller' },
+      { name: 'Burleson', href: '/service-areas/burleson' },
+      { name: 'Rockwall', href: '/service-areas/rockwall' },
+      { name: 'Forney', href: '/service-areas/forney' },
+      { name: 'Waxahachie', href: '/service-areas/waxahachie' },
+      { name: 'Midlothian', href: '/service-areas/midlothian' },
+      { name: 'Lancaster', href: '/service-areas/lancaster' },
+      { name: 'Desoto', href: '/service-areas/desoto' },
+      { name: 'Cedar Hill', href: '/service-areas/cedar-hill' },
+      { name: 'Duncanville', href: '/service-areas/duncanville' },
+      { name: 'Coppell', href: '/service-areas/coppell' },
+      { name: 'Farmers Branch', href: '/service-areas/farmers-branch' },
+      { name: 'The Colony', href: '/service-areas/the-colony' },
+      { name: 'Sachse', href: '/service-areas/sachse' },
+      { name: 'Balch Springs', href: '/service-areas/balch-springs' },
+      { name: 'Princeton', href: '/service-areas/princeton' },
+      { name: 'Royse City', href: '/service-areas/royse-city' },
+      { name: 'Melissa', href: '/service-areas/melissa' },
+      { name: 'Anna', href: '/service-areas/anna' },
+      { name: 'Celina', href: '/service-areas/celina' },
+      { name: 'Prosper', href: '/service-areas/prosper' },
+      { name: 'Flower Mound', href: '/service-areas/flower-mound' },
+      { name: 'Wylie', href: '/service-areas/wylie' },
+      { name: 'Addison', href: '/service-areas/addison' },
+      { name: 'Haltom City', href: '/service-areas/haltom-city' },
+      { name: 'White Settlement', href: '/service-areas/white-settlement' },
+      { name: 'Benbrook', href: '/service-areas/benbrook' },
+      { name: 'Watauga', href: '/service-areas/watauga' },
+      { name: 'Saginaw', href: '/service-areas/saginaw' },
+      { name: 'Forest Hill', href: '/service-areas/forest-hill' },
+      { name: 'Crowley', href: '/service-areas/crowley' },
+      { name: 'Cleburne', href: '/service-areas/cleburne' },
+      { name: 'Weatherford', href: '/service-areas/weatherford' },
+      { name: 'Mineral Wells', href: '/service-areas/mineral-wells' },
+      { name: 'Stephenville', href: '/service-areas/stephenville' },
+      { name: 'Ennis', href: '/service-areas/ennis' },
+      { name: 'Bonham', href: '/service-areas/bonham' }
     ],
   },
 
   '/service-areas/arkansas': {
-    title: 'Commercial Roofing Across Arkansas | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing services across Arkansas. Featured markets include Texarkana, Hope, Magnolia, Camden, and El Dorado. Inspections, leak repair, and restoration.',
+    title: 'Commercial Roofing Across Arkansas | CRD',
+    metaDescription: "Commercial roofing across Arkansas. Inspections, repairs, restoration and replacement planning. Project availability confirmed by location and scope.",
     canonicalPath: '/service-areas/arkansas',
-    regionName: 'Arkansas',
+    regionName: 'Arkansas Regional Service Markets',
     heroHeadline: 'Commercial Roofing Across Arkansas.',
-    heroSubtitle: 'Serving commercial property managers, school districts, and industrial facilities statewide, with featured markets in southern Arkansas.',
-    weatherAndStormFactors: 'Heavy rainfall and severe southern thunderstorm systems bring sudden high-volume water accumulation. Commercial roofs require meticulously maintained internal drains, clear scuppers, and positive tapered drainage.',
+    heroSubtitle: 'Commercial Roof Doctors helps property owners and managers understand existing roof conditions and evaluate repair, restoration, coating and replacement options. Project availability is confirmed individually based on location, roof type and scope.',
+    weatherAndStormFactors: 'Across Arkansas, heavy rainfall, humidity, hail and seasonal storms can expose drainage, flashing, seam and penetration problems. A roof assessment should document these details and check the condition of the existing assembly before selecting a repair or restoration approach.',
     countiesAndCitiesServed: [
       'Texarkana (Miller County)',
       'Hope (Hempstead County)',
       'Magnolia (Columbia County)',
       'Camden (Ouachita County)',
       'El Dorado (Union County)',
+      'Little Rock and North Little Rock (Pulaski County)',
+      'Fayetteville and Springdale (Washington County)',
+      'Fort Smith (Sebastian County)',
       'Ashdown (Little River County)',
       'Nashville (Howard County)',
     ],
     keyIndustriesInRegion: [
-      'Poultry processing and agricultural food facilities',
-      'Paper, timber, and forest product manufacturing',
-      'Churches, public school districts, and municipal properties',
+      'Warehouses and distribution properties',
+      'Office and retail buildings',
+      'Multifamily properties and commercial portfolios',
+      'Churches, schools and institutional facilities',
     ],
     serviceCapabilities: [
-      'CRD PPP™ Preventative Maintenance Agreements',
-      'Rapid hail and wind disaster emergency response',
-      'Fluid silicone restoration of low-slope commercial roofs',
-      'TPO heat-welded commercial re-roofing',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak and detail repair planning for seams, flashing and penetrations',
+      'Restoration and coating evaluations when roof conditions allow',
+      'Repair, restoration or replacement recommendations based on the roof assessment',
+    ],
+    cityLinks: [
+      { name: 'Little Rock', href: '/service-areas/little-rock' },
+      { name: 'Fayetteville', href: '/service-areas/fayetteville' },
+      { name: 'Springdale', href: '/service-areas/springdale' },
+      { name: 'Fort Smith', href: '/service-areas/fort-smith' },
+      { name: 'El Dorado', href: '/service-areas/el-dorado' },
+      { name: 'Magnolia', href: '/service-areas/magnolia' },
+      { name: 'Jonesboro', href: '/service-areas/jonesboro' },
+      { name: 'Rogers', href: '/service-areas/rogers' },
+      { name: 'Conway', href: '/service-areas/conway' },
+      { name: 'North Little Rock', href: '/service-areas/north-little-rock' },
+      { name: 'Bentonville', href: '/service-areas/bentonville' },
+      { name: 'Pine Bluff', href: '/service-areas/pine-bluff' },
+      { name: 'Benton', href: '/service-areas/benton' },
+      { name: 'Hot Springs', href: '/service-areas/hot-springs' },
+      { name: 'Sherwood', href: '/service-areas/sherwood' },
+      { name: 'Bella Vista', href: '/service-areas/bella-vista' },
+      { name: 'Russellville', href: '/service-areas/russellville' },
+      { name: 'Jacksonville', href: '/service-areas/jacksonville' },
+      { name: 'Cabot', href: '/service-areas/cabot' },
+      { name: 'Searcy', href: '/service-areas/searcy' },
+      { name: 'West Memphis', href: '/service-areas/west-memphis' },
+      { name: 'Bryant', href: '/service-areas/bryant' },
+      { name: 'Van Buren', href: '/service-areas/van-buren' },
+      { name: 'Siloam Springs', href: '/service-areas/siloam-springs' },
+      { name: 'Maumelle', href: '/service-areas/maumelle' },
+      { name: 'Marion', href: '/service-areas/marion' },
+      { name: 'Forrest City', href: '/service-areas/forrest-city' },
+      { name: 'Malvern', href: '/service-areas/malvern' },
+      { name: 'Arkadelphia', href: '/service-areas/arkadelphia' },
+      { name: 'Camden', href: '/service-areas/camden' },
+      { name: 'Centerton', href: '/service-areas/centerton' },
+      { name: 'Hot Springs Village', href: '/service-areas/hot-springs-village' },
+      { name: 'Harrison', href: '/service-areas/harrison' },
+      { name: 'Mountain Home', href: '/service-areas/mountain-home' },
+      { name: 'Batesville', href: '/service-areas/batesville' }
     ],
   },
 
   '/service-areas/louisiana': {
-    title: 'Commercial Roofing Across Louisiana | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing contractors serving Louisiana. Featured markets include Shreveport, Bossier City, and Minden. Flat roof repairs, restoration coatings, and inspections.',
+    title: 'Commercial Roofing in Northwest Louisiana | CRD',
+    metaDescription: "Commercial roofing in Northwest Louisiana. Inspections, repairs, restoration and replacement planning. Confirm availability by roof type and scope.",
     canonicalPath: '/service-areas/louisiana',
-    regionName: 'Louisiana',
-    heroHeadline: 'Commercial Roofing Across Louisiana.',
-    heroSubtitle: 'Commercial roof engineering, leak mitigation, and capital asset management for commercial properties statewide, with featured markets in Northwest Louisiana.',
-    weatherAndStormFactors: 'Subtropical humidity and frequent high-intensity precipitation patterns place severe hydrostatic pressure on commercial roof penetrations, curb flashings, and internal building drains.',
+    regionName: 'Northwest Louisiana Territory',
+    heroHeadline: 'Commercial Roofing Across Northwest Louisiana.',
+    heroSubtitle: 'We help commercial property owners and managers assess roof condition and compare repair, restoration, coating and replacement options. Each Northwest Louisiana project is reviewed individually, with availability confirmed by location, roof type and scope.',
+    weatherAndStormFactors: 'Northwest Louisiana\'s humid conditions, heavy rainfall and seasonal storms make drainage, flashing, penetrations and moisture management important parts of a commercial roof evaluation. The existing roof assembly must be inspected before a restoration or coating system is considered.',
     countiesAndCitiesServed: [
       'Shreveport (Caddo Parish)',
       'Bossier City (Bossier Parish)',
       'Minden (Webster Parish)',
+      'Monroe and West Monroe (Ouachita Parish)',
+      'Ruston (Lincoln Parish)',
       'Mansfield (DeSoto Parish)',
       'Springhill (Webster Parish)',
     ],
     keyIndustriesInRegion: [
-      'Casino, hospitality, and entertainment complexes',
-      'Oil, gas, and energy industrial parks',
-      'Healthcare institutions and commercial retail shopping malls',
+      'Warehouses and distribution properties',
+      'Office buildings and commercial real estate',
+      'Retail and hospitality properties',
+      'Multifamily, church and school facilities',
     ],
     serviceCapabilities: [
-      'Commercial flat roof leak triage and emergency dry-in',
-      'Energy-efficient reflective TPO and silicone coating systems',
-      'Multi-building portfolio roof audits for property management firms',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for flashing, seams, penetrations and drainage details',
+      'Restoration and coating evaluations for suitable existing roof assemblies',
+      'Repair, restoration or replacement recommendations based on documented condition',
+    ],
+    cityLinks: [
+      { name: 'Shreveport', href: '/service-areas/shreveport' },
+      { name: 'Bossier City', href: '/service-areas/bossier-city' },
+      { name: 'Monroe', href: '/service-areas/monroe' },
+      { name: 'West Monroe', href: '/service-areas/west-monroe' },
+      { name: 'Ruston', href: '/service-areas/ruston' },
+      { name: 'Alexandria', href: '/service-areas/alexandria' },
+      { name: 'Natchitoches', href: '/service-areas/natchitoches' },
+      { name: 'Pineville', href: '/service-areas/pineville-la' },
+      { name: 'Minden', href: '/service-areas/minden' }
     ],
   },
 
   '/service-areas/oklahoma': {
-    title: 'Commercial Roofing Across Oklahoma | Commercial Roof Doctors',
-    metaDescription: 'Commercial roofing in Oklahoma. Featured markets include Idabel, Broken Bow, and communities across the state. Low-slope flat roofs, metal roof restoration, and storm repairs.',
+    title: 'Commercial Roofing Across Oklahoma | CRD',
+    metaDescription: "Commercial roofing across Oklahoma. Inspections, repairs, restoration and replacement planning. Project availability confirmed by scope.",
     canonicalPath: '/service-areas/oklahoma',
-    regionName: 'Oklahoma',
+    regionName: 'Oklahoma Regional Service Markets',
     heroHeadline: 'Commercial Roofing Across Oklahoma.',
-    heroSubtitle: 'Commercial roof inspections, emergency storm triage, and long-term asset management for facilities statewide, with featured markets in Southeast Oklahoma.',
-    weatherAndStormFactors: 'Located in the transition corridor of severe Great Plains wind and hail weather, commercial roofs in Southeast Oklahoma endure severe uplift pressures, hail impacts, and heavy seasonal precipitation.',
+    heroSubtitle: 'We help commercial property owners and managers document roof condition and compare repair, restoration, coating and replacement options. Project availability is confirmed individually based on location, roof type and scope.',
+    weatherAndStormFactors: 'Oklahoma commercial roofs can be exposed to strong winds, hail, heavy rainfall and seasonal temperature changes. Roof evaluations should document roof edges, fasteners, seams, flashing, penetrations and drainage before recommending repairs or restoration.',
     countiesAndCitiesServed: [
       'Idabel (McCurtain County)',
       'Broken Bow (McCurtain County)',
+      'Tulsa and Broken Arrow metro markets',
+      'Oklahoma City and surrounding metro markets',
       'Hugo (Choctaw County)',
       'Valliant (McCurtain County)',
     ],
     keyIndustriesInRegion: [
-      'Hospitality resorts, cabin management, and tourism facilities',
-      'Forestry, timber mills, and wood manufacturing',
-      'Municipal, educational, and commercial retail properties',
+      'Warehouses and distribution properties',
+      'Office and retail buildings',
+      'Multifamily and commercial real estate portfolios',
+      'Churches, schools and institutional facilities',
     ],
     serviceCapabilities: [
-      'Forensic storm damage assessment and insurance coordination',
-      'Architectural standing seam metal repairs and coatings',
-      'TPO single-ply installations with extended manufacturer warranties',
+      'Commercial roof inspections and documented condition assessments',
+      'Leak and detail repair planning for seams, flashing, fasteners and penetrations',
+      'Restoration and coating evaluations when the existing roof is suitable',
+      'Repair, restoration or replacement recommendations based on documented condition',
+    ],
+    cityLinks: [
+      { name: 'Tulsa', href: '/service-areas/tulsa' },
+      { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+      { name: 'Broken Arrow', href: '/service-areas/broken-arrow' },
+      { name: 'Muskogee', href: '/service-areas/muskogee' },
+      { name: 'Owasso', href: '/service-areas/owasso' },
+      { name: 'Bartlesville', href: '/service-areas/bartlesville' },
+      { name: 'Lawton', href: '/service-areas/lawton' },
+      { name: 'Edmond', href: '/service-areas/edmond' },
+      { name: 'Norman', href: '/service-areas/norman' },
+      { name: 'Moore', href: '/service-areas/moore' },
+      { name: 'Midwest City', href: '/service-areas/midwest-city' },
+      { name: 'Shawnee', href: '/service-areas/shawnee' },
+      { name: 'Yukon', href: '/service-areas/yukon' },
+      { name: 'Ardmore', href: '/service-areas/ardmore' },
+      { name: 'Duncan', href: '/service-areas/duncan' }
+    ],
+  },
+};
+
+export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
+  '/service-areas/dallas': {
+    title: 'Commercial Roofing in Dallas, TX | CRD',
+    metaDescription: "Commercial roofing in Dallas, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/dallas',
+    regionName: 'Dallas, Texas',
+    heroHeadline: 'Commercial Roofing Services in Dallas, Texas.',
+    heroSubtitle: 'Dallas commercial property owners and managers can request a roof evaluation to document existing conditions, investigate leaks and compare repair, restoration and replacement options. Coating systems are considered only when the roof assembly is suitable.',
+    weatherAndStormFactors: 'Dallas commercial roofs face intense summer heat, ultraviolet exposure, hail and strong storm winds. These conditions can accelerate coating wear, loosen metal fasteners and expose weak seams, flashings and drainage details.',
+    countiesAndCitiesServed: ['Dallas, Dallas County', 'North Dallas and LBJ corridor', 'Downtown and central Dallas', 'Nearby Collin and Tarrant County commercial markets'],
+    keyIndustriesInRegion: ['Distribution and logistics facilities', 'Office buildings and commercial campuses', 'Retail centers and shopping properties', 'Multifamily and mixed-use developments'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
+  },
+  '/service-areas/fort-worth': {
+    title: 'Commercial Roofing in Fort Worth, TX | CRD',
+    metaDescription: "Commercial roofing in Fort Worth, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/fort-worth',
+    regionName: 'Fort Worth, Texas',
+    heroHeadline: 'Commercial Roofing Services in Fort Worth, Texas.',
+    heroSubtitle: 'For Fort Worth warehouses, logistics properties and commercial buildings, a roof evaluation should establish the condition of the existing system before repairs, restoration or replacement are recommended. Project availability is confirmed individually.',
+    weatherAndStormFactors: 'Fort Worth facilities experience high summer roof temperatures, hail, wind-driven rain and seasonal temperature swings. Roof inspections should pay particular attention to metal panel movement, fasteners, perimeter details and drainage.',
+    countiesAndCitiesServed: ['Fort Worth, Tarrant County', 'Alliance and north Fort Worth logistics area', 'South Fort Worth commercial corridors', 'Nearby Parker and Johnson County markets'],
+    keyIndustriesInRegion: ['Industrial and logistics facilities', 'Distribution centers and warehouses', 'Commercial offices and business parks', 'Retail and multifamily properties'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
+  },
+  '/service-areas/dallas-fort-worth': {
+    title: 'Commercial Roofing in Dallas-Fort Worth | CRD',
+    metaDescription: "Commercial roofing across Dallas-Fort Worth. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/dallas-fort-worth',
+    regionName: 'Dallas-Fort Worth Metroplex',
+    heroHeadline: 'Commercial Roofing Across Dallas-Fort Worth.',
+    heroSubtitle: 'A regional resource for commercial property owners and managers assessing roof condition, leak concerns, repair options, restoration suitability and replacement planning. Project availability is confirmed by location, roof type and scope.',
+    weatherAndStormFactors: 'Dallas-Fort Worth commercial roofs face prolonged summer heat, hail, high winds and intense rainfall. Evaluations should document drainage, roof edges, seams, flashing, penetrations and rooftop equipment details before a repair or restoration plan is selected.',
+    countiesAndCitiesServed: ['Dallas County', 'Tarrant County', 'Collin County', 'Denton County', 'Rockwall County', 'Ellis and Johnson County commercial corridors'],
+    keyIndustriesInRegion: ['Warehousing, distribution and logistics', 'Office campuses and commercial real estate', 'Retail centers and hospitality properties', 'Multifamily portfolios and industrial facilities'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
+  },
+  '/service-areas/longview': {
+    title: 'Commercial Roofing in Longview, TX | CRD',
+    metaDescription: "Commercial roofing in Longview, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/longview',
+    regionName: 'Longview, Texas',
+    heroHeadline: 'Commercial Roofing Services in Longview, Texas.',
+    heroSubtitle: 'Longview property owners and facility managers can request a documented assessment of roof condition, leak concerns and repair priorities. Restoration or coating options are considered only when the existing assembly is suitable.',
+    weatherAndStormFactors: 'Longview roofs are exposed to humid conditions, heavy rainfall, summer heat and severe thunderstorms. Moisture management, corrosion control, drainage and sound seam details are important to long-term roof performance.',
+    countiesAndCitiesServed: ['Longview, Gregg County', 'Gregg County industrial and commercial corridors', 'Nearby Harrison and Upshur County properties'],
+    keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Healthcare and medical properties', 'Retail centers and office buildings', 'Warehouses and distribution facilities'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
+  },
+  '/service-areas/tyler': {
+    title: 'Commercial Roofing in Tyler, TX | CRD',
+    metaDescription: "Commercial roofing in Tyler, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/tyler',
+    regionName: 'Tyler, Texas',
+    heroHeadline: 'Commercial Roofing Services in Tyler, Texas.',
+    heroSubtitle: 'Tyler commercial property owners and facility managers can use a roof evaluation to understand current conditions, prioritize repairs and compare restoration with replacement when appropriate.',
+    weatherAndStormFactors: 'Tyler commercial roofs face humid summers, heavy rain, hail and wind-driven storms. These conditions can expose weaknesses around drains, penetrations, metal panel laps and aging roof coatings.',
+    countiesAndCitiesServed: ['Tyler, Smith County', 'Smith County commercial corridors', 'Nearby Gregg, Henderson and Cherokee County markets'],
+    keyIndustriesInRegion: ['Healthcare and medical campuses', 'Retail and shopping centers', 'Office and professional properties', 'Industrial and distribution facilities'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Longview', href: '/service-areas/longview' }, { name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
+  },
+  '/service-areas/paris': {
+    title: 'Commercial Roofing in Paris, TX | CRD',
+    metaDescription: "Commercial roofing in Paris, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/paris',
+    regionName: 'Paris, Texas',
+    heroHeadline: 'Commercial Roofing Services in Paris, Texas.',
+    heroSubtitle: 'Commercial property owners in Paris can request a roof condition assessment covering seams, fasteners, flashing, drainage and penetrations. Recommendations are based on inspection findings, not a coating-first assumption.',
+    weatherAndStormFactors: 'Northeast Texas weather brings humid heat, heavy rain, hail and seasonal wind events. Metal roof seams, exposed fasteners, gutters and roof penetrations deserve close attention during inspections.',
+    countiesAndCitiesServed: ['Paris, Lamar County', 'Lamar County commercial properties', 'Nearby Red River and Delta County markets'],
+    keyIndustriesInRegion: ['Manufacturing and fabrication', 'Healthcare and institutional properties', 'Retail and commercial centers', 'Agricultural supply and warehouse buildings'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Dallas-Fort Worth Metro', href: '/service-areas/dallas-fort-worth' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
+  },
+  '/service-areas/tulsa': {
+    title: 'Commercial Roofing in Tulsa, OK | CRD',
+    metaDescription: "Commercial roofing in Tulsa, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/tulsa',
+    regionName: 'Tulsa, Oklahoma',
+    heroHeadline: 'Commercial Roofing Services in Tulsa, Oklahoma.',
+    heroSubtitle: 'Tulsa commercial property owners and facility managers can request a roof assessment that documents existing conditions, identifies repair priorities and evaluates whether restoration or replacement is appropriate.',
+    weatherAndStormFactors: 'Tulsa roofs experience severe thunderstorms, hail, high winds, summer heat and strong seasonal temperature changes. Metal panel attachment, roof edges, penetrations and drainage details are important inspection priorities.',
+    countiesAndCitiesServed: ['Tulsa, Tulsa County', 'Broken Arrow and surrounding Tulsa metro commercial corridors', 'Nearby Rogers and Wagoner County markets'],
+    keyIndustriesInRegion: ['Energy and industrial facilities', 'Aerospace and manufacturing properties', 'Warehousing and distribution centers', 'Retail, office and multifamily properties'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Oklahoma City', href: '/service-areas/oklahoma-city' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
+  },
+  '/service-areas/oklahoma-city': {
+    title: 'Commercial Roofing in Oklahoma City, OK | CRD',
+    metaDescription: "Commercial roofing in Oklahoma City, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/oklahoma-city',
+    regionName: 'Oklahoma City, Oklahoma',
+    heroHeadline: 'Commercial Roofing Services in Oklahoma City.',
+    heroSubtitle: 'Oklahoma City property owners and facility managers can request a documented assessment of roof condition, leaks, drainage and repair priorities. Any coating or restoration recommendation depends on roof suitability.',
+    weatherAndStormFactors: 'Oklahoma City commercial roofs face hail, severe thunderstorms, high winds and large seasonal temperature swings. Inspections should focus on roof edges, metal fasteners, seams, flashings and drainage performance.',
+    countiesAndCitiesServed: ['Oklahoma City, Oklahoma County', 'Edmond and central Oklahoma commercial corridors', 'Nearby Cleveland and Canadian County markets'],
+    keyIndustriesInRegion: ['Energy and industrial properties', 'Distribution and logistics facilities', 'Healthcare and institutional buildings', 'Retail centers and office campuses'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
+  },
+  '/service-areas/little-rock': {
+    title: 'Commercial Roofing in Little Rock, AR | CRD',
+    metaDescription: "Commercial roofing in Little Rock, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/little-rock',
+    regionName: 'Little Rock, Arkansas',
+    heroHeadline: 'Commercial Roofing Services in Little Rock, Arkansas.',
+    heroSubtitle: 'Little Rock property owners and facility managers can request a documented roof assessment to identify water entry, drainage concerns and repair priorities. Restoration and coating options depend on the condition and compatibility of the existing roof.',
+    weatherAndStormFactors: 'Central Arkansas roofs are exposed to heavy rainfall, humidity, summer heat, hail and severe thunderstorms. Drainage, roof penetrations, membrane seams and metal corrosion are important condition factors.',
+    countiesAndCitiesServed: ['Little Rock, Pulaski County', 'North Little Rock and surrounding Pulaski County', 'Nearby Saline and Faulkner County commercial corridors'],
+    keyIndustriesInRegion: ['Healthcare and medical campuses', 'State, municipal and institutional buildings', 'Distribution and logistics facilities', 'Retail centers, offices and multifamily properties'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
+  },
+  '/service-areas/fayetteville': {
+    title: "Commercial Roofing in Fayetteville, AR | CRD",
+    metaDescription: "Commercial roofing in Fayetteville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/fayetteville',
+    regionName: 'Fayetteville, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Fayetteville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Fayetteville should account for northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of a restoration decision.',
+    countiesAndCitiesServed: ['Fayetteville, Washington County', 'Washington County commercial corridors', 'Nearby Benton County and regional Northwest Arkansas markets'],
+    keyIndustriesInRegion: ['Higher education and institutional facilities', 'Healthcare and medical properties', 'Retail and hospitality developments', 'Distribution, food processing and manufacturing'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
+  },
+  '/service-areas/springdale': {
+    title: "Commercial Roofing in Springdale, AR | CRD",
+    metaDescription: "Commercial roofing in Springdale, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/springdale',
+    regionName: 'Springdale, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Springdale, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Springdale should account for springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details need regular attention.',
+    countiesAndCitiesServed: ['Springdale, Washington and Benton Counties', 'Northwest Arkansas industrial and logistics corridors', 'Nearby Fayetteville, Rogers and Bentonville markets'],
+    keyIndustriesInRegion: ['Food processing and manufacturing', 'Warehousing and distribution', 'Retail and commercial developments', 'Healthcare and institutional facilities'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Fort Smith', href: '/service-areas/fort-smith' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
+  },
+  '/service-areas/fort-smith': {
+    title: 'Commercial Roofing in Fort Smith, AR | CRD',
+    metaDescription: "Commercial roofing in Fort Smith, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/fort-smith',
+    regionName: 'Fort Smith, Arkansas',
+    heroHeadline: 'Commercial Roofing Services in Fort Smith, Arkansas.',
+    heroSubtitle: 'Fort Smith commercial property owners can request an assessment of roof condition, leak concerns and repair needs. Restoration or coating systems are considered only after the existing roof assembly has been evaluated.',
+    weatherAndStormFactors: 'Fort Smith roofs experience humid summers, heavy rainfall, hail, high winds and seasonal temperature swings. Metal fasteners, roof edges, seams and drainage details can be vulnerable during severe weather.',
+    countiesAndCitiesServed: ['Fort Smith, Sebastian County', 'Nearby Van Buren and Crawford County', 'Western Arkansas and eastern Oklahoma commercial corridors'],
+    keyIndustriesInRegion: ['Manufacturing and industrial facilities', 'Aerospace and component suppliers', 'Food processing and distribution', 'Healthcare, retail and institutional properties'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Fayetteville', href: '/service-areas/fayetteville' }, { name: 'Springdale', href: '/service-areas/springdale' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
+  },
+  '/service-areas/el-dorado': {
+    title: "Commercial Roofing in El Dorado, AR | CRD",
+    metaDescription: "Commercial roofing in El Dorado, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/el-dorado',
+    regionName: 'El Dorado, Arkansas',
+    heroHeadline: "Commercial Roofing Services in El Dorado, Arkansas.",
+    heroSubtitle: "Commercial roof planning in El Dorado should account for south Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'South Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are important restoration considerations.',
+    countiesAndCitiesServed: ['El Dorado, Union County', 'Union County industrial and commercial corridors', 'Nearby Magnolia and Columbia County markets'],
+    keyIndustriesInRegion: ['Energy and chemical processing facilities', 'Timber and forest products', 'Healthcare and institutional properties', 'Retail and commercial buildings'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Magnolia', href: '/service-areas/magnolia' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
+  },
+  '/service-areas/magnolia': {
+    title: "Commercial Roofing in Magnolia, AR | CRD",
+    metaDescription: "Commercial roofing in Magnolia, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/magnolia',
+    regionName: 'Magnolia, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Magnolia, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Magnolia should account for magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to inspect before restoration.',
+    countiesAndCitiesServed: ['Magnolia, Columbia County', 'Columbia County industrial and commercial properties', 'Nearby El Dorado and South Arkansas markets'],
+    keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'El Dorado', href: '/service-areas/el-dorado' }, { name: 'Little Rock', href: '/service-areas/little-rock' }, { name: 'Arkansas', href: '/service-areas/arkansas' }],
+  },
+  '/service-areas/jonesboro': {
+    title: "Commercial Roofing in Jonesboro, AR | CRD",
+    metaDescription: "Commercial roofing in Jonesboro, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/jonesboro',
+    regionName: 'Jonesboro, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Jonesboro, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Jonesboro should account for northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment, metal fasteners and flashing transitions.',
+    countiesAndCitiesServed: [
+        'Jonesboro, Craighead County',
+        'Craighead County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Regional distribution and logistics',
+        'Manufacturing and food processing',
+        'Retail and commercial properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Searcy',
+            href: '/service-areas/searcy'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/rogers': {
+    title: "Commercial Roofing in Rogers, AR | CRD",
+    metaDescription: "Commercial roofing in Rogers, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/rogers',
+    regionName: 'Rogers, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Rogers, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Rogers should account for rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and the condition of existing coating systems.',
+    countiesAndCitiesServed: [
+        'Rogers, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business campuses',
+        'Retail, hospitality and mixed use developments',
+        'Distribution and light industrial facilities',
+        'Healthcare and professional properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/conway': {
+    title: "Commercial Roofing in Conway, AR | CRD",
+    metaDescription: "Commercial roofing in Conway, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/conway',
+    regionName: 'Conway, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Conway, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Conway should account for conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations around rooftop equipment.',
+    countiesAndCitiesServed: [
+        'Conway, Faulkner County',
+        'Faulkner County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Healthcare and medical properties',
+        'Distribution and warehouse facilities',
+        'Retail and office properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/north-little-rock': {
+    title: "Commercial Roofing in North Little Rock, AR | CRD",
+    metaDescription: "Commercial roofing in North Little Rock, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/north-little-rock',
+    regionName: 'North Little Rock, Arkansas',
+    heroHeadline: "Commercial Roofing Services in North Little Rock, Arkansas.",
+    heroSubtitle: "Commercial roof planning in North Little Rock should account for north Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'North Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams, drains, penetrations and perimeter details.',
+    countiesAndCitiesServed: [
+        'North Little Rock, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing facilities',
+        'Warehousing and transportation properties',
+        'Retail and office centers',
+        'Public and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Maumelle',
+            href: '/service-areas/maumelle'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/bentonville': {
+    title: "Commercial Roofing in Bentonville, AR | CRD",
+    metaDescription: "Commercial roofing in Bentonville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/bentonville',
+    regionName: 'Bentonville, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Bentonville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Bentonville should account for bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition of existing membrane or metal systems.',
+    countiesAndCitiesServed: [
+        'Bentonville, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate headquarters and office campuses',
+        'Retail and hospitality properties',
+        'Distribution and logistics facilities',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/pine-bluff': {
+    title: "Commercial Roofing in Pine Bluff, AR | CRD",
+    metaDescription: "Commercial roofing in Pine Bluff, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/pine-bluff',
+    regionName: 'Pine Bluff, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Pine Bluff, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Pine Bluff should account for pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies deserve close attention.',
+    countiesAndCitiesServed: [
+        'Pine Bluff, Jefferson County',
+        'Jefferson County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing facilities',
+        'Warehousing and distribution properties',
+        'Healthcare and institutional campuses',
+        'Retail and commercial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/benton': {
+    title: "Commercial Roofing in Benton, AR | CRD",
+    metaDescription: "Commercial roofing in Benton, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/benton',
+    regionName: 'Benton, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Benton, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Benton should account for benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around rooftop equipment.',
+    countiesAndCitiesServed: [
+        'Benton, Saline County',
+        'Saline County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing properties',
+        'Retail and commercial centers',
+        'Healthcare and professional buildings',
+        'Warehouses and distribution facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Bryant',
+            href: '/service-areas/bryant'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/hot-springs': {
+    title: "Commercial Roofing in Hot Springs, AR | CRD",
+    metaDescription: "Commercial roofing in Hot Springs, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/hot-springs',
+    regionName: 'Hot Springs, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Hot Springs, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Hot Springs should account for hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks, drainage, flashing and coating condition.',
+    countiesAndCitiesServed: [
+        'Hot Springs, Garland County',
+        'Garland County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Hotels and hospitality properties',
+        'Healthcare and medical facilities',
+        'Retail and entertainment properties',
+        'Multifamily and office buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/sherwood': {
+    title: "Commercial Roofing in Sherwood, AR | CRD",
+    metaDescription: "Commercial roofing in Sherwood, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/sherwood',
+    regionName: 'Sherwood, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Sherwood, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Sherwood should account for sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating systems.',
+    countiesAndCitiesServed: [
+        'Sherwood, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail centers and shopping properties',
+        'Healthcare and medical offices',
+        'Light industrial and warehouse buildings',
+        'Professional office properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Jacksonville',
+            href: '/service-areas/jacksonville'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/bella-vista': {
+    title: "Commercial Roofing in Bella Vista, AR | CRD",
+    metaDescription: "Commercial roofing in Bella Vista, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/bella-vista',
+    regionName: 'Bella Vista, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Bella Vista, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Bella Vista should account for bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of managed property portfolios.',
+    countiesAndCitiesServed: [
+        'Bella Vista, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and service commercial properties',
+        'Professional offices',
+        'Healthcare and community facilities',
+        'Multifamily and association managed properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Siloam Springs',
+            href: '/service-areas/siloam-springs'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/russellville': {
+    title: "Commercial Roofing in Russellville, AR | CRD",
+    metaDescription: "Commercial roofing in Russellville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/russellville',
+    regionName: 'Russellville, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Russellville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Russellville should account for russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented before restoration is specified.',
+    countiesAndCitiesServed: [
+        'Russellville, Pope County',
+        'Pope County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Educational and institutional campuses',
+        'Warehousing and distribution facilities',
+        'Retail and healthcare properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/jacksonville': {
+    title: "Commercial Roofing in Jacksonville, AR | CRD",
+    metaDescription: "Commercial roofing in Jacksonville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/jacksonville',
+    regionName: 'Jacksonville, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Jacksonville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Jacksonville should account for jacksonville commercial roofs face central Arkansas heat, hail, high winds and heavy rain. Large facilities require careful inspection of roof edges, penetrations, drainage and rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Jacksonville commercial roofs face central Arkansas heat, hail, high winds and heavy rain. Large facilities require careful inspection of roof edges, penetrations, drainage and rooftop equipment supports.',
+    countiesAndCitiesServed: [
+        'Jacksonville, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Aerospace and defense related facilities',
+        'Warehousing and logistics properties',
+        'Retail and service commercial buildings',
+        'Healthcare and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Sherwood',
+            href: '/service-areas/sherwood'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/cabot': {
+    title: "Commercial Roofing in Cabot, AR | CRD",
+    metaDescription: "Commercial roofing in Cabot, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/cabot',
+    regionName: 'Cabot, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Cabot, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Cabot should account for cabot roofs experience humid summers, hail, wind and heavy rainfall. Commercial evaluations should review drainage, roof penetrations, exposed fasteners and coating compatibility before.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Cabot roofs experience humid summers, hail, wind and heavy rainfall. Commercial evaluations should review drainage, roof penetrations, exposed fasteners and coating compatibility before restoration work.',
+    countiesAndCitiesServed: [
+        'Cabot, Lonoke County',
+        'Lonoke County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and shopping centers',
+        'Healthcare and medical offices',
+        'Schools and educational facilities',
+        'Warehouses and service commercial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        { name: 'Arkansas', href: '/service-areas/arkansas' }
+    ]
+},
+  '/service-areas/searcy': {
+    title: "Commercial Roofing in Searcy, AR | CRD",
+    metaDescription: "Commercial roofing in Searcy, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/searcy',
+    regionName: 'Searcy, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Searcy, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Searcy should account for searcy commercial roofs face hot summers, heavy rainfall, hail and seasonal severe weather. Inspection priorities include moisture conditions, roof seams, flashing transitions and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Searcy commercial roofs face hot summers, heavy rainfall, hail and seasonal severe weather. Inspection priorities include moisture conditions, roof seams, flashing transitions and drainage performance.',
+    countiesAndCitiesServed: [
+        'Searcy, White County',
+        'White County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Education and institutional properties',
+        'Manufacturing and industrial facilities',
+        'Retail and office buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/west-memphis': {
+    title: "Commercial Roofing in West Memphis, AR | CRD",
+    metaDescription: "Commercial roofing in West Memphis, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/west-memphis',
+    regionName: 'West Memphis, Arkansas',
+    heroHeadline: "Commercial Roofing Services in West Memphis, Arkansas.",
+    heroSubtitle: "Commercial roof planning in West Memphis should account for west Memphis roofs experience humid heat, heavy rain, wind and severe thunderstorms. Large logistics roofs should be evaluated for drainage, wind exposed edges, metal fasteners, seams.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'West Memphis roofs experience humid heat, heavy rain, wind and severe thunderstorms. Large logistics roofs should be evaluated for drainage, wind exposed edges, metal fasteners, seams and existing coating condition.',
+    countiesAndCitiesServed: [
+        'West Memphis, Crittenden County',
+        'Crittenden County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Transportation and logistics facilities',
+        'Warehouses and distribution centers',
+        'Industrial and manufacturing properties',
+        'Retail and commercial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Marion',
+            href: '/service-areas/marion'
+        },
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/bryant': {
+    title: "Commercial Roofing in Bryant, AR | CRD",
+    metaDescription: "Commercial roofing in Bryant, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/bryant',
+    regionName: 'Bryant, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Bryant, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Bryant should account for bryant commercial roofs face heat, hail, heavy rainfall and strong storms. Property managers should document roof condition, ponding, penetrations and repair history before choosing a.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Bryant commercial roofs face heat, hail, heavy rainfall and strong storms. Property managers should document roof condition, ponding, penetrations and repair history before choosing a coating or replacement scope.',
+    countiesAndCitiesServed: [
+        'Bryant, Saline County',
+        'Saline County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Healthcare and medical properties',
+        'Professional offices',
+        'Light industrial and warehouse buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Benton',
+            href: '/service-areas/benton'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/van-buren': {
+    title: "Commercial Roofing in Van Buren, AR | CRD",
+    metaDescription: "Commercial roofing in Van Buren, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/van-buren',
+    regionName: 'Van Buren, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Van Buren, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Van Buren should account for van Buren roofs experience hot summers, hail, high winds and heavy rainfall. Metal roof corrosion, fasteners, seams and perimeter details should be inspected alongside drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Van Buren roofs experience hot summers, hail, high winds and heavy rainfall. Metal roof corrosion, fasteners, seams and perimeter details should be inspected alongside drainage and underlying moisture.',
+    countiesAndCitiesServed: [
+        'Van Buren, Crawford County',
+        'Crawford County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Transportation and distribution properties',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Fort Smith',
+            href: '/service-areas/fort-smith'
+        },
+        {
+            name: 'Russellville',
+            href: '/service-areas/russellville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/siloam-springs': {
+    title: "Commercial Roofing in Siloam Springs, AR | CRD",
+    metaDescription: "Commercial roofing in Siloam Springs, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/siloam-springs',
+    regionName: 'Siloam Springs, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Siloam Springs, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Siloam Springs should account for siloam Springs roofs face summer heat, hail, strong storms and heavy rainfall. Roof system selection should account for building use, rooftop exhaust, drainage, corrosion and product.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Siloam Springs roofs face summer heat, hail, strong storms and heavy rainfall. Roof system selection should account for building use, rooftop exhaust, drainage, corrosion and product specific chemical compatibility.',
+    countiesAndCitiesServed: [
+        'Siloam Springs, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Food production and manufacturing facilities',
+        'Industrial and warehouse properties',
+        'Retail and service commercial buildings',
+        'Healthcare and institutional properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Rogers',
+            href: '/service-areas/rogers'
+        },
+        {
+            name: 'Bentonville',
+            href: '/service-areas/bentonville'
+        },
+        {
+            name: 'Bella Vista',
+            href: '/service-areas/bella-vista'
+        },
+        {
+            name: 'Fayetteville',
+            href: '/service-areas/fayetteville'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/maumelle': {
+    title: "Commercial Roofing in Maumelle, AR | CRD",
+    metaDescription: "Commercial roofing in Maumelle, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/maumelle',
+    regionName: 'Maumelle, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Maumelle, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Maumelle should account for maumelle commercial roofs experience humid heat, hail, wind driven rain and severe storms. Large low slope roofs need documented review of drainage, seams, penetrations and the condition.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Maumelle commercial roofs experience humid heat, hail, wind driven rain and severe storms. Large low slope roofs need documented review of drainage, seams, penetrations and the condition of previous repairs or coatings.',
+    countiesAndCitiesServed: [
+        'Maumelle, Pulaski County',
+        'Pulaski County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Office and business parks',
+        'Distribution and warehouse properties',
+        'Retail and service commercial buildings',
+        'Healthcare and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'North Little Rock',
+            href: '/service-areas/north-little-rock'
+        },
+        {
+            name: 'Conway',
+            href: '/service-areas/conway'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/marion': {
+    title: "Commercial Roofing in Marion, AR | CRD",
+    metaDescription: "Commercial roofing in Marion, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/marion',
+    regionName: 'Marion, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Marion, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Marion should account for marion roofs face humid summers, heavy rain, hail and strong winds. Commercial inspections should focus on large roof drainage systems, exposed metal details, penetrations and wind.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Marion roofs face humid summers, heavy rain, hail and strong winds. Commercial inspections should focus on large roof drainage systems, exposed metal details, penetrations and wind vulnerable perimeter conditions.',
+    countiesAndCitiesServed: [
+        'Marion, Crittenden County',
+        'Crittenden County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Distribution and logistics facilities',
+        'Industrial and manufacturing buildings',
+        'Retail and commercial centers',
+        'Healthcare and professional properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Jonesboro',
+            href: '/service-areas/jonesboro'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/forrest-city': {
+    title: "Commercial Roofing in Forrest City, AR | CRD",
+    metaDescription: "Commercial roofing in Forrest City, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/forrest-city',
+    regionName: 'Forrest City, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Forrest City, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Forrest City should account for forrest City roofs experience humid heat, heavy rainfall and severe thunderstorms. Inspections should evaluate corrosion, drainage, flashing details and moisture before recommending.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Forrest City roofs experience humid heat, heavy rainfall and severe thunderstorms. Inspections should evaluate corrosion, drainage, flashing details and moisture before recommending restoration.',
+    countiesAndCitiesServed: [
+        'Forrest City, St. Francis County',
+        'St. Francis County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Agricultural processing and supply facilities',
+        'Warehousing and distribution properties',
+        'Manufacturing and industrial buildings',
+        'Retail and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'West Memphis',
+            href: '/service-areas/west-memphis'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/malvern': {
+    title: "Commercial Roofing in Malvern, AR | CRD",
+    metaDescription: "Commercial roofing in Malvern, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/malvern',
+    regionName: 'Malvern, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Malvern, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Malvern should account for malvern commercial roofs face hot summers, hail, wind and heavy rain. Restoration evaluations should include metal condition, seams, fasteners, moisture and drainage around rooftop equipment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Malvern commercial roofs face hot summers, hail, wind and heavy rain. Restoration evaluations should include metal condition, seams, fasteners, moisture and drainage around rooftop equipment.',
+    countiesAndCitiesServed: [
+        'Malvern, Hot Spring County',
+        'Hot Spring County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Warehouses and distribution facilities',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'Arkadelphia',
+            href: '/service-areas/arkadelphia'
+        },
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/arkadelphia': {
+    title: "Commercial Roofing in Arkadelphia, AR | CRD",
+    metaDescription: "Commercial roofing in Arkadelphia, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/arkadelphia',
+    regionName: 'Arkadelphia, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Arkadelphia, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Arkadelphia should account for arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof materials for restoration.',
+    countiesAndCitiesServed: [
+        'Arkadelphia, Clark County',
+        'Clark County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Malvern',
+            href: '/service-areas/malvern'
+        },
+        {
+            name: 'Hot Springs',
+            href: '/service-areas/hot-springs'
+        },
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/camden': {
+    title: "Commercial Roofing in Camden, AR | CRD",
+    metaDescription: "Commercial roofing in Camden, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/camden',
+    regionName: 'Camden, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Camden, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Camden should account for camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for metal roof restoration.',
+    countiesAndCitiesServed: [
+        'Camden, Ouachita County',
+        'Ouachita County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing facilities',
+        'Government and institutional properties',
+        'Healthcare and medical buildings',
+        'Retail and commercial properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'El Dorado',
+            href: '/service-areas/el-dorado'
+        },
+        {
+            name: 'Magnolia',
+            href: '/service-areas/magnolia'
+        },
+        {
+            name: 'Pine Bluff',
+            href: '/service-areas/pine-bluff'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/greenville': {
+    title: "Commercial Roofing in Greenville, TX | CRD",
+    metaDescription: "Commercial roofing in Greenville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/greenville',
+    regionName: 'Greenville, Texas',
+    heroHeadline: "Commercial Roofing Services in Greenville, Texas.",
+    heroSubtitle: "Commercial roof planning in Greenville should account for greenville commercial roofs face hot summers, hail, high winds and heavy rainfall. Inspections should document roof edges, drainage, metal fasteners, seams and penetrations before a.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Greenville commercial roofs face hot summers, hail, high winds and heavy rainfall. Inspections should document roof edges, drainage, metal fasteners, seams and penetrations before a coating system is selected.',
+    countiesAndCitiesServed: [
+        'Greenville, Hunt County',
+        'Hunt County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Warehousing and distribution facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/sulphur-springs': {
+    title: "Commercial Roofing in Sulphur Springs, TX | CRD",
+    metaDescription: "Commercial roofing in Sulphur Springs, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/sulphur-springs',
+    regionName: 'Sulphur Springs, Texas',
+    heroHeadline: "Commercial Roofing Services in Sulphur Springs, Texas.",
+    heroSubtitle: "Commercial roof planning in Sulphur Springs should account for sulphur Springs roofs experience humid heat, heavy rainfall and severe thunderstorms. Food production and industrial facilities need roof evaluations that consider exhaust, rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Sulphur Springs roofs experience humid heat, heavy rainfall and severe thunderstorms. Food production and industrial facilities need roof evaluations that consider exhaust, rooftop equipment, corrosion, drainage and product compatibility.',
+    countiesAndCitiesServed: [
+        'Sulphur Springs, Hopkins County',
+        'Hopkins County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Food processing and manufacturing facilities',
+        'Industrial and warehouse properties',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/mount-pleasant': {
+    title: "Commercial Roofing in Mount Pleasant, TX | CRD",
+    metaDescription: "Commercial roofing in Mount Pleasant, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/mount-pleasant',
+    regionName: 'Mount Pleasant, Texas',
+    heroHeadline: "Commercial Roofing Services in Mount Pleasant, Texas.",
+    heroSubtitle: "Commercial roof planning in Mount Pleasant should account for mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corrosion, exposed fasteners, seams and flashing transitions should be documented.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corrosion, exposed fasteners, seams and flashing transitions should be documented before restoration.',
+    countiesAndCitiesServed: [
+        'Mount Pleasant, Titus County',
+        'Titus County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Agricultural processing and supply buildings',
+        'Retail and commercial properties',
+        'Healthcare and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/marshall': {
+    title: "Commercial Roofing in Marshall, TX | CRD",
+    metaDescription: "Commercial roofing in Marshall, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/marshall',
+    regionName: 'Marshall, Texas',
+    heroHeadline: "Commercial Roofing Services in Marshall, Texas.",
+    heroSubtitle: "Commercial roof planning in Marshall should account for marshall roofs experience humid heat, heavy rainfall and seasonal severe storms. Commercial inspections should evaluate roof drainage, metal panel condition, fasteners, penetrations and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Marshall roofs experience humid heat, heavy rainfall and seasonal severe storms. Commercial inspections should evaluate roof drainage, metal panel condition, fasteners, penetrations and moisture within existing assemblies.',
+    countiesAndCitiesServed: [
+        'Marshall, Harrison County',
+        'Harrison County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical campuses',
+        'Education and institutional properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/sherman': {
+    title: "Commercial Roofing in Sherman, TX | CRD",
+    metaDescription: "Commercial roofing in Sherman, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/sherman',
+    regionName: 'Sherman, Texas',
+    heroHeadline: "Commercial Roofing Services in Sherman, Texas.",
+    heroSubtitle: "Commercial roof planning in Sherman should account for sherman commercial roofs face intense summer heat, hail and severe storms. Large industrial and institutional roofs need condition based review of seams, fasteners, drains, rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Sherman commercial roofs face intense summer heat, hail and severe storms. Large industrial and institutional roofs need condition based review of seams, fasteners, drains, rooftop equipment and existing coating adhesion.',
+    countiesAndCitiesServed: [
+        'Sherman, Grayson County',
+        'Grayson County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Advanced manufacturing and industrial campuses',
+        'Healthcare and medical facilities',
+        'Retail and office properties',
+        'Distribution and logistics buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/denison': {
+    title: "Commercial Roofing in Denison, TX | CRD",
+    metaDescription: "Commercial roofing in Denison, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/denison',
+    regionName: 'Denison, Texas',
+    heroHeadline: "Commercial Roofing Services in Denison, Texas.",
+    heroSubtitle: "Commercial roof planning in Denison should account for denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s operational needs.',
+    countiesAndCitiesServed: [
+        'Denison, Grayson County',
+        'Grayson County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical properties',
+        'Hospitality and tourism facilities',
+        'Retail and commercial centers',
+        'Industrial and warehouse buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/nacogdoches': {
+    title: "Commercial Roofing in Nacogdoches, TX | CRD",
+    metaDescription: "Commercial roofing in Nacogdoches, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/nacogdoches',
+    regionName: 'Nacogdoches, Texas',
+    heroHeadline: "Commercial Roofing Services in Nacogdoches, Texas.",
+    heroSubtitle: "Commercial roof planning in Nacogdoches should account for nacogdoches commercial roofs experience humid heat, heavy rainfall and severe thunderstorms. Timber and industrial properties should receive careful corrosion, drainage, flashing and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Nacogdoches commercial roofs experience humid heat, heavy rainfall and severe thunderstorms. Timber and industrial properties should receive careful corrosion, drainage, flashing and rooftop penetration evaluations.',
+    countiesAndCitiesServed: [
+        'Nacogdoches, Nacogdoches County',
+        'Nacogdoches County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Healthcare and medical campuses',
+        'Timber and wood product manufacturing',
+        'Retail and commercial properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/lufkin': {
+    title: "Commercial Roofing in Lufkin, TX | CRD",
+    metaDescription: "Commercial roofing in Lufkin, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/lufkin',
+    regionName: 'Lufkin, Texas',
+    heroHeadline: "Commercial Roofing Services in Lufkin, Texas.",
+    heroSubtitle: "Commercial roof planning in Lufkin should account for lufkin roofs face humid heat, heavy rainfall, hail and seasonal storms. Inspections should consider corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Lufkin roofs face humid heat, heavy rainfall, hail and seasonal storms. Inspections should consider corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior repairs.',
+    countiesAndCitiesServed: [
+        'Lufkin, Angelina County',
+        'Angelina County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Timber and wood products manufacturing',
+        'Industrial and fabrication facilities',
+        'Warehouses and distribution properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/jacksonville-tx': {
+    title: "Commercial Roofing in Jacksonville, TX | CRD",
+    metaDescription: "Commercial roofing in Jacksonville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/jacksonville-tx',
+    regionName: 'Jacksonville, Texas',
+    heroHeadline: "Commercial Roofing Services in Jacksonville, Texas.",
+    heroSubtitle: "Commercial roof planning in Jacksonville should account for jacksonville commercial roofs face humid heat, heavy rain and severe thunderstorms. Food processing and industrial facilities require attention to roof exhaust, corrosion, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Jacksonville commercial roofs face humid heat, heavy rain and severe thunderstorms. Food processing and industrial facilities require attention to roof exhaust, corrosion, drainage and compatible restoration materials.',
+    countiesAndCitiesServed: [
+        'Jacksonville, Cherokee County',
+        'Cherokee County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Food processing and agricultural facilities',
+        'Manufacturing and industrial properties',
+        'Healthcare and medical buildings',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/palestine': {
+    title: "Commercial Roofing in Palestine, TX | CRD",
+    metaDescription: "Commercial roofing in Palestine, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/palestine',
+    regionName: 'Palestine, Texas',
+    heroHeadline: "Commercial Roofing Services in Palestine, Texas.",
+    heroSubtitle: "Commercial roof planning in Palestine should account for palestine roofs experience humid summers, heavy rainfall and seasonal storms. Commercial evaluations should document roof condition, drainage, seams, penetrations and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Palestine roofs experience humid summers, heavy rainfall and seasonal storms. Commercial evaluations should document roof condition, drainage, seams, penetrations and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Palestine, Anderson County',
+        'Anderson County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Government and institutional buildings',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/henderson': {
+    title: "Commercial Roofing in Henderson, TX | CRD",
+    metaDescription: "Commercial roofing in Henderson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/henderson',
+    regionName: 'Henderson, Texas',
+    heroHeadline: "Commercial Roofing Services in Henderson, Texas.",
+    heroSubtitle: "Commercial roof planning in Henderson should account for henderson roofs face humid heat, heavy rainfall and severe thunderstorms. Metal roof corrosion, fastener condition, seam integrity and drainage are key restoration evaluation points. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Henderson roofs face humid heat, heavy rainfall and severe thunderstorms. Metal roof corrosion, fastener condition, seam integrity and drainage are key restoration evaluation points.',
+    countiesAndCitiesServed: [
+        'Henderson, Rusk County',
+        'Rusk County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and manufacturing facilities',
+        'Energy service and supply properties',
+        'Healthcare and institutional buildings',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/athens': {
+    title: "Commercial Roofing in Athens, TX | CRD",
+    metaDescription: "Commercial roofing in Athens, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/athens',
+    regionName: 'Athens, Texas',
+    heroHeadline: "Commercial Roofing Services in Athens, Texas.",
+    heroSubtitle: "Commercial roof planning in Athens should account for athens commercial roofs experience hot humid weather, hail, heavy rain and strong storms. Roof evaluations should include drainage, flashing transitions, metal fasteners and moisture.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Athens commercial roofs experience hot humid weather, hail, heavy rain and strong storms. Roof evaluations should include drainage, flashing transitions, metal fasteners and moisture conditions.',
+    countiesAndCitiesServed: [
+        'Athens, Henderson County',
+        'Henderson County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Food production and agricultural facilities',
+        'Healthcare and medical properties',
+        'Retail and commercial centers',
+        'Warehouses and light industrial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/corsicana': {
+    title: "Commercial Roofing in Corsicana, TX | CRD",
+    metaDescription: "Commercial roofing in Corsicana, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/corsicana',
+    regionName: 'Corsicana, Texas',
+    heroHeadline: "Commercial Roofing Services in Corsicana, Texas.",
+    heroSubtitle: "Commercial roof planning in Corsicana should account for corsicana roofs face summer heat, hail and strong storm systems. Large commercial roofs should be evaluated for coating condition, seams, drainage, rooftop equipment and metal corrosion. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Corsicana roofs face summer heat, hail and strong storm systems. Large commercial roofs should be evaluated for coating condition, seams, drainage, rooftop equipment and metal corrosion.',
+    countiesAndCitiesServed: [
+        'Corsicana, Navarro County',
+        'Navarro County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Food production and manufacturing facilities',
+        'Industrial and warehouse properties',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/arlington': {
+    title: "Commercial Roofing in Arlington, TX | CRD",
+    metaDescription: "Commercial roofing in Arlington, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/arlington',
+    regionName: 'Arlington, Texas',
+    heroHeadline: "Commercial Roofing Services in Arlington, Texas.",
+    heroSubtitle: "Commercial roof planning in Arlington should account for arlington roofs face intense summer heat, hail, high winds and heavy rainfall. Large venues and commercial campuses need detailed inspections of roof edges, drainage, penetrations and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Arlington roofs face intense summer heat, hail, high winds and heavy rainfall. Large venues and commercial campuses need detailed inspections of roof edges, drainage, penetrations and existing coating systems.',
+    countiesAndCitiesServed: [
+        'Arlington, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Entertainment and event venues',
+        'Education and university campuses',
+        'Distribution and industrial facilities',
+        'Retail, hospitality and multifamily properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/plano': {
+    title: "Commercial Roofing in Plano, TX | CRD",
+    metaDescription: "Commercial roofing in Plano, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/plano',
+    regionName: 'Plano, Texas',
+    heroHeadline: "Commercial Roofing Services in Plano, Texas.",
+    heroSubtitle: "Commercial roof planning in Plano should account for plano commercial roofs experience high summer temperatures, hail and severe thunderstorms. Roof evaluations should address large rooftop equipment fields, membrane seams, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Plano commercial roofs experience high summer temperatures, hail and severe thunderstorms. Roof evaluations should address large rooftop equipment fields, membrane seams, drainage and metal details.',
+    countiesAndCitiesServed: [
+        'Plano, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate headquarters and office campuses',
+        'Healthcare and medical facilities',
+        'Retail and mixed use properties',
+        'Technology and business parks'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/irving': {
+    title: "Commercial Roofing in Irving, TX | CRD",
+    metaDescription: "Commercial roofing in Irving, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/irving',
+    regionName: 'Irving, Texas',
+    heroHeadline: "Commercial Roofing Services in Irving, Texas.",
+    heroSubtitle: "Commercial roof planning in Irving should account for irving roofs face intense heat, hail, high winds and heavy rainfall. Large office and hospitality properties benefit from documented roof condition assessments and coating eligibility.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Irving roofs face intense heat, hail, high winds and heavy rainfall. Large office and hospitality properties benefit from documented roof condition assessments and coating eligibility reviews.',
+    countiesAndCitiesServed: [
+        'Irving, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate office campuses',
+        'Hospitality and convention properties',
+        'Industrial and logistics facilities',
+        'Retail and multifamily portfolios'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/garland': {
+    title: "Commercial Roofing in Garland, TX | CRD",
+    metaDescription: "Commercial roofing in Garland, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/garland',
+    regionName: 'Garland, Texas',
+    heroHeadline: "Commercial Roofing Services in Garland, Texas.",
+    heroSubtitle: "Commercial roof planning in Garland should account for garland commercial roofs face heat, hail and severe storms. Metal panel corrosion, fastener movement, roof edge details and drainage should be reviewed before restoration is recommended. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Garland commercial roofs face heat, hail and severe storms. Metal panel corrosion, fastener movement, roof edge details and drainage should be reviewed before restoration is recommended.',
+    countiesAndCitiesServed: [
+        'Garland, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/frisco': {
+    title: "Commercial Roofing in Frisco, TX | CRD",
+    metaDescription: "Commercial roofing in Frisco, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/frisco',
+    regionName: 'Frisco, Texas',
+    heroHeadline: "Commercial Roofing Services in Frisco, Texas.",
+    heroSubtitle: "Commercial roof planning in Frisco should account for frisco roofs experience high summer temperatures, hail, strong winds and heavy rain. Commercial campuses need condition based review of rooftop equipment, drainage, seams and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Frisco roofs experience high summer temperatures, hail, strong winds and heavy rain. Commercial campuses need condition based review of rooftop equipment, drainage, seams and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Frisco, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business campuses',
+        'Sports and entertainment facilities',
+        'Retail and hospitality properties',
+        'Healthcare and medical buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/mckinney': {
+    title: "Commercial Roofing in McKinney, TX | CRD",
+    metaDescription: "Commercial roofing in McKinney, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/mckinney',
+    regionName: 'McKinney, Texas',
+    heroHeadline: "Commercial Roofing Services in McKinney, Texas.",
+    heroSubtitle: "Commercial roof planning in McKinney should account for mcKinney commercial roofs face heat, hail, high winds and heavy rainfall. Inspections should evaluate membrane condition, metal fasteners, roof edges, penetrations and moisture before.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'McKinney commercial roofs face heat, hail, high winds and heavy rainfall. Inspections should evaluate membrane condition, metal fasteners, roof edges, penetrations and moisture before coating restoration.',
+    countiesAndCitiesServed: [
+        'McKinney, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical campuses',
+        'Corporate offices and business parks',
+        'Retail and mixed use developments'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/grand-prairie': {
+    title: "Commercial Roofing in Grand Prairie, TX | CRD",
+    metaDescription: "Commercial roofing in Grand Prairie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/grand-prairie',
+    regionName: 'Grand Prairie, Texas',
+    heroHeadline: "Commercial Roofing Services in Grand Prairie, Texas.",
+    heroSubtitle: "Commercial roof planning in Grand Prairie should account for grand Prairie roofs experience high summer temperatures, hail and severe storms. Large industrial roof areas require careful evaluation of drainage, seams, fasteners and roof edge conditions. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Grand Prairie roofs experience high summer temperatures, hail and severe storms. Large industrial roof areas require careful evaluation of drainage, seams, fasteners and roof edge conditions.',
+    countiesAndCitiesServed: [
+        'Grand Prairie, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Warehousing and distribution centers',
+        'Manufacturing and industrial facilities',
+        'Entertainment and event properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/denton': {
+    title: "Commercial Roofing in Denton, TX | CRD",
+    metaDescription: "Commercial roofing in Denton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/denton',
+    regionName: 'Denton, Texas',
+    heroHeadline: "Commercial Roofing Services in Denton, Texas.",
+    heroSubtitle: "Commercial roof planning in Denton should account for denton roofs face hot summers, hail, high winds and seasonal storms. Commercial roof evaluations should document drainage, membrane seams, metal corrosion and rooftop penetrations. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Denton roofs face hot summers, hail, high winds and seasonal storms. Commercial roof evaluations should document drainage, membrane seams, metal corrosion and rooftop penetrations.',
+    countiesAndCitiesServed: [
+        'Denton, Denton County',
+        'Denton County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational campuses',
+        'Healthcare and medical facilities',
+        'Manufacturing and industrial properties',
+        'Distribution and logistics buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/mesquite': {
+    title: "Commercial Roofing in Mesquite, TX | CRD",
+    metaDescription: "Commercial roofing in Mesquite, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/mesquite',
+    regionName: 'Mesquite, Texas',
+    heroHeadline: "Commercial Roofing Services in Mesquite, Texas.",
+    heroSubtitle: "Commercial roof planning in Mesquite should account for mesquite commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should review large roof drainage systems, metal seams, fasteners and existing coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Mesquite commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should review large roof drainage systems, metal seams, fasteners and existing coatings.',
+    countiesAndCitiesServed: [
+        'Mesquite, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Distribution and logistics facilities',
+        'Manufacturing and industrial properties',
+        'Retail centers and shopping properties',
+        'Healthcare and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/carrollton': {
+    title: "Commercial Roofing in Carrollton, TX | CRD",
+    metaDescription: "Commercial roofing in Carrollton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/carrollton',
+    regionName: 'Carrollton, Texas',
+    heroHeadline: "Commercial Roofing Services in Carrollton, Texas.",
+    heroSubtitle: "Commercial roof planning in Carrollton should account for carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coating systems. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coating systems.',
+    countiesAndCitiesServed: [
+        'Carrollton, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and flex space properties',
+        'Corporate offices and business parks',
+        'Retail and commercial centers',
+        'Healthcare and medical buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/richardson': {
+    title: "Commercial Roofing in Richardson, TX | CRD",
+    metaDescription: "Commercial roofing in Richardson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/richardson',
+    regionName: 'Richardson, Texas',
+    heroHeadline: "Commercial Roofing Services in Richardson, Texas.",
+    heroSubtitle: "Commercial roof planning in Richardson should account for richardson roofs face high summer temperatures, hail and heavy storms. Commercial roof evaluations should document membrane condition, roof edges, penetrations, drainage and restoration.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Richardson roofs face high summer temperatures, hail and heavy storms. Commercial roof evaluations should document membrane condition, roof edges, penetrations, drainage and restoration suitability.',
+    countiesAndCitiesServed: [
+        'Richardson, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Technology and corporate campuses',
+        'Healthcare and medical properties',
+        'Education and research facilities',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/lewisville': {
+    title: "Commercial Roofing in Lewisville, TX | CRD",
+    metaDescription: "Commercial roofing in Lewisville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/lewisville',
+    regionName: 'Lewisville, Texas',
+    heroHeadline: "Commercial Roofing Services in Lewisville, Texas.",
+    heroSubtitle: "Commercial roof planning in Lewisville should account for lewisville roofs experience summer heat, hail, high winds and heavy rainfall. Large commercial properties need inspections of drainage, rooftop equipment, seams and metal panel attachment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Lewisville roofs experience summer heat, hail, high winds and heavy rainfall. Large commercial properties need inspections of drainage, rooftop equipment, seams and metal panel attachment.',
+    countiesAndCitiesServed: [
+        'Lewisville, Denton County',
+        'Denton County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Warehousing and distribution facilities',
+        'Healthcare and medical properties',
+        'Retail and hospitality centers',
+        'Corporate offices and business parks'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/allen': {
+    title: "Commercial Roofing in Allen, TX | CRD",
+    metaDescription: "Commercial roofing in Allen, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/allen',
+    regionName: 'Allen, Texas',
+    heroHeadline: "Commercial Roofing Services in Allen, Texas.",
+    heroSubtitle: "Commercial roof planning in Allen should account for allen commercial roofs face high summer temperatures, hail and severe thunderstorms. Inspections should evaluate roof condition, drainage, penetrations, seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Allen commercial roofs face high summer temperatures, hail and severe thunderstorms. Inspections should evaluate roof condition, drainage, penetrations, seams and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Allen, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business parks',
+        'Healthcare and medical facilities',
+        'Retail and mixed use developments',
+        'Sports and recreation properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/rowlett': {
+    title: "Commercial Roofing in Rowlett, TX | CRD",
+    metaDescription: "Commercial roofing in Rowlett, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/rowlett',
+    regionName: 'Rowlett, Texas',
+    heroHeadline: "Commercial Roofing Services in Rowlett, Texas.",
+    heroSubtitle: "Commercial roof planning in Rowlett should account for rowlett roofs face heat, hail, high winds and heavy rainfall. Roof evaluations should consider drainage, wind exposed edges, metal details and the condition of existing membranes and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Rowlett roofs face heat, hail, high winds and heavy rainfall. Roof evaluations should consider drainage, wind exposed edges, metal details and the condition of existing membranes and coatings.',
+    countiesAndCitiesServed: [
+        'Rowlett, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Healthcare and medical facilities',
+        'Office and professional properties',
+        'Multifamily and mixed use developments'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/mansfield': {
+    title: "Commercial Roofing in Mansfield, TX | CRD",
+    metaDescription: "Commercial roofing in Mansfield, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/mansfield',
+    regionName: 'Mansfield, Texas',
+    heroHeadline: "Commercial Roofing Services in Mansfield, Texas.",
+    heroSubtitle: "Commercial roof planning in Mansfield should account for mansfield commercial roofs face intense heat, hail and severe storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Mansfield commercial roofs face intense heat, hail and severe storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration.',
+    countiesAndCitiesServed: [
+        'Mansfield, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Industrial and warehouse properties',
+        'Office and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/grapevine': {
+    title: "Commercial Roofing in Grapevine, TX | CRD",
+    metaDescription: "Commercial roofing in Grapevine, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/grapevine',
+    regionName: 'Grapevine, Texas',
+    heroHeadline: "Commercial Roofing Services in Grapevine, Texas.",
+    heroSubtitle: "Commercial roof planning in Grapevine should account for grapevine roofs face high summer temperatures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Grapevine roofs face high summer temperatures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around operations.',
+    countiesAndCitiesServed: [
+        'Grapevine, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby North and East Texas commercial properties within the regional service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Hotels and hospitality properties',
+        'Airport related commercial facilities',
+        'Retail and entertainment properties',
+        'Office and business parks'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Tyler',
+            href: '/service-areas/tyler'
+        },
+        {
+            name: 'Paris',
+            href: '/service-areas/paris'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/broken-arrow': {
+    title: "Commercial Roofing in Broken Arrow, OK | CRD",
+    metaDescription: "Commercial roofing in Broken Arrow, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/broken-arrow',
+    regionName: 'Broken Arrow, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Broken Arrow, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Broken Arrow should account for broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating compatibility.',
+    countiesAndCitiesServed: [
+        'Broken Arrow, Tulsa County',
+        'Tulsa County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Aerospace and energy service properties',
+        'Retail and mixed use developments',
+        'Healthcare and medical campuses'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/muskogee': {
+    title: "Commercial Roofing in Muskogee, OK | CRD",
+    metaDescription: "Commercial roofing in Muskogee, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/muskogee',
+    regionName: 'Muskogee, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Muskogee, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Muskogee should account for muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs.',
+    countiesAndCitiesServed: [
+        'Muskogee, Muskogee County',
+        'Muskogee County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Warehousing and distribution',
+        'Retail and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/owasso': {
+    title: "Commercial Roofing in Owasso, OK | CRD",
+    metaDescription: "Commercial roofing in Owasso, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/owasso',
+    regionName: 'Owasso, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Owasso, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Owasso should account for owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility.',
+    countiesAndCitiesServed: [
+        'Owasso, Tulsa County',
+        'Tulsa County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business parks',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Industrial and warehouse properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/bartlesville': {
+    title: "Commercial Roofing in Bartlesville, OK | CRD",
+    metaDescription: "Commercial roofing in Bartlesville, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/bartlesville',
+    regionName: 'Bartlesville, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Bartlesville, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Bartlesville should account for bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage.',
+    countiesAndCitiesServed: [
+        'Bartlesville, Washington County',
+        'Washington County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Energy and industrial facilities',
+        'Manufacturing and fabrication properties',
+        'Healthcare and institutional buildings',
+        'Retail and office properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/lawton': {
+    title: "Commercial Roofing in Lawton, OK | CRD",
+    metaDescription: "Commercial roofing in Lawton, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/lawton',
+    regionName: 'Lawton, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Lawton, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Lawton should account for lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Lawton, Comanche County',
+        'Comanche County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Military and government support facilities',
+        'Manufacturing and industrial properties',
+        'Healthcare and medical buildings',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/edmond': {
+    title: "Commercial Roofing in Edmond, OK | CRD",
+    metaDescription: "Commercial roofing in Edmond, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/edmond',
+    regionName: 'Edmond, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Edmond, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Edmond should account for edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition.',
+    countiesAndCitiesServed: [
+        'Edmond, Oklahoma County',
+        'Oklahoma County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Corporate offices and business parks',
+        'Healthcare and medical properties',
+        'Retail and mixed use developments'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/norman': {
+    title: "Commercial Roofing in Norman, OK | CRD",
+    metaDescription: "Commercial roofing in Norman, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/norman',
+    regionName: 'Norman, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Norman, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Norman should account for norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and roof edge details.',
+    countiesAndCitiesServed: [
+        'Norman, Cleveland County',
+        'Cleveland County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and research facilities',
+        'Healthcare and medical campuses',
+        'Retail and commercial properties',
+        'Industrial and warehouse facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/moore': {
+    title: "Commercial Roofing in Moore, OK | CRD",
+    metaDescription: "Commercial roofing in Moore, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/moore',
+    regionName: 'Moore, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Moore, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Moore should account for moore commercial roofs face severe thunderstorms, hail, high winds and summer heat. Inspections should prioritize wind exposed edges, membrane seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Moore commercial roofs face severe thunderstorms, hail, high winds and summer heat. Inspections should prioritize wind exposed edges, membrane seams, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Moore, Cleveland County',
+        'Cleveland County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail centers and shopping properties',
+        'Healthcare and medical facilities',
+        'Office and professional buildings',
+        'Warehouses and service commercial properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/midwest-city': {
+    title: "Commercial Roofing in Midwest City, OK | CRD",
+    metaDescription: "Commercial roofing in Midwest City, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/midwest-city',
+    regionName: 'Midwest City, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Midwest City, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Midwest City should account for midwest City roofs face hail, high winds, severe thunderstorms and intense summer heat. Roof condition assessments should include roof edges, penetrations, drainage and metal attachment.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Midwest City roofs face hail, high winds, severe thunderstorms and intense summer heat. Roof condition assessments should include roof edges, penetrations, drainage and metal attachment details.',
+    countiesAndCitiesServed: [
+        'Midwest City, Oklahoma County',
+        'Oklahoma County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Aviation and aerospace support facilities',
+        'Government and institutional properties',
+        'Industrial and warehouse buildings',
+        'Retail and healthcare properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/shawnee': {
+    title: "Commercial Roofing in Shawnee, OK | CRD",
+    metaDescription: "Commercial roofing in Shawnee, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/shawnee',
+    regionName: 'Shawnee, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Shawnee, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Shawnee should account for shawnee roofs experience hail, high winds, severe storms and seasonal temperature changes. Inspections should document roof condition, drainage, metal fasteners and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Shawnee roofs experience hail, high winds, severe storms and seasonal temperature changes. Inspections should document roof condition, drainage, metal fasteners and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Shawnee, Pottawatomie County',
+        'Pottawatomie County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical properties',
+        'Retail and commercial centers',
+        'Education and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/yukon': {
+    title: "Commercial Roofing in Yukon, OK | CRD",
+    metaDescription: "Commercial roofing in Yukon, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/yukon',
+    regionName: 'Yukon, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Yukon, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Yukon should account for yukon roofs face severe thunderstorms, hail, high winds and hot summers. Large commercial roof evaluations should focus on wind exposed edges, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Yukon roofs face severe thunderstorms, hail, high winds and hot summers. Large commercial roof evaluations should focus on wind exposed edges, seams, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Yukon, Canadian County',
+        'Canadian County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Warehousing and logistics facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers',
+        'Healthcare and professional properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Tulsa',
+            href: '/service-areas/tulsa'
+        },
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/monroe': {
+    title: 'Commercial Roofing in Monroe, LA | CRD',
+    metaDescription: "Commercial roofing in Monroe, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/monroe',
+    regionName: 'Monroe, Louisiana',
+    heroHeadline: 'Commercial Roofing Services in Monroe, Louisiana.',
+    heroSubtitle: 'Monroe commercial property owners and facility managers can request a roof condition assessment covering moisture concerns, drainage, seams, flashing and repair priorities. Restoration is considered only when the existing roof is suitable.',
+    weatherAndStormFactors: 'Monroe roofs experience humid heat, heavy rainfall and severe thunderstorms. Commercial roof evaluations should consider corrosion, drainage, seams, fasteners and moisture within the existing assembly.',
+    countiesAndCitiesServed: [
+        'Monroe, Ouachita County',
+        'Ouachita County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Manufacturing and industrial facilities',
+        'Retail and commercial centers',
+        'Warehouses and distribution properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        },
+    ]
+},
+  '/service-areas/west-monroe': {
+    title: "Commercial Roofing in West Monroe, LA | CRD",
+    metaDescription: "Commercial roofing in West Monroe, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/west-monroe',
+    regionName: 'West Monroe, Louisiana',
+    heroHeadline: "Commercial Roofing Services in West Monroe, Louisiana.",
+    heroSubtitle: "Commercial roof planning in West Monroe should account for west Monroe commercial roofs face humid heat, heavy rainfall, hail and strong storms. Inspections should document drainage, roof penetrations, metal seams, corrosion and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'West Monroe commercial roofs face humid heat, heavy rainfall, hail and strong storms. Inspections should document drainage, roof penetrations, metal seams, corrosion and coating condition.',
+    countiesAndCitiesServed: [
+        'West Monroe, Ouachita County',
+        'Ouachita County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Office and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/ruston': {
+    title: "Commercial Roofing in Ruston, LA | CRD",
+    metaDescription: "Commercial roofing in Ruston, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/ruston',
+    regionName: 'Ruston, Louisiana',
+    heroHeadline: "Commercial Roofing Services in Ruston, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Ruston should account for ruston roofs experience humid summers, heavy rainfall and severe thunderstorms. Roof restoration planning should include drainage, seams, flashing transitions, fasteners and substrate.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Ruston roofs experience humid summers, heavy rainfall and severe thunderstorms. Roof restoration planning should include drainage, seams, flashing transitions, fasteners and substrate condition.',
+    countiesAndCitiesServed: [
+        'Ruston, Lincoln County',
+        'Lincoln County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Healthcare and medical properties',
+        'Manufacturing and industrial buildings',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/alexandria': {
+    title: "Commercial Roofing in Alexandria, LA | CRD",
+    metaDescription: "Commercial roofing in Alexandria, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/alexandria',
+    regionName: 'Alexandria, Louisiana',
+    heroHeadline: "Commercial Roofing Services in Alexandria, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Alexandria should account for alexandria commercial roofs face humid heat, heavy rainfall, hail and severe thunderstorms. Roof evaluations should include moisture, drainage, corrosion, seams and penetrations. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Alexandria commercial roofs face humid heat, heavy rainfall, hail and severe thunderstorms. Roof evaluations should include moisture, drainage, corrosion, seams and penetrations.',
+    countiesAndCitiesServed: [
+        'Alexandria, Rapides County',
+        'Rapides County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Government and institutional facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/natchitoches': {
+    title: "Commercial Roofing in Natchitoches, LA | CRD",
+    metaDescription: "Commercial roofing in Natchitoches, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/natchitoches',
+    regionName: 'Natchitoches, Louisiana',
+    heroHeadline: "Commercial Roofing Services in Natchitoches, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Natchitoches should account for natchitoches roofs experience humid heat, heavy rain and seasonal severe storms. Commercial inspections should evaluate drainage, roof edges, metal fasteners, seams and the condition of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Natchitoches roofs experience humid heat, heavy rain and seasonal severe storms. Commercial inspections should evaluate drainage, roof edges, metal fasteners, seams and the condition of existing coatings.',
+    countiesAndCitiesServed: [
+        'Natchitoches, Natchitoches County',
+        'Natchitoches County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'University and educational facilities',
+        'Healthcare and medical properties',
+        'Hospitality and tourism properties',
+        'Retail and commercial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/pineville-la': {
+    title: "Commercial Roofing in Pineville, LA | CRD",
+    metaDescription: "Commercial roofing in Pineville, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/pineville-la',
+    regionName: 'Pineville, Louisiana',
+    heroHeadline: "Commercial Roofing Services in Pineville, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Pineville should account for pineville commercial roofs face humid summers, heavy rainfall and severe thunderstorms. Roof evaluations should document leaks, drainage, flashing, penetrations and restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Pineville commercial roofs face humid summers, heavy rainfall and severe thunderstorms. Roof evaluations should document leaks, drainage, flashing, penetrations and restoration suitability.',
+    countiesAndCitiesServed: [
+        'Pineville, Rapides County',
+        'Rapides County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Education and institutional properties',
+        'Retail and commercial centers',
+        'Light industrial and warehouse buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/minden': {
+    title: "Commercial Roofing in Minden, LA | CRD",
+    metaDescription: "Commercial roofing in Minden, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/minden',
+    regionName: 'Minden, Louisiana',
+    heroHeadline: "Commercial Roofing Services in Minden, Louisiana.",
+    heroSubtitle: "Commercial roof planning in Minden should account for minden roofs experience humid heat, heavy rainfall and severe storms. Metal corrosion, seam integrity, fasteners and drainage should be reviewed before recommending a coating system. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Minden roofs experience humid heat, heavy rainfall and severe storms. Metal corrosion, seam integrity, fasteners and drainage should be reviewed before recommending a coating system.',
+    countiesAndCitiesServed: [
+        'Minden, Webster County',
+        'Webster County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial properties',
+        'Healthcare and medical buildings',
+        'Retail and commercial centers',
+        'Warehouses and service facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/shreveport': {
+    title: 'Commercial Roofing in Shreveport, LA | CRD',
+    metaDescription: "Commercial roofing in Shreveport, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/shreveport',
+    regionName: 'Shreveport, Louisiana',
+    heroHeadline: 'Commercial Roofing Services in Shreveport, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors helps property owners and managers assess commercial roof condition and determine whether repair, restoration, a compatible coating system or replacement is the appropriate next step.',
+    weatherAndStormFactors: 'Shreveport properties face humid heat, heavy rainfall, hail and severe thunderstorms. A useful roof evaluation documents drainage, seams, flashing, fasteners, penetrations and signs of moisture entry before a repair or restoration plan is selected.',
+    countiesAndCitiesServed: [
+        'Shreveport, Caddo Parish',
+        'Caddo Parish commercial and industrial corridors',
+        'Nearby Northwest Louisiana commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Energy, industrial and manufacturing facilities',
+        'Warehousing and distribution properties',
+        'Retail, hospitality and office buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Bossier City',
+            href: '/service-areas/bossier-city'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Minden',
+            href: '/service-areas/minden'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/bossier-city': {
+    title: 'Commercial Roofing in Bossier City, LA | CRD',
+    metaDescription: "Commercial roofing in Bossier City, LA. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/bossier-city',
+    regionName: 'Bossier City, Louisiana',
+    heroHeadline: 'Commercial Roofing Services in Bossier City, Louisiana.',
+    heroSubtitle: 'Commercial Roof Doctors works with commercial property owners and managers to document roof conditions and compare practical repair, restoration, coating and replacement options for eligible projects.',
+    weatherAndStormFactors: 'Bossier City commercial roofs face humid summers, heavy rainfall, hail and strong storm winds. Roof reviews should pay close attention to drainage, roof edges, seams, penetrations, fasteners and evidence of recurring leaks.',
+    countiesAndCitiesServed: [
+        'Bossier City, Bossier Parish',
+        'Bossier Parish commercial and industrial corridors',
+        'Nearby Northwest Louisiana commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Hospitality, casino and entertainment properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Industrial and distribution properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Shreveport',
+            href: '/service-areas/shreveport'
+        },
+        {
+            name: 'Monroe',
+            href: '/service-areas/monroe'
+        },
+        {
+            name: 'Minden',
+            href: '/service-areas/minden'
+        },
+        {
+            name: 'Northwest Louisiana',
+            href: '/service-areas/louisiana'
+        }
+    ]
+},
+  '/service-areas/hurst': {
+    title: "Commercial Roofing in Hurst, TX | CRD",
+    metaDescription: "Commercial roofing in Hurst, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/hurst',
+    regionName: 'Hurst, Texas',
+    heroHeadline: "Commercial Roofing Services in Hurst, Texas.",
+    heroSubtitle: "Commercial roof planning in Hurst should account for hurst commercial roofs face hot summers, hail, strong winds and heavy rainfall. Inspections should review roof drainage, rooftop equipment, membrane seams, metal details and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Hurst commercial roofs face hot summers, hail, strong winds and heavy rainfall. Inspections should review roof drainage, rooftop equipment, membrane seams, metal details and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Hurst, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Retail and shopping centers',
+        'Corporate offices and business parks',
+        'Light industrial and warehouse properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/euless': {
+    title: "Commercial Roofing in Euless, TX | CRD",
+    metaDescription: "Commercial roofing in Euless, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/euless',
+    regionName: 'Euless, Texas',
+    heroHeadline: "Commercial Roofing Services in Euless, Texas.",
+    heroSubtitle: "Commercial roof planning in Euless should account for euless roofs experience intense heat, hail, high winds and heavy storms. Commercial evaluations should document roof condition around rooftop equipment, drains, penetrations and wind.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Euless roofs experience intense heat, hail, high winds and heavy storms. Commercial evaluations should document roof condition around rooftop equipment, drains, penetrations and wind exposed edges.',
+    countiesAndCitiesServed: [
+        'Euless, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Airport related commercial facilities',
+        'Hotels and hospitality properties',
+        'Warehousing and logistics',
+        'Retail and healthcare buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/bedford': {
+    title: "Commercial Roofing in Bedford, TX | CRD",
+    metaDescription: "Commercial roofing in Bedford, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/bedford',
+    regionName: 'Bedford, Texas',
+    heroHeadline: "Commercial Roofing Services in Bedford, Texas.",
+    heroSubtitle: "Commercial roof planning in Bedford should account for bedford commercial roofs face hot summers, hail and severe thunderstorms. Roof restoration planning should review membrane condition, drainage, seams, flashing and metal corrosion. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Bedford commercial roofs face hot summers, hail and severe thunderstorms. Roof restoration planning should review membrane condition, drainage, seams, flashing and metal corrosion.',
+    countiesAndCitiesServed: [
+        'Bedford, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Office and professional buildings',
+        'Retail and commercial centers',
+        'Multifamily and managed properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/north-richland-hills': {
+    title: "Commercial Roofing in North Richland Hills, TX | CRD",
+    metaDescription: "Commercial roofing in North Richland Hills, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/north-richland-hills',
+    regionName: 'North Richland Hills, Texas',
+    heroHeadline: "Commercial Roofing Services in North Richland Hills, Texas.",
+    heroSubtitle: "Commercial roof planning in North Richland Hills should account for north Richland Hills roofs face high summer temperatures, hail, high winds and heavy rainfall. Inspections should document roof edges, penetrations, drainage and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'North Richland Hills roofs face high summer temperatures, hail, high winds and heavy rainfall. Inspections should document roof edges, penetrations, drainage and coating condition.',
+    countiesAndCitiesServed: [
+        'North Richland Hills, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical campuses',
+        'Retail and shopping centers',
+        'Office and professional properties',
+        'Industrial and warehouse buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/keller': {
+    title: "Commercial Roofing in Keller, TX | CRD",
+    metaDescription: "Commercial roofing in Keller, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/keller',
+    regionName: 'Keller, Texas',
+    heroHeadline: "Commercial Roofing Services in Keller, Texas.",
+    heroSubtitle: "Commercial roof planning in Keller should account for keller commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should focus on drainage, membrane seams, metal fasteners and the condition of existing.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Keller commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should focus on drainage, membrane seams, metal fasteners and the condition of existing restoration coatings.',
+    countiesAndCitiesServed: [
+        'Keller, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical offices',
+        'Retail and mixed use centers',
+        'Professional office properties',
+        'Schools and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/burleson': {
+    title: "Commercial Roofing in Burleson, TX | CRD",
+    metaDescription: "Commercial roofing in Burleson, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/burleson',
+    regionName: 'Burleson, Texas',
+    heroHeadline: "Commercial Roofing Services in Burleson, Texas.",
+    heroSubtitle: "Commercial roof planning in Burleson should account for burleson roofs experience high temperatures, hail, strong winds and heavy rainfall. Large roof areas need documented review of seams, roof edges, fasteners, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Burleson roofs experience high temperatures, hail, strong winds and heavy rainfall. Large roof areas need documented review of seams, roof edges, fasteners, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Burleson, Johnson County',
+        'Johnson County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Industrial and warehouse properties',
+        'Retail and commercial centers',
+        'Healthcare and medical facilities',
+        'Office and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/rockwall': {
+    title: "Commercial Roofing in Rockwall, TX | CRD",
+    metaDescription: "Commercial roofing in Rockwall, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/rockwall',
+    regionName: 'Rockwall, Texas',
+    heroHeadline: "Commercial Roofing Services in Rockwall, Texas.",
+    heroSubtitle: "Commercial roof planning in Rockwall should account for rockwall roofs face heat, hail, wind driven rain and severe thunderstorms. Inspections should assess drainage, roof edges, rooftop equipment and metal or membrane restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Rockwall roofs face heat, hail, wind driven rain and severe thunderstorms. Inspections should assess drainage, roof edges, rooftop equipment and metal or membrane restoration suitability.',
+    countiesAndCitiesServed: [
+        'Rockwall, Rockwall County',
+        'Rockwall County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Healthcare and medical properties',
+        'Office and professional buildings',
+        'Hospitality and mixed use properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/forney': {
+    title: "Commercial Roofing in Forney, TX | CRD",
+    metaDescription: "Commercial roofing in Forney, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/forney',
+    regionName: 'Forney, Texas',
+    heroHeadline: "Commercial Roofing Services in Forney, Texas.",
+    heroSubtitle: "Commercial roof planning in Forney should account for forney commercial roofs face hot summers, hail and severe storms. Roof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Forney commercial roofs face hot summers, hail and severe storms. Roof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Forney, Kaufman County',
+        'Kaufman County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Warehousing and distribution facilities',
+        'Retail and shopping centers',
+        'Light industrial properties',
+        'Healthcare and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/waxahachie': {
+    title: "Commercial Roofing in Waxahachie, TX | CRD",
+    metaDescription: "Commercial roofing in Waxahachie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/waxahachie',
+    regionName: 'Waxahachie, Texas',
+    heroHeadline: "Commercial Roofing Services in Waxahachie, Texas.",
+    heroSubtitle: "Commercial roof planning in Waxahachie should account for waxahachie roofs face intense summer heat, hail, high winds and heavy rainfall. Restoration planning should document roof moisture, drainage, metal condition and flashing details. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Waxahachie roofs face intense summer heat, hail, high winds and heavy rainfall. Restoration planning should document roof moisture, drainage, metal condition and flashing details.',
+    countiesAndCitiesServed: [
+        'Waxahachie, Ellis County',
+        'Ellis County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical campuses',
+        'Retail and commercial centers',
+        'Warehouses and distribution properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/midlothian': {
+    title: "Commercial Roofing in Midlothian, TX | CRD",
+    metaDescription: "Commercial roofing in Midlothian, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/midlothian',
+    regionName: 'Midlothian, Texas',
+    heroHeadline: "Commercial Roofing Services in Midlothian, Texas.",
+    heroSubtitle: "Commercial roof planning in Midlothian should account for midlothian roofs face high heat, hail, wind and severe thunderstorms. Industrial roof evaluations should consider corrosion, chemical exposure, rooftop exhaust, seams and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Midlothian roofs face high heat, hail, wind and severe thunderstorms. Industrial roof evaluations should consider corrosion, chemical exposure, rooftop exhaust, seams and drainage.',
+    countiesAndCitiesServed: [
+        'Midlothian, Ellis County',
+        'Ellis County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Cement and building materials facilities',
+        'Manufacturing and industrial properties',
+        'Warehousing and logistics',
+        'Retail and commercial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/lancaster': {
+    title: "Commercial Roofing in Lancaster, TX | CRD",
+    metaDescription: "Commercial roofing in Lancaster, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/lancaster',
+    regionName: 'Lancaster, Texas',
+    heroHeadline: "Commercial Roofing Services in Lancaster, Texas.",
+    heroSubtitle: "Commercial roof planning in Lancaster should account for lancaster commercial roofs face hot summers, hail and high winds. Large industrial roofs need detailed inspection of roof edges, fasteners, seams, drains and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Lancaster commercial roofs face hot summers, hail and high winds. Large industrial roofs need detailed inspection of roof edges, fasteners, seams, drains and coating condition.',
+    countiesAndCitiesServed: [
+        'Lancaster, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Distribution and logistics facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers',
+        'Office and service buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/desoto': {
+    title: "Commercial Roofing in DeSoto, TX | CRD",    metaDescription: "Commercial roofing in DeSoto, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
+    heroHeadline: "Commercial Roofing Services in DeSoto, Texas.",
+    heroSubtitle: "Commercial roof planning in DeSoto should account for deSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'DeSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs.',
+    countiesAndCitiesServed: [
+        'DeSoto, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Industrial and warehouse properties',
+        'Office and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/cedar-hill': {
+    title: "Commercial Roofing in Cedar Hill, TX | CRD",
+    metaDescription: "Commercial roofing in Cedar Hill, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/cedar-hill',
+    regionName: 'Cedar Hill, Texas',
+    heroHeadline: "Commercial Roofing Services in Cedar Hill, Texas.",
+    heroSubtitle: "Commercial roof planning in Cedar Hill should account for cedar Hill roofs face hot summers, hail, strong winds and heavy rainfall. Roof restoration assessments should document roof condition, drainage, seams, penetrations and existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Cedar Hill roofs face hot summers, hail, strong winds and heavy rainfall. Roof restoration assessments should document roof condition, drainage, seams, penetrations and existing coating compatibility.',
+    countiesAndCitiesServed: [
+        'Cedar Hill, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and shopping centers',
+        'Healthcare and medical properties',
+        'Office and professional buildings',
+        'Multifamily and managed properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/duncanville': {
+    title: "Commercial Roofing in Duncanville, TX | CRD",
+    metaDescription: "Commercial roofing in Duncanville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/duncanville',
+    regionName: 'Duncanville, Texas',
+    heroHeadline: "Commercial Roofing Services in Duncanville, Texas.",
+    heroSubtitle: "Commercial roof planning in Duncanville should account for duncanville commercial roofs face heat, hail and severe thunderstorms. Inspections should consider roof drainage, membrane seams, metal details and the condition of existing roof coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Duncanville commercial roofs face heat, hail and severe thunderstorms. Inspections should consider roof drainage, membrane seams, metal details and the condition of existing roof coatings.',
+    countiesAndCitiesServed: [
+        'Duncanville, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical offices',
+        'Retail and commercial centers',
+        'Professional office properties',
+        'Light industrial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/coppell': {
+    title: "Commercial Roofing in Coppell, TX | CRD",
+    metaDescription: "Commercial roofing in Coppell, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/coppell',
+    regionName: 'Coppell, Texas',
+    heroHeadline: "Commercial Roofing Services in Coppell, Texas.",
+    heroSubtitle: "Commercial roof planning in Coppell should account for coppell roofs face high summer temperatures, hail, strong winds and heavy rain. Large commercial roofs need documented review of drains, rooftop equipment, seams and roof edge conditions. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Coppell roofs face high summer temperatures, hail, strong winds and heavy rain. Large commercial roofs need documented review of drains, rooftop equipment, seams and roof edge conditions.',
+    countiesAndCitiesServed: [
+        'Coppell, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate office campuses',
+        'Logistics and distribution facilities',
+        'Airport related commercial properties',
+        'Retail and hospitality buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/farmers-branch': {
+    title: "Commercial Roofing in Farmers Branch, TX | CRD",
+    metaDescription: "Commercial roofing in Farmers Branch, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/farmers-branch',
+    regionName: 'Farmers Branch, Texas',
+    heroHeadline: "Commercial Roofing Services in Farmers Branch, Texas.",
+    heroSubtitle: "Commercial roof planning in Farmers Branch should account for farmers Branch commercial roofs experience heat, hail and severe storms. Evaluations should review rooftop equipment, drainage, seams, penetrations and the compatibility of proposed.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Farmers Branch commercial roofs experience heat, hail and severe storms. Evaluations should review rooftop equipment, drainage, seams, penetrations and the compatibility of proposed coating systems.',
+    countiesAndCitiesServed: [
+        'Farmers Branch, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Office and business parks',
+        'Industrial and flex space properties',
+        'Retail and commercial centers',
+        'Healthcare and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/the-colony': {
+    title: "Commercial Roofing in The Colony, TX | CRD",
+    metaDescription: "Commercial roofing in The Colony, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/the-colony',
+    regionName: 'The Colony, Texas',
+    heroHeadline: "Commercial Roofing Services in The Colony, Texas.",
+    heroSubtitle: "Commercial roof planning in The Colony should account for the Colony roofs face hot summers, hail, high winds and heavy rainfall. Commercial inspections should document drainage, rooftop equipment, membrane condition and metal roof details. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'The Colony roofs face hot summers, hail, high winds and heavy rainfall. Commercial inspections should document drainage, rooftop equipment, membrane condition and metal roof details.',
+    countiesAndCitiesServed: [
+        'The Colony, Denton County',
+        'Denton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Hospitality and resort properties',
+        'Retail and entertainment centers',
+        'Office and business parks',
+        'Healthcare and professional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/sachse': {
+    title: "Commercial Roofing in Sachse, TX | CRD",
+    metaDescription: "Commercial roofing in Sachse, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/sachse',
+    regionName: 'Sachse, Texas',
+    heroHeadline: "Commercial Roofing Services in Sachse, Texas.",
+    heroSubtitle: "Commercial roof planning in Sachse should account for sachse commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should include seam condition, drainage, penetrations and existing coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Sachse commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should include seam condition, drainage, penetrations and existing coating compatibility.',
+    countiesAndCitiesServed: [
+        'Sachse, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Healthcare and medical properties',
+        'Office and professional buildings',
+        'Light industrial and warehouse properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/balch-springs': {
+    title: "Commercial Roofing in Balch Springs, TX | CRD",
+    metaDescription: "Commercial roofing in Balch Springs, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/balch-springs',
+    regionName: 'Balch Springs, Texas',
+    heroHeadline: "Commercial Roofing Services in Balch Springs, Texas.",
+    heroSubtitle: "Commercial roof planning in Balch Springs should account for balch Springs roofs experience intense heat, hail and severe storms. Industrial roof inspections should review corrosion, fasteners, seams, roof edges and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Balch Springs roofs experience intense heat, hail and severe storms. Industrial roof inspections should review corrosion, fasteners, seams, roof edges and drainage.',
+    countiesAndCitiesServed: [
+        'Balch Springs, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers',
+        'Service and fleet facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/princeton': {
+    title: "Commercial Roofing in Princeton, TX | CRD",
+    metaDescription: "Commercial roofing in Princeton, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/princeton',
+    regionName: 'Princeton, Texas',
+    heroHeadline: "Commercial Roofing Services in Princeton, Texas.",
+    heroSubtitle: "Commercial roof planning in Princeton should account for princeton commercial roofs face hot summers, hail, high winds and heavy rain. Evaluations should document drainage, roof penetrations, metal fasteners and the condition of existing coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Princeton commercial roofs face hot summers, hail, high winds and heavy rain. Evaluations should document drainage, roof penetrations, metal fasteners and the condition of existing coatings.',
+    countiesAndCitiesServed: [
+        'Princeton, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Light industrial and warehouse properties',
+        'Healthcare and professional buildings',
+        'Schools and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/royse-city': {
+    title: "Commercial Roofing in Royse City, TX | CRD",
+    metaDescription: "Commercial roofing in Royse City, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/royse-city',
+    regionName: 'Royse City, Texas',
+    heroHeadline: "Commercial Roofing Services in Royse City, Texas.",
+    heroSubtitle: "Commercial roof planning in Royse City should account for royse City roofs face heat, hail, strong winds and heavy rainfall. Commercial inspections should focus on roof drainage, seams, fasteners, flashing and restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Royse City roofs face heat, hail, strong winds and heavy rainfall. Commercial inspections should focus on roof drainage, seams, fasteners, flashing and restoration suitability.',
+    countiesAndCitiesServed: [
+        'Royse City, Rockwall County',
+        'Rockwall County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and shopping centers',
+        'Warehousing and distribution facilities',
+        'Healthcare and medical properties',
+        'Office and service commercial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/melissa': {
+    title: "Commercial Roofing in Melissa, TX | CRD",
+    metaDescription: "Commercial roofing in Melissa, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/melissa',
+    regionName: 'Melissa, Texas',
+    heroHeadline: "Commercial Roofing Services in Melissa, Texas.",
+    heroSubtitle: "Commercial roof planning in Melissa should account for melissa commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should review drainage, rooftop equipment, seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Melissa commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should review drainage, rooftop equipment, seams and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Melissa, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Healthcare and medical facilities',
+        'Office and business parks',
+        'Light industrial and warehouse properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/anna': {
+    title: "Commercial Roofing in Anna, TX | CRD",
+    metaDescription: "Commercial roofing in Anna, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/anna',
+    regionName: 'Anna, Texas',
+    heroHeadline: "Commercial Roofing Services in Anna, Texas.",
+    heroSubtitle: "Commercial roof planning in Anna should account for anna roofs face high summer temperatures, hail, high winds and heavy rain. Commercial roof assessments should document roof condition, drainage, penetrations and metal or membrane.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Anna roofs face high summer temperatures, hail, high winds and heavy rain. Commercial roof assessments should document roof condition, drainage, penetrations and metal or membrane restoration needs.',
+    countiesAndCitiesServed: [
+        'Anna, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and commercial centers',
+        'Light industrial properties',
+        'Healthcare and medical offices',
+        'Schools and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/celina': {
+    title: "Commercial Roofing in Celina, TX | CRD",
+    metaDescription: "Commercial roofing in Celina, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/celina',
+    regionName: 'Celina, Texas',
+    heroHeadline: "Commercial Roofing Services in Celina, Texas.",
+    heroSubtitle: "Commercial roof planning in Celina should account for celina commercial roofs face intense heat, hail and severe thunderstorms. Inspections should consider large rooftop equipment fields, drainage, roof seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Celina commercial roofs face intense heat, hail and severe thunderstorms. Inspections should consider large rooftop equipment fields, drainage, roof seams and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Celina, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business parks',
+        'Retail and mixed use properties',
+        'Healthcare and medical facilities',
+        'Light industrial and warehouse buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/prosper': {
+    title: "Commercial Roofing in Prosper, TX | CRD",
+    metaDescription: "Commercial roofing in Prosper, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/prosper',
+    regionName: 'Prosper, Texas',
+    heroHeadline: "Commercial Roofing Services in Prosper, Texas.",
+    heroSubtitle: "Commercial roof planning in Prosper should account for prosper roofs experience hot summers, hail, high winds and heavy rainfall. Commercial evaluations should document drainage, penetrations, roof edges and the condition of existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Prosper roofs experience hot summers, hail, high winds and heavy rainfall. Commercial evaluations should document drainage, penetrations, roof edges and the condition of existing roof systems.',
+    countiesAndCitiesServed: [
+        'Prosper, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Retail and mixed use developments',
+        'Healthcare and medical properties',
+        'Corporate offices and business parks',
+        'Schools and institutional facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/flower-mound': {
+    title: "Commercial Roofing in Flower Mound, TX | CRD",
+    metaDescription: "Commercial roofing in Flower Mound, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/flower-mound',
+    regionName: 'Flower Mound, Texas',
+    heroHeadline: "Commercial Roofing Services in Flower Mound, Texas.",
+    heroSubtitle: "Commercial roof planning in Flower Mound should account for flower Mound roofs face high summer temperatures, hail and severe storms. Roof inspections should review drainage, membrane seams, rooftop equipment and restoration compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Flower Mound roofs face high summer temperatures, hail and severe storms. Roof inspections should review drainage, membrane seams, rooftop equipment and restoration compatibility.',
+    countiesAndCitiesServed: [
+        'Flower Mound, Denton County',
+        'Denton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Corporate offices and business parks',
+        'Retail and hospitality properties',
+        'Multifamily and managed properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/wylie': {
+    title: "Commercial Roofing in Wylie, TX | CRD",
+    metaDescription: "Commercial roofing in Wylie, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/wylie',
+    regionName: 'Wylie, Texas',
+    heroHeadline: "Commercial Roofing Services in Wylie, Texas.",
+    heroSubtitle: "Commercial roof planning in Wylie should account for wylie commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document roof drainage, metal fasteners, seams, penetrations and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Wylie commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document roof drainage, metal fasteners, seams, penetrations and coating condition.',
+    countiesAndCitiesServed: [
+        'Wylie, Collin County',
+        'Collin County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Retail and commercial centers',
+        'Healthcare and medical properties',
+        'Office and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/centerton': {
+    title: "Commercial Roofing in Centerton, AR | CRD",
+    metaDescription: "Commercial roofing in Centerton, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/centerton',
+    regionName: 'Centerton, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Centerton, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Centerton should account for centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition.',
+    countiesAndCitiesServed: [
+        'Centerton, Benton County',
+        'Benton County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Corporate offices and business parks',
+        'Retail and commercial centers',
+        'Distribution and warehouse properties',
+        'Healthcare and professional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/hot-springs-village': {
+    title: "Commercial Roofing in Hot Springs Village, AR | CRD",
+    metaDescription: "Commercial roofing in Hot Springs Village, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/hot-springs-village',
+    regionName: 'Hot Springs Village, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Hot Springs Village, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Hot Springs Village should account for hot Springs Village roofs experience humid heat, heavy rainfall, hail and seasonal storms. Managed properties benefit from documented inspections, drainage review and planned restoration.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Hot Springs Village roofs experience humid heat, heavy rainfall, hail and seasonal storms. Managed properties benefit from documented inspections, drainage review and planned restoration maintenance.',
+    countiesAndCitiesServed: [
+        'Hot Springs Village, Garland County',
+        'Garland County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Association managed commercial properties',
+        'Hospitality and recreation facilities',
+        'Healthcare and service commercial buildings',
+        'Retail and office properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/harrison': {
+    title: "Commercial Roofing in Harrison, AR | CRD",
+    metaDescription: "Commercial roofing in Harrison, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/harrison',
+    regionName: 'Harrison, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Harrison, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Harrison should account for harrison roofs face seasonal temperature changes, heavy rain, hail and strong storms. Commercial inspections should evaluate drainage, metal corrosion, seams and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Harrison roofs face seasonal temperature changes, heavy rain, hail and strong storms. Commercial inspections should evaluate drainage, metal corrosion, seams and coating condition.',
+    countiesAndCitiesServed: [
+        'Harrison, Boone County',
+        'Boone County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical properties',
+        'Retail and commercial centers',
+        'Warehouses and distribution properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/mountain-home': {
+    title: "Commercial Roofing in Mountain Home, AR | CRD",
+    metaDescription: "Commercial roofing in Mountain Home, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/mountain-home',
+    regionName: 'Mountain Home, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Mountain Home, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Mountain Home should account for mountain Home commercial roofs face seasonal temperature swings, hail, heavy rainfall and strong winds. Roof evaluations should document seams, flashing, drainage and existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Mountain Home commercial roofs face seasonal temperature swings, hail, heavy rainfall and strong winds. Roof evaluations should document seams, flashing, drainage and existing roof system condition.',
+    countiesAndCitiesServed: [
+        'Mountain Home, Baxter County',
+        'Baxter County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Healthcare and medical facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers',
+        'Hospitality and service businesses'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/batesville': {
+    title: "Commercial Roofing in Batesville, AR | CRD",
+    metaDescription: "Commercial roofing in Batesville, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/batesville',
+    regionName: 'Batesville, Arkansas',
+    heroHeadline: "Commercial Roofing Services in Batesville, Arkansas.",
+    heroSubtitle: "Commercial roof planning in Batesville should account for batesville roofs experience humid summers, heavy rainfall, hail and seasonal storms. Restoration planning should include metal corrosion, drainage, seams, fasteners and moisture assessment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Batesville roofs experience humid summers, heavy rainfall, hail and seasonal storms. Restoration planning should include metal corrosion, drainage, seams, fasteners and moisture assessment.',
+    countiesAndCitiesServed: [
+        'Batesville, Independence County',
+        'Independence County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical properties',
+        'Retail and commercial centers',
+        'Education and institutional buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Little Rock',
+            href: '/service-areas/little-rock'
+        },
+        {
+            name: 'Arkansas',
+            href: '/service-areas/arkansas'
+        }
+    ]
+},
+  '/service-areas/ardmore': {
+    title: "Commercial Roofing in Ardmore, OK | CRD",
+    metaDescription: "Commercial roofing in Ardmore, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/ardmore',
+    regionName: 'Ardmore, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Ardmore, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Ardmore should account for ardmore commercial roofs face hot summers, hail, high winds and severe thunderstorms. Roof evaluations should document corrosion, fasteners, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Ardmore commercial roofs face hot summers, hail, high winds and severe thunderstorms. Roof evaluations should document corrosion, fasteners, seams, penetrations and drainage.',
+    countiesAndCitiesServed: [
+        'Ardmore, Carter County',
+        'Carter County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Energy and industrial facilities',
+        'Manufacturing and fabrication properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/duncan': {
+    title: "Commercial Roofing in Duncan, OK | CRD",
+    metaDescription: "Commercial roofing in Duncan, OK. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/duncan',
+    regionName: 'Duncan, Oklahoma',
+    heroHeadline: "Commercial Roofing Services in Duncan, Oklahoma.",
+    heroSubtitle: "Commercial roof planning in Duncan should account for duncan roofs experience high winds, hail, hot summers and severe storms. Industrial roof inspections should focus on metal corrosion, attachment details, seams, drainage and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    weatherAndStormFactors: 'Duncan roofs experience high winds, hail, hot summers and severe storms. Industrial roof inspections should focus on metal corrosion, attachment details, seams, drainage and coating compatibility.',
+    countiesAndCitiesServed: [
+        'Duncan, Stephens County',
+        'Stephens County commercial and industrial corridors',
+        'Nearby regional commercial properties within the service territory'
+    ],
+    keyIndustriesInRegion: [
+        'Energy and industrial service properties',
+        'Manufacturing and fabrication facilities',
+        'Healthcare and medical buildings',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Oklahoma City',
+            href: '/service-areas/oklahoma-city'
+        },
+        {
+            name: 'Oklahoma',
+            href: '/service-areas/oklahoma'
+        }
+    ]
+},
+  '/service-areas/addison': {
+    title: "Commercial Roofing in Addison, TX | CRD",
+    metaDescription: "Commercial roofing in Addison, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/addison',
+    regionName: 'Addison, Texas',
+    heroHeadline: "Commercial Roofing Services in Addison, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Addison commercial roofs serving offices, healthcare and professional properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Addison, Dallas County',
+        'Dallas County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Dallas office, hospitality and commercial property market',
+        'Corporate offices and business parks',
+        'Hotels and hospitality properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/haltom-city': {
+    title: "Commercial Roofing in Haltom City, TX | CRD",
+    metaDescription: "Commercial roofing in Haltom City, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/haltom-city',
+    regionName: 'Haltom City, Texas',
+    heroHeadline: "Commercial Roofing Services in Haltom City, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Haltom City commercial roofs serving manufacturing, warehouse and retail properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Haltom City, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Mid Cities manufacturing, logistics and commercial property market',
+        'Manufacturing and industrial facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/white-settlement': {
+    title: "Commercial Roofing in White Settlement, TX | CRD",
+    metaDescription: "Commercial roofing in White Settlement, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/white-settlement',
+    regionName: 'White Settlement, Texas',
+    heroHeadline: "Commercial Roofing Services in White Settlement, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates White Settlement commercial roofs serving industrial, defense support and retail properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'White Settlement, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West Fort Worth industrial, defense and commercial market',
+        'Defense and government support facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/benbrook': {
+    title: "Commercial Roofing in Benbrook, TX | CRD",
+    metaDescription: "Commercial roofing in Benbrook, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/benbrook',
+    regionName: 'Benbrook, Texas',
+    heroHeadline: "Commercial Roofing Services in Benbrook, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Benbrook commercial roofs serving light industrial, healthcare, retail and office properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Benbrook, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West Fort Worth office, healthcare and retail market',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers',
+        'Office and professional properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/watauga': {
+    title: "Commercial Roofing in Watauga, TX | CRD",
+    metaDescription: "Commercial roofing in Watauga, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/watauga',
+    regionName: 'Watauga, Texas',
+    heroHeadline: "Commercial Roofing Services in Watauga, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Watauga commercial roofs serving retail, healthcare and professional office properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Watauga, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Fort Worth retail, healthcare and commercial market',
+        'Retail and shopping centers',
+        'Healthcare and medical offices',
+        'Professional offices'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/saginaw': {
+    title: "Commercial Roofing in Saginaw, TX | CRD",
+    metaDescription: "Commercial roofing in Saginaw, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/saginaw',
+    regionName: 'Saginaw, Texas',
+    heroHeadline: "Commercial Roofing Services in Saginaw, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Saginaw commercial roofs serving logistics, manufacturing and retail properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Saginaw, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Fort Worth logistics, manufacturing and commercial market',
+        'Warehousing and logistics facilities',
+        'Manufacturing and industrial properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/forest-hill': {
+    title: "Commercial Roofing in Forest Hill, TX | CRD",
+    metaDescription: "Commercial roofing in Forest Hill, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/forest-hill',
+    regionName: 'Forest Hill, Texas',
+    heroHeadline: "Commercial Roofing Services in Forest Hill, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Forest Hill commercial roofs serving industrial, retail, healthcare and office properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Forest Hill, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'South Fort Worth industrial, retail and commercial property market',
+        'Industrial and warehouse properties',
+        'Retail and commercial centers',
+        'Healthcare and medical facilities'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/crowley': {
+    title: "Commercial Roofing in Crowley, TX | CRD",
+    metaDescription: "Commercial roofing in Crowley, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/crowley',
+    regionName: 'Crowley, Texas',
+    heroHeadline: "Commercial Roofing Services in Crowley, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Crowley commercial roofs serving professional offices, retail and light industrial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Crowley, Tarrant County',
+        'Tarrant County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'South Fort Worth industrial, logistics and retail growth market',
+        'Industrial and distribution facilities',
+        'Retail and commercial centers',
+        'Healthcare and medical properties'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/cleburne': {
+    title: "Commercial Roofing in Cleburne, TX | CRD",
+    metaDescription: "Commercial roofing in Cleburne, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/cleburne',
+    regionName: 'Cleburne, Texas',
+    heroHeadline: "Commercial Roofing Services in Cleburne, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Cleburne commercial roofs serving warehouses, distribution and industrial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Cleburne, Johnson County',
+        'Johnson County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Southwest DFW manufacturing, healthcare and commercial market',
+        'Manufacturing and industrial facilities',
+        'Healthcare and medical campuses',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/weatherford': {
+    title: "Commercial Roofing in Weatherford, TX | CRD",
+    metaDescription: "Commercial roofing in Weatherford, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/weatherford',
+    regionName: 'Weatherford, Texas',
+    heroHeadline: "Commercial Roofing Services in Weatherford, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Weatherford commercial roofs serving warehouse, distribution and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Weatherford, Parker County',
+        'Parker County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West DFW manufacturing, healthcare and commercial market',
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/mineral-wells': {
+    title: "Commercial Roofing in Mineral Wells, TX | CRD",
+    metaDescription: "Commercial roofing in Mineral Wells, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/mineral-wells',
+    regionName: 'Mineral Wells, Texas',
+    heroHeadline: "Commercial Roofing Services in Mineral Wells, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Mineral Wells commercial roofs serving warehouse, service and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Mineral Wells, Palo Pinto County',
+        'Palo Pinto County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'West North Texas industrial, healthcare and commercial market',
+        'Industrial and manufacturing facilities',
+        'Healthcare and institutional properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/stephenville': {
+    title: "Commercial Roofing in Stephenville, TX | CRD",
+    metaDescription: "Commercial roofing in Stephenville, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/stephenville',
+    regionName: 'Stephenville, Texas',
+    heroHeadline: "Commercial Roofing Services in Stephenville, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Stephenville commercial roofs serving retail, healthcare and institutional properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Stephenville, Erath County',
+        'Erath County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'North Central Texas education, agriculture and manufacturing market',
+        'University and educational facilities',
+        'Agricultural processing and supply properties',
+        'Manufacturing and industrial buildings'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/ennis': {
+    title: "Commercial Roofing in Ennis, TX | CRD",
+    metaDescription: "Commercial roofing in Ennis, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/ennis',
+    regionName: 'Ennis, Texas',
+    heroHeadline: "Commercial Roofing Services in Ennis, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Ennis commercial roofs serving healthcare, institutional and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Ennis, Ellis County',
+        'Ellis County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'South Dallas manufacturing, distribution and commercial market',
+        'Manufacturing and industrial facilities',
+        'Warehousing and distribution properties',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+},
+  '/service-areas/bonham': {
+    title: "Commercial Roofing in Bonham, TX | CRD",
+    metaDescription: "Commercial roofing in Bonham, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
+    canonicalPath: '/service-areas/bonham',
+    regionName: 'Bonham, Texas',
+    heroHeadline: "Commercial Roofing Services in Bonham, Texas.",
+    heroSubtitle: "Commercial Roof Doctors evaluates Bonham commercial roofs serving agricultural supply, warehouse and commercial properties. We document roof condition and compare repair, restoration, compatible coating and replacement options. Project availability is confirmed by location, roof type and scope.",
+    weatherAndStormFactors: "North Texas commercial roofs face hot summers, hail, strong winds and heavy rainfall. Evaluations should document roof edges, drainage, seams, flashing, penetrations and fasteners before repairs or restoration are selected.",
+    countiesAndCitiesServed: [
+        'Bonham, Fannin County',
+        'Fannin County commercial and industrial corridors',
+        'Nearby Dallas Fort Worth and North Texas commercial properties'
+    ],
+    keyIndustriesInRegion: [
+        'Northeast Texas manufacturing, healthcare and commercial market',
+        'Manufacturing and industrial properties',
+        'Healthcare and medical facilities',
+        'Retail and commercial centers'
+    ],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
+        },
+        {
+            name: 'Dallas',
+            href: '/service-areas/dallas'
+        },
+        {
+            name: 'Fort Worth',
+            href: '/service-areas/fort-worth'
+        },
+        {
+            name: 'Longview',
+            href: '/service-areas/longview'
+        },
+        {
+            name: 'Northeast Texas',
+            href: '/service-areas/texas'
+        }
+    ]
+}
+};
+
+
+export const COATING_ARTICLES_CONTENT = {
+  '/resources': {
+    title: 'Commercial Roof Coating Resources | CRD',
+    metaDescription: 'Practical commercial roof coating and metal roof restoration guides for property owners, facility managers and commercial real estate teams.',
+    canonicalPath: '/resources',
+    eyebrow: 'Commercial Roof Coating Resources',
+    headline: 'Commercial Roof Coating Guides for Property Owners.',
+    intro: 'Choosing a roof coating is a building-asset decision, not simply a product purchase. These guides explain how to evaluate an existing roof, compare coating chemistries and identify the conditions that make restoration appropriate.',
+    sections: [
+      {
+        heading: 'Start With the Existing Roof Condition',
+        paragraphs: [
+          'A coating system can only perform as intended when the existing roof assembly is suitable for restoration. Moisture, substrate condition, corrosion, drainage, seams and previous coatings all affect the recommendation.',
+          'Commercial Roof Doctors evaluates the roof before recommending a coating, localized repair or replacement. The goal is to match the scope to the physical condition of the building roof.',
+        ],
+      },
+      {
+        heading: 'Understand the Coating Chemistry',
+        paragraphs: [
+          'Silicone, acrylic and polyurethane products have different performance characteristics and installation requirements. No chemistry is best for every roof. Product selection must account for the existing substrate, drainage, exposure, foot traffic and manufacturer specifications.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Can every commercial roof be coated?', answer: 'No. Widespread trapped moisture, structural deterioration, perforated metal panels or an incompatible substrate can make restoration inappropriate. An inspection is needed before a coating is specified.' },
+      { question: 'Does a roof coating eliminate the need for maintenance?', answer: 'No. Commercial roofs still need drainage maintenance, periodic inspections and compatible repairs after restoration.' },
+    ],
+    relatedLinks: [
+      { name: 'Metal Roof Restoration Guide', href: '/resources/metal-roof-restoration-guide' },
+      { name: 'Silicone vs. Acrylic Coatings', href: '/resources/silicone-vs-acrylic-roof-coatings' },
+      { name: 'Roof Coating Inspection Checklist', href: '/resources/commercial-roof-coating-inspection-checklist' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
+
+      { name: 'Coat vs. Replace: Financial Comparison', href: '/coat-vs-replace' },
+      { name: 'Environmental Benefits of Roof Restoration', href: '/resources/environmental-benefits-of-roof-restoration' },
+      { name: 'Reflective Roof Coatings & Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
+      { name: 'Roof Coatings & HVAC Performance', href: '/resources/roof-coatings-and-hvac-performance' },
+      { name: 'Tax Incentives & Cool Roof Ratings', href: '/resources/commercial-roof-energy-tax-incentives' },
+    ],
+  },
+
+  '/resources/metal-roof-restoration-guide': {
+    title: 'Metal Roof Restoration Guide for Commercial Buildings | CRD',
+    metaDescription: 'Learn how commercial metal roof restoration addresses rust, failed fasteners, open seams and flashing details, and when a coating is not the right solution.',
+    canonicalPath: '/resources/metal-roof-restoration-guide',
+    eyebrow: 'Commercial Metal Roof Restoration Guide',
+    headline: 'How to Restore an Aging Commercial Metal Roof.',
+    intro: 'A rusting or leaking commercial metal roof does not automatically need full replacement. But coating over the visible surface without correcting the underlying problems can waste money. A sound restoration plan begins with the panels, fasteners, seams and supporting assembly.',
+    sections: [
+      {
+        heading: '1. Determine Whether the Metal Is Still Serviceable',
+        paragraphs: [
+          'The first question is whether corrosion is limited to the surface or has caused significant metal loss. Surface oxidation may be manageable with proper preparation and a compatible primer. Perforated panels, severe section loss or compromised attachment details require repair or replacement rather than a coating alone.',
+          'The inspection should also consider the supporting deck, insulation, panel movement, roof drainage and the history of previous repairs or coatings.',
+        ],
+      },
+      {
+        heading: '2. Correct Fastener and Washer Problems',
+        paragraphs: [
+          'Exposed-fastener metal roofs can develop leaks when screws back out, washers deteriorate or holes become enlarged. Those defects need to be evaluated and corrected with compatible fasteners and repair details before the field coating is applied.',
+          'Simply covering a failed screw head does not restore the original attachment or correct a damaged penetration.',
+        ],
+      },
+      {
+        heading: '3. Prepare Rusted Areas and Existing Coatings',
+        paragraphs: [
+          'Loose corrosion, dirt, chalking and failed coatings can prevent reliable adhesion. Surface preparation must follow the selected manufacturer’s instructions. Where specified, a compatible rust-inhibitive primer may be part of the system.',
+          'The roof should not be coated over contamination or active corrosion that has not been properly prepared. The selected primer and coating must be compatible with the prepared metal and any existing finish.',
+        ],
+      },
+      {
+        heading: '4. Repair Seams, Laps and Flashing Details',
+        paragraphs: [
+          'Horizontal panel laps, ridge caps, rake edges, curbs, penetrations and transitions are common water-entry points. These details often require individual sealant work or reinforcement before the main coating is applied.',
+          'The repair method depends on the roof profile, panel movement, existing materials and the coating system specifications.',
+        ],
+      },
+      {
+        heading: '5. Select the Coating System for the Actual Roof',
+        paragraphs: [
+          'Silicone, acrylic and polyurethane systems are not interchangeable. Drainage, ponding, UV exposure, service traffic, substrate compatibility and application conditions all matter. The contractor should identify the exact product system and follow its published preparation, coverage and dry-film-thickness requirements.',
+          'A complete proposal should identify the preparation work, fastener and seam repairs, coating products, application requirements, quality checks and any manufacturer warranty terms that actually apply to the project.',
+        ],
+      },
+      {
+        heading: 'When Replacement Is the Better Decision',
+        paragraphs: [
+          'Restoration is not appropriate for every metal roof. Widespread perforation, severe corrosion, structural deck damage or compromised panel attachment may require replacement. A coating should never be presented as a structural repair or as a way to conceal an unsound roof assembly.',
+        ],
+        bullets: [
+          'Panels have widespread holes or significant section loss.',
+          'The deck or supporting assembly has structural deterioration.',
+          'Moisture or insulation problems cannot be corrected within a restoration scope.',
+          'The existing surface cannot achieve reliable adhesion with an approved system.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Can you coat a commercial metal roof that has rust?', answer: 'Sometimes. The depth and spread of corrosion matter. Loose rust must be prepared, compromised fasteners and seams corrected, and perforated or structurally unsound panels repaired or replaced before coating is considered.' },
+      { question: 'Will a roof coating stop leaks around screws?', answer: 'Not by itself. Failed fasteners, washers and enlarged holes must be evaluated and repaired with compatible components and details before the coating system is applied.' },
+      { question: 'How do I know whether restoration is better than replacement?', answer: 'A documented inspection should evaluate panel condition, corrosion, fasteners, seams, moisture, deck condition, drainage and coating compatibility. The recommendation should be based on those findings, not on a predetermined product.' },
+    ],
+    relatedLinks: [
+      { name: 'Commercial Metal Roof Restoration', href: '/metal-roof-restoration' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Silicone vs. Acrylic Coatings', href: '/resources/silicone-vs-acrylic-roof-coatings' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+    ],
+  },
+
+  '/resources/silicone-vs-acrylic-roof-coatings': {
+    title: 'Silicone vs. Acrylic Commercial Roof Coatings | CRD',
+    metaDescription: 'Compare silicone and acrylic commercial roof coatings, including ponding water, drainage, application conditions, substrate compatibility and maintenance.',
+    canonicalPath: '/resources/silicone-vs-acrylic-roof-coatings',
+    eyebrow: 'Commercial Roof Coating Comparison',
+    headline: 'Silicone vs. Acrylic: Which Roof Coating Fits the Building?',
+    intro: 'Silicone and acrylic are common commercial roof coating chemistries, but they are designed for different conditions. The right choice depends on the existing roof, drainage, moisture, exposure, preparation and the manufacturer’s requirements.',
+    sections: [
+      {
+        heading: 'Silicone Coatings and Ponding Water',
+        paragraphs: [
+          'Many silicone formulations are designed to tolerate prolonged water exposure better than many acrylic systems. That can make silicone worth evaluating on some low-slope roofs where ponding is a concern. The exact product must still be approved for the roof conditions, and drainage defects should be corrected where practical.',
+          'Silicone is not a universal solution. Surface preparation, primer selection, existing coating compatibility, application thickness and maintenance remain important. Cured silicone surfaces also generally require compatible materials for future repairs and recoating.',
+        ],
+      },
+      {
+        heading: 'Acrylic Coatings and Positive Drainage',
+        paragraphs: [
+          'Acrylic coatings are commonly considered for roofs with positive drainage. Many acrylic products are not intended for prolonged ponding water, so roof slope, drains, scuppers and recurring water accumulation should be evaluated before selection.',
+          'Application and curing conditions matter. Rain, dew, temperature and humidity must meet the product instructions so the coating can form the intended film.',
+        ],
+      },
+      {
+        heading: 'Do Not Choose by Chemistry Alone',
+        paragraphs: [
+          'The existing roof substrate, previous coatings, surface condition, foot traffic, rooftop equipment and local exposure all affect system selection. Some projects may require primers, reinforcement materials or a multi-layer system. Other roofs may not be suitable for coating at all.',
+          'Reflectivity, warranty terms and expected performance should be tied to the actual manufacturer product data and project specification. Avoid relying on generic percentages or a fixed service-life promise that is not supported by the selected system.',
+        ],
+        bullets: [
+          'Confirm the existing roof material and previous coating history.',
+          'Evaluate moisture, drainage and surface adhesion.',
+          'Identify seams, fasteners, flashings and penetrations that need repair.',
+          'Verify primer, coating compatibility, application rate and dry-film thickness.',
+          'Review the actual warranty terms and maintenance requirements.',
+        ],
+      },
+      {
+        heading: 'Where Polyurethane May Fit',
+        paragraphs: [
+          'Polyurethane products may be used in selected systems where abrasion or mechanical wear is a design concern. Different formulations serve different roles, and some systems use an aliphatic top coat for improved UV weathering characteristics. Polyurethane should be specified as part of a complete system rather than treated as a universal substitute for silicone or acrylic.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Is silicone always better than acrylic?', answer: 'No. Silicone is often considered where prolonged water exposure is a concern, while acrylic is generally better suited to positive drainage. The selected product and actual roof conditions determine the appropriate system.' },
+      { question: 'Can acrylic coatings be used on a flat commercial roof?', answer: 'Some acrylic systems can be used on low-slope roofs, but many are not designed for prolonged ponding water. Drainage and product approval must be checked first.' },
+      { question: 'Can silicone or acrylic be applied over TPO or EPDM?', answer: 'Some products may be approved for specific membrane substrates when the required cleaning, primer and adhesion testing are completed. Compatibility should never be assumed.' },
+    ],
+    relatedLinks: [
+      { name: 'Silicone Roof Coatings', href: '/silicone-roof-coatings' },
+      { name: 'Acrylic Roof Coatings', href: '/acrylic-roof-coatings' },
+      { name: 'Polyurethane Roof Coatings', href: '/polyurethane-roof-coatings' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+    ],
+  },
+
+  '/resources/commercial-roof-coating-inspection-checklist': {
+    title: 'Commercial Roof Coating Inspection Checklist | CRD',
+    metaDescription: 'Use this commercial roof coating inspection checklist to review moisture, substrate condition, rust, seams, drainage, adhesion, coating specifications and warranty terms.',
+    canonicalPath: '/resources/commercial-roof-coating-inspection-checklist',
+    eyebrow: 'Commercial Roof Coating Inspection Checklist',
+    headline: 'What Should Be Inspected Before a Commercial Roof Is Coated?',
+    intro: 'Before approving a commercial roof coating proposal, property owners and facility managers should understand what is being evaluated and what preparation is included. A coating is only as reliable as the roof assembly beneath it and the work completed before application.',
+    sections: [
+      {
+        heading: '1. Existing Roof Assembly and Moisture',
+        paragraphs: [
+          'The inspection should identify the existing roof material, approximate age where known, previous repairs or coatings, and the condition of the underlying assembly. Moisture in insulation and concealed deterioration can make a roof unsuitable for restoration.',
+        ],
+        bullets: [
+          'Document the roof system and previous coating history.',
+          'Evaluate moisture and insulation condition using appropriate methods.',
+          'Inspect the deck and supporting assembly for visible deterioration.',
+        ],
+      },
+      {
+        heading: '2. Surface Condition and Adhesion',
+        paragraphs: [
+          'The roof surface must be suitable for the proposed coating. Dirt, oils, chalking, oxidation, loose rust and failed existing coatings can interfere with adhesion. The contractor should explain the preparation method and any required adhesion testing.',
+        ],
+        bullets: [
+          'Identify rust, corrosion, chalking and loose material.',
+          'Specify cleaning and surface preparation methods.',
+          'Confirm primer and coating compatibility with the existing substrate.',
+        ],
+      },
+      {
+        heading: '3. Seams, Fasteners, Flashings and Penetrations',
+        paragraphs: [
+          'The field of the roof is only one part of the system. Metal laps, fasteners, washers, curbs, penetrations, edge details and flashing transitions may need individual repair or reinforcement before coating.',
+        ],
+        bullets: [
+          'Inspect metal panel seams, laps, fasteners and washers.',
+          'Review penetrations, curbs, HVAC supports and flashing transitions.',
+          'Identify damaged panels, membrane seams or details that require repair.',
+        ],
+      },
+      {
+        heading: '4. Drainage and Ponding',
+        paragraphs: [
+          'The proposal should address roof slope, drains, scuppers, gutters and recurring ponding. The coating chemistry must be approved for the actual water exposure. A coating should not be used to hide a drainage problem that remains unresolved.',
+        ],
+      },
+      {
+        heading: '5. Coating Specification and Quality Control',
+        paragraphs: [
+          'A complete proposal should identify the manufacturer and product system, preparation, primer, reinforcement, application rate and required dry-film thickness. It should also explain how installation quality will be checked and documented.',
+        ],
+        bullets: [
+          'Confirm product names and manufacturer data sheets.',
+          'Specify application coverage and dry-film thickness.',
+          'Identify inspection and quality-control checkpoints.',
+          'Review warranty eligibility, exclusions and maintenance requirements.',
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before Signing',
+        paragraphs: [
+          'Ask the contractor to explain why the roof qualifies for restoration, which conditions could make replacement necessary, and how each existing defect will be corrected. A good proposal should make the preparation and repair scope as clear as the coating product itself.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Should a moisture survey be performed before every roof coating?', answer: 'The appropriate moisture evaluation depends on the roof assembly and visible conditions. The contractor should explain how concealed moisture and insulation condition will be assessed before recommending restoration.' },
+      { question: 'Should the proposal identify the exact coating product?', answer: 'Yes. The proposal should identify the manufacturer and products, preparation, primer, reinforcement, application requirements and applicable warranty terms.' },
+      { question: 'Is a coating proposal complete if it only lists the number of gallons?', answer: 'No. It should also document the roof condition, preparation, repairs, compatibility, specified application rate or dry-film thickness, quality checks and warranty requirements.' },
+    ],
+    relatedLinks: [
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration', href: '/metal-roof-restoration' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Inspections', href: '/commercial-roof-inspections' },
+    ],
+  },
+
+  '/resources/environmental-benefits-of-roof-restoration': {
+    title: 'Environmental Benefits of Commercial Roof Restoration | CRD',
+    metaDescription: 'Learn how commercial roof restoration can reduce tear-off waste, landfill disposal, new material demand and construction disruption when an existing roof is suitable for coating.',
+    canonicalPath: '/resources/environmental-benefits-of-roof-restoration',
+    eyebrow: 'Commercial Roof Restoration & Sustainability',
+    headline: 'Keep a Roof Out of the Dumpster. Restore When It Makes Sense.',
+    intro: 'A full roof replacement can generate a substantial volume of removed roofing materials. When the existing roof assembly is dry, stable and suitable for restoration, a properly designed coating system may extend its service life while avoiding much of the tear-off and disposal associated with replacement. The responsible first step is an honest roof assessment, not a promise that every roof can be saved.',
+    sections: [
+      {
+        heading: 'Less Tear-Off Can Mean Less Roofing Waste',
+        paragraphs: [
+          'A restoration project generally retains the existing roof assembly and adds a compatible fluid-applied system after required repairs and preparation. If the roof qualifies, this can avoid removing and disposing of large areas of existing membrane, insulation and related materials.',
+          'The U.S. Environmental Protection Agency estimated that 600 million tons of construction and demolition debris were generated in 2018. That figure covers many types of construction activity and materials, not roofing alone, but it illustrates the scale of the broader waste challenge.',
+        ],
+        bullets: [
+      'Avoid unnecessary removal of serviceable roofing materials.',
+      'Reduce the volume of tear-off debris that must be transported and managed.',
+      'Limit demand for some new roof assembly materials when replacement is not necessary.',
+    ],
+      },
+      {
+        heading: 'Less Disruption at an Operating Property',
+        paragraphs: [
+          'Avoiding a full tear-off can reduce dumpster staging, material hauling, crane activity and the time spent exposing the roof deck. The actual disruption depends on roof size, access, repairs, weather and the selected coating system. Restoration is not a no-disruption project, but it may be less intrusive than a complete replacement.',
+        ],
+        bullets: [
+      'Fewer tear-off and disposal operations where the existing roof can remain.',
+      'Potentially less staging and hauling around active businesses.',
+      'A project plan that can be coordinated around tenants, customers and building operations.',
+    ],
+      },
+      {
+        heading: 'Restoration Is Not Always the Greener or Safer Choice',
+        paragraphs: [
+          'A roof with saturated insulation, widespread corrosion, structural deterioration, failed attachment or extensive trapped moisture may need substantial removal or replacement. Coating over these conditions can conceal problems and shorten the life of the investment. Wet materials and damaged sections must be identified and addressed before any restoration system is installed.',
+        ],
+        bullets: [
+      'Inspect the roof assembly and investigate moisture.',
+      'Remove or replace unsound or saturated sections as required.',
+      'Confirm the proposed coating is compatible with the existing substrate and manufacturer requirements.',
+    ],
+      },
+      {
+        heading: 'Measure the Project, Do Not Guess',
+        paragraphs: [
+          'A credible environmental comparison should document the roof area, existing assembly, materials that would otherwise be removed, expected repair scope, coating quantities and disposal plan for any material that must be replaced. CRD can help owners compare the proposed restoration scope with a replacement scope so the decision is based on the actual building.',
+        ],
+        bullets: [
+      'Compare restoration and replacement scopes side by side.',
+      'Identify what material can remain and what must be removed.',
+      'Request a documented commercial roof evaluation.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'Does roof restoration eliminate all landfill waste?', answer: 'No. Restoration can reduce tear-off waste when the existing roof is suitable, but damaged insulation, wet materials, failed flashings and other unsound sections may still need removal.' },
+      { question: 'Does the EPA say roofing is a major source of construction waste?', answer: 'EPA tracks construction and demolition debris across many material categories. Its 600-million-ton estimate for 2018 is for all covered C&D activity, not a roofing-only total.' },
+      { question: 'Is coating always more sustainable than replacement?', answer: 'No. A roof that is structurally unsound or moisture damaged may require replacement. The best option is the one that safely addresses the building condition and avoids premature repeat work.' },
+    ],
+    sourceLinks: [
+      { name: 'U.S. EPA: Construction and Demolition Debris Data', href: 'https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/construction-and-demolition-debris-material' },
+    ],
+    relatedLinks: [
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Metal Roof Restoration Guide', href: '/resources/metal-roof-restoration-guide' },
+      { name: 'Heating and Cooling Benefits', href: '/resources/reflective-roof-coating-energy-savings' },
+    ],
+  },
+
+  '/resources/reflective-roof-coating-energy-savings': {
+    title: 'Reflective Commercial Roof Coatings & Energy Savings | CRD',
+    metaDescription: 'Understand how reflective commercial roof coatings can reduce rooftop heat gain, support cooling efficiency and help building owners evaluate potential utility savings.',
+    canonicalPath: '/resources/reflective-roof-coating-energy-savings',
+    eyebrow: 'Cool Roofs & Building Energy Performance',
+    headline: 'A Cooler Roof Can Change the Building\'s Energy Equation.',
+    intro: 'A roof is exposed to hours of direct sunlight. A compatible reflective coating with appropriate solar reflectance and thermal emittance can keep the roof surface cooler and reduce heat transferred into the building. The energy impact varies with climate, insulation, HVAC efficiency, building use and the existing roof color and condition.',
+    sections: [
+      {
+        heading: 'How Reflective Roof Coatings Work',
+        paragraphs: [
+          'Solar reflectance describes how much incoming sunlight a surface reflects. Thermal emittance describes how effectively a surface releases absorbed heat. A cool roof product is designed to reflect more solar energy and emit heat more effectively than a conventional dark surface.',
+          'ENERGY STAR explains that cool roofs can reduce roof surface temperature and heat transfer into buildings. On a typical summer afternoon, a clean white roof reflecting 80% of sunlight can be about 50°F cooler than a gray roof reflecting 20%. This is a roof-surface comparison, not a guaranteed indoor temperature or utility-bill reduction.',
+        ],
+        bullets: [
+      'Review rated solar reflectance and thermal emittance for the exact product.',
+      'Confirm the rating applies to the coating color and system being proposed.',
+      'Consider aged performance as well as initial reflectance.',
+    ],
+      },
+      {
+        heading: 'Where Energy Benefits May Be Greatest',
+        paragraphs: [
+          'Reflective roofs tend to offer the greatest cooling benefit in hot, sunny climates, particularly on buildings with low roof insulation and substantial air-conditioning demand. That makes roof reflectivity worth evaluating for many commercial properties in Texas, Arkansas, Oklahoma and Louisiana.',
+          'A highly insulated building may see a smaller change in annual energy use than a building with limited insulation. Heating penalties in cooler seasons can also affect the annual result, so a whole-building assessment is more useful than a roof-only promise.',
+        ],
+        bullets: [
+      'Warehouses and distribution buildings with large roof areas.',
+      'Retail, office and light industrial buildings with significant cooling loads.',
+      'Facilities with dark roofs, limited insulation or high summer HVAC demand.',
+    ],
+      },
+      {
+        heading: 'What Determines Actual Utility Savings?',
+        paragraphs: [
+          'A coating alone does not determine energy performance. Existing insulation, air leakage, HVAC controls, equipment efficiency, operating schedules, internal heat loads, roof assembly and local weather all influence the result. A reflective roof may reduce peak cooling demand without producing the same percentage reduction in total building electricity use.',
+        ],
+        bullets: [
+      'Existing roof color and reflectance.',
+      'Insulation R-value and roof assembly.',
+      'HVAC system type, condition and operating schedule.',
+      'Building occupancy, internal heat gains and local weather.',
+    ],
+      },
+      {
+        heading: 'Use Product Data and Building Data',
+        paragraphs: [
+          'CRD recommends reviewing product technical data and independent ratings where available, then comparing utility use before and after the project while accounting for weather and changes in building operations. The Cool Roof Rating Council maintains a directory of products and radiative performance data. ENERGY STAR provides educational guidance on cool roofs and their potential benefits.',
+        ],
+        bullets: [
+      'Ask for the exact coating product and color proposed.',
+      'Review CRRC-rated solar reflectance and thermal emittance where listed.',
+      'Use utility bills or an energy model to estimate building-specific impact.',
+      'Do not treat a roof-surface temperature difference as a guaranteed bill reduction.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'How much can a reflective roof coating reduce my electric bill?', answer: 'There is no reliable universal percentage. Savings depend on insulation, HVAC efficiency, building use, climate, roof condition and the product\'s measured performance.' },
+      { question: 'Can a white roof be 50 degrees cooler?', answer: 'ENERGY STAR cites an example comparing a clean white roof reflecting 80% of sunlight with a gray roof reflecting 20% on a typical summer afternoon. That is a surface-temperature comparison, not a promise for every roof.' },
+      { question: 'Does every roof coating qualify as a cool roof?', answer: 'No. Reflective performance varies by formulation, color and product. Review measured solar reflectance and thermal emittance for the exact product.' },
+      { question: 'Will a reflective roof reduce heating costs too?', answer: 'Not necessarily. A reflective roof can reduce solar heat gain in summer, but in some climates it may also reduce useful winter heat gain. Annual building performance should be considered.' },
+    ],
+    sourceLinks: [
+      { name: 'ENERGY STAR: Cool Roofs', href: 'https://www.energystar.gov/products/cool-roofs' },
+      { name: 'Cool Roof Rating Council: Rated Products', href: 'https://coolroofs.org/directory' },
+    ],
+    relatedLinks: [
+      { name: 'Protect Your HVAC Investment', href: '/resources/roof-coatings-and-hvac-performance' },
+      { name: 'Tax Incentives and Energy Efficiency', href: '/resources/commercial-roof-energy-tax-incentives' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+    ],
+  },
+
+  '/resources/roof-coatings-and-hvac-performance': {
+    title: 'Commercial Roof Coatings, HVAC Performance & Building Comfort | CRD',
+    metaDescription: 'Learn how reflective commercial roof systems can reduce roof heat gain and cooling demand, and what building owners should evaluate before expecting HVAC savings.',
+    canonicalPath: '/resources/roof-coatings-and-hvac-performance',
+    eyebrow: 'Building Operations & HVAC Efficiency',
+    headline: 'Reduce Rooftop Heat Gain. Give Your Cooling System a Better Starting Point.',
+    intro: 'Commercial HVAC systems work to remove heat from occupied buildings. A roof that absorbs and transfers less solar heat may reduce part of the cooling load, especially during hot sunny weather. Reflective roof restoration can be one part of a broader building-efficiency strategy, but it is not a substitute for properly maintained and correctly sized HVAC equipment.',
+    sections: [
+      {
+        heading: 'The Roof and HVAC System Work Together',
+        paragraphs: [
+          'A low-slope roof receives intense solar exposure. When the roof surface becomes hot, heat can move through the roof assembly and contribute to the building\'s cooling load. A properly selected reflective roof surface can reduce roof temperature and the amount of solar heat transferred inward.',
+          'ENERGY STAR identifies reduced air-conditioning costs and reduced strain on the electrical grid during peak demand as potential cool-roof benefits. The actual effect on an individual HVAC system depends on the entire building.',
+        ],
+        bullets: [
+      'Lower roof surface temperatures under suitable conditions.',
+      'Potential reduction in peak cooling demand.',
+      'Improved indoor comfort in some buildings, depending on insulation and system design.',
+    ],
+      },
+      {
+        heading: 'Why This Matters for Equipment and Operating Costs',
+        paragraphs: [
+          'When the building gains less heat through the roof, cooling equipment may have less heat to remove during some operating periods. This can support lower cooling energy use and may reduce runtime or peak demand in suitable buildings. It does not establish a specific percentage of compressor life extension or guarantee fewer service calls.',
+          'Equipment condition, refrigerant charge, airflow, controls, maintenance and sizing remain major determinants of HVAC performance. Roof restoration should be considered alongside, not instead of, normal HVAC maintenance.',
+        ],
+        bullets: [
+      'Review cooling schedules and peak summer utility demand.',
+      'Maintain coils, filters, refrigerant charge and airflow.',
+      'Evaluate roof insulation and air leakage as well as reflectivity.',
+      'Compare HVAC runtime and energy use while adjusting for weather and occupancy.',
+    ],
+      },
+      {
+        heading: 'Refrigerated and Temperature-Sensitive Facilities',
+        paragraphs: [
+          'Warehouses, food distribution facilities and buildings with refrigerated spaces may have substantial cooling requirements. A reflective roof may reduce some solar heat gain through the roof, but it does not replace refrigeration-system design, insulation, vapor control, air sealing or dock-door management. Any expected benefit should be assessed by the facility\'s energy professional.',
+        ],
+        bullets: [
+      'Review roof and wall insulation.',
+      'Check vapor barriers, air leakage and loading-dock practices.',
+      'Separate refrigeration loads from general building cooling when analyzing utility data.',
+    ],
+      },
+      {
+        heading: 'Build a Defensible Savings Estimate',
+        paragraphs: [
+          'A credible estimate begins with baseline utility data, roof assembly information, operating hours, HVAC characteristics and the exact reflective product\'s performance ratings. Energy modeling or a qualified energy professional may be needed for a reliable forecast. Avoid converting a surface-temperature difference directly into a percentage of HVAC savings.',
+        ],
+        bullets: [
+      'Collect 12 to 24 months of utility data where available.',
+      'Document HVAC equipment and operating schedules.',
+      'Confirm product performance data and roof assembly details.',
+      'Compare post-project usage with weather and occupancy adjustments.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'Will roof coating make my HVAC units last longer?', answer: 'It may reduce some cooling demand in suitable buildings, but CRD cannot promise a specific increase in HVAC service life. Equipment life depends on maintenance, installation, controls, loading and operating conditions.' },
+      { question: 'Can a reflective roof lower the temperature inside my building?', answer: 'It may reduce heat transfer through the roof, but indoor temperature also depends on insulation, air leakage, windows, internal heat loads and HVAC operation.' },
+      { question: 'Does this help refrigerated warehouses?', answer: 'Potentially, by reducing some roof-related heat gain. Refrigeration performance depends on many other factors and should be evaluated by a qualified energy or refrigeration professional.' },
+    ],
+    sourceLinks: [
+      { name: 'ENERGY STAR: Cool Roofs', href: 'https://www.energystar.gov/products/cool-roofs' },
+    ],
+    relatedLinks: [
+      { name: 'Reflective Roof Coating Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
+      { name: 'Commercial Roof Cost Calculator', href: '/commercial-roof-cost-calculator' },
+      { name: 'Tax Incentives and Energy Efficiency', href: '/resources/commercial-roof-energy-tax-incentives' },
+    ],
+  },
+
+  '/resources/commercial-roof-energy-tax-incentives': {
+    title: 'Commercial Roof Coatings, Energy Ratings & Tax Incentives | CRD',
+    metaDescription: 'Understand ENERGY STAR cool roof guidance, CRRC product ratings, utility rebates and the limited remaining eligibility rules for the federal 179D commercial building deduction.',
+    canonicalPath: '/resources/commercial-roof-energy-tax-incentives',
+    eyebrow: 'Commercial Building Energy Incentives',
+    headline: 'Know the Ratings. Understand the Incentives. Verify Eligibility.',
+    intro: 'Reflective roof improvements may support a building\'s energy-efficiency goals, but a coating does not automatically qualify for a tax credit, tax deduction or ENERGY STAR certification. Incentives depend on the exact product, project scope, building, utility territory, construction timing and current law. CRD provides roofing information, not tax or legal advice.',
+    sections: [
+      {
+        heading: 'ENERGY STAR Is an Efficiency Resource, Not an Automatic Coating Tax Credit',
+        paragraphs: [
+          'ENERGY STAR explains how cool roofs use solar reflectance and thermal emittance to reduce roof surface temperatures and potentially reduce air-conditioning demand. Its cool-roof guidance should not be interpreted as a blanket federal tax credit for applying a roof coating.',
+          'Ask the manufacturer for product-specific technical data and any applicable certification or listing. Do not describe a coating as ENERGY STAR certified unless that exact product and claim are supported by current official documentation.',
+        ],
+        bullets: [
+      'Identify the exact product, formulation and color.',
+      'Review published solar reflectance and thermal emittance.',
+      'Check current ENERGY STAR and Cool Roof Rating Council resources before making a certification claim.',
+    ],
+      },
+      {
+        heading: 'Cool Roof Rating Council Product Ratings',
+        paragraphs: [
+          'The Cool Roof Rating Council maintains a product directory with radiative performance information, including solar reflectance and thermal emittance. These values can help owners and design professionals compare products. A rating is product performance information; it is not itself a tax credit or proof that a building will achieve a particular utility savings.',
+        ],
+        bullets: [
+      'Check the exact product listing and color.',
+      'Review initial and aged reflectance data when available.',
+      'Confirm the proposed system and substrate are approved by the manufacturer.',
+    ],
+      },
+      {
+        heading: 'Federal Section 179D: A Critical 2026 Deadline',
+        paragraphs: [
+          'The federal Energy Efficient Commercial Buildings Deduction under Internal Revenue Code Section 179D has a statutory termination rule. Under current IRS guidance, the deduction does not apply to property for which construction begins after June 30, 2026. Certain projects with construction beginning on or before that date may still qualify if all other requirements are met.',
+          'The deduction is not a general roof-coating rebate. Eligible property must meet technical energy-savings and building requirements, and the deduction generally involves qualifying building systems including the building envelope, HVAC, lighting or hot water. A roof coating by itself does not establish eligibility. Project timing, energy modeling or measurement, certification and tax rules matter.',
+        ],
+        bullets: [
+      'Do not assume a project starting after June 30, 2026 qualifies under Section 179D.',
+      'For qualifying earlier projects, retain contracts, construction-start documentation, product records and energy certifications.',
+      'Have a qualified tax professional determine eligibility and complete required filings.',
+    ],
+      },
+      {
+        heading: 'Utility Rebates and Local Incentives',
+        paragraphs: [
+          'Some utilities and state or local programs offer incentives for eligible energy-efficiency improvements. Availability changes by service territory, customer class, product, project size, pre-approval rules and funding. A commercial property owner should check with the serving electric utility before signing a contract or beginning work; some programs require pre-approval or an energy assessment.',
+        ],
+        bullets: [
+      'Identify the property\'s electric utility and rate class.',
+      'Ask whether cool-roof, building-envelope or whole-building efficiency incentives are currently funded.',
+      'Confirm product requirements, pre-approval, documentation and application deadlines in writing.',
+    ],
+      },
+      {
+        heading: 'Tax Treatment Depends on the Project',
+        paragraphs: [
+          'Whether a roof restoration expense is currently deductible, capitalized or depreciated depends on the facts and applicable tax rules. Do not assume every coating project is a repair expense or qualifies for immediate expensing. Owners should consult their CPA or tax attorney before making a tax decision.',
+        ],
+        bullets: [
+      'Separate roofing scope and invoices into documented work categories.',
+      'Retain inspection reports, proposals, product data and completion records.',
+      'Obtain project-specific advice from the owner\'s tax professional.',
+    ],
+      },
+    ],
+    faqs: [
+      { question: 'Does an ENERGY STAR roof coating qualify for a federal tax credit?', answer: 'There is no blanket federal tax credit simply for applying an ENERGY STAR or reflective roof coating. Product claims and project eligibility must be checked against current official rules.' },
+      { question: 'Can a commercial roof coating qualify for Section 179D in 2026?', answer: 'Potentially only where the property and project satisfy the applicable requirements and the construction-start deadline of June 30, 2026. A coating alone does not establish eligibility. Consult a qualified tax professional.' },
+      { question: 'Are utility rebates available in Texas, Arkansas, Oklahoma or Louisiana?', answer: 'Programs vary by utility territory and change over time. The property owner should confirm current availability, eligible products and pre-approval requirements directly with the serving utility.' },
+      { question: 'Can CRD tell me whether my project qualifies for a tax deduction?', answer: 'CRD can provide the roofing scope and product documentation needed for review, but tax eligibility must be determined by the owner\'s CPA or tax attorney.' },
+    ],
+    sourceLinks: [
+      { name: 'IRS: Energy Efficient Commercial Buildings Deduction', href: 'https://www.irs.gov/credits-deductions/energy-efficient-commercial-buildings-deduction' },
+      { name: 'IRS: Instructions for Form 7205', href: 'https://www.irs.gov/instructions/i7205' },
+      { name: 'ENERGY STAR: Tax Deductions for Commercial Buildings', href: 'https://www.energystar.gov/about/federal_tax_credits/tax_credits_commercial_buildings' },
+      { name: 'Cool Roof Rating Council: Rated Products', href: 'https://coolroofs.org/directory' },
+    ],
+    relatedLinks: [
+      { name: 'Reflective Roof Coating Energy Savings', href: '/resources/reflective-roof-coating-energy-savings' },
+      { name: 'Environmental Benefits of Roof Restoration', href: '/resources/environmental-benefits-of-roof-restoration' },
+      { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace' },
+      { name: 'Commercial Roof Coatings', href: '/commercial-roof-coatings' },
     ],
   },
 };

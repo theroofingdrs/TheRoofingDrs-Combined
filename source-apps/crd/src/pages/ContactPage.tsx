@@ -135,12 +135,12 @@ export const ContactPage: React.FC = () => {
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-xs font-mono-crd uppercase">Field Operations & Dispatch Base</span>
+                    <span className="text-slate-400 block text-xs font-mono-crd uppercase">Commercial Service Area</span>
                     <span className="text-white text-sm font-semibold block">
-                      {BUSINESS_INFO.address.street}
+                      {BUSINESS_INFO.statesCovered.join(", ")}
                     </span>
                     <span className="text-slate-400 text-xs">
-                      {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state} {BUSINESS_INFO.address.zip}
+                      Project availability confirmed by location and scope
                     </span>
                   </div>
                 </div>

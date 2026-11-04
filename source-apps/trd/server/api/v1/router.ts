@@ -4,7 +4,9 @@
  */
 
 import express, { Request, Response } from 'express';
+import { requireOwnerAuth } from '../../middleware/requireOwnerAuth.ts';
 import { getDatabase, persistDatabase, generateId } from '../../db/database.ts';
+import { saveSharedLead, getSharedLeads, getSharedLead } from '../../db/supabaseLeads.ts';
 import { calculateLeadScore } from '../../services/scoring.ts';
 import { logAuditAction, getAuditLogs } from '../../services/audit.ts';
 import { emitSystemEvent } from '../../services/events.ts';
@@ -61,8 +63,9 @@ apiV1Router.use(express.json());
 
 // Helper to extract caller context for audit logging
 function getCallerContext(req: Request) {
-  const userId = (req.headers['x-user-id'] as string) || 'anonymous';
-  const userRole = (req.headers['x-user-role'] as string) || 'PUBLIC';
+  const verified = (req as Request & { verifiedStaff?: { id: string; email: string } }).verifiedStaff;
+  const userId = verified?.id || 'anonymous';
+  const userRole = verified ? 'OWNER' : 'PUBLIC';
   const ipAddress = req.ip || req.socket.remoteAddress || 'unknown';
   const userAgent = req.headers['user-agent'] || 'unknown';
   return { userId, userRole, ipAddress, userAgent };
@@ -157,6 +160,13 @@ apiV1Router.get('/business-rules', (req, res) => {
   res.json(db.businessRules);
 });
 
+// All remaining CRM and administration endpoints require a verified owner session.
+// Public inquiry submission remains available without staff authentication.
+apiV1Router.use((req, res, next) => {
+  if (req.method === 'POST' && req.path === '/leads') return next();
+  return requireOwnerAuth(req, res, next);
+});
+
 apiV1Router.get('/users', (req, res) => {
   const db = getDatabase();
   const safeUsers = (db.users || []).map((u: any) => {
@@ -169,16 +179,20 @@ apiV1Router.get('/users', (req, res) => {
 // -------------------------------------------------------------
 // 3. LEADS (Inbound Diagnostic Inquiries & Management)
 // -------------------------------------------------------------
-apiV1Router.get('/leads', (req, res) => {
-  const db = getDatabase();
-  res.json(db.leads);
+apiV1Router.get('/leads', async (req, res) => {
+  try { res.json(await getSharedLeads()); }
+  catch (error) { console.error('Shared lead list failed:', error); res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
 });
 
 apiV1Router.post('/leads', async (req, res) => {
   const db = getDatabase();
   const body = req.body;
+  const textFields = ['name','phone','email','address','city','state','zip','serviceRequested','leadType','preferredContactMethod','message','source','landingPage','referrer','utmSource','utmMedium','utmCampaign'];
+  if (!body || typeof body !== 'object' || Array.isArray(body) || textFields.some(field => body[field] !== undefined && (typeof body[field] !== 'string' || body[field].length > 10000))) {
+    return res.status(400).json({ error: 'Please enter valid contact and roofing request details.' });
+  }
 
-  if (!body.name || !body.phone) {
+  if (!body.name?.trim() || !body.phone?.trim()) {
     return res.status(400).json({ error: 'Name and phone number are required to submit an inquiry.' });
   }
 
@@ -214,7 +228,7 @@ apiV1Router.post('/leads', async (req, res) => {
     referrer: body.referrer,
     firstTouchAttribution: body.source || 'Direct',
     lastTouchAttribution: body.source || 'Direct',
-    division: body.division || (body.serviceRequested?.toLowerCase().includes('commercial') || body.leadType === 'COMMERCIAL' ? 'COMMERCIAL' : 'RESIDENTIAL'),
+    division: 'RESIDENTIAL',
     status: 'NEW',
     score,
     scoreReasons,
@@ -222,6 +236,8 @@ apiV1Router.post('/leads', async (req, res) => {
     updatedAt: now,
   };
 
+  try { await saveSharedLead(newLead); }
+  catch (error) { console.error('Shared lead save failed:', error); return res.status(503).json({ error: 'We could not save your inquiry right now. Please try again.' }); }
   db.leads.unshift(newLead);
 
   // Record initial activity
@@ -247,30 +263,32 @@ apiV1Router.post('/leads', async (req, res) => {
     userAgent: ctx.userAgent,
   });
 
-  await emitSystemEvent({
+  try { await emitSystemEvent({
     type: 'LEAD_CREATED',
     entityType: 'Lead',
     entityId: newLead.id,
     data: newLead,
     userId: ctx.userId,
-  });
+  }); } catch (error) { console.error('Lead saved; follow-up event failed:', error); }
 
   res.status(201).json(newLead);
 });
 
-apiV1Router.get('/leads/:id', (req, res) => {
-  const db = getDatabase();
-  const lead = db.leads.find((l) => l.id === req.params.id);
-  if (!lead) return res.status(404).json({ error: 'Lead not found' });
-  res.json(lead);
+apiV1Router.get('/leads/:id', async (req, res) => {
+  try {
+    const lead = await getSharedLead(req.params.id);
+    if (!lead) return res.status(404).json({ error: 'Lead not found' });
+    res.json(lead);
+  } catch (error) { console.error('Shared lead lookup failed:', error); res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
 });
 
-apiV1Router.patch('/leads/:id', (req, res) => {
+apiV1Router.patch('/leads/:id', async (req, res) => {
   const db = getDatabase();
+  let existing: Lead | null;
+  try { existing = await getSharedLead(req.params.id); }
+  catch (error) { console.error('Shared lead lookup failed:', error); return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
+  if (!existing) return res.status(404).json({ error: 'Lead not found' });
   const index = db.leads.findIndex((l) => l.id === req.params.id);
-  if (index === -1) return res.status(404).json({ error: 'Lead not found' });
-
-  const existing = db.leads[index];
   const previousState = { ...existing };
   const updated: Lead = {
     ...existing,
@@ -278,7 +296,10 @@ apiV1Router.patch('/leads/:id', (req, res) => {
     updatedAt: new Date().toISOString(),
   };
 
-  db.leads[index] = updated;
+  try { await saveSharedLead(updated); }
+  catch (error) { console.error('Shared lead update failed:', error); return res.status(503).json({ error: 'Lead update could not be saved.' }); }
+  if (index >= 0) db.leads[index] = updated;
+  else db.leads.unshift(updated);
 
   const ctx = getCallerContext(req);
 

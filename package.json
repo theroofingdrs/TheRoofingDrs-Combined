@@ -3,8 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm --prefix source-apps/trd install && npm --prefix source-apps/trd run build && npm --prefix source-apps/crd install && npm --prefix source-apps/crd run build",
+    "install:apps": "npm --prefix source-apps/trd ci && npm --prefix source-apps/crd ci",
+    "typecheck": "npm --prefix source-apps/trd run lint && npm --prefix source-apps/crd run lint",
+    "build": "npm --prefix source-apps/trd run build && npm --prefix source-apps/crd run build",
     "start": "node server.mjs",
-    "test": "npm run build && node scripts/smoke-test.mjs"
+    "test": "npm run typecheck && node --experimental-strip-types booking/readiness.test.mjs && npm run build && node scripts/smoke-test.mjs"
   }
 }
