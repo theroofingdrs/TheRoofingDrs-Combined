@@ -1,3 +1,4 @@
+import { PUBLIC_BLOG_API } from '../../../../shared/seo/blog.ts';
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CalendarDays, Clock3, Search } from 'lucide-react';
 import { SeoMeta } from '../components/SeoMeta';
@@ -8,7 +9,7 @@ type Section = { heading: string; paragraphs: string[] };
 type Post = { slug: string; title: string; excerpt: string; category: string; date: string; readTime: string; image: string; alt: string; sections: Section[]; body_markdown?: string; seoTitle?: string; seoDescription?: string; publishedAt?: string };
 
 
-const BLOG_API = 'https://gubvelngdohrfvqeeabu.supabase.co/functions/v1/crm-public-blog';
+const BLOG_API = PUBLIC_BLOG_API;
 
 function renderMarkdown(markdown: string) {
   return markdown.split(/\n\s*\n/).map((raw, index) => {

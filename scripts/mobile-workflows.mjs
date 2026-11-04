@@ -55,6 +55,18 @@ try{
   await wait(()=>p.evaluate('document.querySelector('+JSON.stringify(toggle)+').getAttribute("aria-expanded")==="false"'));
   assert(await p.evaluate('document.activeElement===document.querySelector('+JSON.stringify(toggle)+')'));
   assert(await p.evaluate('document.querySelector("link[rel=canonical]").href.includes("/'+division+'/contact")'));
+  if(division==='residential'){
+   const navigate=async route=>{await p.evaluate(`history.pushState({},'',${JSON.stringify('/residential'+route)});window.dispatchEvent(new PopStateEvent('popstate'));`);};
+   const faq=`[...document.querySelectorAll('script[type="application/ld+json"]')].some(e=>JSON.stringify(JSON.parse(e.textContent)).includes('"@type":"FAQPage"'))`;
+   for(const route of ['/faq','/','/faq/','/roofing/roof-repair','/contact']){
+    await navigate(route);const expected=route==='/faq'||route==='/';const canonical='https://theroofingdrs.com/residential'+route;
+    await wait(()=>p.evaluate(`(${faq})===${expected}&&document.querySelector('link[rel=canonical]').href===${JSON.stringify(canonical)}`));
+    if(expected)assert(await p.evaluate(`(()=>{const collect=x=>!x||typeof x!=='object'?[]:x['@type']==='FAQPage'?x.mainEntity:Object.values(x).flatMap(collect);const questions=[...document.querySelectorAll('script[type="application/ld+json"]')].flatMap(e=>collect(JSON.parse(e.textContent)));return questions.length===10&&questions.every(q=>document.body.innerText.includes(q.name));})()`),'FAQ schema questions must actually be displayed');
+    assert(await p.evaluate(`!!document.getElementById('shared-organization-jsonld')`));
+    assert.equal(await p.evaluate(`document.querySelectorAll('link[rel=canonical]').length`),1);
+   }
+   console.log('PASS residential client navigation: FAQ/home schema present; repair/contact schema cleared; shared Organization/canonical retained');
+  }
 
   await p.evaluate(`(async()=>{for(const e of document.querySelectorAll('form input')){if(['checkbox','radio','hidden'].includes(e.type))continue;const value=e.type==='email'?'mobile@example.test':e.type==='tel'?'9035550100':e.name==='zip'?'00000':e.name==='state'?'TX':e.name==='city'?'Test':'Synthetic mobile';Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(e,value);e.dispatchEvent(new Event('input',{bubbles:true}));await new Promise(r=>requestAnimationFrame(r));}return true;})()`);
   assert.equal(await p.evaluate('document.querySelector("form").checkValidity()'),true);
