@@ -106,7 +106,31 @@ jobs:
             ("IMG_4704.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-project-02.jpg","Commercial","Commercial project gallery"),
             ("IMG_4705.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-project-03.jpg","Commercial","Commercial project gallery")
           ]
-          manifest = []
+
+          # Curated multi-category reuse. Each original remains a single source asset;
+          # placements are references, not duplicate copies.
+          extra_metadata = {
+            "IMG_4035.jpeg": {"tags": ["agricultural","barn","metal-roof","reroofing","roof-replacement","illustrative-service-photo"], "additional_placements": ["Agricultural and barn reroofing","Metal roof replacement","Roof replacement and restoration"]},
+            "IMG_4012.jpeg": {"tags": ["commercial","flat-roof","roof-coatings","roof-restoration","maintenance","industrial"], "additional_placements": ["Commercial roof coatings","Silicone roof restoration","Warehouse and storage building coatings","Commercial roof maintenance"]},
+            "IMG_4037.jpeg": {"tags": ["commercial","roof-replacement","tear-off","reroofing","commercial-flat-roof"], "additional_placements": ["Commercial roof replacement","Large-loss roof recovery","Industrial facility reroofing"]},
+            "IMG_4059.jpeg": {"tags": ["commercial","roof-inspection","maintenance","roof-repair","low-slope"], "additional_placements": ["Commercial roof inspections","Preventive maintenance","Commercial roof repair"]},
+            "IMG_4060.jpeg": {"tags": ["commercial","maintenance","roof-inspection","roof-repair","coatings"], "additional_placements": ["Commercial roof maintenance","Roof inspection","Commercial coatings and restoration"]},
+            "IMG_4690.jpeg": {"tags": ["commercial","industrial","warehouse","storage","low-slope","roof-coatings","silicone","restoration","maintenance"], "additional_placements": ["Industrial facilities","Warehouse and storage building coatings","Silicone roof restoration","Commercial metal roofing","Preventive maintenance"]},
+            "IMG_4691.jpeg": {"tags": ["commercial","tpo","single-ply","roof-inspection","roof-repair","installation"], "additional_placements": ["TPO roofing","Commercial roof inspections","Commercial roof repair","Single-ply roofing systems"]},
+            "IMG_4692.jpeg": {"tags": ["commercial","tpo","pvc","single-ply","membrane-installation","flat-roof"], "additional_placements": ["TPO roofing","PVC roofing","Single-ply roofing systems","Commercial roof replacement"]},
+            "IMG_4693.jpeg": {"tags": ["commercial","roof-inspection","drainage","maintenance","flat-roof","repair"], "additional_placements": ["Commercial roof inspections","Roof drainage and maintenance","Commercial roof repair"]},
+            "IMG_4694.jpeg": {"tags": ["commercial","roof-system","restoration","metal-roof","low-slope"], "additional_placements": ["Commercial roof systems","Metal roof restoration","Commercial roof coatings"]},
+            "IMG_4695.jpeg": {"tags": ["commercial","maintenance","roof-inspection","drainage","flat-roof"], "additional_placements": ["Commercial roof maintenance","Commercial roof inspections","Roof drainage details"]},
+            "IMG_4696.jpeg": {"tags": ["commercial","industrial","warehouse","storage","low-slope","roof-coatings","silicone","restoration","maintenance"], "additional_placements": ["Industrial facilities","Warehouse and storage building coatings","Silicone roof restoration","Commercial metal roofing","Preventive maintenance"]},
+            "IMG_4697.jpeg": {"tags": ["commercial","church","institutional","facility-roofing","roof-inspection"], "additional_placements": ["Church and religious facilities","Institutional roofing","Commercial roof inspections"]},
+            "IMG_4698.jpeg": {"tags": ["commercial","industrial","institutional","facility-roofing","low-slope"], "additional_placements": ["Industrial facilities","Institutional roofing","Commercial roof maintenance"]},
+            "IMG_4699.jpeg": {"tags": ["commercial","church","institutional","facility-roofing","roofing"], "additional_placements": ["Church and religious facilities","Institutional roofing","Commercial roofing overview"]},
+            "IMG_4700.jpeg": {"tags": ["commercial","church","metal-roof","institutional","facility-roofing"], "additional_placements": ["Church and religious facilities","Commercial metal roofing","Metal roof restoration"]},
+            "IMG_4703.jpeg": {"tags": ["commercial","government","institutional","facility-roofing","roofing"], "additional_placements": ["Government and institutional facilities","Commercial roofing overview","Commercial roof inspections"]},
+            "IMG_4704.jpeg": {"tags": ["commercial","retail","facility-roofing","low-slope","roofing"], "additional_placements": ["Retail and commercial facilities","Commercial roofing overview","Commercial roof maintenance"]},
+            "IMG_4705.jpeg": {"tags": ["commercial","church","institutional","facility-roofing","roofing"], "additional_placements": ["Church and religious facilities","Institutional roofing","Commercial roofing overview"]},
+          }
+                    manifest = []
           for original, relative, brand, placement in mapping:
               source = src / original
               if not source.exists():
@@ -114,11 +138,17 @@ jobs:
               target = dst / relative
               target.parent.mkdir(parents=True, exist_ok=True)
               shutil.copy2(source, target)
+              metadata = extra_metadata.get(original, {})
+              default_tag = placement.lower().replace('&', 'and').replace('/', '-').replace(' ', '-')
+              tags = sorted(set([brand.lower(), default_tag, *metadata.get('tags', [])]))
               manifest.append({
                   "original": f"image-library/incoming/{original}",
                   "website_asset": relative.removeprefix("source-apps/trd/public").removeprefix("source-apps/crd/public"),
                   "brand": brand,
                   "recommended_placement": placement,
+                  "tags": tags,
+                  "additional_placements": metadata.get("additional_placements", []),
+                  "usage_context": "illustrative-service-imagery",
                   "sha256": hashlib.sha256(source.read_bytes()).hexdigest()
               })
           # Ensure the target branch has the manifest directory.
@@ -132,9 +162,14 @@ jobs:
               "Use residential assets for the residential home page, gallery, roof replacement, roof repair, storm damage, inspection, metal roofing and roofing systems pages.\n\n"
               "## Commercial (Commercial ROOF Doctors)\n"
               "Use commercial assets for the commercial home page, commercial roofing overview, coatings and restoration, TPO, EPDM, modified bitumen, metal roofing, inspections, maintenance and replacement pages. Prioritize coatings/restoration content in CRD page imagery.\n\n"
+              "## Multi-category reuse\n"
+              "Each original is retained once. Use the manifest tags and additional_placements to reuse that same website asset across relevant service, roof-type, building-type and industry pages; do not create a separate image copy for each placement.\n\n"
+              "Examples include barn imagery across agricultural reroofing and metal-roof replacement, and warehouse imagery across industrial roofing, storage-building coatings, silicone restoration and maintenance.\n\n"
+              "## Visual truth\n"
+              "Use these images as illustrative service imagery unless a specific completed customer project is independently verified. Do not imply a named customer, address, project result, testimonial or endorsement from an illustrative image.\n\n"
               "## Exclusions and handling\n"
               "Aqua-branded photos are excluded from website-ready copies pending a clean crop. The exact duplicate IMG_4708 is omitted; IMG_4707 is retained. The three previously identified deletion candidates remain in the incoming archive and are not copied to website assets.\n\n"
-              "Use these images as roofing/service illustrations. Do not attach fabricated customer names, locations, project specifications or testimonials to an image unless independently verified.\n"
+              "Use these images as illustrative roofing/service imagery unless a specific completed customer project is independently verified. Do not imply a customer relationship, address, project result, testimonial or endorsement from an image alone.\n"
           )
           print(f"Copied {len(manifest)} original-resolution images.")
           PY
