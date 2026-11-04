@@ -55,15 +55,7 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
     description: 'Aerial view of residential roofing work, useful for illustrating roof layout, project scale, and property protection.',
     specs: 'Residential roof installation • Project documentation',
   },
-  {
-    id: 'photo-stone',
-    src: getTrdPublicAssetPath('/assets/images/library/residential-roof-project-detail.jpg'),
-    title: 'Residential Roofing Details',
-    tag: 'Roofing Systems',
-    location: 'Residential Roofing',
-    description: 'Residential roof and building details illustrating material selection, roof design, and finished appearance.',
-    specs: 'Residential roofing systems • Architectural details',
-  },
+
   {
     id: 'photo-crew',
     src: getTrdPublicAssetPath('/assets/images/library/residential-roof-installation-01.jpg'),
