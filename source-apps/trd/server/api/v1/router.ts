@@ -204,6 +204,7 @@ apiV1Router.post('/leads', async (req, res) => {
     insuranceRelatedFlag: Boolean(body.insuranceRelatedFlag),
     preferredContactMethod: body.preferredContactMethod || 'PHONE',
     message: body.message || '',
+    estimateDetails: body.estimateDetails || undefined,
     photoUrls: body.photoUrls || [],
     landingPage: body.landingPage || '/',
     source: body.source || 'Direct',

@@ -14,8 +14,8 @@ export const BUSINESS_INFO = {
   model: 'Service-Area Business',
   disclaimerServiceArea:
     'Commercial Roof Doctors is a field-operated commercial roofing and disaster-response contractor. Our physical facility supports regional operations and equipment deployment; we serve commercial clients directly at their facility locations.',
-  primaryTerritory: 'Ark-La-Tex and surrounding region',
-  primaryRadius: 'Approximately 75 miles from Texarkana (larger commercial projects considered beyond)',
+  primaryTerritory: 'Texas, Arkansas, Louisiana, and Oklahoma',
+  primaryRadius: 'Statewide coverage across Texas, Arkansas, Louisiana, and Oklahoma; project availability and travel are confirmed during consultation.',
   statesCovered: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'],
   taglines: {
     primary: 'PRECISION. PROTECTION. PERFORMANCE.',
@@ -71,7 +71,7 @@ export const NAVIGATION_LINKS = {
     { name: 'Coat vs. Replace Guide', href: '/coat-vs-replace', desc: 'Evaluation framework for commercial decision makers' },
   ],
   storm: [
-    { name: 'Storm Damage Hub', href: '/storm-damage', desc: 'Ark-La-Tex storm response and damage mitigation' },
+    { name: 'Storm Damage Hub', href: '/storm-damage', desc: 'Four-state storm response and damage mitigation' },
     { name: 'Hail Damage', href: '/hail-damage', desc: 'Fractured membranes, bruised insulation & spatter' },
     { name: 'Wind Damage', href: '/wind-damage', desc: 'Edge metal blow-off, uplift & membrane detachment' },
     { name: 'Emergency Roofing', href: '/emergency-roofing', desc: 'Active water intrusion containment & dry-in' },
@@ -117,7 +117,7 @@ export const NAVIGATION_LINKS = {
     { name: 'All Industries', href: '/industries', desc: 'Explore commercial roofing by property type' },
   ],
   serviceAreas: [
-    { name: 'Regional Territory Hub', href: '/service-areas', desc: '75-mile Texarkana Ark-La-Tex radius' },
+    { name: 'Regional Territory Hub', href: '/service-areas', desc: 'Statewide commercial service coverage across TX, AR, LA, and OK' },
     { name: 'Texas Commercial Service Area', href: '/service-areas/texas', desc: 'Texarkana TX, Bowie County, NE Texas' },
     { name: 'Arkansas Commercial Service Area', href: '/service-areas/arkansas', desc: 'Texarkana AR, Miller County, SW Arkansas' },
     { name: 'Louisiana Commercial Service Area', href: '/service-areas/louisiana', desc: 'Shreveport, Bossier, NW Louisiana' },

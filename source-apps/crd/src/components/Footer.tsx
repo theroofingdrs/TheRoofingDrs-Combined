@@ -4,6 +4,8 @@ import { Link } from '../router';
 import { BUSINESS_INFO } from '../constants';
 import { CrdLogo } from './CrdLogo';
 
+const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#151515] border-t border-[#262626] text-[#888888] font-sans-crd pt-16 pb-24 lg:pb-16">
@@ -21,14 +23,14 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-[#cccccc] max-w-md leading-relaxed">
-              Commercial roofing, membrane restoration, storm disaster response, and long-term roof asset management for property owners, facility directors, and commercial portfolios across the Ark-La-Tex and surrounding 75-mile radius.
+              Commercial roofing, membrane restoration, storm disaster response, and long-term roof asset management for property owners, facility directors, and commercial portfolios across Texas, Arkansas, Louisiana, and Oklahoma.
             </p>
 
             <div className="space-y-2 pt-2 text-sm text-[#dddddd]">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#d99a19] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-[#888888] block font-mono-crd">ARK-LA-TEX DIRECT DISPATCH</span>
+                  <span className="text-xs text-[#888888] block font-mono-crd">FOUR-STATE DIRECT DISPATCH</span>
                   <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="font-bold hover:text-[#d99a19] transition-colors">
                     {BUSINESS_INFO.phone}
                   </a>
@@ -47,7 +49,7 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-[#d99a19] shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs text-[#888888] block font-mono-crd">OPERATIONS & DISPATCH BASE</span>
-                  <span>{BUSINESS_INFO.address.display}</span>
+                  <span>{BUSINESS_INFO.address?.display || [BUSINESS_INFO.address?.street, BUSINESS_INFO.address?.city, BUSINESS_INFO.address?.state, BUSINESS_INFO.address?.zip].filter(Boolean).join(', ') || 'Texarkana, TX'}</span>
                 </div>
               </div>
             </div>
@@ -97,6 +99,11 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/commercial-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
                   Membrane Restoration
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-[#d99a19] text-[#d99a19] font-semibold transition-colors">
+                  Commercial Roofing Insights
                 </Link>
               </li>
               <li>
@@ -227,9 +234,9 @@ export const Footer: React.FC = () => {
               <Link to="/contact" className="hover:text-[#cccccc] transition-colors">
                 Contact
               </Link>
-              <Link to="/admin" className="hover:text-[#d99a19] font-mono-crd text-[11px] transition-colors">
+              <a href={OPERATIONS_PORTAL_URL} className="hover:text-[#d99a19] font-mono-crd text-[11px] transition-colors">
                 Staff Portal
-              </Link>
+              </a>
             </div>
           </div>
         </div>

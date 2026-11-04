@@ -4,6 +4,8 @@ import { Link, useRouter } from '../router';
 import { BUSINESS_INFO, NAVIGATION_LINKS } from '../constants';
 import { CrdLogo } from './CrdLogo';
 
+const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+
 interface HeaderProps {
   onOpenInspection: () => void;
   onOpenEmergency: () => void;
@@ -295,9 +297,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                     className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
                   >
                     <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
-                      Ark-La-Tex Service Territory
+                      Four-State Service Territory
                     </div>
-                    <div className="text-xs text-[#888888] mt-0.5">75-mile radius and regional commercial coverage</div>
+                    <div className="text-xs text-[#888888] mt-0.5">Four-state commercial roofing coverage</div>
                   </Link>
                 </div>
               )}
@@ -312,6 +314,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               }`}
             >
               About
+            </Link>
+            <Link
+              id="nav-blog-link"
+              to="/blog"
+              className={`px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
+                currentPath.startsWith('/blog') ? 'text-[#d99a19]' : 'text-[#cccccc]'
+              }`}
+            >
+              Blog
             </Link>
           </nav>
 
@@ -376,7 +387,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           {/* Quick Contact Header in Mobile */}
           <div className="bg-[#111111] p-3 rounded-none border border-[#333333] flex items-center justify-between">
             <div>
-              <div className="text-xs text-[#888888] font-mono-crd">ARK-LA-TEX DISPATCH</div>
+              <div className="text-xs text-[#888888] font-mono-crd">FOUR-STATE DISPATCH</div>
               <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="text-base font-bold text-[#d99a19]">
                 {BUSINESS_INFO.phone}
               </a>
@@ -517,12 +528,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             <Link to="/service-areas" className="block py-1.5 text-sm text-[#cccccc] hover:text-white">
               Service Areas (TX, AR, LA, OK)
             </Link>
+            <Link to="/blog" className="block py-1.5 text-sm font-bold text-[#d99a19] hover:underline">
+              Commercial Roofing Blog
+            </Link>
             <Link to="/contact" className="block py-1.5 text-sm text-[#cccccc] hover:text-white">
               Contact & Direct Inquiries
             </Link>
-            <Link to="/admin" className="block py-1.5 text-xs font-mono-crd text-[#666666] hover:text-[#888888]">
-              Staff / Admin Dashboard
-            </Link>
+            <a href={OPERATIONS_PORTAL_URL} className="block py-1.5 text-xs font-mono-crd text-[#666666] hover:text-[#d99a19]">
+              Staff / Admin Operations
+            </a>
           </div>
         </div>
       )}

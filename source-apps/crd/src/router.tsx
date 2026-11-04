@@ -5,6 +5,10 @@ interface RouterContextType {
   navigate: (path: string) => void;
 }
 
+const COMMERCIAL_BASE = '/commercial';
+const stripCommercialBase = (path: string) => (path.replace(/^\/commercial(?=\/|$)/, '') || '/');
+const withCommercialBase = (path: string) => `${COMMERCIAL_BASE}${path === '/' ? '/' : path.startsWith('/') ? path : `/${path}`}`;
+
 const RouterContext = createContext<RouterContextType>({
   currentPath: '/',
   navigate: () => {},
@@ -12,35 +16,14 @@ const RouterContext = createContext<RouterContextType>({
 
 export const useRouter = () => useContext(RouterContext);
 
-// The combined site mounts the commercial app below /commercial/.
-// Keep the app's route table root-relative while preserving that public URL prefix.
-const COMMERCIAL_BASE_PATH = '/commercial';
-
-const getAppPath = (pathname: string) => {
-  if (pathname === COMMERCIAL_BASE_PATH) return '/';
-  if (pathname.startsWith(`${COMMERCIAL_BASE_PATH}/`)) {
-    return pathname.slice(COMMERCIAL_BASE_PATH.length) || '/';
-  }
-  return pathname || '/';
-};
-
-const getBrowserPath = (path: string) => {
-  const isMountedUnderCommercial =
-    window.location.pathname === COMMERCIAL_BASE_PATH ||
-    window.location.pathname.startsWith(`${COMMERCIAL_BASE_PATH}/`);
-  if (!isMountedUnderCommercial) return path;
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  return `${COMMERCIAL_BASE_PATH}${normalizedPath === '/' ? '/' : normalizedPath}`;
-};
-
 export const RouterProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    return getAppPath(window.location.pathname);
+    return stripCommercialBase(window.location.pathname || '/');
   });
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(getAppPath(window.location.pathname));
+      setCurrentPath(stripCommercialBase(window.location.pathname || '/'));
       window.scrollTo(0, 0);
     };
 
@@ -53,9 +36,8 @@ export const RouterProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    const browserPath = getBrowserPath(path);
-    window.history.pushState({}, '', browserPath);
-    setCurrentPath(getAppPath(browserPath));
+    window.history.pushState({}, '', withCommercialBase(path));
+    setCurrentPath(stripCommercialBase(path));
     window.scrollTo(0, 0);
   };
 
@@ -89,7 +71,7 @@ export const Link: React.FC<LinkProps> = ({ to, className, children, onClick, id
   return (
     <a
       id={id}
-      href={to}
+      href={to.startsWith('http') || to.startsWith('tel:') || to.startsWith('mailto:') || to.startsWith('#') ? to : withCommercialBase(to)}
       onClick={handleClick}
       className={`${className || ''} ${isActive ? 'active-link' : ''}`}
       {...rest}

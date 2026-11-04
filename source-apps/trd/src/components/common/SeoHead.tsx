@@ -16,6 +16,14 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
   ogType = 'website',
 }) => {
   useEffect(() => {
+    const toResidentialUrl = (path: string) => {
+      const normalizedPath = path || '/';
+      const prefixedPath = normalizedPath === '/residential' || normalizedPath.startsWith('/residential/')
+        ? normalizedPath
+        : `/residential${normalizedPath === '/' ? '/' : normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`}`;
+      return `https://theroofingdrs.com${prefixedPath}`;
+    };
+
     // 1. Update Document Title
     const fullTitle = title.includes('The Roof Doctors')
       ? title
@@ -44,7 +52,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       ogUrl.setAttribute('property', 'og:url');
       document.head.appendChild(ogUrl);
     }
-    ogUrl.setAttribute('content', window.location.origin + canonicalPath);
+    ogUrl.setAttribute('content', toResidentialUrl(canonicalPath));
 
     let ogTypeMeta = document.querySelector('meta[property="og:type"]');
     if (!ogTypeMeta) {
@@ -61,7 +69,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', window.location.origin + canonicalPath);
+    canonical.setAttribute('href', toResidentialUrl(canonicalPath));
 
     // 5. Injected JSON-LD Schema
     const existingSchema = document.getElementById('route-schema-jsonld');

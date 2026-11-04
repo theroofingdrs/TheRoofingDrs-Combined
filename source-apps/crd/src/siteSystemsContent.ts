@@ -6,7 +6,7 @@ import { ServiceAreaData } from './components/ServiceAreaTemplate';
 export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
   '/tpo-roofing': {
     title: 'Duro-TECH TPO Commercial Roofing | Duro-Last TPO Systems | CRD',
-    metaDescription: 'Duro-TECH TPO commercial roofing installation, replacement, inspections and repairs. Learn about 45, 60 and 80 mil TPO, heat-welded seams, attachment options and fleece-backed systems across the Ark-La-Tex.',
+    metaDescription: 'Duro-TECH TPO commercial roofing installation, replacement, inspections and repairs. Learn about 45, 60 and 80 mil TPO, heat-welded seams, attachment options and fleece-backed systems across Texas, Arkansas, Louisiana, and Oklahoma.',
     canonicalPath: '/tpo-roofing',
     systemName: 'Duro-TECH TPO Roofing',
     systemType: 'TPO',
@@ -83,7 +83,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
 
   '/epdm-roofing': {
     title: 'EPDM Commercial Roofing | Rubber Single-Ply Systems | CRD',
-    metaDescription: 'Commercial EPDM roofing installation, repair, seam maintenance and replacement. Understand black and white EPDM, attachment methods, flashing details and storm inspections across the Ark-La-Tex.',
+    metaDescription: 'Commercial EPDM roofing installation, repair, seam maintenance and replacement. Understand black and white EPDM, attachment methods, flashing details and storm inspections across Texas, Arkansas, Louisiana, and Oklahoma.',
     canonicalPath: '/epdm-roofing',
     systemName: 'EPDM Rubber Roofing',
     systemType: 'EPDM',
@@ -157,7 +157,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
 
   '/pvc-roofing': {
     title: 'Duro-Last PVC Commercial Roofing | Single-Ply Membranes | CRD',
-    metaDescription: 'Duro-Last PVC commercial roofing installation, replacement, repairs and inspections. Explore custom-fabricated sheets, heat-welded seams, fleece-backed options and chemical-exposure considerations across the Ark-La-Tex.',
+    metaDescription: 'Duro-Last PVC commercial roofing installation, replacement, repairs and inspections. Explore custom-fabricated sheets, heat-welded seams, fleece-backed options and chemical-exposure considerations across Texas, Arkansas, Louisiana, and Oklahoma.',
     canonicalPath: '/pvc-roofing',
     systemName: 'Duro-Last PVC Roofing',
     systemType: 'PVC',
@@ -334,7 +334,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
 
   '/commercial-metal-roofing': {
     title: 'Commercial Metal Roofing | Standing Seam & R-Panel | CRD',
-    metaDescription: 'Commercial metal roof repair, standing seam re-roofing, screw fastener replacement, and fluid silicone coatings across the Ark-La-Tex region.',
+    metaDescription: 'Commercial metal roof repair, standing seam re-roofing, screw fastener replacement, and fluid silicone coatings across Texas, Arkansas, Louisiana, and Oklahoma.',
     canonicalPath: '/commercial-metal-roofing',
     systemName: 'Commercial Metal Roofing',
     systemType: 'Metal',
@@ -461,7 +461,7 @@ export const ROOF_SYSTEMS_CONTENT: Record<string, RoofSystemPageData> = {
 export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
   ...INDUSTRY_EXPANSION,
   '/industries/churches': {
-    title: 'Commercial Roofing for Churches & Sanctuaries | Ark-La-Tex',
+    title: 'Commercial Roofing for Churches & Sanctuaries | TX, AR, LA & OK',
     metaDescription: 'Specialized commercial roofing for churches, sanctuaries, and worship facilities across Texas, Arkansas, Louisiana, and Oklahoma. Stealth staging and capital planning.',
     canonicalPath: '/industries/churches',
     industryName: 'Churches & Religious Facilities',
@@ -514,13 +514,13 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
   },
 
   '/industries/industrial': {
-    title: 'Industrial & Warehouse Commercial Roofing | Ark-La-Tex',
+    title: 'Industrial & Warehouse Commercial Roofing | TX, AR, LA & OK',
     metaDescription: 'Industrial warehouse and manufacturing plant roofing. High-efficiency TPO, chemical-resistant PVC, standing seam metal, and 24/7 disaster response.',
     canonicalPath: '/industries/industrial',
     industryName: 'Industrial & Manufacturing Facilities',
     propertyType: 'Industrial',
     heroHeadline: 'Industrial & Warehouse Commercial Roofing.',
-    heroSubtitle: 'Heavy-duty commercial roofing engineered for logistics distribution centers, manufacturing plants, and industrial complexes across the Ark-La-Tex.',
+    heroSubtitle: 'Heavy-duty commercial roofing engineered for logistics distribution centers, manufacturing plants, and industrial complexes across Texas, Arkansas, Louisiana, and Oklahoma.',
     sectorChallenges: [
       { title: 'Severe Interior Asset Value', desc: 'A single roof leak over automated robotic machinery, electronics, or warehouse racking can cause millions in operational losses.' },
       { title: 'Chemical & Exhaust Fumes', desc: 'Industrial exhaust stacks, oils, grease, and chemicals rapidly dissolve standard single-ply roofing membranes.' },
@@ -567,7 +567,7 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
   },
 
   '/industries/retail': {
-    title: 'Commercial Retail & Shopping Center Roofing | Ark-La-Tex',
+    title: 'Commercial Retail & Shopping Center Roofing | TX, AR, LA & OK',
     metaDescription: 'Commercial roofing for shopping centers, strip malls, and retail stores. Fast leak repair, customer-safe staging, and multi-tenant coordination.',
     canonicalPath: '/industries/retail',
     industryName: 'Commercial Retail & Strip Centers',
@@ -618,7 +618,7 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
   },
 
   '/industries/apartments': {
-    title: 'Multifamily & Apartment Commercial Roofing | Ark-La-Tex',
+    title: 'Multifamily & Apartment Commercial Roofing | TX, AR, LA & OK',
     metaDescription: 'Commercial roofing for apartment complexes, multifamily housing, and residential property management firms across Texas and Arkansas.',
     canonicalPath: '/industries/apartments',
     industryName: 'Multifamily & Apartment Complexes',
@@ -1530,11 +1530,11 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
 
 export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas': {
-    title: 'Commercial Roofing Service Areas | Ark-La-Tex Regional Footprint',
-    metaDescription: 'Commercial Roof Doctors operates across a 75-mile regional radius of Texarkana, serving commercial properties in Texas, Arkansas, Louisiana, and Oklahoma.',
+    title: 'Commercial Roofing Service Areas | Four-State Coverage',
+    metaDescription: 'Commercial Roof Doctors serves commercial properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability and travel are confirmed based on property location and scope.',
     canonicalPath: '/service-areas',
-    regionName: 'Ark-La-Tex & Surrounding 75-Mile Region',
-    heroHeadline: 'Ark-La-Tex Commercial Roofing Territory.',
+    regionName: 'Texas, Arkansas, Louisiana & Oklahoma',
+    heroHeadline: 'Four-State Commercial Roofing Coverage.',
     heroSubtitle: 'Centrally dispatched from Texarkana, Commercial Roof Doctors provides direct on-site commercial roofing, restoration, and storm disaster response across four states.',
     weatherAndStormFactors: 'The Ark-La-Tex region sits at the intersection of humid subtropical Gulf air and severe Great Plains frontal boundaries. This dynamic climate triggers intense supercell thunderstorms, 2-inch hail outbreaks, convective straight-line wind events exceeding 80 mph, and severe summer UV thermal cycling.',
     countiesAndCitiesServed: [

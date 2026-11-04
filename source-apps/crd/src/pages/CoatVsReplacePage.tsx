@@ -237,7 +237,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
           Need an Objective Diagnosis of Your Commercial Roof?
         </h2>
         <p className="text-sm text-slate-300 max-w-xl mx-auto">
-          Contact Commercial Roof Doctors to schedule a core sample and infrared moisture audit on your Ark-La-Tex facility.
+          Contact Commercial Roof Doctors to schedule a core sample and infrared moisture audit on your Texas, Arkansas, Louisiana, or Oklahoma facility.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button

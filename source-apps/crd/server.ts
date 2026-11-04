@@ -3,8 +3,9 @@ import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const app = express();
+app.set('trust proxy', true);
 
 app.use(express.json({ limit: '25mb' }));
 app.use(express.urlencoded({ extended: true, limit: '25mb' }));
@@ -475,30 +476,66 @@ app.post('/api/calculator', (req: Request, res: Response) => {
       phone,
       email,
       address,
+      reasonForWork = 'Not sure',
+      dateOfLoss,
+      insurer,
+      policyNumber,
+      claimNumber,
+      adjusterName,
+      adjusterPhone,
+      notes,
+      submitLead = false,
     } = req.body;
+
+    if (submitLead && (!contactName?.trim() || !address?.trim() || !phone?.trim() || !email?.trim())) {
+      return res.status(400).json({ error: 'Full name, property address, phone number, and email are required.' });
+    }
 
     const sqft = Number(squareFootage) || 10000;
     
-    // Baseline ranges per square foot (strictly educational estimates based on typical commercial low-slope systems)
-    let minRate = 4.5;
-    let maxRate = 8.5;
+    // Preliminary commercial pricing. Existing defaults are preserved and can be
+    // overridden through Cloud Run environment variables after owner approval.
+    const pricing = {
+      repairMin: Number(process.env.CRD_REPAIR_MIN_RATE ?? 1.5),
+      repairMax: Number(process.env.CRD_REPAIR_MAX_RATE ?? 3.5),
+      restorationMin: Number(process.env.CRD_RESTORATION_MIN_RATE ?? 3.5),
+      restorationMax: Number(process.env.CRD_RESTORATION_MAX_RATE ?? 7.5),
+      replacementMin: Number(process.env.CRD_REPLACEMENT_MIN_RATE ?? 8.0),
+      replacementMax: Number(process.env.CRD_REPLACEMENT_MAX_RATE ?? 16.0),
+      metalReplacementMinAdd: Number(process.env.CRD_METAL_REPLACEMENT_MIN_ADD ?? 3.0),
+      metalReplacementMaxAdd: Number(process.env.CRD_METAL_REPLACEMENT_MAX_ADD ?? 6.0),
+      pvcReplacementMinAdd: Number(process.env.CRD_PVC_REPLACEMENT_MIN_ADD ?? 1.5),
+      pvcReplacementMaxAdd: Number(process.env.CRD_PVC_REPLACEMENT_MAX_ADD ?? 3.0),
+      complexAccessMinMultiplier: Number(process.env.CRD_COMPLEX_ACCESS_MIN_MULTIPLIER ?? 1.25),
+      complexAccessMaxMultiplier: Number(process.env.CRD_COMPLEX_ACCESS_MAX_MULTIPLIER ?? 1.35),
+    };
+    let minRate: number;
+    let maxRate: number;
 
     if (desiredWork === 'Replacement') {
-      minRate = 8.0;
-      maxRate = 16.0;
-      if (roofSystem === 'Metal') { minRate += 3.0; maxRate += 6.0; }
-      if (roofSystem === 'PVC') { minRate += 1.5; maxRate += 3.0; }
+      minRate = pricing.replacementMin;
+      maxRate = pricing.replacementMax;
+      if (roofSystem === 'Metal') {
+        minRate += pricing.metalReplacementMinAdd;
+        maxRate += pricing.metalReplacementMaxAdd;
+      }
+      if (roofSystem === 'PVC') {
+        minRate += pricing.pvcReplacementMinAdd;
+        maxRate += pricing.pvcReplacementMaxAdd;
+      }
     } else if (desiredWork === 'Restoration/Coating') {
-      minRate = 3.5;
-      maxRate = 7.5;
+      minRate = pricing.restorationMin;
+      maxRate = pricing.restorationMax;
     } else if (desiredWork === 'Repair') {
-      minRate = 1.5;
-      maxRate = 3.5;
+      minRate = pricing.repairMin;
+      maxRate = pricing.repairMax;
+    } else {
+      return res.status(400).json({ error: 'Choose a supported commercial work type before calculating a preliminary estimate.' });
     }
 
     if (accessComplexity === 'Complex / High-Rise') {
-      minRate *= 1.25;
-      maxRate *= 1.35;
+      minRate *= pricing.complexAccessMinMultiplier;
+      maxRate *= pricing.complexAccessMaxMultiplier;
     }
 
     const estimatedLow = Math.round(sqft * minRate);
@@ -519,6 +556,14 @@ app.post('/api/calculator', (req: Request, res: Response) => {
         companyName: companyName || '',
         phone: phone || '',
         email: email || '',
+        reasonForWork,
+        dateOfLoss: dateOfLoss || '',
+        insurer: insurer || '',
+        policyNumber: policyNumber || '',
+        claimNumber: claimNumber || '',
+        adjusterName: adjusterName || '',
+        adjusterPhone: adjusterPhone || '',
+        notes: notes || '',
       },
       results: {
         estimatedLow,
@@ -528,11 +573,11 @@ app.post('/api/calculator', (req: Request, res: Response) => {
       createdAt: new Date().toISOString(),
     };
 
-    db.calculatorSubmissions.push(calcSubmission);
+    if (!submitLead) db.calculatorSubmissions.push(calcSubmission);
 
     // If user provided contact info, also create an associated Lead
     let leadId = null;
-    if (phone || email) {
+    if (submitLead) {
       leadId = generateId('lead');
       const orgId = generateId('org');
       const contactId = generateId('cnt');
@@ -590,8 +635,18 @@ app.post('/api/calculator', (req: Request, res: Response) => {
         source: 'Commercial Roof Cost Calculator',
         status: 'New',
         assignedTo: 'Dispatch / Estimating',
-        message: `Calculator estimate generated: ${sqft.toLocaleString()} sq ft ${roofSystem || 'TPO'} for ${desiredWork}. Range: $${estimatedLow.toLocaleString()} - $${estimatedHigh.toLocaleString()}`,
-        notes: `User completed 5-step calculator. Address: ${address || 'Not provided'}`,
+        message: `Calculator estimate generated: ${sqft.toLocaleString()} sq ft ${roofSystem || 'TPO'} for ${desiredWork}. Range: ${estimatedLow.toLocaleString()} - ${estimatedHigh.toLocaleString()}`,
+        notes: [`User completed commercial calculator. Address: ${address}`, notes].filter(Boolean).join(' | '),
+        stormMetadata: {
+          reasonForWork,
+          stormDate: dateOfLoss || '',
+          stormDamageType: reasonForWork,
+          carrier: insurer || '',
+          policyNumber: policyNumber || '',
+          claimNumber: claimNumber || '',
+          adjusterName: adjusterName || '',
+          adjusterPhone: adjusterPhone || '',
+        },
         photos: [],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
@@ -687,7 +742,7 @@ app.get('/sitemap.xml', (req: Request, res: Response) => {
 ${routes
   .map(
     (r) => `  <url>
-    <loc>${baseUrl}${r}</loc>
+    <loc>${baseUrl}/commercial${r === '' ? '/' : r}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>${r === '' || r.includes('storm') || r.includes('emergency') ? 'daily' : 'weekly'}</changefreq>
     <priority>${r === '' ? '1.0' : r.includes('calculator') || r.includes('inspection') ? '0.9' : '0.8'}</priority>
@@ -707,9 +762,9 @@ app.get('/robots.txt', (req: Request, res: Response) => {
   res.type('text/plain');
   res.send(`User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api/
-Sitemap: ${protocol}://${host}/sitemap.xml
+Disallow: /commercial/admin
+Disallow: /commercial/api/
+Sitemap: ${protocol}://${host}/commercial/sitemap.xml
 `);
 });
 
@@ -730,20 +785,28 @@ async function start() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    // The CRD Vite build uses /commercial/ as its public asset base.
-    // Mount the dist directory at that prefix so JS/CSS/image requests resolve
-    // to dist/assets instead of falling through to the SPA HTML response.
     app.use('/commercial', express.static(distPath, {
       maxAge: '1y',
       immutable: true,
       index: false,
     }));
-    // Keep root-relative serving for the standalone app and legacy asset URLs.
+
     app.use(express.static(distPath, {
       maxAge: '1y',
       immutable: true,
       index: false,
     }));
+
+    // Never serve the SPA HTML as a substitute for a missing JS, CSS, or media asset.
+    // Browsers reject HTML returned for module scripts, which otherwise produces a blank page.
+    app.use((req: Request, res: Response, next) => {
+      const assetPath = req.path.startsWith('/assets/') || /\\.(?:js|mjs|css|map|woff2?|ttf|otf|png|jpe?g|gif|svg|webp|avif|ico)$/i.test(req.path);
+      if (assetPath) {
+        return res.status(404).type('text/plain').send('CRD asset not found');
+      }
+      next();
+    });
+
     app.get('*', (req: Request, res: Response) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
       res.sendFile(path.join(distPath, 'index.html'));
