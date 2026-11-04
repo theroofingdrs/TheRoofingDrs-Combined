@@ -82,7 +82,7 @@ export const EstimateRequestView: React.FC<EstimateRequestViewProps> = ({ onNavi
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-red-700">The Roof Doctors Residential</p>
           <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Request a Roof Estimate</h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">Tell us about the property and roof. Your name, property address, phone, and email are required before we can review your request. Insurance details are optional.</p>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">Tell us about the property and roof. Your name and property address are required. Provide either a phone number or an email address so our team can follow up. Roof and insurance details are optional.</p>
           <form onSubmit={submit} className="mt-8 space-y-8">
             <section>
               <h2 className="mb-4 border-b border-slate-200 pb-2 text-lg font-bold">Your Contact and Property</h2>
@@ -91,8 +91,8 @@ export const EstimateRequestView: React.FC<EstimateRequestViewProps> = ({ onNavi
                 <div><label className={labelClass}>Property address *</label><input className={inputClass} autoComplete="street-address" required value={form.address} onChange={(e) => update('address', e.target.value)} /></div>
                 <div><label className={labelClass}>City</label><input className={inputClass} autoComplete="address-level2" value={form.city} onChange={(e) => update('city', e.target.value)} /></div>
                 <div className="grid grid-cols-2 gap-3"><div><label className={labelClass}>State</label><input className={inputClass} autoComplete="address-level1" value={form.state} onChange={(e) => update('state', e.target.value)} /></div><div><label className={labelClass}>ZIP</label><input className={inputClass} autoComplete="postal-code" value={form.zip} onChange={(e) => update('zip', e.target.value)} /></div></div>
-                <div><label className={labelClass}>Phone *</label><input className={inputClass} autoComplete="tel" type="tel" required value={form.phone} onChange={(e) => update('phone', e.target.value)} /></div>
-                <div><label className={labelClass}>Email *</label><input className={inputClass} autoComplete="email" type="email" required value={form.email} onChange={(e) => update('email', e.target.value)} /></div>
+                <div><label className={labelClass}>Phone {form.email.trim() ? '(optional)' : '*'}</label><input className={inputClass} autoComplete="tel" type="tel" required={!form.email.trim()} value={form.phone} onChange={(e) => update('phone', e.target.value)} /></div>
+                <div><label className={labelClass}>Email {form.phone.trim() ? '(optional)' : '*'}</label><input className={inputClass} autoComplete="email" type="email" required={!form.phone.trim()} value={form.email} onChange={(e) => update('email', e.target.value)} /></div>
               </div>
             </section>
             <section>
