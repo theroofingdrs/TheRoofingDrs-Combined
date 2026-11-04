@@ -66,7 +66,7 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   },
   {
     id: 'photo-crew',
-    src: getTrdPublicAssetPath('/assets/images/library/owner-residential-roof-replacement-crew.jpeg'),
+    src: getTrdPublicAssetPath('/assets/images/library/residential-roof-installation-01.jpg'),
     title: 'Residential Roof Installation',
     tag: 'Roof Installation',
     location: 'Residential Roofing',
