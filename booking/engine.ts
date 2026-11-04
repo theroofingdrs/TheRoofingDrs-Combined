@@ -25,7 +25,7 @@ export class BookingEngine{
  async book(request:{key:string;division:Division;lead:string;service:Service;mode:Mode;start:string}){
   allowed(this.policy);
   const previous=await this.store.call('get',{key:request.key});
-  if(previous.action!=='missing'){if(JSON.stringify(previous.context.request)!==JSON.stringify(request))throw new Error('Booking reference belongs to different details.');return{status:previous.status,reference:request.key,notification:'pending'};}
+  if(previous.action!=='missing'){if(['key','division','lead','service','mode','start'].some(field=>(previous.context.request as Record<string,unknown>|undefined)?.[field]!==request[field as keyof typeof request]))throw new Error('Booking reference belongs to different details.');return{status:previous.status,reference:request.key,notification:'pending'};}
   const {division,service,mode}=request;const times=interval(this.policy,division,service,mode,request.start,this.now());
   const calendars=Object.values(this.policy.booking.divisions).map(d=>d.calendar!.id);
   const row=await this.store.call('reserve',{key:request.key,division,operator:this.policy.operators[division],lead:request.lead,calendar:this.policy.booking.divisions[division].calendar!.id,starts:times.starts,ends:times.ends,context:{service,mode,before:times.before,after:times.after,request}});
