@@ -14,6 +14,8 @@ Use Node 22 or later. Install exact application dependencies with `npm run insta
 
 Smoke tests use a temporary data directory and remove production Supabase bindings from the child environment. They do not create real leads, call calendars or send notifications.
 
+Current implementation: [automatic intake](docs/growth/automatic-intake.md). The code is tested locally but has not been deployed. Notification and booking activation remain disabled.
+
 ## Runtime configuration
 
 Public lead persistence requires server-only `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`. Verified staff API access also requires `SUPABASE_ANON_KEY` or `SUPABASE_PUBLISHABLE_KEY`. Browser sign-in uses only `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` at build time. Never expose a service-role key through a Vite variable.

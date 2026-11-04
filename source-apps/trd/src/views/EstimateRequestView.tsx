@@ -1,3 +1,4 @@
+import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 
 type EstimateRequestViewProps = { onNavigate: (path: string) => void };
@@ -22,10 +23,7 @@ export const EstimateRequestView: React.FC<EstimateRequestViewProps> = ({ onNavi
     setBusy(true);
     setError('');
     try {
-      const response = await fetch('/residential/api/v1/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      await submitInquiry('/residential/api/v1/leads', {
           name: form.name.trim(),
           address: form.address.trim(),
           city: form.city.trim(),
@@ -55,10 +53,7 @@ export const EstimateRequestView: React.FC<EstimateRequestViewProps> = ({ onNavi
             adjusterPhone: form.adjusterPhone,
             notes: form.notes,
           },
-        }),
       });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || 'We could not save your request. Please call us instead.');
       setSubmitted(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'We could not save your request. Please call us instead.');

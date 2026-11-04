@@ -63,7 +63,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
       setSubmitted(true);
     } catch (err: any) {
       console.error('Lead submission failed:', err);
-      setError('Unable to submit your request. Please call us directly at 903-231-5940 for immediate dispatch.');
+      setError(err instanceof Error ? err.message : 'Delivery is not confirmed. Please retry or call 903-231-5940.');
     } finally {
       setLoading(false);
     }
@@ -195,10 +195,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-name">
                         Full Name *
                       </label>
-                      <input
+                      <input id="residential-contact-name" name="name" autoComplete="name"
                         type="text"
                         required
                         value={formData.name}
@@ -209,12 +209,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-phone">
                         Phone Number *
                       </label>
-                      <input
+                      <input id="residential-contact-phone" name="phone" autoComplete="tel" inputMode="tel"
                         type="tel"
-                        required
+                        required={!formData.email.trim()}
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="903-555-0199"
@@ -224,12 +224,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-email">
                       Email Address *
                     </label>
-                    <input
+                    <input id="residential-contact-email" name="email" autoComplete="email" inputMode="email"
                       type="email"
-                      required
+                      required={!formData.phone.trim()}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john@example.com"
@@ -238,12 +238,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-address">
                       Street Address *
                     </label>
-                    <input
+                    <input id="residential-contact-address" name="address" autoComplete="address-line1"
                       type="text"
-                      required
+
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                       placeholder="e.g. 1420 Richmond Rd"
@@ -253,12 +253,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
 
                   <div className="grid grid-cols-12 gap-3">
                     <div className="col-span-12 sm:col-span-6">
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-city">
                         City *
                       </label>
-                      <input
+                      <input id="residential-contact-city" name="city" autoComplete="address-level2"
                         type="text"
-                        required
+
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="e.g. Texarkana, Longview, Shreveport..."
@@ -267,13 +267,13 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     </div>
 
                     <div className="col-span-4 sm:col-span-2">
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-state">
                         State *
                       </label>
-                      <input
+                      <input id="residential-contact-state" name="state" autoComplete="address-level1"
                         type="text"
                         maxLength={2}
-                        required
+
                         value={formData.state}
                         onChange={(e) => setFormData({ ...formData, state: e.target.value.toUpperCase() })}
                         placeholder="TX"
@@ -282,10 +282,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     </div>
 
                     <div className="col-span-8 sm:col-span-4">
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-zip">
                         Zip Code
                       </label>
-                      <input
+                      <input id="residential-contact-zip" name="zip" autoComplete="postal-code" inputMode="numeric"
                         type="text"
                         value={formData.zip}
                         onChange={(e) => setFormData({ ...formData, zip: e.target.value })}

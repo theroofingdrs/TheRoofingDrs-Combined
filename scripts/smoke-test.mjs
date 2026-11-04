@@ -155,7 +155,7 @@ try {
       const result = await fetch(base + route, {method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify(body)});
       assert.equal(result.status, 400, 'Malformed contact data must be rejected: ' + route);
     }
-    const unavailable = await fetch(base + route, {method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({name:'Synthetic test',phone:'9035550100'})});
+    const unavailable = await fetch(base + route, {method:'POST',headers:{'content-type':'application/json','Idempotency-Key':'f0000000-0000-4000-8000-000000000001'},body:JSON.stringify({name:'Synthetic test',phone:'9035550100'})});
     assert.equal(unavailable.status, 503, 'Missing durable storage must not report success: ' + route);
   }
   assert.equal((await fetch(base + '/commercial/api/save-logo', {method:'POST',headers:{'content-type':'application/json'},body:'{}'})).status, 401);

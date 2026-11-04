@@ -1,3 +1,4 @@
+import { submitInquiry } from '../../../../shared/intake-client.ts';
 /**
  * The Roof Doctors — Client API SDK
  * Connects the React frontends (Public, CRM, Field, Portal) to the server API.
@@ -82,10 +83,7 @@ export const api = {
   getLeads: () => request<Lead[]>('/leads'),
   getLead: (id: string) => request<Lead>(`/leads/${id}`),
   createLead: (lead: Partial<Lead>) =>
-    request<Lead>('/leads', {
-      method: 'POST',
-      body: JSON.stringify(lead),
-    }),
+    submitInquiry<Lead>(BASE_URL + '/leads', lead),
   updateLead: (id: string, updates: Partial<Lead>) =>
     request<Lead>(`/leads/${id}`, {
       method: 'PATCH',
