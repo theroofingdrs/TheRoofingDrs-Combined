@@ -88,3 +88,41 @@ The following placements are based on the filenames and should be confirmed by p
 ## Current status
 
 This audit documents what is present and what remains. It does not claim that the unreviewed images or videos have been visually approved, optimized, integrated, or deployed.
+
+
+## Visual candidate assignments — newer files
+
+These are subject-matter matches only, not publication approvals. The reviewed samples in this batch appear unusually polished and several have a synthetic/AI-rendered look. Keep them out of "our completed projects" galleries and customer proof unless the owner confirms they are genuine job photos. If confirmed as intentionally illustrative assets, use neutral captions such as "Illustrative commercial membrane-roof work" and do not attach a real customer, city, or project outcome.
+
+| Source image | Visible subject | Candidate page if approved as illustrative |
+|---|---|---|
+| `IMG_4730.jpeg` | Commercial roof inspection / exposed membrane or roof assembly detail | CRD commercial roof inspection |
+| `IMG_4731.jpeg` | Multi-building steep-slope roof work | CRD commercial overview or institutional facilities |
+| `IMG_4732.jpeg` | Large low-slope commercial roof installation | CRD TPO / EPDM / replacement overview |
+| `IMG_4733.jpeg` | School-campus low-slope roof work | CRD education / institutional industry content |
+| `IMG_4734.jpeg`, `IMG_4735.jpeg` | Church / institutional steep-slope roof replacement | CRD churches / metal roofing, depending on the actual roof system shown |
+| `IMG_4736.jpeg`, `IMG_4758.jpeg` | Church building with metal roofing work | CRD churches and metal roofing |
+| `IMG_4737.jpeg`, `IMG_4740.jpeg`, `IMG_4751.jpeg`, `IMG_4760.jpeg` | Large industrial / warehouse low-slope roof work | CRD industrial roofing and roof replacement |
+| `IMG_4738.jpeg` | Long-run storage / warehouse roof | CRD industrial and warehouse roofing |
+| `IMG_4739.jpeg` | Commercial membrane restoration / coating work | CRD commercial roof restoration |
+| `IMG_4741.jpeg` | Metal roof restoration with existing corrosion visible | CRD metal roof restoration |
+| `IMG_4744.jpeg`, `IMG_4746.jpeg` | Close inspection of roof edge / flashing / drainage details | CRD commercial roof inspection and maintenance |
+| `IMG_4745.jpeg` | Large commercial roof replacement with material handling | CRD commercial roof replacement |
+| `IMG_4747.jpeg` | Agricultural / poultry-facility roof restoration | CRD agricultural industry content |
+| `IMG_4748.jpeg` | Modified-bitumen / black membrane application | CRD modified-bitumen roofing |
+| `IMG_4753.jpeg` | Multi-family / apartment roof work | CRD property management / multi-family facilities |
+| `IMG_4776.jpeg` | Ranch / barn roof replacement | CRD agricultural and equestrian roofing |
+
+Do not infer exact membrane chemistry, warranty eligibility, installation method, customer identity, location, or project completion from a single image. Match the page only to the visible broad subject.
+
+## Authentic-photo candidates from earlier uploads
+
+The following earlier files look more like ordinary field/property photographs in the visual sample and may be better starting points for a genuine-work gallery, subject to owner confirmation and rights review:
+
+- `IMG_4007.jpeg`: residential before/after collage with embedded "Before/After" text; useful only if the text is acceptable in the crop.
+- `IMG_4030.jpeg`: residential home with a visible metal roof; candidate for residential metal roofing.
+- `IMG_4043.jpeg`: residential before/after collage; candidate for a project gallery after checking the source and image rights.
+- `IMG_4010.jpeg`: commercial building with LifeNet signage; do not imply a customer relationship or endorsement without permission.
+- `IMG_4015.jpeg` and `IMG_4058.jpeg`: close-up shingle damage / repair details; useful for inspection or repair education, not as a completed-project hero.
+
+These are visual impressions, not proof of provenance. Confirm the owner has rights to publish each photo and that any associated project details are accurate.
