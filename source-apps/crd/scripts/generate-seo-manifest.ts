@@ -18,8 +18,8 @@ type SeoRecord = {
 const manifest: Record<string, { title: string; description: string; canonicalPath: string }> = {};
 
 function normalizePath(value: string): string {
-  const clean = value.split('?')[0].split('#')[0].replace(/\\/+$/, '') || '/';
-  return clean.startsWith('/') ? clean : `/${clean}`;
+  const clean = value.split('?')[0].split('#')[0].replace(/\/+$/, '') || '/';
+  return clean.startsWith('/') ? clean : \`/\${clean}\`;
 }
 
 function addRecords(records: Record<string, SeoRecord>) {
@@ -52,5 +52,5 @@ manifest['/'] = {
 
 const outputPath = path.resolve('public', 'seo-manifest.json');
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + '\\n', 'utf8');
-console.log(`[CRD SEO manifest] Generated ${Object.keys(manifest).length} route metadata entries.`);
+fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+console.log(\`[CRD SEO manifest] Generated \${Object.keys(manifest).length} route metadata entries.\`);
