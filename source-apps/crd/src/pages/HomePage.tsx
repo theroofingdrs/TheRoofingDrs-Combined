@@ -47,7 +47,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
         {/* Editorial Commercial Roof Photography Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/images/library/crd-industrial-distribution-center-aerial.jpg"
+            src="/assets/images/library/owner-commercial-roof-inspection-01.jpeg"
             alt="Large commercial distribution center rooftop and architectural building envelope"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center brightness-[0.45] contrast-[1.05]"
