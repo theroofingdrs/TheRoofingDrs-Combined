@@ -130,7 +130,7 @@ jobs:
             "IMG_4704.jpeg": {"tags": ["commercial","retail","facility-roofing","low-slope","roofing"], "additional_placements": ["Retail and commercial facilities","Commercial roofing overview","Commercial roof maintenance"]},
             "IMG_4705.jpeg": {"tags": ["commercial","church","institutional","facility-roofing","roofing"], "additional_placements": ["Church and religious facilities","Institutional roofing","Commercial roofing overview"]},
           }
-                    manifest = []
+          manifest = []
           for original, relative, brand, placement in mapping:
               source = src / original
               if not source.exists():
@@ -148,7 +148,7 @@ jobs:
                   "recommended_placement": placement,
                   "tags": tags,
                   "additional_placements": metadata.get("additional_placements", []),
-                  "usage_context": "illustrative-service-imagery",
+                  "usage_context": "illustrative-unless-verified",
                   "sha256": hashlib.sha256(source.read_bytes()).hexdigest()
               })
           # Ensure the target branch has the manifest directory.
