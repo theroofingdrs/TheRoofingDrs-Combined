@@ -36,7 +36,7 @@ test('failed SDK load can be retried instead of permanently caching the rejectio
  }finally{globalThis.window=oldWindow;globalThis.document=oldDocument;}
 });
 test('concurrent fields share one in-flight Maps SDK load',async()=>{
- const oldWindow=globalThis.window,oldDocument=globalThis.document;let callback;let appended=0;
+ const oldWindow=globalThis.window,oldDocument=globalThis.document;let appended=0;
  const script={addEventListener:()=>{},removeEventListener:()=>{}};
  globalThis.window={};globalThis.document={querySelector:()=>null,createElement:()=>script,head:{appendChild:()=>appended++}};
  try{
