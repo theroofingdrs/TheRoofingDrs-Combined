@@ -37,4 +37,31 @@ if (!fs.existsSync(path.join(dist, 'server.cjs'))) {
   fail('Production Express server bundle dist/server.cjs was not generated.');
 }
 
-console.log(`[CRD build verification] PASS: ${assetRefs.length} production assets exist and use the /commercial/ base path.`);
+const manifestPath = path.join(dist, 'seo-manifest.json');
+if (!fs.existsSync(manifestPath)) fail('SEO route metadata manifest dist/seo-manifest.json was not generated.');
+
+let manifest;
+try {
+  manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+} catch (error) {
+  fail(`SEO route metadata manifest is not valid JSON: ${error.message}`);
+}
+
+const manifestEntries = Object.entries(manifest);
+if (manifestEntries.length < 150) {
+  fail(`Expected at least 150 SEO route metadata entries; found ${manifestEntries.length}.`);
+}
+
+for (const [route, record] of manifestEntries) {
+  if (!route.startsWith('/') || !record || typeof record.title !== 'string' || !record.title.trim() ||
+      typeof record.description !== 'string' || !record.description.trim() ||
+      typeof record.canonicalPath !== 'string' || !record.canonicalPath.startsWith('/')) {
+    fail(`Invalid SEO metadata for route ${route}.`);
+  }
+}
+
+for (const route of ['/', '/commercial-roofing']) {
+  if (!manifest[route]) fail(`Required SEO metadata route is missing: ${route}`);
+}
+
+console.log(`[CRD build verification] PASS: ${assetRefs.length} production assets and ${manifestEntries.length} SEO route records verified.`);
