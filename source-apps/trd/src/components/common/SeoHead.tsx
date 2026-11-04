@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 
-interface SeoHeadProps {
+export interface SeoHeadProps {
   title: string;
   description: string;
   canonicalPath?: string;
@@ -8,6 +8,9 @@ interface SeoHeadProps {
   ogType?: 'website' | 'article';
   noIndex?: boolean;
 }
+
+// Build-time rendering reads the same declarations used by client navigation.
+export const SeoCollectionContext = createContext<((metadata: SeoHeadProps) => void) | null>(null);
 
 export const SeoHead: React.FC<SeoHeadProps> = ({
   title,
@@ -17,6 +20,8 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
   ogType = 'website',
   noIndex = false,
 }) => {
+  const collect = useContext(SeoCollectionContext);
+  collect?.({ title, description, canonicalPath, schemaJson, ogType, noIndex });
   useEffect(() => {
     const toResidentialUrl = (path: string) => {
       const normalizedPath = path || '/';
@@ -47,6 +52,16 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
 
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute('content', description);
+
+    for (const [name, content] of [['twitter:title', fullTitle], ['twitter:description', description]]) {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('name', name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', content);
+    }
 
     let ogUrl = document.querySelector('meta[property="og:url"]');
     if (!ogUrl) {

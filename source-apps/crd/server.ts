@@ -1,4 +1,5 @@
 import { staffBookingRuntime } from '../../booking/runtime.ts';
+import { publishedBlogPost, publishedCommercialMetadata } from '../../shared/seo/blog.ts';
 import { validCalculatorInput } from '../../shared/intake-validation.ts';
 import { deliverInquiry, IntakeError } from '../../shared/intake-server.ts';
 import express, { Request, Response } from 'express';
@@ -646,8 +647,8 @@ function escapeHtmlAttribute(value: string): string {
 }
 
 function upsertHeadTag(html: string, matcher: RegExp, replacement: string): string {
-  if (matcher.test(html)) return html.replace(matcher, replacement);
-  return html.replace(/<\/head>/i, replacement + '\n  </head>');
+  if (matcher.test(html)) return html.replace(matcher, () => replacement);
+  return html.replace(/<\/head>/i, () => replacement + '\n  </head>');
 }
 
 function applySeoMetadata(html: string, metadata: SeoManifestRecord): string {
@@ -691,6 +692,7 @@ async function start() {
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     const indexHtml = fs.readFileSync(path.join(distPath, 'index.html'), 'utf8');
+    const appRoutes = new Set<string>(JSON.parse(fs.readFileSync(path.join(distPath,'app-routes.json'),'utf8')));
     let seoManifest: Record<string, SeoManifestRecord> = {};
     try {
       seoManifest = JSON.parse(fs.readFileSync(path.join(distPath, 'seo-manifest.json'), 'utf8'));
@@ -714,17 +716,32 @@ async function start() {
     // Never serve the SPA HTML as a substitute for a missing JS, CSS, or media asset.
     // Browsers reject HTML returned for module scripts, which otherwise produces a blank page.
     app.use((req: Request, res: Response, next) => {
-      const assetPath = req.path.startsWith('/assets/') || /\\.(?:js|mjs|css|map|woff2?|ttf|otf|png|jpe?g|gif|svg|webp|avif|ico)$/i.test(req.path);
+      const assetPath = req.path.startsWith('/assets/') || /\.(?:js|mjs|css|map|woff2?|ttf|otf|png|jpe?g|gif|svg|webp|avif|ico)$/i.test(req.path);
       if (assetPath) {
         return res.status(404).type('text/plain').send('CRD asset not found');
       }
       next();
     });
 
-    app.get('*', (req: Request, res: Response) => {
+    app.get('*', async (req: Request, res: Response) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
       const normalizedPath = (req.path.replace(new RegExp('/+$'), '') || '/').toLowerCase();
-      const metadata = seoManifest[normalizedPath];
+      let metadata = seoManifest[normalizedPath];
+      let known = appRoutes.has(normalizedPath);
+      if(/^\/blog\/[^/]+$/.test(normalizedPath)) {
+        const published = await publishedBlogPost('CRD',normalizedPath.slice('/blog/'.length));
+        if(published.post) {
+          metadata=publishedCommercialMetadata(published.post);
+          known=true;
+        } else if(!known) {
+          if(!published.available)return res.status(503).type('html').send(indexHtml);
+          known=false;
+        }
+      }
+      if(!known) {
+        res.set('X-Robots-Tag','noindex');
+        return res.status(404).type('html').send(indexHtml.replace(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi,''));
+      }
       res.type('html').send(metadata ? applySeoMetadata(indexHtml, metadata) : indexHtml);
     });
   }
