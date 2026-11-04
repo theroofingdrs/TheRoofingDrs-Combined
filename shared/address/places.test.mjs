@@ -23,13 +23,25 @@ test('one page reuses the existing SDK import instead of loading scripts for eac
 test('missing key does not load any script or need a DOM to preserve manual entry',async()=>{
  const previous=globalThis.window;globalThis.window={};try{const {loadPlaces}=await import('./places.ts?missing');await assert.rejects(loadPlaces(undefined));}finally{globalThis.window=previous;}
 });
-test('failed script is cached and an in-flight Maps script is not duplicated',async()=>{
- const oldWindow=globalThis.window,oldDocument=globalThis.document;const listeners=new Map();let appended=0;
- const script={addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:()=>{}};
+test('failed SDK load can be retried instead of permanently caching the rejection',async()=>{
+ const oldWindow=globalThis.window,oldDocument=globalThis.document;const listeners=new Map();let appended=0,attached=null;
+ const script={addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:()=>{},remove:()=>{attached=null;}};
+ globalThis.window={};globalThis.document={querySelector:()=>attached,createElement:()=>script,head:{appendChild:node=>{appended++;attached=node;}}};
+ try{
+  const {loadPlaces}=await import('./places.ts?retry');const first=loadPlaces('public-test-key');listeners.get('error')();await assert.rejects(first);assert.equal(appended,1);assert.equal(attached,null);
+  const second=loadPlaces('public-test-key');assert.equal(appended,2);
+  globalThis.window.google={maps:{importLibrary:async()=>({AutocompleteSessionToken:class{},AutocompleteSuggestion:{fetchAutocompleteSuggestions:async()=>({suggestions:[]})}})}};
+  globalThis.window.__trdcrdPlacesReady();await second;
+  assert.equal((await loadPlaces('public-test-key')),await second);
+ }finally{globalThis.window=oldWindow;globalThis.document=oldDocument;}
+});
+test('concurrent fields share one in-flight Maps SDK load',async()=>{
+ const oldWindow=globalThis.window,oldDocument=globalThis.document;let appended=0;
+ const script={addEventListener:()=>{},removeEventListener:()=>{}};
  globalThis.window={};globalThis.document={querySelector:()=>null,createElement:()=>script,head:{appendChild:()=>appended++}};
  try{
-  const {loadPlaces}=await import('./places.ts?failed');const first=loadPlaces('public-test-key');listeners.get('error')();await assert.rejects(first);await assert.rejects(loadPlaces('public-test-key'));assert.equal(appended,1);
-  globalThis.document.querySelector=()=>script;
-  const other=await import('./places.ts?inflight');const pending=other.loadPlaces('public-test-key');globalThis.window.google={maps:{importLibrary:async()=>({AutocompleteSessionToken:class{},AutocompleteSuggestion:{fetchAutocompleteSuggestions:async()=>({suggestions:[]})}})}};listeners.get('load')();await pending;assert.equal(appended,1);
+  const {loadPlaces}=await import('./places.ts?concurrent');const first=loadPlaces('public-test-key'),second=loadPlaces('public-test-key');
+  globalThis.window.google={maps:{importLibrary:async()=>({AutocompleteSessionToken:class{},AutocompleteSuggestion:{fetchAutocompleteSuggestions:async()=>({suggestions:[]})}})}};
+  globalThis.window.__trdcrdPlacesReady();await Promise.all([first,second]);assert.equal(appended,1);
  }finally{globalThis.window=oldWindow;globalThis.document=oldDocument;}
 });

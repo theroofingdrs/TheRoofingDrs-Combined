@@ -42,19 +42,21 @@ export function loadPlaces(key: string | undefined): Promise<Places> {
   const scope = window as any;
   // Reuse an authorized SDK already loaded on this page, without a second script.
   if (scope.google?.maps?.importLibrary) {
-    ready = Promise.resolve(scope.google.maps.importLibrary('places')).then(placesProvider);
-    return ready;
+    const attempt = Promise.resolve(scope.google.maps.importLibrary('places')).then(placesProvider);
+    ready = attempt;
+    void attempt.catch(() => { if (ready === attempt) ready = undefined; });
+    return attempt;
   }
   if (!key?.trim()) return Promise.reject(Error('Places unavailable'));
-  ready = new Promise<Places>((resolve, reject) => {
+  const attempt = new Promise<Places>((resolve, reject) => {
     const existing = document.querySelector<HTMLScriptElement>('script[src^="https://maps.googleapis.com/maps/api/js"]');
     const script = existing || document.createElement('script');
     const cleanup = () => { clearTimeout(timer); script.removeEventListener('load', finish); script.removeEventListener('error', failure); };
-    const failure = () => { cleanup(); reject(Error('Places unavailable')); };
+    const failure = () => { cleanup(); if (!existing) script.remove(); reject(Error('Places unavailable')); };
     const finish = () => {
       cleanup();
-      if (!scope.google?.maps?.importLibrary) { reject(Error('Places unavailable')); return; }
-      Promise.resolve(scope.google.maps.importLibrary('places')).then(placesProvider).then(resolve, reject);
+      if (!scope.google?.maps?.importLibrary) { if (!existing) script.remove(); reject(Error('Places unavailable')); return; }
+      Promise.resolve(scope.google.maps.importLibrary('places')).then(placesProvider).then(resolve, error => { if (!existing) script.remove(); reject(error); });
     };
     const timer = setTimeout(failure, 12000);
     script.addEventListener('error', failure, { once: true });
@@ -65,5 +67,8 @@ export function loadPlaces(key: string | undefined): Promise<Places> {
     script.async = true;
     document.head.appendChild(script);
   });
-  return ready;
+  ready = attempt;
+  // A transient network/configuration failure must not poison this page forever.
+  void attempt.catch(() => { if (ready === attempt) ready = undefined; });
+  return attempt;
 }
