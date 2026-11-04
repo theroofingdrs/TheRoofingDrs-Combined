@@ -75,12 +75,12 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   },
   {
     id: 'photo-brick',
-    src: getTrdPublicAssetPath('/assets/images/trd-residential-home-exterior.jpg'),
-    title: 'Residential Roofing Project',
-    tag: 'Residential Roofing',
+    src: getTrdPublicAssetPath('/assets/images/library/residential-roof-project-03.jpg'),
+    title: 'Residential Roofing Project Details',
+    tag: 'Roofing Projects',
     location: 'Residential Roofing',
-    description: 'Residential roofing imagery for exploring roof styles, materials, and project outcomes.',
-    specs: 'Roofing materials and details vary by project',
+    description: 'Residential roofing photography for exploring roof styles, materials, and project considerations.',
+    specs: 'Project-specific materials and scope are confirmed separately',
   },
 ];
 

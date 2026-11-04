@@ -23,7 +23,7 @@ interface GalleryPageProps {
 interface GalleryItem {
   id: string;
   title: string;
-  category: 'before_after' | 'completed' | 'storm_damage' | 'repairs' | 'during_work';
+  category: 'installation' | 'systems' | 'inspection' | 'repairs';
   categoryLabel: string;
   location: string;
   imageUrl: string;
@@ -34,147 +34,155 @@ interface GalleryItem {
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 'proj-1',
-    title: 'Severe Hail Restoration & Class 4 Upgrade',
-    category: 'before_after',
-    categoryLabel: 'Before & After',
-    location: 'Texarkana, TX',
-    imageUrl: '/assets/images/new_roof_install.jpg',
-    beforeImageUrl: '/assets/images/hail_damage_shingles.jpg',
-    description: 'Homeowner suffered widespread 1.75-inch hail impact bruising across all four slopes. We managed the adjuster meeting, tore off damaged shingles, and installed Owens Corning Duration STORM Class 4 impact shingles in Onyx Black.',
-    specs: 'Owens Corning Duration STORM • Synthetic Underlayment • Continuous Ridge Vent',
+    id: 'gallery-01',
+    title: 'Residential roof installation',
+    category: 'installation',
+    categoryLabel: 'Roof Installation',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-installation-01.jpg',
+    description: 'Photograph illustrating a residential roof installation. Contact our team to discuss the materials and scope appropriate for your property.',
+    specs: 'Installation imagery',
   },
   {
-    id: 'proj-2',
-    title: 'Modern Standing Seam Metal Architectural Installation',
-    category: 'completed',
-    categoryLabel: 'Completed Roofs',
-    location: 'Tyler, TX (Azalea District)',
-    imageUrl: '/assets/images/metal_roof_system.jpg',
-    description: 'High-durability 24-gauge standing seam metal roof in Matte Charcoal with concealed clip fasteners, engineered for lifetime defense against Northeast Texas winds and hail.',
-    specs: '24-Gauge Standing Seam Metal • High-Temperature Underlayment • Concealed Fasteners',
+    id: 'gallery-02',
+    title: 'Residential roof installation detail',
+    category: 'installation',
+    categoryLabel: 'Roof Installation',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-installation-02.jpg',
+    description: 'A closer look at residential roofing work. Specific products and project details are confirmed individually.',
+    specs: 'Installation imagery',
   },
   {
-    id: 'proj-3',
-    title: 'High-Wind Shingle Uplift & Crease Repair',
+    id: 'gallery-03',
+    title: 'Residential roof installation',
+    category: 'installation',
+    categoryLabel: 'Roof Installation',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-installation-03.jpg',
+    description: 'Residential installation photography for homeowners comparing roofing approaches.',
+    specs: 'Installation imagery',
+  },
+  {
+    id: 'gallery-04',
+    title: 'Residential roof installation detail',
+    category: 'installation',
+    categoryLabel: 'Roof Installation',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-installation-04.jpg',
+    description: 'A visual reference for residential roofing work and installation details.',
+    specs: 'Installation imagery',
+  },
+  {
+    id: 'gallery-05',
+    title: 'Residential roof installation',
+    category: 'installation',
+    categoryLabel: 'Roof Installation',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-installation-05.jpg',
+    description: 'Residential roofing photography. Actual project specifications vary by property and selected system.',
+    specs: 'Installation imagery',
+  },
+  {
+    id: 'gallery-06',
+    title: 'Residential roof installation detail',
+    category: 'installation',
+    categoryLabel: 'Roof Installation',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-installation-06.jpg',
+    description: 'A further example of residential roofing installation imagery.',
+    specs: 'Installation imagery',
+  },
+  {
+    id: 'gallery-07',
+    title: 'Residential metal roofing',
+    category: 'systems',
+    categoryLabel: 'Metal Roofing',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-metal-roof-01.jpg',
+    description: 'Metal roofing imagery to help explore roof appearance and system options.',
+    specs: 'Metal roofing',
+  },
+  {
+    id: 'gallery-08',
+    title: 'Residential metal roofing detail',
+    category: 'systems',
+    categoryLabel: 'Metal Roofing',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-metal-roof-02.jpg',
+    description: 'A closer visual reference for residential metal roofing.',
+    specs: 'Metal roofing',
+  },
+  {
+    id: 'gallery-09',
+    title: 'Residential roof repair detail',
     category: 'repairs',
-    categoryLabel: 'Repairs',
-    location: 'New Boston, TX',
-    imageUrl: '/assets/images/wind_damage_shingles.jpg',
-    description: 'Straight-line 65 mph microburst gusts tore away and creased starter shingles. Surgical extraction and color-matched shingle replacement with thermal hand-sealing prevented a full roof replacement.',
-    specs: '6-Nail Enhanced Fastening • Neoprene Pipe Jack Boot Seal • Leak Audit Passed',
+    categoryLabel: 'Repairs & Flashing',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-chimney-flashing.jpg',
+    description: 'Roof-to-wall and chimney flashing imagery. The correct repair depends on the existing roof assembly and site conditions.',
+    specs: 'Repair detail',
   },
   {
-    id: 'proj-4',
-    title: 'Pine Tree Impact & Decking Structural Rebuild',
-    category: 'storm_damage',
-    categoryLabel: 'Storm Damage',
-    location: 'Atlanta, TX (Cass County)',
-    imageUrl: '/assets/images/fallen_tree_roof.jpg',
-    description: 'A heavy pine limb punctured the roof decking over the bedroom during a spring squall. Emergency 3-hour tarp deployment followed by structural rafter reinforcement and matching shingle install.',
-    specs: 'CDX 1/2" Plywood Deck Repair • Ice & Water Valley Shield • Rafter Sistering',
-  },
-  {
-    id: 'proj-5',
-    title: 'Full Tear-Off & Sheathing Inspection In Progress',
-    category: 'during_work',
-    categoryLabel: 'During Work',
-    location: 'Longview, TX',
-    imageUrl: '/assets/images/roof_tear_off.jpg',
-    description: 'Midday progress shot showing full shingle removal down to bare OSB sheathing. Every sheet is walked and inspected for dry rot before synthetic underlayment is rolled out.',
-    specs: 'Tarp Landscaping Armor • Magnetic Sweep in Progress • OSHA Harness Tie-Offs',
-  },
-  {
-    id: 'proj-6',
-    title: 'Chimney Saddle & Step Flashing Reconstruction',
+    id: 'gallery-10',
+    title: 'Residential roof repair',
     category: 'repairs',
-    categoryLabel: 'Repairs',
-    location: 'Paris, TX',
-    imageUrl: '/assets/images/chimney_flashing_roof.jpg',
-    description: 'Recurring ceiling stains in living room traced to improper chimney counterflashing installed 15 years prior. Custom flashing cut into mortar joints with polyurethane reglet seal.',
-    specs: 'Custom Metal Cricket • Interlocking Step Flashing • Polyurethane Reglet Seal',
+    categoryLabel: 'Repairs & Flashing',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-repair.jpg',
+    description: 'Residential roof repair photography for common maintenance and repair conversations.',
+    specs: 'Repair imagery',
   },
   {
-    id: 'proj-7',
-    title: 'Suburban Ranch Transformation',
-    category: 'before_after',
-    categoryLabel: 'Before & After',
-    location: 'Sulphur Springs, TX',
-    imageUrl: '/assets/images/new_roof_install.jpg',
-    beforeImageUrl: '/assets/images/old_damaged_shingles.jpg',
-    description: 'Aging 3-tab 20-year shingle roof with severe granule loss and curling transformed into dimensional architectural system with balanced soffit-to-ridge airflow.',
-    specs: 'GAF Timberline HDZ (Weathered Wood) • Cobra Continuous Ridge Vent • Drip Edge Upgrade',
+    id: 'gallery-11',
+    title: 'Roof condition inspection',
+    category: 'inspection',
+    categoryLabel: 'Inspection',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/roof-damage-inspection.jpg',
+    description: 'Roof condition imagery illustrating why a careful inspection matters before selecting a repair or replacement approach.',
+    specs: 'Inspection imagery',
   },
   {
-    id: 'proj-8',
-    title: '21-Point Forensic Roof Health Diagnostic Walk',
-    category: 'completed',
-    categoryLabel: 'Completed Roofs',
-    location: 'Marshall, TX',
-    imageUrl: '/assets/images/roof_inspection_walk.jpg',
-    description: 'Comprehensive physical roof health walk verifying thermal seal adhesion, pipe collar integrity, and ventilation balance following an East Texas severe thunderstorm line.',
-    specs: 'Thermal Seal Audit • Pipe Boot Inspection • Digital Photographic Report Delivered',
+    id: 'gallery-12',
+    title: 'Residential roof inspection detail',
+    category: 'inspection',
+    categoryLabel: 'Inspection',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roofing-inspection.jpg',
+    description: 'A visual reference for residential roof inspection and condition assessment.',
+    specs: 'Inspection imagery',
   },
   {
-    id: 'proj-9',
-    title: 'CertainTeed Grand Manor® Luxury Estate Transformation',
-    category: 'completed',
-    categoryLabel: 'Completed Roofs',
-    location: 'Mount Pleasant, TX',
-    imageUrl: '/assets/images/grand_manor_roof.jpg',
-    description: 'Custom estate roof replacement featuring CertainTeed Grand Manor heavyweight slate-profile shingles. Multi-layered 425 lb dimensional tab construction delivering Class 4 impact resistance with genuine architectural depth.',
-    specs: 'CertainTeed Grand Manor® (Gatehouse) • UL 2218 Class 4 • Copper Valley Flashing',
+    id: 'gallery-13',
+    title: 'Residential roofing project overview',
+    category: 'installation',
+    categoryLabel: 'Roofing Projects',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-project-01.jpg',
+    description: 'Residential roofing project photography. Ask us about the options that fit your roof and goals.',
+    specs: 'Project photography',
   },
   {
-    id: 'proj-10',
-    title: 'Historic Estate Natural Quarried Slate Restoration',
-    category: 'completed',
-    categoryLabel: 'Completed Roofs',
-    location: 'Tyler, TX (Charnwood Historic District)',
-    imageUrl: '/assets/images/slate_roofing.jpg',
-    description: 'Meticulous replacement and installation of ASTM C406 S1 Grade genuine quarried slate tiles. Fastened with solid copper nails and custom copper standing seams for a century of maintenance-free luxury.',
-    specs: 'Vermont Black Quarried Slate • Solid Copper Nails & Valleys • 100+ Year Lifespan',
+    id: 'gallery-14',
+    title: 'Residential roofing project overview',
+    category: 'installation',
+    categoryLabel: 'Roofing Projects',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-project-02.jpg',
+    description: 'Additional residential roofing imagery for exploring roof styles and project considerations.',
+    specs: 'Project photography',
   },
   {
-    id: 'proj-11',
-    title: 'Mediterranean Villa High-Barrel Clay Tile System',
-    category: 'completed',
-    categoryLabel: 'Completed Roofs',
-    location: 'Longview, TX',
-    imageUrl: '/assets/images/tile_roofing.jpg',
-    description: 'Architectural terracotta clay barrel tile system engineered with mechanical elevated battens. Natural sub-tile convective airflow drops attic summer temperatures by over 20°F.',
-    specs: 'Terracotta Barrel Tile • Mechanically Fastened 140 MPH • Self-Adhering High-Temp Underlayment',
-  },
-  {
-    id: 'proj-12',
-    title: 'Aerial Drone Diagnostic & Synthetic Underlayment Installation',
-    category: 'during_work',
-    categoryLabel: 'During Installation',
-    location: 'Texarkana, TX',
-    imageUrl: '/assets/images/aerial_roof_replacement.jpg',
-    description: 'Top-down aerial drone view of full roof replacement showing high-grade synthetic underlayment installation, neat bundle staging on roof jacks, and extensive lawn & gazebo property protection.',
-    specs: 'Synthetic Underlayment • Drone Verified Alignment • 100% Perimeter Tarping',
-  },
-  {
-    id: 'proj-14',
-    title: 'Certified Roofing Mechanics in Action',
-    category: 'during_work',
-    categoryLabel: 'During Installation',
-    location: 'Tyler, TX',
-    imageUrl: '/assets/images/active_crew_reroof.jpg',
-    description: 'High-angle drone view of our certified installation crew executing a synchronized residential roof replacement, showing high-temp underlayment, staging jacks, and ground protection.',
-    specs: 'Synchronized Crew Installation • High-Temp Underlayment • Full Property Shielding',
-  },
-  {
-    id: 'proj-15',
-    title: 'Sprawling Texas Brick Ranch Residence',
-    category: 'completed',
-    categoryLabel: 'Completed Roofs',
-    location: 'Longview, TX',
-    imageUrl: '/assets/images/brick_estate_roof.jpg',
-    description: 'Complete tear-off and replacement featuring lifetime architectural shingles, crisp hip ridges, clean valley transitions, and custom chimney step flashing on a classic Texas estate.',
-    specs: 'Lifetime Architectural Shingles • Hip & Ridge Cap System • Precision Valley Flashing',
-  },
+    id: 'gallery-15',
+    title: 'Residential roofing detail',
+    category: 'systems',
+    categoryLabel: 'Roofing Systems',
+    location: 'Residential roofing',
+    imageUrl: '/assets/images/library/residential-roof-project-detail.jpg',
+    description: 'A closer look at residential roofing materials and roof details.',
+    specs: 'Roofing systems',
+  }
 ];
 
 export const GalleryPage: React.FC<GalleryPageProps> = ({
@@ -182,7 +190,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({
   onNavigate,
   onOpenIntake,
 }) => {
-  const [filter, setFilter] = useState<'all' | 'before_after' | 'completed' | 'storm_damage' | 'repairs' | 'during_work'>('all');
+  const [filter, setFilter] = useState<'all' | 'installation' | 'systems' | 'inspection' | 'repairs'>('all');
   const [activeItem, setActiveItem] = useState<GalleryItem | null>(null);
 
   const filteredItems = filter === 'all'
@@ -193,7 +201,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({
     <div className="bg-slate-50 min-h-screen text-slate-900 pb-20">
       <SeoHead
         title="Roofing Project Gallery & Before-and-After Portfolio | The Roof Doctors"
-        description="Browse real residential roofing transformations in Northeast Texas. Before-and-after hail restorations, architectural shingle replacements, and precision repairs."
+        description="Explore residential roofing photography covering installations, roofing systems, inspections, and repair details."
         canonicalPath={currentPath}
       />
 
@@ -202,26 +210,25 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({
         <div className="max-w-7xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-red-600/20 text-red-400 border border-red-500/30 uppercase tracking-wide">
             <ImageIcon className="w-4 h-4 text-red-400" />
-            <span>Verified Northeast Texas Workmanship</span>
+            <span>Residential Roofing Photo Gallery</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-            Roofing Project Portfolio &amp; Transformations
+            Residential Roofing Photo Gallery
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-            Real roofs on real homes across Texarkana, Longview, Tyler, Paris, and surrounding Ark-La-Tex communities. Click any photo to inspect high-resolution details, technical specifications, and project scope notes.
+            Explore photographs illustrating residential roofing installations, roof systems, inspection details, and repairs. Images are visual references; project locations, materials, and scopes are confirmed separately.
           </p>
 
           {/* Filter Pills */}
           <div className="pt-4 flex flex-wrap gap-2">
             {[
               { id: 'all', label: 'All Projects' },
-              { id: 'before_after', label: 'Before & After' },
-              { id: 'completed', label: 'Completed Roofs' },
-              { id: 'storm_damage', label: 'Storm Damage' },
+              { id: 'installation', label: 'Installations' },
+              { id: 'systems', label: 'Roofing Systems' },
+              { id: 'inspection', label: 'Inspections' },
               { id: 'repairs', label: 'Repairs & Flashing' },
-              { id: 'during_work', label: 'During Installation' },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -284,7 +291,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
                   <span className="font-mono">{item.specs.split('•')[0]}</span>
                   <span className="font-bold text-red-600 flex items-center gap-1">
-                    View Project &rarr;
+                    View Photo &rarr;
                   </span>
                 </div>
               </div>
@@ -343,7 +350,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({
               )}
 
               <div className="p-4 bg-slate-950 rounded-2xl border border-slate-800 text-xs space-y-1">
-                <span className="text-slate-500 font-bold uppercase tracking-wider">Specifications</span>
+                <span className="text-slate-500 font-bold uppercase tracking-wider">Image category</span>
                 <p className="text-slate-200 font-mono">{activeItem.specs}</p>
               </div>
 
@@ -355,7 +362,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({
                   }}
                   className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-colors cursor-pointer text-center"
                 >
-                  DISCUSS A SIMILAR PROJECT FOR MY HOME
+                  DISCUSS MY ROOFING OPTIONS
                 </button>
                 <button
                   onClick={() => setActiveItem(null)}
@@ -373,13 +380,13 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({
       <section className="bg-slate-900 text-white py-14 px-4 sm:px-6 mt-12 border-t border-slate-800">
         <div className="max-w-4xl mx-auto text-center space-y-4">
           <span className="text-xs uppercase tracking-wider text-red-400 font-bold">
-            Real Roofs • Verified Results
+            Residential Roofing Guidance
           </span>
           <h2 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
-            Inspired by One of Our Installations?
+            Planning a Roofing Project?
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
-            Schedule a free consultation. We’ll bring physical shingle color boards, Class 4 impact samples, and satellite roof measurements directly to your kitchen table.
+            Talk with our team about your roof, available materials, inspection findings, and next steps. Recommendations depend on the condition and requirements of your property.
           </p>
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
             <button
