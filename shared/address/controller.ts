@@ -29,7 +29,7 @@ export function attachAddressAutocomplete(input: HTMLInputElement, options: {
   input.setAttribute('aria-controls', id); input.setAttribute('aria-expanded', 'false');
   input.setAttribute('aria-describedby', [described, status.id].filter(Boolean).join(' '));
   let rows: Prediction[] = [], active = -1, generation = 0, timer: ReturnType<typeof setTimeout>;
-  let token: unknown, lastQuery = '', lastInput = '', focused = document.activeElement === input, disposed = false, failed = false;
+  let token: unknown, lastInput = '', focused = document.activeElement === input, disposed = false, failed = false;
   const close = () => { list.style.display = 'none'; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); active = -1; if (nativeAutocomplete) input.setAttribute('autocomplete', nativeAutocomplete); else input.removeAttribute('autocomplete'); };
   const place = () => {
     if (list.style.display === 'none') return;
@@ -61,7 +61,7 @@ export function attachAddressAutocomplete(input: HTMLInputElement, options: {
     try {
       const address = await row.resolve();
       if (disposed || epoch !== generation) return;
-      token = undefined; lastQuery = '';
+      token = undefined;
       if (!address) { announce('That location has no complete street address. Please enter it manually.'); return; }
       const selectedValue = options.onSelect(address);
       lastInput = typeof selectedValue === 'string' ? selectedValue.trim() : input.value.trim();
@@ -90,12 +90,11 @@ export function attachAddressAutocomplete(input: HTMLInputElement, options: {
     if (!focused || input.disabled || query.length < 4) { announce(''); return; }
     if (failed) return;
     timer = setTimeout(async () => {
-      if (query === lastQuery) return;
       announce('Searching for addresses…');
       try {
         const provider = await (options.load?.() || loadPlaces(options.key));
         if (disposed || epoch !== generation || !focused) return;
-        token ||= provider.token(); lastQuery = query;
+        token ||= provider.token();
         const items = await provider.suggest(query, token);
         if (disposed || epoch !== generation || !focused) return;
         render(items); announce(items.length ? `${items.length} address suggestions available. Use arrow keys to review.` : 'No suggestions found. You can enter the address manually.');
@@ -112,8 +111,8 @@ export function attachAddressAutocomplete(input: HTMLInputElement, options: {
       else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); void select(active); }
     }
   };
-  const focus = () => { focused = true; failed = false; lastQuery = ''; lastInput = ''; };
-  const outside = (e: Event) => { if (e.target !== input && !list.contains(e.target as Node)) { focused = false; ++generation; clearTimeout(timer); token = undefined; lastQuery = ''; close(); } };
+  const focus = () => { focused = true; failed = false; lastInput = ''; };
+  const outside = (e: Event) => { if (e.target !== input && !list.contains(e.target as Node)) { focused = false; ++generation; clearTimeout(timer); token = undefined; close(); } };
   input.addEventListener('input', changed); input.addEventListener('keydown', keydown); input.addEventListener('focus', focus);
   document.addEventListener('pointerdown', outside, true); document.addEventListener('focusin', outside, true);
   window.addEventListener('resize', place); window.addEventListener('scroll', place, true);

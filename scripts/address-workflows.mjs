@@ -190,6 +190,8 @@ try {
   assert.equal(await p.evaluate('addressFixture.calls.length'), 1, 'debounce');
   await p.enter('123456'); await delay(400);
   assert.equal(await p.evaluate('addressFixture.calls.length'), 1, 'duplicate query');
+  await p.enter(''); await p.enter('123456'); await suggestions(p);
+  assert.equal(await p.evaluate('addressFixture.calls.length'), 2, 'clearing and retyping must restore suggestions');
   await p.evaluate(`window.addEventListener('keydown',e=>window.addressKeyPrevented=e.defaultPrevented)`);
   await p.key('Enter');
   assert.equal(await p.evaluate('window.addressKeyPrevented'), false, 'Enter without an active suggestion retains normal form behavior');
