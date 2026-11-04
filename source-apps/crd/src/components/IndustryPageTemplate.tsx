@@ -22,6 +22,7 @@ export interface IndustryPageData {
   propertyType: PropertyType;
   heroHeadline: string;
   heroSubtitle: string;
+  heroImage?: string;
   sectorChallenges: { title: string; desc: string }[];
   crdSolutions: string[];
   recommendedRoofSystems: { name: string; href: string; reason: string }[];
@@ -57,8 +58,10 @@ export const IndustryPageTemplate: React.FC<IndustryPageTemplateProps> = ({
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0e1424] via-[#0a0f1c] to-[#090d16] border-b border-slate-800 pt-14 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center space-y-5">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#0e1424] via-[#0a0f1c] to-[#090d16] border-b border-slate-800 pt-14 pb-16 px-4 sm:px-6 lg:px-8">
+        {data.heroImage && <img src={data.heroImage} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-25" />}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e1424]/65 via-[#0a0f1c]/75 to-[#090d16]/95" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono-crd uppercase tracking-wider">
             <Building2 className="w-3.5 h-3.5" />
             <span>Commercial Industry Solutions</span>
