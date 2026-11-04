@@ -239,12 +239,15 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
               </p>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                <label htmlFor="inspection-address" className="block text-xs font-semibold text-slate-700 mb-1">
                   Street Address *
                 </label>
                 <input
                   type="text"
                   placeholder="e.g. 1420 Richmond Rd"
+                  id="inspection-address"
+                  name="address"
+                  autoComplete="section-inspection address-line1"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                   className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600"
@@ -253,12 +256,15 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
 
               <div className="grid grid-cols-12 gap-3">
                 <div className="col-span-12 sm:col-span-6">
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  <label htmlFor="inspection-city" className="block text-xs font-semibold text-slate-700 mb-1">
                     City *
                   </label>
                   <input
                     type="text"
                     placeholder="e.g. Texarkana, Longview, Shreveport..."
+                    id="inspection-city"
+                    name="city"
+                    autoComplete="section-inspection address-level2"
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                     className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600 bg-white"
@@ -267,13 +273,16 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                 </div>
 
                 <div className="col-span-4 sm:col-span-2">
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  <label htmlFor="inspection-state" className="block text-xs font-semibold text-slate-700 mb-1">
                     State *
                   </label>
                   <input
                     type="text"
                     maxLength={2}
                     placeholder="TX"
+                    id="inspection-state"
+                    name="state"
+                    autoComplete="section-inspection address-level1"
                     value={formData.state}
                     onChange={(e) => setFormData({ ...formData, state: e.target.value.toUpperCase() })}
                     className="w-full px-2 py-2 text-sm text-center uppercase font-bold border border-slate-300 rounded-lg focus:outline-none focus:border-red-600 bg-white"
@@ -282,12 +291,16 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                 </div>
 
                 <div className="col-span-8 sm:col-span-4">
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  <label htmlFor="inspection-zip" className="block text-xs font-semibold text-slate-700 mb-1">
                     Zip Code
                   </label>
                   <input
                     type="text"
                     placeholder="75501"
+                    id="inspection-zip"
+                    name="zip"
+                    autoComplete="section-inspection postal-code"
+                    inputMode="numeric"
                     value={formData.zip}
                     onChange={(e) => setFormData({ ...formData, zip: e.target.value })}
                     className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600 bg-white"
@@ -345,12 +358,15 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
               </p>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                <label htmlFor="inspection-name" className="block text-xs font-semibold text-slate-700 mb-1">
                   Full Name *
                 </label>
                 <input
                   type="text"
                   placeholder="e.g. Charles Montgomery"
+                  id="inspection-name"
+                  name="name"
+                  autoComplete="section-inspection name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600"
@@ -360,12 +376,16 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  <label htmlFor="inspection-phone" className="block text-xs font-semibold text-slate-700 mb-1">
                     Phone Number *
                   </label>
                   <input
                     type="tel"
                     placeholder="(903) 555-0142"
+                    id="inspection-phone"
+                    name="phone"
+                    autoComplete="section-inspection tel"
+                    inputMode="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600"
@@ -374,12 +394,16 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  <label htmlFor="inspection-email" className="block text-xs font-semibold text-slate-700 mb-1">
                     Email Address
                   </label>
                   <input
                     type="email"
                     placeholder="name@email.com"
+                    id="inspection-email"
+                    name="email"
+                    autoComplete="section-inspection email"
+                    inputMode="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600"
