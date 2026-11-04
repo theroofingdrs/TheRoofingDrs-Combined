@@ -80,13 +80,14 @@ async function initDB(): Promise<CRDDatabase> {
     return local;
   }
 
-  const [organizations, contacts, properties, roofs, timeline, leadRows] = await Promise.all([
+  const [organizations, contacts, properties, roofs, timeline, leadRows, calculatorRows] = await Promise.all([
     selectRows<any>('crd_organizations', 'select=organization_id,payload'),
     selectRows<any>('crd_contacts', 'select=contact_id,payload'),
     selectRows<any>('crd_properties', 'select=property_id,payload'),
     selectRows<any>('crd_roofs', 'select=roof_id,payload'),
     selectRows<any>('crd_timeline_events', 'select=event_id,payload'),
     selectRows<any>('trd_records', 'select=id,payload&record_type=eq.lead'),
+    selectRows<any>('crd_calculator_submissions', 'select=submission_id,payload'),
   ]);
 
   const restored: CRDDatabase = {
@@ -94,10 +95,10 @@ async function initDB(): Promise<CRDDatabase> {
     contacts: mergeById(local.contacts, contacts.map(row => row.payload), 'contactId'),
     properties: mergeById(local.properties, properties.map(row => row.payload), 'propertyId'),
     roofs: mergeById(local.roofs, roofs.map(row => row.payload), 'roofId'),
-    leads: leadRows.map(row => row.payload).filter(lead =>
+    leads: mergeById(local.leads, leadRows.map(row => row.payload).filter(lead =>
       lead && (lead.leadId || lead.division === 'commercial' || lead.division === 'COMMERCIAL')
-    ),
-    calculatorSubmissions: local.calculatorSubmissions || [],
+    ), 'leadId'),
+    calculatorSubmissions: mergeById(local.calculatorSubmissions, calculatorRows.map(row => row.payload), 'id'),
     timelineEvents: mergeById(local.timelineEvents, timeline.map(row => row.payload), 'id'),
   };
 
@@ -143,6 +144,18 @@ async function saveDB(data: CRDDatabase): Promise<void> {
     created_at: row.createdAt || now,
     updated_at: row.updatedAt || now,
   })), 'roof_id'));
+  if (data.leads.length) writes.push(upsertRows('trd_records', data.leads.map(row => ({
+    id: String(row.leadId || row.id),
+    record_type: 'lead',
+    payload: row,
+    created_at: row.createdAt || now,
+    updated_at: row.updatedAt || now,
+  })), 'id'));
+  if (data.calculatorSubmissions.length) writes.push(upsertRows('crd_calculator_submissions', data.calculatorSubmissions.map(row => ({
+    submission_id: String(row.id || row.submissionId),
+    payload: row,
+    created_at: row.createdAt || now,
+  })), 'submission_id'));
   if (data.timelineEvents.length) writes.push(upsertRows('crd_timeline_events', data.timelineEvents.map(row => ({
     event_id: String(row.id),
     lead_id: String(row.leadId),
