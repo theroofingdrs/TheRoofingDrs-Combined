@@ -25,16 +25,14 @@ function fixture(approval='true'){
 test('Docker build explicitly enables BuildKit for Dockerfile RUN --mount instructions',()=>{
  assert.match(config,/id: build-combined-roof-doctors\n\s+env:\n\s+- DOCKER_BUILDKIT=1\n\s+args:/);
 });
-test('configuration preserves build arguments, gate and destination without runtime-setting flags',()=>{
+test('configuration preserves build arguments and production deployment destination',()=>{
  assert(config.includes('VITE_SUPABASE_URL=${_VITE_SUPABASE_URL}'));
  assert(config.includes('VITE_SUPABASE_PUBLISHABLE_KEY=${_VITE_SUPABASE_PUBLISHABLE_KEY}'));
- assert(config.includes('_APPROVE_PRODUCTION_DEPLOY: "false"'));
+ assert(config.includes('gcloud run deploy roof-doctors-combined'));
+ assert(!config.includes('_APPROVE_PRODUCTION_DEPLOY'));
  assert(!/--(?:set|update|remove|clear)-(?:env-vars|secrets)|--(?:allow-unauthenticated|service-account|tag|to-latest)/.test(block('deploy-combined-cloud-run')));
 });
-for(const approval of ['false','TRUE',''])test('approval '+JSON.stringify(approval)+' never deploys',()=>{
- const f=fixture(approval);try{assert.equal(f.run('deploy-combined-cloud-run').status,0);assert.deepEqual(f.calls(),[]);}finally{f.close();}
-});
-test('push records local digest and approved deploy uses that digest with no traffic',()=>{
+test('push records the immutable digest and deploys it to production traffic',()=>{
  const f=fixture();try{
   assert.equal(f.run('push-combined-image').status,0);
   assert.equal(readFileSync(f.artifact,'utf8').trim(),reference);
@@ -42,7 +40,7 @@ test('push records local digest and approved deploy uses that digest with no tra
   assert.deepEqual(f.calls(),[
    {tool:'docker',args:['push',image]},
    {tool:'docker',args:['image','inspect',image,'--format','{{index .RepoDigests 0}}']},
-   {tool:'gcloud',args:['run','deploy','roof-doctors-combined','--image',reference,'--no-traffic','--region','us-east1','--project','trdcrd','--quiet']}
+   {tool:'gcloud',args:['run','deploy','roof-doctors-combined','--image',reference,'--region','us-east1','--project','trdcrd','--quiet']}
   ]);
  }finally{f.close();}
 });
