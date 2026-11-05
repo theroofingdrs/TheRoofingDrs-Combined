@@ -48,6 +48,27 @@ try{
   const tap=async selector=>{const bounds=await evaluate(`(()=>{const e=${selector};e.scrollIntoView({block:'center',inline:'center',behavior:'instant'});const r=e.getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2};})()`);assert(bounds.x>=0&&bounds.x<=390&&bounds.y>=0&&bounds.y<=844,JSON.stringify(bounds));await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...bounds,radiusX:1,radiusY:1}]});await call('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});};
   return{call,evaluate,tap,exceptions,assetFailures,posts,apiRoutes,writes,tasks,bookings,bookingPosts,retried:()=>retried};
  }
+ // Audit the actual document geometry on every required viewport for all public experiences.
+ const layout=await page();
+ const layoutWidths=[375,390,430,768,1280,1440,1920];
+ for(const route of ['/','/residential/','/commercial/']){
+  for(const width of layoutWidths){
+   await layout.call('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<768});
+   await layout.call('Page.navigate',{url:publicBase+route});
+   await wait(()=>layout.evaluate("document.readyState==='complete'&&document.body.innerText.trim().length>80"),route+' content at '+width+'px');
+   const toggle=route==='/residential/'?'#mobile-nav-toggle-btn':route==='/commercial/'?'#mobile-menu-toggle-btn':null;
+   if(toggle&&width<1800){
+    await layout.evaluate("document.querySelector("+JSON.stringify(toggle)+")?.click()");
+    await wait(()=>layout.evaluate("document.querySelector("+JSON.stringify(toggle)+")?.getAttribute('aria-expanded')==='true'"),route+' menu at '+width+'px');
+   }
+   const metrics=await layout.evaluate(`(()=>{const viewport=document.documentElement.clientWidth;const elements=[...document.querySelectorAll('body *')].map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return{tag:e.tagName.toLowerCase(),id:e.id||'',className:typeof e.className==='string'?e.className:'',left:Math.round(r.left*100)/100,right:Math.round(r.right*100)/100,width:Math.round(r.width*100)/100,position:s.position,whiteSpace:s.whiteSpace,minWidth:s.minWidth,overflowX:s.overflowX};}).filter(e=>e.width>0&&(e.right>viewport+1||e.left< -1)).sort((a,b)=>Math.max(b.right-viewport,-b.left)-Math.max(a.right-viewport,-a.left)).slice(0,8);return{viewport,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,offenders:elements};})()`);
+   assert(metrics.documentWidth<=metrics.viewport+1&&metrics.bodyWidth<=metrics.viewport+1,`Horizontal overflow ${route} at ${width}px: ${JSON.stringify(metrics)}`);
+   if(toggle&&width<1800)await layout.evaluate("document.querySelector("+JSON.stringify(toggle)+")?.click()");
+  }
+ }
+ assert.deepEqual(layout.exceptions,[],'No uncaught browser exceptions during responsive layout audit');
+ assert.deepEqual(layout.assetFailures,[],'No failed same-origin JS/CSS during responsive layout audit');
+ console.log('PASS responsive layout audit: homepage, TRD residential and CRD commercial at 375/390/430/768/1280/1440/1920px; open navigation drawers included');
  // A healthy API alone missed the historical Footer address.display crash.
  const crd=await page();
  for(const width of [375,390,430,1440]){

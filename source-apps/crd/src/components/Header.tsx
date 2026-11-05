@@ -44,26 +44,26 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
 
   return (
     <header className="sticky top-0 z-30 bg-[#181818]/95 backdrop-blur-md border-b border-[#2a2a2a] text-white transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo / Brand Marker */}
           <Link to="/" id="brand-logo-link" className="flex items-center group py-1" aria-label="Commercial Roof Doctors Home">
             <CrdLogo
               variant="full"
               theme="dark"
-              className="h-10 sm:h-12 lg:h-[60px] w-auto max-h-[65px] max-w-[210px] sm:max-w-[240px] lg:max-w-[260px] object-contain"
+              className="h-10 sm:h-12 lg:h-[60px] w-auto max-h-[65px] max-w-[min(52vw,210px)] sm:max-w-[240px] lg:max-w-[260px] object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2" ref={dropdownRef}>
+          <nav className="hidden min-[1800px]:flex items-center space-x-0" ref={dropdownRef}>
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 id="nav-services-btn"
                 onClick={() => toggleDropdown('services')}
                 aria-expanded={activeDropdown === 'services'}
-                className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
+                className={`flex items-center gap-1 px-2 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'services' || currentPath.includes('commercial-roof')
                     ? 'text-[#d99a19]'
                     : 'text-[#cccccc]'
@@ -356,7 +356,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             <Link
               id="nav-about-link"
               to="/about"
-              className={`px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
+              className={`px-2 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                 currentPath === '/about' ? 'text-[#d99a19]' : 'text-[#cccccc]'
               }`}
             >
@@ -371,11 +371,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             >
               Blog
             </Link>
-                      <a href="/residential/" className="ml-2 inline-flex items-center px-3 py-2 border border-[#555555] text-xs font-bold text-[#eeeeee] hover:border-[#d99a19] hover:text-[#d99a19] transition-colors whitespace-nowrap">Residential Roofing</a>
+                      <a href="/residential/" className="ml-1 inline-flex items-center px-2 py-2 border border-[#555555] text-xs font-bold text-[#eeeeee] hover:border-[#d99a19] hover:text-[#d99a19] transition-colors whitespace-nowrap">Residential Roofing</a>
           </nav>
 
           {/* Action Hub / CTAs */}
-          <div className="hidden xl:flex items-center gap-3">
+          <div className="hidden min-[1800px]:flex items-center gap-3">
             {/* Phone */}
             <a
               id="header-phone-link"
@@ -408,7 +408,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           </div>
 
           {/* Mobile hamburger button */}
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex min-[1800px]:hidden items-center gap-2">
             <button
               id="mobile-emergency-quick-btn"
               onClick={onOpenEmergency}
@@ -435,7 +435,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <nav id="commercial-mobile-navigation" aria-label="Commercial mobile navigation" className="lg:hidden bg-[#181818] border-b border-[#2a2a2a] px-4 pt-3 pb-8 space-y-4 max-h-[85vh] overflow-y-auto">
+        <nav id="commercial-mobile-navigation" aria-label="Commercial mobile navigation" className="min-[1800px]:hidden bg-[#181818] border-b border-[#2a2a2a] px-4 pt-3 pb-8 space-y-4 max-h-[85vh] overflow-y-auto">
           {/* Quick Contact Header in Mobile */}
           <div className="bg-[#111111] p-3 rounded-none border border-[#333333] flex items-center justify-between">
             <div>
