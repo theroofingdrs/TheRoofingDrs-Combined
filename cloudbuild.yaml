@@ -1,6 +1,9 @@
 steps:
   - name: gcr.io/cloud-builders/docker
     id: build-combined-roof-doctors
+    # Dockerfile RUN --mount instructions require the BuildKit builder.
+    env:
+      - DOCKER_BUILDKIT=1
     args:
       - build
       - --build-arg

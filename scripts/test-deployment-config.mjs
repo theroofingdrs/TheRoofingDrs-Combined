@@ -23,6 +23,8 @@ function fixture(approval='true'){
  return{artifact,env,run:id=>spawnSync('sh',['-c',shell(id)],{env,encoding:'utf8'}),calls:()=>existsSync(log)?readFileSync(log,'utf8').trim().split('\n').map(JSON.parse):[],close:()=>rmSync(dir,{recursive:true,force:true})};
 }
 test('configuration preserves build arguments, gate and destination without runtime-setting flags',()=>{
+ const buildStep=config.split(/\n  - name:/).find(step=>step.includes('id: build-combined-roof-doctors\n'));
+ assert.match(buildStep,/\n    env:\n      - ['"]?DOCKER_BUILDKIT=1['"]?\n/,'Dockerfile RUN --mount requires BuildKit in the builder environment');
  assert(config.includes('VITE_SUPABASE_URL=${_VITE_SUPABASE_URL}'));
  assert(config.includes('VITE_SUPABASE_PUBLISHABLE_KEY=${_VITE_SUPABASE_PUBLISHABLE_KEY}'));
  assert(config.includes('_APPROVE_PRODUCTION_DEPLOY: "false"'));
