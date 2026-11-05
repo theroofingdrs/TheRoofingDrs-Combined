@@ -22,6 +22,6 @@ Public lead persistence requires server-only `SUPABASE_URL` and `SUPABASE_SERVIC
 
 Existing Supabase tables and storage policies must be reconciled before deployment. Repository consolidation does not apply database migrations or change customer data. Local JSON mirrors are not the durable lead store. `WEBSITE_DATA_DIR` optionally relocates these mirrors; production defaults preserve their existing paths.
 
-Cloud Build builds and pushes an immutable image, then deploys it to the `roof-doctors-combined` Cloud Run service in `us-east1` and routes production traffic to the new revision after the build succeeds. The Cloud Build trigger must watch the `main` branch and use this `cloudbuild.yaml` file. Pull requests and feature branches remain validation-only; merging to `main` is the production release event.
+Cloud Build builds and pushes an immutable image, then deploys it to the `roof-doctors-combined` Cloud Run service in `us-east1` and routes production traffic to the new revision after the build succeeds. The Cloud Build trigger must watch the `main` branch and use this `cloudbuild.yaml` file. Its first step runs the same dependency installation and full test suite used by GitHub Actions; only a successful test, build, and image push can deploy. Pull requests and feature branches remain validation-only; merging to `main` is the production release event.
 
 See [consolidation status](docs/consolidation-status.md) for integrated work, tests and remaining product gaps.
