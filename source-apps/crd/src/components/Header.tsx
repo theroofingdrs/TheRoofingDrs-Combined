@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
   return (
     <header className="sticky top-0 z-30 bg-[#181818]/95 backdrop-blur-md border-b border-[#2a2a2a] text-white transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex lg:flex-wrap items-center justify-between h-20 lg:h-auto lg:min-h-20 lg:py-3 lg:gap-y-3">
           {/* Logo / Brand Marker */}
           <Link to="/" id="brand-logo-link" className="flex items-center group py-1" aria-label="Commercial Roof Doctors Home">
             <CrdLogo
@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2" ref={dropdownRef}>
+          <nav className="hidden lg:flex lg:order-last lg:w-full flex-wrap items-center justify-center gap-1 xl:gap-2" ref={dropdownRef}>
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -375,7 +375,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           </nav>
 
           {/* Action Hub / CTAs */}
-          <div className="hidden xl:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             {/* Phone */}
             <a
               id="header-phone-link"

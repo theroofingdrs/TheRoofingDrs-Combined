@@ -1,3 +1,4 @@
+import {checkPublicLayouts} from './public-layout-checks.mjs';
 // Real mobile Chromium; API/session fixtures are intercepted and never call production.
 import{spawn,spawnSync}from'node:child_process';import{mkdtemp,rm}from'node:fs/promises';import os from'node:os';import path from'node:path';import assert from'node:assert/strict';
 const root=process.cwd(),temp=await mkdtemp(path.join(os.tmpdir(),'roofing-mobile-'));
@@ -108,6 +109,7 @@ try{
   assert(await p.evaluate('document.documentElement.scrollWidth<=window.innerWidth+1'));
   console.log('PASS mobile Chromium 390px:',division,'labels/contact entry, error retention, identical-key retry and confirmation');
  }
+ await checkPublicLayouts({page,wait,base:process.env.PUBLIC_TEST_BASE_URL||'http://127.0.0.1:19200'});
  if(process.env.CRM_SOURCE_DIR){
  const crm=await page(true);await crm.call('Page.navigate',{url:'http://127.0.0.1:19201/'});try{await wait(()=>crm.evaluate('document.body.textContent.includes("Synthetic customer")'));}catch(error){console.error('CRM fixture routes:',crm.apiRoutes);console.error('CRM fixture screen:',await crm.evaluate('document.body.innerText'));throw error;}
  assert(await crm.evaluate('document.documentElement.scrollWidth<=window.innerWidth+1'));
