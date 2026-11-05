@@ -22,11 +22,11 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   };
 
   return (
-    <div className={`inline-flex flex-col select-none ${className}`}>
+    <div className={`inline-flex flex-col select-none max-w-full ${className}`}>
       <img
         src={`${import.meta.env.BASE_URL}the_roof_doctors_logo_transparent.png`}
         alt="The Roof Doctors"
-        className={`${logoSizes[size]} w-auto object-contain shrink-0`}
+        className={`${logoSizes[size]} w-auto max-w-full object-contain shrink-0`}
         loading="eager"
         decoding="async"
       />
