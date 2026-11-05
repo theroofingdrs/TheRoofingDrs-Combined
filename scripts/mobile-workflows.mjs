@@ -45,6 +45,21 @@ try{
   const tap=async selector=>{const bounds=await evaluate(`(()=>{const e=${selector};e.scrollIntoView({block:'center',inline:'center',behavior:'instant'});const r=e.getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2};})()`);assert(bounds.x>=0&&bounds.x<=390&&bounds.y>=0&&bounds.y<=844,JSON.stringify(bounds));await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...bounds,radiusX:1,radiusY:1}]});await call('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});};
   return{call,evaluate,tap,posts,apiRoutes,writes,tasks,bookings,bookingPosts,retried:()=>retried};
  }
+ // The removed stone/timber card must stay absent from the rendered homepage.
+ const home=await page();
+ for(const width of [375,390,430,1440]){
+  await home.call('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<768});
+  await home.call('Page.navigate',{url:(process.env.PUBLIC_TEST_BASE_URL||'http://127.0.0.1:19200')+'/residential/'});
+  await wait(()=>home.evaluate(`document.querySelectorAll('[id^="featured-photo-card-"]').length>0`),'Residential project cards');
+  assert.deepEqual(await home.evaluate(`[...document.querySelectorAll('[id^="featured-photo-card-"]')].map(e=>e.id)`),['featured-photo-card-photo-aerial','featured-photo-card-photo-crew','featured-photo-card-photo-brick']);
+  assert(await home.evaluate(`!document.body.innerText.includes('Custom Stone & Heavy Timber Architecture')&&!document.querySelector('img[src*="stone_commercial_roof"]')`),'Removed stone/timber card must not return');
+  await home.evaluate(`document.querySelector('#featured-photo-card-photo-aerial').click()`);
+  await wait(()=>home.evaluate(`!!document.querySelector('[aria-label="Close photo preview"]')`),'Project lightbox opens');
+  assert(await home.evaluate(`!document.body.innerText.includes('Custom Stone & Heavy Timber Architecture')&&!document.querySelector('img[src*="stone_commercial_roof"]')`));
+  await home.evaluate(`document.querySelector('[aria-label="Close photo preview"]').click()`);
+  await wait(()=>home.evaluate(`!document.querySelector('[aria-label="Close photo preview"]')`),'Project lightbox closes');
+ }
+ console.log('PASS residential project cards: three intended cards, removed stone/timber absent, lightbox opens/closes at 375/390/430/1440px');
  for(const division of ['residential','commercial']){
   const p=await page();await p.call('Page.navigate',{url:'http://127.0.0.1:19200/'+division+'/contact?utm_campaign=mobile-synthetic'});
   await wait(()=>p.evaluate('!!document.querySelector("form input")'));
