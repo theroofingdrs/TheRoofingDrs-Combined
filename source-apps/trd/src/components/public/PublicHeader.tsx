@@ -100,11 +100,11 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
 
       {/* 2. Primary Navigation Bar */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
-        <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-2 xl:gap-4">
+        <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-1 sm:gap-2 xl:gap-4">
           {/* Logo */}
           <button
             onClick={() => handleNavClick('/')}
-            className="cursor-pointer text-left shrink-0 py-1"
+            className="cursor-pointer text-left shrink-0 py-1 max-w-[38vw] sm:max-w-none"
             title="The Roof Doctors Home"
           >
             <BrandLogo size="md" />
@@ -140,11 +140,11 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
                     <a href="/commercial/" className="hidden min-[1800px]:inline-flex items-center px-3 py-2 rounded-lg border border-slate-300 text-xs xl:text-sm font-bold text-slate-700 hover:border-red-500 hover:text-red-600 transition-colors whitespace-nowrap">Commercial Roofing</a>
 
           {/* Right Action CTA & Mobile Toggle */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-3 shrink-0">
             <button
               id="cta-nav-diagnosed-btn"
               onClick={handleModalClick}
-              className="px-2 sm:px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-xs hover:shadow transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
+              className="px-1 sm:px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-xs hover:shadow transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
             >
               <CalendarCheck className="w-4 h-4 shrink-0" />
               <span className="hidden sm:inline">GET MY ROOF DIAGNOSED</span>

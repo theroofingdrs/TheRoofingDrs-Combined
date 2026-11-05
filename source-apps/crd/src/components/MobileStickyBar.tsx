@@ -13,12 +13,12 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({
 }) => {
   return (
     <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#181818]/98 backdrop-blur-lg border-t border-[#2a2a2a] p-2.5 shadow-2xl">
-      <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_44px] gap-2 max-w-md mx-auto items-center">
+      <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)_40px] gap-2 max-w-md mx-auto items-center">
         {/* Call Button */}
         <a
           id="mobile-sticky-call-btn"
           href={`tel:${BUSINESS_INFO.phoneRaw}`}
-          className="min-w-0 bg-[#242424] hover:bg-[#2c2c2c] text-white font-heading font-extrabold uppercase py-3 px-1 sm:px-2 rounded-none flex items-center justify-center gap-1 text-[11px] sm:text-xs tracking-wide border border-[#333333]"
+          className="min-w-0 bg-[#242424] hover:bg-[#2c2c2c] text-white font-heading font-extrabold uppercase py-3 px-1 sm:px-2 rounded-none flex items-center justify-center gap-1 text-[10px] sm:text-xs tracking-wide border border-[#333333]"
         >
           <Phone className="w-4 h-4 text-[#d99a19] shrink-0" />
           <span>Call CRD</span>

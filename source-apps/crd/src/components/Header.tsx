@@ -380,7 +380,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             <a
               id="header-phone-link"
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="flex items-center gap-2 text-[#eeeeee] hover:text-[#d99a19] px-3 py-2 text-sm font-bold tracking-wide transition-colors"
+              className="hidden"
             >
               <Phone className="w-4 h-4 text-[#d99a19]" />
               <span>{BUSINESS_INFO.phone}</span>
