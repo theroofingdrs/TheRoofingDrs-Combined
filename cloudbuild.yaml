@@ -40,7 +40,7 @@ steps:
           "$$repository"@sha256:*) ;;
           *) echo "Pushed image repository does not match; refusing deployment." >&2; exit 1 ;;
         esac
-        digest="${image#"$repository"@sha256:}"
+        digest="$(printf '%s' "$image" | sed "s|^$repository@sha256:||")"
         if [ "$${#digest}" -ne 64 ] || printf '%s' "$$digest" | grep -q '[^0-9a-f]'; then
           echo "Missing or invalid pushed image digest; refusing deployment." >&2
           exit 1
