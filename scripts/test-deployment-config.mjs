@@ -22,6 +22,9 @@ function fixture(approval='true'){
  const shell=id=>block(id).replaceAll('${_IMAGE_URI}',image).replaceAll('${_APPROVE_PRODUCTION_DEPLOY}',approval).replaceAll('$$','$').replaceAll('/workspace/combined-image-reference.txt',artifact);
  return{artifact,env,run:id=>spawnSync('sh',['-c',shell(id)],{env,encoding:'utf8'}),calls:()=>existsSync(log)?readFileSync(log,'utf8').trim().split('\n').map(JSON.parse):[],close:()=>rmSync(dir,{recursive:true,force:true})};
 }
+test('Docker build explicitly enables BuildKit for Dockerfile RUN --mount instructions',()=>{
+ assert.match(config,/id: build-combined-roof-doctors\n\s+env:\n\s+- DOCKER_BUILDKIT=1\n\s+args:/);
+});
 test('configuration preserves build arguments, gate and destination without runtime-setting flags',()=>{
  assert(config.includes('VITE_SUPABASE_URL=${_VITE_SUPABASE_URL}'));
  assert(config.includes('VITE_SUPABASE_PUBLISHABLE_KEY=${_VITE_SUPABASE_PUBLISHABLE_KEY}'));
