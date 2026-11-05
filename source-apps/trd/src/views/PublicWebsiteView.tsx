@@ -224,7 +224,12 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
 
       {/* 3. Hero Section: Diagnostic Precision */}
       <section className="relative bg-slate-900 text-white pt-14 pb-20 px-4 sm:px-6 overflow-hidden border-b border-slate-800">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${getTrdPublicAssetPath('/assets/images/residential-hero.jpg')})` }}
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-slate-950/65" />
 
         <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
