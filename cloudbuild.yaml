@@ -36,7 +36,11 @@ steps:
       - -c
       - |
         set -eu
-        image="$$(cat /workspace/combined-image-reference.txt)"
+        if [ "${BRANCH_NAME:-}" != "main" ]; then
+          echo "Branch ${BRANCH_NAME:-unknown} is validation-only; production deploy is restricted to main."
+          exit 0
+        fi
+        image="$(cat /workspace/combined-image-reference.txt)"
         repository="$$(printf '%s' '${_IMAGE_URI}' | sed 's/:[^/]*$$//')"
         case "$$image" in
           "$$repository"@sha256:*) ;;
