@@ -18,7 +18,7 @@ function fixture(approval='true'){
  const dir=mkdtempSync(path.join(os.tmpdir(),'roofing-deploy-test-')),bin=path.join(dir,'bin'),log=path.join(dir,'calls.jsonl'),artifact=path.join(dir,'image.txt');mkdirSync(bin);
  const stub=`#!${process.execPath}\nconst fs=require('node:fs');const args=process.argv.slice(2),tool=require('node:path').basename(process.argv[1]);fs.appendFileSync(process.env.CALL_LOG,JSON.stringify({tool,args})+'\\n');if(tool==='docker'){if(args[0]==='push'&&process.env.FAIL_PUSH)process.exit(1);if(args[0]==='image')console.log(process.env.PUSHED_REFERENCE);}`;
  for(const tool of ['docker','gcloud'])writeFileSync(path.join(bin,tool),stub,{mode:0o755});
- const env={...process.env,PATH:bin+path.delimiter+process.env.PATH,CALL_LOG:log,PUSHED_REFERENCE:reference};
+ const env={...process.env,PATH:bin+path.delimiter+process.env.PATH,CALL_LOG:log,PUSHED_REFERENCE:reference,BRANCH_NAME:'main'};
  const shell=id=>block(id).replaceAll('${_IMAGE_URI}',image).replaceAll('${_APPROVE_PRODUCTION_DEPLOY}',approval).replaceAll('$$','$').replaceAll('/workspace/combined-image-reference.txt',artifact);
  return{artifact,env,run:id=>spawnSync('sh',['-c',shell(id)],{env,encoding:'utf8'}),calls:()=>existsSync(log)?readFileSync(log,'utf8').trim().split('\n').map(JSON.parse):[],close:()=>rmSync(dir,{recursive:true,force:true})};
 }
@@ -32,7 +32,10 @@ test('configuration preserves build arguments and production deployment destinat
  assert(!config.includes('_APPROVE_PRODUCTION_DEPLOY'));
  assert(!/--(?:set|update|remove|clear)-(?:env-vars|secrets)|--(?:allow-unauthenticated|service-account|tag|to-latest)/.test(block('deploy-combined-cloud-run')));
 });
-test('push records the immutable digest and deploys it to production traffic',()=>{
+test('feature and integration branches cannot deploy production',()=>{
+ const f=fixture();try{f.env.BRANCH_NAME='integration/path-routing';assert.equal(f.run('deploy-combined-cloud-run').status,0);assert.deepEqual(f.calls(),[]);}finally{f.close();}
+});
+test('push records the immutable digest and main deploys it to production traffic',()=>{
  const f=fixture();try{
   assert.equal(f.run('push-combined-image').status,0);
   assert.equal(readFileSync(f.artifact,'utf8').trim(),reference);
