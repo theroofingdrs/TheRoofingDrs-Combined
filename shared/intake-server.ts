@@ -40,10 +40,10 @@ export async function deliverInquiry(division: 'TRD' | 'CRD', key: unknown, payl
   if (typeof key !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(key)) throw new IntakeError('Refresh this form and retry with its submission reference.', 400);
   const contact = payload.contactRecord && typeof payload.contactRecord === 'object' ? payload.contactRecord as Record<string, unknown> : {};
   const email = contact.email || payload.email, phone = contact.phone || payload.phone;
-  const validEmail = typeof email === 'string' && /^[^\\s<>@]+@[^\\s<>@]+\\.[^\\s<>@]+$/.test(email.trim());
-  const validPhone = typeof phone === 'string' && phone.replace(/\\D/g, '').length >= 7;
+  const validEmail = typeof email === 'string' && /^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(email.trim());
+  const validPhone = typeof phone === 'string' && phone.replace(/\D/g, '').length >= 7;
   if (!validEmail && !validPhone) throw new IntakeError('Enter a valid phone number or email address.', 400);
-  const url = process.env.SUPABASE_URL?.replace(/\\/$/, '');
+  const url = process.env.SUPABASE_URL?.replace(/\/$/, '');
   const secret = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url?.startsWith('https://') || !secret) { console.error('Website intake configuration missing',{division,submissionKey:key,missing:[...(!url?['SUPABASE_URL']:[]),...(!secret?['SUPABASE_SERVICE_ROLE_KEY']:[])]}); throw new IntakeError('Inquiry storage is unavailable. Your request has not been confirmed; retry or call (903) 231-5940.'); }
   const body = JSON.stringify({ p_division: division, p_key: key, p_payload: payload });
