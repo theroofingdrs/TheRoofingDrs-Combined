@@ -6,7 +6,7 @@ import {spawnSync} from 'node:child_process';
 import os from 'node:os';
 import path from 'node:path';
 const config=readFileSync(new URL('../cloudbuild.yaml',import.meta.url),'utf8');
-const image='us-east1-docker.pkg.dev/trdcrd/roof-doctors/combined:integration';
+const image='us-east1-docker.pkg.dev/trdcrd/roof-doctors/combined:main';
 const reference=image.replace(/:[^/]*$/,'')+'@sha256:'+'a'.repeat(64);
 function block(id){
  const step=config.split(/\n  - name:/).find(step=>step.includes('id: '+id+'\n'));
