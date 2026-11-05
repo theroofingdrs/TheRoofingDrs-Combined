@@ -24,15 +24,11 @@ steps:
         docker image inspect "${_IMAGE_URI}" --format '{{index .RepoDigests 0}}' > /workspace/combined-image-reference.txt
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     id: deploy-combined-cloud-run
-    # Repository consolidation validates source; production cutover stays explicit.
+    # Successful builds deploy the immutable image and route production traffic.
     entrypoint: sh
     args:
       - -c
       - |
-        if [ "${_APPROVE_PRODUCTION_DEPLOY}" != "true" ]; then
-          echo "Image built; production deployment was not requested."
-          exit 0
-        fi
         set -eu
         image="$$(cat /workspace/combined-image-reference.txt)"
         repository="$$(printf '%s' '${_IMAGE_URI}' | sed 's/:[^/]*$$//')"
@@ -45,12 +41,11 @@ steps:
           echo "Missing or invalid pushed image digest; refusing deployment." >&2
           exit 1
         fi
-        exec gcloud run deploy roof-doctors-combined --image "$$image" --no-traffic --region us-east1 --project trdcrd --quiet
+        exec gcloud run deploy roof-doctors-combined --image "$$image" --region us-east1 --project trdcrd --quiet
 
 images:
   - ${_IMAGE_URI}
 substitutions:
-  _APPROVE_PRODUCTION_DEPLOY: "false"
   _VITE_SUPABASE_URL: https://gubvelngdohrfvqeeabu.supabase.co
   _VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_o2OYRMRHrl8nz8mLdhX9Mg_Pk3jFz-K
   _IMAGE_URI: us-east1-docker.pkg.dev/trdcrd/roof-doctors/combined:integration
