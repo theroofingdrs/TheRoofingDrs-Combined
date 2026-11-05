@@ -57,7 +57,7 @@ try{
   const response=await fetch(sitemapUrl);
   assert(response.ok,`Unable to load route inventory ${sitemapUrl}: HTTP ${response.status}`);
   const xml=await response.text();
-  for(const [,url] of xml.matchAll(/<loc>(https?:[^<]+)<\\/loc>/g)){
+  for(const [,url] of xml.matchAll(/<loc>(https?:[^<]+)<\/loc>/g)){
    const parsed=new URL(url);
    if(parsed.hostname==='theroofingdrs.com')discovered.add(publicBase+parsed.pathname);
   }
