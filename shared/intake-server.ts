@@ -4,6 +4,38 @@ export class IntakeError extends Error {
   constructor(message: string, status = 503) { super(message); this.status = status; }
 }
 export type IntakeReceipt = { ok: boolean; status: string; submission_key: string; lead_id: string; source_id: string; received_at: string; replayed: boolean; error_code?: string };
+
+/**
+ * Wake the private outbox worker after the intake transaction commits.
+ * This is deliberately best-effort: a notification outage must never turn a
+ * successfully stored customer inquiry into a failed website submission.
+ * The outbox remains durable and the same worker can safely be invoked again.
+ */
+async function wakeIntakeNotificationWorker(url: string, secret: string, division: string, key: string): Promise<void> {
+  const endpoint = url + '/functions/v1/crm-intake-notifications';
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        signal: AbortSignal.timeout(12000),
+        headers: { Authorization: 'Bearer ' + secret, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ trigger: 'website_intake', division, submission_key: key }),
+        redirect: 'error',
+      });
+      if (response.ok) return;
+      // Configuration/auth errors cannot be repaired by an immediate retry.
+      if ([400, 401, 403, 404, 422].includes(response.status)) {
+        console.error('CRM intake notification worker rejected wake-up', { division, submissionKey: key, status: response.status });
+        return;
+      }
+      if (attempt === 2) console.error('CRM intake notification worker wake-up failed', { division, submissionKey: key, status: response.status });
+    } catch (error) {
+      if (attempt === 2) console.error('CRM intake notification worker wake-up unavailable', { division, submissionKey: key, reason: error instanceof Error ? error.name : 'network-error' });
+    }
+    if (attempt < 2) await new Promise(resolve => setTimeout(resolve, 300 * (attempt + 1)));
+  }
+}
+
 export async function deliverInquiry(division: 'TRD' | 'CRD', key: unknown, payload: Record<string, unknown>): Promise<IntakeReceipt> {
   if (typeof key !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(key)) throw new IntakeError('Refresh this form and retry with its submission reference.', 400);
   const contact = payload.contactRecord && typeof payload.contactRecord === 'object' ? payload.contactRecord as Record<string, unknown> : {};
@@ -25,7 +57,6 @@ export async function deliverInquiry(division: 'TRD' | 'CRD', key: unknown, payl
       });
       if (!response.ok) {
         if ([408,429].includes(response.status) || response.status >= 500) throw new Error('Transient intake HTTP ' + response.status);
-        // No provider response body or credential is exposed to a visitor.
         throw new IntakeError('Inquiry delivery is unavailable. Keep your submission reference and retry or call our team.');
       }
       const result = await response.json() as IntakeReceipt;
@@ -33,6 +64,9 @@ export async function deliverInquiry(division: 'TRD' | 'CRD', key: unknown, payl
       if (!result.ok || result.status !== 'delivered' || !result.lead_id || !result.source_id || result.submission_key !== key) {
         throw new IntakeError(result.error_code === '22023' ? 'Check contact details and supported attachments (JPEG, PNG, WebP or PDF; 15 MB per file).' : 'Your inquiry could not reach Operations. Keep your submission reference and retry or call our team.', result.error_code === '22023' ? 400 : 503);
       }
+      // CRM + outbox writes are committed before the worker is woken.
+      // A replay also wakes the worker, allowing pending notifications to recover.
+      await wakeIntakeNotificationWorker(url, secret, division, key);
       return result;
     } catch (error) {
       if (error instanceof IntakeError) throw error;

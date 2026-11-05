@@ -7,7 +7,7 @@ process.env.SUPABASE_URL='https://intake.example.test';process.env.SUPABASE_SERV
 const receipt={ok:true,status:'delivered',submission_key:key,lead_id:'synthetic-lead',source_id:'synthetic-source',received_at:'2026-11-04T00:00:00Z'};
 test('stable authenticated retries survive a lost response without changing the payload',async()=>{
  const requests=[];globalThis.fetch=async(url,options)=>{requests.push({url,...options});if(requests.length===1)throw new TypeError('Synthetic lost acknowledgement');return Response.json(receipt);};
- try{const result=await deliverInquiry('TRD',key,{name:'Synthetic',phone:'9035550100'});assert.equal(result.lead_id,'synthetic-lead');assert.equal(requests.length,2);assert.equal(requests[0].body,requests[1].body);assert.equal(requests[0].headers.Authorization,'Bearer synthetic-server-only');assert.equal(JSON.parse(requests[0].body).p_division,'TRD');}finally{globalThis.fetch=originalFetch;}
+ try{const result=await deliverInquiry('TRD',key,{name:'Synthetic',phone:'9035550100'});assert.equal(result.lead_id,'synthetic-lead');assert.equal(requests.length,3);assert.equal(requests[0].body,requests[1].body);assert.equal(requests[0].headers.Authorization,'Bearer synthetic-server-only');assert.equal(JSON.parse(requests[0].body).p_division,'TRD');assert.equal(requests[2].url,'https://intake.example.test/functions/v1/crm-intake-notifications');assert.equal(requests[2].headers.Authorization,'Bearer synthetic-server-only');}finally{globalThis.fetch=originalFetch;}
 });
 test('failed CRM delivery never returns website success',async()=>{
  globalThis.fetch=async()=>Response.json({...receipt,ok:false,status:'failed',error_code:'P0001'});
