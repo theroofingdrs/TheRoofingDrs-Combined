@@ -105,10 +105,13 @@ a second commercial prefix. No replacement load balancer is proposed or created.
    validate the immutable pushed digest and source provenance. Deploy a candidate
    using the existing approval gate and `--no-traffic`, only after separate release
    authorization. No deployment is part of this PR.
-4. Before promotion, test the candidate by an existing candidate URL with explicit
-   Host requests, or an authorized host-routing test path. Confirm exact Location
-   headers and both brands' browser rendering. The default production URL does
-   not test a zero-traffic candidate. Keep canonical URLs on the apex `/commercial/`.
+4. Before promotion, test both brands at an existing candidate-specific URL and
+   verify the redirect with raw Host requests to a locally bound container or an
+   approved path that preserves Host. Cloud Run's edge may reject an unmapped
+   commercial Host before it reaches the container; do not misdiagnose that as an
+   application redirect failure. The default production URL does not test a
+   zero-traffic candidate. Keep canonicals on the apex `/commercial/`; end-to-end
+   alias TLS/redirect verification occurs after its separately approved mapping.
 5. After separate release approval, make the tested redirect implementation available
    on the production service. Do not map the alias to an old revision that serves
    the shared root landing or throws the historical footer error.
