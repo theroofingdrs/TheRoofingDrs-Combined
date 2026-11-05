@@ -3,11 +3,12 @@ import{spawn,spawnSync}from'node:child_process';import{mkdtemp,rm}from'node:fs/p
 const root=process.cwd(),temp=await mkdtemp(path.join(os.tmpdir(),'roofing-mobile-'));
 const browserBin=process.env.CHROME_BIN||['chromium','google-chrome','google-chrome-stable'].find(bin=>spawnSync('which',[bin]).status===0);
 if(!browserBin)throw Error('Chromium is required for mobile workflow validation.');
+const publicBase=process.env.PUBLIC_TEST_BASE_URL||'http://127.0.0.1:19200';
 const processes=[],clients=[];
 const start=(args,cwd,env={})=>{const p=spawn(process.execPath,args,{cwd,env:{...process.env,NODE_ENV:'production',WEBSITE_DATA_DIR:temp,...env},stdio:'ignore'});processes.push(p);return p;};
 const wait=async(predicate,label='Mobile workflow',timeoutMs=15000)=>{const deadline=Date.now()+timeoutMs;while(Date.now()<deadline){try{if(await predicate())return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error(`${label} timed out after ${timeoutMs}ms`);};
 try{
- start(['server.mjs'],root,{PORT:'19200'});
+ if(!process.env.PUBLIC_TEST_BASE_URL)start(['server.mjs'],root,{PORT:'19200'});
  if(process.env.CRM_SOURCE_DIR)start(['node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port','19201'],process.env.CRM_SOURCE_DIR);
  const browserErrors=[];
  const browser=spawn(browserBin,['--headless=new','--no-sandbox','--disable-dev-shm-usage','--disable-background-networking','--disable-component-update','--no-first-run','--remote-debugging-port=19222','--user-data-dir='+path.join(temp,'chrome'),'about:blank'],{stdio:['ignore','ignore','pipe']});processes.push(browser);
@@ -16,9 +17,11 @@ try{
  async function page(crm=false,staff=false){
   const target=await(await fetch('http://127.0.0.1:19222/json/new?about:blank',{method:'PUT'})).json();
   const ws=new WebSocket(target.webSocketDebuggerUrl);clients.push(ws);await new Promise(resolve=>ws.addEventListener('open',resolve,{once:true}));
-  let seq=0;const pending=new Map(),posts=[],apiRoutes=[],writes=[],tasks=[],bookings=[],bookingPosts=[];let retried=false;
+  let seq=0;const pending=new Map(),posts=[],apiRoutes=[],writes=[],tasks=[],bookings=[],bookingPosts=[];let retried=false;const exceptions=[],assetFailures=[];
   const call=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
   ws.addEventListener('message',async event=>{const message=JSON.parse(event.data);if(message.id){const task=pending.get(message.id);if(task){pending.delete(message.id);message.error?task.reject(Error(message.error.message)):task.resolve(message.result);}return;}
+   if(message.method==='Runtime.exceptionThrown')exceptions.push(message.params.exceptionDetails.exception?.description||message.params.exceptionDetails.text);
+   if(message.method==='Network.responseReceived'){const r=message.params.response;if(r.url.startsWith(publicBase)&&/\.(?:js|css)(?:\?|$)/.test(r.url)&&r.status>=400)assetFailures.push({path:new URL(r.url).pathname,status:r.status});}
    if(message.method!=='Fetch.requestPaused')return;
    const {requestId,request}=message.params,url=new URL(request.url);
    const allowedHeaders=Object.entries(request.headers).find(([name])=>name.toLowerCase()==='access-control-request-headers')?.[1]||'authorization,apikey,content-type,x-client-info,prefer,range,x-supabase-api-version';
@@ -39,14 +42,29 @@ try{
    else body={};
    await call('Fetch.fulfillRequest',{requestId,responseCode:!crm&&posts.length===1&&request.method==='POST'?503:200,responseHeaders:[{name:'content-type',value:'application/json'},{name:'access-control-allow-origin',value:'*'},{name:'access-control-allow-methods',value:'GET,POST,PATCH,OPTIONS'},{name:'access-control-allow-headers',value:allowedHeaders},{name:'content-range',value:'0-0/1'}],body:Buffer.from(JSON.stringify(body)).toString('base64')});
   });
-  await call('Page.enable');await call('Runtime.enable');await call('Browser.setDownloadBehavior',{behavior:'deny'});await call('Fetch.enable',{patterns:[{urlPattern:'*'}]});await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+  await call('Page.enable');await call('Runtime.enable');await call('Network.enable');await call('Browser.setDownloadBehavior',{behavior:'deny'});await call('Fetch.enable',{patterns:[{urlPattern:'*'}]});await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
   if(crm){const user={id:'10000000-0000-4000-8000-000000000001',email:'owner@example.test',aud:'authenticated',role:'authenticated'};const jwt=Buffer.from(JSON.stringify({alg:'HS256'})).toString('base64url')+'.'+Buffer.from(JSON.stringify({sub:user.id,exp:Math.floor(Date.now()/1000)+3600,role:'authenticated'})).toString('base64url')+'.synthetic';const session={access_token:jwt,refresh_token:'synthetic',expires_at:Math.floor(Date.now()/1000)+3600,expires_in:3600,token_type:'bearer',user};await call('Page.addScriptToEvaluateOnNewDocument',{source:`localStorage.setItem('sb-gubvelngdohrfvqeeabu-auth-token',${JSON.stringify(JSON.stringify(session))});localStorage.setItem('trd-crd-workspace-${user.id}','{"view":"leads","division":"TRD"}');`});}
   const evaluate=async expression=>{const r=await call('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.text);return r.result.value;};
   const tap=async selector=>{const bounds=await evaluate(`(()=>{const e=${selector};e.scrollIntoView({block:'center',inline:'center',behavior:'instant'});const r=e.getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2};})()`);assert(bounds.x>=0&&bounds.x<=390&&bounds.y>=0&&bounds.y<=844,JSON.stringify(bounds));await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...bounds,radiusX:1,radiusY:1}]});await call('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});};
-  return{call,evaluate,tap,posts,apiRoutes,writes,tasks,bookings,bookingPosts,retried:()=>retried};
+  return{call,evaluate,tap,exceptions,assetFailures,posts,apiRoutes,writes,tasks,bookings,bookingPosts,retried:()=>retried};
  }
+ // A healthy API alone missed the historical Footer address.display crash.
+ const crd=await page();
+ for(const width of [375,390,430,1440]){
+  await crd.call('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<768});
+  for(let reload=0;reload<3;reload++){
+   await crd.call('Page.navigate',{url:publicBase+'/commercial/'});
+   try{await wait(()=>crd.evaluate(`!!document.querySelector('h1')&&!!document.querySelector('footer')&&document.querySelector('footer').innerText.includes('COMMERCIAL SERVICE AREA')`),'Commercial page and footer render at '+width);}catch(error){assert.deepEqual(crd.exceptions,[],'Commercial browser exceptions');throw error;}
+   assert(await crd.evaluate(`['Texas','Arkansas','Louisiana','Oklahoma'].every(state=>document.querySelector('footer').innerText.includes(state))`));
+   assert.deepEqual(crd.exceptions,[]);assert.deepEqual(crd.assetFailures,[],'Commercial JS/CSS must load');
+  }
+ }
+ await crd.call('Page.navigate',{url:publicBase+'/commercial/admin'});
+ await wait(()=>crd.evaluate(`document.querySelector('h1')?.textContent==='Operations Portal'&&[...document.querySelectorAll('a')].some(a=>a.textContent.includes('Open Secure Operations Center'))`),'Commercial legacy login shell');
+ assert.deepEqual(crd.exceptions,[]);assert.deepEqual(crd.assetFailures,[]);
+ console.log('PASS commercial rendering: footer/service area, no JS exceptions or missing JS/CSS, three reloads at 375/390/430/1440px and Operations Portal shell');
  for(const division of ['residential','commercial']){
-  const p=await page();await p.call('Page.navigate',{url:'http://127.0.0.1:19200/'+division+'/contact?utm_campaign=mobile-synthetic'});
+  const p=await page();await p.call('Page.navigate',{url:publicBase+'/'+division+'/contact?utm_campaign=mobile-synthetic'});
   await wait(()=>p.evaluate('!!document.querySelector("form input")'));
   const toggle=division==='commercial'?'#mobile-menu-toggle-btn':'button[aria-controls="residential-mobile-navigation"]';
   await p.tap(JSON.stringify(toggle)+ ' && document.querySelector('+JSON.stringify(toggle)+')');
@@ -70,7 +88,7 @@ try{
 
   if(division==='residential'){
    for(const route of ['/estimate-request/','/estimate-request/extra']){
-    const url='http://127.0.0.1:19200/residential'+route;
+    const url=publicBase+'/residential'+route;
     const html=await (await fetch(url)).text();
     const title=html.match(/<title>(.*?)<\/title>/s)[1];
     const description=html.match(/<meta name="description" content="([^"]*)"/)[1];
@@ -79,7 +97,7 @@ try{
     assert.equal(await p.evaluate('document.title'),title);
     assert.equal(await p.evaluate(`document.querySelector('meta[name="description"]').content`),description);
    }
-   await p.call('Page.navigate',{url:'http://127.0.0.1:19200/residential/contact?utm_campaign=mobile-synthetic'});
+   await p.call('Page.navigate',{url:publicBase+'/residential/contact?utm_campaign=mobile-synthetic'});
    await wait(()=>p.evaluate(`!!document.querySelector('form input')&&document.querySelector('link[rel=canonical]')?.href==='https://theroofingdrs.com/residential/contact'`));
    console.log('PASS estimate aliases: initial HTTP metadata agrees with rendered title, description and canonical; no routing changes');
    await p.evaluate(`window.__twitterNodes=[document.querySelector('meta[name="twitter:title"]'),document.querySelector('meta[name="twitter:description"]')]`);
