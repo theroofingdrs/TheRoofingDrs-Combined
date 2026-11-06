@@ -54,8 +54,8 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.phone.trim()) {
-      setError('Full name and telephone number are required.');
+    if (!formData.name.trim() || (!formData.phone.trim() && !formData.email.trim())) {
+      setError('Please provide your full name and either a telephone number or email address.');
       return;
     }
 
@@ -353,7 +353,7 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="inspection-phone" className="block text-xs font-semibold text-slate-700 mb-1">
-                    Phone Number *
+                    Phone Number {formData.email.trim() ? '(optional)' : '*'}
                   </label>
                   <input
                     type="tel"
@@ -365,13 +365,13 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600"
-                    required
+                    required={!formData.email.trim()}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="inspection-email" className="block text-xs font-semibold text-slate-700 mb-1">
-                    Email Address
+                    Email Address {formData.phone.trim() ? '(optional)' : '*'}
                   </label>
                   <input
                     type="email"
@@ -382,6 +382,7 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                     inputMode="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required={!formData.phone.trim()}
                     className="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:border-red-600"
                   />
                 </div>
@@ -482,19 +483,9 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
                 )}
               </div>
 
-              {/* Email Notification Dispatch Status */}
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 text-left text-xs space-y-1.5 text-emerald-900">
-                <div className="font-bold text-emerald-800 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Outbound Notifications Dispatched
-                </div>
-                <div className="text-[11px] text-emerald-800 space-y-0.5">
-                  <div>✓ <strong>Internal Alert:</strong> Live email delivered to <strong>TheRoofingDrs@gmail.com</strong></div>
-                  {submittedLead.email && (
-                    <div>✓ <strong>Homeowner Confirmation:</strong> Copy sent to <strong>{submittedLead.email}</strong></div>
-                  )}
-                  <div className="text-[10px] text-emerald-600 mt-1">Provider: Resend Live Dispatcher • Status: Delivered to mail exchanger</div>
-                </div>
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-left text-xs text-slate-700">
+                <div className="font-semibold">Your request has been received.</div>
+                <div className="mt-1">A member of our team will follow up using the contact information you provided.</div>
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-2 justify-center">
