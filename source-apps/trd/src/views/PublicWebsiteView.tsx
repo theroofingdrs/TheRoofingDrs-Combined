@@ -19,6 +19,7 @@ import {
   Sparkles,
   HelpCircle,
   BookOpen,
+  Building2,
   CloudLightning,
   ChevronRight,
   ShieldCheck,
