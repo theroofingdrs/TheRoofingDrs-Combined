@@ -173,8 +173,8 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col selection:bg-red-500 selection:text-white pb-16 lg:pb-0">
       <SeoHead
-        title="The Roof Doctors — Residential Roofing & Storm Damage Specialists"
-        description="Objective residential roof diagnostics, forensic storm damage inspections, and precision restoration across Northeast Texas. Free 21-point physical inspection."
+        title="The Roofing Drs | Residential & Commercial Roofing in the Ark-La-Tex"
+        description="The Roofing Drs provides residential roof inspections, repairs and storm restoration through TRD, plus commercial roofing, coatings, repairs and roof asset services through CRD across the Ark-La-Tex."
         canonicalPath="/"
         schemaJson={{
           '@context': 'https://schema.org',
@@ -669,6 +669,126 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 7. Two Specialized Roofing Divisions: Residential & Commercial */}
+      <section id="roofing-divisions" className="bg-slate-900 text-white py-20 px-4 sm:px-6 border-y border-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center mb-12 space-y-3">
+            <span className="text-xs uppercase tracking-wider text-red-400 font-bold">
+              One Roofing Team. Two Dedicated Divisions.
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight">
+              Residential &amp; Commercial Roofing Across the Region
+            </h2>
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              The Roofing Drs brings residential roof diagnostics and commercial roof system expertise together under one organization. Choose the team built for your property, roof type, and project requirements.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <article className="bg-white text-slate-900 rounded-2xl p-7 sm:p-8 border border-slate-200 flex flex-col">
+              <div className="inline-flex self-start items-center gap-2 rounded-full bg-red-50 text-red-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
+                <ShieldCheck className="w-4 h-4" />
+                The Roof Doctors · TRD
+              </div>
+              <h3 className="text-2xl font-black uppercase tracking-tight mt-4">Residential Roofing</h3>
+              <p className="text-sm text-slate-600 leading-relaxed mt-3">
+                Homeowners can get help diagnosing roof problems, documenting storm damage, repairing leaks, and planning a complete roof replacement. Our residential process begins with an inspection and a clear explanation of the roof’s condition and recommended next steps.
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2 mt-5 text-xs text-slate-700">
+                {[
+                  'Free 21-point roof inspections',
+                  'Roof leak diagnosis and repairs',
+                  'Roof replacement and installation',
+                  'Hail and wind damage assessments',
+                  'Storm restoration documentation',
+                  'Emergency tarping and response',
+                  'Attic, ventilation and moisture checks',
+                  'Roofing system and material guidance',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 pt-5 border-t border-slate-200">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">Residential service area</h4>
+                <p className="text-xs text-slate-600 leading-relaxed mt-2">
+                  Based in Texarkana, TRD’s core residential coverage generally extends about 75 miles from the Texarkana area. Communities include Texarkana, Atlanta, New Boston, Marshall and nearby Northeast Texas communities. Extended-area requests, including Paris, Sulphur Springs, Longview and Tyler, are reviewed individually based on project scope and scheduling.
+                </p>
+                <button
+                  onClick={() => onNavigate('/residential/service-areas')}
+                  className="mt-3 text-xs font-bold text-red-600 hover:text-red-700 inline-flex items-center gap-1 cursor-pointer"
+                >
+                  Explore residential service areas <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+              <div className="mt-auto pt-6">
+                <button
+                  onClick={() => openIntake('DIAGNOSTIC')}
+                  className="w-full sm:w-auto px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                >
+                  Request a Residential Inspection <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </article>
+
+            <article className="bg-slate-800 text-white rounded-2xl p-7 sm:p-8 border border-slate-700 flex flex-col">
+              <div className="inline-flex self-start items-center gap-2 rounded-full bg-amber-400/10 text-amber-300 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
+                <Building2 className="w-4 h-4" />
+                Commercial Roof Doctors · CRD
+              </div>
+              <h3 className="text-2xl font-black uppercase tracking-tight mt-4">Commercial &amp; Industrial Roofing</h3>
+              <p className="text-sm text-slate-300 leading-relaxed mt-3">
+                CRD works with owners, facility teams and property managers to inspect, repair, restore and replace commercial roof systems. Recommendations are based on roof condition, building use, drainage, system compatibility and the long-term needs of the property.
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2 mt-5 text-xs text-slate-200">
+                {[
+                  'Commercial roof inspections and diagnostics',
+                  'Leak tracing and commercial roof repairs',
+                  'Preventative maintenance programs',
+                  'TPO, EPDM, PVC and modified bitumen',
+                  'Commercial metal roof repair and renewal',
+                  'Silicone, acrylic and polyurethane coatings',
+                  'Roof restoration and replacement planning',
+                  'Storm damage documentation and response',
+                  'Multi-property and roof asset management',
+                  'Emergency water-intrusion mitigation',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 pt-5 border-t border-slate-700">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-white">Commercial service area</h4>
+                <p className="text-xs text-slate-300 leading-relaxed mt-2">
+                  Based in Texarkana, CRD serves commercial, industrial and multi-site properties across Texas, Arkansas, Louisiana and Oklahoma. Regional projects are evaluated individually; travel, mobilization and availability depend on the property location, roof system, project scope and schedule. Coverage is confirmed during consultation.
+                </p>
+                <button
+                  onClick={() => onNavigate('/commercial')}
+                  className="mt-3 text-xs font-bold text-amber-300 hover:text-amber-200 inline-flex items-center gap-1 cursor-pointer"
+                >
+                  Explore commercial services and state coverage <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+              <div className="mt-auto pt-6">
+                <button
+                  onClick={() => onNavigate('/commercial')}
+                  className="w-full sm:w-auto px-5 py-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs rounded-xl transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                >
+                  Visit Commercial Roof Doctors <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </article>
+          </div>
+          <p className="text-[11px] text-slate-400 text-center max-w-4xl mx-auto mt-8 leading-relaxed">
+            Service availability is confirmed before scheduling. Residential coverage varies by community; commercial projects are considered across the four-state operating territory according to scope and mobilization requirements.
+          </p>
         </div>
       </section>
 
