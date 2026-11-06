@@ -39,8 +39,8 @@ steps:
       - -c
       - |
         set -eu
-        if [ "$DEPLOY_BRANCH" != "main" ]; then
-          echo "Branch ${DEPLOY_BRANCH:-unknown} is validation-only; production deploy is restricted to main."
+        if [ "$$DEPLOY_BRANCH" != "main" ]; then
+          echo "Branch $${DEPLOY_BRANCH:-unknown} is validation-only; production deploy is restricted to main."
           exit 0
         fi
         image="$(cat /workspace/combined-image-reference.txt)"
