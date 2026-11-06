@@ -1053,7 +1053,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Industrial & Warehouses',
                 priority: 'Zero operational downtime, massive low-slope acreage, high-traffic HVAC curbs.',
                 href: '/industries/industrial',
-                img: '/assets/images/library/commercial-property-roofing-04.jpg',
+                img: '/assets/images/commercial-warehouse-roof.jpg',
               },
               {
                 title: 'Retail & Strip Centers',
