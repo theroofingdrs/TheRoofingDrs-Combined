@@ -30,14 +30,17 @@ steps:
         docker image inspect "${_IMAGE_URI}" --format '{{index .RepoDigests 0}}' > /workspace/combined-image-reference.txt
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     id: deploy-combined-cloud-run
-    # Successful builds deploy the immutable image and route production traffic.
+    # Cloud Build substitutions are explicitly passed into the step environment.
+    env:
+      - DEPLOY_BRANCH=${BRANCH_NAME}
+    # Successful main-branch builds deploy the immutable image and route production traffic.
     entrypoint: sh
     args:
       - -c
       - |
         set -eu
-        if [ "${BRANCH_NAME:-}" != "main" ]; then
-          echo "Branch ${BRANCH_NAME:-unknown} is validation-only; production deploy is restricted to main."
+        if [ "$DEPLOY_BRANCH" != "main" ]; then
+          echo "Branch ${DEPLOY_BRANCH:-unknown} is validation-only; production deploy is restricted to main."
           exit 0
         fi
         image="$(cat /workspace/combined-image-reference.txt)"
