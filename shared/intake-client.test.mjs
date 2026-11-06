@@ -21,3 +21,15 @@ test('reselecting the same photo keeps its inquiry key despite transient file-pi
  await submitInquiry('/commercial/api/leads',{name:'Synthetic',phone:'9035550100',photos:[{...photo,id:'two',uploadedAt:'later'}]});
  assert.equal(requests[0].headers['Idempotency-Key'],requests[1].headers['Idempotency-Key']);assert.equal(requests[0].body,requests[1].body);
 });
+
+
+test('records a GA4 lead conversion only after confirmed delivery without sending contact details',async()=>{
+ const events=[];globalThis.gtag=(...args)=>events.push(args);
+ globalThis.fetch=async()=>Response.json({deliveryStatus:'delivered'},{status:201});
+ await submitInquiry('/commercial/api/leads',{name:'Synthetic private name',phone:'9035550100',leadType:'Inspection',source:'Contact Page Form'});
+ assert.equal(events.length,1);
+ assert.deepEqual(events[0],['event','generate_lead',{method:'website_form',brand:'commercial',form_name:'Contact Page Form',lead_type:'Inspection'}]);
+ assert(!JSON.stringify(events).includes('Synthetic private name'));
+ assert(!JSON.stringify(events).includes('9035550100'));
+ delete globalThis.gtag;
+});
