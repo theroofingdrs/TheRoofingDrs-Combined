@@ -637,10 +637,10 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
             Local Presence
           </span>
           <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tight mt-1">
-            Northeast Texas Dispatch Corridor
+            Northeast Texas & Southwest Arkansas Dispatch Corridor
           </h2>
           <p className="text-sm text-slate-600 mt-2">
-            Headquartered in Texarkana, our specialized diagnostic teams and crews serve homeowners throughout Northeast Texas.
+            Headquartered in Texarkana, our specialized diagnostic teams and crews serve homeowners throughout Northeast Texas and Southwest Arkansas.
           </p>
         </div>
 
@@ -718,7 +718,7 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
               <div className="mt-6 pt-5 border-t border-slate-200">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">Residential service area</h4>
                 <p className="text-xs text-slate-600 leading-relaxed mt-2">
-                  Based in Texarkana, TRD’s core residential coverage generally extends about 75 miles from the Texarkana area. Core communities include Texarkana, Atlanta, New Boston, Marshall and Longview. Extended-area requests, including Paris, Sulphur Springs and Tyler, are reviewed individually based on project scope and scheduling.
+                  Based in Texarkana, TRD serves Northeast Texas and Southwest Arkansas. Core dispatch communities include Texarkana, Atlanta, New Boston, Marshall and Longview in Texas, plus Texarkana, Fouke, Ashdown, Hope, DeQueen, Lewisville and Magnolia in Southwest Arkansas. Extended-area requests, including Paris, Sulphur Springs and Tyler, are reviewed individually based on project scope and scheduling.
                 </p>
                 <button
                   onClick={() => onNavigate('/service-areas')}
