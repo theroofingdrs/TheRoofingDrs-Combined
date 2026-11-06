@@ -111,7 +111,7 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
           </button>
         </div>
 
-        {/* Step Indicator & Demo Helper */}
+        {/* Step Indicator */}
         {step < 4 && (
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 bg-slate-50 px-6 py-2.5 text-xs">
             <div className="flex font-semibold text-slate-500 gap-4 sm:gap-6">
@@ -119,30 +119,6 @@ export const InspectionRequestModal: React.FC<InspectionRequestModalProps> = ({
               <span className={step === 2 ? 'text-red-700 font-bold' : ''}>2. Property Location</span>
               <span className={step === 3 ? 'text-red-700 font-bold' : ''}>3. Homeowner Contact</span>
             </div>
-            <button
-              type="button"
-              onClick={() => {
-                setFormData({
-                  name: 'Marcus Vance (Diagnostic Demo)',
-                  phone: '903-231-5940',
-                  email: 'theroofingdrs@gmail.com',
-                  address: '4820 Richmond Rd',
-                  city: 'Texarkana',
-                  zip: '75503',
-                  leadType: 'NOT_SURE',
-                  serviceRequested: 'Free Diagnostic Roof Inspection',
-                  emergencyFlag: false,
-                  stormRelatedFlag: true,
-                  insuranceRelatedFlag: false,
-                  message: 'Diagnostic test: Suspected hail granule loss and pipe boot flashing check after recent storms.',
-                  preferredContactMethod: 'EMAIL',
-                });
-                setStep(3);
-              }}
-              className="mt-2 sm:mt-0 text-[11px] font-bold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 px-2.5 py-1 rounded border border-red-200 transition-colors cursor-pointer self-start sm:self-auto"
-            >
-              ⚡ Autofill Demo Test Data
-            </button>
           </div>
         )}
 
