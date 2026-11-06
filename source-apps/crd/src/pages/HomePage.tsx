@@ -1032,6 +1032,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80',
               },
               {
+                title: 'Poultry & Chicken Houses',
+                priority: 'Moisture control, ventilation protection, corrosion checks and long-span metal roof maintenance.',
+                href: '/industries/chicken-houses-poultry',
+                img: '/assets/images/library/commercial-property-roofing-04.jpg',
+              },
+              {
+                title: 'Equestrian & Horse Facilities',
+                priority: 'Barn, stable and riding-arena roof protection with animal-safe work planning.',
+                href: '/industries/horse-barns-equestrian',
+                img: '/assets/images/library/commercial-property-roofing-03.jpg',
+              },
+              {
                 title: 'Healthcare & Medical',
                 priority: 'Zero leak tolerance, air-intake odor control, sensitive diagnostic equipment safety.',
                 href: '/industries/healthcare',
@@ -1080,10 +1092,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 img: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80',
               },
               {
-                title: 'Municipal & Institutional',
-                priority: 'Public bid compliance, prevailing wage documentation, long-term civic warranties.',
-                href: '/commercial-roofing',
-                img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80',
+                title: 'Storage Centers & Self Storage',
+                priority: 'Large metal-roof storage complexes, coating restoration, leak prevention and phased work around tenant access.',
+                href: '/commercial-roof-coatings',
+                img: '/assets/images/commercial-warehouse-roof.jpg',
               },
               {
                 title: 'Property Management',
@@ -1091,18 +1103,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 href: '/property-management',
                 img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80',
               },
-              {
-                title: 'Poultry & Chicken Houses',
-                priority: 'Moisture control, ventilation protection, corrosion checks and long-span metal roof maintenance.',
-                href: '/industries/chicken-houses-poultry',
-                img: '/assets/images/library/commercial-property-roofing-04.jpg',
-              },
-              {
-                title: 'Equestrian & Horse Facilities',
-                priority: 'Barn, stable and riding-arena roof protection with animal-safe work planning.',
-                href: '/industries/horse-barns-equestrian',
-                img: '/assets/images/library/commercial-property-roofing-03.jpg',
-              },
+
+
             ].map((ind) => (
               <Link
                 key={ind.title}
