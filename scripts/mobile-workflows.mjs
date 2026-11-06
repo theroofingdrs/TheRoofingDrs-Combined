@@ -150,9 +150,6 @@ try{
     assert.equal(await p.evaluate('document.title'),title);
     assert.equal(await p.evaluate(`document.querySelector('meta[name="description"]').content`),description);
    }
-   await p.call('Page.navigate',{url:publicBase+'/residential/contact?utm_campaign=mobile-synthetic'});
-   await wait(()=>p.evaluate(`!!document.querySelector('form input')&&document.querySelector('link[rel=canonical]')?.href==='https://theroofingdrs.com/residential/contact'`));
-
    const contactRequirements=await p.evaluate(`(async()=>{const phone=document.querySelector('input[type="tel"]'),email=document.querySelector('input[type="email"]');if(!phone||!email)throw Error('Estimate form phone/email fields missing');const set=(input,value)=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(input,value);input.dispatchEvent(new Event('input',{bubbles:true}));};const frame=()=>new Promise(resolve=>requestAnimationFrame(resolve));const initial=[phone.required,email.required];set(email,'mobile@example.test');await frame();const emailOnly=[phone.required,email.required];set(email,'');set(phone,'9035550100');await frame();const phoneOnly=[phone.required,email.required];set(phone,'');await frame();const neither=[phone.required,email.required];return{initial,emailOnly,phoneOnly,neither};})()`);
    assert.deepEqual(contactRequirements,{initial:[true,true],emailOnly:[false,true],phoneOnly:[true,false],neither:[true,true]},'Residential estimate request must require at least one contact method, not both');
    await p.call('Page.navigate',{url:publicBase+'/residential/'});
@@ -161,6 +158,10 @@ try{
    await wait(()=>p.evaluate(`document.body.innerText.includes('Diagnostic Need')`));
    assert.equal(await p.evaluate(`[...document.querySelectorAll('button')].some(button=>button.textContent.includes('Autofill Demo Test Data'))`),false,'Public inspection modal must not expose seeded demo customer data');
    console.log('PASS residential estimate validation: phone-only/email-only accepted, neither rejected, demo autofill absent');
+   await p.call('Page.navigate',{url:publicBase+'/residential/contact?utm_campaign=mobile-synthetic'});
+   await wait(()=>p.evaluate(`!!document.querySelector('form input')&&document.querySelector('link[rel=canonical]')?.href==='https://theroofingdrs.com/residential/contact'`));
+
+
    console.log('PASS estimate aliases: initial HTTP metadata agrees with rendered title, description and canonical; no routing changes');
    await p.evaluate(`window.__twitterNodes=[document.querySelector('meta[name="twitter:title"]'),document.querySelector('meta[name="twitter:description"]')]`);
    const social=async()=>{
