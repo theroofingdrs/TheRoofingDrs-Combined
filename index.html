@@ -241,11 +241,11 @@
     .choice{position:relative;isolation:isolate;overflow:hidden;min-height:430px;border:1px solid var(--line);background:#202c35;display:flex;align-items:flex-end;padding:30px;transition:border-color .2s,transform .2s}
     .choice:before{content:"";position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform .35s}
     .choice:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#10182020 0%,#1018208c 43%,#101820f5 100%)}
-    .choice.residential:before{background-image:url('/residential/assets/images/library/residential-roof-project-detail.jpg')}
-    .choice.commercial:before{background-image:url('/commercial/assets/images/library/crd-industrial-distribution-center-aerial.jpg')}
+    .choice.residential:before{background-image:url('/residential/assets/images/grand_manor_roof.jpg')}
+    .choice.commercial:before{background-image:url('/commercial/assets/images/commercial-warehouse-roof.jpg')}
     .choice:hover{border-color:var(--orange);transform:translateY(-3px)}
     .choice:hover:before{transform:scale(1.035)}
-    .choice-content{max-width:510px}
+    .choice-content{max-width:510px}\n    .division-logo{display:block;width:min(270px,80%);height:68px;object-fit:contain;object-position:left center;margin:0 0 16px;filter:brightness(0) invert(1)}\n    .choice.commercial .division-logo{width:min(300px,85%);filter:none}
     .division-label{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff40;background:#101820b8;border-radius:999px;padding:7px 11px;color:#fff;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
     .division-label b{color:var(--orange-light)}
     .choice h2{font-size:clamp(29px,3.2vw,40px);line-height:1.06;letter-spacing:-.025em;margin:15px 0 10px}
@@ -304,7 +304,7 @@
     footer strong{color:#f0f3f5}
     footer a{text-decoration:underline;text-underline-offset:3px}
     @media(max-width:800px){.choices,.division-grid,.coverage-grid{grid-template-columns:1fr}.choice{min-height:390px}.process-grid{grid-template-columns:1fr}.section{padding:58px 0}.hero{padding:55px 0 18px}}
-    @media(max-width:560px){.shell{width:calc(100% - 32px)}.top{min-height:68px}.brand img{height:42px}.phone{font-size:11px}.phone span{display:none}.choices{gap:14px;padding:20px 0 30px}.choice{min-height:370px;padding:22px}.choice h2{font-size:31px}.service-list{grid-template-columns:1fr}.trust{font-size:10px;gap:12px 18px}footer{flex-direction:column;gap:12px}}
+    @media(max-width:560px){.shell{width:calc(100% - 32px)}.top{min-height:68px}.brand img{height:42px}.phone{font-size:11px}.phone span{display:none}.choices{gap:14px;padding:20px 0 30px}.choice{min-height:370px;padding:22px}.division-logo{height:58px}.choice h2{font-size:31px}.service-list{grid-template-columns:1fr}.trust{font-size:10px;gap:12px 18px}footer{flex-direction:column;gap:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
 </head>
@@ -327,7 +327,7 @@
     <section class="shell choices" aria-label="Choose your roofing division">
       <a class="choice residential" href="/residential/" aria-label="Explore The Roof Doctors residential roofing services">
         <div class="choice-content">
-          <span class="division-label"><b>TRD</b> · The Roof Doctors</span>
+          <img class="division-logo" src="/residential/the_roof_doctors_logo.svg" alt="The Roof Doctors logo"><span class="division-label"><b>TRD</b> · The Roof Doctors</span>
           <h2>Residential Roofing.<br>Personal Care.</h2>
           <p>Roof inspections, leak repairs, replacements and storm restoration for homeowners in Texarkana and throughout Northeast Texas.</p>
           <ul><li>Roof inspections</li><li>Repairs &amp; replacement</li><li>Hail &amp; wind damage</li><li>Emergency tarping</li></ul>
@@ -336,7 +336,7 @@
       </a>
       <a class="choice commercial" href="/commercial/" aria-label="Explore Commercial Roof Doctors commercial roofing services">
         <div class="choice-content">
-          <span class="division-label"><b>CRD</b> · Commercial Roof Doctors</span>
+          <img class="division-logo" src="/commercial/assets/crd-logo-full-light.png" alt="Commercial Roof Doctors logo"><span class="division-label"><b>CRD</b> · Commercial Roof Doctors</span>
           <h2>Commercial Roofing.<br>Strategic Protection.</h2>
           <p>Commercial roof inspections, repairs, maintenance, coatings, restoration and replacement planning for facilities and property portfolios.</p>
           <ul><li>Flat &amp; low-slope systems</li><li>Coatings &amp; restoration</li><li>Repairs &amp; maintenance</li><li>Multi-site roof assets</li></ul>
