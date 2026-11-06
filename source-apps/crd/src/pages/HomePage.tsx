@@ -47,7 +47,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
         {/* Editorial Commercial Roof Photography Background */}
         <div className="absolute inset-0 z-0">
           <img decoding="async" fetchPriority="high"
-            src="/assets/images/library/owner-commercial-roof-inspection-01.jpeg"
+            src="/assets/images/library/crd-industrial-distribution-center-aerial.jpg"
             alt="Commercial roofing inspection documenting roof-surface conditions on a low-slope roof"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center brightness-[0.45] contrast-[1.05]"
@@ -63,7 +63,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="pt-2">
               <CRDLogo
                 variant="full"
-                theme="light"
+                theme="dark"
                 className="h-12 sm:h-14 lg:h-16 w-auto max-h-[64px] max-w-[260px] object-contain"
               />
             </div>
@@ -241,7 +241,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
               <img decoding="async" loading="lazy"
-                src="/assets/images/library/commercial-roof-inspection.jpg"
+                src="/assets/images/library/commercial-roof-maintenance.jpg"
                 alt="Commercial roof inspection on a low-slope roofing system"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-500"
