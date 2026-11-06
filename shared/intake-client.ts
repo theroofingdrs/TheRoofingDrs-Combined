@@ -26,5 +26,18 @@ export async function submitInquiry<T = any>(endpoint: string, payload: Record<s
   catch { throw new Error('Delivery is not confirmed. Retry with the same details. Reference: '+saved.key); }
   const result = await response.json().catch(() => ({}));
   if (!response.ok || result.deliveryStatus !== 'delivered') throw new Error((result.error || 'Delivery is not confirmed. Retry with the same details.') + ' Reference: ' + saved.key);
+
+  // Count only confirmed deliveries. Never send contact details or property information to analytics.
+  const gtag = (globalThis as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag;
+  if (typeof gtag === 'function') {
+    const eventParams: Record<string, string> = {
+      method: 'website_form',
+      brand: endpoint.includes('/commercial/') ? 'commercial' : 'residential',
+      form_name: typeof payload.source === 'string' ? payload.source : endpoint,
+    };
+    if (typeof payload.leadType === 'string') eventParams.lead_type = payload.leadType;
+    gtag('event', 'generate_lead', eventParams);
+  }
+
   return result;
 }
