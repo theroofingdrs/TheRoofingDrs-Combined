@@ -43,7 +43,8 @@ test('push records the immutable digest and main deploys it to production traffi
   assert.deepEqual(f.calls(),[
    {tool:'docker',args:['push',image]},
    {tool:'docker',args:['image','inspect',image,'--format','{{index .RepoDigests 0}}']},
-   {tool:'gcloud',args:['run','deploy','roof-doctors-combined','--image',reference,'--region','us-east1','--project','trdcrd','--to-latest','--quiet']}
+   {tool:'gcloud',args:['run','deploy','roof-doctors-combined','--image',reference,'--region','us-east1','--project','trdcrd','--quiet']},
+   {tool:'gcloud',args:['run','services','update-traffic','roof-doctors-combined','--to-latest','--region','us-east1','--project','trdcrd','--quiet']}
   ]);
  }finally{f.close();}
 });
