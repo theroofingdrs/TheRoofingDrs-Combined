@@ -54,7 +54,7 @@ steps:
           echo "Missing or invalid pushed image digest; refusing deployment." >&2
           exit 1
         fi
-        exec gcloud run deploy roof-doctors-combined --image "$$image" --region us-east1 --project trdcrd --quiet
+        exec gcloud run deploy roof-doctors-combined --image "$image" --region us-east1 --project trdcrd --to-latest --quiet
 
 images:
   - ${_IMAGE_URI}
