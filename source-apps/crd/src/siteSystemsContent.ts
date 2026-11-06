@@ -765,7 +765,7 @@ export const INDUSTRIES_CONTENT: Record<string, IndustryPageData> = {
     title: 'Industrial & Warehouse Commercial Roofing | TX, AR, LA & OK',
     metaDescription: 'Industrial warehouse and manufacturing plant roofing. High-efficiency TPO, chemical-resistant PVC, standing seam metal, and 24/7 disaster response.',
     canonicalPath: '/industries/industrial',
-    heroImage: '/commercial/assets/images/library/commercial-industrial-roofing.jpg',
+    heroImage: '/commercial/assets/images/commercial-warehouse-roof.jpg',
     industryName: 'Industrial & Manufacturing Facilities',
     propertyType: 'Industrial',
     heroHeadline: 'Industrial & Warehouse Commercial Roofing.',
