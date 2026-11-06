@@ -718,7 +718,7 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
               <div className="mt-6 pt-5 border-t border-slate-200">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">Residential service area</h4>
                 <p className="text-xs text-slate-600 leading-relaxed mt-2">
-                  Based in Texarkana, TRD’s core residential coverage generally extends about 75 miles from the Texarkana area. Communities include Texarkana, Atlanta, New Boston, Marshall and nearby Northeast Texas communities. Extended-area requests, including Paris, Sulphur Springs, Longview and Tyler, are reviewed individually based on project scope and scheduling.
+                  Based in Texarkana, TRD’s core residential coverage generally extends about 75 miles from the Texarkana area. Core communities include Texarkana, Atlanta, New Boston, Marshall and Longview. Extended-area requests, including Paris, Sulphur Springs and Tyler, are reviewed individually based on project scope and scheduling.
                 </p>
                 <button
                   onClick={() => onNavigate('/service-areas')}
