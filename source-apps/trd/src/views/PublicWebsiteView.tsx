@@ -48,7 +48,7 @@ interface FeaturedPhoto {
 const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   {
     id: 'photo-aerial',
-    src: getTrdPublicAssetPath('/assets/images/library/aerial-residential-roof-project.jpg'),
+    src: getTrdPublicAssetPath('/assets/images/library/owner-residential-roof-project-aerial.jpeg'),
     title: 'Residential Roofing Project Overview',
     tag: 'Roofing Projects',
     location: 'Residential Roofing',
@@ -67,7 +67,7 @@ const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   },
   {
     id: 'photo-brick',
-    src: getTrdPublicAssetPath('/assets/images/trd-residential-home-exterior.jpg'),
+    src: getTrdPublicAssetPath('/assets/images/library/residential-roof-project-03.jpg'),
     title: 'Residential Roofing Project Details',
     tag: 'Roofing Projects',
     location: 'Residential Roofing',
