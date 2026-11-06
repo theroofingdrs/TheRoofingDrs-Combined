@@ -1023,7 +1023,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Churches & Worship',
                 priority: 'Sanctuary preservation, steep-to-flat transitions, weekend service scheduling.',
                 href: '/industries/churches',
-                img: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=600&q=80',
+                img: '/assets/images/library/crd-church-facility-aerial.jpg',
               },
               {
                 title: 'Schools & Education',
@@ -1090,6 +1090,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 priority: 'Portfolio condition audits, capital reserve planning, single-call emergency dispatch.',
                 href: '/property-management',
                 img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80',
+              },
+              {
+                title: 'Poultry & Chicken Houses',
+                priority: 'Moisture control, ventilation protection, corrosion checks and long-span metal roof maintenance.',
+                href: '/industries/chicken-houses-poultry',
+                img: '/assets/images/library/commercial-property-roofing-04.jpg',
+              },
+              {
+                title: 'Equestrian & Horse Facilities',
+                priority: 'Barn, stable and riding-arena roof protection with animal-safe work planning.',
+                href: '/industries/horse-barns-equestrian',
+                img: '/assets/images/library/commercial-property-roofing-03.jpg',
               },
             ].map((ind) => (
               <Link
