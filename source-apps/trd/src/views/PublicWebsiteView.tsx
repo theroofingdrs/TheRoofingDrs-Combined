@@ -49,7 +49,7 @@ interface FeaturedPhoto {
 const HOME_FEATURED_PHOTOS: FeaturedPhoto[] = [
   {
     id: 'photo-aerial',
-    src: getTrdPublicAssetPath('/assets/images/library/owner-residential-roof-project-aerial.jpeg'),
+    src: getTrdPublicAssetPath('/assets/images/trd-residential-home-exterior.jpg'),
     title: 'Residential Roofing Project Overview',
     tag: 'Roofing Projects',
     location: 'Residential Roofing',
