@@ -30,7 +30,7 @@ test('configuration preserves build arguments and production deployment destinat
  assert(config.includes('VITE_SUPABASE_PUBLISHABLE_KEY=${_VITE_SUPABASE_PUBLISHABLE_KEY}'));
  assert(config.includes('gcloud run deploy roof-doctors-combined'));
  assert(!config.includes('_APPROVE_PRODUCTION_DEPLOY'));
- assert(!/--(?:set|update|remove|clear)-(?:env-vars|secrets)|--(?:allow-unauthenticated|service-account|tag|to-latest)/.test(block('deploy-combined-cloud-run')));
+ assert(!/--(?:set|update|remove|clear)-(?:env-vars|secrets)|--(?:allow-unauthenticated|service-account|tag)/.test(block('deploy-combined-cloud-run')));
 });
 test('feature and integration branches cannot deploy production',()=>{
  const f=fixture();try{f.env.DEPLOY_BRANCH='integration/path-routing';assert.equal(f.run('deploy-combined-cloud-run').status,0);assert.deepEqual(f.calls(),[]);}finally{f.close();}
@@ -43,7 +43,7 @@ test('push records the immutable digest and main deploys it to production traffi
   assert.deepEqual(f.calls(),[
    {tool:'docker',args:['push',image]},
    {tool:'docker',args:['image','inspect',image,'--format','{{index .RepoDigests 0}}']},
-   {tool:'gcloud',args:['run','deploy','roof-doctors-combined','--image',reference,'--region','us-east1','--project','trdcrd','--quiet']}
+   {tool:'gcloud',args:['run','deploy','roof-doctors-combined','--image',reference,'--region','us-east1','--project','trdcrd','--to-latest','--quiet']}
   ]);
  }finally{f.close();}
 });
