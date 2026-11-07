@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrandLogo } from '../common/BrandLogo.tsx';
 
-const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+const OPERATIONS_PORTAL_URL = 'https://operations.theroofingdrs.com';
 
 interface PublicFooterProps {
   onNavigate: (path: string) => void;
@@ -29,68 +29,44 @@ export const PublicFooter: React.FC<PublicFooterProps> = ({ onNavigate }) => {
           </h4>
           <ul className="space-y-2 text-xs">
             <li>
-              <button
-                onClick={() => onNavigate('/roofing/roof-replacement')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/roofing/roof-replacement`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/roofing/roof-replacement'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Complete Roof Replacement
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/storm-damage')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/storm-damage`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/storm-damage'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Storm Damage &amp; Hail Restoration
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/roofing/roof-repair')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/roofing/roof-repair`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/roofing/roof-repair'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Precision Roof Repair &amp; Leak Diagnostic
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/roofing/roof-inspection')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/roofing/roof-inspection`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/roofing/roof-inspection'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Free Diagnostic Roof Inspection
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/roofing/emergency-roof-repair')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/roofing/emergency-roof-repair`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/roofing/emergency-roof-repair'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Emergency Roof Tarping &amp; Response
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/roofing/roof-maintenance')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/roofing/roof-maintenance`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/roofing/roof-maintenance'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Annual Roof Maintenance Program
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/blog')}
-                className="hover:text-white transition-colors cursor-pointer text-left font-semibold text-slate-300"
-              >
+              <a href={`/residential/blog`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/blog'); }} className="hover:text-white transition-colors cursor-pointer text-left font-semibold text-slate-300">
                 Homeowner Roofing Blog
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/faq')}
-                className="hover:text-white transition-colors cursor-pointer text-left font-semibold text-slate-300"
-              >
+              <a href={`/residential/faq`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/faq'); }} className="hover:text-white transition-colors cursor-pointer text-left font-semibold text-slate-300">
                 Frequently Asked Questions (FAQ)
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -102,44 +78,29 @@ export const PublicFooter: React.FC<PublicFooterProps> = ({ onNavigate }) => {
           </h4>
           <ul className="space-y-1.5 text-xs">
             <li>
-              <button
-                onClick={() => onNavigate('/service-areas/texarkana')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/service-areas/texarkana`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/service-areas/texarkana'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Texarkana, TX (HQ)
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/service-areas/atlanta')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/service-areas/atlanta`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/service-areas/atlanta'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Atlanta &amp; New Boston, TX
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/service-areas/paris')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/service-areas/paris`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/service-areas/paris'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Paris &amp; Sulphur Springs, TX
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/service-areas/longview')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/service-areas/longview`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/service-areas/longview'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Longview &amp; Marshall, TX
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => onNavigate('/service-areas/tyler')}
-                className="hover:text-white transition-colors cursor-pointer text-left"
-              >
+              <a href={`/residential/service-areas/tyler`} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onNavigate('/service-areas/tyler'); }} className="hover:text-white transition-colors cursor-pointer text-left">
                 Tyler, TX
-              </button>
+              </a>
             </li>
           </ul>
         </div>

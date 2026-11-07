@@ -40,7 +40,7 @@ import {
 } from './siteSystemsContent';
 import { LeadType } from './types';
 
-const OPERATIONS_PORTAL_URL = 'https://trd-crd-operations-687495157172.us-east1.run.app';
+const OPERATIONS_PORTAL_URL = 'https://operations.theroofingdrs.com';
 
 const MainAppContent: React.FC = () => {
   const { currentPath, navigate } = useRouter();

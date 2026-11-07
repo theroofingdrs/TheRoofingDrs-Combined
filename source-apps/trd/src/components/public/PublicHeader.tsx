@@ -115,10 +115,11 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
             {navLinks.map((link) => {
               const active = isLinkActive(link.path);
               return (
-                <button
+                <a
                   key={link.path}
+                  href={`/residential${link.path === '/' ? '/' : link.path}`}
                   id={`nav-link-${link.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                  onClick={() => handleNavClick(link.path)}
+                  onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); handleNavClick(link.path); }}
                   className={`py-1 px-1 transition-colors cursor-pointer flex items-center gap-1.5 ${
                     active
                       ? 'text-red-600 font-bold border-b-2 border-red-600'
@@ -132,7 +133,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
                     <CloudLightning className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                   )}
                   <span>{link.label}</span>
-                </button>
+                </a>
               );
             })}
           </nav>
@@ -177,10 +178,11 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
               {navLinks.map((link) => {
                 const active = isLinkActive(link.path);
                 return (
-                  <button
+                  <a
                     key={link.path}
+                    href={`/residential${link.path === '/' ? '/' : link.path}`}
                     id={`mobile-nav-link-${link.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                    onClick={() => handleNavClick(link.path)}
+                    onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); handleNavClick(link.path); }}
                     className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium flex items-center justify-between transition-colors ${
                       active
                         ? 'bg-red-50 text-red-600 font-bold'
@@ -197,7 +199,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
                       <span>{link.label}</span>
                     </span>
                     <ChevronRight className="w-4 h-4 text-slate-400" />
-                  </button>
+                  </a>
                 );
               })}
             </div>
