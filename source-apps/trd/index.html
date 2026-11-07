@@ -1,122 +1,101 @@
 <!doctype html>
 <html lang="en">
   <head>
-      <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9LXQ6DG4H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-V9LXQ6DG4H');
-  </script>
-<meta charset="UTF-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9LXQ6DG4H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V9LXQ6DG4H');
+    </script>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/residential/the_roof_doctors_logo_transparent.png" />
-    
-    <!-- Primary Page Title & Meta Description -->
     <title>The ROOF Doctors | Residential Roofing &amp; Storm Damage Specialists</title>
-    <meta name="description" content="The ROOF Doctors offers free 21-point forensic roof inspections, storm repairs, emergency tarping and roof replacement in Texarkana, Northeast Texas and Southwest Arkansas." />
-    
-    <!-- Geo Meta Tags for Local Northeast Texas Search -->
-    <meta name="geo.region" content="US-TX" />
-    <meta name="geo.placename" content="Texarkana" />
-
+    <meta name="description" content="The ROOF Doctors offers roof inspections, storm repairs, emergency tarping and roof replacement in Texarkana, Northeast Texas and Southwest Arkansas." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://theroofingdrs.com/residential/" />
-    <link rel="preload" as="image" href="/residential/assets/images/residential-hero.jpg" fetchpriority="high" />
-    <meta property="og:url" content="https://theroofingdrs.com/residential/" />
-    <!-- OpenGraph & Social Sharing Cards -->
+    <link rel="icon" type="image/png" href="/residential/the_roof_doctors_logo_transparent.png" />
     <meta property="og:site_name" content="The Roofing Doctors" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://theroofingdrs.com/residential/" />
     <meta property="og:title" content="The ROOF Doctors | Residential Roofing &amp; Storm Damage Specialists" />
-    <meta property="og:description" content="The ROOF Doctors offers free 21-point forensic roof inspections, storm repairs, emergency tarping and roof replacement in Texarkana, Northeast Texas and Southwest Arkansas." />
+    <meta property="og:description" content="The ROOF Doctors offers roof inspections, storm repairs, emergency tarping and roof replacement in Texarkana, Northeast Texas and Southwest Arkansas." />
     <meta property="og:image" content="https://theroofingdrs.com/residential/assets/images/library/residential-roof-project-detail.jpg" />
-
-    <!-- Twitter Card Meta -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="The ROOF Doctors | Residential Roofing &amp; Storm Damage Specialists" />
-    <meta name="twitter:description" content="The ROOF Doctors offers free 21-point forensic roof inspections, storm repairs, emergency tarping and roof replacement in Texarkana, Northeast Texas and Southwest Arkansas." />
+    <meta name="twitter:description" content="The ROOF Doctors offers roof inspections, storm repairs, emergency tarping and roof replacement in Texarkana, Northeast Texas and Southwest Arkansas." />
     <meta name="twitter:image" content="https://theroofingdrs.com/residential/assets/images/library/residential-roof-project-detail.jpg" />
-
-    <!-- Shared Organization structured data -->
-    <script id="shared-organization-jsonld" type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Organization",
-          "name": "The Roof Doctors",
-          "image": "/assets/images/aerial_roof_replacement.jpg",
-          "logo": "/residential/the_roof_doctors_logo_transparent.png",
+          "@id": "https://theroofingdrs.com/#organization",
+          "name": "The Roofing Doctors",
+          "url": "https://theroofingdrs.com/",
+          "logo": "https://theroofingdrs.com/residential/the_roof_doctors_logo_transparent.png",
           "telephone": "+1-903-231-5940",
           "email": "TheRoofingDrs@gmail.com",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-              "opens": "07:00",
-              "closes": "19:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Sunday"],
-              "opens": "00:00",
-              "closes": "23:59",
-              "description": "On-Call Emergency Storm Response & Tarping Dispatch"
-            }
-          ],
-          "areaServed": [
-            "Texarkana, TX",
-            "Texarkana, AR",
-            "Atlanta, TX",
-            "New Boston, TX",
-            "Paris, TX",
-            "Sulphur Springs, TX",
-            "Longview, TX",
-            "Tyler, TX",
-            "Marshall, TX",
-            "Mount Pleasant, TX",
-            "Bowie County",
-            "Cass County"
-          ],
-          "priceRange": "$$",
+          "subOrganization": [{ "@id": "https://theroofingdrs.com/#trd" }, { "@id": "https://theroofingdrs.com/#crd" }]
+        },
+        {
+          "@type": "RoofingContractor",
+          "@id": "https://theroofingdrs.com/#trd",
+          "name": "The ROOF Doctors",
+          "alternateName": "TRD",
+          "url": "https://theroofingdrs.com/residential/",
+          "parentOrganization": { "@id": "https://theroofingdrs.com/#organization" },
+          "telephone": "+1-903-231-5940",
+          "email": "TheRoofingDrs@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1420 Richmond Rd",
+            "addressLocality": "Texarkana",
+            "addressRegion": "TX",
+            "postalCode": "75501",
+            "addressCountry": "US"
+          },
+          "areaServed": ["Texarkana, Texas", "Atlanta, Texas", "New Boston, Texas", "Marshall, Texas", "Longview, Texas", "Mount Pleasant, Texas", "Paris, Texas", "Sulphur Springs, Texas", "Tyler, Texas", "Texarkana, Arkansas", "Fouke, Arkansas", "Ashdown, Arkansas", "Hope, Arkansas", "De Queen, Arkansas", "Lewisville, Arkansas", "Magnolia, Arkansas", "Northeast Texas", "Southwest Arkansas"],
+          "description": "Residential roof inspections, leak diagnosis and repairs, roof replacement, hail and wind damage assessments, storm restoration documentation, and emergency tarping across core dispatch communities in Northeast Texas and Southwest Arkansas.",
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Residential Roofing Services",
+            "name": "TRD Residential Roofing Services",
             "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Free 21-Point Forensic Roof Inspection",
-                  "description": "Complete attic moisture assessment, drone imagery, granular loss testing, and photo-documented report."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Hail & Storm Damage Restoration",
-                  "description": "Expert storm damage assessment, emergency tarping, and insurance claim support in compliance with Texas HB 2102."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Full Roof Replacement & Lifetime Architectural Shingles",
-                  "description": "Complete tear-off, synthetic underlayment, ice & water shield, and CertainTeed / GAF manufacturer lifetime warranty systems."
-                }
-              }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential roof inspections" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof leak diagnosis and repair" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential roof replacement" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hail and wind damage assessment" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Storm restoration" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency roof tarping" } }
             ]
           }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://theroofingdrs.com/#website",
+          "url": "https://theroofingdrs.com/",
+          "name": "The Roofing Doctors",
+          "publisher": { "@id": "https://theroofingdrs.com/#organization" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://theroofingdrs.com/residential/#webpage",
+          "url": "https://theroofingdrs.com/residential/",
+          "name": "The ROOF Doctors | Residential Roofing & Storm Damage Specialists",
+          "isPartOf": { "@id": "https://theroofingdrs.com/#website" },
+          "about": { "@id": "https://theroofingdrs.com/#trd" },
+          "inLanguage": "en-US"
         }
       ]
     }
     </script>
+    <link rel="preload" as="image" href="/residential/assets/images/residential-hero.jpg" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
