@@ -1351,7 +1351,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
       'Restoration and coating evaluations when the existing roof assembly is suitable',
       'Repair, restoration or replacement recommendations based on documented roof condition'
     ],
-    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }],
+    cityLinks: [{ name: 'Dallas', href: '/service-areas/dallas' }, { name: 'Fort Worth', href: '/service-areas/fort-worth' }, { name: 'Longview', href: '/service-areas/longview' }, { name: 'Tyler', href: '/service-areas/tyler' }, { name: 'Paris', href: '/service-areas/paris' }, { name: 'Northeast Texas', href: '/service-areas/texas' }, { name: 'Texas Commercial Service Area', href: '/service-areas/texas' }],
   },
   '/service-areas/longview': {
     title: 'Commercial Roofing in Longview, TX | CRD',
@@ -2704,6 +2704,10 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Northeast Texas',
             href: '/service-areas/texas'
+        },
+        {
+            name: 'Dallas-Fort Worth Metro',
+            href: '/service-areas/dallas-fort-worth'
         }
     ]
 },
@@ -4636,7 +4640,15 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
         {
             name: 'Northwest Louisiana',
             href: '/service-areas/louisiana'
+        },,
+        {
+            name: 'Bossier City',
+            href: '/service-areas/bossier-city'
         },
+        {
+            name: 'West Monroe',
+            href: '/service-areas/west-monroe'
+        }
     ]
 },
   '/service-areas/west-monroe': {
