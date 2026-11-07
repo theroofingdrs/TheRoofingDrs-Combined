@@ -172,6 +172,9 @@ const server = http.createServer((req, res) => {
     return res.end();
   }
 
+  // The shared landing-page logo lives at the repository root, not in either app's dist folder.
+  if (pathname === '/roofing-doctors-combined-logo.png') return serveRootFile(req, res, 'roofing-doctors-combined-logo.png', 'image/png');
+
   if (pathname === '/robots.txt') return serveRootFile(req, res, 'robots.txt', 'text/plain; charset=utf-8');
   if (pathname === '/sitemap.xml') return serveRootFile(req, res, 'sitemap.xml', 'application/xml; charset=utf-8');
 
