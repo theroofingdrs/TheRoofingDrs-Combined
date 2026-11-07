@@ -35,8 +35,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
   return (
     <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd selection:bg-[#181818] selection:text-[#f4f3ef]">
       <SeoMeta
-        title="Commercial Roofing | Commercial Roof Doctors – Texarkana, TX"
-        description="Commercial Roof Doctors provides commercial roof inspections, repairs, coatings and restoration from Texarkana across the Ark-La-Tex region."
+        title="Commercial Roofing | Commercial ROOF Doctors – Texarkana, TX"
+        description="Commercial ROOF Doctors provides commercial roof inspections, repairs, coatings and restoration from Texarkana across the Ark-La-Tex region."
         canonicalPath="/"
       />
 
@@ -1375,7 +1375,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               Commercial Roofing Across Four States.
             </h2>
             <p className="text-sm text-[#444444] leading-relaxed">
-              Commercial Roof Doctors serves commercial, industrial, and multi-site properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability, mobilization, and travel are confirmed during consultation based on property location and scope.
+              Commercial ROOF Doctors serves commercial, industrial, and multi-site properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability, mobilization, and travel are confirmed during consultation based on property location and scope.
             </p>
 
             <div className="pt-3 space-y-2">
@@ -1455,7 +1455,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             Transparent Client Feedback
           </h3>
           <p className="text-xs sm:text-sm text-[#666666] max-w-xl mx-auto leading-relaxed">
-            Commercial Roof Doctors does not display fabricated ratings, simulated star counts, or synthetic testimonials. Verified customer reviews are maintained directly on Google Reviews.
+            Commercial ROOF Doctors does not display fabricated ratings, simulated star counts, or synthetic testimonials. Verified customer reviews are maintained directly on Google Reviews.
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <a
