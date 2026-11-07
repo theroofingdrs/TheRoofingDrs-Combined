@@ -32,6 +32,8 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install locked application dependencies
+        run: npm run install:apps
       - name: Build both applications and run combined smoke tests
         run: npm test
 
