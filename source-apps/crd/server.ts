@@ -648,10 +648,10 @@ async function start() {
       'https://theroofingdrs.com/commercial' + (route === '/' ? '/' : route)
     );
     const xmlEscape = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
-    publicSitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\\n' +
-      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n' +
-      sitemapLocations.map((location) => '  <url><loc>' + xmlEscape(location) + '</loc></url>').join('\\n') +
-      '\\n</urlset>';
+    publicSitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+      sitemapLocations.map((location) => '  <url><loc>' + xmlEscape(location) + '</loc></url>').join('\n') +
+      '\n</urlset>';
 
     app.use('/commercial', express.static(distPath, {
       maxAge: '1y',
