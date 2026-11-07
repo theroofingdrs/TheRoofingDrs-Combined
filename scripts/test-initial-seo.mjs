@@ -104,9 +104,9 @@ try{
  const unknown=await get('/commercial/not-a-real-roofing-page');assert.equal(unknown.response.headers.get('location'),null);assert.equal(unknown.response.headers.get('x-robots-tag'),'noindex');assert.deepEqual(head(unknown.body).canonicals,[]);
  for(const route of ['/blog','/blog/published-cms-slug','/industries','/admin','/staff','/large-loss-roofing','/adjuster-meetings','/commercial-storm-inspections'])assert.equal((await get('/commercial'+route)).response.status,200,'Application family retained '+route);
  for(const [alias,canonical] of [['/large-loss-roofing','/insurance-claims'],['/adjuster-meetings','/insurance-claims'],['/commercial-storm-inspections','/storm-damage']])assert.deepEqual(head((await get('/commercial'+alias)).body).canonicals,['https://theroofingdrs.com/commercial'+canonical],'Existing component canonical retained for '+alias);
- const sitemap=(await get('/commercial/sitemap.xml')).body;
+ const commercialSitemap=(await get('/commercial/sitemap.xml')).body;
  for(const route of ['/commercial-roof-inspection','/new-commercial-construction','/metal-roofing','/roof-asset-management','/multi-property-roofing','/multifamily-roofing','/hoa-roofing','/about/credentials']){
-  assert(sitemap.includes('/commercial'+route+'</loc>'),'Disputed sitemap URL must remain '+route);
+  assert(commercialSitemap.includes('/commercial'+route+'</loc>'),'Disputed sitemap URL must remain '+route);
   assert.equal((await get('/commercial'+route)).response.status,404,'Existing unsupported sitemap route has honest 404 '+route);
  }
  for(const [prefix,file] of [['residential','source-apps/trd/dist/index.html'],['commercial','source-apps/crd/dist/index.html']]){
