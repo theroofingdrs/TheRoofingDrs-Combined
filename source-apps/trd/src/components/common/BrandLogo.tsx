@@ -17,7 +17,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   const logoSizes = {
     sm: 'h-7 sm:h-8',
-    md: 'h-9 sm:h-10',
+    md: 'h-[25px] sm:h-10',
     lg: 'h-12 sm:h-14',
   };
 
