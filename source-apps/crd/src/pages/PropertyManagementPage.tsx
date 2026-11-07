@@ -47,7 +47,7 @@ export const PropertyManagementPage: React.FC<PropertyManagementPageProps> = ({
             <span className="text-amber-500">Every Property.</span> One Roof at a Time.
           </h1>
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eliminate the hassle of managing multiple conflicting contractors across your commercial properties. Commercial Roof Doctors acts as your single-source commercial roofing advisor and field execution partner.
+            Bring inspections, roof-condition records, repair priorities and long-range planning into one coordinated process. Commercial ROOF Doctors works with property owners and managers as a commercial roofing evaluation, planning and field-service partner across eligible markets.
           </p>
           <div className="pt-4 flex flex-wrap justify-center gap-4">
             <button
@@ -75,10 +75,10 @@ export const PropertyManagementPage: React.FC<PropertyManagementPageProps> = ({
               No Visibility Across Portfolios
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Managing 5 to 50 buildings means fragmented records, unknown membrane ages, and surprise leaks that break annual maintenance budgets.
+              Managing buildings across multiple sites can leave roof ages, inspection records, active leaks and repair history scattered across vendors and spreadsheets.
             </p>
             <div className="text-xs text-slate-200 font-semibold pt-2 border-t border-slate-800">
-              CRD Solution: Comprehensive digital roof cataloging by building and section.
+              CRD Approach: Property-by-property roof inventories, inspection records and photo documentation.
             </div>
           </div>
 
@@ -87,22 +87,22 @@ export const PropertyManagementPage: React.FC<PropertyManagementPageProps> = ({
               Tenant Disruption & Liability
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              When water penetrates an office suite, medical clinic, or retail inventory, tenant dissatisfaction and lease disputes escalate instantly.
+              A roof leak can interrupt tenants, customers, employees, inventory, equipment and day-to-day business operations.
             </p>
             <div className="text-xs text-slate-200 font-semibold pt-2 border-t border-slate-800">
-              CRD Solution: Priority emergency dispatch and certified interior water dry-in.
+              CRD Approach: Documented issue intake, emergency response coordination and practical mitigation recommendations, with timing confirmed by location and availability.
             </div>
           </div>
 
           <div className="bg-[#0e1422] border border-slate-800 p-6 rounded-xl space-y-3">
             <div className="text-amber-500 font-heading text-lg font-bold uppercase">
-              Predatory "Total Replacement" Quotes
+              Unclear Repair-versus-Replacement Decisions
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Contractors pushing full tear-offs when 80% of your roof membrane has remaining service life or can be restored with fluid coatings.
+              Owners need to know whether a roof is a candidate for targeted repair, restoration or replacement—and what supports that recommendation.
             </p>
             <div className="text-xs text-slate-200 font-semibold pt-2 border-t border-slate-800">
-              CRD Solution: Objective diagnostics with transparent coat-vs-replace modeling.
+              CRD Approach: Roof-system evaluation and documented options based on observed conditions, compatibility, scope and long-term property needs.
             </div>
           </div>
         </div>
@@ -127,24 +127,24 @@ export const PropertyManagementPage: React.FC<PropertyManagementPageProps> = ({
                 desc: 'A complete inventory of all properties, buildings, roof sections, square footages, membrane types, and estimated installation years.',
               },
               {
-                title: 'Condition Scorecards',
-                desc: 'Objective condition grading (Good, Fair, Critical) with photo-verified defect tags so asset managers can prioritize capital allocation.',
+                title: 'Condition Ratings & Photo Records',
+                desc: 'Property-by-property inspection records, photo-documented conditions and an objective 1–5 roof condition rating to help compare buildings and prioritize attention.',
               },
               {
-                title: 'Priority Emergency Response',
-                desc: 'Guaranteed dispatch queue during severe storm, wind, and hail outbreaks across the Ark-La-Tex region.',
+                title: 'Repair Priorities & Response Coordination',
+                desc: 'Document active issues, urgency, recommended next steps and response coordination. Dispatch timing is confirmed for each property based on location, conditions and availability.',
               },
               {
                 title: 'Adjuster & Insurance Support',
                 desc: 'We attend insurance adjuster walk-throughs with full Xactimate estimates and EagleView roof geometry to advocate for complete scope.',
               },
               {
-                title: 'Remaining-Life Forecasting',
-                desc: 'Scientific analysis of membrane elasticity and seam integrity to project remaining service life and avoid surprise capital calls.',
+                title: 'Centralized Repair Tracking',
+                desc: 'Keep property-level repair needs, photo records, recommended actions and follow-up status organized for easier review across the portfolio.',
               },
               {
-                title: 'Multi-Year Budget Planning',
-                desc: '1-to-5 year CapEx forecasts formatted for ownership boards, HOA directors, and asset investment committees.',
+                title: 'Maintenance & Capital Planning',
+                desc: 'Identify maintenance opportunities and develop repair, restoration and replacement planning inputs that owners can use in annual and multi-year capital discussions.',
               },
             ].map((item, idx) => (
               <div key={idx} className="bg-[#0e1422] border border-slate-800 p-6 rounded-xl space-y-2">
@@ -165,7 +165,7 @@ export const PropertyManagementPage: React.FC<PropertyManagementPageProps> = ({
           Consolidate Your Commercial Roof Management
         </h2>
         <p className="text-sm text-slate-300 max-w-xl mx-auto">
-          Contact Commercial Roof Doctors to audit your properties and build a customized commercial service agreement.
+          Start with a portfolio roof assessment. CRD can review the properties, organize current roof conditions and help define practical inspection, repair, maintenance and capital-planning next steps.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button
