@@ -268,6 +268,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                     Tools, Guides & Restoration
                   </div>
                   <Link
+                    to="/blog"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Commercial Roofing Field Notes
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Technical articles and decision guides for property teams</div>
+                  </Link>
+                  <Link
                     to="/commercial-roof-cost-calculator"
                     className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
                   >
