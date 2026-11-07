@@ -86,7 +86,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
 
             {/* Supporting Paragraph */}
             <p className="text-lg sm:text-xl text-[#d4d4d4] max-w-2xl leading-relaxed font-normal">
-              CRD evaluates aging commercial metal and low-slope roofs for restoration with professionally specified silicone, acrylic, and polyurethane coating systems. We inspect the roof first, address seams, fasteners, flashings and drainage, then determine whether coating, repair or replacement is the right investment.
+              Commercial ROOF Doctors works with commercial property owners, business owners, operators and facility teams to evaluate aging metal and low-slope roofs. We inspect roof conditions, identify failure points and compare repair, maintenance, coating or restoration, and replacement options—considering building use, tenant and customer activity, equipment and inventory exposure, drainage, and operating schedules. The goal is a documented scope and a practical next step, not a coating or replacement recommendation before the roof is evaluated.
             </p>
 
             {/* Primary & Secondary Action CTAs */}
@@ -201,7 +201,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               What Does Your Roof Need?
             </h2>
             <p className="text-base text-[#555555] leading-relaxed">
-              Whether you're dealing with an active problem, planning ahead, or managing multiple properties, start with the situation you're facing.
+              Whether you own the building, operate a business, oversee facilities or manage commercial real estate, start with the roof issue or property responsibility in front of you.
             </p>
           </div>
 

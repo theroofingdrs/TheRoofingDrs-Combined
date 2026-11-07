@@ -299,6 +299,22 @@
     .coverage p{font-size:12px;line-height:1.7}
     .text-link{display:inline-flex;align-items:center;gap:7px;margin-top:16px;color:#b64a1b;font-size:12px;font-weight:900}
     .detail-card.commercial .text-link{color:#ffb17e}
+    .audience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .audience-card{background:#f7f9fa;color:#17232d;border:1px solid #dce3e7;border-radius:14px;padding:clamp(22px,2.5vw,30px);display:flex;flex-direction:column;align-items:flex-start}
+    .audience-card:nth-child(2){background:#1a2933;color:#f7f9fa;border-color:#34444f}
+    .audience-card:nth-child(3){background:#202e38;color:#f7f9fa;border-color:#40515c}
+    .audience-card .pill{display:inline-block;border-radius:999px;background:#fce9df;color:#9d4216;padding:7px 11px;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .audience-card:nth-child(2) .pill,.audience-card:nth-child(3) .pill{background:#473222;color:#ffc18f}
+    .audience-card h3{font-size:21px;line-height:1.15;margin:18px 0 10px}
+    .audience-card p{font-size:13px;line-height:1.7;color:#53616a;margin:0}
+    .audience-card:nth-child(2) p,.audience-card:nth-child(3) p{color:#c2cdd3}
+    .audience-card ul{padding:0;margin:17px 0 0;list-style:none;display:grid;gap:9px}
+    .audience-card li{font-size:12px;line-height:1.5;display:flex;gap:8px;color:#33424b}
+    .audience-card li:before{content:"✓";font-weight:900;color:#c6501d;flex:0 0 auto}
+    .audience-card:nth-child(2) li,.audience-card:nth-child(3) li{color:#e0e6e9}
+    .audience-card:nth-child(2) li:before,.audience-card:nth-child(3) li:before{color:#ffb17e}
+    .audience-card .text-link{margin-top:auto;padding-top:20px}
+    .audience-card:nth-child(2) .text-link,.audience-card:nth-child(3) .text-link{color:#ffb17e}
     .coverage-section{background:#17232d;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
     .coverage-panel{border:1px solid #ffffff25;border-radius:14px;padding:25px;background:#ffffff08}
@@ -324,8 +340,9 @@
     footer{display:flex;justify-content:space-between;gap:24px;padding:28px 0 34px;color:#aab5bc;font-size:11px;line-height:1.8}
     footer strong{color:#f0f3f5}
     footer a{text-decoration:underline;text-underline-offset:3px}
+    @media(max-width:900px){.audience-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:800px){.choices,.division-grid,.coverage-grid{grid-template-columns:1fr}.choice{min-height:390px}.process-grid{grid-template-columns:1fr}.section{padding:58px 0}.hero{padding:55px 0 18px}}
-    @media(max-width:560px){.shell{width:calc(100% - 32px)}.top{min-height:68px}.brand img{height:42px}.phone{font-size:11px}.phone span{display:none}.choices{gap:14px;padding:20px 0 30px}.choice{min-height:370px;padding:22px}.division-logo{height:84px;max-width:378px}.choice h2{font-size:31px}.service-list{grid-template-columns:1fr}.trust{font-size:10px;gap:12px 18px}footer{flex-direction:column;gap:12px}}
+    @media(max-width:560px){.audience-grid{grid-template-columns:1fr}.shell{width:calc(100% - 32px)}.top{min-height:68px}.brand img{height:42px}.phone{font-size:11px}.phone span{display:none}.choices{gap:14px;padding:20px 0 30px}.choice{min-height:370px;padding:22px}.division-logo{height:84px;max-width:378px}.choice h2{font-size:31px}.service-list{grid-template-columns:1fr}.trust{font-size:10px;gap:12px 18px}footer{flex-direction:column;gap:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
 </head>
@@ -341,8 +358,8 @@
     <section class="shell hero" aria-labelledby="page-title">
       <div class="eyebrow">One organization · Two dedicated roofing divisions</div>
       <h1 id="page-title">Residential &amp; Commercial Roofing<br><em>Built for Your Property.</em></h1>
-      <p>The Roofing Doctors brings together two specialized teams: The ROOF Doctors (TRD) for residential roofing across Northeast Texas, and Commercial ROOF Doctors (CRD) for commercial and industrial roofing across Texas, Arkansas, Louisiana and Oklahoma.</p>
-      <p class="subline">Choose the division with the services, systems and experience that match your property.</p>
+      <p>The Roofing Doctors connects homeowners, commercial property owners, business owners and real estate managers with the right roofing team. The ROOF Doctors (TRD) handles residential roofing across Northeast Texas and Southwest Arkansas; Commercial ROOF Doctors (CRD) serves commercial and industrial properties across Texas, Arkansas, Louisiana and Oklahoma.</p>
+      <p class="subline">From a single home or business to a multi-property portfolio, start with the team equipped for your building and its needs.</p>
     </section>
 
     <section class="shell choices" aria-label="Choose your roofing division">
@@ -426,6 +443,55 @@
             <p>Based in Texarkana, CRD considers commercial, industrial and multi-site projects across Texas, Arkansas, Louisiana and Oklahoma. Travel, mobilization and availability are evaluated for each project based on property location, roof system, scope and schedule. Coverage is confirmed during consultation.</p>
           </div>
           <a class="text-link" href="/commercial/">Visit Commercial ROOF Doctors <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="audiences-heading">
+      <div class="section-head">
+        <div class="eyebrow">Roofing support matched to your responsibility</div>
+        <h2 id="audiences-heading">Clear Answers for Owners, Operators &amp; Property Managers</h2>
+        <p>Different properties create different roofing decisions. The Roofing Doctors organizes those decisions around the people responsible for the building—whether that means protecting a home, keeping a business operating or managing roof conditions across a portfolio.</p>
+      </div>
+      <div class="audience-grid">
+        <article class="audience-card">
+          <span class="pill">The ROOF Doctors · Residential</span>
+          <h3>Homeowners &amp; Residential Property Owners</h3>
+          <p>Understand the condition of your roof and what should happen next. TRD evaluates roof concerns and helps homeowners make informed repair, storm-restoration and replacement decisions.</p>
+          <ul>
+            <li>Free 21-point roof inspections</li>
+            <li>Leak diagnosis and targeted repairs</li>
+            <li>Hail and wind damage evaluations</li>
+            <li>Photo-documented findings and recommendations</li>
+            <li>Emergency tarping and roof replacement</li>
+          </ul>
+          <a class="text-link" href="/residential/">Explore residential roofing <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="audience-card">
+          <span class="pill">Commercial ROOF Doctors · Commercial</span>
+          <h3>Commercial Property Owners &amp; Business Owners</h3>
+          <p>Protect the building that supports your business. CRD evaluates commercial roof systems, traces water intrusion and develops practical options with building use, operations and project scope in view.</p>
+          <ul>
+            <li>Commercial roof inspections and diagnostics</li>
+            <li>Leak tracing, repairs and storm response</li>
+            <li>TPO, EPDM, PVC, modified bitumen and metal systems</li>
+            <li>Maintenance, coatings and restoration</li>
+            <li>Repair-versus-replacement planning</li>
+          </ul>
+          <a class="text-link" href="/commercial/">Explore commercial roofing <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="audience-card">
+          <span class="pill">Commercial ROOF Doctors · Portfolios</span>
+          <h3>Commercial Real Estate &amp; Portfolio Managers</h3>
+          <p>Bring roof information into one practical view. CRD can organize property-level inspections and records so owners and managers can compare conditions, prioritize work and plan capital needs across multiple buildings.</p>
+          <ul>
+            <li>Property-by-property inspections and photo records</li>
+            <li>Objective roof condition ratings (1–5)</li>
+            <li>Centralized repair tracking and prioritization</li>
+            <li>Maintenance opportunities and lifecycle planning</li>
+            <li>Replacement planning across a portfolio</li>
+          </ul>
+          <a class="text-link" href="/commercial/property-management">Explore portfolio roof management <span aria-hidden="true">→</span></a>
         </article>
       </div>
     </section>
