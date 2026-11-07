@@ -50,10 +50,14 @@ try{
  const unrelated=await get('/',{headers:{host:'commercial.theroofingdrs.com.attacker.invalid'}});assert.equal(unrelated.response.status,200);assert.equal(unrelated.response.headers.get('location'),null);
  const unsafe=await get('//external.example/path?next=https://external.example/',{headers:commercialHost});assert.equal(new URL(unsafe.response.headers.get('location')).origin,'https://theroofingdrs.com');
  console.log('PASS commercial hostname redirects: fixed canonical host, root/deep links/query preservation, no double prefix, GET/HEAD only and no open redirect.');
+ const parentHome=head(await readFile('index.html','utf8'),true);
+ assert.equal(parentHome.title,'The Roofing Doctors | Residential & Commercial Roofing');
+ assert.deepEqual(parentHome.descriptions,['The Roofing Doctors serves Texarkana and surrounding regions through The ROOF Doctors for residential roofing and Commercial ROOF Doctors for commercial roofing.']);
+ assert.deepEqual(parentHome.canonicals,['https://theroofingdrs.com/']);
  const residential=JSON.parse(await readFile('source-apps/trd/dist/seo-manifest.json','utf8'));
  const home=head(await readFile('source-apps/trd/dist/index.html','utf8'));
- assert.equal(home.title,'The Roof Doctors — Residential Roofing & Storm Damage Specialists');
- assert.deepEqual(home.descriptions,['The Roof Doctors — Residential Roofing & Storm Damage Specialists. Free 21-point forensic roof inspections, hail repairs, emergency tarping, and insurance claim support in Texarkana & Northeast Texas.']);
+ assert.equal(home.title,'The ROOF Doctors | Residential Roofing & Storm Damage Specialists');
+ assert.deepEqual(home.descriptions,['The ROOF Doctors offers free 21-point forensic roof inspections, storm repairs, emergency tarping and roof replacement in Texarkana, Northeast Texas and Southwest Arkansas.']);
  let checked=0;
  for(const [route,metadata] of Object.entries(residential)){
   if(route==='/__fallback'||route==='/service-areas/__unknown__')continue;
