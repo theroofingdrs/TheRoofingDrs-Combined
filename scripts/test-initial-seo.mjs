@@ -122,6 +122,25 @@ try{
   assert.deepEqual(head((await get(parsed.pathname)).body).canonicals,[location],'Every commercial sitemap URL declares itself canonical: '+route);
   assert(!/^\/(?:admin|staff|staff-portal|portal|leads|api)(?:\/|$)/i.test(route),'Private route excluded from commercial sitemap: '+route);
  }
+ const rootLocations=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
+ assert(rootLocations.length>30,'Root sitemap contains the combined public page inventory');
+ assert.equal(new Set(rootLocations).size,rootLocations.length,'Root sitemap URLs are unique');
+ for(const location of rootLocations){
+  const parsed=new URL(location);
+  assert.equal(parsed.origin,'https://theroofingdrs.com','Root sitemap uses the canonical HTTPS host');
+  if(parsed.pathname.startsWith('/commercial')){
+   const route=parsed.pathname.slice('/commercial'.length).replace(/\/+$/,'')||'/';
+   assert(routes.includes(route),'Root sitemap commercial URL is an actual app route: '+route);
+   assert(commercial[route],'Root sitemap commercial URL has SEO metadata: '+route);
+   assert.equal(commercial[route].canonicalPath,route,'Root sitemap commercial URL is canonical: '+route);
+  }else if(parsed.pathname.startsWith('/residential')){
+   const route=parsed.pathname.slice('/residential'.length).replace(/\/+$/,'')||'/';
+   assert(residential[route],'Root sitemap residential URL has SEO metadata: '+route);
+   assert.equal(residential[route].canonicalPath,route,'Root sitemap residential URL is canonical: '+route);
+  }else{
+   assert.equal(parsed.pathname,'/','Only the canonical parent landing page may sit outside a division');
+  }
+ }
  for(const [prefix,file] of [['residential','source-apps/trd/dist/index.html'],['commercial','source-apps/crd/dist/index.html']]){
   const html=await readFile(file,'utf8');for(const [,url]of html.matchAll(/(?:src|href)="([^" ]*\/assets\/[^" ]+)"/g))assert.equal((await get(url)).response.status,200,'Asset '+url);
  }
