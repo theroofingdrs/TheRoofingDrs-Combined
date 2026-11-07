@@ -5,6 +5,7 @@ interface BrandLogoProps {
   variant?: 'light' | 'dark';
   size?: 'sm' | 'md' | 'lg';
   showTagline?: boolean;
+  logo?: 'trd' | 'combined';
 }
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({
@@ -12,6 +13,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   variant = 'dark',
   size = 'md',
   showTagline = false,
+  logo = 'combined',
 }) => {
   const isLight = variant === 'light';
 
@@ -24,7 +26,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <div className={`inline-flex flex-col select-none max-w-full ${className}`}>
       <img
-        src={`${import.meta.env.BASE_URL}trd-crd-combined-logo.png`}
+        src={`${import.meta.env.BASE_URL}${logo === 'trd' ? 'the_roof_doctors_logo_transparent.png' : 'trd-crd-combined-logo.png'}`}
         alt="The Roof Doctors"
         className={`${logoSizes[size]} w-auto max-w-full object-contain shrink-0`}
         loading="eager"
