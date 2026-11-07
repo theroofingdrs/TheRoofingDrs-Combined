@@ -182,8 +182,8 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
           '@graph': [
             {
               '@type': 'RoofingContractor',
-              name: 'The Roof Doctors',
-              alternateName: 'The Roof Doctors — Residential Roofing & Storm Damage Specialists',
+              name: 'The ROOF Doctors',
+              alternateName: 'The ROOF Doctors — Residential Roofing & Storm Damage Specialists',
               telephone: '+1-903-231-5940',
               email: 'TheRoofingDrs@gmail.com',
               address: {
@@ -714,7 +714,7 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
             <article className="bg-white text-slate-900 rounded-2xl p-7 sm:p-8 border border-slate-200 flex flex-col">
               <div className="inline-flex self-start items-center gap-2 rounded-full bg-red-50 text-red-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
-                The Roof Doctors · TRD
+                The ROOF Doctors · TRD
               </div>
               <h3 className="text-2xl font-black uppercase tracking-tight mt-4">Residential Roofing</h3>
               <p className="text-sm text-slate-600 leading-relaxed mt-3">
