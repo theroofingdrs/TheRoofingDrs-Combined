@@ -1119,7 +1119,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Storage Centers & Self Storage',
                 priority: 'Large metal-roof storage complexes, coating restoration, leak prevention and phased work around tenant access.',
                 href: '/commercial-roof-coatings',
-                img: '/assets/images/library/crd-self-storage-roof-coating.jpg.WEBP',
+                img: '/assets/images/library/crd-self-storage-facility-aerial.jpg.JPG',
               },
               {
                 title: 'Property Management',
