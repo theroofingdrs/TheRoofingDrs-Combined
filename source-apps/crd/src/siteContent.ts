@@ -81,7 +81,7 @@ export const SERVICES_CONTENT: Record<string, ServicePageData> = {
       { name: 'Churches & Religious Centers', href: '/industries/churches' },
     ],
     faqs: [
-      { question: 'Do you offer free commercial roof evaluations?', answer: 'Yes. Commercial Roof Doctors provides preliminary physical inspections and drone photo condition audits for facility owners and property managers throughout our 75-mile Ark-La-Tex territory.' },
+      { question: 'Do you offer free commercial roof evaluations?', answer: 'Yes. Commercial Roof Doctors provides preliminary physical inspections and drone photo condition audits for facility owners and property managers throughout our 250-mile Ark-La-Tex service area centered on Texarkana.' },
       { question: 'Can our business remain open during commercial roof work?', answer: 'Absolutely. We specialize in operational continuity. Tear-off, loading, and fluid coating applications are scheduled to eliminate disruption to employees, customers, or sensitive equipment.' },
     ],
     relatedServices: [
@@ -682,7 +682,7 @@ export const SERVICES_CONTENT: Record<string, ServicePageData> = {
 
   '/wind-damage': {
     title: 'Commercial Wind Damage & Uplift Failure | Ark-La-Tex Roof Doctors',
-    metaDescription: 'Commercial wind damage, perimeter uplift, coping blowout, and membrane peeling repair across Texarkana and the 75-mile Ark-La-Tex region.',
+    metaDescription: 'Commercial wind damage, perimeter uplift, coping blowout, and membrane peeling repair across Texarkana and the 250-mile Ark-La-Tex service area centered on Texarkana.',
     canonicalPath: '/wind-damage',
     heroImage: '/commercial/assets/images/commercial-storm-response.jpg',
     eyebrow: 'Severe Wind & Uplift Mitigation',
