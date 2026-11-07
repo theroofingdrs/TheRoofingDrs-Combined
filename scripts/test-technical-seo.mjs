@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const origin = 'https://theroofingdrs.com';
-const [landing, robots, sitemap, trdHeader, trdFooter, crdHeader, crdFooter, trdApp, crdApp] = await Promise.all([
+const [landing, robots, sitemap, trdHeader, trdFooter, crdHeader, crdFooter, trdApp, crdApp, trdIndex, trdHomeView] = await Promise.all([
   readFile('index.html', 'utf8'),
   readFile('robots.txt', 'utf8'),
   readFile('sitemap.xml', 'utf8'),
@@ -13,6 +13,8 @@ const [landing, robots, sitemap, trdHeader, trdFooter, crdHeader, crdFooter, trd
   readFile('source-apps/crd/src/components/Footer.tsx', 'utf8'),
   readFile('source-apps/trd/src/App.tsx', 'utf8'),
   readFile('source-apps/crd/src/App.tsx', 'utf8'),
+  readFile('source-apps/trd/index.html', 'utf8'),
+  readFile('source-apps/trd/src/views/PublicWebsiteView.tsx', 'utf8'),
 ]);
 
 function tags(html, tagName) {
@@ -83,6 +85,8 @@ for (const required of ['/', '/commercial/', '/residential/', '/commercial/servi
 }
 
 
+assert.match(trdIndex, /<link rel="preload" as="image" href="\\/residential\\/assets\\/images\\/residential-hero\\.jpg" fetchpriority="high"/);
+assert.match(trdHomeView, /fetchPriority="high"[\\s\\S]*?className="absolute inset-0 h-full w-full object-cover object-center"/);
 assert.ok(trdHeader.includes("href={`/residential${link.path === '/' ? '/' : link.path}`}"), 'Residential desktop and mobile navigation expose crawlable hrefs');
 assert.ok(trdFooter.includes("href={`/residential/roofing/roof-replacement`}"), 'Residential footer links expose crawlable hrefs');
 assert.ok(!trdFooter.includes("onClick={() => onNavigate("), 'Residential footer no longer relies on JavaScript-only button navigation');
