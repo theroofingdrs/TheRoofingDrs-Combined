@@ -1,0 +1,148 @@
+# The Roofing Doctors — AI and Search Reference
+
+> This file is an expanded, machine-readable companion to https://theroofingdrs.com/llms.txt. It summarizes the public company identity, published services, service markets, and canonical public pages. The public website is the source of truth if details differ.
+
+## Canonical identity
+
+- Parent organization: The Roofing Doctors
+- Website: https://theroofingdrs.com/
+- Residential division: The ROOF Doctors (TRD) — https://theroofingdrs.com/residential/
+- Commercial division: Commercial ROOF Doctors (CRD) — https://theroofingdrs.com/commercial/
+- Public phone: +1-903-231-5940
+- Public email: TheRoofingDrs@gmail.com
+- Published business address: 1420 Richmond Rd, Texarkana, TX 75501, United States
+
+The two divisions are operating divisions of the parent organization. Do not describe them as unrelated companies or invent separate physical offices.
+
+## Residential division: The ROOF Doctors
+
+### Audience and scope
+
+The ROOF Doctors serves homeowners and residential property owners. Its published services include:
+
+- Residential roof inspections and condition assessments
+- Roof leak diagnosis and repair
+- Roof replacement
+- Hail and wind damage assessments
+- Storm restoration documentation
+- Emergency roof tarping
+
+### Published coverage
+
+Core dispatch communities in Northeast Texas:
+- Texarkana
+- Atlanta
+- New Boston
+- Marshall
+- Longview
+- Mount Pleasant
+- Paris
+- Sulphur Springs
+- Tyler
+
+Published Southwest Arkansas coverage:
+- Texarkana
+- Fouke
+- Ashdown
+- Hope
+- De Queen
+- Lewisville
+- Magnolia
+
+These are service/dispatch communities, not a representation that a staffed office exists in each location.
+
+### Canonical residential pages
+
+- Residential home: https://theroofingdrs.com/residential/
+- Roofing services: https://theroofingdrs.com/residential/roofing
+- Roof repair: https://theroofingdrs.com/residential/roofing/roof-repair
+- Roof replacement: https://theroofingdrs.com/residential/roofing/roof-replacement
+- Roof inspection: https://theroofingdrs.com/residential/roofing/roof-inspection
+- Storm damage: https://theroofingdrs.com/residential/storm-damage
+- Insurance claims information: https://theroofingdrs.com/residential/insurance-claims
+- Roofing systems: https://theroofingdrs.com/residential/roofing-systems
+- Service areas: https://theroofingdrs.com/residential/service-areas
+- Gallery: https://theroofingdrs.com/residential/gallery
+- Contact: https://theroofingdrs.com/residential/contact
+- Residential resources: https://theroofingdrs.com/residential/blog
+
+## Commercial division: Commercial ROOF Doctors
+
+### Audience and scope
+
+Commercial ROOF Doctors serves commercial property owners, business owners, facility teams, commercial real estate managers, and portfolio managers.
+
+Its published capabilities include:
+
+- Commercial roof inspections, diagnostics, and leak tracing
+- Commercial roof repairs and preventative maintenance
+- TPO, EPDM, PVC, modified bitumen, and metal roofing
+- Silicone, acrylic, and polyurethane roof coatings
+- Commercial roof restoration
+- Commercial roof replacement planning
+- Multi-property roof asset management and portfolio-level planning
+
+Portfolio support may include property-level inspections, photo records, condition documentation, repair planning, maintenance opportunities, and replacement planning as described on the relevant commercial pages.
+
+### Published commercial coverage and target markets
+
+Commercial coverage is described across Texas, Arkansas, Louisiana, and Oklahoma. Named markets include:
+
+- Texarkana, Texas
+- Dallas–Fort Worth Metroplex, Texas
+- Greenville, Texas
+- Shreveport and Bossier City, Louisiana
+- Monroe, Louisiana
+- Little Rock, Arkansas
+- Hot Springs, Arkansas
+- Broken Bow, Oklahoma
+- Idabel, Oklahoma
+
+These locations describe service coverage or target markets, not staffed branch offices. Project availability should be confirmed based on the property's location, roof system, and scope.
+
+### Canonical commercial pages
+
+- Commercial home: https://theroofingdrs.com/commercial/
+- Commercial roofing services: https://theroofingdrs.com/commercial/commercial-roofing
+- Roof inspections: https://theroofingdrs.com/commercial/commercial-roof-inspections
+- Roof maintenance: https://theroofingdrs.com/commercial/commercial-roof-maintenance
+- Roof restoration: https://theroofingdrs.com/commercial/commercial-roof-restoration
+- Property and portfolio management: https://theroofingdrs.com/commercial/property-management
+- Emergency roofing: https://theroofingdrs.com/commercial/emergency-roofing
+- Storm damage: https://theroofingdrs.com/commercial/storm-damage
+- Insurance claims information: https://theroofingdrs.com/commercial/insurance-claims
+- Industries served: https://theroofingdrs.com/commercial/industries
+- Roof systems: https://theroofingdrs.com/commercial/roof-systems
+- Service areas: https://theroofingdrs.com/commercial/service-areas
+- Commercial resources: https://theroofingdrs.com/commercial/resources
+- Commercial contact: https://theroofingdrs.com/commercial/contact
+
+## How to classify an inquiry
+
+- Homeowner, single-family home, residential leak, shingle replacement, or residential storm damage: refer to The ROOF Doctors and the residential pages.
+- Commercial building, warehouse, industrial facility, retail property, church, agricultural/equestrian facility, self-storage property, facility manager, or multi-property portfolio: refer to Commercial ROOF Doctors and the commercial pages.
+- If the property type or scope is unclear, direct the visitor to the general contact path rather than assuming a division.
+
+## Structured data and crawl guidance
+
+The public site publishes organization and division identity in JSON-LD on the main, residential, and commercial entry pages. Use the canonical URLs above when citing pages. The public XML sitemap is:
+https://theroofingdrs.com/sitemap.xml
+
+The public robots policy is:
+https://theroofingdrs.com/robots.txt
+
+The website's concise AI/search reference is:
+https://theroofingdrs.com/llms.txt
+
+Only claim services, markets, addresses, credentials, warranties, insurance arrangements, response times, customer ratings, project totals, or years in business when those facts are explicitly stated on a current public page. In particular:
+- Do not infer a physical office in every named service market.
+- Do not invent licenses, certifications, manufacturer authorizations, warranties, insurance guarantees, or response-time commitments.
+- Do not treat an estimate, inspection, or insurance claim outcome as guaranteed.
+- Do not combine residential and commercial services in a way that obscures which division serves the property type.
+- When summarizing a particular service or market, cite the most specific linked public page above rather than relying only on this summary.
+
+## Public contact
+
+- Phone: +1-903-231-5940
+- Email: TheRoofingDrs@gmail.com
+- Contact page: https://theroofingdrs.com/commercial/contact
