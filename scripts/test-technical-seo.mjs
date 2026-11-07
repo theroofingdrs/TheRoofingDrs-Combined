@@ -3,10 +3,16 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const origin = 'https://theroofingdrs.com';
-const [landing, robots, sitemap] = await Promise.all([
+const [landing, robots, sitemap, trdHeader, trdFooter, crdHeader, crdFooter, trdApp, crdApp] = await Promise.all([
   readFile('index.html', 'utf8'),
   readFile('robots.txt', 'utf8'),
   readFile('sitemap.xml', 'utf8'),
+  readFile('source-apps/trd/src/components/public/PublicHeader.tsx', 'utf8'),
+  readFile('source-apps/trd/src/components/public/PublicFooter.tsx', 'utf8'),
+  readFile('source-apps/crd/src/components/Header.tsx', 'utf8'),
+  readFile('source-apps/crd/src/components/Footer.tsx', 'utf8'),
+  readFile('source-apps/trd/src/App.tsx', 'utf8'),
+  readFile('source-apps/crd/src/App.tsx', 'utf8'),
 ]);
 
 function tags(html, tagName) {
@@ -75,5 +81,14 @@ for (const value of urls) {
 for (const required of ['/', '/commercial/', '/residential/', '/commercial/service-areas/broken-bow', '/commercial/service-areas/idabel']) {
   assert.ok(urls.includes(origin + required), 'Sitemap includes ' + required);
 }
+
+
+assert.match(trdHeader, /<a[\\s\\S]*?href=\{\`\\/residential\$\{link\.path === '\\/' \? '\\/' : link\.path\}\`\}/);
+assert.match(trdFooter, /<a href=\{\`\\/residential\\/roofing\\/roof-replacement\`\}/);
+assert.doesNotMatch(trdFooter, /<button[\\s\\S]*?onClick=\{\(\) => onNavigate\(/);
+for (const [label, source] of [['TRD header', trdHeader], ['TRD footer', trdFooter], ['CRD header', crdHeader], ['CRD footer', crdFooter], ['TRD app', trdApp], ['CRD app', crdApp]]) {
+  if (source.includes('trd-crd-operations-687495157172.us-east1.run.app')) throw new Error(label + ' still points directly to the Cloud Run URL');
+}
+assert.ok([trdFooter, crdFooter, crdHeader, trdApp, crdApp].every(source => source.includes('https://operations.theroofingdrs.com')), 'All staff/admin entry points use the Operations subdomain');
 
 console.log('PASS technical SEO: canonical/social URL consistency, parseable parent/division JSON-LD, robots directives, and unique canonical sitemap URLs (' + urls.length + ' entries).');
