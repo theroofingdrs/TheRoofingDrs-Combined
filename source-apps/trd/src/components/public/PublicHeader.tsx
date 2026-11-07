@@ -100,7 +100,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
 
       {/* 2. Primary Navigation Bar */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
-        <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-1 sm:gap-2 xl:gap-4">
+        <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 h-20 min-[1800px]:h-auto min-[1800px]:min-h-20 min-[1800px]:py-3 flex min-[1800px]:flex-wrap items-center justify-between gap-1 sm:gap-2 xl:gap-4 min-[1800px]:gap-y-3">
           {/* Logo */}
           <button
             onClick={() => handleNavClick('/')}
@@ -111,7 +111,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden min-[1800px]:flex items-center gap-2 xl:gap-3.5 text-xs xl:text-sm font-semibold text-slate-700 whitespace-nowrap">
+          <nav className="hidden min-[1800px]:flex min-[1800px]:order-last min-[1800px]:w-full flex-wrap items-center justify-center gap-2 xl:gap-3.5 text-xs xl:text-sm font-semibold text-slate-700">
             {navLinks.map((link) => {
               const active = isLinkActive(link.path);
               return (
