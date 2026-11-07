@@ -26,8 +26,8 @@ export const PropertyManagementPage: React.FC<PropertyManagementPageProps> = ({
   return (
     <div className="min-h-screen bg-[#090d16] text-slate-100 font-sans-crd pb-24">
       <SeoMeta
-        title="Commercial Roofing for Property Managers | Ark-La-Tex"
-        description="One roofing partner. Every property. One roof at a time. Portfolio roof inventories, condition scorecards, emergency priority, and capital expenditure planning for property managers."
+        title="Commercial Roof Management for Property Managers | Commercial ROOF Doctors"
+        description="Commercial ROOF Doctors helps commercial real estate managers and property owners organize property-by-property roof inspections, photo records, objective 1–5 condition ratings, repair tracking, maintenance priorities and replacement planning across the Ark-La-Tex region."
         canonicalPath="/property-management"
         breadcrumbs={[
           { name: 'Home', url: '/' },
