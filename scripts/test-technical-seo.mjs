@@ -82,7 +82,7 @@ for (const value of urls) {
   assert.equal(url.hash, '', 'Sitemap URLs exclude fragments');
   assert.ok(!url.pathname.includes('//'), 'Sitemap paths do not contain duplicate slashes');
 }
-for (const required of ['/', '/commercial/', '/residential/', '/commercial/service-areas/broken-bow', '/commercial/service-areas/idabel']) {
+for (const required of ['/', '/commercial/', '/residential/', '/commercial/service-areas/broken-bow', '/commercial/service-areas/idabel', '/commercial/blog', '/commercial/blog/commercial-roof-coatings-vs-replacement', '/commercial/blog/tpo-vs-epdm-commercial-roofing', '/commercial/blog/commercial-roof-coatings-energy-performance']) {
   assert.ok(urls.includes(origin + required), 'Sitemap includes ' + required);
 }
 
