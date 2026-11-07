@@ -20,18 +20,16 @@ function one(items, description) {
   return items[0];
 }
 
-// Canonical and social URL signals must agree on the one public hostname.
 const linkTags = tags(landing, 'link');
 const metaTags = tags(landing, 'meta');
 const canonical = attribute(one(linkTags.filter(tag => attribute(tag, 'rel').toLowerCase() === 'canonical'), 'Landing canonical'), 'href');
 assert.equal(canonical, origin + '/');
 assert.equal(attribute(one(metaTags.filter(tag => attribute(tag, 'property') === 'og:url'), 'Open Graph URL'), 'content'), canonical);
-assert.match(landing, /<meta\\s+name=["']robots["']\\s+content=["']index,follow/i);
-assert.match(landing, /<title>[^<]+<\\/title>/i);
+assert.match(landing, /<meta\s+name=["']robots["']\s+content=["']index,follow/i);
+assert.match(landing, /<title>[^<]+<\/title>/i);
 assert.ok(attribute(one(metaTags.filter(tag => attribute(tag, 'name') === 'description'), 'Landing description'), 'content').length >= 70);
 
-// JSON-LD must parse and preserve the parent/division brand relationship.
-const jsonLdBlocks = [...landing.matchAll(/<script\\b[^>]*type=["']application\\/ld\\+json["'][^>]*>([\\s\\S]*?)<\\/script>/gi)];
+const jsonLdBlocks = [...landing.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
 assert.ok(jsonLdBlocks.length >= 1, 'Landing page must publish JSON-LD');
 const graphs = jsonLdBlocks.map(match => JSON.parse(match[1]));
 const nodes = graphs.flatMap(value => value['@graph'] ?? [value]);
@@ -52,20 +50,17 @@ assert.equal(trd.address?.addressLocality, 'Texarkana');
 assert.equal(trd.address?.addressRegion, 'TX');
 assert.equal(trd.telephone, crd.telephone);
 
-// Robots must expose the sitemap while keeping private operational surfaces out of search.
-assert.match(robots, /^User-agent: \\*/m);
-assert.match(robots, /^Allow: \\/$/m);
-assert.match(robots, new RegExp('^Sitemap: ' + origin.replaceAll('.', '\\\\.') + '/sitemap\\.xml$', 'm'));
+assert.match(robots, /^User-agent: \*/m);
+assert.match(robots, /^Allow: \/$/m);
+assert.match(robots, new RegExp('^Sitemap: ' + origin.replaceAll('.', '\\.') + '/sitemap\\.xml$', 'm'));
 for (const privatePath of ['/api/', '/commercial/admin', '/commercial/staff', '/commercial/leads', '/commercial/portal', '/residential/app', '/residential/field', '/residential/portal']) {
-  assert.ok(robots.split(/\\r?\\n/).some(line => line.trim() === 'Disallow: ' + privatePath), 'Robots disallow ' + privatePath);
+  assert.ok(robots.split(/\r?\n/).some(line => line.trim() === 'Disallow: ' + privatePath), 'Robots disallow ' + privatePath);
 }
 
-// Sitemap must be well-formed at the urlset/url/loc level, canonical-host only,
-// and free of duplicate URLs or tracking/query variants.
-assert.match(sitemap, /^<\\?xml version=["']1\\.0["']/);
-assert.match(sitemap, /<urlset\\b[^>]*xmlns=["']http:\\/\\/www\\.sitemaps\\.org\\/schemas\\/sitemap\\/0\\.9["']>/);
-assert.match(sitemap, /<\\/urlset>\\s*$/);
-const entries = [...sitemap.matchAll(/<url>\\s*<loc>([^<]+)<\\/loc>([\\s\\S]*?)<\\/url>/g)];
+assert.match(sitemap, /^<\?xml version=["']1\.0["']/);
+assert.match(sitemap, /<urlset\b[^>]*xmlns=["']http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9["']>/);
+assert.match(sitemap, /<\/urlset>\s*$/);
+const entries = [...sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>([\s\S]*?)<\/url>/g)];
 assert.ok(entries.length >= 20, 'Sitemap contains the public page inventory');
 assert.equal((sitemap.match(/<url>/g) ?? []).length, entries.length, 'Every sitemap URL is wrapped in one url element');
 const urls = entries.map(([, value]) => value.trim());
