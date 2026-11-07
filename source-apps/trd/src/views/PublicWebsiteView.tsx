@@ -200,15 +200,22 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
                 longitude: -94.0732,
               },
               areaServed: [
-                'Texarkana',
-                'Atlanta',
-                'New Boston',
-                'Paris',
-                'Sulphur Springs',
-                'Longview',
-                'Tyler',
-                'Marshall',
-                'Mount Pleasant',
+                'Texarkana, Texas',
+                'Atlanta, Texas',
+                'New Boston, Texas',
+                'Marshall, Texas',
+                'Longview, Texas',
+                'Mount Pleasant, Texas',
+                'Paris, Texas',
+                'Sulphur Springs, Texas',
+                'Tyler, Texas',
+                'Texarkana, Arkansas',
+                'Fouke, Arkansas',
+                'Ashdown, Arkansas',
+                'Hope, Arkansas',
+                'De Queen, Arkansas',
+                'Lewisville, Arkansas',
+                'Magnolia, Arkansas',
               ],
               priceRange: '$$',
             },
@@ -670,6 +677,21 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="text-sm font-black uppercase tracking-wide text-slate-900">Core Texas Dispatch Communities</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              Texarkana · Atlanta · New Boston · Marshall · Longview · Mount Pleasant · Paris · Sulphur Springs · Tyler
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="text-sm font-black uppercase tracking-wide text-slate-900">Core Southwest Arkansas Dispatch Communities</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              Texarkana · Fouke · Ashdown · Hope · De Queen · Lewisville · Magnolia
+            </p>
+          </div>
         </div>
       </section>
 
