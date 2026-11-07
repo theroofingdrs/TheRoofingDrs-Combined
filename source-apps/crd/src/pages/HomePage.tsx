@@ -86,7 +86,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
 
             {/* Supporting Paragraph */}
             <p className="text-lg sm:text-xl text-[#d4d4d4] max-w-2xl leading-relaxed font-normal">
-              Commercial ROOF Doctors works with commercial property owners, business operators and facility teams to evaluate aging metal and low-slope roofs. We inspect roof conditions, identify failure points and compare repair, maintenance, coating or restoration, and replacement options—considering building use, tenant and customer activity, equipment and inventory exposure, drainage, and operating schedules. The goal is a documented scope and a practical next step, not a coating or replacement recommendation before the roof is evaluated.
+              Commercial ROOF Doctors works with commercial property owners, business owners, operators and facility teams to evaluate aging metal and low-slope roofs. We inspect roof conditions, identify failure points and compare repair, maintenance, coating or restoration, and replacement options—considering building use, tenant and customer activity, equipment and inventory exposure, drainage, and operating schedules. The goal is a documented scope and a practical next step, not a coating or replacement recommendation before the roof is evaluated.
             </p>
 
             {/* Primary & Secondary Action CTAs */}
