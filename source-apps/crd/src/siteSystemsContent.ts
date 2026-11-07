@@ -1506,7 +1506,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/fayetteville',
     regionName: 'Fayetteville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Fayetteville, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Fayetteville should account for northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Fayetteville, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Northwest Arkansas experiences heavy seasonal rainfall, hail, wind and freeze-thaw cycles. Roof drainage, flashing transitions, seams and coating adhesion should be evaluated as part of a restoration decision.',
     countiesAndCitiesServed: ['Fayetteville, Washington County', 'Washington County commercial corridors', 'Nearby Benton County and regional Northwest Arkansas markets'],
     keyIndustriesInRegion: ['Higher education and institutional facilities', 'Healthcare and medical properties', 'Retail and hospitality developments', 'Distribution, food processing and manufacturing'],
@@ -1524,7 +1524,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/springdale',
     regionName: 'Springdale, Arkansas',
     heroHeadline: "Commercial Roofing Services in Springdale, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Springdale should account for springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Springdale, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Springdale commercial properties experience heavy rain, hail, high winds and seasonal freeze-thaw conditions. Large roof areas, drainage systems, penetrations and metal panel details need regular attention.',
     countiesAndCitiesServed: ['Springdale, Washington and Benton Counties', 'Northwest Arkansas industrial and logistics corridors', 'Nearby Fayetteville, Rogers and Bentonville markets'],
     keyIndustriesInRegion: ['Food processing and manufacturing', 'Warehousing and distribution', 'Retail and commercial developments', 'Healthcare and institutional facilities'],
@@ -1560,7 +1560,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/el-dorado',
     regionName: 'El Dorado, Arkansas',
     heroHeadline: "Commercial Roofing Services in El Dorado, Arkansas.",
-    heroSubtitle: "Commercial roof planning in El Dorado should account for south Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in El Dorado, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'South Arkansas roofs are exposed to high humidity, heavy rainfall, summer heat and severe thunderstorms. Corrosion control, roof drainage and properly detailed seams and penetrations are important restoration considerations.',
     countiesAndCitiesServed: ['El Dorado, Union County', 'Union County industrial and commercial corridors', 'Nearby Magnolia and Columbia County markets'],
     keyIndustriesInRegion: ['Energy and chemical processing facilities', 'Timber and forest products', 'Healthcare and institutional properties', 'Retail and commercial buildings'],
@@ -1578,7 +1578,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/magnolia',
     regionName: 'Magnolia, Arkansas',
     heroHeadline: "Commercial Roofing Services in Magnolia, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Magnolia should account for magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Magnolia, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Magnolia commercial roofs face humid conditions, heavy rainfall, summer heat and severe thunderstorms. Roof drainage, metal corrosion, fasteners and flashing details are important to inspect before restoration.',
     countiesAndCitiesServed: ['Magnolia, Columbia County', 'Columbia County industrial and commercial properties', 'Nearby El Dorado and South Arkansas markets'],
     keyIndustriesInRegion: ['Timber and forest products', 'Manufacturing and industrial facilities', 'Higher education and institutional properties', 'Retail and healthcare buildings'],
@@ -1596,7 +1596,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/jonesboro',
     regionName: 'Jonesboro, Arkansas',
     heroHeadline: "Commercial Roofing Services in Jonesboro, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Jonesboro should account for northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Jonesboro, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Northeast Arkansas roofs experience hot humid summers, strong thunderstorms, hail and wind driven rain. Large commercial roofs need careful attention to drainage, rooftop equipment, metal fasteners and flashing transitions.',
     countiesAndCitiesServed: [
         'Jonesboro, Craighead County',
@@ -1640,7 +1640,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/rogers',
     regionName: 'Rogers, Arkansas',
     heroHeadline: "Commercial Roofing Services in Rogers, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Rogers should account for rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Rogers, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Rogers commercial properties face intense summer heat, hail, strong winds and heavy rainfall. Roof evaluations should consider large roof areas, rooftop equipment, drainage capacity and the condition of existing coating systems.',
     countiesAndCitiesServed: [
         'Rogers, Benton County',
@@ -1688,7 +1688,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/conway',
     regionName: 'Conway, Arkansas',
     heroHeadline: "Commercial Roofing Services in Conway, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Conway should account for conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Conway, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Conway roofs experience hot summers, heavy rainfall, hail and seasonal severe storms. Inspections should focus on roof drainage, membrane seams, metal panel attachment and penetrations around rooftop equipment.',
     countiesAndCitiesServed: [
         'Conway, Faulkner County',
@@ -1736,7 +1736,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/north-little-rock',
     regionName: 'North Little Rock, Arkansas',
     heroHeadline: "Commercial Roofing Services in North Little Rock, Arkansas.",
-    heroSubtitle: "Commercial roof planning in North Little Rock should account for north Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in North Little Rock, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'North Little Rock commercial roofs face heat, hail, wind driven rain and severe thunderstorms. Industrial buildings and large roof areas benefit from documented inspections of seams, drains, penetrations and perimeter details.',
     countiesAndCitiesServed: [
         'North Little Rock, Pulaski County',
@@ -1784,7 +1784,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/bentonville',
     regionName: 'Bentonville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Bentonville, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Bentonville should account for bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Bentonville, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Bentonville roofs face hot summers, hail, high winds and heavy rainfall. Roof restoration planning should account for rooftop equipment density, drainage, foot traffic and the condition of existing membrane or metal systems.',
     countiesAndCitiesServed: [
         'Bentonville, Benton County',
@@ -1832,7 +1832,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/pine-bluff',
     regionName: 'Pine Bluff, Arkansas',
     heroHeadline: "Commercial Roofing Services in Pine Bluff, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Pine Bluff should account for pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Pine Bluff, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Pine Bluff commercial roofs experience high humidity, heat, heavy rain and severe thunderstorms. Corrosion, drainage, flashing details and moisture within existing roof assemblies deserve close attention.',
     countiesAndCitiesServed: [
         'Pine Bluff, Jefferson County',
@@ -1880,7 +1880,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/benton',
     regionName: 'Benton, Arkansas',
     heroHeadline: "Commercial Roofing Services in Benton, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Benton should account for benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Benton, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Benton roofs face intense summer heat, hail and heavy storm rainfall. Commercial roof evaluations should identify ponding, drainage restrictions, seam failures and deterioration around rooftop equipment.',
     countiesAndCitiesServed: [
         'Benton, Saline County',
@@ -1928,7 +1928,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/hot-springs',
     regionName: 'Hot Springs, Arkansas',
     heroHeadline: "Commercial Roofing Services in Hot Springs, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Hot Springs should account for hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks,.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Hot Springs, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Hot Springs commercial roofs experience humid heat, heavy rain, hail and seasonal storms. Hospitality and healthcare properties benefit from planned inspections that document leaks, drainage, flashing and coating condition.',
     countiesAndCitiesServed: [
         'Hot Springs, Garland County',
@@ -1976,7 +1976,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/sherwood',
     regionName: 'Sherwood, Arkansas',
     heroHeadline: "Commercial Roofing Services in Sherwood, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Sherwood should account for sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Sherwood, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Sherwood roofs experience central Arkansas heat, hail, heavy rain and strong winds. Evaluations should include seams, fasteners, roof edges, drains and the condition of existing coating systems.',
     countiesAndCitiesServed: [
         'Sherwood, Pulaski County',
@@ -2024,7 +2024,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/bella-vista',
     regionName: 'Bella Vista, Arkansas',
     heroHeadline: "Commercial Roofing Services in Bella Vista, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Bella Vista should account for bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Bella Vista, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Bella Vista commercial roofs face summer heat, hail, wind and heavy rainfall. Roof planning should consider varied building ages, roof drainage, penetrations and the maintenance needs of managed property portfolios.',
     countiesAndCitiesServed: [
         'Bella Vista, Benton County',
@@ -2072,7 +2072,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/russellville',
     regionName: 'Russellville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Russellville, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Russellville should account for russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Russellville, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Russellville roofs experience hot summers, heavy rain, hail and severe thunderstorms. Metal roof corrosion, fastener movement, membrane seams and drainage details should be documented before restoration is specified.',
     countiesAndCitiesServed: [
         'Russellville, Pope County',
@@ -2116,7 +2116,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/jacksonville',
     regionName: 'Jacksonville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Jacksonville, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Jacksonville should account for jacksonville commercial roofs face central Arkansas heat, hail, high winds and heavy rain. Large facilities require careful inspection of roof edges, penetrations, drainage and rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Jacksonville, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Jacksonville commercial roofs face central Arkansas heat, hail, high winds and heavy rain. Large facilities require careful inspection of roof edges, penetrations, drainage and rooftop equipment supports.',
     countiesAndCitiesServed: [
         'Jacksonville, Pulaski County',
@@ -2160,7 +2160,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/cabot',
     regionName: 'Cabot, Arkansas',
     heroHeadline: "Commercial Roofing Services in Cabot, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Cabot should account for cabot roofs experience humid summers, hail, wind and heavy rainfall. Commercial evaluations should review drainage, roof penetrations, exposed fasteners and coating compatibility before.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Cabot, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Cabot roofs experience humid summers, hail, wind and heavy rainfall. Commercial evaluations should review drainage, roof penetrations, exposed fasteners and coating compatibility before restoration work.',
     countiesAndCitiesServed: [
         'Cabot, Lonoke County',
@@ -2189,7 +2189,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/searcy',
     regionName: 'Searcy, Arkansas',
     heroHeadline: "Commercial Roofing Services in Searcy, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Searcy should account for searcy commercial roofs face hot summers, heavy rainfall, hail and seasonal severe weather. Inspection priorities include moisture conditions, roof seams, flashing transitions and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Searcy, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Searcy commercial roofs face hot summers, heavy rainfall, hail and seasonal severe weather. Inspection priorities include moisture conditions, roof seams, flashing transitions and drainage performance.',
     countiesAndCitiesServed: [
         'Searcy, White County',
@@ -2229,7 +2229,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/west-memphis',
     regionName: 'West Memphis, Arkansas',
     heroHeadline: "Commercial Roofing Services in West Memphis, Arkansas.",
-    heroSubtitle: "Commercial roof planning in West Memphis should account for west Memphis roofs experience humid heat, heavy rain, wind and severe thunderstorms. Large logistics roofs should be evaluated for drainage, wind exposed edges, metal fasteners, seams.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in West Memphis, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'West Memphis roofs experience humid heat, heavy rain, wind and severe thunderstorms. Large logistics roofs should be evaluated for drainage, wind exposed edges, metal fasteners, seams and existing coating condition.',
     countiesAndCitiesServed: [
         'West Memphis, Crittenden County',
@@ -2273,7 +2273,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/bryant',
     regionName: 'Bryant, Arkansas',
     heroHeadline: "Commercial Roofing Services in Bryant, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Bryant should account for bryant commercial roofs face heat, hail, heavy rainfall and strong storms. Property managers should document roof condition, ponding, penetrations and repair history before choosing a.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Bryant, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Bryant commercial roofs face heat, hail, heavy rainfall and strong storms. Property managers should document roof condition, ponding, penetrations and repair history before choosing a coating or replacement scope.',
     countiesAndCitiesServed: [
         'Bryant, Saline County',
@@ -2317,7 +2317,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/van-buren',
     regionName: 'Van Buren, Arkansas',
     heroHeadline: "Commercial Roofing Services in Van Buren, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Van Buren should account for van Buren roofs experience hot summers, hail, high winds and heavy rainfall. Metal roof corrosion, fasteners, seams and perimeter details should be inspected alongside drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Van Buren, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Van Buren roofs experience hot summers, hail, high winds and heavy rainfall. Metal roof corrosion, fasteners, seams and perimeter details should be inspected alongside drainage and underlying moisture.',
     countiesAndCitiesServed: [
         'Van Buren, Crawford County',
@@ -2357,7 +2357,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/siloam-springs',
     regionName: 'Siloam Springs, Arkansas',
     heroHeadline: "Commercial Roofing Services in Siloam Springs, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Siloam Springs should account for siloam Springs roofs face summer heat, hail, strong storms and heavy rainfall. Roof system selection should account for building use, rooftop exhaust, drainage, corrosion and product.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Siloam Springs, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Siloam Springs roofs face summer heat, hail, strong storms and heavy rainfall. Roof system selection should account for building use, rooftop exhaust, drainage, corrosion and product specific chemical compatibility.',
     countiesAndCitiesServed: [
         'Siloam Springs, Benton County',
@@ -2405,7 +2405,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/maumelle',
     regionName: 'Maumelle, Arkansas',
     heroHeadline: "Commercial Roofing Services in Maumelle, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Maumelle should account for maumelle commercial roofs experience humid heat, hail, wind driven rain and severe storms. Large low slope roofs need documented review of drainage, seams, penetrations and the condition.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Maumelle, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Maumelle commercial roofs experience humid heat, hail, wind driven rain and severe storms. Large low slope roofs need documented review of drainage, seams, penetrations and the condition of previous repairs or coatings.',
     countiesAndCitiesServed: [
         'Maumelle, Pulaski County',
@@ -2449,7 +2449,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/marion',
     regionName: 'Marion, Arkansas',
     heroHeadline: "Commercial Roofing Services in Marion, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Marion should account for marion roofs face humid summers, heavy rain, hail and strong winds. Commercial inspections should focus on large roof drainage systems, exposed metal details, penetrations and wind.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Marion, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Marion roofs face humid summers, heavy rain, hail and strong winds. Commercial inspections should focus on large roof drainage systems, exposed metal details, penetrations and wind vulnerable perimeter conditions.',
     countiesAndCitiesServed: [
         'Marion, Crittenden County',
@@ -2489,7 +2489,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/forrest-city',
     regionName: 'Forrest City, Arkansas',
     heroHeadline: "Commercial Roofing Services in Forrest City, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Forrest City should account for forrest City roofs experience humid heat, heavy rainfall and severe thunderstorms. Inspections should evaluate corrosion, drainage, flashing details and moisture before recommending.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Forrest City, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Forrest City roofs experience humid heat, heavy rainfall and severe thunderstorms. Inspections should evaluate corrosion, drainage, flashing details and moisture before recommending restoration.',
     countiesAndCitiesServed: [
         'Forrest City, St. Francis County',
@@ -2529,7 +2529,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/malvern',
     regionName: 'Malvern, Arkansas',
     heroHeadline: "Commercial Roofing Services in Malvern, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Malvern should account for malvern commercial roofs face hot summers, hail, wind and heavy rain. Restoration evaluations should include metal condition, seams, fasteners, moisture and drainage around rooftop equipment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Malvern, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Malvern commercial roofs face hot summers, hail, wind and heavy rain. Restoration evaluations should include metal condition, seams, fasteners, moisture and drainage around rooftop equipment.',
     countiesAndCitiesServed: [
         'Malvern, Hot Spring County',
@@ -2573,7 +2573,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/arkadelphia',
     regionName: 'Arkadelphia, Arkansas',
     heroHeadline: "Commercial Roofing Services in Arkadelphia, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Arkadelphia should account for arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Arkadelphia, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Arkadelphia roofs experience humid heat, heavy rain, hail and seasonal storms. Roof inspections should document leaks, drainage, flashing transitions and the suitability of existing roof materials for restoration.',
     countiesAndCitiesServed: [
         'Arkadelphia, Clark County',
@@ -2617,7 +2617,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/camden',
     regionName: 'Camden, Arkansas',
     heroHeadline: "Commercial Roofing Services in Camden, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Camden should account for camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Camden, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Camden commercial roofs face hot humid conditions, heavy rainfall, hail and severe thunderstorms. Corrosion, roof drainage, seams and fastener condition are important considerations for metal roof restoration.',
     countiesAndCitiesServed: [
         'Camden, Ouachita County',
@@ -2713,7 +2713,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/sulphur-springs',
     regionName: 'Sulphur Springs, Texas',
     heroHeadline: "Commercial Roofing Services in Sulphur Springs, Texas.",
-    heroSubtitle: "Commercial roof planning in Sulphur Springs should account for sulphur Springs roofs experience humid heat, heavy rainfall and severe thunderstorms. Food production and industrial facilities need roof evaluations that consider exhaust, rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Sulphur Springs, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Sulphur Springs roofs experience humid heat, heavy rainfall and severe thunderstorms. Food production and industrial facilities need roof evaluations that consider exhaust, rooftop equipment, corrosion, drainage and product compatibility.',
     countiesAndCitiesServed: [
         'Sulphur Springs, Hopkins County',
@@ -2765,7 +2765,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/mount-pleasant',
     regionName: 'Mount Pleasant, Texas',
     heroHeadline: "Commercial Roofing Services in Mount Pleasant, Texas.",
-    heroSubtitle: "Commercial roof planning in Mount Pleasant should account for mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corrosion, exposed fasteners, seams and flashing transitions should be documented.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Mount Pleasant, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Mount Pleasant commercial roofs face hot humid conditions, hail, high winds and heavy rain. Metal roof corrosion, exposed fasteners, seams and flashing transitions should be documented before restoration.',
     countiesAndCitiesServed: [
         'Mount Pleasant, Titus County',
@@ -2817,7 +2817,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/marshall',
     regionName: 'Marshall, Texas',
     heroHeadline: "Commercial Roofing Services in Marshall, Texas.",
-    heroSubtitle: "Commercial roof planning in Marshall should account for marshall roofs experience humid heat, heavy rainfall and seasonal severe storms. Commercial inspections should evaluate roof drainage, metal panel condition, fasteners, penetrations and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Marshall, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Marshall roofs experience humid heat, heavy rainfall and seasonal severe storms. Commercial inspections should evaluate roof drainage, metal panel condition, fasteners, penetrations and moisture within existing assemblies.',
     countiesAndCitiesServed: [
         'Marshall, Harrison County',
@@ -2869,7 +2869,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/sherman',
     regionName: 'Sherman, Texas',
     heroHeadline: "Commercial Roofing Services in Sherman, Texas.",
-    heroSubtitle: "Commercial roof planning in Sherman should account for sherman commercial roofs face intense summer heat, hail and severe storms. Large industrial and institutional roofs need condition based review of seams, fasteners, drains, rooftop.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Sherman, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Sherman commercial roofs face intense summer heat, hail and severe storms. Large industrial and institutional roofs need condition based review of seams, fasteners, drains, rooftop equipment and existing coating adhesion.',
     countiesAndCitiesServed: [
         'Sherman, Grayson County',
@@ -2921,7 +2921,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/denison',
     regionName: 'Denison, Texas',
     heroHeadline: "Commercial Roofing Services in Denison, Texas.",
-    heroSubtitle: "Commercial roof planning in Denison should account for denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Denison, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Denison roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should consider drainage, membrane condition, metal seams, penetrations and the building’s operational needs.',
     countiesAndCitiesServed: [
         'Denison, Grayson County',
@@ -2973,7 +2973,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/nacogdoches',
     regionName: 'Nacogdoches, Texas',
     heroHeadline: "Commercial Roofing Services in Nacogdoches, Texas.",
-    heroSubtitle: "Commercial roof planning in Nacogdoches should account for nacogdoches commercial roofs experience humid heat, heavy rainfall and severe thunderstorms. Timber and industrial properties should receive careful corrosion, drainage, flashing and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Nacogdoches, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Nacogdoches commercial roofs experience humid heat, heavy rainfall and severe thunderstorms. Timber and industrial properties should receive careful corrosion, drainage, flashing and rooftop penetration evaluations.',
     countiesAndCitiesServed: [
         'Nacogdoches, Nacogdoches County',
@@ -3025,7 +3025,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/lufkin',
     regionName: 'Lufkin, Texas',
     heroHeadline: "Commercial Roofing Services in Lufkin, Texas.",
-    heroSubtitle: "Commercial roof planning in Lufkin should account for lufkin roofs face humid heat, heavy rainfall, hail and seasonal storms. Inspections should consider corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Lufkin, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Lufkin roofs face humid heat, heavy rainfall, hail and seasonal storms. Inspections should consider corrosion, roof drainage, seams, fasteners, penetrations and the condition of prior repairs.',
     countiesAndCitiesServed: [
         'Lufkin, Angelina County',
@@ -3077,7 +3077,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/jacksonville-tx',
     regionName: 'Jacksonville, Texas',
     heroHeadline: "Commercial Roofing Services in Jacksonville, Texas.",
-    heroSubtitle: "Commercial roof planning in Jacksonville should account for jacksonville commercial roofs face humid heat, heavy rain and severe thunderstorms. Food processing and industrial facilities require attention to roof exhaust, corrosion, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Jacksonville, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Jacksonville commercial roofs face humid heat, heavy rain and severe thunderstorms. Food processing and industrial facilities require attention to roof exhaust, corrosion, drainage and compatible restoration materials.',
     countiesAndCitiesServed: [
         'Jacksonville, Cherokee County',
@@ -3129,7 +3129,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/palestine',
     regionName: 'Palestine, Texas',
     heroHeadline: "Commercial Roofing Services in Palestine, Texas.",
-    heroSubtitle: "Commercial roof planning in Palestine should account for palestine roofs experience humid summers, heavy rainfall and seasonal storms. Commercial evaluations should document roof condition, drainage, seams, penetrations and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Palestine, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Palestine roofs experience humid summers, heavy rainfall and seasonal storms. Commercial evaluations should document roof condition, drainage, seams, penetrations and coating compatibility.',
     countiesAndCitiesServed: [
         'Palestine, Anderson County',
@@ -3181,7 +3181,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/henderson',
     regionName: 'Henderson, Texas',
     heroHeadline: "Commercial Roofing Services in Henderson, Texas.",
-    heroSubtitle: "Commercial roof planning in Henderson should account for henderson roofs face humid heat, heavy rainfall and severe thunderstorms. Metal roof corrosion, fastener condition, seam integrity and drainage are key restoration evaluation points. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Henderson, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Henderson roofs face humid heat, heavy rainfall and severe thunderstorms. Metal roof corrosion, fastener condition, seam integrity and drainage are key restoration evaluation points.',
     countiesAndCitiesServed: [
         'Henderson, Rusk County',
@@ -3233,7 +3233,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/athens',
     regionName: 'Athens, Texas',
     heroHeadline: "Commercial Roofing Services in Athens, Texas.",
-    heroSubtitle: "Commercial roof planning in Athens should account for athens commercial roofs experience hot humid weather, hail, heavy rain and strong storms. Roof evaluations should include drainage, flashing transitions, metal fasteners and moisture.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Athens, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Athens commercial roofs experience hot humid weather, hail, heavy rain and strong storms. Roof evaluations should include drainage, flashing transitions, metal fasteners and moisture conditions.',
     countiesAndCitiesServed: [
         'Athens, Henderson County',
@@ -3285,7 +3285,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/corsicana',
     regionName: 'Corsicana, Texas',
     heroHeadline: "Commercial Roofing Services in Corsicana, Texas.",
-    heroSubtitle: "Commercial roof planning in Corsicana should account for corsicana roofs face summer heat, hail and strong storm systems. Large commercial roofs should be evaluated for coating condition, seams, drainage, rooftop equipment and metal corrosion. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Corsicana, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Corsicana roofs face summer heat, hail and strong storm systems. Large commercial roofs should be evaluated for coating condition, seams, drainage, rooftop equipment and metal corrosion.',
     countiesAndCitiesServed: [
         'Corsicana, Navarro County',
@@ -3337,7 +3337,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/arlington',
     regionName: 'Arlington, Texas',
     heroHeadline: "Commercial Roofing Services in Arlington, Texas.",
-    heroSubtitle: "Commercial roof planning in Arlington should account for arlington roofs face intense summer heat, hail, high winds and heavy rainfall. Large venues and commercial campuses need detailed inspections of roof edges, drainage, penetrations and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Arlington, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Arlington roofs face intense summer heat, hail, high winds and heavy rainfall. Large venues and commercial campuses need detailed inspections of roof edges, drainage, penetrations and existing coating systems.',
     countiesAndCitiesServed: [
         'Arlington, Tarrant County',
@@ -3389,7 +3389,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/plano',
     regionName: 'Plano, Texas',
     heroHeadline: "Commercial Roofing Services in Plano, Texas.",
-    heroSubtitle: "Commercial roof planning in Plano should account for plano commercial roofs experience high summer temperatures, hail and severe thunderstorms. Roof evaluations should address large rooftop equipment fields, membrane seams, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Plano, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Plano commercial roofs experience high summer temperatures, hail and severe thunderstorms. Roof evaluations should address large rooftop equipment fields, membrane seams, drainage and metal details.',
     countiesAndCitiesServed: [
         'Plano, Collin County',
@@ -3441,7 +3441,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/irving',
     regionName: 'Irving, Texas',
     heroHeadline: "Commercial Roofing Services in Irving, Texas.",
-    heroSubtitle: "Commercial roof planning in Irving should account for irving roofs face intense heat, hail, high winds and heavy rainfall. Large office and hospitality properties benefit from documented roof condition assessments and coating eligibility.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Irving, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Irving roofs face intense heat, hail, high winds and heavy rainfall. Large office and hospitality properties benefit from documented roof condition assessments and coating eligibility reviews.',
     countiesAndCitiesServed: [
         'Irving, Dallas County',
@@ -3493,7 +3493,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/garland',
     regionName: 'Garland, Texas',
     heroHeadline: "Commercial Roofing Services in Garland, Texas.",
-    heroSubtitle: "Commercial roof planning in Garland should account for garland commercial roofs face heat, hail and severe storms. Metal panel corrosion, fastener movement, roof edge details and drainage should be reviewed before restoration is recommended. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Garland, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Garland commercial roofs face heat, hail and severe storms. Metal panel corrosion, fastener movement, roof edge details and drainage should be reviewed before restoration is recommended.',
     countiesAndCitiesServed: [
         'Garland, Dallas County',
@@ -3545,7 +3545,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/frisco',
     regionName: 'Frisco, Texas',
     heroHeadline: "Commercial Roofing Services in Frisco, Texas.",
-    heroSubtitle: "Commercial roof planning in Frisco should account for frisco roofs experience high summer temperatures, hail, strong winds and heavy rain. Commercial campuses need condition based review of rooftop equipment, drainage, seams and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Frisco, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Frisco roofs experience high summer temperatures, hail, strong winds and heavy rain. Commercial campuses need condition based review of rooftop equipment, drainage, seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Frisco, Collin County',
@@ -3597,7 +3597,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/mckinney',
     regionName: 'McKinney, Texas',
     heroHeadline: "Commercial Roofing Services in McKinney, Texas.",
-    heroSubtitle: "Commercial roof planning in McKinney should account for mcKinney commercial roofs face heat, hail, high winds and heavy rainfall. Inspections should evaluate membrane condition, metal fasteners, roof edges, penetrations and moisture before.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in McKinney, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'McKinney commercial roofs face heat, hail, high winds and heavy rainfall. Inspections should evaluate membrane condition, metal fasteners, roof edges, penetrations and moisture before coating restoration.',
     countiesAndCitiesServed: [
         'McKinney, Collin County',
@@ -3649,7 +3649,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/grand-prairie',
     regionName: 'Grand Prairie, Texas',
     heroHeadline: "Commercial Roofing Services in Grand Prairie, Texas.",
-    heroSubtitle: "Commercial roof planning in Grand Prairie should account for grand Prairie roofs experience high summer temperatures, hail and severe storms. Large industrial roof areas require careful evaluation of drainage, seams, fasteners and roof edge conditions. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Grand Prairie, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Grand Prairie roofs experience high summer temperatures, hail and severe storms. Large industrial roof areas require careful evaluation of drainage, seams, fasteners and roof edge conditions.',
     countiesAndCitiesServed: [
         'Grand Prairie, Dallas County',
@@ -3701,7 +3701,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/denton',
     regionName: 'Denton, Texas',
     heroHeadline: "Commercial Roofing Services in Denton, Texas.",
-    heroSubtitle: "Commercial roof planning in Denton should account for denton roofs face hot summers, hail, high winds and seasonal storms. Commercial roof evaluations should document drainage, membrane seams, metal corrosion and rooftop penetrations. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Denton, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Denton roofs face hot summers, hail, high winds and seasonal storms. Commercial roof evaluations should document drainage, membrane seams, metal corrosion and rooftop penetrations.',
     countiesAndCitiesServed: [
         'Denton, Denton County',
@@ -3753,7 +3753,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/mesquite',
     regionName: 'Mesquite, Texas',
     heroHeadline: "Commercial Roofing Services in Mesquite, Texas.",
-    heroSubtitle: "Commercial roof planning in Mesquite should account for mesquite commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should review large roof drainage systems, metal seams, fasteners and existing coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Mesquite, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Mesquite commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should review large roof drainage systems, metal seams, fasteners and existing coatings.',
     countiesAndCitiesServed: [
         'Mesquite, Dallas County',
@@ -3805,7 +3805,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/carrollton',
     regionName: 'Carrollton, Texas',
     heroHeadline: "Commercial Roofing Services in Carrollton, Texas.",
-    heroSubtitle: "Commercial roof planning in Carrollton should account for carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coating systems. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Carrollton, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Carrollton roofs experience intense summer heat, hail and severe storms. Inspections should address rooftop equipment, membrane seams, metal fasteners, drainage and previous coating systems.',
     countiesAndCitiesServed: [
         'Carrollton, Dallas County',
@@ -3857,7 +3857,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/richardson',
     regionName: 'Richardson, Texas',
     heroHeadline: "Commercial Roofing Services in Richardson, Texas.",
-    heroSubtitle: "Commercial roof planning in Richardson should account for richardson roofs face high summer temperatures, hail and heavy storms. Commercial roof evaluations should document membrane condition, roof edges, penetrations, drainage and restoration.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Richardson, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Richardson roofs face high summer temperatures, hail and heavy storms. Commercial roof evaluations should document membrane condition, roof edges, penetrations, drainage and restoration suitability.',
     countiesAndCitiesServed: [
         'Richardson, Dallas County',
@@ -3909,7 +3909,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/lewisville',
     regionName: 'Lewisville, Texas',
     heroHeadline: "Commercial Roofing Services in Lewisville, Texas.",
-    heroSubtitle: "Commercial roof planning in Lewisville should account for lewisville roofs experience summer heat, hail, high winds and heavy rainfall. Large commercial properties need inspections of drainage, rooftop equipment, seams and metal panel attachment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Lewisville, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Lewisville roofs experience summer heat, hail, high winds and heavy rainfall. Large commercial properties need inspections of drainage, rooftop equipment, seams and metal panel attachment.',
     countiesAndCitiesServed: [
         'Lewisville, Denton County',
@@ -3961,7 +3961,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/allen',
     regionName: 'Allen, Texas',
     heroHeadline: "Commercial Roofing Services in Allen, Texas.",
-    heroSubtitle: "Commercial roof planning in Allen should account for allen commercial roofs face high summer temperatures, hail and severe thunderstorms. Inspections should evaluate roof condition, drainage, penetrations, seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Allen, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Allen commercial roofs face high summer temperatures, hail and severe thunderstorms. Inspections should evaluate roof condition, drainage, penetrations, seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Allen, Collin County',
@@ -4013,7 +4013,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/rowlett',
     regionName: 'Rowlett, Texas',
     heroHeadline: "Commercial Roofing Services in Rowlett, Texas.",
-    heroSubtitle: "Commercial roof planning in Rowlett should account for rowlett roofs face heat, hail, high winds and heavy rainfall. Roof evaluations should consider drainage, wind exposed edges, metal details and the condition of existing membranes and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Rowlett, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Rowlett roofs face heat, hail, high winds and heavy rainfall. Roof evaluations should consider drainage, wind exposed edges, metal details and the condition of existing membranes and coatings.',
     countiesAndCitiesServed: [
         'Rowlett, Dallas County',
@@ -4065,7 +4065,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/mansfield',
     regionName: 'Mansfield, Texas',
     heroHeadline: "Commercial Roofing Services in Mansfield, Texas.",
-    heroSubtitle: "Commercial roof planning in Mansfield should account for mansfield commercial roofs face intense heat, hail and severe storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Mansfield, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Mansfield commercial roofs face intense heat, hail and severe storms. Roof inspections should document seams, fasteners, drainage, penetrations and opportunities for compatible restoration.',
     countiesAndCitiesServed: [
         'Mansfield, Tarrant County',
@@ -4117,7 +4117,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/grapevine',
     regionName: 'Grapevine, Texas',
     heroHeadline: "Commercial Roofing Services in Grapevine, Texas.",
-    heroSubtitle: "Commercial roof planning in Grapevine should account for grapevine roofs face high summer temperatures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Grapevine, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Grapevine roofs face high summer temperatures, hail, high winds and heavy rainfall. Hospitality and airport area properties need careful roof inspections and project coordination around operations.',
     countiesAndCitiesServed: [
         'Grapevine, Tarrant County',
@@ -4169,7 +4169,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/broken-arrow',
     regionName: 'Broken Arrow, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Broken Arrow, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Broken Arrow should account for broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Broken Arrow, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Broken Arrow roofs face hot summers, hail, high winds and severe thunderstorms. Commercial evaluations should review roof edges, metal fasteners, seams, drainage and existing coating compatibility.',
     countiesAndCitiesServed: [
         'Broken Arrow, Tulsa County',
@@ -4209,7 +4209,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/muskogee',
     regionName: 'Muskogee, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Muskogee, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Muskogee should account for muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Muskogee, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Muskogee commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document corrosion, seams, roof penetrations, drainage and the condition of prior repairs.',
     countiesAndCitiesServed: [
         'Muskogee, Muskogee County',
@@ -4249,7 +4249,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/owasso',
     regionName: 'Owasso, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Owasso, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Owasso should account for owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Owasso, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Owasso roofs face hot summers, hail and severe thunderstorms. Roof evaluations should consider rooftop equipment, metal panel attachment, drainage and coating system compatibility.',
     countiesAndCitiesServed: [
         'Owasso, Tulsa County',
@@ -4289,7 +4289,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/bartlesville',
     regionName: 'Bartlesville, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Bartlesville, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Bartlesville should account for bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Bartlesville, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Bartlesville commercial roofs face strong winds, hail, temperature swings and heavy storms. Restoration planning should document metal corrosion, seams, fasteners, roof edges and drainage.',
     countiesAndCitiesServed: [
         'Bartlesville, Washington County',
@@ -4329,7 +4329,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/lawton',
     regionName: 'Lawton, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Lawton, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Lawton should account for lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Lawton, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Lawton roofs face high winds, hail, intense summer heat and seasonal storms. Large commercial roofs need careful evaluation of wind exposed edges, fasteners, seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Lawton, Comanche County',
@@ -4369,7 +4369,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/edmond',
     regionName: 'Edmond, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Edmond, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Edmond should account for edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Edmond, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Edmond commercial roofs face hail, high winds, hot summers and severe thunderstorms. Roof inspections should document seams, roof edges, penetrations, drainage and existing coating condition.',
     countiesAndCitiesServed: [
         'Edmond, Oklahoma County',
@@ -4409,7 +4409,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/norman',
     regionName: 'Norman, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Norman, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Norman should account for norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Norman, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Norman roofs experience hail, severe thunderstorms, high winds and large seasonal temperature changes. Commercial roof restoration requires attention to fasteners, seams, drainage and roof edge details.',
     countiesAndCitiesServed: [
         'Norman, Cleveland County',
@@ -4449,7 +4449,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/moore',
     regionName: 'Moore, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Moore, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Moore should account for moore commercial roofs face severe thunderstorms, hail, high winds and summer heat. Inspections should prioritize wind exposed edges, membrane seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Moore, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Moore commercial roofs face severe thunderstorms, hail, high winds and summer heat. Inspections should prioritize wind exposed edges, membrane seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Moore, Cleveland County',
@@ -4489,7 +4489,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/midwest-city',
     regionName: 'Midwest City, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Midwest City, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Midwest City should account for midwest City roofs face hail, high winds, severe thunderstorms and intense summer heat. Roof condition assessments should include roof edges, penetrations, drainage and metal attachment.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Midwest City, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Midwest City roofs face hail, high winds, severe thunderstorms and intense summer heat. Roof condition assessments should include roof edges, penetrations, drainage and metal attachment details.',
     countiesAndCitiesServed: [
         'Midwest City, Oklahoma County',
@@ -4529,7 +4529,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/shawnee',
     regionName: 'Shawnee, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Shawnee, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Shawnee should account for shawnee roofs experience hail, high winds, severe storms and seasonal temperature changes. Inspections should document roof condition, drainage, metal fasteners and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Shawnee, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Shawnee roofs experience hail, high winds, severe storms and seasonal temperature changes. Inspections should document roof condition, drainage, metal fasteners and coating compatibility.',
     countiesAndCitiesServed: [
         'Shawnee, Pottawatomie County',
@@ -4569,7 +4569,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/yukon',
     regionName: 'Yukon, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Yukon, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Yukon should account for yukon roofs face severe thunderstorms, hail, high winds and hot summers. Large commercial roof evaluations should focus on wind exposed edges, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Yukon, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Yukon roofs face severe thunderstorms, hail, high winds and hot summers. Large commercial roof evaluations should focus on wind exposed edges, seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Yukon, Canadian County',
@@ -4645,7 +4645,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/west-monroe',
     regionName: 'West Monroe, Louisiana',
     heroHeadline: "Commercial Roofing Services in West Monroe, Louisiana.",
-    heroSubtitle: "Commercial roof planning in West Monroe should account for west Monroe commercial roofs face humid heat, heavy rainfall, hail and strong storms. Inspections should document drainage, roof penetrations, metal seams, corrosion and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in West Monroe, Louisiana can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'West Monroe commercial roofs face humid heat, heavy rainfall, hail and strong storms. Inspections should document drainage, roof penetrations, metal seams, corrosion and coating condition.',
     countiesAndCitiesServed: [
         'West Monroe, Ouachita County',
@@ -4685,7 +4685,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/ruston',
     regionName: 'Ruston, Louisiana',
     heroHeadline: "Commercial Roofing Services in Ruston, Louisiana.",
-    heroSubtitle: "Commercial roof planning in Ruston should account for ruston roofs experience humid summers, heavy rainfall and severe thunderstorms. Roof restoration planning should include drainage, seams, flashing transitions, fasteners and substrate.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Ruston, Louisiana can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Ruston roofs experience humid summers, heavy rainfall and severe thunderstorms. Roof restoration planning should include drainage, seams, flashing transitions, fasteners and substrate condition.',
     countiesAndCitiesServed: [
         'Ruston, Lincoln County',
@@ -4725,7 +4725,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/alexandria',
     regionName: 'Alexandria, Louisiana',
     heroHeadline: "Commercial Roofing Services in Alexandria, Louisiana.",
-    heroSubtitle: "Commercial roof planning in Alexandria should account for alexandria commercial roofs face humid heat, heavy rainfall, hail and severe thunderstorms. Roof evaluations should include moisture, drainage, corrosion, seams and penetrations. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Alexandria, Louisiana can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Alexandria commercial roofs face humid heat, heavy rainfall, hail and severe thunderstorms. Roof evaluations should include moisture, drainage, corrosion, seams and penetrations.',
     countiesAndCitiesServed: [
         'Alexandria, Rapides County',
@@ -4765,7 +4765,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/natchitoches',
     regionName: 'Natchitoches, Louisiana',
     heroHeadline: "Commercial Roofing Services in Natchitoches, Louisiana.",
-    heroSubtitle: "Commercial roof planning in Natchitoches should account for natchitoches roofs experience humid heat, heavy rain and seasonal severe storms. Commercial inspections should evaluate drainage, roof edges, metal fasteners, seams and the condition of.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Natchitoches, Louisiana can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Natchitoches roofs experience humid heat, heavy rain and seasonal severe storms. Commercial inspections should evaluate drainage, roof edges, metal fasteners, seams and the condition of existing coatings.',
     countiesAndCitiesServed: [
         'Natchitoches, Natchitoches County',
@@ -4805,7 +4805,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/pineville-la',
     regionName: 'Pineville, Louisiana',
     heroHeadline: "Commercial Roofing Services in Pineville, Louisiana.",
-    heroSubtitle: "Commercial roof planning in Pineville should account for pineville commercial roofs face humid summers, heavy rainfall and severe thunderstorms. Roof evaluations should document leaks, drainage, flashing, penetrations and restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Pineville, Louisiana can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Pineville commercial roofs face humid summers, heavy rainfall and severe thunderstorms. Roof evaluations should document leaks, drainage, flashing, penetrations and restoration suitability.',
     countiesAndCitiesServed: [
         'Pineville, Rapides County',
@@ -4845,7 +4845,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/minden',
     regionName: 'Minden, Louisiana',
     heroHeadline: "Commercial Roofing Services in Minden, Louisiana.",
-    heroSubtitle: "Commercial roof planning in Minden should account for minden roofs experience humid heat, heavy rainfall and severe storms. Metal corrosion, seam integrity, fasteners and drainage should be reviewed before recommending a coating system. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Minden, Louisiana can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Minden roofs experience humid heat, heavy rainfall and severe storms. Metal corrosion, seam integrity, fasteners and drainage should be reviewed before recommending a coating system.',
     countiesAndCitiesServed: [
         'Minden, Webster County',
@@ -4973,7 +4973,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/hurst',
     regionName: 'Hurst, Texas',
     heroHeadline: "Commercial Roofing Services in Hurst, Texas.",
-    heroSubtitle: "Commercial roof planning in Hurst should account for hurst commercial roofs face hot summers, hail, strong winds and heavy rainfall. Inspections should review roof drainage, rooftop equipment, membrane seams, metal details and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Hurst, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Hurst commercial roofs face hot summers, hail, strong winds and heavy rainfall. Inspections should review roof drainage, rooftop equipment, membrane seams, metal details and coating compatibility.',
     countiesAndCitiesServed: [
         'Hurst, Tarrant County',
@@ -5013,7 +5013,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/euless',
     regionName: 'Euless, Texas',
     heroHeadline: "Commercial Roofing Services in Euless, Texas.",
-    heroSubtitle: "Commercial roof planning in Euless should account for euless roofs experience intense heat, hail, high winds and heavy storms. Commercial evaluations should document roof condition around rooftop equipment, drains, penetrations and wind.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Euless, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Euless roofs experience intense heat, hail, high winds and heavy storms. Commercial evaluations should document roof condition around rooftop equipment, drains, penetrations and wind exposed edges.',
     countiesAndCitiesServed: [
         'Euless, Tarrant County',
@@ -5053,7 +5053,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/bedford',
     regionName: 'Bedford, Texas',
     heroHeadline: "Commercial Roofing Services in Bedford, Texas.",
-    heroSubtitle: "Commercial roof planning in Bedford should account for bedford commercial roofs face hot summers, hail and severe thunderstorms. Roof restoration planning should review membrane condition, drainage, seams, flashing and metal corrosion. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Bedford, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Bedford commercial roofs face hot summers, hail and severe thunderstorms. Roof restoration planning should review membrane condition, drainage, seams, flashing and metal corrosion.',
     countiesAndCitiesServed: [
         'Bedford, Tarrant County',
@@ -5093,7 +5093,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/north-richland-hills',
     regionName: 'North Richland Hills, Texas',
     heroHeadline: "Commercial Roofing Services in North Richland Hills, Texas.",
-    heroSubtitle: "Commercial roof planning in North Richland Hills should account for north Richland Hills roofs face high summer temperatures, hail, high winds and heavy rainfall. Inspections should document roof edges, penetrations, drainage and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in North Richland Hills, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'North Richland Hills roofs face high summer temperatures, hail, high winds and heavy rainfall. Inspections should document roof edges, penetrations, drainage and coating condition.',
     countiesAndCitiesServed: [
         'North Richland Hills, Tarrant County',
@@ -5133,7 +5133,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/keller',
     regionName: 'Keller, Texas',
     heroHeadline: "Commercial Roofing Services in Keller, Texas.",
-    heroSubtitle: "Commercial roof planning in Keller should account for keller commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should focus on drainage, membrane seams, metal fasteners and the condition of existing.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Keller, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Keller commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should focus on drainage, membrane seams, metal fasteners and the condition of existing restoration coatings.',
     countiesAndCitiesServed: [
         'Keller, Tarrant County',
@@ -5173,7 +5173,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/burleson',
     regionName: 'Burleson, Texas',
     heroHeadline: "Commercial Roofing Services in Burleson, Texas.",
-    heroSubtitle: "Commercial roof planning in Burleson should account for burleson roofs experience high temperatures, hail, strong winds and heavy rainfall. Large roof areas need documented review of seams, roof edges, fasteners, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Burleson, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Burleson roofs experience high temperatures, hail, strong winds and heavy rainfall. Large roof areas need documented review of seams, roof edges, fasteners, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Burleson, Johnson County',
@@ -5213,7 +5213,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/rockwall',
     regionName: 'Rockwall, Texas',
     heroHeadline: "Commercial Roofing Services in Rockwall, Texas.",
-    heroSubtitle: "Commercial roof planning in Rockwall should account for rockwall roofs face heat, hail, wind driven rain and severe thunderstorms. Inspections should assess drainage, roof edges, rooftop equipment and metal or membrane restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Rockwall, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Rockwall roofs face heat, hail, wind driven rain and severe thunderstorms. Inspections should assess drainage, roof edges, rooftop equipment and metal or membrane restoration suitability.',
     countiesAndCitiesServed: [
         'Rockwall, Rockwall County',
@@ -5253,7 +5253,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/forney',
     regionName: 'Forney, Texas',
     heroHeadline: "Commercial Roofing Services in Forney, Texas.",
-    heroSubtitle: "Commercial roof planning in Forney should account for forney commercial roofs face hot summers, hail and severe storms. Roof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Forney, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Forney commercial roofs face hot summers, hail and severe storms. Roof condition reviews should include drainage, fasteners, seams, penetrations and coating compatibility.',
     countiesAndCitiesServed: [
         'Forney, Kaufman County',
@@ -5293,7 +5293,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/waxahachie',
     regionName: 'Waxahachie, Texas',
     heroHeadline: "Commercial Roofing Services in Waxahachie, Texas.",
-    heroSubtitle: "Commercial roof planning in Waxahachie should account for waxahachie roofs face intense summer heat, hail, high winds and heavy rainfall. Restoration planning should document roof moisture, drainage, metal condition and flashing details. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Waxahachie, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Waxahachie roofs face intense summer heat, hail, high winds and heavy rainfall. Restoration planning should document roof moisture, drainage, metal condition and flashing details.',
     countiesAndCitiesServed: [
         'Waxahachie, Ellis County',
@@ -5333,7 +5333,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/midlothian',
     regionName: 'Midlothian, Texas',
     heroHeadline: "Commercial Roofing Services in Midlothian, Texas.",
-    heroSubtitle: "Commercial roof planning in Midlothian should account for midlothian roofs face high heat, hail, wind and severe thunderstorms. Industrial roof evaluations should consider corrosion, chemical exposure, rooftop exhaust, seams and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Midlothian, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Midlothian roofs face high heat, hail, wind and severe thunderstorms. Industrial roof evaluations should consider corrosion, chemical exposure, rooftop exhaust, seams and drainage.',
     countiesAndCitiesServed: [
         'Midlothian, Ellis County',
@@ -5373,7 +5373,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/lancaster',
     regionName: 'Lancaster, Texas',
     heroHeadline: "Commercial Roofing Services in Lancaster, Texas.",
-    heroSubtitle: "Commercial roof planning in Lancaster should account for lancaster commercial roofs face hot summers, hail and high winds. Large industrial roofs need detailed inspection of roof edges, fasteners, seams, drains and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Lancaster, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Lancaster commercial roofs face hot summers, hail and high winds. Large industrial roofs need detailed inspection of roof edges, fasteners, seams, drains and coating condition.',
     countiesAndCitiesServed: [
         'Lancaster, Dallas County',
@@ -5410,7 +5410,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
   '/service-areas/desoto': {
     title: "Commercial Roofing in DeSoto, TX | CRD",    metaDescription: "Commercial roofing in DeSoto, TX. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",    canonicalPath: '/service-areas/desoto',    regionName: 'DeSoto, Texas',
     heroHeadline: "Commercial Roofing Services in DeSoto, Texas.",
-    heroSubtitle: "Commercial roof planning in DeSoto should account for deSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in DeSoto, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'DeSoto roofs experience intense heat, hail and severe storms. Commercial roof evaluations should review membrane condition, drainage, penetrations, metal fasteners and prior repairs.',
     countiesAndCitiesServed: [
         'DeSoto, Dallas County',
@@ -5450,7 +5450,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/cedar-hill',
     regionName: 'Cedar Hill, Texas',
     heroHeadline: "Commercial Roofing Services in Cedar Hill, Texas.",
-    heroSubtitle: "Commercial roof planning in Cedar Hill should account for cedar Hill roofs face hot summers, hail, strong winds and heavy rainfall. Roof restoration assessments should document roof condition, drainage, seams, penetrations and existing coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Cedar Hill, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Cedar Hill roofs face hot summers, hail, strong winds and heavy rainfall. Roof restoration assessments should document roof condition, drainage, seams, penetrations and existing coating compatibility.',
     countiesAndCitiesServed: [
         'Cedar Hill, Dallas County',
@@ -5490,7 +5490,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/duncanville',
     regionName: 'Duncanville, Texas',
     heroHeadline: "Commercial Roofing Services in Duncanville, Texas.",
-    heroSubtitle: "Commercial roof planning in Duncanville should account for duncanville commercial roofs face heat, hail and severe thunderstorms. Inspections should consider roof drainage, membrane seams, metal details and the condition of existing roof coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Duncanville, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Duncanville commercial roofs face heat, hail and severe thunderstorms. Inspections should consider roof drainage, membrane seams, metal details and the condition of existing roof coatings.',
     countiesAndCitiesServed: [
         'Duncanville, Dallas County',
@@ -5530,7 +5530,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/coppell',
     regionName: 'Coppell, Texas',
     heroHeadline: "Commercial Roofing Services in Coppell, Texas.",
-    heroSubtitle: "Commercial roof planning in Coppell should account for coppell roofs face high summer temperatures, hail, strong winds and heavy rain. Large commercial roofs need documented review of drains, rooftop equipment, seams and roof edge conditions. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Coppell, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Coppell roofs face high summer temperatures, hail, strong winds and heavy rain. Large commercial roofs need documented review of drains, rooftop equipment, seams and roof edge conditions.',
     countiesAndCitiesServed: [
         'Coppell, Dallas County',
@@ -5570,7 +5570,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/farmers-branch',
     regionName: 'Farmers Branch, Texas',
     heroHeadline: "Commercial Roofing Services in Farmers Branch, Texas.",
-    heroSubtitle: "Commercial roof planning in Farmers Branch should account for farmers Branch commercial roofs experience heat, hail and severe storms. Evaluations should review rooftop equipment, drainage, seams, penetrations and the compatibility of proposed.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Farmers Branch, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Farmers Branch commercial roofs experience heat, hail and severe storms. Evaluations should review rooftop equipment, drainage, seams, penetrations and the compatibility of proposed coating systems.',
     countiesAndCitiesServed: [
         'Farmers Branch, Dallas County',
@@ -5610,7 +5610,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/the-colony',
     regionName: 'The Colony, Texas',
     heroHeadline: "Commercial Roofing Services in The Colony, Texas.",
-    heroSubtitle: "Commercial roof planning in The Colony should account for the Colony roofs face hot summers, hail, high winds and heavy rainfall. Commercial inspections should document drainage, rooftop equipment, membrane condition and metal roof details. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in The Colony, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'The Colony roofs face hot summers, hail, high winds and heavy rainfall. Commercial inspections should document drainage, rooftop equipment, membrane condition and metal roof details.',
     countiesAndCitiesServed: [
         'The Colony, Denton County',
@@ -5650,7 +5650,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/sachse',
     regionName: 'Sachse, Texas',
     heroHeadline: "Commercial Roofing Services in Sachse, Texas.",
-    heroSubtitle: "Commercial roof planning in Sachse should account for sachse commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should include seam condition, drainage, penetrations and existing coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Sachse, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Sachse commercial roofs face heat, hail, strong winds and heavy rainfall. Roof restoration planning should include seam condition, drainage, penetrations and existing coating compatibility.',
     countiesAndCitiesServed: [
         'Sachse, Dallas County',
@@ -5690,7 +5690,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/balch-springs',
     regionName: 'Balch Springs, Texas',
     heroHeadline: "Commercial Roofing Services in Balch Springs, Texas.",
-    heroSubtitle: "Commercial roof planning in Balch Springs should account for balch Springs roofs experience intense heat, hail and severe storms. Industrial roof inspections should review corrosion, fasteners, seams, roof edges and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Balch Springs, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Balch Springs roofs experience intense heat, hail and severe storms. Industrial roof inspections should review corrosion, fasteners, seams, roof edges and drainage.',
     countiesAndCitiesServed: [
         'Balch Springs, Dallas County',
@@ -5730,7 +5730,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/princeton',
     regionName: 'Princeton, Texas',
     heroHeadline: "Commercial Roofing Services in Princeton, Texas.",
-    heroSubtitle: "Commercial roof planning in Princeton should account for princeton commercial roofs face hot summers, hail, high winds and heavy rain. Evaluations should document drainage, roof penetrations, metal fasteners and the condition of existing coatings. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Princeton, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Princeton commercial roofs face hot summers, hail, high winds and heavy rain. Evaluations should document drainage, roof penetrations, metal fasteners and the condition of existing coatings.',
     countiesAndCitiesServed: [
         'Princeton, Collin County',
@@ -5770,7 +5770,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/royse-city',
     regionName: 'Royse City, Texas',
     heroHeadline: "Commercial Roofing Services in Royse City, Texas.",
-    heroSubtitle: "Commercial roof planning in Royse City should account for royse City roofs face heat, hail, strong winds and heavy rainfall. Commercial inspections should focus on roof drainage, seams, fasteners, flashing and restoration suitability. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Royse City, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Royse City roofs face heat, hail, strong winds and heavy rainfall. Commercial inspections should focus on roof drainage, seams, fasteners, flashing and restoration suitability.',
     countiesAndCitiesServed: [
         'Royse City, Rockwall County',
@@ -5810,7 +5810,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/melissa',
     regionName: 'Melissa, Texas',
     heroHeadline: "Commercial Roofing Services in Melissa, Texas.",
-    heroSubtitle: "Commercial roof planning in Melissa should account for melissa commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should review drainage, rooftop equipment, seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Melissa, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Melissa commercial roofs face intense summer heat, hail and severe storms. Roof evaluations should review drainage, rooftop equipment, seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Melissa, Collin County',
@@ -5850,7 +5850,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/anna',
     regionName: 'Anna, Texas',
     heroHeadline: "Commercial Roofing Services in Anna, Texas.",
-    heroSubtitle: "Commercial roof planning in Anna should account for anna roofs face high summer temperatures, hail, high winds and heavy rain. Commercial roof assessments should document roof condition, drainage, penetrations and metal or membrane.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Anna, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Anna roofs face high summer temperatures, hail, high winds and heavy rain. Commercial roof assessments should document roof condition, drainage, penetrations and metal or membrane restoration needs.',
     countiesAndCitiesServed: [
         'Anna, Collin County',
@@ -5890,7 +5890,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/celina',
     regionName: 'Celina, Texas',
     heroHeadline: "Commercial Roofing Services in Celina, Texas.",
-    heroSubtitle: "Commercial roof planning in Celina should account for celina commercial roofs face intense heat, hail and severe thunderstorms. Inspections should consider large rooftop equipment fields, drainage, roof seams and coating compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Celina, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Celina commercial roofs face intense heat, hail and severe thunderstorms. Inspections should consider large rooftop equipment fields, drainage, roof seams and coating compatibility.',
     countiesAndCitiesServed: [
         'Celina, Collin County',
@@ -5930,7 +5930,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/prosper',
     regionName: 'Prosper, Texas',
     heroHeadline: "Commercial Roofing Services in Prosper, Texas.",
-    heroSubtitle: "Commercial roof planning in Prosper should account for prosper roofs experience hot summers, hail, high winds and heavy rainfall. Commercial evaluations should document drainage, penetrations, roof edges and the condition of existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Prosper, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Prosper roofs experience hot summers, hail, high winds and heavy rainfall. Commercial evaluations should document drainage, penetrations, roof edges and the condition of existing roof systems.',
     countiesAndCitiesServed: [
         'Prosper, Collin County',
@@ -5970,7 +5970,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/flower-mound',
     regionName: 'Flower Mound, Texas',
     heroHeadline: "Commercial Roofing Services in Flower Mound, Texas.",
-    heroSubtitle: "Commercial roof planning in Flower Mound should account for flower Mound roofs face high summer temperatures, hail and severe storms. Roof inspections should review drainage, membrane seams, rooftop equipment and restoration compatibility. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Flower Mound, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Flower Mound roofs face high summer temperatures, hail and severe storms. Roof inspections should review drainage, membrane seams, rooftop equipment and restoration compatibility.',
     countiesAndCitiesServed: [
         'Flower Mound, Denton County',
@@ -6010,7 +6010,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/wylie',
     regionName: 'Wylie, Texas',
     heroHeadline: "Commercial Roofing Services in Wylie, Texas.",
-    heroSubtitle: "Commercial roof planning in Wylie should account for wylie commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document roof drainage, metal fasteners, seams, penetrations and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Wylie, Texas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Wylie commercial roofs experience heat, hail, high winds and heavy rainfall. Inspections should document roof drainage, metal fasteners, seams, penetrations and coating condition.',
     countiesAndCitiesServed: [
         'Wylie, Collin County',
@@ -6050,7 +6050,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/centerton',
     regionName: 'Centerton, Arkansas',
     heroHeadline: "Commercial Roofing Services in Centerton, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Centerton should account for centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Centerton, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Centerton roofs face hot summers, hail, high winds and heavy rainfall. Commercial roof evaluations should review drainage, rooftop equipment, seams and metal fastener condition.',
     countiesAndCitiesServed: [
         'Centerton, Benton County',
@@ -6086,7 +6086,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/hot-springs-village',
     regionName: 'Hot Springs Village, Arkansas',
     heroHeadline: "Commercial Roofing Services in Hot Springs Village, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Hot Springs Village should account for hot Springs Village roofs experience humid heat, heavy rainfall, hail and seasonal storms. Managed properties benefit from documented inspections, drainage review and planned restoration.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Hot Springs Village, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Hot Springs Village roofs experience humid heat, heavy rainfall, hail and seasonal storms. Managed properties benefit from documented inspections, drainage review and planned restoration maintenance.',
     countiesAndCitiesServed: [
         'Hot Springs Village, Garland County',
@@ -6122,7 +6122,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/harrison',
     regionName: 'Harrison, Arkansas',
     heroHeadline: "Commercial Roofing Services in Harrison, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Harrison should account for harrison roofs face seasonal temperature changes, heavy rain, hail and strong storms. Commercial inspections should evaluate drainage, metal corrosion, seams and coating condition. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Harrison, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Harrison roofs face seasonal temperature changes, heavy rain, hail and strong storms. Commercial inspections should evaluate drainage, metal corrosion, seams and coating condition.',
     countiesAndCitiesServed: [
         'Harrison, Boone County',
@@ -6158,7 +6158,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/mountain-home',
     regionName: 'Mountain Home, Arkansas',
     heroHeadline: "Commercial Roofing Services in Mountain Home, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Mountain Home should account for mountain Home commercial roofs face seasonal temperature swings, hail, heavy rainfall and strong winds. Roof evaluations should document seams, flashing, drainage and existing roof.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Mountain Home, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Mountain Home commercial roofs face seasonal temperature swings, hail, heavy rainfall and strong winds. Roof evaluations should document seams, flashing, drainage and existing roof system condition.',
     countiesAndCitiesServed: [
         'Mountain Home, Baxter County',
@@ -6194,7 +6194,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/batesville',
     regionName: 'Batesville, Arkansas',
     heroHeadline: "Commercial Roofing Services in Batesville, Arkansas.",
-    heroSubtitle: "Commercial roof planning in Batesville should account for batesville roofs experience humid summers, heavy rainfall, hail and seasonal storms. Restoration planning should include metal corrosion, drainage, seams, fasteners and moisture assessment. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Batesville, Arkansas can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Batesville roofs experience humid summers, heavy rainfall, hail and seasonal storms. Restoration planning should include metal corrosion, drainage, seams, fasteners and moisture assessment.',
     countiesAndCitiesServed: [
         'Batesville, Independence County',
@@ -6230,7 +6230,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/ardmore',
     regionName: 'Ardmore, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Ardmore, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Ardmore should account for ardmore commercial roofs face hot summers, hail, high winds and severe thunderstorms. Roof evaluations should document corrosion, fasteners, seams, penetrations and drainage. CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Ardmore, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Ardmore commercial roofs face hot summers, hail, high winds and severe thunderstorms. Roof evaluations should document corrosion, fasteners, seams, penetrations and drainage.',
     countiesAndCitiesServed: [
         'Ardmore, Carter County',
@@ -6266,7 +6266,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/duncan',
     regionName: 'Duncan, Oklahoma',
     heroHeadline: "Commercial Roofing Services in Duncan, Oklahoma.",
-    heroSubtitle: "Commercial roof planning in Duncan should account for duncan roofs experience high winds, hail, hot summers and severe storms. Industrial roof inspections should focus on metal corrosion, attachment details, seams, drainage and coating.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Commercial property owners, facility teams and managers in Duncan, Oklahoma can request a documented roof assessment to identify leaks, review roof-system condition and prioritize repairs. CRD evaluates restoration, coating and replacement options only after considering the existing assembly, moisture conditions, drainage and project requirements. Project availability is confirmed by location and scope.",
     weatherAndStormFactors: 'Duncan roofs experience high winds, hail, hot summers and severe storms. Industrial roof inspections should focus on metal corrosion, attachment details, seams, drainage and coating compatibility.',
     countiesAndCitiesServed: [
         'Duncan, Stephens County',
