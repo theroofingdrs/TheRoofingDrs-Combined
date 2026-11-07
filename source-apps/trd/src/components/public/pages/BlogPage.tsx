@@ -91,6 +91,32 @@ const posts: Post[] = [
       { heading: 'Watch for changes over time', paragraphs: ['Look for recurring leaks, lifted or missing shingles, exposed fasteners, damaged flashing, granule accumulation, and staining in attic spaces. These observations do not all mean replacement is necessary, but they warrant attention.', 'After significant hail or wind, a focused inspection can help establish whether the roof was affected.'] },
       { heading: 'Use inspections to plan ahead', paragraphs: ['Periodic professional evaluations help homeowners understand current condition and budget for repairs or eventual replacement. The right interval depends on roof age, condition, and recent weather events.', 'The Roof Doctors can document the roof’s condition and discuss repair and replacement options without assuming that every roof needs to be replaced.'] }
     ]
+  }  ,
+  {
+    slug: 'what-a-professional-roof-inspection-should-cover',
+    title: 'What Should a Professional Roof Inspection Cover?',
+    excerpt: 'A useful roof inspection looks beyond the shingles. Learn which roof details, attic conditions, and records should be documented.',
+    category: 'Roof Inspections & Maintenance', date: 'November 7, 2026', readTime: '5 min read',
+    image: '/assets/images/new_roof_install.jpg', alt: 'Residential roof surface being evaluated during roofing work',
+    sections: [
+      { heading: 'Start with the full roof system', paragraphs: ['An inspection should consider the roof covering and the components that make the assembly work together. Depending on the property, that can include shingles, valleys, flashing, penetrations, ridge details, eaves, gutters, and visible drainage conditions.', 'The inspector should note the location and extent of observed concerns rather than describing the roof only as good or bad.'] },
+      { heading: 'Look for signs of water entry below the roof', paragraphs: ['Where access is safe and available, attic or interior observations can help identify staining, damp insulation, ventilation concerns, and other clues. Interior staining does not always identify the exact roof entry point, so findings should be compared with exterior details.', 'A roof inspection should never require a homeowner to climb onto a steep, wet, or damaged roof.'] },
+      { heading: 'Ask for photographs and clear findings', paragraphs: ['Useful documentation identifies the area photographed, explains the observed condition, and distinguishes immediate repair needs from items to monitor. Ask what was inspected, what could not be accessed, and whether any limitations affected the evaluation.', 'If storm damage is suspected, documentation should distinguish visible marks from damage that affects the roof’s performance.'] },
+      { heading: 'Use the report to plan the next step', paragraphs: ['A sound report should explain whether targeted repair, additional evaluation, maintenance, or replacement planning is appropriate. It should not assume that every roof of a certain age needs replacement.', 'The Roof Doctors provides residential roof inspections and practical recommendations across Northeast Texas.'] }
+    ]
+  },
+  {
+    slug: 'how-to-document-a-roof-leak-before-repairs',
+    title: 'How to Document a Roof Leak Before Repairs',
+    excerpt: 'A simple guide to recording interior water damage, timing, and visible conditions while keeping people and property safe.',
+    category: 'Roof Repair & Leak Response', date: 'November 7, 2026', readTime: '4 min read',
+    image: '/assets/images/old_damaged_shingles.jpg', alt: 'Residential roof with visible weathering',
+    sections: [
+      { heading: 'Make the area safe first', paragraphs: ['Keep people away from sagging ceilings, wet electrical fixtures, and areas where water is near outlets or equipment. Do not enter an unsafe attic or climb onto a storm-damaged roof. If there is an immediate electrical or structural hazard, contact the appropriate emergency service.'] },
+      { heading: 'Record what is happening indoors', paragraphs: ['Take photos of ceiling stains, wall damage, wet flooring, and affected belongings. Note when the leak was first noticed, whether it changes during rainfall, and which rooms are affected. Keep the original images and record the date.'] },
+      { heading: 'Preserve useful exterior observations', paragraphs: ['From the ground, photograph visible missing shingles, damaged gutters, fallen limbs, or other changes. Do not remove roofing materials or attempt a temporary repair that would put you at risk. Emergency mitigation may be necessary to limit additional damage, but document conditions first when it is safe to do so.'] },
+      { heading: 'Request a documented evaluation', paragraphs: ['A roof professional can investigate likely entry points and explain whether the issue appears localized or connected to a larger roof condition. Ask for photographs, the repair scope, and any limitations on the inspection.', 'Insurance coverage and claim decisions depend on the policy and insurer. A contractor’s report documents construction conditions; it does not determine coverage.'] }
+    ]
   }
 ];
 
