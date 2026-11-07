@@ -97,7 +97,7 @@ export const ContactPage: React.FC = () => {
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-[#0e1422] border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
               <h2 className="text-2xl font-heading font-black uppercase text-white border-b border-slate-800 pb-3">
-                Headquarters & Dispatch
+                Commercial Dispatch
               </h2>
 
               <div className="space-y-4 text-xs sm:text-sm">
@@ -135,7 +135,7 @@ export const ContactPage: React.FC = () => {
                       {BUSINESS_INFO.statesCovered.join(", ")}
                     </span>
                     <span className="text-slate-400 text-xs">
-                      Project availability confirmed by location and scope
+                      Service area extends up to 250 miles from Texarkana. Project availability is confirmed by location and scope.
                     </span>
                   </div>
                 </div>
@@ -161,7 +161,7 @@ export const ContactPage: React.FC = () => {
                 <span className="font-bold text-amber-400 uppercase font-mono-crd block">
                   On-Site Commercial Service Model:
                 </span>
-                Our Robison Rd facility houses our field equipment, drone flight ops, and staging. All diagnostics, inspections, and repairs are executed on-site at your facility.
+                Our field teams travel directly to commercial properties throughout our service area. Diagnostics, inspections, and repairs are performed on-site at your facility.
               </div>
             </div>
           </div>
