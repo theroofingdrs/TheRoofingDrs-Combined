@@ -232,10 +232,13 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
 
       {/* 3. Hero Section: Diagnostic Precision */}
       <section className="relative bg-slate-900 text-white pt-14 pb-20 px-4 sm:px-6 overflow-hidden border-b border-slate-800">
-        <div
+        <img
+          src={getTrdPublicAssetPath('/assets/images/residential-hero.jpg')}
+          alt=""
           aria-hidden="true"
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${getTrdPublicAssetPath('/assets/images/residential-hero.jpg')})` }}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div aria-hidden="true" className="absolute inset-0 bg-slate-950/65" />
 
