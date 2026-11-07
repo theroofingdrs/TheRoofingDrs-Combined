@@ -6,9 +6,9 @@ export const BUSINESS_INFO = {
   email: 'TheRoofingDrs@gmail.com',
   model: 'Service-Area Business',
   disclaimerServiceArea:
-    'Commercial Roof Doctors is a field-operated commercial roofing and disaster-response contractor. Our physical facility supports regional operations and equipment deployment; we serve commercial clients directly at their facility locations.',
-  primaryTerritory: 'Regional commercial service area centered on Texarkana across Texas, Arkansas, Louisiana and Oklahoma',
-  primaryRadius: 'Project availability is confirmed by location, roof type, scope and scheduling',
+    'Commercial Roof Doctors is a field-operated commercial roofing and disaster-response contractor. Our teams travel to client properties throughout our 250-mile regional service area, subject to project scope and scheduling.',
+  primaryTerritory: 'Commercial roofing service area extending up to 250 miles from Texarkana across Texas, Arkansas, Louisiana and Oklahoma',
+  primaryRadius: '250-mile service radius from Texarkana; project availability is confirmed by location, roof type, scope and scheduling',
   statesCovered: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'],
   taglines: {
     primary: 'PRECISION. PROTECTION. PERFORMANCE.',
