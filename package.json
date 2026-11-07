@@ -11,7 +11,7 @@
     "test:intake": "node --experimental-strip-types shared/intake-server.test.mjs && node --experimental-strip-types shared/intake-client.test.mjs",
     "test:booking": "node --experimental-strip-types booking/readiness.test.mjs && node --experimental-strip-types booking/engine.test.mjs && node --experimental-strip-types booking/staff-handler.test.mjs && source-apps/trd/node_modules/.bin/tsc -p booking/tsconfig.json",
     "test:mobile": "node scripts/mobile-workflows.mjs",
-    "test:seo": "node --experimental-strip-types shared/seo/blog.test.mjs && node scripts/test-initial-seo.mjs",
+    "test:seo": "node --experimental-strip-types shared/seo/blog.test.mjs && node scripts/test-initial-seo.mjs && node scripts/test-technical-seo.mjs",
     "test:deployment": "node scripts/test-deployment-config.mjs"
   }
 }
