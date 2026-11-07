@@ -84,7 +84,7 @@ export const EstimateRequestView: React.FC<EstimateRequestViewProps> = ({ onNavi
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-red-700">The Roof Doctors Residential</p>
           <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Request a Roof Estimate</h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">Tell us about the property and roof. Your name, property address, phone, and email are required before we can review your request. Insurance details are optional.</p>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">Tell us about the property and roof. Your name and property address are required. Provide either a phone number or an email address so our team can follow up. Roof and insurance details are optional.</p>
           <form onSubmit={submit} className="mt-8 space-y-8">
             <section>
               <h2 className="mb-4 border-b border-slate-200 pb-2 text-lg font-bold">Your Contact and Property</h2>
