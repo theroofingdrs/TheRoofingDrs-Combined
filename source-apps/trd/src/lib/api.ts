@@ -1,3 +1,4 @@
+import { submitInquiry } from '../../../../shared/intake-client.ts';
 /**
  * The Roof Doctors — Client API SDK
  * Connects the React frontends (Public, CRM, Field, Portal) to the server API.
@@ -43,22 +44,12 @@ import type {
 const BASE_URL = '/residential/api/v1';
 
 async function request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  // Pass current role/user context in development
-  const savedUser = localStorage.getItem('roof_docs_active_user');
+  const token = localStorage.getItem('roof_docs_access_token');
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     ...(options.headers as Record<string, string>),
   };
-
-  if (savedUser) {
-    try {
-      const u = JSON.parse(savedUser);
-      headers['x-user-id'] = u.id;
-      headers['x-user-role'] = u.role;
-    } catch {
-      // ignore
-    }
-  }
+  if (token) headers.Authorization = `Bearer ${token}`;
 
   const res = await fetch(`${BASE_URL}${endpoint}`, {
     ...options,
@@ -92,10 +83,7 @@ export const api = {
   getLeads: () => request<Lead[]>('/leads'),
   getLead: (id: string) => request<Lead>(`/leads/${id}`),
   createLead: (lead: Partial<Lead>) =>
-    request<Lead>('/leads', {
-      method: 'POST',
-      body: JSON.stringify(lead),
-    }),
+    submitInquiry<Lead>(BASE_URL + '/leads', lead),
   updateLead: (id: string, updates: Partial<Lead>) =>
     request<Lead>(`/leads/${id}`, {
       method: 'PATCH',

@@ -1,10 +1,13 @@
+import { deliverInquiry, IntakeError } from '../../../../../shared/intake-server.ts';
 /**
  * The Roof Doctors — Versioned REST API Router (/api/v1/*)
  * Houses all server-side endpoints, business validations, scoring, and audit hooks.
  */
 
 import express, { Request, Response } from 'express';
+import { requireOwnerAuth } from '../../middleware/requireOwnerAuth.ts';
 import { getDatabase, persistDatabase, generateId } from '../../db/database.ts';
+import { saveSharedLead, getSharedLeads, getSharedLead } from '../../db/supabaseLeads.ts';
 import { calculateLeadScore } from '../../services/scoring.ts';
 import { logAuditAction, getAuditLogs } from '../../services/audit.ts';
 import { emitSystemEvent } from '../../services/events.ts';
@@ -57,12 +60,13 @@ import type {
 } from '../../../shared/types/index.ts';
 
 export const apiV1Router = express.Router();
-apiV1Router.use(express.json());
+apiV1Router.use(express.json({limit:'25mb'}));
 
 // Helper to extract caller context for audit logging
 function getCallerContext(req: Request) {
-  const userId = (req.headers['x-user-id'] as string) || 'anonymous';
-  const userRole = (req.headers['x-user-role'] as string) || 'PUBLIC';
+  const verified = (req as Request & { verifiedStaff?: { id: string; email: string } }).verifiedStaff;
+  const userId = verified?.id || 'anonymous';
+  const userRole = verified ? 'OWNER' : 'PUBLIC';
   const ipAddress = req.ip || req.socket.remoteAddress || 'unknown';
   const userAgent = req.headers['user-agent'] || 'unknown';
   return { userId, userRole, ipAddress, userAgent };
@@ -157,6 +161,13 @@ apiV1Router.get('/business-rules', (req, res) => {
   res.json(db.businessRules);
 });
 
+// All remaining CRM and administration endpoints require a verified owner session.
+// Public inquiry submission remains available without staff authentication.
+apiV1Router.use((req, res, next) => {
+  if (req.method === 'POST' && req.path === '/leads') return next();
+  return requireOwnerAuth(req, res, next);
+});
+
 apiV1Router.get('/users', (req, res) => {
   const db = getDatabase();
   const safeUsers = (db.users || []).map((u: any) => {
@@ -169,108 +180,40 @@ apiV1Router.get('/users', (req, res) => {
 // -------------------------------------------------------------
 // 3. LEADS (Inbound Diagnostic Inquiries & Management)
 // -------------------------------------------------------------
-apiV1Router.get('/leads', (req, res) => {
-  const db = getDatabase();
-  res.json(db.leads);
+apiV1Router.get('/leads', async (req, res) => {
+  try { res.json(await getSharedLeads()); }
+  catch (error) { console.error('Shared lead list failed:', error); res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
 });
 
 apiV1Router.post('/leads', async (req, res) => {
-  const db = getDatabase();
   const body = req.body;
-
-  if (!body.name || !body.phone) {
-    return res.status(400).json({ error: 'Name and phone number are required to submit an inquiry.' });
+  const fields = ['name','phone','email','address','city','state','zip','serviceRequested','leadType','preferredContactMethod','message','source','landingPage','referrer','utmSource','utmMedium','utmCampaign'];
+  if (!body || typeof body !== 'object' || Array.isArray(body) || fields.some(field => body[field] !== undefined && (typeof body[field] !== 'string' || body[field].length > 10000)) || !body.name?.trim() || (!body.phone?.trim() && !body.email?.trim())) {
+    return res.status(400).json({ error: 'Enter your name and a phone number or email address.' });
   }
-
-  const scoringRule = db.businessRules.find((r) => r.ruleKey === 'lead_scoring_weights');
-  const { score, scoreReasons } = calculateLeadScore(body, scoringRule);
-
-  const now = new Date().toISOString();
-  const leadId = generateId('lead');
-
-  const newLead: Lead = {
-    id: leadId,
-    name: body.name.trim(),
-    phone: body.phone.trim(),
-    email: body.email?.trim() || '',
-    address: body.address?.trim() || '',
-    city: body.city?.trim() || '',
-    state: body.state?.trim() || 'TX',
-    zip: body.zip?.trim() || '',
-    leadType: body.leadType || 'NOT_SURE',
-    serviceRequested: body.serviceRequested || 'Diagnostic Inspection',
-    emergencyFlag: Boolean(body.emergencyFlag),
-    stormRelatedFlag: Boolean(body.stormRelatedFlag),
-    insuranceRelatedFlag: Boolean(body.insuranceRelatedFlag),
-    preferredContactMethod: body.preferredContactMethod || 'PHONE',
-    message: body.message || '',
-    estimateDetails: body.estimateDetails || undefined,
-    photoUrls: body.photoUrls || [],
-    landingPage: body.landingPage || '/',
-    source: body.source || 'Direct',
-    utmSource: body.utmSource,
-    utmCampaign: body.utmCampaign,
-    utmMedium: body.utmMedium,
-    referrer: body.referrer,
-    firstTouchAttribution: body.source || 'Direct',
-    lastTouchAttribution: body.source || 'Direct',
-    division: body.division || (body.serviceRequested?.toLowerCase().includes('commercial') || body.leadType === 'COMMERCIAL' ? 'COMMERCIAL' : 'RESIDENTIAL'),
-    status: 'NEW',
-    score,
-    scoreReasons,
-    createdAt: now,
-    updatedAt: now,
-  };
-
-  db.leads.unshift(newLead);
-
-  // Record initial activity
-  db.leadActivities.unshift({
-    id: generateId('lact'),
-    leadId: newLead.id,
-    activityType: 'CREATED',
-    description: `Lead created from ${newLead.source} with score ${newLead.score}.`,
-    createdAt: now,
-  });
-
-  persistDatabase();
-
-  const ctx = getCallerContext(req);
-  logAuditAction({
-    userId: ctx.userId,
-    userRole: ctx.userRole,
-    action: 'CREATE',
-    entityType: 'Lead',
-    entityId: newLead.id,
-    newState: { id: newLead.id, name: newLead.name, score: newLead.score },
-    ipAddress: ctx.ipAddress,
-    userAgent: ctx.userAgent,
-  });
-
-  await emitSystemEvent({
-    type: 'LEAD_CREATED',
-    entityType: 'Lead',
-    entityId: newLead.id,
-    data: newLead,
-    userId: ctx.userId,
-  });
-
-  res.status(201).json(newLead);
+  try {
+    const receipt = await deliverInquiry('TRD', req.get('Idempotency-Key'), body);
+    return res.status(receipt.replayed ? 200 : 201).json({ ...body, id: receipt.source_id, crmLeadId: receipt.lead_id, createdAt: receipt.received_at, deliveryStatus: 'delivered' });
+  } catch (error) {
+    return res.status(error instanceof IntakeError ? error.status : 503).json({ error: error instanceof Error ? error.message : 'Inquiry delivery is unavailable.' });
+  }
 });
 
-apiV1Router.get('/leads/:id', (req, res) => {
-  const db = getDatabase();
-  const lead = db.leads.find((l) => l.id === req.params.id);
-  if (!lead) return res.status(404).json({ error: 'Lead not found' });
-  res.json(lead);
+apiV1Router.get('/leads/:id', async (req, res) => {
+  try {
+    const lead = await getSharedLead(req.params.id);
+    if (!lead) return res.status(404).json({ error: 'Lead not found' });
+    res.json(lead);
+  } catch (error) { console.error('Shared lead lookup failed:', error); res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
 });
 
-apiV1Router.patch('/leads/:id', (req, res) => {
+apiV1Router.patch('/leads/:id', async (req, res) => {
   const db = getDatabase();
+  let existing: Lead | null;
+  try { existing = await getSharedLead(req.params.id); }
+  catch (error) { console.error('Shared lead lookup failed:', error); return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' }); }
+  if (!existing) return res.status(404).json({ error: 'Lead not found' });
   const index = db.leads.findIndex((l) => l.id === req.params.id);
-  if (index === -1) return res.status(404).json({ error: 'Lead not found' });
-
-  const existing = db.leads[index];
   const previousState = { ...existing };
   const updated: Lead = {
     ...existing,
@@ -278,7 +221,10 @@ apiV1Router.patch('/leads/:id', (req, res) => {
     updatedAt: new Date().toISOString(),
   };
 
-  db.leads[index] = updated;
+  try { await saveSharedLead(updated); }
+  catch (error) { console.error('Shared lead update failed:', error); return res.status(503).json({ error: 'Lead update could not be saved.' }); }
+  if (index >= 0) db.leads[index] = updated;
+  else db.leads.unshift(updated);
 
   const ctx = getCallerContext(req);
 

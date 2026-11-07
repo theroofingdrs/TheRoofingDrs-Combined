@@ -114,6 +114,24 @@ function proxy(req, res, app, targetPath) {
   send();
 }
 
+function serveRootFile(req, res, filename, contentType) {
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    res.writeHead(405, { allow: 'GET, HEAD' });
+    return res.end();
+  }
+  const filePath = path.join(ROOT, filename);
+  if (!fs.existsSync(filePath)) {
+    res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' });
+    return res.end('Not found.');
+  }
+  res.writeHead(200, {
+    'content-type': contentType,
+    'cache-control': 'public, max-age=3600',
+  });
+  if (req.method === 'HEAD') return res.end();
+  fs.createReadStream(filePath).pipe(res);
+}
+
 function serveLanding(req, res) {
   if (req.method !== 'GET' && req.method !== 'HEAD') {
     res.writeHead(405, { allow: 'GET, HEAD' });
@@ -126,117 +144,40 @@ function serveLanding(req, res) {
 
 const server = http.createServer((req, res) => {
   const url = new URL(req.url || '/', 'http://localhost');
-  const pathname = decodeURIComponent(url.pathname);
-
-  if (pathname === '/sitemap.xml') {
-    const residentialRoutes = [
-      '/',
-      '/estimate-request',
-      '/faq',
-      '/blog',
-      '/storm-damage',
-      '/roofing/roof-repair',
-      '/roofing/emergency-roof-repair',
-      '/roof-problems',
-      '/roofing/roof-replacement',
-      '/roofing-cost',
-      '/roofing/roof-inspection',
-      '/roofing-systems',
-      '/insurance-claims',
-      '/about',
-      '/gallery',
-      '/projects',
-      '/reviews',
-      '/service-areas',
-      '/roofing',
-      '/services',
-      '/roofing/roof-maintenance',
-      '/contact',
-      '/tools/roof-problem-finder',
-      '/tools/roof-cost-estimator',
-    ];
-    const commercialRoutes = [
-      '/',
-      '/commercial-roofing',
-      '/commercial-roof-repair',
-      '/commercial-roof-replacement',
-      '/commercial-roof-inspection',
-      '/commercial-roof-maintenance',
-      '/new-commercial-construction',
-      '/commercial-roof-coatings',
-      '/commercial-roof-restoration',
-      '/silicone-roof-coatings',
-      '/acrylic-roof-coatings',
-      '/polyurethane-roof-coatings',
-      '/coat-vs-replace',
-      '/storm-damage',
-      '/hail-damage',
-      '/wind-damage',
-      '/emergency-roofing',
-      '/insurance-claims',
-      '/commercial-storm-inspections',
-      '/adjuster-meetings',
-      '/large-loss-roofing',
-      '/tpo-roofing',
-      '/epdm-roofing',
-      '/pvc-roofing',
-      '/modified-bitumen',
-      '/built-up-roofing',
-      '/metal-roofing',
-      '/crd-ppp',
-      '/property-management',
-      '/roof-asset-management',
-      '/multi-property-roofing',
-      '/multifamily-roofing',
-      '/hoa-roofing',
-      '/industries/churches',
-      '/industries/schools',
-      '/industries/healthcare',
-      '/industries/industrial',
-      '/industries/retail',
-      '/industries/apartments',
-      '/commercial-roof-cost-calculator',
-      '/about',
-      '/about/credentials',
-      '/service-areas',
-      '/service-areas/texas',
-      '/service-areas/arkansas',
-      '/service-areas/louisiana',
-      '/service-areas/oklahoma',
-      '/contact',
-    ];
-    const locations = [
-      'https://theroofingdrs.com/',
-      ...residentialRoutes.map((route) => 'https://theroofingdrs.com/residential' + (route === '/' ? '/' : route)),
-      ...commercialRoutes.map((route) => 'https://theroofingdrs.com/commercial' + (route === '/' ? '/' : route)),
-    ];
-    const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
-      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-      locations.map((location) => '  <url><loc>' + location + '</loc></url>').join('\n') +
-      '\n</urlset>\n';
-    res.writeHead(200, {
-      'content-type': 'application/xml; charset=utf-8',
+  let pathname;
+  try { pathname = decodeURIComponent(url.pathname); }
+  catch { res.writeHead(400); return res.end('Invalid URL.'); }
+  const requestHost = (req.headers.host || '').split(':')[0].toLowerCase();
+  // A future commercial hostname mapping must not serve the shared root landing.
+  // Keep one canonical CRD origin, without proxying or replaying write requests.
+  if (requestHost === 'commercial.theroofingdrs.com') {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      res.writeHead(405, { allow: 'GET, HEAD' });
+      return res.end();
+    }
+    const commercialPath = url.pathname === '/commercial'
+      ? '/commercial/'
+      : url.pathname.startsWith('/commercial/') ? url.pathname : `/commercial${url.pathname}`;
+    res.writeHead(308, {
+      location: `https://theroofingdrs.com${commercialPath}${url.search}`,
+      'cache-control': 'public, max-age=300',
+    });
+    return res.end();
+  }
+  if (requestHost === 'www.theroofingdrs.com') {
+    res.writeHead(301, {
+      location: `https://theroofingdrs.com${req.url || '/'}`,
       'cache-control': 'public, max-age=3600',
     });
-    return res.end(req.method === 'HEAD' ? undefined : xml);
+    return res.end();
   }
 
-  if (pathname === '/robots.txt') {
-    const robots = [
-      'User-agent: *',
-      'Allow: /',
-      'Disallow: /commercial/api/',
-      'Disallow: /residential/api/',
-      'Disallow: /api/',
-      'Sitemap: https://theroofingdrs.com/sitemap.xml',
-      '',
-    ].join('\n');
-    res.writeHead(200, {
-      'content-type': 'text/plain; charset=utf-8',
-      'cache-control': 'public, max-age=3600',
-    });
-    return res.end(req.method === 'HEAD' ? undefined : robots);
-  }
+  // The shared landing-page logo lives at the repository root, not in either app's dist folder.
+  if (pathname === '/roofing-doctors-combined-logo.png') return serveRootFile(req, res, 'roofing-doctors-combined-logo.png', 'image/png');
+
+  if (pathname === '/robots.txt') return serveRootFile(req, res, 'robots.txt', 'text/plain; charset=utf-8');
+  if (pathname === '/sitemap.xml') return serveRootFile(req, res, 'sitemap.xml', 'application/xml; charset=utf-8');
+
 
   if (pathname === '/') return serveLanding(req, res);
 

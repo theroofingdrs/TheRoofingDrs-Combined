@@ -23,14 +23,14 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-[#cccccc] max-w-md leading-relaxed">
-              Commercial roofing, membrane restoration, storm disaster response, and long-term roof asset management for property owners, facility directors, and commercial portfolios across the Ark-La-Tex and surrounding 75-mile radius.
+              Commercial roofing, membrane restoration, storm disaster response, and long-term roof asset management for property owners, facility directors, and commercial portfolios across Texas, Arkansas, Louisiana, and Oklahoma.
             </p>
 
             <div className="space-y-2 pt-2 text-sm text-[#dddddd]">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#d99a19] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-[#888888] block font-mono-crd">ARK-LA-TEX DIRECT DISPATCH</span>
+                  <span className="text-xs text-[#888888] block font-mono-crd">FOUR-STATE DIRECT DISPATCH</span>
                   <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="font-bold hover:text-[#d99a19] transition-colors">
                     {BUSINESS_INFO.phone}
                   </a>
@@ -48,8 +48,8 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#d99a19] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-[#888888] block font-mono-crd">OPERATIONS & DISPATCH BASE</span>
-                  <span>{BUSINESS_INFO.address?.display || [BUSINESS_INFO.address?.street, BUSINESS_INFO.address?.city, BUSINESS_INFO.address?.state, BUSINESS_INFO.address?.zip].filter(Boolean).join(', ') || 'Texarkana, TX'}</span>
+                  <span className="text-xs text-[#888888] block font-mono-crd">COMMERCIAL SERVICE AREA</span>
+                  <span>{BUSINESS_INFO.statesCovered.join(", ")}</span>
                 </div>
               </div>
             </div>
@@ -82,8 +82,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/commercial-roof-inspection" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Forensic Roof Inspection
+                <Link to="/commercial-roof-inspections" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Roof Inspections
                 </Link>
               </li>
               <li>
@@ -98,7 +98,12 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/commercial-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Membrane Restoration
+                  Commercial Roof Restoration
+                </Link>
+              </li>
+              <li>
+                <Link to="/metal-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Metal Roof Restoration
                 </Link>
               </li>
               <li>
@@ -109,6 +114,31 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/coat-vs-replace" className="hover:text-[#d99a19] text-[#d99a19] font-medium transition-colors">
                   Coat vs. Replace Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Roof Coating Resources
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/environmental-benefits-of-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Environmental Benefits of Restoration
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/reflective-roof-coating-energy-savings" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Reflective Roof Energy Savings
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/roof-coatings-and-hvac-performance" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Roof Coatings & HVAC Performance
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/commercial-roof-energy-tax-incentives" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Tax Incentives & Energy Ratings
                 </Link>
               </li>
             </ul>
@@ -147,13 +177,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/adjuster-meetings" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Adjuster Meeting Coordination
+                <Link to="/insurance-claims" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Storm Claim Documentation
                 </Link>
               </li>
               <li>
-                <Link to="/large-loss-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Large-Loss Commercial Roofing
+                <Link to="/commercial-roof-restoration" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Roof Restoration
                 </Link>
               </li>
             </ul>
@@ -176,12 +206,12 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/roof-asset-management" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Roof Asset Management
+                <Link to="/property-management" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Property Portfolio Management
                 </Link>
               </li>
               <li>
-                <Link to="/multifamily-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                <Link to="/industries/apartments" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
                   Multifamily & Apartments
                 </Link>
               </li>
@@ -191,8 +221,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/metal-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
-                  Commercial Metal Systems
+                <Link to="/commercial-metal-roofing" className="hover:text-[#d99a19] text-[#aaaaaa] transition-colors">
+                  Commercial Metal Roofing
                 </Link>
               </li>
               <li>
@@ -228,7 +258,7 @@ export const Footer: React.FC = () => {
               <Link to="/about" className="hover:text-[#cccccc] transition-colors">
                 Company
               </Link>
-              <Link to="/about/credentials" className="hover:text-[#cccccc] transition-colors">
+              <Link to="/about" className="hover:text-[#cccccc] transition-colors">
                 Credentials
               </Link>
               <Link to="/contact" className="hover:text-[#cccccc] transition-colors">

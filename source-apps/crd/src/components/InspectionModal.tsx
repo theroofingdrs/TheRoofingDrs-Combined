@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { submitInquiry } from '../../../../shared/intake-client.ts';
+import React, { useEffect, useRef, useState } from 'react';
 import { X, FileText, CheckCircle2, Upload, AlertCircle } from 'lucide-react';
 import { BUSINESS_INFO } from '../constants';
 import { PhotoAttachment, PropertyType, RoofSystemType, LeadType } from '../types';
@@ -22,7 +23,7 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
     phone: '',
     email: '',
     address: '',
-    city: 'Texarkana Region',
+    city: '',
     state: 'TX',
     zip: '',
     propertyType: 'Commercial' as PropertyType,
@@ -40,6 +41,42 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
     needCrdPresent: true,
   });
 
+  const addressInputRef = useRef<HTMLInputElement>(null);
+  const [placesReady, setPlacesReady] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    if (!apiKey || !addressInputRef.current) return;
+    const w = window as any;
+    const attachAutocomplete = () => {
+      if (!addressInputRef.current || !w.google?.maps?.places) return;
+      const autocomplete = new w.google.maps.places.Autocomplete(addressInputRef.current, { types: ['address'], fields: ['address_components', 'formatted_address'] });
+      autocomplete.addListener('place_changed', () => {
+        const place = autocomplete.getPlace();
+        const components = place.address_components || [];
+        const get = (type: string, useShort = false) => {
+          const item = components.find((part: any) => part.types.includes(type));
+          return item ? (useShort ? item.short_name : item.long_name) : '';
+        };
+        const street = [get('street_number'), get('route')].filter(Boolean).join(' ');
+        setFormData((current) => ({ ...current, address: street || place.formatted_address || current.address, city: get('locality') || get('postal_town') || get('sublocality') || current.city, state: get('administrative_area_level_1', true) || current.state, zip: get('postal_code') || current.zip }));
+        setPlacesReady(true);
+      });
+      setPlacesReady(true);
+    };
+    if (w.google?.maps?.places) { attachAutocomplete(); return; }
+    const existing = document.querySelector<HTMLScriptElement>('script[data-crd-google-places="true"]');
+    if (existing) { existing.addEventListener('load', attachAutocomplete, { once: true }); return; }
+    const script = document.createElement('script');
+    script.dataset.crdGooglePlaces = 'true';
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(apiKey) + '&libraries=places&callback=crdGooglePlacesReady';
+    script.async = true; script.defer = true;
+    w.crdGooglePlacesReady = attachAutocomplete;
+    document.head.appendChild(script);
+    return () => { delete w.crdGooglePlacesReady; };
+  }, [isOpen]);
+
   const [photos, setPhotos] = useState<PhotoAttachment[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -51,7 +88,9 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
     if (!e.target.files) return;
     const files = Array.from(e.target.files) as File[];
 
+    if(photos.length+files.length>10||photos.reduce((sum,p)=>sum+p.size,0)+files.reduce((sum,file)=>sum+file.size,0)>18*1024*1024){setErrorMessage('Use up to 10 photographs totaling 18 MB. Your form details are preserved.');return;}
     files.forEach((file: File) => {
+      if(!['image/jpeg','image/png','image/webp'].includes(file.type)){setErrorMessage('Use JPEG, PNG or WebP photographs.');return;}
       if (file.size > 15 * 1024 * 1024) {
         alert(`File ${file.name} exceeds 15MB size limit.`);
         return;
@@ -102,21 +141,12 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
         referrer: document.referrer || '',
       };
 
-      const res = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await res.json();
-      if (!res.ok || !data.success) {
-        throw new Error(data.error || 'Failed to submit commercial roof inspection request.');
-      }
+      await submitInquiry('/commercial/api/leads', payload);
 
       setIsSuccess(true);
     } catch (err: any) {
       setErrorMessage(
-        `We couldn't submit your request. Please try again or call CRD at ${BUSINESS_INFO.phone}.`
+        err.message || `We couldn't submit your request. Please retry or call CRD at ${BUSINESS_INFO.phone}.`
       );
     } finally {
       setIsSubmitting(false);
@@ -294,20 +324,25 @@ export const InspectionModal: React.FC<InspectionModalProps> = ({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
-                    Property Address & City *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Address, City, State"
-                    value={formData.address}
-                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                    className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500"
-                  />
+                <div className="sm:col-span-2">
+                  <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">Street Address *</label>
+                  <input ref={addressInputRef} type="text" required autoComplete="street-address" placeholder="Start typing the property street address" value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500" />
+                  <p className="mt-1 text-[11px] text-slate-500">{placesReady ? "Google address suggestions enabled" : "Enter the street address and complete city, state and ZIP below."}</p>
                 </div>
-
+                <div>
+                  <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">City *</label>
+                  <input type="text" required autoComplete="address-level2" value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} placeholder="City" className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500" />
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">State *</label>
+                    <input type="text" required autoComplete="address-level1" maxLength={2} value={formData.state} onChange={(e) => setFormData({ ...formData, state: e.target.value.toUpperCase() })} placeholder="TX" className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">ZIP *</label>
+                    <input type="text" required autoComplete="postal-code" inputMode="numeric" maxLength={10} value={formData.zip} onChange={(e) => setFormData({ ...formData, zip: e.target.value })} placeholder="ZIP code" className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500" />
+                  </div>
+                </div>
                 <div>
                   <label className="block text-xs font-mono-crd uppercase tracking-wider text-slate-300 mb-1">
                     Property Type

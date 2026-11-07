@@ -93,15 +93,15 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block text-sm">Potentially Lower Initial Project Cost</strong>
-                  <span className="text-slate-400">A qualifying restoration may avoid some tear-off, disposal and replacement material costs. Actual savings depend on roof condition, repairs, preparation, system selection and project scope.</span>
+                  <span className="text-slate-400">When the existing assembly is suitable, restoration may avoid much of the tear-off, disposal and replacement material cost. Actual savings depend on roof condition, repairs, access, coating system and local pricing. Compare project-specific proposals rather than relying on a universal percentage.</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block text-sm">Zero Interior Operational Disruption</strong>
-                  <span className="text-slate-400">No open roofs during rain, no falling dust or debris inside operating medical or manufacturing facilities.</span>
+                  <strong className="text-white block text-sm">Potentially Less Disruption to Building Operations</strong>
+                  <span className="text-slate-400">Restoration can reduce tear-off, hauling and staging, but repairs, surface preparation, equipment and weather can still affect operations. The contractor should provide a site-specific safety and access plan.</span>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block text-sm">Tax Treatment Requires Project-Specific Review</strong>
-                  <span className="text-slate-400">Tax treatment depends on the facts, applicable tax rules and how the work is classified. CRD does not provide tax advice. Consult your tax professional before relying on a deduction or incentive.</span>
+                  <span className="text-slate-400">Tax treatment depends on the work performed and the owner's circumstances. Do not assume a coating project is automatically deductible as a repair or qualifies for immediate expensing. Section 179D has a separate technical eligibility test and a construction-start deadline. Consult your CPA or tax attorney.</span>
                 </div>
               </div>
 
@@ -117,12 +117,12 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block text-sm">Seamless Monolithic Barrier</strong>
-                  <span className="text-slate-400">A fluid-applied system can create a continuous surface, but existing seams, penetrations, flashings and transitions still require inspection and reinforcement where specified.</span>
+                  <span className="text-slate-400">A properly specified fluid-applied system can create a continuous weathering surface, but seams, penetrations, transitions and existing defects must be repaired and reinforced as required by the approved system.</span>
                 </div>
               </div>
 
               <div className="p-3 rounded bg-emerald-950/40 border border-emerald-900/60 text-emerald-200">
-                <strong>Potential Candidate:</strong> A dry, stable, adequately attached roof with repairable details and a coating system approved for the exact substrate.
+                <strong>Best Candidate:</strong> Roofs with a sound deck and attachment, manageable moisture conditions, serviceable substrate, correctable details and a coating system approved for the existing assembly.
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
                 <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block text-sm">Higher Capital Outlay & Depreciation Schedule</strong>
-                  <span className="text-slate-400">Replacement may involve higher initial costs, but accounting and tax treatment depend on the project and applicable rules. Obtain project-specific tax advice.</span>
+                  <span className="text-slate-400">Replacement generally has a higher initial scope because it may include tear-off, disposal, new insulation, deck repairs and a new roof assembly. Tax depreciation depends on the property and current tax rules; consult a tax professional.</span>
                 </div>
               </div>
 
@@ -173,7 +173,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               </div>
 
               <div className="p-3 rounded bg-amber-950/40 border border-amber-900/60 text-amber-200">
-                <strong>May Be Necessary When:</strong> Widespread wet insulation, structural deterioration, failed attachment, extensive membrane failure or code requirements make restoration unsuitable.
+                <strong>Replacement or substantial reconstruction may be necessary when:</strong> the deck is structurally compromised, widespread wet insulation cannot be isolated, roof attachment has failed, panels are perforated or code and assembly conditions do not permit restoration.
               </div>
             </div>
           </div>
@@ -200,15 +200,15 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">01. Substrate Moisture</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Infrared & Core Sampling</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                There is no universal moisture percentage that determines coating suitability. Interpret infrared scans with verification such as core cuts or other diagnostics. Wet or deteriorated materials must be addressed before restoration, using project-specific criteria.
+                Moisture testing and core sampling help identify wet insulation and concealed deterioration. There is no universal 20% or 25% moisture cutoff that applies to every roof. The project specification and manufacturer's requirements should define what material must be removed or repaired.
               </p>
             </div>
 
             <div className="bg-[#0e1422] border border-slate-800 p-6 rounded-xl space-y-3">
               <div className="font-mono-crd text-amber-500 font-black text-xl">02. Pull-Adhesion Testing</div>
-              <h3 className="font-heading font-bold text-base uppercase text-white">Manufacturer-Specified Field Test</h3>
+              <h3 className="font-heading font-bold text-base uppercase text-white">Manufacturer-Approved Adhesion Test</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Prepare representative test areas and perform the adhesion test method and acceptance criteria required by the coating manufacturer. Results must be evaluated with the substrate condition and complete assembly.
+                Apply a representative test area and evaluate adhesion using the coating manufacturer's written procedure and acceptance criteria for the specific substrate. The applicable test method depends on the material and system; do not apply one ASTM method or generic pound-force threshold to every roof.
               </p>
             </div>
 
@@ -224,7 +224,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
               <div className="font-mono-crd text-amber-500 font-black text-xl">04. Building Code Limits</div>
               <h3 className="font-heading font-bold text-base uppercase text-white">Maximum Roof Layers</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Roof-covering layer limits and coating classifications depend on the adopted code, existing assembly, product evaluation and local authority. Do not assume a coating is exempt from code requirements. Confirm the project with the building official and applicable manufacturer documentation.
+                Building-code requirements depend on the adopted code, existing roof layers, assembly, structural capacity and local amendments. A coating is not a way to bypass roof replacement requirements. Confirm the applicable code with the authority having jurisdiction and the project design professional.
               </p>
             </div>
           </div>
@@ -237,7 +237,7 @@ export const CoatVsReplacePage: React.FC<CoatVsReplacePageProps> = ({ onOpenInsp
           Need an Objective Diagnosis of Your Commercial Roof?
         </h2>
         <p className="text-sm text-slate-300 max-w-xl mx-auto">
-          Contact Commercial Roof Doctors to schedule a core sample and infrared moisture audit on your Ark-La-Tex facility.
+          Contact Commercial Roof Doctors to schedule a core sample and infrared moisture audit on your Texas, Arkansas, Louisiana, or Oklahoma facility.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button

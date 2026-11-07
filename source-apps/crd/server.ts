@@ -1,7 +1,14 @@
+import { staffBookingRuntime } from '../../booking/runtime.ts';
+import { publishedBlogPost, publishedCommercialMetadata } from '../../shared/seo/blog.ts';
+import { validCalculatorInput } from '../../shared/intake-validation.ts';
+import { deliverInquiry, IntakeError } from '../../shared/intake-server.ts';
 import express, { Request, Response } from 'express';
 import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
+import { selectRows, upsertRows } from './server/supabaseRest';
+import { uploadPublicLogo, uploadPrivateLeadFile } from './server/supabaseStorage';
+import { requireOwnerAuth } from './server/requireOwnerAuth';
 
 const PORT = Number(process.env.PORT) || 3000;
 const app = express();
@@ -11,7 +18,7 @@ app.use(express.json({ limit: '25mb' }));
 app.use(express.urlencoded({ extended: true, limit: '25mb' }));
 
 // Database Persistence Layer
-const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_DIR = process.env.WEBSITE_DATA_DIR || path.join(process.cwd(), 'data');
 const DB_FILE = path.join(DATA_DIR, 'crd-database.json');
 
 interface CRDDatabase {
@@ -83,40 +90,59 @@ app.get('/api/health', (req: Request, res: Response) => {
   });
 });
 
-// Logo asset upload handler
-app.post('/api/save-logo', (req: Request, res: Response) => {
+// Logo branding asset is stored durably in Supabase Storage, not the Cloud Run filesystem.
+app.post('/api/save-logo', requireOwnerAuth, async (req: Request, res: Response) => {
   try {
-    const { dataBase64, filename } = req.body;
-    if (!dataBase64) {
-      return res.status(400).json({ error: 'Missing dataBase64' });
+    const { dataBase64 } = req.body;
+    if (typeof dataBase64 !== 'string' || dataBase64.length > 3_000_000) {
+      return res.status(400).json({ error: 'Logo image must be a valid PNG under 2 MB.' });
     }
-    const cleanBase64 = dataBase64.replace(/^data:image\/\w+;base64,/, '');
+    const cleanBase64 = dataBase64.replace(/^data:image\/png;base64,/i, '');
+    if (!/^[A-Za-z0-9+/]*={0,2}$/.test(cleanBase64)) {
+      return res.status(400).json({ error: 'Invalid base64 image data.' });
+    }
     const buffer = Buffer.from(cleanBase64, 'base64');
-    const targetDir = path.join(process.cwd(), 'public', 'assets');
-    if (!fs.existsSync(targetDir)) {
-      fs.mkdirSync(targetDir, { recursive: true });
-    }
-    const name = filename || 'CRD logo 1296x367.png';
-    fs.writeFileSync(path.join(targetDir, name), buffer);
-    fs.writeFileSync(path.join(targetDir, 'crd-logo-full.png'), buffer);
-    
-    // Also mirror to dist/assets if dist exists for production builds
-    const distAssets = path.join(process.cwd(), 'dist', 'assets');
-    if (fs.existsSync(distAssets)) {
-      fs.writeFileSync(path.join(distAssets, name), buffer);
-      fs.writeFileSync(path.join(distAssets, 'crd-logo-full.png'), buffer);
-    }
-
-    return res.json({ success: true, filename: name, path: `/assets/${name}` });
+    const stored = await uploadPublicLogo(buffer);
+    return res.json({ success: true, filename: 'crd-logo-full.png', path: stored.publicUrl, storagePath: stored.path });
   } catch (err: any) {
-    console.error('Error saving logo asset:', err);
-    return res.status(500).json({ error: err.message });
+    console.error('Error saving logo asset to Supabase Storage:', err);
+    return res.status(503).json({ error: 'Logo storage is temporarily unavailable.' });
   }
 });
 
-// Admin stats
-app.get('/api/admin/stats', (req: Request, res: Response) => {
-  const leads = db.leads || [];
+// Staff calendar operations have their own verified-session and exact-division
+// gate. Default-off runtime returns before any credential or provider access.
+app.all('/api/staff/booking', async (req: Request, res: Response) => {
+  const headers = new Headers();
+  for (const name of ['authorization','origin','content-type']) { const value = req.get(name); if (value) headers.set(name,value); }
+  const request = new globalThis.Request('https://theroofingdrs.com/commercial/api/staff/booking', {method:req.method,headers,...(['GET','HEAD'].includes(req.method)?{}:{body:JSON.stringify(req.body)})});
+  const result = await staffBookingRuntime(request,process.env);
+  result.headers.forEach((value,name)=>res.setHeader(name,value));
+  res.status(result.status).send(await result.text());
+});
+
+// Mirror Express's case-insensitive, optional-trailing-slash routing. Only
+// enumerated public endpoints may bypass verified staff authentication.
+app.use('/api', (req: Request, res: Response, next) => {
+  const route = req.path.toLowerCase().replace(/\/+$/, '') || '/';
+  const publicRead = ['GET', 'HEAD'].includes(req.method) && route === '/health';
+  const publicSubmission = req.method === 'POST' && ['/leads', '/emergency', '/calculator'].includes(route);
+  if (publicRead || publicSubmission) return next();
+  return requireOwnerAuth(req, res, next);
+});
+
+// Admin stats use the shared lead store so counts survive Cloud Run restarts.
+app.get('/api/admin/stats', async (req: Request, res: Response) => {
+  let leads: any[];
+  try {
+    const rows = await selectRows<any>('trd_records', 'select=id,payload&record_type=eq.lead&order=created_at.desc');
+    leads = rows.map((row) => row.payload).filter((lead) =>
+      lead.division === 'commercial' || lead.division === 'COMMERCIAL' || Boolean(lead.leadId)
+    );
+  } catch (error) {
+    console.error('Shared commercial lead stats failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
   const stats = {
     total: leads.length,
     emergency: leads.filter((l) => l.priority === 'Emergency' || l.leadType === 'Emergency').length,
@@ -124,7 +150,7 @@ app.get('/api/admin/stats', (req: Request, res: Response) => {
     insurance: leads.filter((l) => l.leadType === 'Insurance Claim').length,
     inspection: leads.filter((l) => l.leadType === 'Inspection').length,
     ppp: leads.filter((l) => l.leadType === 'PPP/Maintenance' || l.leadType === 'Property Management').length,
-    calculator: db.calculatorSubmissions?.length || 0,
+    calculator: (await selectRows<any>('crd_calculator_submissions', 'select=submission_id')).length,
     byStatus: {
       New: leads.filter((l) => l.status === 'New').length,
       Contacted: leads.filter((l) => l.status === 'Contacted').length,
@@ -140,9 +166,16 @@ app.get('/api/admin/stats', (req: Request, res: Response) => {
 });
 
 // GET /api/leads - Query leads with filtering
-app.get('/api/leads', (req: Request, res: Response) => {
+app.get('/api/leads', async (req: Request, res: Response) => {
   const { status, priority, leadType } = req.query;
-  let filtered = [...db.leads];
+  let filtered: any[];
+  try {
+    const rows = await selectRows<any>('trd_records', 'select=id,payload&record_type=eq.lead&order=created_at.desc');
+    filtered = rows.map((row) => row.payload).filter((lead) => lead.division === 'commercial' || lead.division === 'COMMERCIAL' || lead.leadId);
+  } catch (error) {
+    console.error('Shared commercial lead list failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
 
   if (status && typeof status === 'string') {
     filtered = filtered.filter((l) => l.status === status);
@@ -158,17 +191,17 @@ app.get('/api/leads', (req: Request, res: Response) => {
   filtered.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
   const enriched = filtered.map((lead) => {
-    const org = db.organizations.find((o) => o.organizationId === lead.organizationId);
-    const cnt = db.contacts.find((c) => c.contactId === lead.contactId);
-    const prp = db.properties.find((p) => p.propertyId === lead.propertyId);
+    const org = lead.organizationRecord || db.organizations.find((o) => o.organizationId === lead.organizationId);
+    const cnt = lead.contactRecord || db.contacts.find((c) => c.contactId === lead.contactId);
+    const prp = lead.propertyRecord || db.properties.find((p) => p.propertyId === lead.propertyId);
     return {
       ...lead,
       fullName: cnt ? `${cnt.firstName} ${cnt.lastName}`.trim() : 'Commercial Client',
-      phone: cnt?.phone || '',
-      email: cnt?.email || '',
-      companyName: org?.companyName || '',
-      propertyAddress: prp?.address ? `${prp.address}, ${prp.city} ${prp.state}` : '',
-      squareFootage: prp?.approximateRoofArea || null,
+      phone: cnt?.phone || lead.phone || '',
+      email: cnt?.email || lead.email || '',
+      companyName: org?.companyName || lead.companyName || '',
+      propertyAddress: prp?.address ? `${prp.address}, ${prp.city} ${prp.state}` : (lead.propertyAddress || ''),
+      squareFootage: prp?.approximateRoofArea || lead.approximateRoofArea || null,
     };
   });
 
@@ -176,16 +209,23 @@ app.get('/api/leads', (req: Request, res: Response) => {
 });
 
 // GET /api/leads/:id - Single lead detail with relations
-app.get('/api/leads/:id', (req: Request, res: Response) => {
-  const lead = db.leads.find((l) => l.leadId === req.params.id);
-  if (!lead) {
+app.get('/api/leads/:id', async (req: Request, res: Response) => {
+  let lead: any;
+  try {
+    const rows = await selectRows<any>('trd_records', `select=id,payload&record_type=eq.lead&id=eq.${encodeURIComponent(req.params.id)}&limit=1`);
+    lead = rows[0]?.payload;
+  } catch (error) {
+    console.error('Shared commercial lead lookup failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
+  if (!lead || !(lead.leadId || lead.division === 'commercial' || lead.division === 'COMMERCIAL')) {
     return res.status(404).json({ error: 'Lead not found' });
   }
 
-  const organization = db.organizations.find((o) => o.organizationId === lead.organizationId) || null;
-  const contact = db.contacts.find((c) => c.contactId === lead.contactId) || null;
-  const property = db.properties.find((p) => p.propertyId === lead.propertyId) || null;
-  const timeline = db.timelineEvents.filter((t) => t.leadId === lead.leadId);
+  const organization = lead.organizationRecord || db.organizations.find((o) => o.organizationId === lead.organizationId) || null;
+  const contact = lead.contactRecord || db.contacts.find((c) => c.contactId === lead.contactId) || null;
+  const property = lead.propertyRecord || db.properties.find((p) => p.propertyId === lead.propertyId) || null;
+  const timeline = Array.isArray(lead.timeline) ? lead.timeline : db.timelineEvents.filter((t) => t.leadId === lead.leadId);
 
   res.json({
     lead,
@@ -197,26 +237,35 @@ app.get('/api/leads/:id', (req: Request, res: Response) => {
 });
 
 // PATCH /api/leads/:id - Update lead status, priority, or internal notes
-app.patch('/api/leads/:id', (req: Request, res: Response) => {
-  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
-  if (leadIndex === -1) {
+app.patch('/api/leads/:id', async (req: Request, res: Response) => {
+  let currentLead: any;
+  try {
+    const rows = await selectRows<any>('trd_records', `select=id,payload&record_type=eq.lead&id=eq.${encodeURIComponent(req.params.id)}&limit=1`);
+    currentLead = rows[0]?.payload;
+  } catch (error) {
+    console.error('Shared commercial lead lookup failed:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
+  if (!currentLead || !(currentLead.leadId || currentLead.division === 'commercial' || currentLead.division === 'COMMERCIAL')) {
     return res.status(404).json({ error: 'Lead not found' });
   }
-
-  const currentLead = db.leads[leadIndex];
+  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
   const { status, priority, assignedTo, notes, newNote } = req.body;
 
   const previousStatus = currentLead.status;
+  if (!Array.isArray(currentLead.timeline)) currentLead.timeline = [];
   if (status && status !== previousStatus) {
     currentLead.status = status;
-    db.timelineEvents.push({
+    const event = {
       id: generateId('evt'),
       leadId: currentLead.leadId,
       title: 'Status Updated',
       description: `Status transitioned from "${previousStatus}" to "${status}"`,
       timestamp: new Date().toISOString(),
       author: 'Operations Staff',
-    });
+    };
+    currentLead.timeline.push(event);
+    db.timelineEvents.push(event);
   }
 
   if (priority) currentLead.priority = priority;
@@ -224,245 +273,121 @@ app.patch('/api/leads/:id', (req: Request, res: Response) => {
   if (notes !== undefined) currentLead.notes = notes;
 
   if (newNote && typeof newNote === 'string') {
-    db.timelineEvents.push({
+    const event = {
       id: generateId('evt'),
       leadId: currentLead.leadId,
       title: 'Internal Note Added',
       description: newNote,
       timestamp: new Date().toISOString(),
       author: 'Operations Staff',
-    });
+    };
+    if (!Array.isArray(currentLead.timeline)) currentLead.timeline = [];
+    currentLead.timeline.push(event);
+    db.timelineEvents.push(event);
   }
 
   currentLead.updatedAt = new Date().toISOString();
-  db.leads[leadIndex] = currentLead;
+  if (leadIndex >= 0) db.leads[leadIndex] = currentLead;
+  try {
+    await upsertRows('trd_records', [{ id: currentLead.leadId, record_type: 'lead', payload: currentLead, updated_at: currentLead.updatedAt }], 'id');
+  } catch (error) {
+    console.error('Shared commercial lead update failed:', error);
+    return res.status(503).json({ error: 'Lead update could not be saved.' });
+  }
   saveDB(db);
 
   res.json({ success: true, lead: currentLead });
 });
 
-// POST /api/leads/:id/photos - Attach photos to a lead
-app.post('/api/leads/:id/photos', (req: Request, res: Response) => {
-  const leadIndex = db.leads.findIndex((l) => l.leadId === req.params.id);
-  if (leadIndex === -1) {
-    return res.status(404).json({ error: 'Lead not found' });
-  }
-
+// POST /api/leads/:id/photos - Store lead files privately in Supabase Storage.
+app.post('/api/leads/:id/photos', async (req: Request, res: Response) => {
   const { photos } = req.body;
-  if (!Array.isArray(photos)) {
-    return res.status(400).json({ error: 'Photos must be an array of photo objects or base64 strings' });
+  if (!Array.isArray(photos) || photos.length < 1 || photos.length > 10) {
+    return res.status(400).json({ error: 'Submit between 1 and 10 files per upload.' });
   }
 
-  const currentLead = db.leads[leadIndex];
-  currentLead.photos = [...(currentLead.photos || []), ...photos];
-  currentLead.updatedAt = new Date().toISOString();
-
-  db.timelineEvents.push({
-    id: generateId('evt'),
-    leadId: currentLead.leadId,
-    title: 'Photos Attached',
-    description: `${photos.length} new photo(s) uploaded and attached to lead.`,
-    timestamp: new Date().toISOString(),
-    author: 'Field / Customer Upload',
-  });
-
-  saveDB(db);
-  res.json({ success: true, count: currentLead.photos.length });
-});
-
-// POST /api/leads - Generic Commercial Lead Submission
-app.post('/api/leads', (req: Request, res: Response) => {
+  let rows: any[];
   try {
-    const {
-      companyName,
-      firstName,
-      lastName,
-      name,
-      email,
-      phone,
-      role,
-      propertyName,
-      address,
-      propertyAddress,
-      city,
-      state,
-      zip,
-      propertyType,
-      approximateRoofArea,
-      roofSystem,
-      leadType = 'Inspection',
-      priority = 'Normal',
-      source = 'Website Lead Form',
-      utmSource,
-      utmMedium,
-      utmCampaign,
-      utmTerm,
-      utmContent,
-      landingPage,
-      referrer,
-      message,
-      notes,
-      photos = [],
-      // Storm-specific fields
-      stormDate,
-      stormDamageType,
-      existingClaim,
-      claimNumber,
-      carrier,
-      adjusterAssigned,
-      adjusterInspectionScheduled,
-      needCrdPresent,
-      // Emergency fields
-      emergencyType,
-      waterEnteringBuilding,
-      buildingOccupied,
-    } = req.body;
+    rows = await selectRows<any>('trd_records', `select=id,payload&record_type=eq.lead&id=eq.${encodeURIComponent(req.params.id)}&limit=1`);
+  } catch (error) {
+    console.error('Shared lead lookup failed before photo upload:', error);
+    return res.status(503).json({ error: 'Lead storage is temporarily unavailable.' });
+  }
+  const currentLead = rows[0]?.payload;
+  if (!currentLead || !(currentLead.leadId || currentLead.division === 'commercial' || currentLead.division === 'COMMERCIAL')) {
+    return res.status(404).json({ error: 'Commercial lead not found.' });
+  }
 
-    // Split name if single field provided
-    let fName = firstName || '';
-    let lName = lastName || '';
-    if (!fName && name) {
-      const parts = name.trim().split(' ');
-      fName = parts[0] || '';
-      lName = parts.slice(1).join(' ') || '';
+  try {
+    const uploaded = [];
+    for (const photo of photos) {
+      const raw = typeof photo === 'string' ? photo : photo?.dataBase64;
+      if (typeof raw !== 'string' || raw.length > 22_000_000) {
+        return res.status(400).json({ error: 'Each file must be a supported image or PDF under 15 MB.' });
+      }
+      const match = raw.match(/^data:(image\/(?:jpeg|png|webp)|application\/pdf);base64,/i);
+      const contentType = (typeof photo === 'object' && photo?.mimeType) || match?.[1]?.toLowerCase();
+      const clean = raw.replace(/^data:[^;]+;base64,/i, '');
+      if (!contentType || !/^[A-Za-z0-9+/]*={0,2}$/.test(clean)) {
+        return res.status(400).json({ error: 'Each file must include a valid supported MIME type and base64 data.' });
+      }
+      const bytes = Buffer.from(clean, 'base64');
+      if (bytes.length > 15 * 1024 * 1024 || bytes.length === 0) {
+        return res.status(400).json({ error: 'Each file must be nonempty and under 15 MB.' });
+      }
+      if (contentType === 'image/png' && !bytes.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))) {
+        return res.status(400).json({ error: 'Invalid PNG file.' });
+      }
+      if (contentType === 'image/jpeg' && !(bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[bytes.length - 2] === 0xff && bytes[bytes.length - 1] === 0xd9)) {
+        return res.status(400).json({ error: 'Invalid JPEG file.' });
+      }
+      if (contentType === 'image/webp' && (bytes.toString('ascii', 0, 4) !== 'RIFF' || bytes.toString('ascii', 8, 12) !== 'WEBP')) {
+        return res.status(400).json({ error: 'Invalid WebP file.' });
+      }
+      if (contentType === 'application/pdf' && bytes.toString('ascii', 0, 5) !== '%PDF-') {
+        return res.status(400).json({ error: 'Invalid PDF file.' });
+      }
+      const name = typeof photo === 'object' && typeof photo?.name === 'string' ? photo.name : `upload.${contentType === 'image/jpeg' ? 'jpg' : contentType === 'image/png' ? 'png' : contentType === 'image/webp' ? 'webp' : 'pdf'}`;
+      uploaded.push(await uploadPrivateLeadFile(req.params.id, name, contentType, bytes));
     }
 
-    // Validation
-    if (!phone && !email) {
-      return res.status(400).json({ error: 'A phone number or email address is required.' });
-    }
-
-    const orgId = generateId('org');
-    const contactId = generateId('cnt');
-    const propertyId = generateId('prp');
-    const leadId = generateId('lead');
-
-    // Create Organization Record
-    const newOrg = {
-      organizationId: orgId,
-      companyName: companyName || propertyName || `${fName} ${lName} Enterprise`.trim() || 'Commercial Property',
-      propertyManager: role === 'Property Manager' || role === 'HOA Manager',
-      industry: propertyType || 'Commercial',
-      notes: notes || '',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
-    db.organizations.push(newOrg);
-
-    // Create Contact Record
-    const newContact = {
-      contactId,
-      organizationId: orgId,
-      firstName: fName,
-      lastName: lName,
-      email: email || '',
-      phone: phone || '',
-      role: role || 'Property Owner / Representative',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
-    db.contacts.push(newContact);
-
-    // Create Property Record
-    const newProperty = {
-      propertyId,
-      organizationId: orgId,
-      propertyName: propertyName || companyName || 'Commercial Facility',
-      address: address || propertyAddress || '',
-      city: city || 'Texarkana Region',
-      state: state || 'TX',
-      zip: zip || '',
-      propertyType: propertyType || 'Commercial',
-      approximateRoofArea: approximateRoofArea || '',
-      roofSystem: roofSystem || 'Unknown',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
-    db.properties.push(newProperty);
-
-    // Create Lead Record
-    const newLead = {
-      leadId,
-      organizationId: orgId,
-      contactId,
-      propertyId,
-      leadType: leadType || 'Inspection',
-      propertyType: propertyType || 'Commercial',
-      roofSystem: roofSystem || 'Unknown',
-      priority: priority || (leadType === 'Emergency' ? 'Emergency' : 'Normal'),
-      source: source || 'Website',
-      utmSource: utmSource || '',
-      utmMedium: utmMedium || '',
-      utmCampaign: utmCampaign || '',
-      utmTerm: utmTerm || '',
-      utmContent: utmContent || '',
-      landingPage: landingPage || '/',
-      referrer: referrer || '',
-      status: 'New',
-      assignedTo: 'Dispatch / Estimating',
-      message: message || '',
-      notes: notes || '',
-      photos: Array.isArray(photos) ? photos : [],
-      // Extra operational attributes preserved for future CRM
-      stormMetadata: {
-        stormDate,
-        stormDamageType,
-        existingClaim,
-        claimNumber,
-        carrier,
-        adjusterAssigned,
-        adjusterInspectionScheduled,
-        needCrdPresent,
-      },
-      emergencyMetadata: {
-        emergencyType,
-        waterEnteringBuilding,
-        buildingOccupied,
-      },
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
-    db.leads.push(newLead);
-
-    // Initial timeline entry
-    db.timelineEvents.push({
-      id: generateId('evt'),
-      leadId,
-      title: 'Lead Ingested',
-      description: `New ${newLead.leadType} lead received via ${newLead.source}. Priority: ${newLead.priority}.`,
-      timestamp: new Date().toISOString(),
-      author: 'CRD Ingestion Engine',
-    });
-
-    saveDB(db);
-
-    console.log(`[CRD API] Ingested Lead ${leadId} (${newLead.leadType}, Priority: ${newLead.priority}) for ${fName} ${lName}`);
-
-    res.status(201).json({
-      success: true,
-      leadId,
-      organizationId: orgId,
-      contactId,
-      propertyId,
-      message: 'Commercial roof request submitted successfully. A CRD commercial specialist will review the details.',
-    });
-  } catch (error: any) {
-    console.error('Lead submission error:', error);
-    res.status(500).json({ error: 'Failed to record commercial lead. Please call CRD at (903) 231-5940.' });
+    const prior = Array.isArray(currentLead.photos) ? currentLead.photos : [];
+    currentLead.photos = [...prior, ...uploaded];
+    currentLead.updatedAt = new Date().toISOString();
+    await upsertRows('trd_records', [{
+      id: rows[0].id,
+      record_type: 'lead',
+      payload: currentLead,
+      updated_at: currentLead.updatedAt,
+    }], 'id');
+    return res.json({ success: true, count: currentLead.photos.length, uploaded: uploaded.length });
+  } catch (error) {
+    console.error('Private lead file upload failed:', error);
+    return res.status(503).json({ error: 'File storage is temporarily unavailable. Please retry.' });
   }
 });
 
-// POST /api/emergency - Dedicated Emergency Flow
-app.post('/api/emergency', (req: Request, res: Response) => {
-  req.body.leadType = 'Emergency';
-  req.body.priority = 'Emergency';
-  req.body.source = 'Emergency Form';
-  // Forward to leads handler internally
-  return (app as any)._router.handle({ ...req, url: '/api/leads', method: 'POST' }, res);
-});
+// Public inquiry paths all use the same atomic CRM destination.
+async function handleCommercialInquiry(req: Request, res: Response) {
+  const body = req.body;
+  const fields = ['companyName','firstName','lastName','fullName','name','contactName','email','phone','address','propertyAddress','city','state','zip','message','notes'];
+  if (!body || typeof body !== 'object' || Array.isArray(body) || fields.some(field => body[field] !== undefined && (typeof body[field] !== 'string' || body[field].length > 10000)) || (!body.phone?.trim() && !body.email?.trim()) || ![body.name,body.fullName,body.contactName,body.firstName,body.companyName].some(value => value?.trim())) {
+    return res.status(400).json({ error: 'Enter a contact name and a phone number or email address.' });
+  }
+  const payload = req.path === '/api/emergency' ? {...body,leadType:'Emergency',emergencyFlag:true,source:'Emergency Form'} : body;
+  try {
+    const receipt = await deliverInquiry('CRD', req.get('Idempotency-Key'), payload);
+    return res.status(receipt.replayed ? 200 : 201).json({success:true,leadId:receipt.source_id,crmLeadId:receipt.lead_id,deliveryStatus:'delivered'});
+  } catch (error) {
+    return res.status(error instanceof IntakeError ? error.status : 503).json({error:error instanceof Error ? error.message : 'Inquiry delivery is unavailable.'});
+  }
+}
+app.post('/api/leads', handleCommercialInquiry);
+app.post('/api/emergency', handleCommercialInquiry);
 
 // POST /api/calculator - Cost Calculator submission and calculation
-app.post('/api/calculator', (req: Request, res: Response) => {
+app.post('/api/calculator', async (req: Request, res: Response) => {
+  if(!validCalculatorInput(req.body))return res.status(400).json({error:'Enter a valid roof area and contact details.'});
   try {
     const {
       squareFootage,
@@ -573,92 +498,25 @@ app.post('/api/calculator', (req: Request, res: Response) => {
       createdAt: new Date().toISOString(),
     };
 
-    if (!submitLead) db.calculatorSubmissions.push(calcSubmission);
-
-    // If user provided contact info, also create an associated Lead
-    let leadId = null;
-    if (submitLead) {
-      leadId = generateId('lead');
-      const orgId = generateId('org');
-      const contactId = generateId('cnt');
-      const propertyId = generateId('prp');
-
-      const parts = (contactName || '').trim().split(' ');
-      const firstName = parts[0] || 'Commercial';
-      const lastName = parts.slice(1).join(' ') || 'Prospect';
-
-      db.organizations.push({
-        organizationId: orgId,
-        companyName: companyName || `${firstName} ${lastName} Commercial`,
-        propertyManager: false,
-        industry: propertyType || 'Commercial',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      });
-
-      db.contacts.push({
-        contactId,
-        organizationId: orgId,
-        firstName,
-        lastName,
-        email: email || '',
-        phone: phone || '',
-        role: 'Decision Maker',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      });
-
-      db.properties.push({
-        propertyId,
-        organizationId: orgId,
-        propertyName: companyName || `${address || 'Commercial Facility'}`,
-        address: address || 'Ark-La-Tex',
-        city: 'Texarkana',
-        state: 'TX',
-        zip: '75501',
-        propertyType: propertyType || 'Commercial',
-        approximateRoofArea: sqft,
-        roofSystem: roofSystem || 'TPO',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      });
-
-      const lead = {
-        leadId,
-        organizationId: orgId,
-        contactId,
-        propertyId,
-        leadType: 'Cost Calculator',
-        propertyType: propertyType || 'Commercial',
-        roofSystem: roofSystem || 'TPO',
-        priority: 'Normal',
-        source: 'Commercial Roof Cost Calculator',
-        status: 'New',
-        assignedTo: 'Dispatch / Estimating',
-        message: `Calculator estimate generated: ${sqft.toLocaleString()} sq ft ${roofSystem || 'TPO'} for ${desiredWork}. Range: ${estimatedLow.toLocaleString()} - ${estimatedHigh.toLocaleString()}`,
-        notes: [`User completed commercial calculator. Address: ${address}`, notes].filter(Boolean).join(' | '),
-        stormMetadata: {
-          reasonForWork,
-          stormDate: dateOfLoss || '',
-          stormDamageType: reasonForWork,
-          carrier: insurer || '',
-          policyNumber: policyNumber || '',
-          claimNumber: claimNumber || '',
-          adjusterName: adjusterName || '',
-          adjusterPhone: adjusterPhone || '',
-        },
-        photos: [],
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      db.leads.push(lead);
+    if (!submitLead) {
+      await upsertRows('crd_calculator_submissions', [{ submission_id: calcId, payload: calcSubmission, created_at: calcSubmission.createdAt }], 'submission_id');
     }
 
-    saveDB(db);
+    let leadId: string | null = null;
+    let crmLeadId: string | null = null;
+    if (submitLead) {
+      const receipt = await deliverInquiry('CRD', req.get('Idempotency-Key'), {
+        ...req.body, serviceRequested:'Commercial roof estimate', source:'Commercial Roof Cost Calculator',
+      });
+      leadId = receipt.source_id;
+      crmLeadId = receipt.lead_id;
+    }
 
     res.json({
       success: true,
       calculationId: calcId,
+      crmLeadId,
+      deliveryStatus: submitLead ? 'delivered' : undefined,
       leadId,
       estimatedLow,
       estimatedHigh,
@@ -669,90 +527,27 @@ app.post('/api/calculator', (req: Request, res: Response) => {
     });
   } catch (err) {
     console.error('Calculator calculation error:', err);
-    res.status(500).json({ error: 'Failed to calculate estimate range.' });
+    res.status(err instanceof IntakeError ? err.status : 503).json({ error: err instanceof IntakeError ? err.message : 'Failed to calculate estimate range. Your request has not been confirmed.' });
   }
 });
 
 // GET /api/calculator - Retrieve calculator submissions
-app.get('/api/calculator', (req: Request, res: Response) => {
-  const list = [...(db.calculatorSubmissions || [])];
-  list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-  res.json(list);
+app.get('/api/calculator', async (req: Request, res: Response) => {
+  try {
+    const rows = await selectRows<any>('crd_calculator_submissions', 'select=submission_id,payload&order=created_at.desc');
+    res.json(rows.map((row) => row.payload));
+  } catch (error) {
+    console.error('Shared calculator submission list failed:', error);
+    res.status(503).json({ error: 'Calculator submission storage is temporarily unavailable.' });
+  }
 });
 
-// Dynamic XML Sitemap
-app.get('/sitemap.xml', (req: Request, res: Response) => {
-  const host = req.get('host') || 'commercialroofdoctors.com';
-  const protocol = req.protocol || 'https';
-  const baseUrl = `${protocol}://${host}`;
-
-  const routes = [
-    '',
-    '/commercial-roofing',
-    '/commercial-roof-repair',
-    '/commercial-roof-replacement',
-    '/commercial-roof-inspection',
-    '/commercial-roof-maintenance',
-    '/new-commercial-construction',
-    '/commercial-roof-coatings',
-    '/commercial-roof-restoration',
-    '/silicone-roof-coatings',
-    '/acrylic-roof-coatings',
-    '/polyurethane-roof-coatings',
-    '/coat-vs-replace',
-    '/storm-damage',
-    '/hail-damage',
-    '/wind-damage',
-    '/emergency-roofing',
-    '/insurance-claims',
-    '/commercial-storm-inspections',
-    '/adjuster-meetings',
-    '/large-loss-roofing',
-    '/tpo-roofing',
-    '/epdm-roofing',
-    '/pvc-roofing',
-    '/modified-bitumen',
-    '/built-up-roofing',
-    '/metal-roofing',
-    '/crd-ppp',
-    '/property-management',
-    '/roof-asset-management',
-    '/multi-property-roofing',
-    '/multifamily-roofing',
-    '/hoa-roofing',
-    '/industries/churches',
-    '/industries/schools',
-    '/industries/healthcare',
-    '/industries/industrial',
-    '/industries/retail',
-    '/industries/apartments',
-    '/commercial-roof-cost-calculator',
-    '/about',
-    '/about/credentials',
-    '/service-areas',
-    '/service-areas/texas',
-    '/service-areas/arkansas',
-    '/service-areas/louisiana',
-    '/service-areas/oklahoma',
-    '/contact',
-  ];
-
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes
-  .map(
-    (r) => `  <url>
-    <loc>${baseUrl}/commercial${r === '' ? '/' : r}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${r === '' || r.includes('storm') || r.includes('emergency') ? 'daily' : 'weekly'}</changefreq>
-    <priority>${r === '' ? '1.0' : r.includes('calculator') || r.includes('inspection') ? '0.9' : '0.8'}</priority>
-  </url>`
-  )
-  .join('\n')}
-</urlset>`;
-
-  res.header('Content-Type', 'application/xml');
-  res.send(sitemapXml);
+// Generated from the same route inventory and SEO manifest used to serve pages.
+// This prevents stale, invented, and non-canonical URLs from entering the sitemap.
+let publicSitemapXml = '';
+app.get('/sitemap.xml', (_req: Request, res: Response) => {
+  if (!publicSitemapXml) return res.status(503).type('text/plain').send('Sitemap is initializing.');
+  res.type('application/xml; charset=utf-8').send(publicSitemapXml);
 });
 
 // Robots.txt
@@ -767,6 +562,50 @@ Disallow: /commercial/api/
 Sitemap: ${protocol}://${host}/commercial/sitemap.xml
 `);
 });
+
+type SeoManifestRecord = {
+  title: string;
+  description: string;
+  canonicalPath: string;
+};
+
+function escapeHtmlAttribute(value: string): string {
+  return value.replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  })[character] || character);
+}
+
+function upsertHeadTag(html: string, matcher: RegExp, replacement: string): string {
+  if (matcher.test(html)) return html.replace(matcher, () => replacement);
+  return html.replace(/<\/head>/i, () => replacement + '\n  </head>');
+}
+
+function applySeoMetadata(html: string, metadata: SeoManifestRecord): string {
+  const title = metadata.title.includes('Commercial Roof Doctors') || /\|\s*CRD$/i.test(metadata.title)
+    ? metadata.title
+    : metadata.title + ' | CRD';
+  const description = escapeHtmlAttribute(metadata.description);
+  const socialTitle = escapeHtmlAttribute(metadata.title);
+  const canonicalPath = metadata.canonicalPath || '/';
+  const pathWithoutPrefix = canonicalPath.replace(/^\/commercial(?=\/|$)/, '') || '/';
+  const canonicalUrl = 'https://theroofingdrs.com/commercial' +
+    (pathWithoutPrefix === '/' ? '/' : pathWithoutPrefix.startsWith('/') ? pathWithoutPrefix : '/' + pathWithoutPrefix);
+
+  let output = html;
+  output = upsertHeadTag(output, /<title>[\s\S]*?<\/title>/i, '<title>' + escapeHtmlAttribute(title) + '</title>');
+  output = upsertHeadTag(output, /<meta\s+name=["']description["'][^>]*>/i, '<meta name="description" content="' + description + '" />');
+  output = upsertHeadTag(output, /<link\s+rel=["']canonical["'][^>]*>/i, '<link rel="canonical" href="' + escapeHtmlAttribute(canonicalUrl) + '" />');
+  output = upsertHeadTag(output, /<meta\s+property=["']og:title["'][^>]*>/i, '<meta property="og:title" content="' + socialTitle + '" />');
+  output = upsertHeadTag(output, /<meta\s+property=["']og:description["'][^>]*>/i, '<meta property="og:description" content="' + description + '" />');
+  output = upsertHeadTag(output, /<meta\s+property=["']og:url["'][^>]*>/i, '<meta property="og:url" content="' + escapeHtmlAttribute(canonicalUrl) + '" />');
+  output = upsertHeadTag(output, /<meta\s+name=["']twitter:title["'][^>]*>/i, '<meta name="twitter:title" content="' + socialTitle + '" />');
+  output = upsertHeadTag(output, /<meta\s+name=["']twitter:description["'][^>]*>/i, '<meta name="twitter:description" content="' + description + '" />');
+  return output;
+}
 
 // ---------------- VITE & FRONTEND MOUNTING ----------------
 
@@ -785,6 +624,41 @@ async function start() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
+    const indexHtml = fs.readFileSync(path.join(distPath, 'index.html'), 'utf8');
+    const appRoutes = new Set<string>(JSON.parse(fs.readFileSync(path.join(distPath,'app-routes.json'),'utf8')));
+    let seoManifest: Record<string, SeoManifestRecord> = {};
+    try {
+      seoManifest = JSON.parse(fs.readFileSync(path.join(distPath, 'seo-manifest.json'), 'utf8'));
+      console.log('[CRD SEO] Loaded ' + Object.keys(seoManifest).length + ' server-rendered route metadata entries.');
+    } catch (error) {
+      console.error('[CRD SEO] Route metadata manifest unavailable; serving default document metadata.', error);
+    }
+
+    const excludedFromSitemap = /^\/(?:admin|staff|staff-portal|portal|leads)(?:\/|$)|^\/api(?:\/|$)/i;
+    const canonicalPaths = new Set<string>();
+    for (const route of appRoutes) {
+      const metadata = seoManifest[route];
+      if (!metadata || excludedFromSitemap.test(route)) continue;
+      const canonical = (metadata.canonicalPath || route).replace(/^\/commercial(?=\/|$)/, '') || '/';
+      const normalizedCanonical = canonical.replace(/\/+$/, '') || '/';
+      if (normalizedCanonical !== route) continue;
+      canonicalPaths.add(normalizedCanonical);
+    }
+    const sitemapLocations = [...canonicalPaths].sort().map((route) =>
+      'https://theroofingdrs.com/commercial' + (route === '/' ? '/' : route)
+    );
+    const xmlEscape = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+    publicSitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+      sitemapLocations.map((location) => '  <url><loc>' + xmlEscape(location) + '</loc></url>').join('\n') +
+      '\n</urlset>';
+
+    app.use('/commercial', express.static(distPath, {
+      maxAge: '1y',
+      immutable: true,
+      index: false,
+    }));
+
     app.use(express.static(distPath, {
       maxAge: '1y',
       immutable: true,
@@ -794,16 +668,33 @@ async function start() {
     // Never serve the SPA HTML as a substitute for a missing JS, CSS, or media asset.
     // Browsers reject HTML returned for module scripts, which otherwise produces a blank page.
     app.use((req: Request, res: Response, next) => {
-      const assetPath = req.path.startsWith('/assets/') || /\\.(?:js|mjs|css|map|woff2?|ttf|otf|png|jpe?g|gif|svg|webp|avif|ico)$/i.test(req.path);
+      const assetPath = req.path.startsWith('/assets/') || /\.(?:js|mjs|css|map|woff2?|ttf|otf|png|jpe?g|gif|svg|webp|avif|ico)$/i.test(req.path);
       if (assetPath) {
         return res.status(404).type('text/plain').send('CRD asset not found');
       }
       next();
     });
 
-    app.get('*', (req: Request, res: Response) => {
+    app.get('*', async (req: Request, res: Response) => {
       res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
-      res.sendFile(path.join(distPath, 'index.html'));
+      const normalizedPath = (req.path.replace(new RegExp('/+$'), '') || '/').toLowerCase();
+      let metadata = seoManifest[normalizedPath];
+      let known = appRoutes.has(normalizedPath);
+      if(/^\/blog\/[^/]+$/.test(normalizedPath)) {
+        const published = await publishedBlogPost('CRD',normalizedPath.slice('/blog/'.length));
+        if(published.post) {
+          metadata=publishedCommercialMetadata(published.post);
+          known=true;
+        } else if(!known) {
+          if(!published.available)return res.status(503).type('html').send(indexHtml);
+          known=false;
+        }
+      }
+      if(!known) {
+        res.set('X-Robots-Tag','noindex');
+        return res.status(404).type('html').send(indexHtml.replace(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi,''));
+      }
+      res.type('html').send(metadata ? applySeoMetadata(indexHtml, metadata) : indexHtml);
     });
   }
 

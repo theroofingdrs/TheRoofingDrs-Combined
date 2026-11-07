@@ -39,6 +39,16 @@ export interface RoofSystemPageData {
   costFactors: string[];
   faqs: { question: string; answer: string }[];
   relatedServices: { name: string; href: string }[];
+  manufacturerLogoUrl?: string;
+  manufacturerWebsiteUrl?: string;
+  manufacturerBenefits?: string[];
+  manufacturerWarrantyDetails?: string;
+  manufacturerWarrantyUrl?: string;
+  projectImageTitle?: string;
+  projectImageUrl?: string;
+  projectImageAlt?: string;
+  projectImageCaption?: string;
+  projectImageSourceUrl?: string;
 }
 
 interface RoofSystemPageTemplateProps {
@@ -80,6 +90,25 @@ export const RoofSystemPageTemplate: React.FC<RoofSystemPageTemplateProps> = ({
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
             {data.heroSubtitle}
           </p>
+          {data.manufacturerLogoUrl && (
+            <div className="pt-5 flex justify-center">
+              <a
+                href={data.manufacturerWebsiteUrl || 'https://www.certainteed.com/'}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit CertainTeed, manufacturer of Flintlastic modified bitumen roofing"
+                className="inline-flex items-center justify-center bg-white rounded-lg border border-slate-700 px-6 py-3 shadow-lg"
+              >
+                <img
+                  src={data.manufacturerLogoUrl}
+                  alt="CertainTeed manufacturer logo"
+                  className="w-44 sm:w-52 h-auto max-h-20 object-contain"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </a>
+            </div>
+          )}
           <div className="pt-4 flex flex-wrap justify-center gap-4">
             <button
               onClick={() => onOpenInspection('Inspection')}
@@ -97,6 +126,19 @@ export const RoofSystemPageTemplate: React.FC<RoofSystemPageTemplateProps> = ({
           </div>
         </div>
       </section>
+
+      {data.projectImageUrl && (
+        <section className="pb-14 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto overflow-hidden rounded-xl border border-slate-800 bg-[#0e1422]">
+            <img src={data.projectImageUrl} alt={data.projectImageAlt || 'Commercial modified-bitumen roof'} className="w-full h-auto max-h-[620px] object-cover" loading="lazy" />
+            <div className="px-5 py-4 space-y-2">
+              <h2 className="text-lg font-heading font-bold uppercase text-white">{data.projectImageTitle || 'Commercial Roof System Installation'}</h2>
+              <p className="text-sm text-slate-300 leading-relaxed">{data.projectImageCaption}</p>
+              {data.projectImageSourceUrl && <a href={data.projectImageSourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-amber-400 hover:underline">Photo reference: Polyglass project gallery</a>}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 1. What It Is & Where It's Used */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,6 +178,43 @@ export const RoofSystemPageTemplate: React.FC<RoofSystemPageTemplateProps> = ({
         </div>
       </section>
 
+      {data.manufacturerBenefits && data.manufacturerBenefits.length > 0 && (
+        <section className="py-14 bg-[#0b1220] border-b border-slate-800 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto space-y-6">
+            <div className="text-center">
+              <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">Manufacturer Product Advantages</div>
+              <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">Why Specify CertainTeed Flintlastic?</h2>
+              <p className="text-sm text-slate-300 max-w-3xl mx-auto mt-3">Product-specific benefits from CertainTeed’s Flintlastic commercial roofing line. Actual performance depends on the selected membrane and complete approved roof assembly.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {data.manufacturerBenefits.map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3 rounded-lg border border-slate-800 bg-[#0e1422] p-5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <p className="text-sm text-slate-200 leading-relaxed">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {data.manufacturerWarrantyDetails && (
+        <section className="py-14 bg-[#060911] border-b border-slate-800 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto space-y-5">
+            <div className="text-center">
+              <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">Manufacturer Warranty Information</div>
+              <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">CertainTeed Flintlastic Warranty Options</h2>
+            </div>
+            <div className="rounded-xl border border-amber-500/30 bg-[#0e1422] p-6 space-y-4">
+              <p className="text-sm text-slate-200 leading-relaxed">{data.manufacturerWarrantyDetails}</p>
+              <a href={data.manufacturerWarrantyUrl || 'https://www.certainteed.com/commercial-roofing-warranties'} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:underline">
+                View CertainTeed’s official commercial roofing warranty requirements <ArrowRight className="w-4 h-4" />
+              </a>
+              <p className="text-xs text-slate-400">CRD will confirm warranty eligibility in the project specification. No warranty term is promised until CertainTeed approves and issues the written project-specific warranty.</p>
+            </div>
+          </div>
+        </section>
+      )}
       {/* 2. Advantages vs Considerations */}
       <section className="py-16 bg-[#060911] border-y border-slate-800 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-8">

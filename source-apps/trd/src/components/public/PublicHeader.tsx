@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrandLogo } from '../common/BrandLogo.tsx';
 import {
   PhoneCall,
@@ -23,6 +23,11 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
   onOpenIntake,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileToggleRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape' && mobileMenuOpen) { setMobileMenuOpen(false); mobileToggleRef.current?.focus(); } };
+    document.addEventListener('keydown', close); return () => document.removeEventListener('keydown', close);
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { label: 'Home', path: '/', isHome: true },
@@ -95,25 +100,26 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
 
       {/* 2. Primary Navigation Bar */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-2 xl:gap-4">
+        <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 h-20 min-[1800px]:h-auto min-[1800px]:min-h-20 min-[1800px]:py-3 flex min-[1800px]:flex-wrap items-center justify-between gap-1 sm:gap-2 xl:gap-4 min-[1800px]:gap-y-3">
           {/* Logo */}
           <button
             onClick={() => handleNavClick('/')}
-            className="cursor-pointer text-left shrink-0 py-1"
+            className="cursor-pointer text-left shrink-0 py-1 max-w-[38vw] sm:max-w-none"
             title="The Roof Doctors Home"
           >
-            <BrandLogo size="md" />
+            <BrandLogo size="md" logo="trd" />
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-2 xl:gap-3.5 text-xs xl:text-sm font-semibold text-slate-700 whitespace-nowrap">
+          <nav className="hidden min-[1800px]:flex min-[1800px]:order-last min-[1800px]:w-full flex-wrap items-center justify-center gap-2 xl:gap-3.5 text-xs xl:text-sm font-semibold text-slate-700">
             {navLinks.map((link) => {
               const active = isLinkActive(link.path);
               return (
-                <button
+                <a
                   key={link.path}
+                  href={`/residential${link.path === '/' ? '/' : link.path}`}
                   id={`nav-link-${link.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                  onClick={() => handleNavClick(link.path)}
+                  onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); handleNavClick(link.path); }}
                   className={`py-1 px-1 transition-colors cursor-pointer flex items-center gap-1.5 ${
                     active
                       ? 'text-red-600 font-bold border-b-2 border-red-600'
@@ -127,17 +133,19 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
                     <CloudLightning className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                   )}
                   <span>{link.label}</span>
-                </button>
+                </a>
               );
             })}
           </nav>
 
+                    <a href="/commercial/" className="hidden min-[1800px]:inline-flex items-center px-3 py-2 rounded-lg border border-slate-300 text-xs xl:text-sm font-bold text-slate-700 hover:border-red-500 hover:text-red-600 transition-colors whitespace-nowrap">Commercial Roofing</a>
+
           {/* Right Action CTA & Mobile Toggle */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-3 shrink-0">
             <button
               id="cta-nav-diagnosed-btn"
               onClick={handleModalClick}
-              className="px-3.5 sm:px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-xs hover:shadow transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
+              className="px-1 sm:px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow-xs hover:shadow transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
             >
               <CalendarCheck className="w-4 h-4 shrink-0" />
               <span className="hidden sm:inline">GET MY ROOF DIAGNOSED</span>
@@ -148,8 +156,10 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
             <button
               id="mobile-nav-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
+              className="min-[1800px]:hidden p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+              ref={mobileToggleRef}
+              aria-controls="residential-mobile-navigation"
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
@@ -163,15 +173,16 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
 
         {/* 3. Mobile Navigation Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-slate-200 px-4 py-4 shadow-xl divide-y divide-slate-100 max-h-[calc(100vh-120px)] overflow-y-auto">
+          <div id="residential-mobile-navigation" role="navigation" aria-label="Residential mobile navigation" className="min-[1800px]:hidden bg-white border-t border-slate-200 px-4 py-4 shadow-xl divide-y divide-slate-100 max-h-[calc(100vh-120px)] overflow-y-auto">
             <div className="py-2 space-y-1">
               {navLinks.map((link) => {
                 const active = isLinkActive(link.path);
                 return (
-                  <button
+                  <a
                     key={link.path}
+                    href={`/residential${link.path === '/' ? '/' : link.path}`}
                     id={`mobile-nav-link-${link.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                    onClick={() => handleNavClick(link.path)}
+                    onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); handleNavClick(link.path); }}
                     className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium flex items-center justify-between transition-colors ${
                       active
                         ? 'bg-red-50 text-red-600 font-bold'
@@ -188,10 +199,12 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
                       <span>{link.label}</span>
                     </span>
                     <ChevronRight className="w-4 h-4 text-slate-400" />
-                  </button>
+                  </a>
                 );
               })}
             </div>
+
+                        <a href="/commercial/" onClick={() => setMobileMenuOpen(false)} className="block mt-3 px-3 py-3 rounded-lg border border-slate-200 text-sm font-bold text-slate-800 hover:bg-slate-50">Looking for commercial roofing? Visit Commercial Roof Doctors</a>
 
             {/* Mobile Actions in Menu */}
             <div className="pt-4 pb-2 space-y-2.5">

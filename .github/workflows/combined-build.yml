@@ -3,11 +3,12 @@ name: Combined site build
 on:
   push:
     branches:
-      - integration/path-routing
+      - main
+      - release-candidate/combined-site
   pull_request:
     branches:
       - main
-      - integration/path-routing
+      - release-candidate/combined-site
 
 concurrency:
   group: combined-site-ci-${{ github.event_name }}-${{ github.ref }}
@@ -24,5 +25,32 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install dependencies, build both applications, and run combined smoke tests
+      - name: Install locked application dependencies
+        run: npm run install:apps
+      - name: Typecheck, build both applications, and run combined smoke tests
         run: npm test
+      - name: Verify public mobile contact workflows in Chromium
+        run: npm run test:mobile
+      - name: Build combined production container
+        run: |
+          docker build \
+            --build-arg VITE_SUPABASE_URL=https://example.supabase.co \
+            --build-arg VITE_SUPABASE_PUBLISHABLE_KEY=ci-placeholder \
+            --tag combined-roofing:ci .
+      - name: Smoke test both container applications and private API access
+        run: |
+          docker run --detach --rm --name combined-roofing-ci --publish 8080:8080 combined-roofing:ci
+          trap 'docker stop combined-roofing-ci >/dev/null 2>&1 || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://localhost:8080/residential/api/health >/dev/null && curl --fail --silent http://localhost:8080/commercial/api/health >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl --fail --silent http://localhost:8080/residential/api/health | grep -q '"status":"ok"'
+          curl --fail --silent http://localhost:8080/commercial/api/health | grep -q '"status":"ok"'
+          curl --fail --silent http://localhost:8080/commercial/ | grep -Fq '<title>Commercial Roofing | Commercial Roof Doctors – Texarkana, TX</title>'
+          curl --fail --silent http://localhost:8080/commercial/commercial-roofing | grep -Fq '<title>Commercial Roofing Services | Ark-La-Tex Roof Doctors | CRD</title>'
+          curl --fail --silent http://localhost:8080/commercial/commercial-roofing | grep -Fq 'href="https://theroofingdrs.com/commercial/commercial-roofing"'
+          test "$(curl --silent --output /dev/null --write-out '%{http_code}' http://localhost:8080/residential/api/v1/leads)" = 401
+          test "$(curl --silent --output /dev/null --write-out '%{http_code}' http://localhost:8080/commercial/api/leads)" = 401

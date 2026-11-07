@@ -66,12 +66,19 @@ export const LeadsAdminPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterEmergency, setFilterEmergency] = useState(false);
 
+  const staffRequest = (url: string) => {
+    const token = localStorage.getItem('roof_docs_access_token');
+    return fetch(url, {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+    });
+  };
+
   const fetchData = async () => {
     setLoading(true);
     try {
       const [leadsRes, calcRes] = await Promise.all([
-        fetch('/api/leads'),
-        fetch('/api/calculator'),
+        staffRequest('/api/leads'),
+        staffRequest('/api/calculator'),
       ]);
 
       if (leadsRes.ok) {

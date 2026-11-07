@@ -35,8 +35,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
   return (
     <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd selection:bg-[#181818] selection:text-[#f4f3ef]">
       <SeoMeta
-        title="Commercial Roofing TX, AR, LA & OK | Commercial Roof Doctors"
-        description="Commercial roofing, large-loss storm response, restoration coatings, and roof asset management across Texas, Arkansas, Louisiana, and Oklahoma. (903) 231-5940."
+        title="Commercial Roofing | Commercial ROOF Doctors – Texarkana, TX"
+        description="Commercial ROOF Doctors provides commercial roof inspections, repairs, coatings and restoration from Texarkana across the Ark-La-Tex region."
         canonicalPath="/"
       />
 
@@ -46,9 +46,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-[#151515] border-b border-[#242424] overflow-hidden">
         {/* Editorial Commercial Roof Photography Background */}
         <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/images/hero-commercial-roof.jpg"
-            alt="Large commercial distribution center rooftop and architectural building envelope"
+          <img decoding="async" fetchPriority="high"
+            src="/assets/images/library/owner-commercial-roof-inspection-01.jpeg"
+            alt="Commercial roofing inspection documenting roof-surface conditions on a low-slope roof"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center brightness-[0.45] contrast-[1.05]"
           />
@@ -71,22 +71,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Territorial Marker */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-2 bg-[#111111]/85 backdrop-blur-sm border border-[#333333] text-[#d99a19] text-xs font-mono-crd tracking-wider uppercase">
               <span className="w-2 h-2 rounded-full bg-[#d99a19] shrink-0 animate-pulse" />
-              <span>Texas • Arkansas • Louisiana • Oklahoma • Commercial Roofing</span>
+              <span>Commercial Roof Coatings & Restoration • Texarkana Based</span>
             </div>
 
             {/* Hero Main Copy */}
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-heading font-black tracking-tight uppercase text-white leading-[0.92]">
-                Commercial Roofing.{' '}
-                <span className="text-[#eeeeee]">Diagnosed.</span>{' '}
-                <span className="text-[#eeeeee]">Documented.</span>{' '}
+                Commercial Roof Coatings.{' '}
+                <span className="text-[#eeeeee]">Restoration.</span>{' '}
+                <span className="text-[#eeeeee]">Metal Roof Renewal.</span>{' '}
                 <span className="text-[#d99a19]">Done Right.</span>
               </h1>
             </div>
 
             {/* Supporting Paragraph */}
             <p className="text-lg sm:text-xl text-[#d4d4d4] max-w-2xl leading-relaxed font-normal">
-              Commercial roofing requires more than a repair quote. CRD starts with the roof itself — its condition, system, failure points, history and future — then builds the right plan around it.
+              CRD evaluates aging commercial metal and low-slope roofs for restoration with professionally specified silicone, acrylic, and polyurethane coating systems. We inspect the roof first, address seams, fasteners, flashings and drainage, then determine whether coating, repair or replacement is the right investment.
             </p>
 
             {/* Primary & Secondary Action CTAs */}
@@ -175,13 +175,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Block 4 */}
             <div className="pt-4 sm:pt-0 sm:pl-6">
               <div className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#181818] tracking-tight leading-none uppercase">
-                Four-State Service Area
+                Four States
               </div>
               <div className="text-xs uppercase tracking-wider font-heading font-bold text-[#181818] mt-2">
-                Regional Commercial Coverage
+                Commercial Coverage
               </div>
               <p className="text-xs text-[#666666] mt-1 leading-relaxed">
-                Commercial project coverage across Texas, Arkansas, Louisiana, and Oklahoma, coordinated from our Texarkana operations hub.
+                Regional commercial coverage extending up to 250 miles from Texarkana across TX, AR, LA, and OK.
               </p>
             </div>
           </div>
@@ -211,8 +211,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => onOpenInspection('Repair')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
-                src="/assets/images/roof-problem-diagnostics.jpg"
+              <img decoding="async" loading="lazy"
+                src="/assets/images/library/crd-commercial-roof-drain-inspection.jpg"
                 alt="Commercial roof leak diagnostic examination"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-500"
@@ -240,9 +240,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => onOpenInspection('Storm Damage')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
-                src="/assets/images/commercial-storm-response.jpg"
-                alt="Commercial flat roof storm wind damage and emergency response"
+              <img decoding="async" loading="lazy"
+                src="/assets/images/library/commercial-roof-inspection.jpg"
+                alt="Commercial roof inspection on a low-slope roofing system"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-500"
               />
@@ -269,8 +269,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => onOpenInspection('Replacement')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
-                src="/assets/images/project-planning-commercial-roof.jpg"
+              <img decoding="async" loading="lazy"
+                src="/assets/images/library/commercial-property-roofing-01.jpg"
                 alt="Commercial roof replacement and restoration planning"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-500"
@@ -298,8 +298,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               onClick={() => navigate('/property-management')}
               className="group relative bg-[#181818] min-h-[340px] flex flex-col justify-end p-6 overflow-hidden cursor-pointer transition-all hover:translate-y-[-3px]"
             >
-              <img
-                src="/assets/images/commercial-portfolio-roofs.jpg"
+              <img decoding="async" loading="lazy"
+                src="/assets/images/library/commercial-property-roofing-02.jpg"
                 alt="Commercial property management portfolio flat rooftops and facilities"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-500"
@@ -333,8 +333,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
           {/* Left Column: Authentic Inspection Image */}
           <div className="lg:col-span-6 relative">
             <div className="relative overflow-hidden bg-[#181818] border border-[#e6e4df]">
-              <img
-                src="/assets/images/roof-inspection-diagnostics.jpg"
+              <img decoding="async" loading="lazy"
+                src="/assets/images/library/commercial-roof-inspection-detail.jpg"
                 alt="Commercial roof technical inspection in progress"
                 referrerPolicy="no-referrer"
                 className="w-full h-[460px] sm:h-[540px] object-cover contrast-[1.05]"
@@ -435,8 +435,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="bg-white border border-[#e6e4df] p-7 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="h-48 overflow-hidden bg-[#181818]">
-                  <img
-                    src="/assets/images/commercial-roof-repair.jpg"
+                  <img decoding="async" loading="lazy"
+                    src="/assets/images/library/commercial-roof-maintenance-detail.jpg"
                     alt="Commercial roof repair and curb flashing work"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
@@ -465,8 +465,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="bg-white border border-[#e6e4df] p-7 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="h-48 overflow-hidden bg-[#181818]">
-                  <img
-                    src="/assets/images/commercial-roof-restoration.jpg"
+                  <img decoding="async" loading="lazy"
+                    src="/assets/images/library/commercial-single-ply-roofing-01.jpg"
                     alt="Commercial roof silicone restoration coating application"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
@@ -495,8 +495,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="bg-white border-2 border-[#181818] p-7 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="h-48 overflow-hidden bg-[#181818]">
-                  <img
-                    src="/assets/images/commercial-roof-replacement.jpg"
+                  <img decoding="async" loading="lazy"
+                    src="/assets/images/library/commercial-roof-replacement.jpg"
                     alt="Engineered commercial roof replacement and complete tear-off"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
@@ -530,7 +530,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       <section className="relative bg-[#151515] border-y border-[#2a2a2a] text-white py-20 sm:py-32 overflow-hidden">
         {/* Full-width dramatic storm photograph backdrop */}
         <div className="absolute inset-0 z-0">
-          <img
+          <img decoding="async" loading="lazy"
             src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=2000&q=85"
             alt="Severe storm front over commercial architecture"
             referrerPolicy="no-referrer"
@@ -670,8 +670,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
 
           <div className="lg:col-span-6">
             <div className="relative overflow-hidden bg-[#181818] border border-[#e6e4df]">
-              <img
-                src="/assets/images/commercial-fluid-membrane.jpg"
+              <img decoding="async" loading="lazy"
+                src="/assets/images/library/commercial-single-ply-roofing-02.jpg"
                 alt="Seamless high-solids silicone commercial roof restoration membrane"
                 referrerPolicy="no-referrer"
                 className="w-full h-[440px] sm:h-[500px] object-cover"
@@ -707,8 +707,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
           <div className="bg-white border border-[#e6e4df] overflow-hidden">
             {/* Architectural Property Banner */}
             <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-[#181818]">
-              <img
-                src="/assets/images/commercial-portfolio-roofs.jpg"
+              <img decoding="async" loading="lazy"
+                src="/assets/images/library/commercial-property-roofing-02.jpg"
                 alt="Commercial asset management and multi-facility roof lifecycle protection"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover brightness-[0.6] contrast-[1.05]"
@@ -724,7 +724,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                   </div>
                 </div>
                 <div className="text-xs font-mono-crd text-[#bbbbbb] shrink-0">
-                  Documented Commercial Roof Portfolios
+                  Documented Four-State Portfolios
                 </div>
               </div>
             </div>
@@ -798,12 +798,36 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       <section className="bg-white border-b border-[#e6e4df] py-18 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 relative order-2 lg:order-1">
-            <img
-              src="/assets/images/commercial-campus-roofs.jpg"
-              alt="Multi-property commercial real estate roof assets and facility management"
-              referrerPolicy="no-referrer"
-              className="w-full h-[460px] object-cover border border-[#e6e4df]"
-            />
+            <div
+              className="grid grid-cols-3 sm:grid-cols-4 gap-2"
+              aria-label="Commercial roofing portfolio photo gallery"
+            >
+              {[
+                { src: '/assets/images/library/commercial-property-roofing-01.jpg', alt: 'Commercial property roofing project' },
+                { src: '/assets/images/library/commercial-property-roofing-02.jpg', alt: 'Commercial facility roof project' },
+                { src: '/assets/images/library/commercial-property-roofing-03.jpg', alt: 'Commercial real estate roofing' },
+                { src: '/assets/images/library/commercial-property-roofing-04.jpg', alt: 'Commercial property roof' },
+                { src: '/assets/images/library/commercial-roof-project-01.jpg', alt: 'Commercial roof project' },
+                { src: '/assets/images/library/commercial-roof-project-02.jpg', alt: 'Commercial roofing work' },
+                { src: '/assets/images/library/commercial-roof-project-03.jpg', alt: 'Commercial roof installation project' },
+                { src: '/assets/images/library/commercial-roof-inspection.jpg', alt: 'Commercial roof inspection' },
+                { src: '/assets/images/library/commercial-roof-inspection-detail.jpg', alt: 'Close-up commercial roof inspection' },
+                { src: '/assets/images/library/commercial-roof-maintenance.jpg', alt: 'Commercial roof maintenance' },
+                { src: '/assets/images/library/commercial-roof-maintenance-detail.jpg', alt: 'Commercial roof maintenance detail' },
+                { src: '/assets/images/library/crd-industrial-distribution-center-aerial.jpg', alt: 'Aerial view of an industrial distribution center roof' },
+              ].map((photo) => (
+                <div key={photo.src} className="aspect-[4/3] overflow-hidden border border-[#e6e4df] bg-[#f4f3ef]">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
@@ -1023,13 +1047,25 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Churches & Worship',
                 priority: 'Sanctuary preservation, steep-to-flat transitions, weekend service scheduling.',
                 href: '/industries/churches',
-                img: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=600&q=80',
+                img: '/assets/images/library/crd-church-facility-aerial.jpg',
               },
               {
                 title: 'Schools & Education',
                 priority: 'Summer or off-hours staging, strict student safety perimeter zoning.',
                 href: '/industries/schools',
                 img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80',
+              },
+              {
+                title: 'Poultry & Chicken Houses',
+                priority: 'Moisture control, ventilation protection, corrosion checks and long-span metal roof maintenance.',
+                href: '/industries/chicken-houses-poultry',
+                img: '/assets/images/library/crd-poultry-house-coating.jpg',
+              },
+              {
+                title: 'Equestrian & Horse Facilities',
+                priority: 'Barn, stable and riding-arena roof protection with animal-safe work planning.',
+                href: '/industries/horse-barns-equestrian',
+                img: '/assets/images/library/crd-equestrian-red-roof-barn.jpg',
               },
               {
                 title: 'Healthcare & Medical',
@@ -1041,7 +1077,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Industrial & Warehouses',
                 priority: 'Zero operational downtime, massive low-slope acreage, high-traffic HVAC curbs.',
                 href: '/industries/industrial',
-                img: '/assets/images/commercial-warehouse-roof.jpg',
+                img: '/assets/images/library/crd-industrial-distribution-center-aerial.jpg',
               },
               {
                 title: 'Retail & Strip Centers',
@@ -1080,10 +1116,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 img: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80',
               },
               {
-                title: 'Municipal & Institutional',
-                priority: 'Public bid compliance, prevailing wage documentation, long-term civic warranties.',
-                href: '/commercial-roofing',
-                img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80',
+                title: 'Storage Centers & Self Storage',
+                priority: 'Large metal-roof storage complexes, coating restoration, leak prevention and phased work around tenant access.',
+                href: '/commercial-roof-coatings',
+                img: '/assets/images/library/crd-self-storage-facility-aerial.jpg.JPG',
               },
               {
                 title: 'Property Management',
@@ -1091,6 +1127,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 href: '/property-management',
                 img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80',
               },
+
+
             ].map((ind) => (
               <Link
                 key={ind.title}
@@ -1098,7 +1136,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 className="group block bg-[#f4f3ef] border border-[#e6e4df] overflow-hidden hover:border-[#181818] transition-colors"
               >
                 <div className="h-32 overflow-hidden bg-[#181818]">
-                  <img
+                  <img decoding="async" loading="lazy"
                     src={ind.img}
                     alt={ind.title}
                     referrerPolicy="no-referrer"
@@ -1190,8 +1228,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 01 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
-                  src="/assets/images/commercial-logistics-tpo.jpg"
+                <img decoding="async" loading="lazy"
+                  src="/assets/images/library/crd-industrial-distribution-center-aerial.jpg"
                   alt="Industrial distribution center heat-welded white TPO single-ply roofing"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
@@ -1214,8 +1252,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 02 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
-                  src="/assets/images/commercial-metal-roof.jpg"
+                <img decoding="async" loading="lazy"
+                  src="/assets/images/library/commercial-roof-system-detail.jpg"
                   alt="Commercial standing seam metal roof restoration"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
@@ -1238,8 +1276,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 03 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
-                  src="/assets/images/commercial-medical-silicone.jpg"
+                <img decoding="async" loading="lazy"
+                  src="/assets/images/library/commercial-roofing-feature.jpg"
                   alt="Commercial medical pavilion high-solids silicone roof restoration"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
@@ -1262,8 +1300,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             {/* Project Category 04 */}
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
-                <img
-                  src="/assets/images/commercial-hail-inspection.jpg"
+                <img decoding="async" loading="lazy"
+                  src="/assets/images/library/commercial-roof-inspection.jpg"
                   alt="Severe hail damage commercial forensic mapping"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
@@ -1287,7 +1325,47 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       </section>
 
       {/* -------------------------------------------------------------------------
-          14. COST / PLANNING: Professional Assessment & Planning Estimator
+          14. RESOURCE CENTER: Commercial Roofing Decision Guides
+         ------------------------------------------------------------------------- */}
+      <section className="bg-white border-b border-[#e6e4df] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
+            <div className="max-w-3xl space-y-3">
+              <div className="text-xs font-mono-crd text-[#a8750f] uppercase tracking-wider">Commercial Roofing Resource Center</div>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase text-[#181818] tracking-tight">Make the next roof decision with better information.</h2>
+              <p className="text-sm sm:text-base text-[#555555] leading-relaxed">Straightforward technical guidance for owners and facility teams comparing roof systems, restoration options, maintenance needs and capital projects.</p>
+            </div>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] hover:text-[#181818] whitespace-nowrap">Explore all field notes <ArrowRight className="w-4 h-4" /></Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            <Link to="/blog/commercial-roof-coatings-vs-replacement" className="group border border-[#e6e4df] bg-[#f4f3ef] p-6 hover:border-[#a8750f] transition-colors">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#a8750f] mb-3">Restoration Decisions</div>
+              <h3 className="font-heading text-xl font-bold text-[#181818] group-hover:text-[#8b650f]">Commercial Roof Coatings vs. Replacement</h3>
+              <p className="text-sm text-[#666666] leading-relaxed mt-3">Understand which roof conditions should be assessed before choosing restoration or tear-off.</p>
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] mt-5">Read the guide <ArrowRight className="w-4 h-4" /></span>
+            </Link>
+            <Link to="/blog/tpo-vs-epdm-commercial-roofing" className="group border border-[#e6e4df] bg-[#f4f3ef] p-6 hover:border-[#a8750f] transition-colors">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#a8750f] mb-3">Roof Systems</div>
+              <h3 className="font-heading text-xl font-bold text-[#181818] group-hover:text-[#8b650f]">TPO vs. EPDM Commercial Roofing</h3>
+              <p className="text-sm text-[#666666] leading-relaxed mt-3">Compare membrane composition, seams, detailing and whole-assembly considerations.</p>
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] mt-5">Read the guide <ArrowRight className="w-4 h-4" /></span>
+            </Link>
+            <Link to="/blog/commercial-roof-coatings-energy-performance" className="group border border-[#e6e4df] bg-[#f4f3ef] p-6 hover:border-[#a8750f] transition-colors">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#a8750f] mb-3">Building Performance</div>
+              <h3 className="font-heading text-xl font-bold text-[#181818] group-hover:text-[#8b650f]">Roof Coatings & Energy Performance</h3>
+              <p className="text-sm text-[#666666] leading-relaxed mt-3">Learn why reflectivity alone cannot predict a building’s energy savings.</p>
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] mt-5">Read the guide <ArrowRight className="w-4 h-4" /></span>
+            </Link>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 border-t border-[#e6e4df] pt-6">
+            <span className="text-xs text-[#666666]">Have a property-specific question?</span>
+            <button onClick={() => onOpenInspection('Inspection')} className="inline-flex items-center gap-2 bg-[#181818] text-white px-5 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#333333]">Request a documented roof assessment <ArrowRight className="w-4 h-4" /></button>
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------------------------------------------------
+          15. COST / PLANNING: Professional Assessment & Planning Estimator
          ------------------------------------------------------------------------- */}
       <section className="bg-[#f4f3ef] border-b border-[#e6e4df] py-18 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -1337,8 +1415,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               Commercial Roofing Across Four States.
             </h2>
             <p className="text-sm text-[#444444] leading-relaxed">
-              CRD serves commercial properties throughout Texas, Arkansas, Louisiana, and Oklahoma. Operations are coordinated from Texarkana, and project scheduling, travel, and availability are confirmed based on location, scope, and site requirements.
+              Commercial ROOF Doctors serves commercial, industrial, and multi-site properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability, mobilization, and travel are confirmed during consultation based on property location and scope.
             </p>
+
+            <div className="pt-3 space-y-2">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#77736b]">Priority Commercial Markets</div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                <Link to="/service-areas/dallas-fort-worth" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Dallas–Fort Worth, TX</Link>
+                <Link to="/service-areas/greenville" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Greenville, TX</Link>
+                <Link to="/service-areas/shreveport" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Shreveport, LA</Link>
+                <Link to="/service-areas/bossier-city" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Bossier City, LA</Link>
+                <Link to="/service-areas/monroe" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Monroe, LA</Link>
+                <Link to="/service-areas/little-rock" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Little Rock, AR</Link>
+                <Link to="/service-areas/hot-springs" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Hot Springs, AR</Link>
+                <Link to="/service-areas/broken-bow" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Broken Bow, OK</Link>
+                <Link to="/service-areas/idabel" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Idabel, OK</Link>
+              </div>
+            </div>
 
             <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
               <Link
@@ -1402,11 +1495,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             Transparent Client Feedback
           </h3>
           <p className="text-xs sm:text-sm text-[#666666] max-w-xl mx-auto leading-relaxed">
-            Commercial Roof Doctors does not display fabricated ratings, simulated star counts, or synthetic testimonials. Verified customer reviews are maintained directly on Google Reviews.
+            Commercial ROOF Doctors does not display fabricated ratings, simulated star counts, or synthetic testimonials. Verified customer reviews are maintained directly on Google Reviews.
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.google.com/search?q=Commercial+Roof+Doctors+Texarkana"
+              href="https://www.google.com/maps/search/?api=1&query=Commercial%20Roof%20Doctors&query_place_id=ChIJgzuONCdqNIYRle0DzKrk2iQ"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#e6e4df] text-xs font-bold text-[#181818] border border-[#d5d2ca] uppercase tracking-wider transition-colors"
@@ -1415,7 +1508,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               <ExternalLink className="w-3.5 h-3.5 text-[#666666]" />
             </a>
             <a
-              href="https://www.google.com/search?q=Commercial+Roof+Doctors+Texarkana"
+              href="https://search.google.com/local/writereview?placeid=ChIJgzuONCdqNIYRle0DzKrk2iQ"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#e6e4df] text-xs font-bold text-[#181818] border border-[#d5d2ca] uppercase tracking-wider transition-colors"

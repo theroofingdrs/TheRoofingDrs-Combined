@@ -1,6 +1,14 @@
 steps:
+  - name: node:22-slim
+    id: validate-combined-site
+    entrypoint: bash
+    args:
+      - -c
+      - npm run install:apps && npm test
   - name: gcr.io/cloud-builders/docker
     id: build-combined-roof-doctors
+    env:
+      - DOCKER_BUILDKIT=1
     args:
       - build
       - --build-arg
@@ -12,28 +20,48 @@ steps:
       - .
   - name: gcr.io/cloud-builders/docker
     id: push-combined-image
+    entrypoint: sh
     args:
-      - push
-      - ${_IMAGE_URI}
+      - -c
+      - |
+        set -eu
+        docker push "${_IMAGE_URI}"
+        # Inspect this build's local image after push, not the mutable remote tag.
+        docker image inspect "${_IMAGE_URI}" --format '{{index .RepoDigests 0}}' > /workspace/combined-image-reference.txt
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     id: deploy-combined-cloud-run
-    entrypoint: gcloud
+    # Cloud Build substitutions are explicitly passed into the step environment.
+    env:
+      - DEPLOY_BRANCH=${BRANCH_NAME}
+    # Successful main-branch builds deploy the immutable image and route production traffic.
+    entrypoint: sh
     args:
-      - run
-      - deploy
-      - roof-doctors-combined
-      - --image
-      - ${_IMAGE_URI}
-      - --region
-      - us-east1
-      - --project
-      - trdcrd
-      - --quiet
+      - -c
+      - |
+        set -eu
+        if [ "$$DEPLOY_BRANCH" != "main" ]; then
+          echo "Branch $${DEPLOY_BRANCH:-unknown} is validation-only; production deploy is restricted to main."
+          exit 0
+        fi
+        image="$(cat /workspace/combined-image-reference.txt)"
+        repository="$$(printf '%s' '${_IMAGE_URI}' | sed 's/:[^/]*$$//')"
+        case "$$image" in
+          "$$repository"@sha256:*) ;;
+          *) echo "Pushed image repository does not match; refusing deployment." >&2; exit 1 ;;
+        esac
+        digest="$$(printf '%s' "$$image" | sed "s|^$$repository@sha256:||")"
+        if [ "$${#digest}" -ne 64 ] || printf '%s' "$$digest" | grep -q '[^0-9a-f]'; then
+          echo "Missing or invalid pushed image digest; refusing deployment." >&2
+          exit 1
+        fi
+        gcloud run deploy roof-doctors-combined --image "$image" --region us-east1 --project trdcrd --quiet
+        gcloud run services update-traffic roof-doctors-combined --to-latest --region us-east1 --project trdcrd --quiet
+
 images:
   - ${_IMAGE_URI}
 substitutions:
   _VITE_SUPABASE_URL: https://gubvelngdohrfvqeeabu.supabase.co
   _VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_o2OYRMRHrl8nz8mLdhX9Mg_Pk3jFz-K
-  _IMAGE_URI: us-east1-docker.pkg.dev/trdcrd/roof-doctors/combined:integration
+  _IMAGE_URI: us-east1-docker.pkg.dev/trdcrd/roof-doctors/combined:main
 options:
   logging: CLOUD_LOGGING_ONLY

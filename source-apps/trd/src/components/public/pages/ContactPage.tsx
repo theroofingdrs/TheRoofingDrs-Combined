@@ -3,7 +3,6 @@ import { SeoHead } from '../../common/SeoHead.tsx';
 import {
   PhoneCall,
   Mail,
-  MapPin,
   Clock,
   ShieldCheck,
   CalendarCheck,
@@ -64,7 +63,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
       setSubmitted(true);
     } catch (err: any) {
       console.error('Lead submission failed:', err);
-      setError('Unable to submit your request. Please call us directly at 903-231-5940 for immediate dispatch.');
+      setError(err instanceof Error ? err.message : 'Delivery is not confirmed. Please retry or call 903-231-5940.');
     } finally {
       setLoading(false);
     }
@@ -73,8 +72,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900 pb-20">
       <SeoHead
-        title="Contact The Roof Doctors | Texarkana Headquarters & Northeast Texas Dispatch"
-        description="Contact The Roof Doctors at 1420 Richmond Rd, Texarkana, TX. Phone: 903-231-5940. Email: TheRoofingDrs@gmail.com. Schedule a free 21-point inspection or 24/7 storm dispatch."
+        title="Contact The Roof Doctors | Northeast Texas Roofing Dispatch"
+        description="Contact The Roof Doctors in Texarkana, TX. Phone: 903-231-5940. Email: TheRoofingDrs@gmail.com. Schedule a free 21-point inspection or 24/7 storm dispatch."
         canonicalPath={currentPath}
       />
 
@@ -91,7 +90,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-            Headquartered in Texarkana, TX, our certified inspectors provide rapid dispatch across Bowie, Cass, Lamar, Hopkins, Gregg, Smith, and Harrison Counties.
+            Based in Texarkana, TX, our certified inspectors provide rapid dispatch across Bowie, Cass, Lamar, Hopkins, Gregg, Smith, and Harrison Counties.
           </p>
         </div>
       </section>
@@ -103,21 +102,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs space-y-6">
               <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">
-                Corporate Headquarters
+                Contact & Dispatch
               </h2>
 
               <div className="space-y-5 text-xs text-slate-600">
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <strong className="text-slate-900 block font-bold text-sm">Physical Office</strong>
-                    <span>1420 Richmond Rd</span>
-                    <span className="block">Texarkana, TX 75501</span>
-                  </div>
-                </div>
-
                 <div className="flex items-start gap-3">
                   <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <PhoneCall className="w-5 h-5" />
@@ -187,7 +175,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     Inspection Request Received
                   </h3>
                   <p className="text-xs sm:text-sm text-emerald-900 max-w-md mx-auto leading-relaxed">
-                    Thank you! A certified diagnostic project manager from our Texarkana office has received your request and will call you shortly at <strong>{formData.phone}</strong> to confirm scheduling.
+                    Thank you! A certified diagnostic project manager from our dispatch team has received your request and will call you shortly at <strong>{formData.phone}</strong> to confirm scheduling.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -207,10 +195,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-name">
                         Full Name *
                       </label>
-                      <input
+                      <input id="residential-contact-name" name="name" autoComplete="name"
                         type="text"
                         required
                         value={formData.name}
@@ -221,12 +209,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-phone">
                         Phone Number *
                       </label>
-                      <input
+                      <input id="residential-contact-phone" name="phone" autoComplete="tel" inputMode="tel"
                         type="tel"
-                        required
+                        required={!formData.email.trim()}
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="903-555-0199"
@@ -236,12 +224,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-email">
                       Email Address *
                     </label>
-                    <input
+                    <input id="residential-contact-email" name="email" autoComplete="email" inputMode="email"
                       type="email"
-                      required
+                      required={!formData.phone.trim()}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john@example.com"
@@ -250,27 +238,27 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-address">
                       Street Address *
                     </label>
-                    <input
+                    <input id="residential-contact-address" name="address" autoComplete="address-line1"
                       type="text"
-                      required
+
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      placeholder="e.g. 1420 Richmond Rd"
+                      placeholder="e.g. Texarkana, TX"
                       className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs text-slate-900 focus:outline-none focus:border-red-600"
                     />
                   </div>
 
                   <div className="grid grid-cols-12 gap-3">
                     <div className="col-span-12 sm:col-span-6">
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-city">
                         City *
                       </label>
-                      <input
+                      <input id="residential-contact-city" name="city" autoComplete="address-level2"
                         type="text"
-                        required
+
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="e.g. Texarkana, Longview, Shreveport..."
@@ -279,13 +267,13 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     </div>
 
                     <div className="col-span-4 sm:col-span-2">
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-state">
                         State *
                       </label>
-                      <input
+                      <input id="residential-contact-state" name="state" autoComplete="address-level1"
                         type="text"
                         maxLength={2}
-                        required
+
                         value={formData.state}
                         onChange={(e) => setFormData({ ...formData, state: e.target.value.toUpperCase() })}
                         placeholder="TX"
@@ -294,10 +282,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     </div>
 
                     <div className="col-span-8 sm:col-span-4">
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 mb-1" htmlFor="residential-contact-zip">
                         Zip Code
                       </label>
-                      <input
+                      <input id="residential-contact-zip" name="zip" autoComplete="postal-code" inputMode="numeric"
                         type="text"
                         value={formData.zip}
                         onChange={(e) => setFormData({ ...formData, zip: e.target.value })}

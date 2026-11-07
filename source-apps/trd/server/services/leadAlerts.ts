@@ -58,7 +58,8 @@ function getAppBaseUrl(): string {
  */
 function buildEmailSubject(lead: Lead): string {
   const city = lead.city?.trim() || 'Texarkana';
-  return `NEW ROOF LEAD — ${lead.name} — ${city}`;
+  const division = String((lead as any).division || 'RESIDENTIAL').toUpperCase() === 'COMMERCIAL' ? 'COMMERCIAL' : 'RESIDENTIAL';
+  return `${division} ROOF LEAD — ${lead.name} — ${city}`;
 }
 
 /**

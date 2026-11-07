@@ -74,4 +74,3 @@ export const CrdShield: React.FC<{ className?: string; theme?: 'light' | 'dark' 
   className,
   theme = 'dark',
 }) => <CRDLogo variant="mark" theme={theme} className={className} />;
-

@@ -26,6 +26,7 @@ export interface ServiceAreaData {
   countiesAndCitiesServed: string[];
   keyIndustriesInRegion: string[];
   serviceCapabilities: string[];
+  cityLinks?: { name: string; href: string }[];
 }
 
 interface ServiceAreaTemplateProps {
@@ -45,6 +46,8 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
         title={data.title}
         description={data.metaDescription}
         canonicalPath={data.canonicalPath}
+        serviceType={`Commercial roofing services in ${data.regionName}`}
+        areaServed={data.regionName}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Service Areas', url: '/service-areas' },
@@ -57,7 +60,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
         <div className="max-w-4xl mx-auto text-center space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono-crd uppercase tracking-wider">
             <MapPin className="w-3.5 h-3.5" />
-            <span>Four-State Commercial Roofing Coverage</span>
+            <span>Commercial Roofing Services</span>
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight uppercase text-white leading-tight">
             {data.heroHeadline}
@@ -88,22 +91,22 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
       <section className="bg-[#060911] border-b border-slate-800 py-6 px-4">
         <div className="max-w-4xl mx-auto p-4 rounded-lg bg-slate-900/60 border border-slate-800 text-xs text-slate-300 space-y-1">
           <span className="font-bold text-amber-400 uppercase font-mono-crd block">
-            Service-Area Business Model Disclosure:
+            Commercial Roofing Service Area:
           </span>
-          Commercial Roof Doctors serves commercial properties across Texas, Arkansas, Louisiana, and Oklahoma. Our Texarkana operations hub at 614 Robison Rd coordinates field logistics and dispatch; project availability and travel are confirmed based on location and scope.
+          Commercial Roof Doctors works with commercial property owners and managers in {data.regionName} on roof inspections, leak repairs, restoration, compatible coating systems and replacement planning. Recommendations depend on the existing roof assembly and documented condition. Project availability is confirmed by location and scope.
         </div>
       </section>
 
-      {/* Regional Weather & Weathering Profile */}
+      {/* Local Roof Conditions & Weather Exposure */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6 space-y-4">
             <div className="flex items-center gap-2 text-xs font-mono-crd text-amber-500 uppercase tracking-widest">
               <CloudLightning className="w-4 h-4" />
-              Regional Climate & Storm Dynamics
+              Local Roof Conditions
             </div>
             <h2 className="text-3xl font-heading font-black uppercase text-white">
-              Weathering Impact in {data.regionName}
+              Roof Conditions in {data.regionName}
             </h2>
             <p className="text-sm text-slate-300 leading-relaxed">
               {data.weatherAndStormFactors}
@@ -112,7 +115,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
 
           <div className="lg:col-span-6 bg-[#0e1422] border border-slate-800 rounded-xl p-6 space-y-4">
             <h3 className="font-heading font-bold text-base uppercase text-white border-b border-slate-800 pb-2">
-              Example Markets & Communities
+              Local Commercial Markets
             </h3>
             <div className="flex flex-wrap gap-2">
               {data.countiesAndCitiesServed.map((loc, idx) => (
@@ -125,15 +128,52 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
         </div>
       </section>
 
+      {/* Commercial Property Types & Nearby Markets */}
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="max-w-3xl">
+          <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">
+            Local Commercial Market
+          </div>
+          <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">
+            Commercial Properties in {data.regionName}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-5">
+            {data.keyIndustriesInRegion.map((industry, idx) => (
+              <div key={idx} className="p-4 bg-[#0e1422] border border-slate-800 rounded-lg text-xs text-slate-200">
+                {industry}
+              </div>
+            ))}
+          </div>
+        </div>
+        {data.cityLinks && data.cityLinks.length > 0 && (
+          <div className="border-t border-slate-800 pt-6">
+            <h3 className="font-heading font-bold text-sm uppercase text-white mb-3">
+              Nearby Commercial Service Markets
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {data.cityLinks.map((city) => (
+                <Link
+                  key={city.href}
+                  to={city.href}
+                  className="px-3 py-2 bg-slate-900 border border-slate-800 hover:border-amber-500 text-xs text-slate-300 hover:text-white transition-colors"
+                >
+                  {city.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </section>
+
       {/* Capabilities */}
       <section className="py-16 bg-[#060911] border-y border-slate-800 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="max-w-3xl">
             <div className="text-xs font-mono-crd text-amber-500 uppercase tracking-widest">
-              Field Deployments
+              Roofing Services
             </div>
             <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">
-              Commercial Capabilities in {data.regionName}
+              Commercial Roofing Services in {data.regionName}
             </h2>
           </div>
 
@@ -151,10 +191,10 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
       {/* Conversion Banner */}
       <section className="pt-16 max-w-4xl mx-auto px-4 text-center space-y-6">
         <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase text-white">
-          Commercial Roofing in {data.regionName}
+          Commercial Roofing Services in {data.regionName}
         </h2>
         <p className="text-sm text-slate-300 max-w-xl mx-auto">
-          Contact Commercial Roof Doctors for rapid field assessment, storm damage forensics, or multi-property capital budgeting.
+          Request a commercial roof evaluation to document existing conditions and discuss repair, restoration, compatible coating or replacement options for your property.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button

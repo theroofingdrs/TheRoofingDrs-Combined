@@ -17,6 +17,7 @@ interface SeoMetaProps {
   canonicalPath?: string;
   breadcrumbs?: BreadcrumbItem[];
   serviceType?: string;
+  areaServed?: string;
   faqItems?: FaqItem[];
 }
 
@@ -26,6 +27,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
   canonicalPath = '',
   breadcrumbs,
   serviceType,
+  areaServed,
   faqItems,
 }) => {
   useEffect(() => {
@@ -34,29 +36,31 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
       const prefixedPath = (normalizedPath === '/commercial' || normalizedPath.startsWith('/commercial/'))
         ? normalizedPath
         : `/commercial${normalizedPath === '/' ? '/' : normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`}`;
-      return `${window.location.origin}${prefixedPath}`;
+      return `https://theroofingdrs.com${prefixedPath}`;
     };
     const fullUrl = toCommercialUrl(canonicalPath);
 
-    // Document Title
-    document.title = title.includes('Commercial Roof Doctors')
-      ? title
-      : `${title} | Commercial Roof Doctors`;
+    document.title =
+      title.includes('Commercial Roof Doctors') || /\|\s*CRD$/i.test(title)
+        ? title
+        : `${title} | CRD`;
 
-    // Meta Description
-    let metaDesc = document.querySelector("meta[name='description']");
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute('content', description);
+    const setMetaContent = (selector: string, attribute: string, key: string, value: string) => {
+      let element = document.querySelector(selector);
+      if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute(attribute, key);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', value);
+    };
 
-    // OpenGraph Title & Description
-    let ogTitle = document.querySelector("meta[property='og:title']");
-    if (ogTitle) ogTitle.setAttribute('content', title);
-    let ogDesc = document.querySelector("meta[property='og:description']");
-    if (ogDesc) ogDesc.setAttribute('content', description);
+    setMetaContent("meta[name='description']", 'name', 'description', description);
+    setMetaContent("meta[property='og:title']", 'property', 'og:title', title);
+    setMetaContent("meta[property='og:description']", 'property', 'og:description', description);
+    setMetaContent("meta[property='og:url']", 'property', 'og:url', fullUrl);
+    setMetaContent("meta[name='twitter:title']", 'name', 'twitter:title', title);
+    setMetaContent("meta[name='twitter:description']", 'name', 'twitter:description', description);
 
     // Canonical
     let canonical = document.querySelector("link[rel='canonical']");
@@ -67,30 +71,21 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
     }
     canonical.setAttribute('href', fullUrl);
 
-    // Clean up existing structured data injected by this component
     const oldScripts = document.querySelectorAll('script[data-crd-seo="true"]');
-    oldScripts.forEach((s) => s.remove());
+    oldScripts.forEach((script) => script.remove());
 
-    // Structured Data: Organization / RoofingContractor
     const organizationSchema = {
       '@context': 'https://schema.org',
-      '@type': 'RoofingContractor',
+      '@type': 'Organization',
       name: BUSINESS_INFO.name,
       telephone: BUSINESS_INFO.phone,
       email: BUSINESS_INFO.email,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: BUSINESS_INFO.address.street,
-        addressLocality: BUSINESS_INFO.address.city,
-        addressRegion: BUSINESS_INFO.address.state,
-        postalCode: BUSINESS_INFO.address.zip,
-        addressCountry: 'US',
-      },
       areaServed: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'].map((state) => ({
         '@type': 'AdministrativeArea',
         name: state,
       })),
-      description: description,
+      description:
+        'Commercial roofing evaluations, coatings, restoration, inspections, repairs and replacement planning for commercial properties across Texas, Arkansas, Louisiana and Oklahoma.',
     };
 
     const scriptOrg = document.createElement('script');
@@ -99,7 +94,6 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
     scriptOrg.textContent = JSON.stringify(organizationSchema);
     document.head.appendChild(scriptOrg);
 
-    // Structured Data: BreadcrumbList
     if (breadcrumbs && breadcrumbs.length > 0) {
       const breadcrumbSchema = {
         '@context': 'https://schema.org',
@@ -145,14 +139,15 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
       const serviceSchema = {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        serviceType: serviceType,
+        serviceType,
         provider: {
-          '@type': 'RoofingContractor',
+          '@type': 'Organization',
           name: BUSINESS_INFO.name,
           telephone: BUSINESS_INFO.phone,
         },
-        areaServed: ['Texas', 'Arkansas', 'Louisiana', 'Oklahoma'],
-        description: description,
+        areaServed: areaServed ||
+          'Commercial roofing service area across Texas, Arkansas, Louisiana and Oklahoma; project availability is confirmed based on location, roof type and scope',
+        description,
       };
 
       const scriptService = document.createElement('script');
@@ -161,7 +156,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
       scriptService.textContent = JSON.stringify(serviceSchema);
       document.head.appendChild(scriptService);
     }
-  }, [title, description, canonicalPath, breadcrumbs, serviceType, faqItems]);
+  }, [title, description, canonicalPath, breadcrumbs, serviceType, areaServed, faqItems]);
 
   return null;
 };

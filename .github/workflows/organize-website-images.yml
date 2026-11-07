@@ -1,0 +1,185 @@
+name: Organize approved website image library
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/organize-website-images.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out approved image source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: source
+      - name: Check out isolated website image branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/integration-image-library
+          path: target
+          fetch-depth: 0
+      - name: Copy and organize original resolution images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil, json, hashlib
+          src = Path("source/image-library/incoming")
+          dst = Path("target")
+          # Approved image allocation. Originals in image-library/incoming are never changed.
+          mapping = [
+            ("IMG_3990.jpeg","source-apps/trd/public/assets/images/library/residential-chimney-flashing.jpg","Residential","Roof repair and flashing"),
+            ("IMG_3992.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-detail.jpg","Residential","Roofing systems"),
+            ("IMG_3993.jpeg","source-apps/trd/public/assets/images/library/residential-roof-installation-01.jpg","Residential","Roof replacement"),
+            ("IMG_3994.jpeg","source-apps/trd/public/assets/images/library/residential-roof-installation-02.jpg","Residential","Roof replacement"),
+            ("IMG_3995.jpeg","source-apps/trd/public/assets/images/library/residential-roof-installation-03.jpg","Residential","Roof replacement"),
+            ("IMG_3996.jpeg","source-apps/trd/public/assets/images/library/residential-roof-installation-04.jpg","Residential","Roof replacement"),
+            ("IMG_3997.jpeg","source-apps/trd/public/assets/images/library/residential-roof-installation-05.jpg","Residential","Roof replacement"),
+            ("IMG_3998.jpeg","source-apps/trd/public/assets/images/library/residential-roof-installation-06.jpg","Residential","Roof replacement"),
+            ("IMG_4008.jpeg","source-apps/trd/public/assets/images/library/residential-metal-roof-01.jpg","Residential","Metal roofing"),
+            ("IMG_4009.jpeg","source-apps/trd/public/assets/images/library/residential-metal-roof-02.jpg","Residential","Metal roofing"),
+            ("IMG_4013.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-01.jpg","Residential","Residential projects"),
+            ("IMG_4016.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-02.jpg","Residential","Residential projects"),
+            ("IMG_4024.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-03.jpg","Residential","Residential projects"),
+            ("IMG_4025.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-04.jpg","Residential","Residential projects"),
+            ("IMG_4029.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-05.jpg","Residential","Residential projects"),
+            ("IMG_4030.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-06.jpg","Residential","Residential projects"),
+            ("IMG_4031.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-07.jpg","Residential","Residential projects"),
+            ("IMG_4033.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-08.jpg","Residential","Residential projects"),
+            ("IMG_4034.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-09.jpg","Residential","Residential projects"),
+            ("IMG_4035.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-10.jpg","Residential","Residential projects"),
+            ("IMG_4036.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-11.jpg","Residential","Residential projects"),
+            ("IMG_4038.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-12.jpg","Residential","Residential projects"),
+            ("IMG_4039.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-13.jpg","Residential","Residential projects"),
+            ("IMG_4040.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-14.jpg","Residential","Residential projects"),
+            ("IMG_4041.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-15.jpg","Residential","Residential projects"),
+            ("IMG_4042.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-16.jpg","Residential","Residential projects"),
+            ("IMG_4043.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-17.jpg","Residential","Residential projects"),
+            ("IMG_4044.jpeg","source-apps/trd/public/assets/images/library/residential-roof-project-18.jpg","Residential","Residential projects"),
+            ("IMG_4046.jpeg","source-apps/trd/public/assets/images/library/roof-damage-inspection.jpg","Residential","Storm damage and inspections"),
+            ("IMG_4058.jpeg","source-apps/trd/public/assets/images/library/residential-roof-repair.jpg","Residential","Roof repair"),
+            ("IMG_4063.jpeg","source-apps/trd/public/assets/images/library/aerial-residential-roof-project.jpg","Residential","Aerial project imagery"),
+            ("IMG_4121.jpeg","source-apps/trd/public/assets/images/library/aerial-roofing-project-02.jpg","Residential","Aerial project imagery"),
+            ("IMG_4689.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-feature.jpg","Residential","Residential roofing"),
+            ("IMG_4706.jpeg","source-apps/trd/public/assets/images/library/residential-metal-roofing-detail.jpg","Residential","Metal roofing"),
+            ("IMG_4707.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-detail.jpg","Residential","Residential roofing"),
+            ("IMG_4709.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-closeup.jpg","Residential","Roof details"),
+            ("IMG_4710.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-01.jpg","Residential","Shingle roofing"),
+            ("IMG_4711.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-02.jpg","Residential","Shingle roofing"),
+            ("IMG_4712.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-03.jpg","Residential","Shingle roofing"),
+            ("IMG_4713.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-04.jpg","Residential","Shingle roofing"),
+            ("IMG_4714.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-05.jpg","Residential","Shingle roofing"),
+            ("IMG_4715.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-06.jpg","Residential","Shingle roofing"),
+            ("IMG_4716.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-07.jpg","Residential","Shingle roofing"),
+            ("IMG_4717.jpeg","source-apps/trd/public/assets/images/library/shingle-roofing-detail-08.jpg","Residential","Shingle roofing"),
+            ("IMG_4718.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-repair.jpg","Residential","Roof repair"),
+            ("IMG_4719.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-repair-02.jpg","Residential","Roof repair"),
+            ("IMG_4720.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-inspection.jpg","Residential","Roof inspections"),
+            ("IMG_4721.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-inspection-02.jpg","Residential","Roof inspections"),
+            ("IMG_4722.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-detail-02.jpg","Residential","Roof details"),
+            ("IMG_4723.jpeg","source-apps/trd/public/assets/images/library/residential-roofing-hero-detail.jpg","Residential","Residential hero and services"),
+            ("IMG_4010.jpeg","source-apps/crd/public/assets/images/library/commercial-roofing-project-01.jpg","Commercial","Commercial roofing overview"),
+            ("IMG_4011.jpeg","source-apps/crd/public/assets/images/library/commercial-roofing-project-02.jpg","Commercial","Commercial roofing overview"),
+            ("IMG_4012.jpeg","source-apps/crd/public/assets/images/library/commercial-roofing-project-03.jpg","Commercial","Commercial roofing overview"),
+            ("IMG_4037.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-replacement.jpg","Commercial","Commercial roof replacement"),
+            ("IMG_4059.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-inspection.jpg","Commercial","Commercial roof inspections"),
+            ("IMG_4060.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-maintenance.jpg","Commercial","Commercial roof maintenance"),
+            ("IMG_4687.jpeg","source-apps/crd/public/assets/images/library/commercial-modified-bitumen-roofing.jpg","Commercial","Modified bitumen roofing"),
+            ("IMG_4690.jpeg","source-apps/crd/public/assets/images/library/commercial-industrial-roofing.jpg","Commercial","Industrial and warehouse roofing"),
+            ("IMG_4691.jpeg","source-apps/crd/public/assets/images/library/commercial-single-ply-roofing-01.jpg","Commercial","TPO and single-ply roofing"),
+            ("IMG_4692.jpeg","source-apps/crd/public/assets/images/library/commercial-single-ply-roofing-02.jpg","Commercial","TPO and single-ply roofing"),
+            ("IMG_4693.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-inspection-detail.jpg","Commercial","Commercial roof inspections"),
+            ("IMG_4694.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-system-detail.jpg","Commercial","Commercial roof systems"),
+            ("IMG_4695.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-maintenance-detail.jpg","Commercial","Commercial roof maintenance"),
+            ("IMG_4696.jpeg","source-apps/crd/public/assets/images/library/commercial-roofing-feature.jpg","Commercial","Commercial roofing overview"),
+            ("IMG_4697.jpeg","source-apps/crd/public/assets/images/library/commercial-property-roofing-01.jpg","Commercial","Property and facility roofing"),
+            ("IMG_4698.jpeg","source-apps/crd/public/assets/images/library/commercial-property-roofing-02.jpg","Commercial","Property and facility roofing"),
+            ("IMG_4699.jpeg","source-apps/crd/public/assets/images/library/commercial-property-roofing-03.jpg","Commercial","Property and facility roofing"),
+            ("IMG_4700.jpeg","source-apps/crd/public/assets/images/library/commercial-property-roofing-04.jpg","Commercial","Property and facility roofing"),
+            ("IMG_4703.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-project-01.jpg","Commercial","Commercial project gallery"),
+            ("IMG_4704.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-project-02.jpg","Commercial","Commercial project gallery"),
+            ("IMG_4705.jpeg","source-apps/crd/public/assets/images/library/commercial-roof-project-03.jpg","Commercial","Commercial project gallery")
+          ]
+
+          # Curated multi-category reuse. Each original remains a single source asset;
+          # placements are references, not duplicate copies.
+          extra_metadata = {
+            "IMG_4035.jpeg": {"tags": ["agricultural","barn","metal-roof","reroofing","roof-replacement","illustrative-service-photo"], "additional_placements": ["Agricultural and barn reroofing","Metal roof replacement","Roof replacement and restoration"]},
+            "IMG_4012.jpeg": {"tags": ["commercial","flat-roof","roof-coatings","roof-restoration","maintenance","industrial"], "additional_placements": ["Commercial roof coatings","Silicone roof restoration","Warehouse and storage building coatings","Commercial roof maintenance"]},
+            "IMG_4037.jpeg": {"tags": ["commercial","roof-replacement","tear-off","reroofing","commercial-flat-roof"], "additional_placements": ["Commercial roof replacement","Large-loss roof recovery","Industrial facility reroofing"]},
+            "IMG_4059.jpeg": {"tags": ["commercial","roof-inspection","maintenance","roof-repair","low-slope"], "additional_placements": ["Commercial roof inspections","Preventive maintenance","Commercial roof repair"]},
+            "IMG_4060.jpeg": {"tags": ["commercial","maintenance","roof-inspection","roof-repair","coatings"], "additional_placements": ["Commercial roof maintenance","Roof inspection","Commercial coatings and restoration"]},
+            "IMG_4690.jpeg": {"tags": ["commercial","industrial","warehouse","storage","low-slope","roof-coatings","silicone","restoration","maintenance"], "additional_placements": ["Industrial facilities","Warehouse and storage building coatings","Silicone roof restoration","Commercial metal roofing","Preventive maintenance"]},
+            "IMG_4691.jpeg": {"tags": ["commercial","tpo","single-ply","roof-inspection","roof-repair","installation"], "additional_placements": ["TPO roofing","Commercial roof inspections","Commercial roof repair","Single-ply roofing systems"]},
+            "IMG_4692.jpeg": {"tags": ["commercial","tpo","pvc","single-ply","membrane-installation","flat-roof"], "additional_placements": ["TPO roofing","PVC roofing","Single-ply roofing systems","Commercial roof replacement"]},
+            "IMG_4693.jpeg": {"tags": ["commercial","roof-inspection","drainage","maintenance","flat-roof","repair"], "additional_placements": ["Commercial roof inspections","Roof drainage and maintenance","Commercial roof repair"]},
+            "IMG_4694.jpeg": {"tags": ["commercial","roof-system","restoration","metal-roof","low-slope"], "additional_placements": ["Commercial roof systems","Metal roof restoration","Commercial roof coatings"]},
+            "IMG_4695.jpeg": {"tags": ["commercial","maintenance","roof-inspection","drainage","flat-roof"], "additional_placements": ["Commercial roof maintenance","Commercial roof inspections","Roof drainage details"]},
+            "IMG_4696.jpeg": {"tags": ["commercial","industrial","warehouse","storage","low-slope","roof-coatings","silicone","restoration","maintenance"], "additional_placements": ["Industrial facilities","Warehouse and storage building coatings","Silicone roof restoration","Commercial metal roofing","Preventive maintenance"]},
+            "IMG_4697.jpeg": {"tags": ["commercial","church","institutional","facility-roofing","roof-inspection"], "additional_placements": ["Church and religious facilities","Institutional roofing","Commercial roof inspections"]},
+            "IMG_4698.jpeg": {"tags": ["commercial","industrial","institutional","facility-roofing","low-slope"], "additional_placements": ["Industrial facilities","Institutional roofing","Commercial roof maintenance"]},
+            "IMG_4699.jpeg": {"tags": ["commercial","church","institutional","facility-roofing","roofing"], "additional_placements": ["Church and religious facilities","Institutional roofing","Commercial roofing overview"]},
+            "IMG_4700.jpeg": {"tags": ["commercial","church","metal-roof","institutional","facility-roofing"], "additional_placements": ["Church and religious facilities","Commercial metal roofing","Metal roof restoration"]},
+            "IMG_4703.jpeg": {"tags": ["commercial","government","institutional","facility-roofing","roofing"], "additional_placements": ["Government and institutional facilities","Commercial roofing overview","Commercial roof inspections"]},
+            "IMG_4704.jpeg": {"tags": ["commercial","retail","facility-roofing","low-slope","roofing"], "additional_placements": ["Retail and commercial facilities","Commercial roofing overview","Commercial roof maintenance"]},
+            "IMG_4705.jpeg": {"tags": ["commercial","church","institutional","facility-roofing","roofing"], "additional_placements": ["Church and religious facilities","Institutional roofing","Commercial roofing overview"]},
+          }
+          manifest = []
+          for original, relative, brand, placement in mapping:
+              source = src / original
+              if not source.exists():
+                  raise SystemExit(f"Missing approved source image: {original}")
+              target = dst / relative
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(source, target)
+              metadata = extra_metadata.get(original, {})
+              default_tag = placement.lower().replace('&', 'and').replace('/', '-').replace(' ', '-')
+              tags = sorted(set([brand.lower(), default_tag, *metadata.get('tags', [])]))
+              manifest.append({
+                  "original": f"image-library/incoming/{original}",
+                  "website_asset": relative.removeprefix("source-apps/trd/public").removeprefix("source-apps/crd/public"),
+                  "brand": brand,
+                  "recommended_placement": placement,
+                  "tags": tags,
+                  "additional_placements": metadata.get("additional_placements", []),
+                  "usage_context": "illustrative-unless-verified",
+                  "sha256": hashlib.sha256(source.read_bytes()).hexdigest()
+              })
+          # Ensure the target branch has the manifest directory.
+          (dst / "image-library").mkdir(parents=True, exist_ok=True)
+          # Exact duplicate: retain IMG_4707 and do not create a second website copy for IMG_4708.
+          (dst / "image-library/website-image-map.json").write_text(json.dumps(manifest, indent=2))
+          (dst / "image-library/WEBSITE-IMAGE-PLACEMENTS.md").write_text(
+              "# Website image placements\n\n"
+              "Original uploads remain unchanged in image-library/incoming. The website-ready copies are stored in each brand's public assets/images/library directory.\n\n"
+              "## Residential (The ROOF Doctors)\n"
+              "Use residential assets for the residential home page, gallery, roof replacement, roof repair, storm damage, inspection, metal roofing and roofing systems pages.\n\n"
+              "## Commercial (Commercial ROOF Doctors)\n"
+              "Use commercial assets for the commercial home page, commercial roofing overview, coatings and restoration, TPO, EPDM, modified bitumen, metal roofing, inspections, maintenance and replacement pages. Prioritize coatings/restoration content in CRD page imagery.\n\n"
+              "## Multi-category reuse\n"
+              "Each original is retained once. Use the manifest tags and additional_placements to reuse that same website asset across relevant service, roof-type, building-type and industry pages; do not create a separate image copy for each placement.\n\n"
+              "Examples include barn imagery across agricultural reroofing and metal-roof replacement, and warehouse imagery across industrial roofing, storage-building coatings, silicone restoration and maintenance.\n\n"
+              "## Visual truth\n"
+              "Use these images as illustrative service imagery unless a specific completed customer project is independently verified. Do not imply a named customer, address, project result, testimonial or endorsement from an illustrative image.\n\n"
+              "## Exclusions and handling\n"
+              "Aqua-branded photos are excluded from website-ready copies pending a clean crop. The exact duplicate IMG_4708 is omitted; IMG_4707 is retained. The three previously identified deletion candidates remain in the incoming archive and are not copied to website assets.\n\n"
+              "Use these images as illustrative roofing/service imagery unless a specific completed customer project is independently verified. Do not imply a customer relationship, address, project result, testimonial or endorsement from an image alone.\n"
+          )
+          print(f"Copied {len(manifest)} original-resolution images.")
+          PY
+      - name: Commit website assets to feature branch only
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source-apps/trd/public/assets/images/library source-apps/crd/public/assets/images/library image-library/website-image-map.json image-library/WEBSITE-IMAGE-PLACEMENTS.md
+          git commit -m "Organize approved roofing website image assets"
+          git push origin HEAD:feature/integration-image-library

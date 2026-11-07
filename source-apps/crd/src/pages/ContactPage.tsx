@@ -1,3 +1,4 @@
+import { submitInquiry } from '../../../../shared/intake-client.ts';
 import React, { useState } from 'react';
 import {
   Phone,
@@ -33,8 +34,8 @@ export const ContactPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone) {
-      setErrorMsg('Please provide your name and phone number.');
+    if (!formData.name.trim() || (!formData.phone.trim() && !formData.email.trim())) {
+      setErrorMsg('Please provide your name and a phone number or email address.');
       return;
     }
 
@@ -42,10 +43,7 @@ export const ContactPage: React.FC = () => {
     setErrorMsg('');
 
     try {
-      const res = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      await submitInquiry('/commercial/api/leads', {
           fullName: formData.name,
           companyName: formData.company,
           email: formData.email,
@@ -56,13 +54,10 @@ export const ContactPage: React.FC = () => {
           urgency: formData.isEmergency ? 'Emergency (Active Leak)' : 'Standard Business Hours',
           notes: formData.message,
           source: 'Contact Page Form',
-        }),
       });
-
-      if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
     } catch (err) {
-      setErrorMsg('Unable to submit inquiry. Please call our direct dispatch line at (903) 231-5940.');
+      setErrorMsg(err instanceof Error ? err.message : 'Delivery is not confirmed. Please retry or call (903) 231-5940.');
     } finally {
       setSubmitting(false);
     }
@@ -102,7 +97,7 @@ export const ContactPage: React.FC = () => {
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-[#0e1422] border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
               <h2 className="text-2xl font-heading font-black uppercase text-white border-b border-slate-800 pb-3">
-                Headquarters & Dispatch
+                Commercial Dispatch
               </h2>
 
               <div className="space-y-4 text-xs sm:text-sm">
@@ -135,12 +130,12 @@ export const ContactPage: React.FC = () => {
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-xs font-mono-crd uppercase">Field Operations & Dispatch Base</span>
+                    <span className="text-slate-400 block text-xs font-mono-crd uppercase">Commercial Service Area</span>
                     <span className="text-white text-sm font-semibold block">
-                      {BUSINESS_INFO.address.street}
+                      {BUSINESS_INFO.statesCovered.join(", ")}
                     </span>
                     <span className="text-slate-400 text-xs">
-                      {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state} {BUSINESS_INFO.address.zip}
+                      Service area extends up to 250 miles from Texarkana. Project availability is confirmed by location and scope.
                     </span>
                   </div>
                 </div>
@@ -166,7 +161,7 @@ export const ContactPage: React.FC = () => {
                 <span className="font-bold text-amber-400 uppercase font-mono-crd block">
                   On-Site Commercial Service Model:
                 </span>
-                Our Robison Rd facility houses our field equipment, drone flight ops, and staging. All diagnostics, inspections, and repairs are executed on-site at your facility.
+                Our field teams travel directly to commercial properties throughout our service area. Diagnostics, inspections, and repairs are performed on-site at your facility.
               </div>
             </div>
           </div>
@@ -182,7 +177,7 @@ export const ContactPage: React.FC = () => {
                 <CheckCircle className="w-12 h-12 text-emerald-400 mx-auto" />
                 <h3 className="text-2xl font-heading font-bold uppercase text-white">Inquiry Received</h3>
                 <p className="text-sm text-slate-300 max-w-md mx-auto">
-                  Thank you. Commercial Roof Doctors has logged your request. A commercial technical specialist will contact you within 1 business hour.
+                  Thank you. Your inquiry has reached our Operations team. Our team will contact you to confirm your needs and availability. No appointment is booked yet.
                 </p>
                 <div className="pt-2 text-xs font-mono-crd text-slate-400">
                   Direct Immediate Dispatch: <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="text-amber-400 font-bold">{BUSINESS_INFO.phone}</a>
@@ -198,8 +193,8 @@ export const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-mono-crd uppercase text-slate-400">Your Full Name *</label>
-                    <input
+                    <label className="text-xs font-mono-crd uppercase text-slate-400" htmlFor="commercial-contact-name">Your Full Name *</label>
+                    <input id="commercial-contact-name" name="name" autoComplete="name"
                       type="text"
                       required
                       placeholder="e.g., Mark Davis"
@@ -210,8 +205,8 @@ export const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-mono-crd uppercase text-slate-400">Company / Property Entity</label>
-                    <input
+                    <label className="text-xs font-mono-crd uppercase text-slate-400" htmlFor="commercial-contact-company">Company / Property Entity</label>
+                    <input id="commercial-contact-company" name="company" autoComplete="organization"
                       type="text"
                       placeholder="e.g., Ark-La Logistics LLC"
                       value={formData.company}
@@ -223,10 +218,10 @@ export const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-mono-crd uppercase text-slate-400">Direct Phone *</label>
-                    <input
+                    <label className="text-xs font-mono-crd uppercase text-slate-400" htmlFor="commercial-contact-phone">Direct Phone *</label>
+                    <input id="commercial-contact-phone" name="phone" autoComplete="tel" inputMode="tel"
                       type="tel"
-                      required
+                      required={!formData.email.trim()}
                       placeholder="(903) 000-0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -235,8 +230,8 @@ export const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-mono-crd uppercase text-slate-400">Email Address</label>
-                    <input
+                    <label className="text-xs font-mono-crd uppercase text-slate-400" htmlFor="commercial-contact-email">Email Address</label>
+                    <input id="commercial-contact-email" name="email" autoComplete="email" inputMode="email"
                       type="email"
                       placeholder="mark@company.com"
                       value={formData.email}
@@ -247,8 +242,8 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-mono-crd uppercase text-slate-400">Property Address / City</label>
-                  <input
+                  <label className="text-xs font-mono-crd uppercase text-slate-400" htmlFor="commercial-contact-propertyAddress">Property Address / City</label>
+                  <input id="commercial-contact-propertyAddress" name="propertyAddress" autoComplete="address-line1"
                     type="text"
                     placeholder="e.g., 1200 Industrial Pkwy, Texarkana, TX"
                     value={formData.propertyAddress}

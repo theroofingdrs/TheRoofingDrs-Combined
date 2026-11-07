@@ -1,0 +1,36 @@
+name: Commercial site build safety check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'source-apps/crd/**'
+      - '.github/workflows/crd-build-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'source-apps/crd/**'
+      - '.github/workflows/crd-build-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-commercial-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: source-apps/crd
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install commercial app dependencies
+        run: npm install
+      - name: Build commercial production app
+        run: npm run build
+      - name: Verify production asset paths and output
+        run: npm run verify:build

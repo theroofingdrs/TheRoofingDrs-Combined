@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 
-interface SeoHeadProps {
+export interface SeoHeadProps {
   title: string;
   description: string;
   canonicalPath?: string;
   schemaJson?: Record<string, any> | Record<string, any>[];
   ogType?: 'website' | 'article';
+  noIndex?: boolean;
 }
+
+// Build-time rendering reads the same declarations used by client navigation.
+export const SeoCollectionContext = createContext<((metadata: SeoHeadProps) => void) | null>(null);
 
 export const SeoHead: React.FC<SeoHeadProps> = ({
   title,
@@ -14,11 +18,18 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
   canonicalPath = '/',
   schemaJson,
   ogType = 'website',
+  noIndex = false,
 }) => {
+  const collect = useContext(SeoCollectionContext);
+  collect?.({ title, description, canonicalPath, schemaJson, ogType, noIndex });
   useEffect(() => {
-    const prefixedCanonicalPath = canonicalPath.startsWith('/residential')
-      ? canonicalPath
-      : `/residential${canonicalPath === '/' ? '/' : canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
+    const toResidentialUrl = (path: string) => {
+      const normalizedPath = path || '/';
+      const prefixedPath = normalizedPath === '/residential' || normalizedPath.startsWith('/residential/')
+        ? normalizedPath
+        : `/residential${normalizedPath === '/' ? '/' : normalizedPath.startsWith('/') ? normalizedPath : `/${normalizedPath}`}`;
+      return `https://theroofingdrs.com${prefixedPath}`;
+    };
 
     // 1. Update Document Title
     const fullTitle = title.includes('The Roof Doctors')
@@ -42,13 +53,23 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute('content', description);
 
+    for (const [name, content] of [['twitter:title', fullTitle], ['twitter:description', description]]) {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('name', name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', content);
+    }
+
     let ogUrl = document.querySelector('meta[property="og:url"]');
     if (!ogUrl) {
       ogUrl = document.createElement('meta');
       ogUrl.setAttribute('property', 'og:url');
       document.head.appendChild(ogUrl);
     }
-    ogUrl.setAttribute('content', window.location.origin + prefixedCanonicalPath);
+    ogUrl.setAttribute('content', toResidentialUrl(canonicalPath));
 
     let ogTypeMeta = document.querySelector('meta[property="og:type"]');
     if (!ogTypeMeta) {
@@ -65,7 +86,15 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', window.location.origin + prefixedCanonicalPath);
+    canonical.setAttribute('href', toResidentialUrl(canonicalPath));
+
+    let robots = document.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.setAttribute('name', 'robots');
+      document.head.appendChild(robots);
+    }
+    robots.setAttribute('content', noIndex ? 'noindex, nofollow' : 'index, follow');
 
     // 5. Injected JSON-LD Schema
     const existingSchema = document.getElementById('route-schema-jsonld');
@@ -85,7 +114,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       const s = document.getElementById('route-schema-jsonld');
       if (s) s.remove();
     };
-  }, [title, description, canonicalPath, schemaJson, ogType]);
+  }, [title, description, canonicalPath, schemaJson, ogType, noIndex]);
 
   return null;
 };

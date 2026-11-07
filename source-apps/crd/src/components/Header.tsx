@@ -15,6 +15,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
   const { currentPath } = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const mobileToggleRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') { setActiveDropdown(null); if (mobileMenuOpen) { setMobileMenuOpen(false); mobileToggleRef.current?.focus(); } } };
+    document.addEventListener('keydown', close); return () => document.removeEventListener('keydown', close);
+  }, [mobileMenuOpen]);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,25 +44,26 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
 
   return (
     <header className="sticky top-0 z-30 bg-[#181818]/95 backdrop-blur-md border-b border-[#2a2a2a] text-white transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex min-[1800px]:flex-wrap items-center justify-between h-20 min-[1800px]:h-auto min-[1800px]:min-h-20 min-[1800px]:py-3 min-[1800px]:gap-y-3">
           {/* Logo / Brand Marker */}
           <Link to="/" id="brand-logo-link" className="flex items-center group py-1" aria-label="Commercial Roof Doctors Home">
             <CrdLogo
               variant="full"
               theme="dark"
-              className="h-10 sm:h-12 lg:h-[60px] w-auto max-h-[65px] max-w-[210px] sm:max-w-[240px] lg:max-w-[260px] object-contain"
+              className="h-10 sm:h-12 lg:h-[60px] w-auto max-h-[65px] max-w-[min(52vw,210px)] sm:max-w-[240px] lg:max-w-[260px] object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2" ref={dropdownRef}>
+          <nav className="hidden min-[1800px]:flex min-[1800px]:order-last min-[1800px]:w-full flex-wrap items-center justify-center gap-1" ref={dropdownRef}>
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 id="nav-services-btn"
                 onClick={() => toggleDropdown('services')}
-                className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
+                aria-expanded={activeDropdown === 'services'}
+                className={`flex items-center gap-1 px-2 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'services' || currentPath.includes('commercial-roof')
                     ? 'text-[#d99a19]'
                     : 'text-[#cccccc]'
@@ -92,6 +98,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-systems-btn"
                 onClick={() => toggleDropdown('systems')}
+                aria-expanded={activeDropdown === 'systems'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'systems' ||
                   currentPath.includes('tpo') ||
@@ -130,6 +137,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-storm-btn"
                 onClick={() => toggleDropdown('storm')}
+                aria-expanded={activeDropdown === 'storm'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'storm' || currentPath.includes('storm') || currentPath.includes('insurance')
                     ? 'text-[#d99a19]'
@@ -168,6 +176,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-industries-btn"
                 onClick={() => toggleDropdown('industries')}
+                aria-expanded={activeDropdown === 'industries'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'industries' || currentPath.includes('industries')
                     ? 'text-[#d99a19]'
@@ -203,6 +212,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-protection-btn"
                 onClick={() => toggleDropdown('protection')}
+                aria-expanded={activeDropdown === 'protection'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'protection' || currentPath.includes('ppp') || currentPath.includes('property')
                     ? 'text-[#d99a19]'
@@ -238,6 +248,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               <button
                 id="nav-resources-btn"
                 onClick={() => toggleDropdown('resources')}
+                aria-expanded={activeDropdown === 'resources'}
                 className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                   activeDropdown === 'resources' ||
                   currentPath.includes('calculator') ||
@@ -256,6 +267,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                   <div className="text-[10px] font-mono-crd text-[#d99a19] px-3 py-1 uppercase tracking-wider border-b border-[#2a2a2a]">
                     Tools, Guides & Restoration
                   </div>
+                  <Link
+                    to="/blog"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Commercial Roofing Field Notes
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Technical articles and decision guides for property teams</div>
+                  </Link>
                   <Link
                     to="/commercial-roof-cost-calculator"
                     className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
@@ -293,13 +313,49 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
                     <div className="text-xs text-[#888888] mt-0.5">Fluid-applied silicone & acrylic elastomeric</div>
                   </Link>
                   <Link
+                    to="/resources/environmental-benefits-of-roof-restoration"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Environmental Benefits
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Less tear-off waste and material disposal</div>
+                  </Link>
+                  <Link
+                    to="/resources/reflective-roof-coating-energy-savings"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Energy Savings & Cool Roofs
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Reflectivity, cooling demand and utility use</div>
+                  </Link>
+                  <Link
+                    to="/resources/roof-coatings-and-hvac-performance"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      HVAC Performance
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">How roof heat gain affects building cooling</div>
+                  </Link>
+                  <Link
+                    to="/resources/commercial-roof-energy-tax-incentives"
+                    className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
+                  >
+                    <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
+                      Tax Incentives & Energy Ratings
+                    </div>
+                    <div className="text-xs text-[#888888] mt-0.5">Current eligibility and product ratings</div>
+                  </Link>
+                  <Link
                     to="/service-areas"
                     className="block px-3 py-2 text-sm hover:bg-[#282828] transition-colors group rounded-none"
                   >
                     <div className="font-semibold text-[#eeeeee] group-hover:text-[#d99a19]">
-                      Ark-La-Tex Service Territory
+                      Four-State Service Territory
                     </div>
-                    <div className="text-xs text-[#888888] mt-0.5">75-mile radius and regional commercial coverage</div>
+                    <div className="text-xs text-[#888888] mt-0.5">Four-state commercial roofing coverage</div>
                   </Link>
                 </div>
               )}
@@ -309,7 +365,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             <Link
               id="nav-about-link"
               to="/about"
-              className={`px-3 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
+              className={`px-2 py-2 text-sm font-medium rounded-none hover:text-[#d99a19] transition-colors ${
                 currentPath === '/about' ? 'text-[#d99a19]' : 'text-[#cccccc]'
               }`}
             >
@@ -324,15 +380,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             >
               Blog
             </Link>
+                      <a href="/residential/" className="ml-1 inline-flex items-center px-2 py-2 border border-[#555555] text-xs font-bold text-[#eeeeee] hover:border-[#d99a19] hover:text-[#d99a19] transition-colors whitespace-nowrap">Residential Roofing</a>
           </nav>
 
           {/* Action Hub / CTAs */}
-          <div className="hidden xl:flex items-center gap-3">
+          <div className="hidden min-[1800px]:flex items-center gap-3">
             {/* Phone */}
             <a
               id="header-phone-link"
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="flex items-center gap-2 text-[#eeeeee] hover:text-[#d99a19] px-3 py-2 text-sm font-bold tracking-wide transition-colors"
+              className="hidden"
             >
               <Phone className="w-4 h-4 text-[#d99a19]" />
               <span>{BUSINESS_INFO.phone}</span>
@@ -360,12 +417,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           </div>
 
           {/* Mobile hamburger button */}
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex min-[1800px]:hidden items-center gap-2">
             <button
               id="mobile-emergency-quick-btn"
               onClick={onOpenEmergency}
               className="bg-[#b83232] text-white p-2 rounded-none text-xs font-bold font-heading"
               title="Report Roof Emergency"
+              aria-label="Report Roof Emergency"
             >
               <ShieldAlert className="w-5 h-5" />
             </button>
@@ -373,7 +431,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-[#cccccc] hover:text-white bg-[#222222] rounded-none"
-              aria-label="Toggle menu"
+              ref={mobileToggleRef}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="commercial-mobile-navigation"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -383,11 +444,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#181818] border-b border-[#2a2a2a] px-4 pt-3 pb-8 space-y-4 max-h-[85vh] overflow-y-auto">
+        <nav id="commercial-mobile-navigation" aria-label="Commercial mobile navigation" className="min-[1800px]:hidden bg-[#181818] border-b border-[#2a2a2a] px-4 pt-3 pb-8 space-y-4 max-h-[85vh] overflow-y-auto">
           {/* Quick Contact Header in Mobile */}
           <div className="bg-[#111111] p-3 rounded-none border border-[#333333] flex items-center justify-between">
             <div>
-              <div className="text-xs text-[#888888] font-mono-crd">ARK-LA-TEX DISPATCH</div>
+              <div className="text-xs text-[#888888] font-mono-crd">FOUR-STATE DISPATCH</div>
               <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="text-base font-bold text-[#d99a19]">
                 {BUSINESS_INFO.phone}
               </a>
@@ -414,6 +475,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             <FileText className="w-4 h-4" />
             Request Commercial Roof Inspection
           </button>
+
+                    <a href="/residential/" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border border-[#444444] text-sm font-bold text-white hover:border-[#d99a19] hover:text-[#d99a19]">Looking for residential roofing? Visit The ROOF Doctors</a>
 
           {/* Section: Commercial Services */}
           <div>
@@ -473,6 +536,25 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
             </div>
           </div>
 
+          {/* Section: Industries */}
+          <div>
+            <div className="text-xs font-mono-crd text-[#d99a19] uppercase tracking-wider py-1 border-b border-[#2a2a2a]">
+              Property Types & Industries
+            </div>
+            <div className="grid grid-cols-1 gap-1 mt-1">
+              {NAVIGATION_LINKS.industries.map((s) => (
+                <Link
+                  key={s.href}
+                  to={s.href}
+                  className="py-1.5 text-sm text-[#cccccc] hover:text-[#d99a19] flex items-center justify-between"
+                >
+                  <span>{s.name}</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#666666]" />
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* Section: Property Protection */}
           <div>
             <div className="text-xs font-mono-crd text-[#d99a19] uppercase tracking-wider py-1 border-b border-[#2a2a2a]">
@@ -519,7 +601,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
               Staff / Admin Operations
             </a>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

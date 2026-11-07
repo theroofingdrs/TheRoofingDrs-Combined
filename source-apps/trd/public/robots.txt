@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /residential/api/
+Disallow: /residential/app/
+Disallow: /residential/admin/
+Sitemap: https://theroofingdrs.com/residential/sitemap.xml

@@ -1,0 +1,24 @@
+name: Booking configuration readiness
+on:
+  push:
+    branches: [main, feature/booking-configuration-readiness]
+  pull_request:
+    branches: [main, release-candidate/combined-site]
+    paths: ['booking/**', '.github/workflows/booking-readiness.yml']
+permissions:
+  contents: read
+concurrency:
+  group: booking-readiness-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  synthetic-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test synthetic configuration and routing without provider access
+        run: node --experimental-strip-types booking/readiness.test.mjs
+      - name: Strict standalone typecheck
+        run: npm exec --yes --package typescript@5.8.3 -- tsc -p booking/tsconfig.json
