@@ -1059,13 +1059,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Poultry & Chicken Houses',
                 priority: 'Moisture control, ventilation protection, corrosion checks and long-span metal roof maintenance.',
                 href: '/industries/chicken-houses-poultry',
-                img: '/assets/images/library/commercial-property-roofing-04.jpg',
+                img: '/assets/images/library/crd-poultry-house-coating.jpg',
               },
               {
                 title: 'Equestrian & Horse Facilities',
                 priority: 'Barn, stable and riding-arena roof protection with animal-safe work planning.',
                 href: '/industries/horse-barns-equestrian',
-                img: '/assets/images/library/commercial-property-roofing-03.jpg',
+                img: '/assets/images/library/crd-equestrian-red-roof-barn.jpg',
               },
               {
                 title: 'Healthcare & Medical',
@@ -1077,7 +1077,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Industrial & Warehouses',
                 priority: 'Zero operational downtime, massive low-slope acreage, high-traffic HVAC curbs.',
                 href: '/industries/industrial',
-                img: '/assets/images/commercial-warehouse-roof.jpg',
+                img: '/assets/images/library/crd-industrial-distribution-center-aerial.jpg',
               },
               {
                 title: 'Retail & Strip Centers',
@@ -1119,7 +1119,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
                 title: 'Storage Centers & Self Storage',
                 priority: 'Large metal-roof storage complexes, coating restoration, leak prevention and phased work around tenant access.',
                 href: '/commercial-roof-coatings',
-                img: '/assets/images/commercial-warehouse-roof.jpg',
+                img: '/assets/images/library/crd-self-storage-roof-coating.jpg.WEBP',
               },
               {
                 title: 'Property Management',
@@ -1229,7 +1229,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             <div className="border border-[#e6e4df] bg-[#f4f3ef] overflow-hidden">
               <div className="h-64 sm:h-72 overflow-hidden bg-[#181818]">
                 <img decoding="async" loading="lazy"
-                  src="/assets/images/library/commercial-industrial-roofing.jpg"
+                  src="/assets/images/library/crd-industrial-distribution-center-aerial.jpg"
                   alt="Industrial distribution center heat-welded white TPO single-ply roofing"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
