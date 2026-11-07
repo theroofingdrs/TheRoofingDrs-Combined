@@ -100,7 +100,7 @@ assert.ok([trdFooter, crdFooter, crdHeader, trdApp, crdApp].every(source => sour
 
 
 function pageGraph(html, label) {
-  const block = html.match(/<script\\b[^>]*type=["']application\\/ld\\+json["'][^>]*>([\\s\\S]*?)<\\/script>/i);
+  const block = html.match(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i);
   assert.ok(block, label + ' publishes JSON-LD');
   const graph = JSON.parse(block[1]);
   assert.ok(Array.isArray(graph['@graph']), label + ' publishes a connected entity graph');
