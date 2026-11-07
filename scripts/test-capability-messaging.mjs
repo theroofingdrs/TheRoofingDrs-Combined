@@ -33,6 +33,7 @@ assert.ok(commercialHome.includes('tenant and customer activity'));
 assert.ok(commercialHome.includes('equipment and inventory exposure'));
 assert.ok(portfolio.includes('objective 1–5 roof condition rating'));
 assert.ok(portfolio.includes('Centralized Repair Tracking'));
+assert.ok(portfolio.includes('What Property Managers Receive from Commercial ROOF Doctors'));
 assert.ok(portfolio.includes('Property-by-property inspection records'));
 assert.ok(!portfolio.includes('Guaranteed dispatch'));
 assert.ok(!portfolio.includes('Predatory'));
