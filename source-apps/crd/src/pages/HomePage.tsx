@@ -35,8 +35,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
   return (
     <div className="min-h-screen bg-[#f4f3ef] text-[#181818] font-sans-crd selection:bg-[#181818] selection:text-[#f4f3ef]">
       <SeoMeta
-        title="Commercial Roofing | Commercial Roof Doctors – Texarkana, TX"
-        description="Commercial Roof Doctors provides commercial roof inspections, repairs, coatings and restoration from Texarkana across the Ark-La-Tex region."
+        title="Commercial Roofing | Commercial ROOF Doctors – Texarkana, TX"
+        description="Commercial ROOF Doctors provides commercial roof inspections, repairs, coatings and restoration from Texarkana across the Ark-La-Tex region."
         canonicalPath="/"
       />
 
@@ -1375,8 +1375,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
               Commercial Roofing Across Four States.
             </h2>
             <p className="text-sm text-[#444444] leading-relaxed">
-              Commercial Roof Doctors serves commercial, industrial, and multi-site properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability, mobilization, and travel are confirmed during consultation based on property location and scope.
+              Commercial ROOF Doctors serves commercial, industrial, and multi-site properties across Texas, Arkansas, Louisiana, and Oklahoma. Project availability, mobilization, and travel are confirmed during consultation based on property location and scope.
             </p>
+
+            <div className="pt-3 space-y-2">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#77736b]">Priority Commercial Markets</div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                <Link to="/service-areas/dallas-fort-worth" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Dallas–Fort Worth, TX</Link>
+                <Link to="/service-areas/greenville" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Greenville, TX</Link>
+                <Link to="/service-areas/shreveport" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Shreveport, LA</Link>
+                <Link to="/service-areas/bossier-city" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Bossier City, LA</Link>
+                <Link to="/service-areas/monroe" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Monroe, LA</Link>
+                <Link to="/service-areas/little-rock" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Little Rock, AR</Link>
+                <Link to="/service-areas/hot-springs" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Hot Springs, AR</Link>
+                <Link to="/service-areas/broken-bow" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Broken Bow, OK</Link>
+                <Link to="/service-areas/idabel" className="border border-[#e6e4df] bg-[#f4f3ef] p-2.5 hover:border-[#181818]">Idabel, OK</Link>
+              </div>
+            </div>
 
             <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
               <Link
@@ -1440,7 +1455,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
             Transparent Client Feedback
           </h3>
           <p className="text-xs sm:text-sm text-[#666666] max-w-xl mx-auto leading-relaxed">
-            Commercial Roof Doctors does not display fabricated ratings, simulated star counts, or synthetic testimonials. Verified customer reviews are maintained directly on Google Reviews.
+            Commercial ROOF Doctors does not display fabricated ratings, simulated star counts, or synthetic testimonials. Verified customer reviews are maintained directly on Google Reviews.
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <a

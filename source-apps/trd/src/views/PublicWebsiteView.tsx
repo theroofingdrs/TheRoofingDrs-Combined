@@ -182,8 +182,8 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
           '@graph': [
             {
               '@type': 'RoofingContractor',
-              name: 'The Roof Doctors',
-              alternateName: 'The Roof Doctors — Residential Roofing & Storm Damage Specialists',
+              name: 'The ROOF Doctors',
+              alternateName: 'The ROOF Doctors — Residential Roofing & Storm Damage Specialists',
               telephone: '+1-903-231-5940',
               email: 'TheRoofingDrs@gmail.com',
               address: {
@@ -200,15 +200,22 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
                 longitude: -94.0732,
               },
               areaServed: [
-                'Texarkana',
-                'Atlanta',
-                'New Boston',
-                'Paris',
-                'Sulphur Springs',
-                'Longview',
-                'Tyler',
-                'Marshall',
-                'Mount Pleasant',
+                'Texarkana, Texas',
+                'Atlanta, Texas',
+                'New Boston, Texas',
+                'Marshall, Texas',
+                'Longview, Texas',
+                'Mount Pleasant, Texas',
+                'Paris, Texas',
+                'Sulphur Springs, Texas',
+                'Tyler, Texas',
+                'Texarkana, Arkansas',
+                'Fouke, Arkansas',
+                'Ashdown, Arkansas',
+                'Hope, Arkansas',
+                'De Queen, Arkansas',
+                'Lewisville, Arkansas',
+                'Magnolia, Arkansas',
               ],
               priceRange: '$$',
             },
@@ -671,6 +678,21 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
             </div>
           ))}
         </div>
+
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="text-sm font-black uppercase tracking-wide text-slate-900">Core Texas Dispatch Communities</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              Texarkana · Atlanta · New Boston · Marshall · Longview · Mount Pleasant · Paris · Sulphur Springs · Tyler
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="text-sm font-black uppercase tracking-wide text-slate-900">Core Southwest Arkansas Dispatch Communities</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              Texarkana · Fouke · Ashdown · Hope · De Queen · Lewisville · Magnolia
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* 7. Two Specialized Roofing Divisions: Residential & Commercial */}
@@ -692,7 +714,7 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
             <article className="bg-white text-slate-900 rounded-2xl p-7 sm:p-8 border border-slate-200 flex flex-col">
               <div className="inline-flex self-start items-center gap-2 rounded-full bg-red-50 text-red-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
-                The Roof Doctors · TRD
+                The ROOF Doctors · TRD
               </div>
               <h3 className="text-2xl font-black uppercase tracking-tight mt-4">Residential Roofing</h3>
               <p className="text-sm text-slate-600 leading-relaxed mt-3">

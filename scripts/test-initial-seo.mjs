@@ -54,6 +54,11 @@ try{
  assert.equal(parentHome.title,'The Roofing Doctors | Residential & Commercial Roofing');
  assert.deepEqual(parentHome.descriptions,['The Roofing Doctors serves Texarkana and surrounding regions through The ROOF Doctors for residential roofing and Commercial ROOF Doctors for commercial roofing.']);
  assert.deepEqual(parentHome.canonicals,['https://theroofingdrs.com/']);
+ const parentHtml=await readFile('index.html','utf8');
+ for(const community of ['Texarkana, TX','Atlanta, TX','New Boston, TX','Marshall, TX','Longview, TX','Mount Pleasant, TX','Paris, TX','Sulphur Springs, TX','Tyler, TX','Texarkana, AR','Fouke, AR','Ashdown, AR','Hope, AR','De Queen, AR','Lewisville, AR','Magnolia, AR'])assert(parentHtml.includes(community),'Parent-page TRD core dispatch community: '+community);
+ for(const market of ['Dallas–Fort Worth','Greenville, TX','Shreveport','Bossier City','Monroe','Little Rock','Hot Springs','Broken Bow','Idabel'])assert(parentHtml.includes(market),'Parent-page CRD priority market: '+market);
+ const sitemap=await readFile('sitemap.xml','utf8');
+ for(const slug of ['broken-bow','idabel'])assert(sitemap.includes('https://theroofingdrs.com/commercial/service-areas/'+slug),'Commercial sitemap entry: '+slug);
  const residential=JSON.parse(await readFile('source-apps/trd/dist/seo-manifest.json','utf8'));
  const home=head(await readFile('source-apps/trd/dist/index.html','utf8'));
  assert.equal(home.title,'The ROOF Doctors | Residential Roofing & Storm Damage Specialists');
@@ -93,6 +98,7 @@ try{
  assert.equal(head((await get('/commercial/about')).body).title,'About Commercial Roof Doctors | 22+ Years Roofing Authority');
  assert.equal(head((await get('/residential/roofing/roof-repair')).body).title,'Precision Roof Repair & Diagnostic Leak Fix | The Roof Doctors');
  const routes=JSON.parse(await readFile('source-apps/crd/dist/app-routes.json','utf8'));
+ for(const route of ['/service-areas/broken-bow','/service-areas/idabel'])assert(routes.includes(route),'CRD route manifest includes '+route);
  for(const route of routes)assert.equal((await get('/commercial'+(route==='/'?'/':route))).response.status,200,'Valid route '+route);
  for(const route of ['/not-a-real-roofing-page','/services/not-real','/industries/not-real','/blog/unknown-unpublished-slug','/assets/missing.js','/missing.css','/missing.png'])assert.equal((await get('/commercial'+route)).response.status,404,'Unknown route/asset '+route);
  const unknown=await get('/commercial/not-a-real-roofing-page');assert.equal(unknown.response.headers.get('location'),null);assert.equal(unknown.response.headers.get('x-robots-tag'),'noindex');assert.deepEqual(head(unknown.body).canonicals,[]);
