@@ -798,12 +798,36 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       <section className="bg-white border-b border-[#e6e4df] py-18 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 relative order-2 lg:order-1">
-            <img decoding="async" loading="lazy"
-              src="/assets/images/library/commercial-property-roofing-03.jpg"
-              alt="Multi-property commercial real estate roof assets and facility management"
-              referrerPolicy="no-referrer"
-              className="w-full h-[460px] object-cover border border-[#e6e4df]"
-            />
+            <div
+              className="grid grid-cols-3 sm:grid-cols-4 gap-2"
+              aria-label="Commercial roofing portfolio photo gallery"
+            >
+              {[
+                { src: '/assets/images/library/commercial-property-roofing-01.jpg', alt: 'Commercial property roofing project' },
+                { src: '/assets/images/library/commercial-property-roofing-02.jpg', alt: 'Commercial facility roof project' },
+                { src: '/assets/images/library/commercial-property-roofing-03.jpg', alt: 'Commercial real estate roofing' },
+                { src: '/assets/images/library/commercial-property-roofing-04.jpg', alt: 'Commercial property roof' },
+                { src: '/assets/images/library/commercial-roof-project-01.jpg', alt: 'Commercial roof project' },
+                { src: '/assets/images/library/commercial-roof-project-02.jpg', alt: 'Commercial roofing work' },
+                { src: '/assets/images/library/commercial-roof-project-03.jpg', alt: 'Commercial roof installation project' },
+                { src: '/assets/images/library/commercial-roof-inspection.jpg', alt: 'Commercial roof inspection' },
+                { src: '/assets/images/library/commercial-roof-inspection-detail.jpg', alt: 'Close-up commercial roof inspection' },
+                { src: '/assets/images/library/commercial-roof-maintenance.jpg', alt: 'Commercial roof maintenance' },
+                { src: '/assets/images/library/commercial-roof-maintenance-detail.jpg', alt: 'Commercial roof maintenance detail' },
+                { src: '/assets/images/library/crd-industrial-distribution-center-aerial.jpg', alt: 'Aerial view of an industrial distribution center roof' },
+              ].map((photo) => (
+                <div key={photo.src} className="aspect-[4/3] overflow-hidden border border-[#e6e4df] bg-[#f4f3ef]">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
