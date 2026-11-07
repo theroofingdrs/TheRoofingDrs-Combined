@@ -717,9 +717,11 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
               </ul>
               <div className="mt-6 pt-5 border-t border-slate-200">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">Residential service area</h4>
-                <p className="text-xs text-slate-600 leading-relaxed mt-2">
-                  Based in Texarkana, TRD serves Northeast Texas and Southwest Arkansas. Core dispatch communities include Texarkana, Atlanta, New Boston, Marshall and Longview in Texas, plus Texarkana, Fouke, Ashdown, Hope, DeQueen, Lewisville and Magnolia in Southwest Arkansas. Extended-area requests, including Paris, Sulphur Springs and Tyler, are reviewed individually based on project scope and scheduling.
-                </p>
+                <div className="text-xs text-slate-600 leading-relaxed mt-2 space-y-2">
+                  <p><strong className="text-slate-800">Northeast Texas:</strong> Texarkana, Atlanta, New Boston, Marshall, Longview, Mount Pleasant, Paris, Sulphur Springs and Tyler.</p>
+                  <p><strong className="text-slate-800">Southwest Arkansas:</strong> Texarkana, Fouke, Ashdown, Hope, DeQueen, Lewisville and Magnolia.</p>
+                  <p>Based in Texarkana, TRD coordinates dispatch across both regions. Scheduling and availability for each project are confirmed during intake.</p>
+                </div>
                 <button
                   onClick={() => onNavigate('/service-areas')}
                   className="mt-3 text-xs font-bold text-red-600 hover:text-red-700 inline-flex items-center gap-1 cursor-pointer"
