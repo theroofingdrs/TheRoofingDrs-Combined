@@ -94,6 +94,34 @@ export const posts: Post[] = [
       { heading: 'Verify incentives before including them in a budget', paragraphs: ['Tax treatment and energy incentives depend on current law, project facts, ownership, and applicable program rules. Owners should confirm eligibility with their tax and energy advisors before relying on an incentive in a project decision.', 'Commercial Roof Doctors can help document roof conditions and compare restoration and replacement scopes.'] }
     ]
   }
+
+  ,
+  {
+    slug: 'commercial-roof-inspection-checklist-for-facility-managers',
+    title: 'Commercial Roof Inspection Checklist for Facility Managers',
+    excerpt: 'A practical framework for documenting roof condition, drainage, penetrations, rooftop equipment, and follow-up priorities.',
+    category: 'Inspections & Maintenance', date: 'November 7, 2026', readTime: '6 min read',
+    image: '/assets/images/commercial-campus-roofs.jpg', alt: 'Large commercial roof surface viewed from above',
+    sections: [
+      { heading: 'Document the roof assembly and access limits', paragraphs: ['Record the roof area, known membrane or metal system, approximate installation history when available, previous repairs, and areas that could not be safely accessed. Note rooftop equipment, access points, and any tenant or operational constraints that affect inspection planning.', 'The checklist should identify what was observed and what remains unverified.'] },
+      { heading: 'Review drainage and water management', paragraphs: ['Inspect accessible drains, scuppers, gutters, and downspouts for blockage, damage, or conditions that may impede drainage. Record ponding observations with location and context; a photograph alone may not establish duration or cause.', 'Drainage issues should be evaluated alongside roof slope, structural conditions, and the existing roof design.'] },
+      { heading: 'Pay attention to seams, edges, and penetrations', paragraphs: ['Document membrane seams, flashing transitions, curbs, pipe penetrations, expansion joints, perimeter edges, and rooftop equipment supports. These details often require closer evaluation than broad field areas.', 'Use system-compatible repair specifications and qualified contractors when corrective work is needed.'] },
+      { heading: 'Turn findings into a prioritized work plan', paragraphs: ['Separate urgent water-entry or safety concerns from planned maintenance and longer-term capital items. Include photographs, location references, recommended next steps, and a responsible party for follow-up.', 'Commercial Roof Doctors helps owners and facility teams evaluate commercial roof conditions and compare repair, restoration, and replacement scopes.'] }
+    ]
+  },
+  {
+    slug: 'building-a-roof-maintenance-plan-for-multiple-properties',
+    title: 'Building a Roof Maintenance Plan for a Multi-Property Portfolio',
+    excerpt: 'A repeatable approach to organizing roof records, inspection findings, repair history, and capital planning across multiple facilities.',
+    category: 'Property Portfolios', date: 'November 7, 2026', readTime: '6 min read',
+    image: '/assets/images/commercial-logistics-tpo.jpg', alt: 'Commercial logistics facility with a large roof area',
+    sections: [
+      { heading: 'Create a consistent record for every property', paragraphs: ['Maintain a property-level record with address, roof areas, system type where known, installation or replacement history, warranty documents, prior repairs, and access requirements. Use consistent naming so records can be compared across the portfolio.', 'If information is unknown, mark it as unverified rather than filling the gap with an assumption.'] },
+      { heading: 'Use a common inspection format', paragraphs: ['A consistent inspection format makes it easier to compare condition across buildings. Record observed deficiencies, photographs, drainage, penetrations, rooftop equipment, access limitations, and any areas requiring additional investigation.', 'Inspection frequency should reflect roof condition, system requirements, weather exposure, building use, and manufacturer or warranty obligations.'] },
+      { heading: 'Rank work by risk and operational impact', paragraphs: ['Prioritize active leaks, safety concerns, and conditions that could interrupt building operations. Then group routine maintenance and longer-term capital needs into a portfolio plan that accounts for building importance, repair history, and available budgets.', 'A portfolio view helps decision-makers distinguish a single urgent repair from a recurring issue across several facilities.'] },
+      { heading: 'Keep decisions and completed work traceable', paragraphs: ['Record why a repair, restoration, or replacement scope was selected, what work was completed, and what follow-up is required. Retain closeout photographs, invoices, warranties, and updated roof plans where available.', 'Commercial Roof Doctors can help property owners and managers organize documented roof evaluations across multiple facilities.'] }
+    ]
+  }
 ];
 
 export const BlogPage: React.FC<{ currentPath: string; onOpenInspection: (type?: LeadType) => void }> = ({ currentPath, onOpenInspection }) => {
