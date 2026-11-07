@@ -1279,6 +1279,8 @@ export const SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     cityLinks: [
       { name: 'Tulsa', href: '/service-areas/tulsa' },
       { name: 'Oklahoma City', href: '/service-areas/oklahoma-city' },
+      { name: 'Idabel', href: '/service-areas/idabel' },
+      { name: 'Broken Bow', href: '/service-areas/broken-bow' },
       { name: 'Broken Arrow', href: '/service-areas/broken-arrow' },
       { name: 'Muskogee', href: '/service-areas/muskogee' },
       { name: 'Owasso', href: '/service-areas/owasso' },
