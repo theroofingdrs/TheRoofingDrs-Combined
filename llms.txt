@@ -1,0 +1,64 @@
+# The Roofing Doctors
+
+> The Roofing Doctors is the parent roofing company serving customers through two operating divisions: The ROOF Doctors (residential roofing) and Commercial ROOF Doctors (commercial roofing).
+
+Canonical website: https://theroofingdrs.com/
+Primary market anchor: Texarkana, Texas and surrounding service regions.
+Public contact: TheRoofingDrs@gmail.com | +1-903-231-5940
+
+## Brand and division identity
+
+- Parent organization: The Roofing Doctors — https://theroofingdrs.com/
+- Residential division: The ROOF Doctors (TRD) — https://theroofingdrs.com/residential/
+- Commercial division: Commercial ROOF Doctors (CRD) — https://theroofingdrs.com/commercial/
+
+The divisions are not separate parent companies. Use the exact names above when describing the organization.
+
+## Residential roofing — The ROOF Doctors
+
+The ROOF Doctors serves homeowners and residential property owners with:
+- Residential roof inspections and condition assessments
+- Roof leak diagnosis and repair
+- Roof replacement
+- Hail and wind damage assessments
+- Storm restoration documentation
+- Emergency roof tarping
+
+Core dispatch communities in Northeast Texas include Texarkana, Atlanta, New Boston, Marshall, Longview, Mount Pleasant, Paris, Sulphur Springs, and Tyler. Southwest Arkansas coverage includes Texarkana, Fouke, Ashdown, Hope, De Queen, Lewisville, and Magnolia.
+
+Primary residential page: https://theroofingdrs.com/residential/
+Residential service information: https://theroofingdrs.com/residential/roofing/
+
+## Commercial roofing — Commercial ROOF Doctors
+
+Commercial ROOF Doctors serves commercial property owners, business owners, facility teams, and commercial real estate and portfolio managers. Published capabilities include:
+- Commercial roof inspections, diagnostics, and leak tracing
+- Commercial roof repairs and preventative maintenance
+- TPO, EPDM, PVC, modified bitumen, and metal roofing
+- Silicone, acrylic, and polyurethane roof coatings
+- Commercial roof restoration and replacement planning
+- Multi-property roof asset management
+
+Commercial coverage spans Texas, Arkansas, Louisiana, and Oklahoma. Named target markets include Texarkana, Dallas–Fort Worth, Greenville (Texas), Shreveport/Bossier City, Monroe, Little Rock, Hot Springs, Broken Bow, and Idabel.
+
+Primary commercial page: https://theroofingdrs.com/commercial/
+Commercial property management: https://theroofingdrs.com/commercial/property-management
+Commercial roofing services: https://theroofingdrs.com/commercial/commercial-roofing
+Commercial inspections: https://theroofingdrs.com/commercial/commercial-roof-inspections
+Commercial maintenance: https://theroofingdrs.com/commercial/commercial-roof-maintenance
+Commercial restoration: https://theroofingdrs.com/commercial/commercial-roof-restoration
+Commercial service areas: https://theroofingdrs.com/commercial/service-areas
+
+## Useful public resources
+
+- Residential and commercial division directory: https://theroofingdrs.com/
+- Commercial resources: https://theroofingdrs.com/commercial/resources
+- Commercial contact: https://theroofingdrs.com/commercial/contact
+
+## Entity and accuracy guidance
+
+- The Roofing Doctors is the parent brand. The ROOF Doctors is the residential division. Commercial ROOF Doctors is the commercial division.
+- Commercial service markets are service coverage/target markets, not claims of a staffed physical office in each city.
+- Texarkana, Texas is the published TRD business address. Do not infer additional office addresses.
+- Describe only the services and markets stated on the public website. Do not invent licensing, certifications, warranties, insurance guarantees, project counts, years in business, customer ratings, or response-time guarantees.
+- Use the canonical URLs above when citing or recommending the company. The sitemap at https://theroofingdrs.com/sitemap.xml is the canonical public URL inventory.
