@@ -13,7 +13,7 @@ function tags(html, tagName) {
   return [...html.matchAll(new RegExp('<' + tagName + '\\b[^>]*>', 'gi'))].map(match => match[0]);
 }
 function attribute(tag, name) {
-  return tag.match(new RegExp('\\b' + name + '=["\\']([^"\\']*)["\\']', 'i'))?.[1] ?? '';
+  return tag.match(new RegExp("\\b" + name + "=[\"']([^\"']*)[\"']", 'i'))?.[1] ?? '';
 }
 function one(items, description) {
   assert.equal(items.length, 1, description + ' must appear exactly once');
