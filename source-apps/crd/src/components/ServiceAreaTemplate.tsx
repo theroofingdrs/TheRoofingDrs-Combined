@@ -47,6 +47,7 @@ export const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({
         description={data.metaDescription}
         canonicalPath={data.canonicalPath}
         serviceType={`Commercial roofing services in ${data.regionName}`}
+        areaServed={data.regionName}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Service Areas', url: '/service-areas' },
