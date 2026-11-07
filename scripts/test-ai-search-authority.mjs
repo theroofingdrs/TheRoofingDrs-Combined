@@ -44,11 +44,20 @@ const parent = graph(parentHtml, 'Parent landing page');
 const trd = graph(trdHtml, 'Residential landing page');
 const crd = graph(crdHtml, 'Commercial landing page');
 const id = name => origin + '/#' + name;
-for (const nodes of [parent, trd, crd]) {
-  assert.ok(nodes.some(node => node['@id'] === id('organization') && node['@type'] === 'Organization'));
-  assert.ok(nodes.some(node => node['@id'] === id('trd') && node['@type'] === 'RoofingContractor'));
-  assert.ok(nodes.some(node => node['@id'] === id('crd') && node['@type'] === 'RoofingContractor'));
-}
+const has = (nodes, name, type) => nodes.some(node => node['@id'] === id(name) && node['@type'] === type);
+
+// The parent directory graph describes both divisions. Each division entry point
+// intentionally publishes only its own business entity, avoiding irrelevant data.
+assert.ok(has(parent, 'organization', 'Organization'));
+assert.ok(has(parent, 'trd', 'RoofingContractor'));
+assert.ok(has(parent, 'crd', 'RoofingContractor'));
+assert.ok(has(trd, 'organization', 'Organization'));
+assert.ok(has(trd, 'trd', 'RoofingContractor'));
+assert.ok(!has(trd, 'crd', 'RoofingContractor'));
+assert.ok(has(crd, 'organization', 'Organization'));
+assert.ok(has(crd, 'crd', 'RoofingContractor'));
+assert.ok(!has(crd, 'trd', 'RoofingContractor'));
+
 assert.ok(parent.find(node => node['@id'] === id('organization')).subOrganization.some(node => node['@id'] === id('trd')));
 assert.ok(parent.find(node => node['@id'] === id('organization')).subOrganization.some(node => node['@id'] === id('crd')));
 assert.ok(trd.some(node => node['@type'] === 'WebPage' && node.about?.['@id'] === id('trd')));
@@ -63,4 +72,4 @@ assert.match(robots, /^Sitemap: https:\/\/theroofingdrs\.com\/sitemap\.xml$/m);
 assert.match(robots, /^Disallow: \/commercial\/admin$/m);
 assert.match(robots, /^Disallow: \/residential\/app$/m);
 
-console.log('[AI search authority] Concise/expanded references, canonical links, entity graphs, sitemap and crawl exclusions verified.');
+console.log('[AI search authority] Concise/expanded references, canonical links, division-specific entity graphs, sitemap and crawl exclusions verified.');
