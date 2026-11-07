@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const origin = 'https://theroofingdrs.com';
-const [landing, robots, sitemap, trdHeader, trdFooter, crdHeader, crdFooter, trdApp, crdApp, trdIndex, trdHomeView] = await Promise.all([
+const [landing, robots, sitemap, trdHeader, trdFooter, crdHeader, crdFooter, trdApp, crdApp, trdIndex, trdHomeView, crdIndex, llms] = await Promise.all([
   readFile('index.html', 'utf8'),
   readFile('robots.txt', 'utf8'),
   readFile('sitemap.xml', 'utf8'),
@@ -15,6 +15,8 @@ const [landing, robots, sitemap, trdHeader, trdFooter, crdHeader, crdFooter, trd
   readFile('source-apps/crd/src/App.tsx', 'utf8'),
   readFile('source-apps/trd/index.html', 'utf8'),
   readFile('source-apps/trd/src/views/PublicWebsiteView.tsx', 'utf8'),
+  readFile('source-apps/crd/index.html', 'utf8'),
+  readFile('llms.txt', 'utf8'),
 ]);
 
 function tags(html, tagName) {
@@ -95,5 +97,33 @@ for (const [label, source] of [['TRD header', trdHeader], ['TRD footer', trdFoot
   if (source.includes('trd-crd-operations-687495157172.us-east1.run.app')) throw new Error(label + ' still points directly to the Cloud Run URL');
 }
 assert.ok([trdFooter, crdFooter, crdHeader, trdApp, crdApp].every(source => source.includes('https://operations.theroofingdrs.com')), 'All staff/admin entry points use the Operations subdomain');
+
+
+function pageGraph(html, label) {
+  const block = html.match(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i);
+  assert.ok(block, label + ' publishes JSON-LD');
+  const graph = JSON.parse(block[1]);
+  assert.ok(Array.isArray(graph['@graph']), label + ' publishes a connected entity graph');
+  return graph['@graph'];
+}
+const trdNodes = pageGraph(trdIndex, 'Residential landing');
+const crdNodes = pageGraph(crdIndex, 'Commercial landing');
+const trdEntity = trdNodes.find(node => node['@id'] === origin + '/#trd');
+const crdEntity = crdNodes.find(node => node['@id'] === origin + '/#crd');
+assert.equal(trdEntity?.name, 'The ROOF Doctors', 'Residential entity uses the locked division name');
+assert.equal(crdEntity?.name, 'Commercial ROOF Doctors', 'Commercial entity uses the locked division name');
+assert.equal(trdEntity?.parentOrganization?.['@id'], origin + '/#organization');
+assert.equal(crdEntity?.parentOrganization?.['@id'], origin + '/#organization');
+assert.ok(trdNodes.some(node => node['@type'] === 'WebPage' && node.about?.['@id'] === trdEntity['@id']), 'Residential page identifies its subject entity');
+assert.ok(crdNodes.some(node => node['@type'] === 'WebPage' && node.about?.['@id'] === crdEntity['@id']), 'Commercial page identifies its subject entity');
+assert.ok(trdNodes.some(node => node['@type'] === 'WebSite' && node.publisher?.['@id'] === origin + '/#organization'), 'Residential page connects to the parent website');
+assert.ok(crdNodes.some(node => node['@type'] === 'WebSite' && node.publisher?.['@id'] === origin + '/#organization'), 'Commercial page connects to the parent website');
+
+assert.match(llms, /^# The Roofing Doctors/m, 'AI-readable company reference exists');
+for (const fact of ['The ROOF Doctors', 'Commercial ROOF Doctors', 'Texarkana', 'Northeast Texas', 'Southwest Arkansas', 'Dallas–Fort Worth', 'Shreveport/Bossier City', 'Broken Bow', 'Idabel', 'https://theroofingdrs.com/sitemap.xml']) {
+  assert.ok(llms.includes(fact), 'AI-readable reference includes ' + fact);
+}
+assert.match(llms, /not claims of a staffed physical office/i, 'AI reference distinguishes service markets from offices');
+assert.match(llms, /Do not invent licensing, certifications, warranties/i, 'AI reference prohibits unsupported claims');
 
 console.log('PASS technical SEO: canonical/social URL consistency, parseable parent/division JSON-LD, robots directives, and unique canonical sitemap URLs (' + urls.length + ' entries).');
