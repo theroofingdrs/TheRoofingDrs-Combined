@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - seo/crd-louisiana-market-pages
+      - seo/priority-a-technical-audit
   pull_request:
     branches:
       - feature/supabase-persistence
