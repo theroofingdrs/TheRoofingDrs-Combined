@@ -44,13 +44,13 @@ const parent = graph(parentHtml, 'Parent landing page');
 const trd = graph(trdHtml, 'Residential landing page');
 const crd = graph(crdHtml, 'Commercial landing page');
 const id = name => origin + '/#' + name;
-const has = (nodes, name, type) => nodes.some(node => node['@id'] === id(name) && node['@type'] === type);
+const has = (nodes, name, type) => nodes.some(node => node['@id'] === id(name) && (Array.isArray(node['@type']) ? node['@type'].includes(type) : node['@type'] === type));
 
 // The parent directory graph describes both divisions. Each division entry point
 // intentionally publishes only its own business entity, avoiding irrelevant data.
 assert.ok(has(parent, 'organization', 'Organization'));
 assert.ok(has(parent, 'trd', 'RoofingContractor'));
-assert.ok(has(parent, 'crd', 'RoofingContractor'));
+assert.ok(has(parent, 'crd', 'RoofingContractor'), 'Parent graph includes CRD entity with canonical @id ' + id('crd') + '; found: ' + parent.filter(node => node['@type'] === 'RoofingContractor').map(node => node['@id']).join(', '));
 assert.ok(has(trd, 'organization', 'Organization'));
 assert.ok(has(trd, 'trd', 'RoofingContractor'));
 assert.ok(!has(trd, 'crd', 'RoofingContractor'));
