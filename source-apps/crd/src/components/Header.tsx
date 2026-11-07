@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
   return (
     <header className="sticky top-0 z-30 bg-[#181818]/95 backdrop-blur-md border-b border-[#2a2a2a] text-white transition-all">
       <div className="max-w-7xl min-[1800px]:max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex min-[1800px]:flex-wrap items-center justify-between h-20 min-[1800px]:h-auto min-[1800px]:min-h-20 min-[1800px]:py-3 min-[1800px]:gap-y-3">
           {/* Logo / Brand Marker */}
           <Link to="/" id="brand-logo-link" className="flex items-center group py-1" aria-label="Commercial Roof Doctors Home">
             <CrdLogo
@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInspection, onOpenEmergenc
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden min-[1800px]:flex items-center space-x-0" ref={dropdownRef}>
+          <nav className="hidden min-[1800px]:flex min-[1800px]:order-last min-[1800px]:w-full flex-wrap items-center justify-center gap-1" ref={dropdownRef}>
             {/* Services Dropdown */}
             <div className="relative">
               <button
