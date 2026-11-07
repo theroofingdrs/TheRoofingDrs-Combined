@@ -17,6 +17,7 @@ interface SeoMetaProps {
   canonicalPath?: string;
   breadcrumbs?: BreadcrumbItem[];
   serviceType?: string;
+  areaServed?: string;
   faqItems?: FaqItem[];
 }
 
@@ -26,6 +27,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
   canonicalPath = '',
   breadcrumbs,
   serviceType,
+  areaServed,
   faqItems,
 }) => {
   useEffect(() => {
@@ -143,7 +145,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
           name: BUSINESS_INFO.name,
           telephone: BUSINESS_INFO.phone,
         },
-        areaServed:
+        areaServed: areaServed ||
           'Commercial roofing service area across Texas, Arkansas, Louisiana and Oklahoma; project availability is confirmed based on location, roof type and scope',
         description,
       };
@@ -154,7 +156,7 @@ export const SeoMeta: React.FC<SeoMetaProps> = ({
       scriptService.textContent = JSON.stringify(serviceSchema);
       document.head.appendChild(scriptService);
     }
-  }, [title, description, canonicalPath, breadcrumbs, serviceType, faqItems]);
+  }, [title, description, canonicalPath, breadcrumbs, serviceType, areaServed, faqItems]);
 
   return null;
 };
