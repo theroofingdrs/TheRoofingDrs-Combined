@@ -4,496 +4,1095 @@
     "website_asset": "/assets/images/library/residential-chimney-flashing.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof repair and flashing",
-    "sha256": "1f9601cf4b69f9fbff518114578dcd0b792838a42180dcb1724aa8550e59959b"
+    "sha256": "1f9601cf4b69f9fbff518114578dcd0b792838a42180dcb1724aa8550e59959b",
+    "tags": [
+      "residential",
+      "roof-repair-and-flashing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_3992.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-detail.jpg",
     "brand": "Residential",
     "recommended_placement": "Roofing systems",
-    "sha256": "31b4c011b4af71b7201dbaab778d95e783223e45e7c9d341a43d633afe49256f"
+    "sha256": "31b4c011b4af71b7201dbaab778d95e783223e45e7c9d341a43d633afe49256f",
+    "tags": [
+      "residential",
+      "roofing-systems"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_3993.jpeg",
     "website_asset": "/assets/images/library/residential-roof-installation-01.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof replacement",
-    "sha256": "2dc1534b307c4bf81c2964cd9b12d78e8c48b9efe020b34698fed954bfb3715b"
+    "sha256": "2dc1534b307c4bf81c2964cd9b12d78e8c48b9efe020b34698fed954bfb3715b",
+    "tags": [
+      "residential",
+      "roof-replacement"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_3994.jpeg",
     "website_asset": "/assets/images/library/residential-roof-installation-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof replacement",
-    "sha256": "77a00da35164295ab5087bca03115a63865cd4a0bb1331a03306c8e7ec8c98ec"
+    "sha256": "77a00da35164295ab5087bca03115a63865cd4a0bb1331a03306c8e7ec8c98ec",
+    "tags": [
+      "residential",
+      "roof-replacement"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_3995.jpeg",
     "website_asset": "/assets/images/library/residential-roof-installation-03.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof replacement",
-    "sha256": "2c5b24170c1e7225430dd27e1d40fa29aa3edc01cdd8b59bbf9416d92b0c3b55"
+    "sha256": "2c5b24170c1e7225430dd27e1d40fa29aa3edc01cdd8b59bbf9416d92b0c3b55",
+    "tags": [
+      "residential",
+      "roof-replacement"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_3996.jpeg",
     "website_asset": "/assets/images/library/residential-roof-installation-04.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof replacement",
-    "sha256": "8d3209f396e775ae9d13ee1771af32490679a99899646a2d418a7094896e908d"
+    "sha256": "8d3209f396e775ae9d13ee1771af32490679a99899646a2d418a7094896e908d",
+    "tags": [
+      "residential",
+      "roof-replacement"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_3997.jpeg",
     "website_asset": "/assets/images/library/residential-roof-installation-05.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof replacement",
-    "sha256": "e6330fcba07f997f993fae17b817698abc6ed2b75c2e624d80960697ac1e77c9"
+    "sha256": "e6330fcba07f997f993fae17b817698abc6ed2b75c2e624d80960697ac1e77c9",
+    "tags": [
+      "residential",
+      "roof-replacement"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_3998.jpeg",
     "website_asset": "/assets/images/library/residential-roof-installation-06.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof replacement",
-    "sha256": "5608c3d20afd106bb3b8e2e2bf410024fb1d2bf55396ed34c7fc45d83c9e31e2"
+    "sha256": "5608c3d20afd106bb3b8e2e2bf410024fb1d2bf55396ed34c7fc45d83c9e31e2",
+    "tags": [
+      "residential",
+      "roof-replacement"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4008.jpeg",
     "website_asset": "/assets/images/library/residential-metal-roof-01.jpg",
     "brand": "Residential",
     "recommended_placement": "Metal roofing",
-    "sha256": "622a3076d76b3fb8e20c9a975ab3d5933dc6c5001dc515a62a258a68ae15f021"
+    "sha256": "622a3076d76b3fb8e20c9a975ab3d5933dc6c5001dc515a62a258a68ae15f021",
+    "tags": [
+      "residential",
+      "metal-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4009.jpeg",
     "website_asset": "/assets/images/library/residential-metal-roof-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Metal roofing",
-    "sha256": "88bd546c76aeea7fb9142704c39d820f61bc7fbd1b00cf455897688415b46672"
+    "sha256": "88bd546c76aeea7fb9142704c39d820f61bc7fbd1b00cf455897688415b46672",
+    "tags": [
+      "residential",
+      "metal-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4013.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-01.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "8d32b966eca49aa9a01ca856f5354323b35ef0ad3319dd06bc33f9aaf1d0a2e3"
+    "sha256": "8d32b966eca49aa9a01ca856f5354323b35ef0ad3319dd06bc33f9aaf1d0a2e3",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4016.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "d374d817ed9954d4a58264fd535c1b7a198d204db0efb8813150eb9f2d633218"
+    "sha256": "d374d817ed9954d4a58264fd535c1b7a198d204db0efb8813150eb9f2d633218",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4024.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-03.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "8ff3082ec2dd663e5ca8e280f0766f7c8c9e9524cb95a01182c9eaace6bfa609"
+    "sha256": "8ff3082ec2dd663e5ca8e280f0766f7c8c9e9524cb95a01182c9eaace6bfa609",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4025.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-04.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "8a8115478d85d0f1d7d3cc2b6835223ec5c8d302fbcbf5f754f81520991611a7"
+    "sha256": "8a8115478d85d0f1d7d3cc2b6835223ec5c8d302fbcbf5f754f81520991611a7",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4029.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-05.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "bf39500068d613f431a489d36fdd7541fd7c58b1af5a5391f1a655814144b767"
+    "sha256": "bf39500068d613f431a489d36fdd7541fd7c58b1af5a5391f1a655814144b767",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4030.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-06.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "63daaf73e4e550909ca81a60e60272515c19b6dab79681cede61975858a9937d"
+    "sha256": "63daaf73e4e550909ca81a60e60272515c19b6dab79681cede61975858a9937d",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4031.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-07.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "b3713b29476ad92f86cebffee780640194435ede1bcb73e8a7587a0ffc1c33b8"
+    "sha256": "b3713b29476ad92f86cebffee780640194435ede1bcb73e8a7587a0ffc1c33b8",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4033.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-08.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "cff8f33c14358493281669c12eecbcb43fdc6b7e7c4e624f8f327541400c13f6"
+    "sha256": "cff8f33c14358493281669c12eecbcb43fdc6b7e7c4e624f8f327541400c13f6",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4034.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-09.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "52fc6ffaacb6c13f3fa4bb5135c4b7e5783fb0e680cb70bd9b90b87c0b69f49b"
+    "sha256": "52fc6ffaacb6c13f3fa4bb5135c4b7e5783fb0e680cb70bd9b90b87c0b69f49b",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4035.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-10.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "c3e2623bbba05d3530359c7d832d79686108211697092b7f5a353db58b8a7574"
+    "sha256": "c3e2623bbba05d3530359c7d832d79686108211697092b7f5a353db58b8a7574",
+    "tags": [
+      "residential",
+      "residential-projects",
+      "agricultural",
+      "barn",
+      "metal-roof",
+      "reroofing",
+      "roof-replacement",
+      "illustrative-service-photo"
+    ],
+    "additional_placements": [
+      "Agricultural and barn reroofing",
+      "Metal roof replacement",
+      "Roof replacement and restoration"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4036.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-11.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "fd05a73a6a4f9a344107307055354ad447334a68a7ba4fd7bd07137f66ae09be"
+    "sha256": "fd05a73a6a4f9a344107307055354ad447334a68a7ba4fd7bd07137f66ae09be",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4038.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-12.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "a4abe38f1465720cedfb5d08334cac905429902809d600969747d51a559b2fb6"
+    "sha256": "a4abe38f1465720cedfb5d08334cac905429902809d600969747d51a559b2fb6",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4039.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-13.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "1c181a778b8440be8493c0bcd808bcb6b6307cc37f57a8335ddb0de22efd4129"
+    "sha256": "1c181a778b8440be8493c0bcd808bcb6b6307cc37f57a8335ddb0de22efd4129",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4040.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-14.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "e4e52b391131c47b57bcde7d9781d68248e64f0a838d6d5172d8b0ce9be1ad04"
+    "sha256": "e4e52b391131c47b57bcde7d9781d68248e64f0a838d6d5172d8b0ce9be1ad04",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4041.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-15.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "8177928ee54900f80819afbe89ade9e4532535dc80aee2993f3596bea94da121"
+    "sha256": "8177928ee54900f80819afbe89ade9e4532535dc80aee2993f3596bea94da121",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4042.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-16.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "2066c8f2072684420c300a1f1be17b8e92aa361579f06494009f66400b2c3a16"
+    "sha256": "2066c8f2072684420c300a1f1be17b8e92aa361579f06494009f66400b2c3a16",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4043.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-17.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "44fbf31331e9ef97ed287c71150d2bccee16d6603be56932bde433628dc8fe02"
+    "sha256": "44fbf31331e9ef97ed287c71150d2bccee16d6603be56932bde433628dc8fe02",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4044.jpeg",
     "website_asset": "/assets/images/library/residential-roof-project-18.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential projects",
-    "sha256": "f5fe004c7f885ece454a359a62aa6e6d55cd3b5ec1ce85edfe9b0e3c07e0a605"
+    "sha256": "f5fe004c7f885ece454a359a62aa6e6d55cd3b5ec1ce85edfe9b0e3c07e0a605",
+    "tags": [
+      "residential",
+      "residential-projects"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4046.jpeg",
     "website_asset": "/assets/images/library/roof-damage-inspection.jpg",
     "brand": "Residential",
     "recommended_placement": "Storm damage and inspections",
-    "sha256": "e5beed01475832eea85af28ba8a6f5bdde86c21388fd410a6cc53d304b5db63d"
+    "sha256": "e5beed01475832eea85af28ba8a6f5bdde86c21388fd410a6cc53d304b5db63d",
+    "tags": [
+      "residential",
+      "storm-damage-and-inspections"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4058.jpeg",
     "website_asset": "/assets/images/library/residential-roof-repair.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof repair",
-    "sha256": "3138718795e6649bd9f00f861bb4febaa89f8bc8fa133393e6ba4e566136c873"
+    "sha256": "3138718795e6649bd9f00f861bb4febaa89f8bc8fa133393e6ba4e566136c873",
+    "tags": [
+      "residential",
+      "roof-repair"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4063.jpeg",
     "website_asset": "/assets/images/library/aerial-residential-roof-project.jpg",
     "brand": "Residential",
     "recommended_placement": "Aerial project imagery",
-    "sha256": "14360d476a8e4b24f92ee2907868064c87f8409f5356417fedba974b1fa3db37"
+    "sha256": "14360d476a8e4b24f92ee2907868064c87f8409f5356417fedba974b1fa3db37",
+    "tags": [
+      "residential",
+      "aerial-project-imagery"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4121.jpeg",
     "website_asset": "/assets/images/library/aerial-roofing-project-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Aerial project imagery",
-    "sha256": "d618b899d143f86937e0e0220f2d9331013c05577b6ec5db94653cd3ae43a947"
+    "sha256": "d618b899d143f86937e0e0220f2d9331013c05577b6ec5db94653cd3ae43a947",
+    "tags": [
+      "residential",
+      "aerial-project-imagery"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4689.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-feature.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential roofing",
-    "sha256": "4ae907f4ba5c790a601caf3204345072d151197db5ca710c016d27739b711272"
+    "sha256": "4ae907f4ba5c790a601caf3204345072d151197db5ca710c016d27739b711272",
+    "tags": [
+      "residential",
+      "residential-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4706.jpeg",
     "website_asset": "/assets/images/library/residential-metal-roofing-detail.jpg",
     "brand": "Residential",
     "recommended_placement": "Metal roofing",
-    "sha256": "2b6299aa1794cab8c975d2c8843956be0c09ff975bb9c65cdc88f17dc16c3044"
+    "sha256": "2b6299aa1794cab8c975d2c8843956be0c09ff975bb9c65cdc88f17dc16c3044",
+    "tags": [
+      "residential",
+      "metal-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4707.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-detail.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential roofing",
-    "sha256": "48ee9bd450834e0157254ae1d14e3f39d711233ed8b18f14d5df9fbb4cfcaf1e"
+    "sha256": "48ee9bd450834e0157254ae1d14e3f39d711233ed8b18f14d5df9fbb4cfcaf1e",
+    "tags": [
+      "residential",
+      "residential-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4709.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-closeup.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof details",
-    "sha256": "e10951174398bb2d3a8e7617a9a496c7ffa284e4126f4c85cb746a29a8d451c8"
+    "sha256": "e10951174398bb2d3a8e7617a9a496c7ffa284e4126f4c85cb746a29a8d451c8",
+    "tags": [
+      "residential",
+      "roof-details"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4710.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-01.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "a8c76130ecbf9092b0feb464137f53fc38057e48db8a69c98fbfb76d8466de8a"
+    "sha256": "a8c76130ecbf9092b0feb464137f53fc38057e48db8a69c98fbfb76d8466de8a",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4711.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "5280679c21e7c9c7237b15cf76ac438ee7c7e26c3e2089a5a6b20967ebe47160"
+    "sha256": "5280679c21e7c9c7237b15cf76ac438ee7c7e26c3e2089a5a6b20967ebe47160",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4712.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-03.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "c5dde509a545f7f42f28b8a29bc96e8512a7b2aa5a14767d58cb1d66a3af8559"
+    "sha256": "c5dde509a545f7f42f28b8a29bc96e8512a7b2aa5a14767d58cb1d66a3af8559",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4713.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-04.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "2857cc43dceea32b885c0e38c9d7db9ea4021dc396a43ec70d5a545d76af1844"
+    "sha256": "2857cc43dceea32b885c0e38c9d7db9ea4021dc396a43ec70d5a545d76af1844",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4714.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-05.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "9e7711670a2d01327cf6bd815ed7eb44271eb0f53bed4f075d3b0c610d7705dc"
+    "sha256": "9e7711670a2d01327cf6bd815ed7eb44271eb0f53bed4f075d3b0c610d7705dc",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4715.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-06.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "abef018e8e374fa04884754e5f3241991a290f29b53a99e160043e702477810d"
+    "sha256": "abef018e8e374fa04884754e5f3241991a290f29b53a99e160043e702477810d",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4716.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-07.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "bf08bcd86251a75f17f7d7f910eb4e7a6367a893eb775d91c9ed7a1f71765545"
+    "sha256": "bf08bcd86251a75f17f7d7f910eb4e7a6367a893eb775d91c9ed7a1f71765545",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4717.jpeg",
     "website_asset": "/assets/images/library/shingle-roofing-detail-08.jpg",
     "brand": "Residential",
     "recommended_placement": "Shingle roofing",
-    "sha256": "2b55c54ce67cd97c50e66075b3f44cca5f1f19b8fb692e238d99c4dd7940a584"
+    "sha256": "2b55c54ce67cd97c50e66075b3f44cca5f1f19b8fb692e238d99c4dd7940a584",
+    "tags": [
+      "residential",
+      "shingle-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4718.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-repair.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof repair",
-    "sha256": "37a29ab8e1eedfc9ef77f664396358f34fb0b5c3870bdfc8ac95213258fb1276"
+    "sha256": "37a29ab8e1eedfc9ef77f664396358f34fb0b5c3870bdfc8ac95213258fb1276",
+    "tags": [
+      "residential",
+      "roof-repair"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4719.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-repair-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof repair",
-    "sha256": "fdc0eae153c932a2b3efe726dbea36036949e7f7860ec38c9f2f8238f78aa22b"
+    "sha256": "fdc0eae153c932a2b3efe726dbea36036949e7f7860ec38c9f2f8238f78aa22b",
+    "tags": [
+      "residential",
+      "roof-repair"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4720.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-inspection.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof inspections",
-    "sha256": "aa5d0c518abcfdb15df6119d9bb9733717ce7fedf47dc6549ef8a0a84fdde998"
+    "sha256": "aa5d0c518abcfdb15df6119d9bb9733717ce7fedf47dc6549ef8a0a84fdde998",
+    "tags": [
+      "residential",
+      "roof-inspections"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4721.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-inspection-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof inspections",
-    "sha256": "ab6ba911edbb330328dfbd180f428311e099659b841e233c9c93694acb9eafdf"
+    "sha256": "ab6ba911edbb330328dfbd180f428311e099659b841e233c9c93694acb9eafdf",
+    "tags": [
+      "residential",
+      "roof-inspections"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4722.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-detail-02.jpg",
     "brand": "Residential",
     "recommended_placement": "Roof details",
-    "sha256": "a6039dbfd482e6a38ad540c6f7a42d5915e99d4566ab446fb9adc2bcb92d2928"
+    "sha256": "a6039dbfd482e6a38ad540c6f7a42d5915e99d4566ab446fb9adc2bcb92d2928",
+    "tags": [
+      "residential",
+      "roof-details"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4723.jpeg",
     "website_asset": "/assets/images/library/residential-roofing-hero-detail.jpg",
     "brand": "Residential",
     "recommended_placement": "Residential hero and services",
-    "sha256": "7d1072679419eacefb8080b2f22bab75f82a987236c4e5f09467caa8f970de49"
+    "sha256": "7d1072679419eacefb8080b2f22bab75f82a987236c4e5f09467caa8f970de49",
+    "tags": [
+      "residential",
+      "residential-hero-and-services"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4010.jpeg",
     "website_asset": "/assets/images/library/commercial-roofing-project-01.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roofing overview",
-    "sha256": "44b75459296776e21c847a10b17cd840690008a09124649b09e881b23240fb97"
+    "sha256": "44b75459296776e21c847a10b17cd840690008a09124649b09e881b23240fb97",
+    "tags": [
+      "commercial",
+      "commercial-roofing-overview"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4011.jpeg",
     "website_asset": "/assets/images/library/commercial-roofing-project-02.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roofing overview",
-    "sha256": "75054bc1a1175cb10e5056b893371d7fcb97d6ffbfb2eeb7f24a5c58fe771b3f"
+    "sha256": "75054bc1a1175cb10e5056b893371d7fcb97d6ffbfb2eeb7f24a5c58fe771b3f",
+    "tags": [
+      "commercial",
+      "commercial-roofing-overview"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4012.jpeg",
     "website_asset": "/assets/images/library/commercial-roofing-project-03.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roofing overview",
-    "sha256": "7f16495f3db9b48d19dd96daeb554f6e9b6dc874c377b9a7783d16273684c82b"
+    "sha256": "7f16495f3db9b48d19dd96daeb554f6e9b6dc874c377b9a7783d16273684c82b",
+    "tags": [
+      "commercial",
+      "commercial-roofing-overview",
+      "flat-roof",
+      "roof-coatings",
+      "roof-restoration",
+      "maintenance",
+      "industrial"
+    ],
+    "additional_placements": [
+      "Commercial roof coatings",
+      "Silicone roof restoration",
+      "Warehouse and storage building coatings",
+      "Commercial roof maintenance"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4037.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-replacement.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roof replacement",
-    "sha256": "2d90089802caf34770fbc7e72158c6a2d2adb23ed78668b69c533f260e64aafd"
+    "sha256": "2d90089802caf34770fbc7e72158c6a2d2adb23ed78668b69c533f260e64aafd",
+    "tags": [
+      "commercial",
+      "commercial-roof-replacement",
+      "roof-replacement",
+      "tear-off",
+      "reroofing",
+      "commercial-flat-roof"
+    ],
+    "additional_placements": [
+      "Commercial roof replacement",
+      "Large-loss roof recovery",
+      "Industrial facility reroofing"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4059.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-inspection.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roof inspections",
-    "sha256": "4740904496606c507ced4dc1bcdcadc4aa27d58c1fed65e61133bf921230027c"
+    "sha256": "4740904496606c507ced4dc1bcdcadc4aa27d58c1fed65e61133bf921230027c",
+    "tags": [
+      "commercial",
+      "commercial-roof-inspections",
+      "roof-inspection",
+      "maintenance",
+      "roof-repair",
+      "low-slope"
+    ],
+    "additional_placements": [
+      "Commercial roof inspections",
+      "Preventive maintenance",
+      "Commercial roof repair"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4060.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-maintenance.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roof maintenance",
-    "sha256": "0481ee3139f4f6643d108cc1adeb9596af35a9e2142666863dbc4da535c15c62"
+    "sha256": "0481ee3139f4f6643d108cc1adeb9596af35a9e2142666863dbc4da535c15c62",
+    "tags": [
+      "commercial",
+      "commercial-roof-maintenance",
+      "maintenance",
+      "roof-inspection",
+      "roof-repair",
+      "coatings"
+    ],
+    "additional_placements": [
+      "Commercial roof maintenance",
+      "Roof inspection",
+      "Commercial coatings and restoration"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4687.jpeg",
     "website_asset": "/assets/images/library/commercial-modified-bitumen-roofing.jpg",
     "brand": "Commercial",
     "recommended_placement": "Modified bitumen roofing",
-    "sha256": "e2b4d078914147b6caf68cebab8764fffa1e75a43b58b77432dbff00cd268609"
+    "sha256": "e2b4d078914147b6caf68cebab8764fffa1e75a43b58b77432dbff00cd268609",
+    "tags": [
+      "commercial",
+      "modified-bitumen-roofing"
+    ],
+    "additional_placements": [],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4690.jpeg",
     "website_asset": "/assets/images/library/commercial-industrial-roofing.jpg",
     "brand": "Commercial",
     "recommended_placement": "Industrial and warehouse roofing",
-    "sha256": "3dbd51b760da86e39cb8e232c2f4cdb06da138d56baedc4f0055df6f82fbadb2"
+    "sha256": "3dbd51b760da86e39cb8e232c2f4cdb06da138d56baedc4f0055df6f82fbadb2",
+    "tags": [
+      "commercial",
+      "industrial-and-warehouse-roofing",
+      "industrial",
+      "warehouse",
+      "storage",
+      "low-slope",
+      "roof-coatings",
+      "silicone",
+      "restoration",
+      "maintenance"
+    ],
+    "additional_placements": [
+      "Industrial facilities",
+      "Warehouse and storage building coatings",
+      "Silicone roof restoration",
+      "Commercial metal roofing",
+      "Preventive maintenance"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4691.jpeg",
     "website_asset": "/assets/images/library/commercial-single-ply-roofing-01.jpg",
     "brand": "Commercial",
     "recommended_placement": "TPO and single-ply roofing",
-    "sha256": "939316c11b2b7a5779f43c15d6e422087d7cec3a744be7d0691c186656702e6d"
+    "sha256": "939316c11b2b7a5779f43c15d6e422087d7cec3a744be7d0691c186656702e6d",
+    "tags": [
+      "commercial",
+      "tpo-and-single-ply-roofing",
+      "tpo",
+      "single-ply",
+      "roof-inspection",
+      "roof-repair",
+      "installation"
+    ],
+    "additional_placements": [
+      "TPO roofing",
+      "Commercial roof inspections",
+      "Commercial roof repair",
+      "Single-ply roofing systems"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4692.jpeg",
     "website_asset": "/assets/images/library/commercial-single-ply-roofing-02.jpg",
     "brand": "Commercial",
     "recommended_placement": "TPO and single-ply roofing",
-    "sha256": "f4f13524181cd51aa0b329ba3005a599df140ff63c079e4a27ce856c26a0454c"
+    "sha256": "f4f13524181cd51aa0b329ba3005a599df140ff63c079e4a27ce856c26a0454c",
+    "tags": [
+      "commercial",
+      "tpo-and-single-ply-roofing",
+      "tpo",
+      "pvc",
+      "single-ply",
+      "membrane-installation",
+      "flat-roof"
+    ],
+    "additional_placements": [
+      "TPO roofing",
+      "PVC roofing",
+      "Single-ply roofing systems",
+      "Commercial roof replacement"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4693.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-inspection-detail.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roof inspections",
-    "sha256": "3831da6e299daa5c1664694a710355f2a5a64c3fc63c3a94658ce50a69f1dba5"
+    "sha256": "3831da6e299daa5c1664694a710355f2a5a64c3fc63c3a94658ce50a69f1dba5",
+    "tags": [
+      "commercial",
+      "commercial-roof-inspections",
+      "roof-inspection",
+      "drainage",
+      "maintenance",
+      "flat-roof",
+      "repair"
+    ],
+    "additional_placements": [
+      "Commercial roof inspections",
+      "Roof drainage and maintenance",
+      "Commercial roof repair"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4694.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-system-detail.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roof systems",
-    "sha256": "5b56e432d20a442ee9aef78e29295365368aba2f250f799155f65d14379b50a9"
+    "sha256": "5b56e432d20a442ee9aef78e29295365368aba2f250f799155f65d14379b50a9",
+    "tags": [
+      "commercial",
+      "commercial-roof-systems",
+      "roof-system",
+      "restoration",
+      "metal-roof",
+      "low-slope"
+    ],
+    "additional_placements": [
+      "Commercial roof systems",
+      "Metal roof restoration",
+      "Commercial roof coatings"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4695.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-maintenance-detail.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roof maintenance",
-    "sha256": "f8d3041e903dffdf26e77933962412447b2073b69d4a223f64e97037b5d83e08"
+    "sha256": "f8d3041e903dffdf26e77933962412447b2073b69d4a223f64e97037b5d83e08",
+    "tags": [
+      "commercial",
+      "commercial-roof-maintenance",
+      "maintenance",
+      "roof-inspection",
+      "drainage",
+      "flat-roof"
+    ],
+    "additional_placements": [
+      "Commercial roof maintenance",
+      "Commercial roof inspections",
+      "Roof drainage details"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4696.jpeg",
     "website_asset": "/assets/images/library/commercial-roofing-feature.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial roofing overview",
-    "sha256": "ac0da57f2bb583f1ed51bb64f095c6670676140291e554ed5e272172bd7857d3"
+    "sha256": "ac0da57f2bb583f1ed51bb64f095c6670676140291e554ed5e272172bd7857d3",
+    "tags": [
+      "commercial",
+      "commercial-roofing-overview",
+      "industrial",
+      "warehouse",
+      "storage",
+      "low-slope",
+      "roof-coatings",
+      "silicone",
+      "restoration",
+      "maintenance"
+    ],
+    "additional_placements": [
+      "Industrial facilities",
+      "Warehouse and storage building coatings",
+      "Silicone roof restoration",
+      "Commercial metal roofing",
+      "Preventive maintenance"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4697.jpeg",
     "website_asset": "/assets/images/library/commercial-property-roofing-01.jpg",
     "brand": "Commercial",
     "recommended_placement": "Property and facility roofing",
-    "sha256": "6e0329769a131c6a2a906e43ad44b9c478b87e274d39559b0d905ef3f7e339c4"
+    "sha256": "6e0329769a131c6a2a906e43ad44b9c478b87e274d39559b0d905ef3f7e339c4",
+    "tags": [
+      "commercial",
+      "property-and-facility-roofing",
+      "church",
+      "institutional",
+      "facility-roofing",
+      "roof-inspection"
+    ],
+    "additional_placements": [
+      "Church and religious facilities",
+      "Institutional roofing",
+      "Commercial roof inspections"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4698.jpeg",
     "website_asset": "/assets/images/library/commercial-property-roofing-02.jpg",
     "brand": "Commercial",
     "recommended_placement": "Property and facility roofing",
-    "sha256": "825f45d20dad841953188613697c41be3dc9e50e26d41b181e60e9f45002745b"
+    "sha256": "825f45d20dad841953188613697c41be3dc9e50e26d41b181e60e9f45002745b",
+    "tags": [
+      "commercial",
+      "property-and-facility-roofing",
+      "industrial",
+      "institutional",
+      "facility-roofing",
+      "low-slope"
+    ],
+    "additional_placements": [
+      "Industrial facilities",
+      "Institutional roofing",
+      "Commercial roof maintenance"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4699.jpeg",
     "website_asset": "/assets/images/library/commercial-property-roofing-03.jpg",
     "brand": "Commercial",
     "recommended_placement": "Property and facility roofing",
-    "sha256": "6ccb24688d935dc9e1609ea5f5d857dff1239c3d254fc12adfcb5337a95e122f"
+    "sha256": "6ccb24688d935dc9e1609ea5f5d857dff1239c3d254fc12adfcb5337a95e122f",
+    "tags": [
+      "commercial",
+      "property-and-facility-roofing",
+      "church",
+      "institutional",
+      "facility-roofing",
+      "roofing"
+    ],
+    "additional_placements": [
+      "Church and religious facilities",
+      "Institutional roofing",
+      "Commercial roofing overview"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4700.jpeg",
     "website_asset": "/assets/images/library/commercial-property-roofing-04.jpg",
     "brand": "Commercial",
     "recommended_placement": "Property and facility roofing",
-    "sha256": "ef9d6d722534d469f9d49b2be6dd2fde1a132026277ce5e466cafb0f11f9a759"
+    "sha256": "ef9d6d722534d469f9d49b2be6dd2fde1a132026277ce5e466cafb0f11f9a759",
+    "tags": [
+      "commercial",
+      "property-and-facility-roofing",
+      "church",
+      "metal-roof",
+      "institutional",
+      "facility-roofing"
+    ],
+    "additional_placements": [
+      "Church and religious facilities",
+      "Commercial metal roofing",
+      "Metal roof restoration"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4703.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-project-01.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial project gallery",
-    "sha256": "49a007842b8188330db0b485db9254d5f8318223b1b1d1915e03c9ea0a297990"
+    "sha256": "49a007842b8188330db0b485db9254d5f8318223b1b1d1915e03c9ea0a297990",
+    "tags": [
+      "commercial",
+      "commercial-project-gallery",
+      "government",
+      "institutional",
+      "facility-roofing",
+      "roofing"
+    ],
+    "additional_placements": [
+      "Government and institutional facilities",
+      "Commercial roofing overview",
+      "Commercial roof inspections"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4704.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-project-02.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial project gallery",
-    "sha256": "e91cb69e6ba40c0067f9dc07641a13a04a131dbc86afe1beec742307d0b48f81"
+    "sha256": "e91cb69e6ba40c0067f9dc07641a13a04a131dbc86afe1beec742307d0b48f81",
+    "tags": [
+      "commercial",
+      "commercial-project-gallery",
+      "retail",
+      "facility-roofing",
+      "low-slope",
+      "roofing"
+    ],
+    "additional_placements": [
+      "Retail and commercial facilities",
+      "Commercial roofing overview",
+      "Commercial roof maintenance"
+    ],
+    "usage_context": "illustrative-unless-verified"
   },
   {
     "original": "image-library/incoming/IMG_4705.jpeg",
     "website_asset": "/assets/images/library/commercial-roof-project-03.jpg",
     "brand": "Commercial",
     "recommended_placement": "Commercial project gallery",
-    "sha256": "8444379130483873abb4cb9bafd06aa4992080d542d17e1dc14d9565de1c7c63"
+    "sha256": "8444379130483873abb4cb9bafd06aa4992080d542d17e1dc14d9565de1c7c63",
+    "tags": [
+      "commercial",
+      "commercial-project-gallery",
+      "church",
+      "institutional",
+      "facility-roofing",
+      "roofing"
+    ],
+    "additional_placements": [
+      "Church and religious facilities",
+      "Institutional roofing",
+      "Commercial roofing overview"
+    ],
+    "usage_context": "illustrative-unless-verified"
   }
 ]
