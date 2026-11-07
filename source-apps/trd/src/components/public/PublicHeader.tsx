@@ -107,7 +107,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
             className="cursor-pointer text-left shrink-0 py-1 max-w-[38vw] sm:max-w-none"
             title="The Roof Doctors Home"
           >
-            <BrandLogo size="md" />
+            <BrandLogo size="md" logo="trd" />
           </button>
 
           {/* Desktop Navigation Links */}
