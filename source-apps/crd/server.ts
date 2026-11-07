@@ -542,79 +542,12 @@ app.get('/api/calculator', async (req: Request, res: Response) => {
   }
 });
 
-// Dynamic XML Sitemap
-app.get('/sitemap.xml', (req: Request, res: Response) => {
-  const host = req.get('host') || 'commercialroofdoctors.com';
-  const protocol = req.protocol || 'https';
-  const baseUrl = `${protocol}://${host}`;
-
-  const routes = [
-    '',
-    '/commercial-roofing',
-    '/commercial-roof-repair',
-    '/commercial-roof-replacement',
-    '/commercial-roof-inspection',
-    '/commercial-roof-maintenance',
-    '/new-commercial-construction',
-    '/commercial-roof-coatings',
-    '/commercial-roof-restoration',
-    '/silicone-roof-coatings',
-    '/acrylic-roof-coatings',
-    '/polyurethane-roof-coatings',
-    '/coat-vs-replace',
-    '/storm-damage',
-    '/hail-damage',
-    '/wind-damage',
-    '/emergency-roofing',
-    '/insurance-claims',
-    '/commercial-storm-inspections',
-    '/adjuster-meetings',
-    '/large-loss-roofing',
-    '/tpo-roofing',
-    '/epdm-roofing',
-    '/pvc-roofing',
-    '/modified-bitumen',
-    '/built-up-roofing',
-    '/metal-roofing',
-    '/crd-ppp',
-    '/property-management',
-    '/roof-asset-management',
-    '/multi-property-roofing',
-    '/multifamily-roofing',
-    '/hoa-roofing',
-    '/industries/churches',
-    '/industries/schools',
-    '/industries/healthcare',
-    '/industries/industrial',
-    '/industries/retail',
-    '/industries/apartments',
-    '/commercial-roof-cost-calculator',
-    '/about',
-    '/about/credentials',
-    '/service-areas',
-    '/service-areas/texas',
-    '/service-areas/arkansas',
-    '/service-areas/louisiana',
-    '/service-areas/oklahoma',
-    '/contact',
-  ];
-
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes
-  .map(
-    (r) => `  <url>
-    <loc>${baseUrl}/commercial${r === '' ? '/' : r}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${r === '' || r.includes('storm') || r.includes('emergency') ? 'daily' : 'weekly'}</changefreq>
-    <priority>${r === '' ? '1.0' : r.includes('calculator') || r.includes('inspection') ? '0.9' : '0.8'}</priority>
-  </url>`
-  )
-  .join('\n')}
-</urlset>`;
-
-  res.header('Content-Type', 'application/xml');
-  res.send(sitemapXml);
+// Generated from the same route inventory and SEO manifest used to serve pages.
+// This prevents stale, invented, and non-canonical URLs from entering the sitemap.
+let publicSitemapXml = '';
+app.get('/sitemap.xml', (_req: Request, res: Response) => {
+  if (!publicSitemapXml) return res.status(503).type('text/plain').send('Sitemap is initializing.');
+  res.type('application/xml; charset=utf-8').send(publicSitemapXml);
 });
 
 // Robots.txt
@@ -700,6 +633,25 @@ async function start() {
     } catch (error) {
       console.error('[CRD SEO] Route metadata manifest unavailable; serving default document metadata.', error);
     }
+
+    const excludedFromSitemap = /^\/(?:admin|staff|staff-portal|portal|leads)(?:\/|$)|^\/api(?:\/|$)/i;
+    const canonicalPaths = new Set<string>();
+    for (const route of appRoutes) {
+      const metadata = seoManifest[route];
+      if (!metadata || excludedFromSitemap.test(route)) continue;
+      const canonical = (metadata.canonicalPath || route).replace(/^\/commercial(?=\/|$)/, '') || '/';
+      const normalizedCanonical = canonical.replace(/\/+$/, '') || '/';
+      if (normalizedCanonical !== route) continue;
+      canonicalPaths.add(normalizedCanonical);
+    }
+    const sitemapLocations = [...canonicalPaths].sort().map((route) =>
+      'https://theroofingdrs.com/commercial' + (route === '/' ? '/' : route)
+    );
+    const xmlEscape = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+    publicSitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+      sitemapLocations.map((location) => '  <url><loc>' + xmlEscape(location) + '</loc></url>').join('\n') +
+      '\n</urlset>';
 
     app.use('/commercial', express.static(distPath, {
       maxAge: '1y',

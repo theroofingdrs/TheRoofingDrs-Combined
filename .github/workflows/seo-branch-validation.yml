@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - seo/crd-louisiana-market-pages
+      - seo/priority-a-technical-audit
   pull_request:
     branches:
       - feature/supabase-persistence
@@ -29,8 +30,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
+      - name: Install locked application dependencies
+        run: npm run install:apps
       - name: Build both applications and run combined smoke tests
         run: npm test
 

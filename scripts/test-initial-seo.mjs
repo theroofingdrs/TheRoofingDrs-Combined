@@ -105,9 +105,41 @@ try{
  for(const route of ['/blog','/blog/published-cms-slug','/industries','/admin','/staff','/large-loss-roofing','/adjuster-meetings','/commercial-storm-inspections'])assert.equal((await get('/commercial'+route)).response.status,200,'Application family retained '+route);
  for(const [alias,canonical] of [['/large-loss-roofing','/insurance-claims'],['/adjuster-meetings','/insurance-claims'],['/commercial-storm-inspections','/storm-damage']])assert.deepEqual(head((await get('/commercial'+alias)).body).canonicals,['https://theroofingdrs.com/commercial'+canonical],'Existing component canonical retained for '+alias);
  const commercialSitemap=(await get('/commercial/sitemap.xml')).body;
- for(const route of ['/commercial-roof-inspection','/new-commercial-construction','/metal-roofing','/roof-asset-management','/multi-property-roofing','/multifamily-roofing','/hoa-roofing','/about/credentials']){
-  assert(commercialSitemap.includes('/commercial'+route+'</loc>'),'Disputed sitemap URL must remain '+route);
-  assert.equal((await get('/commercial'+route)).response.status,404,'Existing unsupported sitemap route has honest 404 '+route);
+ assert.match(commercialSitemap,/^<\?xml version="1\.0" encoding="UTF-8"\?>/,'Commercial sitemap has an XML declaration');
+ assert.match(commercialSitemap,/<urlset\b[^>]*xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">/,'Commercial sitemap uses the standard namespace');
+ const commercialLocations=[...commercialSitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
+ assert(commercialLocations.length>10,'Commercial sitemap includes public routes');
+ assert.equal(new Set(commercialLocations).size,commercialLocations.length,'Commercial sitemap URLs are unique');
+ for(const location of commercialLocations){
+  const parsed=new URL(location);
+  assert.equal(parsed.origin,'https://theroofingdrs.com','Commercial sitemap uses the canonical HTTPS host');
+  assert.equal(parsed.pathname,'/commercial'+(parsed.pathname==='/commercial/'?'/':parsed.pathname.slice('/commercial'.length)),'Commercial sitemap paths stay within the commercial division');
+  const route=parsed.pathname.slice('/commercial'.length).replace(/\/+$/,'')||'/';
+  assert(routes.includes(route),'Commercial sitemap only contains application routes: '+route);
+  assert(commercial[route],'Commercial sitemap only contains routes with SEO metadata: '+route);
+  assert.equal(commercial[route].canonicalPath,route,'Commercial sitemap only contains canonical routes: '+route);
+  assert.equal((await get(parsed.pathname)).response.status,200,'Every commercial sitemap URL returns 200: '+route);
+  assert.deepEqual(head((await get(parsed.pathname)).body).canonicals,[location],'Every commercial sitemap URL declares itself canonical: '+route);
+  assert(!/^\/(?:admin|staff|staff-portal|portal|leads|api)(?:\/|$)/i.test(route),'Private route excluded from commercial sitemap: '+route);
+ }
+ const rootLocations=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
+ assert(rootLocations.length>30,'Root sitemap contains the combined public page inventory');
+ assert.equal(new Set(rootLocations).size,rootLocations.length,'Root sitemap URLs are unique');
+ for(const location of rootLocations){
+  const parsed=new URL(location);
+  assert.equal(parsed.origin,'https://theroofingdrs.com','Root sitemap uses the canonical HTTPS host');
+  if(parsed.pathname.startsWith('/commercial')){
+   const route=parsed.pathname.slice('/commercial'.length).replace(/\/+$/,'')||'/';
+   assert(routes.includes(route),'Root sitemap commercial URL is an actual app route: '+route);
+   assert(commercial[route],'Root sitemap commercial URL has SEO metadata: '+route);
+   assert.equal(commercial[route].canonicalPath,route,'Root sitemap commercial URL is canonical: '+route);
+  }else if(parsed.pathname.startsWith('/residential')){
+   const route=parsed.pathname.slice('/residential'.length).replace(/\/+$/,'')||'/';
+   assert(residential[route],'Root sitemap residential URL has SEO metadata: '+route);
+   assert.equal(residential[route].canonicalPath,route,'Root sitemap residential URL is canonical: '+route);
+  }else{
+   assert.equal(parsed.pathname,'/','Only the canonical parent landing page may sit outside a division');
+  }
  }
  for(const [prefix,file] of [['residential','source-apps/trd/dist/index.html'],['commercial','source-apps/crd/dist/index.html']]){
   const html=await readFile(file,'utf8');for(const [,url]of html.matchAll(/(?:src|href)="([^" ]*\/assets\/[^" ]+)"/g))assert.equal((await get(url)).response.status,200,'Asset '+url);
