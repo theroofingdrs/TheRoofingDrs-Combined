@@ -24,7 +24,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <div className={`inline-flex flex-col select-none max-w-full ${className}`}>
       <img
-        src={`${import.meta.env.BASE_URL}the_roof_doctors_logo_transparent.png`}
+        src={`${import.meta.env.BASE_URL}trd-crd-combined-logo.png`}
         alt="The Roof Doctors"
         className={`${logoSizes[size]} w-auto max-w-full object-contain shrink-0`}
         loading="eager"
