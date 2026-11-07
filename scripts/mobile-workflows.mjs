@@ -1,4 +1,5 @@
 // Real mobile Chromium; API/session fixtures are intercepted and never call production.
+import {checkPublicLayouts} from './public-layout-checks.mjs';
 import{spawn,spawnSync}from'node:child_process';import{mkdtemp,rm}from'node:fs/promises';import os from'node:os';import path from'node:path';import assert from'node:assert/strict';
 const root=process.cwd(),temp=await mkdtemp(path.join(os.tmpdir(),'roofing-mobile-'));
 const browserBin=process.env.CHROME_BIN||['chromium','google-chrome','google-chrome-stable'].find(bin=>spawnSync('which',[bin]).status===0);
@@ -48,6 +49,22 @@ try{
   const tap=async selector=>{const bounds=await evaluate(`(()=>{const e=${selector};e.scrollIntoView({block:'center',inline:'center',behavior:'instant'});const r=e.getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2};})()`);assert(bounds.x>=0&&bounds.x<=390&&bounds.y>=0&&bounds.y<=844,JSON.stringify(bounds));await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...bounds,radiusX:1,radiusY:1}]});await call('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});};
   return{call,evaluate,tap,exceptions,assetFailures,posts,apiRoutes,writes,tasks,bookings,bookingPosts,retried:()=>retried};
  }
+ // Verify the removed stone/timber card stays absent and the intended three project cards remain interactive.
+ const home=await page();
+ for(const width of [375,390,430,1440]){
+  await home.call('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<768});
+  await home.call('Page.navigate',{url:publicBase+'/residential/'});
+  await wait(()=>home.evaluate(`document.querySelectorAll('[id^="featured-photo-card-"]').length>0`),'Residential project cards');
+  assert.deepEqual(await home.evaluate(`[...document.querySelectorAll('[id^="featured-photo-card-"]')].map(e=>e.id)`),['featured-photo-card-photo-aerial','featured-photo-card-photo-crew','featured-photo-card-photo-brick']);
+  assert(await home.evaluate(`!document.body.innerText.includes('Custom Stone & Heavy Timber Architecture')&&!document.querySelector('img[src*="stone_commercial_roof"]')`),'Removed stone/timber card must not return');
+  await home.evaluate(`document.querySelector('#featured-photo-card-photo-aerial').click()`);
+  await wait(()=>home.evaluate(`!!document.querySelector('[aria-label="Close photo preview"]')`),'Project lightbox opens');
+  assert(await home.evaluate(`!document.body.innerText.includes('Custom Stone & Heavy Timber Architecture')&&!document.querySelector('img[src*="stone_commercial_roof"]')`));
+  await home.evaluate(`document.querySelector('[aria-label="Close photo preview"]').click()`);
+  await wait(()=>home.evaluate(`!document.querySelector('[aria-label="Close photo preview"]')`),'Project lightbox closes');
+ }
+ console.log('PASS residential project cards: three intended cards, removed stone/timber absent, lightbox opens/closes at 375/390/430/1440px');
+ await checkPublicLayouts({page,wait,base:publicBase});
  // Audit every discoverable public route from both production sitemaps at all requested viewports.
  const layout=await page();
  const layoutWidths=[320,360,375,390,414,667,768,1024,1280,1440];
