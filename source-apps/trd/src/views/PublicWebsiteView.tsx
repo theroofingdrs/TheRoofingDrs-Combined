@@ -186,14 +186,6 @@ export const PublicWebsiteView: React.FC<PublicWebsiteViewProps> = ({
               alternateName: 'The ROOF Doctors — Residential Roofing & Storm Damage Specialists',
               telephone: '+1-903-231-5940',
               email: 'TheRoofingDrs@gmail.com',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '1420 Richmond Rd',
-                addressLocality: 'Texarkana',
-                addressRegion: 'TX',
-                postalCode: '75501',
-                addressCountry: 'US',
-              },
               geo: {
                 '@type': 'GeoCoordinates',
                 latitude: 33.4565,
