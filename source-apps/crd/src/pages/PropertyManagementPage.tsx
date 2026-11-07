@@ -116,7 +116,7 @@ export const PropertyManagementPage: React.FC<PropertyManagementPageProps> = ({
               Commercial Facility Management
             </div>
             <h2 className="text-3xl font-heading font-black uppercase text-white mt-1">
-              What Property Managers Receive with Commercial Roof Doctors
+              What Property Managers Receive from Commercial ROOF Doctors
             </h2>
           </div>
 
