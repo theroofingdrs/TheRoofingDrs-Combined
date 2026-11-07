@@ -83,9 +83,9 @@ for (const required of ['/', '/commercial/', '/residential/', '/commercial/servi
 }
 
 
-assert.match(trdHeader, /<a[\\s\\S]*?href=\{\`\\/residential\$\{link\.path === '\\/' \? '\\/' : link\.path\}\`\}/);
-assert.match(trdFooter, /<a href=\{\`\\/residential\\/roofing\\/roof-replacement\`\}/);
-assert.doesNotMatch(trdFooter, /<button[\\s\\S]*?onClick=\{\(\) => onNavigate\(/);
+assert.match(trdHeader, /href=\{\`\\/residential\$\{link\.path === '\/' \? '\/' : link\.path\}\`\}/);
+assert.ok(trdFooter.includes("href={`/residential/roofing/roof-replacement`}"), 'Residential footer links expose crawlable hrefs');
+assert.ok(!trdFooter.includes("onClick={() => onNavigate("), 'Residential footer no longer relies on JavaScript-only button navigation');
 for (const [label, source] of [['TRD header', trdHeader], ['TRD footer', trdFooter], ['CRD header', crdHeader], ['CRD footer', crdFooter], ['TRD app', trdApp], ['CRD app', crdApp]]) {
   if (source.includes('trd-crd-operations-687495157172.us-east1.run.app')) throw new Error(label + ' still points directly to the Cloud Run URL');
 }
