@@ -85,8 +85,8 @@ for (const required of ['/', '/commercial/', '/residential/', '/commercial/servi
 }
 
 
-assert.match(trdIndex, /<link rel="preload" as="image" href="\\/residential\\/assets\\/images\\/residential-hero\\.jpg" fetchpriority="high"/);
-assert.match(trdHomeView, /fetchPriority="high"[\\s\\S]*?className="absolute inset-0 h-full w-full object-cover object-center"/);
+assert.ok(trdIndex.includes('<link rel="preload" as="image" href="/residential/assets/images/residential-hero.jpg" fetchpriority="high" />'), 'Residential hero is preloaded before React runs');
+assert.ok(trdHomeView.includes('fetchPriority="high"') && trdHomeView.includes('className="absolute inset-0 h-full w-full object-cover object-center"'), 'Residential hero image has high fetch priority and responsive cover sizing');
 assert.ok(trdHeader.includes("href={`/residential${link.path === '/' ? '/' : link.path}`}"), 'Residential desktop and mobile navigation expose crawlable hrefs');
 assert.ok(trdFooter.includes("href={`/residential/roofing/roof-replacement`}"), 'Residential footer links expose crawlable hrefs');
 assert.ok(!trdFooter.includes("onClick={() => onNavigate("), 'Residential footer no longer relies on JavaScript-only button navigation');
