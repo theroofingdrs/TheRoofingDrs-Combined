@@ -1441,6 +1441,45 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     ],
     cityLinks: [{ name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
   },
+  '/service-areas/broken-bow': {
+    title: 'Commercial Roofing in Broken Bow, OK | CRD',
+    metaDescription: 'Commercial roofing in Broken Bow, Oklahoma. Roof inspections, leak repairs, metal roof evaluations, restoration planning and replacement assessments for local businesses and facilities.',
+    canonicalPath: '/service-areas/broken-bow',
+    regionName: 'Broken Bow, Oklahoma',
+    heroHeadline: 'Commercial Roofing Services in Broken Bow, Oklahoma.',
+    heroSubtitle: 'Commercial property owners and facility managers in Broken Bow and the surrounding McCurtain County area can request a documented roof assessment. CRD reviews roof condition, drainage, penetrations, seams and fasteners before recommending a repair, restoration or replacement path.',
+    weatherAndStormFactors: 'Southeast Oklahoma commercial roofs experience humid conditions, heavy rainfall, severe thunderstorms, hail and seasonal temperature changes. Inspections should document drainage capacity, wind-exposed edges, flashing details, corrosion and signs of moisture within the roof assembly.',
+    countiesAndCitiesServed: ['Broken Bow, McCurtain County', 'McCurtain County commercial and business corridors', 'Nearby Idabel and southeast Oklahoma properties, subject to project scope and scheduling'],
+    keyIndustriesInRegion: ['Hospitality, lodging and tourism-related properties', 'Retail and local commercial centers', 'Timber, wood-products and light industrial facilities', 'Schools, municipal and institutional buildings'],
+    serviceCapabilities: [
+      'Commercial roof inspections with photo-documented condition findings',
+      'Leak investigation and repair planning for seams, flashings, penetrations and drainage',
+      'Metal roof condition reviews, fastener evaluation and corrosion assessment',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Idabel', href: '/service-areas/idabel' }, { name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
+  },
+  '/service-areas/idabel': {
+    title: 'Commercial Roofing in Idabel, OK | CRD',
+    metaDescription: 'Commercial roofing in Idabel, Oklahoma. Commercial roof inspections, leak repairs, metal roof assessments, restoration evaluations and replacement planning for businesses and facilities.',
+    canonicalPath: '/service-areas/idabel',
+    regionName: 'Idabel, Oklahoma',
+    heroHeadline: 'Commercial Roofing Services in Idabel, Oklahoma.',
+    heroSubtitle: 'Idabel businesses, property owners and facility teams can request a commercial roof assessment that documents leaks, roof-system condition, drainage and repair priorities. Restoration or coating options are considered only when the existing assembly is compatible and suitable.',
+    weatherAndStormFactors: 'Idabel and McCurtain County roofs face humid weather, heavy rain, strong thunderstorms, hail and seasonal temperature swings. Roof reviews should consider drainage, perimeter securement, metal corrosion, seams, penetrations and moisture below the roof surface.',
+    countiesAndCitiesServed: ['Idabel, McCurtain County', 'McCurtain County commercial, retail and institutional properties', 'Nearby Broken Bow and southeast Oklahoma markets, subject to project scope and scheduling'],
+    keyIndustriesInRegion: ['Commercial retail and service properties', 'Manufacturing, timber and wood-products facilities', 'Warehouses and distribution buildings', 'Healthcare, schools and public-sector facilities'],
+    serviceCapabilities: [
+      'Commercial roof inspections and documented condition assessments',
+      'Leak repair planning for seams, flashing, fasteners, penetrations and drainage details',
+      'Metal roof inspections, corrosion review and fastener maintenance planning',
+      'Restoration and coating evaluations when the existing roof assembly is suitable',
+      'Repair, restoration or replacement recommendations based on documented roof condition'
+    ],
+    cityLinks: [{ name: 'Broken Bow', href: '/service-areas/broken-bow' }, { name: 'Tulsa', href: '/service-areas/tulsa' }, { name: 'Oklahoma', href: '/service-areas/oklahoma' }],
+  },
+
   '/service-areas/little-rock': {
     title: 'Commercial Roofing in Little Rock, AR | CRD',
     metaDescription: "Commercial roofing in Little Rock, AR. Inspections, repairs, restoration and replacement planning. Confirm project availability by scope.",
@@ -2620,7 +2659,7 @@ export const CITY_SERVICE_AREAS_CONTENT: Record<string, ServiceAreaData> = {
     canonicalPath: '/service-areas/greenville',
     regionName: 'Greenville, Texas',
     heroHeadline: "Commercial Roofing Services in Greenville, Texas.",
-    heroSubtitle: "Commercial roof planning in Greenville should account for greenville commercial roofs face hot summers, hail, high winds and heavy rainfall. Inspections should document roof edges, drainage, metal fasteners, seams and penetrations before a.... CRD assesses existing roof conditions before recommending repairs, restoration, a compatible coating system or replacement.",
+    heroSubtitle: "Greenville commercial property owners and facility managers can request a documented roof assessment covering leaks, drainage, roof edges, metal fasteners, seams and penetrations. CRD evaluates existing conditions before recommending repairs, restoration, a compatible coating system or replacement.",
     weatherAndStormFactors: 'Greenville commercial roofs face hot summers, hail, high winds and heavy rainfall. Inspections should document roof edges, drainage, metal fasteners, seams and penetrations before a coating system is selected.',
     countiesAndCitiesServed: [
         'Greenville, Hunt County',
