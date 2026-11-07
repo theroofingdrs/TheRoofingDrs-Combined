@@ -1,5 +1,6 @@
 // Real built child servers behind the combined proxy; inspect HTTP bytes before JS.
 import { spawn } from 'node:child_process';
+import { request as httpRequest } from 'node:http';
 import { readFile, writeFile, mkdtemp, rm } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import path from 'node:path';
@@ -29,9 +30,26 @@ function head(html,checkSocial=false){
  return{title:decode(html.match(/<title>(.*?)<\/title>/s)?.[1] || ''),canonicals,descriptions,schemas};
 }
 const hasType=(value,type)=>!!value&&typeof value==='object'&&(value['@type']===type||Object.values(value).some(item=>Array.isArray(item)?item.some(v=>hasType(v,type)):hasType(item,type)));
-async function get(route){const response=await fetch('http://127.0.0.1:19340'+route,{redirect:'manual',signal:AbortSignal.timeout(5000)});return{response,body:await response.text()};}
+async function get(route,options={}){
+ if(options.headers?.host)return new Promise((resolve,reject)=>{
+  const request=httpRequest('http://127.0.0.1:19340'+route,{...options,signal:AbortSignal.timeout(5000)},response=>{
+   let body='';response.setEncoding('utf8');response.on('data',chunk=>body+=chunk);response.on('end',()=>resolve({response:{status:response.statusCode,headers:new Headers(response.headers)},body}));
+  });request.on('error',reject);request.end();
+ });
+ const response=await fetch('http://127.0.0.1:19340'+route,{...options,redirect:'manual',signal:AbortSignal.timeout(5000)});return{response,body:await response.text()};
+}
 try{
  await ready();
+ const commercialHost={host:'commercial.theroofingdrs.com'};
+ for(const [route,target] of [['/','/commercial/'],['/?utm_campaign=qa','/commercial/?utm_campaign=qa'],['/contact?utm_campaign=qa','/commercial/contact?utm_campaign=qa'],['/commercial','/commercial/'],['/commercial/','/commercial/'],['/commercial/contact','/commercial/contact'],['/unknown-commercial-page','/commercial/unknown-commercial-page'],['/assets/missing.js','/commercial/assets/missing.js']]){
+  const {response,body}=await get(route,{headers:commercialHost});assert.equal(response.status,308,route+' commercial-host redirect');assert.equal(response.headers.get('location'),'https://theroofingdrs.com'+target);assert.equal(body,'');
+ }
+ const upper=await get('/contact',{headers:{host:'Commercial.Theroofingdrs.com:443'}});assert.equal(upper.response.headers.get('location'),'https://theroofingdrs.com/commercial/contact');
+ const headRedirect=await get('/',{headers:commercialHost,method:'HEAD'});assert.equal(headRedirect.response.status,308);assert.equal(headRedirect.body,'');
+ for(const method of ['POST','PUT','PATCH','DELETE']){const rejected=await get('/commercial/api/leads',{headers:commercialHost,method});assert.equal(rejected.response.status,405);assert.equal(rejected.response.headers.get('allow'),'GET, HEAD');assert.equal(rejected.response.headers.get('location'),null);}
+ const unrelated=await get('/',{headers:{host:'commercial.theroofingdrs.com.attacker.invalid'}});assert.equal(unrelated.response.status,200);assert.equal(unrelated.response.headers.get('location'),null);
+ const unsafe=await get('//external.example/path?next=https://external.example/',{headers:commercialHost});assert.equal(new URL(unsafe.response.headers.get('location')).origin,'https://theroofingdrs.com');
+ console.log('PASS commercial hostname redirects: fixed canonical host, root/deep links/query preservation, no double prefix, GET/HEAD only and no open redirect.');
  const residential=JSON.parse(await readFile('source-apps/trd/dist/seo-manifest.json','utf8'));
  const home=head(await readFile('source-apps/trd/dist/index.html','utf8'));
  assert.equal(home.title,'The Roof Doctors — Residential Roofing & Storm Damage Specialists');

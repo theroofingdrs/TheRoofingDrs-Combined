@@ -148,6 +148,22 @@ const server = http.createServer((req, res) => {
   try { pathname = decodeURIComponent(url.pathname); }
   catch { res.writeHead(400); return res.end('Invalid URL.'); }
   const requestHost = (req.headers.host || '').split(':')[0].toLowerCase();
+  // A future commercial hostname mapping must not serve the shared root landing.
+  // Keep one canonical CRD origin, without proxying or replaying write requests.
+  if (requestHost === 'commercial.theroofingdrs.com') {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      res.writeHead(405, { allow: 'GET, HEAD' });
+      return res.end();
+    }
+    const commercialPath = url.pathname === '/commercial'
+      ? '/commercial/'
+      : url.pathname.startsWith('/commercial/') ? url.pathname : `/commercial${url.pathname}`;
+    res.writeHead(308, {
+      location: `https://theroofingdrs.com${commercialPath}${url.search}`,
+      'cache-control': 'public, max-age=300',
+    });
+    return res.end();
+  }
   if (requestHost === 'www.theroofingdrs.com') {
     res.writeHead(301, {
       location: `https://theroofingdrs.com${req.url || '/'}`,
