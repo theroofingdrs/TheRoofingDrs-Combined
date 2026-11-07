@@ -1325,7 +1325,47 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenInspection, onOpenEmer
       </section>
 
       {/* -------------------------------------------------------------------------
-          14. COST / PLANNING: Professional Assessment & Planning Estimator
+          14. RESOURCE CENTER: Commercial Roofing Decision Guides
+         ------------------------------------------------------------------------- */}
+      <section className="bg-white border-b border-[#e6e4df] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
+            <div className="max-w-3xl space-y-3">
+              <div className="text-xs font-mono-crd text-[#a8750f] uppercase tracking-wider">Commercial Roofing Resource Center</div>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase text-[#181818] tracking-tight">Make the next roof decision with better information.</h2>
+              <p className="text-sm sm:text-base text-[#555555] leading-relaxed">Straightforward technical guidance for owners and facility teams comparing roof systems, restoration options, maintenance needs and capital projects.</p>
+            </div>
+            <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] hover:text-[#181818] whitespace-nowrap">Explore all field notes <ArrowRight className="w-4 h-4" /></Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            <Link to="/blog/commercial-roof-coatings-vs-replacement" className="group border border-[#e6e4df] bg-[#f4f3ef] p-6 hover:border-[#a8750f] transition-colors">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#a8750f] mb-3">Restoration Decisions</div>
+              <h3 className="font-heading text-xl font-bold text-[#181818] group-hover:text-[#8b650f]">Commercial Roof Coatings vs. Replacement</h3>
+              <p className="text-sm text-[#666666] leading-relaxed mt-3">Understand which roof conditions should be assessed before choosing restoration or tear-off.</p>
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] mt-5">Read the guide <ArrowRight className="w-4 h-4" /></span>
+            </Link>
+            <Link to="/blog/tpo-vs-epdm-commercial-roofing" className="group border border-[#e6e4df] bg-[#f4f3ef] p-6 hover:border-[#a8750f] transition-colors">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#a8750f] mb-3">Roof Systems</div>
+              <h3 className="font-heading text-xl font-bold text-[#181818] group-hover:text-[#8b650f]">TPO vs. EPDM Commercial Roofing</h3>
+              <p className="text-sm text-[#666666] leading-relaxed mt-3">Compare membrane composition, seams, detailing and whole-assembly considerations.</p>
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] mt-5">Read the guide <ArrowRight className="w-4 h-4" /></span>
+            </Link>
+            <Link to="/blog/commercial-roof-coatings-energy-performance" className="group border border-[#e6e4df] bg-[#f4f3ef] p-6 hover:border-[#a8750f] transition-colors">
+              <div className="text-[11px] font-mono-crd uppercase tracking-wider text-[#a8750f] mb-3">Building Performance</div>
+              <h3 className="font-heading text-xl font-bold text-[#181818] group-hover:text-[#8b650f]">Roof Coatings & Energy Performance</h3>
+              <p className="text-sm text-[#666666] leading-relaxed mt-3">Learn why reflectivity alone cannot predict a building’s energy savings.</p>
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-[#8b650f] mt-5">Read the guide <ArrowRight className="w-4 h-4" /></span>
+            </Link>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 border-t border-[#e6e4df] pt-6">
+            <span className="text-xs text-[#666666]">Have a property-specific question?</span>
+            <button onClick={() => onOpenInspection('Inspection')} className="inline-flex items-center gap-2 bg-[#181818] text-white px-5 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#333333]">Request a documented roof assessment <ArrowRight className="w-4 h-4" /></button>
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------------------------------------------------
+          15. COST / PLANNING: Professional Assessment & Planning Estimator
          ------------------------------------------------------------------------- */}
       <section className="bg-[#f4f3ef] border-b border-[#e6e4df] py-18 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-6">

@@ -82,7 +82,7 @@ for (const value of urls) {
   assert.equal(url.hash, '', 'Sitemap URLs exclude fragments');
   assert.ok(!url.pathname.includes('//'), 'Sitemap paths do not contain duplicate slashes');
 }
-for (const required of ['/', '/commercial/', '/residential/', '/commercial/service-areas/broken-bow', '/commercial/service-areas/idabel']) {
+for (const required of ['/', '/commercial/', '/residential/', '/commercial/service-areas/broken-bow', '/commercial/service-areas/idabel', '/commercial/blog', '/commercial/blog/commercial-roof-coatings-vs-replacement', '/commercial/blog/tpo-vs-epdm-commercial-roofing', '/commercial/blog/commercial-roof-coatings-energy-performance']) {
   assert.ok(urls.includes(origin + required), 'Sitemap includes ' + required);
 }
 
@@ -97,6 +97,23 @@ for (const [label, source] of [['TRD header', trdHeader], ['TRD footer', trdFoot
   if (source.includes('trd-crd-operations-687495157172.us-east1.run.app')) throw new Error(label + ' still points directly to the Cloud Run URL');
 }
 assert.ok([trdFooter, crdFooter, crdHeader, trdApp, crdApp].every(source => source.includes('https://operations.theroofingdrs.com')), 'All staff/admin entry points use the Operations subdomain');
+
+// Priority D: educational content must connect naturally to the next useful action.
+const [trdBlog, crdBlog, crdHome] = await Promise.all([
+  readFile('source-apps/trd/src/components/public/pages/BlogPage.tsx', 'utf8'),
+  readFile('source-apps/crd/src/pages/BlogPage.tsx', 'utf8'),
+  readFile('source-apps/crd/src/pages/HomePage.tsx', 'utf8'),
+]);
+assert.match(trdHeader, /\{ label: 'Blog', path: '\/blog' \}/, 'TRD navigation exposes homeowner resources');
+assert.match(trdBlog, /Request a Free Roof Inspection/, 'TRD resource listing provides an inspection next step');
+assert.match(trdBlog, /Browse Roofing FAQs/, 'TRD resources connect to homeowner FAQs');
+assert.match(crdHeader, /Commercial Roofing Field Notes/, 'CRD primary resources menu exposes field notes');
+assert.match(crdBlog, /Request a Roof Assessment/, 'CRD articles provide a commercial assessment next step');
+assert.match(crdBlog, /Cost Planning Calculator/, 'CRD articles connect to the project planning tool');
+for (const slug of ['commercial-roof-coatings-vs-replacement', 'tpo-vs-epdm-commercial-roofing', 'commercial-roof-coatings-energy-performance']) {
+  assert.ok(crdHome.includes('/blog/' + slug), 'CRD homepage features the existing guide ' + slug);
+}
+assert.match(crdHome, /Commercial Roofing Resource Center/, 'CRD homepage introduces the resource center');
 
 
 function pageGraph(html, label) {
