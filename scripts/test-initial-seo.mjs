@@ -106,7 +106,7 @@ try{
  for(const [alias,canonical] of [['/large-loss-roofing','/insurance-claims'],['/adjuster-meetings','/insurance-claims'],['/commercial-storm-inspections','/storm-damage']])assert.deepEqual(head((await get('/commercial'+alias)).body).canonicals,['https://theroofingdrs.com/commercial'+canonical],'Existing component canonical retained for '+alias);
  const sitemap=(await get('/commercial/sitemap.xml')).body;
  for(const route of ['/commercial-roof-inspection','/new-commercial-construction','/metal-roofing','/roof-asset-management','/multi-property-roofing','/multifamily-roofing','/hoa-roofing','/about/credentials']){
-  assert(sitemap.includes('/commercial'+route+'</loc>'),'Disputed sitemap URL must remain '+route);
+  assert(commercialSitemap.includes('/commercial'+route+'</loc>'),'Disputed sitemap URL must remain '+route);
   assert.equal((await get('/commercial'+route)).response.status,404,'Existing unsupported sitemap route has honest 404 '+route);
  }
  for(const [prefix,file] of [['residential','source-apps/trd/dist/index.html'],['commercial','source-apps/crd/dist/index.html']]){
